@@ -1,0 +1,67 @@
+"""Shared settings for Steelman Ballot: paths, keys, model, cache policy and spending limits."""
+
+from __future__ import annotations
+
+import os
+from pathlib import Path
+
+from dotenv import load_dotenv
+
+HERE = Path(__file__).resolve().parent          # steelman-ballot/backend
+ROOT = HERE.parent                              # steelman-ballot
+PROMPTS_DIR = HERE / "prompts"
+CACHE_DIR = Path(os.getenv("STEELMAN_CACHE_DIR") or ROOT / "data" / "cache")
+
+os.environ.setdefault("PYDANTIC_AI_NO_BANNER", "1")
+load_dotenv(ROOT / ".env")         # steelman-ballot/.env
+load_dotenv(ROOT.parent / ".env")  # fallback: a .env one folder up
+
+# ---- Source API keys ------------------------------------------------------
+DATA_GOV_API_KEY = os.getenv("DATA_GOV_API_KEY", "").strip()      # OpenFEC + Congress.gov
+OPENSTATES_API_KEY = os.getenv("OPENSTATES_API_KEY", "").strip()
+CENSUS_API_KEY = os.getenv("CENSUS_API_KEY", "").strip()           # ACS demographics
+VOTESMART_API_KEY = os.getenv("VOTESMART_API_KEY", "").strip()
+
+HTTP_TIMEOUT_S = 20.0
+USER_AGENT = "SteelmanBallot/0.1 (nonpartisan student project)"
+
+# ---- Model ----------------------------------------------------------------
+MODEL_NAME = os.getenv("MODEL_NAME", "gpt-6-astra").strip() or "gpt-6-astra"
+REASONING_EFFORT = "medium"
+PORTKEY_BASE_URL = os.getenv("PORTKEY_BASE_URL", "https://api.portkey.ai/v1").rstrip("/")
+
+# ---- Spending guards ------------------------------------------------------
+DAILY_TOKEN_CAP = int(os.getenv("DAILY_TOKEN_CAP", "2000000"))
+BALLOT_TOKEN_BUDGET = int(os.getenv("BALLOT_TOKEN_BUDGET", "250000"))
+MAX_CRITIC_ROUNDS = 2          # a card may be sent back for rewrite at most twice
+
+# ---- Cache / refresh policy (see cache.py) --------------------------------
+# days-to-election threshold -> (full refresh every N days, change-check every N hours)
+REFRESH_POLICY = [
+    (60, 7, 24),   # 60+ days out: weekly full refresh, daily change check
+    (0, 1, 1),     # inside 60 days: daily full refresh, hourly change check
+]
+
+
+def build_model():
+    """The model + settings every agent uses (Portkey, Responses API, medium reasoning)."""
+    from openai import AsyncOpenAI
+    from pydantic_ai.models.openai import OpenAIResponsesModel, OpenAIResponsesModelSettings
+    from pydantic_ai.providers.openai import OpenAIProvider
+
+    api_key = os.getenv("PORTKEY_API_KEY")
+    if not api_key:
+        raise RuntimeError("PORTKEY_API_KEY is not set. Copy .env.example to .env and add your key.")
+    client = AsyncOpenAI(
+        api_key="unused",  # Portkey authenticates with the header below
+        base_url=PORTKEY_BASE_URL,
+        default_headers={
+            "x-portkey-api-key": api_key,
+            "x-portkey-provider": "openai",
+            # Freshness is handled by OUR jurisdiction cache; never replay a stale Portkey answer.
+            "x-portkey-cache-force-refresh": "true",
+        },
+    )
+    model = OpenAIResponsesModel(MODEL_NAME, provider=OpenAIProvider(openai_client=client))
+    settings = OpenAIResponsesModelSettings(openai_reasoning_effort=REASONING_EFFORT)
+    return model, settings

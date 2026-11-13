@@ -1,0 +1,26 @@
+# Secrets: keep the template, never the real key
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node / Vite
+node_modules/
+frontend/dist/
+*.tsbuildinfo
+
+# Runtime cache (rebuilt automatically; demo snapshots live in data/snapshots/)
+data/cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
