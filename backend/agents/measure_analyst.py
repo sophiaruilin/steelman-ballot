@@ -22,9 +22,9 @@ from backend.sources.web import WebReader
 PER_MEASURE_LIMITS = UsageLimits(request_limit=14, total_tokens_limit=150_000)
 
 
-@lru_cache(maxsize=1)
-def get_agent() -> Agent[ResearchDeps, MeasureCard]:
-    model, settings = config.build_model()
+@lru_cache(maxsize=4)
+def get_agent(model_name: str | None = None) -> Agent[ResearchDeps, MeasureCard]:
+    model, settings = config.build_model(model_name)
     agent = Agent(
         model,
         name="measure_analyst",

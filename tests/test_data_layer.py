@@ -87,3 +87,22 @@ def test_save_and_load_roundtrip(tmp_path):
     cache.save(e, cache_dir=tmp_path)
     back = cache.load(e.jurisdiction_key, e.election_id, cache_dir=tmp_path)
     assert back.payload == e.payload and back.built_at == now
+
+
+# ---- Contest-level cache keys ----------------------------------------------------
+
+def test_statewide_measure_shares_one_key_across_districts():
+    # Two Californians in different districts get the SAME cached Prop 3 card.
+    k1 = cache.contest_key("CA", "statewide", "prop-3")
+    k2 = cache.contest_key("ca", "statewide", "prop-3")
+    assert k1 == k2 == "CA|statewide|prop-3"
+    assert cache.contest_key("TX", "cd-4810", "us-house") != cache.contest_key("TX", "cd-4807", "us-house")
+
+
+def test_contest_cache_roundtrip_serves_same_day(tmp_path):
+    now = datetime(2026, 10, 20, 15, 0, tzinfo=UTC)
+    key = cache.contest_key("CA", "statewide", "prop-3")
+    cache.save(cache.CacheEntry(key, "2026-11-03", now, now, {"u": "fp"}, {"card": {"number": "Prop 3"}}),
+               cache_dir=tmp_path)
+    e = cache.load(key, "2026-11-03", cache_dir=tmp_path)
+    assert cache.decide(e, now=now + timedelta(minutes=30), election_day=date(2026, 11, 3)) == "serve"

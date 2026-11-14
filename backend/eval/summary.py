@@ -1,0 +1,81 @@
+"""Summarize evaluation runs into output/eval/summary.md (accuracy + tokens, astra vs luna writer).
+
+    python -m backend.eval.summary
+"""
+
+from __future__ import annotations
+
+import json
+from statistics import mean
+
+from backend.eval.grade import EVAL_DIR
+
+
+def _tokens(row: dict) -> dict:
+    t = {"input": 0, "cached": 0, "output": 0}
+    for u in row["usage"].values():          # app cost only (writer + critic), grader excluded
+        t["input"] += u["input_tokens"]
+        t["cached"] += u["cache_read_tokens"]
+        t["output"] += u["output_tokens"]
+    return t
+
+
+def _avg(xs):
+    xs = [x for x in xs if x is not None]
+    return round(mean(xs), 3) if xs else None
+
+
+def table(run: dict) -> tuple[str, dict]:
+    lines = ["| Prop | Verified | Turing (Yes/No) | Rewrites | Claims | Supported | Unsupported | Contradicted | "
+             "Yes/No/Fiscal correct | Argument coverage | Input tok | Cached | Output tok |",
+             "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+    for r in run["rows"]:
+        s, t = r["score"], _tokens(r)
+        lines.append(f"| {r['prop']} | {'yes' if r['verified'] else 'no'} | {r['turing']['yes']}/{r['turing']['no']} | "
+                     f"{r['rewrites']} | {s['claims']} | {s['supported']} | {s['unsupported']} | {s['contradicted']} | "
+                     f"{s['effects_correct']}/3 | {s['coverage']} | {t['input']:,} | {t['cached']:,} | {t['output']:,} |")
+    rows = run["rows"]
+    agg = {
+        "props": len(rows),
+        "verified": sum(r["verified"] for r in rows),
+        "fidelity": _avg([r["score"]["fidelity"] for r in rows]),
+        "contradicted": sum(r["score"]["contradicted"] for r in rows),
+        "effects_correct": f"{sum(r['score']['effects_correct'] for r in rows)}/{3 * len(rows)}",
+        "coverage": _avg([r["score"]["coverage"] for r in rows]),
+        "rewrites": _avg([r["rewrites"] for r in rows]),
+        "turing_min_avg": _avg([min(r["turing"].values()) for r in rows]),
+        "input_per_prop": round(mean(_tokens(r)["input"] for r in rows)),
+        "cached_per_prop": round(mean(_tokens(r)["cached"] for r in rows)),
+        "output_per_prop": round(mean(_tokens(r)["output"] for r in rows)),
+        "seconds_per_prop": round(mean(r["seconds"] for r in rows), 1),
+    }
+    return "\n".join(lines), agg
+
+
+def main():
+    runs = {p.stem: json.loads(p.read_text(encoding="utf-8")) for p in sorted(EVAL_DIR.glob("gpt-*.json"))}
+    out = ["# California look-back: accuracy and cost (Nov 3, 2026 propositions)", "",
+           "Each card: Analyst writes -> Critic (gpt-6-luna) reviews -> up to 2 rewrites. A separate Grader then "
+           "scores the final card against the official voter guide (Legislative Analyst = answer key).", ""]
+    aggs = {}
+    for name, run in runs.items():
+        t, agg = table(run)
+        aggs[name] = agg
+        out += [f"## Writer: {name}", "", t, "", "**Averages:** " + json.dumps(agg), ""]
+    if len(aggs) > 1:
+        out += ["## Writer comparison (same props only)", ""]
+        common = set.intersection(*(set(r["prop"] for r in runs[n]["rows"]) for n in runs))
+        out += ["| Writer | Props | Fidelity | Contradicted | Effects correct | Coverage | Rewrites | Min Turing | "
+                "Input/prop | Cached/prop | Output/prop |", "|---|---|---|---|---|---|---|---|---|---|---|"]
+        for name, run in runs.items():
+            sub = {**run, "rows": [r for r in run["rows"] if r["prop"] in common]}
+            _, a = table(sub)
+            out.append(f"| {name} | {sorted(common, key=int)} | {a['fidelity']} | {a['contradicted']} | {a['effects_correct']} | "
+                       f"{a['coverage']} | {a['rewrites']} | {a['turing_min_avg']} | {a['input_per_prop']:,} | "
+                       f"{a['cached_per_prop']:,} | {a['output_per_prop']:,} |")
+    (EVAL_DIR / "summary.md").write_text("\n".join(out) + "\n", encoding="utf-8")
+    print("\n".join(out))
+
+
+if __name__ == "__main__":
+    main()

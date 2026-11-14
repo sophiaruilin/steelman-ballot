@@ -137,3 +137,18 @@ def test_parse_ca_guide_finds_all_14_props():
     props = parse_ca_guide((FIX / "ca_guide_propositions.txt").read_text(encoding="utf-8"))
     assert [p[0] for p in props] == ["1", "2", "3", "4", "5", "37", "38", "39", "40", "41", "42", "43", "44", "45"]
     assert props[0] == ("1", "Authorizes Bonds for Housing Affordability Programs", "Legislative Statute")
+
+
+def test_page_chrome_dropped_when_main_content_marked():
+    page = ('<header>Site banner</header><div role="navigation">Home | Propositions</div>'
+            '<div role="main"><h1>Prop 3</h1><p>Extends a tax.</p></div>'
+            '<aside>Dates to Remember</aside><div role="contentinfo">Contact Us</div>'
+            '<div>Language list outside main</div>')
+    text = visible_text(page)
+    assert "Prop 3" in text and "Extends a tax." in text
+    for chrome in ("Site banner", "Home | Propositions", "Dates to Remember", "Contact Us", "Language list"):
+        assert chrome not in text
+
+
+def test_pages_without_main_still_read_fully():
+    assert visible_text("<p>One</p><div>Two</div>") == "One\n\nTwo"

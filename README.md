@@ -52,6 +52,13 @@ python -m backend.pipeline CA 3                    # Analyst + Critic -> output/
 python -m backend.agents.candidate_profiler CA lt-governor
 ```
 
+## Evaluate (California look-back)
+```bash
+python -m backend.eval.grade                                   # 6-prop sample, gpt-6-astra writer
+python -m backend.eval.grade --writer gpt-6-luna --props 1 3 39
+python -m backend.eval.summary                                 # -> output/eval/summary.md
+```
+
 ## Tests
 ```bash
 python -m pytest -q
@@ -67,7 +74,8 @@ steelman-ballot/
 │   ├── models.py          card formats (MeasureCard, Steelman, Claim)
 │   ├── agents/            ballot_mapper, measure_analyst, candidate_profiler, critic,
 │   │                      common (safe fetch tool, citation + quote checks)
-│   ├── pipeline.py        Analyst -> Critic -> rewrite loop (max 2) for each measure
+│   ├── pipeline.py        Analyst -> Critic -> rewrite loop (max 2); per-contest cache
+│   ├── eval/              CA look-back grader + summary (output/eval/summary.md)
 │   ├── sources/           one adapter per data source: geocoder, fec (Funded by),
 │   │                      congress + openstates (Did), http (allowlisted client),
 │   │                      filters, web (safe page reader), replay (test tapes)

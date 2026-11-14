@@ -52,7 +52,11 @@ _INJECTION = re.compile(
 )
 _HIDDEN_STYLE = re.compile(r"display\s*:\s*none|visibility\s*:\s*hidden|font-size\s*:\s*0(?![.\d])|opacity\s*:\s*0(?![.\d])",
                            re.IGNORECASE)
-_DROP_TAGS = {"script", "style", "noscript", "template", "svg", "iframe", "object", "head", "nav", "footer"}
+_DROP_TAGS = {"script", "style", "noscript", "template", "svg", "iframe", "object", "head", "nav", "footer",
+              "aside", "header", "form", "select", "button"}
+# Page chrome (menus, banners, sidebars, footers): dropped to save tokens; never part of the content.
+_DROP_ROLES = {"navigation", "banner", "contentinfo", "complementary", "search", "menu", "menubar"}
+_MAIN_MARKER = re.compile(r"""<main\b|role\s*=\s*["']main["']""", re.IGNORECASE)
 _VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr"}
 _BLOCK = {"p", "div", "li", "h1", "h2", "h3", "h4", "h5", "h6", "tr", "section", "article", "br", "table", "ul", "ol"}
 
@@ -71,11 +75,13 @@ def check_web_url(url: str) -> None:
 class _VisibleText(HTMLParser):
     """Collects only text a sighted voter would see in the page body."""
 
-    def __init__(self):
+    def __init__(self, main_only: bool = False):
         super().__init__(convert_charrefs=True)
         self.out: list[str] = []
         self.skip_depth = 0      # >0 while inside a dropped / hidden element
-        self.stack: list[bool] = []
+        self.stack: list[tuple[bool, bool]] = []   # (hidden, opens_main)
+        self.main_only = main_only   # page marks its main content: keep only that
+        self.main_depth = 0
 
     def handle_starttag(self, tag, attrs):
         if tag in _VOID:
@@ -89,8 +95,12 @@ class _VisibleText(HTMLParser):
             or a.get("aria-hidden", "").lower() == "true"
             or bool(_HIDDEN_STYLE.search(a.get("style", "")))
             or bool(re.search(r"\b(sr-only|visually-hidden|d-none|hidden)\b", a.get("class", "")))
+            or a.get("role", "").lower() in _DROP_ROLES
         )
-        self.stack.append(hidden)
+        opens_main = tag == "main" or a.get("role", "").lower() == "main"
+        self.stack.append((hidden, opens_main))
+        if opens_main:
+            self.main_depth += 1
         if hidden:
             self.skip_depth += 1
         elif tag in _BLOCK:
@@ -99,13 +109,16 @@ class _VisibleText(HTMLParser):
     def handle_endtag(self, tag):
         if tag in _VOID or not self.stack:
             return
-        if self.stack.pop():
+        hidden, opens_main = self.stack.pop()
+        if opens_main:
+            self.main_depth -= 1
+        if hidden:
             self.skip_depth -= 1
         elif tag in _BLOCK:
             self.out.append("\n")
 
     def handle_data(self, data):
-        if self.skip_depth == 0:
+        if self.skip_depth == 0 and (not self.main_only or self.main_depth > 0):
             self.out.append(data)
 
     def handle_comment(self, data):
@@ -113,7 +126,7 @@ class _VisibleText(HTMLParser):
 
 
 def visible_text(raw_html: str) -> str:
-    p = _VisibleText()
+    p = _VisibleText(main_only=bool(_MAIN_MARKER.search(raw_html)))
     p.feed(raw_html)
     p.close()
     text = html.unescape("".join(p.out))

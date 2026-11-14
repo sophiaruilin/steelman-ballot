@@ -1,0 +1,906 @@
+{
+  "writer": "gpt-6-luna",
+  "critic": "gpt-6-luna",
+  "props": [
+    "1",
+    "3",
+    "39"
+  ],
+  "rows": [
+    {
+      "prop": "1",
+      "verified": true,
+      "turing": {
+        "yes": 4,
+        "no": 4
+      },
+      "rewrites": 2,
+      "score": {
+        "claims": 9,
+        "supported": 8,
+        "unsupported": 0,
+        "contradicted": 1,
+        "fidelity": 0.889,
+        "effects_correct": 3,
+        "coverage_for": 0.8,
+        "coverage_against": null,
+        "coverage": 0.8,
+        "neutrality_issues": 0
+      },
+      "grade": {
+        "claims": [
+          {
+            "claim": "The Legislative Analyst estimates that repaying the $10 billion housing bond would cost the state General Fund $500 million to $600 million each year for about 25 years. The veterans’ bond is expected to be repaid through veterans’ loan payments.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Prop 1 sets aside $1.25 billion for veterans’ home loans through the state program.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The Legislative Analyst estimates that the bond funding could support up to 40,000 multifamily rental units and help up to 40,000 households with homeownership.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Supporters say the measure would not raise taxes, would include public reporting on how many homes are built, where they are, and what they cost, and could unlock federal matching funds. These are supporters’ statements, not guaranteed results.",
+            "verdict": "supported",
+            "note": "Accurately attributes these assertions to the official supporting argument rather than treating them as independently established results."
+          },
+          {
+            "claim": "The $10 billion housing bond would be repaid from the General Fund, which pays for most state public services.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The Legislative Analyst estimates that interest would make the housing bond cost about 15 percent more, after adjusting for inflation, than paying up front with available money.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The $10 billion housing-program bond would be repaid from the General Fund; veterans’ loan payments would repay the separate $1.25 billion veterans’ bond.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The Legislative Analyst estimates that the state would pay $500 million to $600 million a year for about 25 years to repay the housing bond.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The Legislative Analyst estimates that bond funds could support up to 2,500 farmworker housing units and about 1,200 university student beds.",
+            "verdict": "contradicted",
+            "note": "The analyst estimates about 2,500 farmworker units, not up to 2,500. The card changes an approximate estimate into an upper bound. The student-bed estimate matches."
+          }
+        ],
+        "yes_correct": true,
+        "no_correct": true,
+        "fiscal_correct": true,
+        "effect_notes": [],
+        "points_for": [
+          {
+            "point": "Fast-track housing production by jumpstarting tens of thousands of shovel-ready affordable homes and restarting stalled construction.",
+            "covered": false
+          },
+          {
+            "point": "Dedicate $1.25 billion to veterans’ housing and homeownership through the existing CalVet Home Loan Program.",
+            "covered": true
+          },
+          {
+            "point": "Build affordable homes and expand homeownership for low- and middle-income families, allowing essential workers to live in the communities they serve.",
+            "covered": true
+          },
+          {
+            "point": "Create and preserve stable housing for seniors, people with disabilities, and other vulnerable residents to help prevent homelessness.",
+            "covered": true
+          },
+          {
+            "point": "Provide funding without new taxes, with strict accountability and public reporting, while unlocking federal matching funds.",
+            "covered": true
+          }
+        ],
+        "points_against": [],
+        "neutrality_issues": []
+      },
+      "usage": {
+        "writer:gpt-6-luna": {
+          "requests": 6,
+          "input_tokens": 43048,
+          "cache_read_tokens": 30314,
+          "output_tokens": 8141,
+          "reasoning_tokens": 1974,
+          "tool_calls": 4
+        },
+        "critic:gpt-6-luna": {
+          "requests": 3,
+          "input_tokens": 16160,
+          "cache_read_tokens": 0,
+          "output_tokens": 4383,
+          "reasoning_tokens": 3491,
+          "tool_calls": 0
+        }
+      },
+      "grader_usage": {
+        "requests": 1,
+        "input_tokens": 5127,
+        "cache_read_tokens": 0,
+        "output_tokens": 915,
+        "reasoning_tokens": 139,
+        "tool_calls": 0
+      },
+      "seconds": 120.7,
+      "card": {
+        "measure_id": "CA-2026-11-03-prop-1",
+        "number": "Prop 1",
+        "official_title": "AUTHORIZES BONDS FOR HOUSING AFFORDABILITY PROGRAMS. LEGISLATIVE STATUTE.",
+        "plain_title": "Borrow $11.25 billion for housing programs and veterans’ home loans",
+        "title_disputed": false,
+        "put_on_ballot_by": "Legislature (SB 417)",
+        "yes_means": "The state could issue $11.25 billion in bonds: $10 billion for housing programs, repaid from the General Fund, and $1.25 billion for veterans’ home loans, repaid through veterans’ loan payments.",
+        "no_means": "The state would not issue these bonds, so the additional funding authorized by Prop 1 would not be provided.",
+        "who_is_affected": [
+          "Low- and moderate-income renters and people seeking affordable homes",
+          "Veterans who may qualify for state home loans",
+          "Farmworkers, tribal communities, and students seeking housing",
+          "California taxpayers and people who rely on state-funded services"
+        ],
+        "fiscal_impact": {
+          "text": "The Legislative Analyst estimates that repaying the $10 billion housing bond would cost the state General Fund $500 million to $600 million each year for about 25 years. The veterans’ bond is expected to be repaid through veterans’ loan payments.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+          "quote": "The state General Fund cost to repay the bond would be $500 million to $600 million annually for about 25 years."
+        },
+        "steelman_yes": {
+          "side": "Yes",
+          "basis": "official_argument",
+          "core_claim": "Supporters argue that state bond funding can help build and preserve affordable homes, expand homeownership, and provide housing assistance to veterans and people at risk of homelessness.",
+          "values": [
+            "Housing access",
+            "Support for veterans and vulnerable residents",
+            "Accountability"
+          ],
+          "best_evidence": [
+            {
+              "text": "Prop 1 sets aside $1.25 billion for veterans’ home loans through the state program.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/1/title-summary.htm",
+              "quote": "$1.25 billion for state-funded mortgages for California veterans"
+            },
+            {
+              "text": "The Legislative Analyst estimates that the bond funding could support up to 40,000 multifamily rental units and help up to 40,000 households with homeownership.",
+              "label": "prediction",
+              "whose": "Legislative Analyst",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+              "quote": "The bond funds would provide subsidies for up to 40,000 multifamily rental units"
+            },
+            {
+              "text": "Supporters say the measure would not raise taxes, would include public reporting on how many homes are built, where they are, and what they cost, and could unlock federal matching funds. These are supporters’ statements, not guaranteed results.",
+              "label": "prediction",
+              "whose": "Supporters",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/1/arguments-rebuttals.htm",
+              "quote": "Prop. 1 doesn’t raise taxes and every dollar comes with strict accountability and public reporting. Voters will be able to see exactly how many homes get built, where, and at what cost. Prop. 1 unlocks federal matching funds"
+            }
+          ],
+          "who_it_helps": "In supporters’ view, the measure would help low- and middle-income households, veterans, seniors, people with disabilities, and workers who struggle to afford housing near their jobs.",
+          "answer_to_other_side": "Supporters can acknowledge that the General Fund would take on a long-term repayment cost, while arguing that the bond spreads the up-front expense over time and directs funds to housing, including homes for low-income residents and assistance for veterans."
+        },
+        "steelman_no": {
+          "side": "No",
+          "basis": "no_organized_side",
+          "core_claim": "No official argument against this measure was submitted. The case for voting no, based on the trade-offs in the nonpartisan analysis, is to avoid taking on a new General Fund debt and its long-term repayment costs.",
+          "values": [
+            "Keeping budget flexibility",
+            "Limiting state borrowing"
+          ],
+          "best_evidence": [
+            {
+              "text": "The $10 billion housing bond would be repaid from the General Fund, which pays for most state public services.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+              "quote": "The General Fund is the account the state uses to pay for most public services, including education, health care, and prisons."
+            },
+            {
+              "text": "The Legislative Analyst estimates that interest would make the housing bond cost about 15 percent more, after adjusting for inflation, than paying up front with available money.",
+              "label": "prediction",
+              "whose": "Legislative Analyst",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+              "quote": "the total cost of the bond would be about 15 percent more (after adjusting for inflation) than if the state paid up front with money it already has."
+            }
+          ],
+          "who_it_helps": "In this view, Californians who rely on General Fund services benefit if the state avoids adding this long-term repayment obligation and keeps more budget flexibility.",
+          "answer_to_other_side": "The bond could help fund housing and veterans’ loans, but a no-side response is that those goals must be weighed against decades of General Fund payments and the added cost of interest."
+        },
+        "crux": {
+          "kind": "both",
+          "text": "The sides differ over whether the expected housing and homeownership help is worth taking on long-term state borrowing. The key estimates are about scale and cost; the judgment is how those benefits compare with other uses of public money."
+        },
+        "evidence": [
+          {
+            "text": "The $10 billion housing-program bond would be repaid from the General Fund; veterans’ loan payments would repay the separate $1.25 billion veterans’ bond.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+            "quote": "a $10 billion bond for a variety of state housing programs that would be repaid by the General Fund"
+          },
+          {
+            "text": "The Legislative Analyst estimates that the state would pay $500 million to $600 million a year for about 25 years to repay the housing bond.",
+            "label": "prediction",
+            "whose": "Legislative Analyst",
+            "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+            "quote": "$500 million to $600 million annually for about 25 years"
+          },
+          {
+            "text": "The Legislative Analyst estimates that bond funds could support up to 2,500 farmworker housing units and about 1,200 university student beds.",
+            "label": "prediction",
+            "whose": "Legislative Analyst",
+            "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+            "quote": "about 2,500 units for farmworkers and about 1,200 beds for university students"
+          }
+        ],
+        "supporters": [
+          "Habitat for Humanity California",
+          "California Alliance for Retired Americans",
+          "Housing California",
+          "California Housing Consortium",
+          "California Alliance of Child and Family Services",
+          "Anni Chung, President, Self-Help for the Elderly",
+          "Jeffery Freitas, President, California Federation of Teachers",
+          "John H. Ing, Chief Financial Officer, US Vets",
+          "Michael Blecker, President, CA Association of Veteran Service Agencies"
+        ],
+        "opponents": [],
+        "reading_minutes": 3
+      }
+    },
+    {
+      "prop": "3",
+      "verified": false,
+      "turing": {
+        "yes": 4,
+        "no": 3
+      },
+      "rewrites": 2,
+      "score": {
+        "claims": 13,
+        "supported": 13,
+        "unsupported": 0,
+        "contradicted": 0,
+        "fidelity": 1.0,
+        "effects_correct": 3,
+        "coverage_for": 0.6,
+        "coverage_against": 0.75,
+        "coverage": 0.667,
+        "neutrality_issues": 0
+      },
+      "grade": {
+        "claims": [
+          {
+            "claim": "The Legislative Analyst says the measure might bring in around $5 billion in a weak year and $15 billion in a strong year; the amount would vary from year to year.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The measure keeps the higher rates established by Proposition 30 in 2012 from expiring in 2031; it does not raise the current rates now.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The official summary directs 89% of tax revenue to K–12 schools and 11% to community colleges.",
+            "verdict": "supported",
+            "note": "Matches the Attorney General's summary. The analyst separately describes the overall spending effect as roughly 40% for schools and community colleges."
+          },
+          {
+            "claim": "Supporters point to annual independent audits, annual online district accounting, and a ban on administrative spending as safeguards for the school funds.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Supporters say that if the measure fails, schools could face teacher layoffs and families could lose access to preventive care, prescriptions, and Medi-Cal coverage.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The Legislative Analyst forecasts that the measure might bring in around $5 billion in a weak year and $15 billion in a strong year.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Opponents describe keeping the rates as making higher income taxes permanent, rather than letting a temporary increase expire.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Opponents argue that making the rates permanent could make affordability worse for Californians.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Opponents argue that the state should control spending before making the higher rates permanent, saying the problem is spending rather than revenue.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The higher rates currently apply to the top 2% of California taxpayers, who pay about half of all state income taxes.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The Legislative Analyst says revenue would vary with the stock market and could be around $5 billion in a weak year or $15 billion in a strong year.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The analyst says roughly 40% of the funding would go to schools and community colleges, with the rest going to other state programs.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The official summary says school boards decide how school revenue is spent and that it cannot be used for administrative costs.",
+            "verdict": "supported",
+            "note": ""
+          }
+        ],
+        "yes_correct": true,
+        "no_correct": true,
+        "fiscal_correct": true,
+        "effect_notes": [],
+        "points_for": [
+          {
+            "point": "Maintains existing rates on the wealthiest taxpayers rather than raising current rates or allowing their scheduled tax cut.",
+            "covered": true
+          },
+          {
+            "point": "Protects schools and health care from cuts, including teacher layoffs and lost access to care or Medi-Cal.",
+            "covered": true
+          },
+          {
+            "point": "Protects local classroom funding through restrictions on administrative spending, independent audits, public accounting, and penalties for misuse.",
+            "covered": true
+          },
+          {
+            "point": "Maintaining education funding also protects funding for firefighters, emergency response, and wildfire protection.",
+            "covered": false
+          },
+          {
+            "point": "Revenue supports Rainy Day Fund investments that protect schools and health care during economic downturns.",
+            "covered": false
+          }
+        ],
+        "points_against": [
+          {
+            "point": "Making the higher rates permanent breaks the promise that the tax increases would be temporary.",
+            "covered": true
+          },
+          {
+            "point": "Permanent higher taxes worsen California's already high cost of living.",
+            "covered": true
+          },
+          {
+            "point": "The state should address waste, fraud, overspending, and budget mismanagement rather than make higher taxes permanent.",
+            "covered": true
+          },
+          {
+            "point": "Large spending increases have not delivered promised improvements in schools, infrastructure, or public safety.",
+            "covered": false
+          }
+        ],
+        "neutrality_issues": []
+      },
+      "usage": {
+        "writer:gpt-6-luna": {
+          "requests": 4,
+          "input_tokens": 28166,
+          "cache_read_tokens": 18938,
+          "output_tokens": 7442,
+          "reasoning_tokens": 2151,
+          "tool_calls": 3
+        },
+        "critic:gpt-6-luna": {
+          "requests": 3,
+          "input_tokens": 18925,
+          "cache_read_tokens": 0,
+          "output_tokens": 7030,
+          "reasoning_tokens": 5254,
+          "tool_calls": 0
+        }
+      },
+      "grader_usage": {
+        "requests": 1,
+        "input_tokens": 6213,
+        "cache_read_tokens": 0,
+        "output_tokens": 1201,
+        "reasoning_tokens": 227,
+        "tool_calls": 0
+      },
+      "seconds": 137.1,
+      "card": {
+        "measure_id": "CA-2026-11-03-prop-3",
+        "number": "Prop 3",
+        "official_title": "PROVIDES PERMANENT FUNDING FOR SCHOOLS AND HEALTH CARE BY EXTENDING EXISTING TAX ON HIGH INCOMES. INITIATIVE CONSTITUTIONAL AMENDMENT.",
+        "plain_title": "Keep current higher income tax rates on high-income Californians after 2030",
+        "title_disputed": false,
+        "put_on_ballot_by": "Citizen initiative (initiative constitutional amendment)",
+        "yes_means": "The higher income tax rates for high-income Californians would continue permanently instead of expiring in 2031. The measure keeps the current rates rather than raising them now. Revenue would support schools, community colleges, and other state programs.",
+        "no_means": "The higher rates would expire in 2031 under current law. The Legislative Analyst forecasts that, without the measure, the state would not keep the measure’s estimated $5 billion to $15 billion in annual income tax revenue.",
+        "who_is_affected": [
+          "High-income California taxpayers who pay the higher rates",
+          "K–12 schools and community colleges",
+          "People who rely on state programs, including health care and Medi-Cal"
+        ],
+        "fiscal_impact": {
+          "text": "The Legislative Analyst says the measure might bring in around $5 billion in a weak year and $15 billion in a strong year; the amount would vary from year to year.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+          "quote": "In a weak year, the proposition might bring in around $5 billion in revenue to the state. In a strong year, the proposition might bring in $15 billion in revenue to the state."
+        },
+        "steelman_yes": {
+          "side": "Yes",
+          "basis": "official_argument",
+          "core_claim": "Supporters argue that keeping the current higher rates in place protects funding for schools and public services without raising the rates taxpayers pay now, and that the measure includes checks on how school funds are used.",
+          "values": [
+            "Reliable funding for schools and health care",
+            "Accountability for public money"
+          ],
+          "best_evidence": [
+            {
+              "text": "The measure keeps the higher rates established by Proposition 30 in 2012 from expiring in 2031; it does not raise the current rates now.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+              "quote": "Proposition 3 makes the higher income tax rates established by Proposition 30 permanent instead of letting them expire in 2031."
+            },
+            {
+              "text": "The official summary directs 89% of tax revenue to K–12 schools and 11% to community colleges.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/3/title-summary.htm",
+              "quote": "Allocates tax revenues 89% to K–12 schools, 11% to community colleges."
+            },
+            {
+              "text": "Supporters point to annual independent audits, annual online district accounting, and a ban on administrative spending as safeguards for the school funds.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/3/arguments-rebuttals.htm",
+              "quote": "Every dollar in Prop. 3 is independently audited every year and any official who misuses the money faces prosecution and criminal penalties."
+            },
+            {
+              "text": "Supporters say that if the measure fails, schools could face teacher layoffs and families could lose access to preventive care, prescriptions, and Medi-Cal coverage.",
+              "label": "prediction",
+              "whose": "Supporters",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/3/arguments-rebuttals.htm",
+              "quote": "teacher layoffs, overcrowded classrooms and bigger class sizes. Families could lose access to preventive healthcare and affordable prescription drugs, and the Medi-Cal coverage"
+            }
+          ],
+          "who_it_helps": "In supporters’ view, students, school staff, families using Medi-Cal and other health services, and communities that rely on state programs benefit from keeping the revenue available.",
+          "answer_to_other_side": "Opponents are right that the tax rates were set to expire. Supporters’ reply is that the measure keeps the current rates in place rather than raising them now, directs funds to education, and includes audits and spending limits."
+        },
+        "steelman_no": {
+          "side": "No",
+          "basis": "official_argument",
+          "core_claim": "Opponents argue that a tax increase presented as temporary should not be made permanent, and that the state should address spending concerns and affordability before committing to keep the higher rates.",
+          "values": [
+            "Keeping commitments to voters",
+            "Limiting taxes and the cost burden on taxpayers",
+            "Responsible public spending"
+          ],
+          "best_evidence": [
+            {
+              "text": "The Legislative Analyst forecasts that the measure might bring in around $5 billion in a weak year and $15 billion in a strong year.",
+              "label": "prediction",
+              "whose": "Legislative Analyst",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+              "quote": "In a weak year, the proposition might bring in around $5 billion in revenue to the state. In a strong year, the proposition might bring in $15 billion in revenue to the state."
+            },
+            {
+              "text": "Opponents describe keeping the rates as making higher income taxes permanent, rather than letting a temporary increase expire.",
+              "label": "value",
+              "whose": "Opponents",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/3/arguments-rebuttals.htm",
+              "quote": "Prop. 3 locks in what would become the largest permanent state income tax increase in California history"
+            },
+            {
+              "text": "Opponents argue that making the rates permanent could make affordability worse for Californians.",
+              "label": "value",
+              "whose": "Opponents",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/3/arguments-rebuttals.htm",
+              "quote": "Making a temporary tax permanent only makes California more expensive."
+            },
+            {
+              "text": "Opponents argue that the state should control spending before making the higher rates permanent, saying the problem is spending rather than revenue.",
+              "label": "value",
+              "whose": "Opponents",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/3/arguments-rebuttals.htm",
+              "quote": "California doesn’t have a revenue problem. We have a spending problem."
+            }
+          ],
+          "who_it_helps": "In opponents’ view, high-income taxpayers benefit from the rates expiring as planned, and all taxpayers benefit if the state controls spending instead of relying on permanent higher rates.",
+          "answer_to_other_side": "Supporters point to the programs the revenue can fund, but opponents argue that those needs do not by themselves justify making a tax increase permanent; the state should also weigh affordability and spending choices."
+        },
+        "crux": {
+          "kind": "both",
+          "text": "The sides disagree about whether maintaining the revenue is worth making a tax increase permanent. They also differ in their expectations about the harm of allowing the rates to expire and whether better spending choices are a preferable response."
+        },
+        "evidence": [
+          {
+            "text": "The higher rates currently apply to the top 2% of California taxpayers, who pay about half of all state income taxes.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+            "quote": "The top 2 percent of California taxpayers pay these higher rates. These taxpayers pay about half of all state income taxes."
+          },
+          {
+            "text": "The Legislative Analyst says revenue would vary with the stock market and could be around $5 billion in a weak year or $15 billion in a strong year.",
+            "label": "prediction",
+            "whose": "Legislative Analyst",
+            "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+            "quote": "The amount of money brought in by Proposition 3 will go up and down a lot from year to year."
+          },
+          {
+            "text": "The analyst says roughly 40% of the funding would go to schools and community colleges, with the rest going to other state programs.",
+            "label": "prediction",
+            "whose": "Legislative Analyst",
+            "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+            "quote": "Roughly 40 percent of the funding would go to schools and community colleges. The rest would go to other state programs."
+          },
+          {
+            "text": "The official summary says school boards decide how school revenue is spent and that it cannot be used for administrative costs.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/3/title-summary.htm",
+            "quote": "Allows local school boards to decide how revenues are spent; bars use for administrative costs."
+          }
+        ],
+        "supporters": [
+          "California State PTA",
+          "California Federation of Teachers",
+          "California Nurses Association",
+          "California School Employees Association",
+          "California School Nurses Organization",
+          "California Teachers Association",
+          "Community College League of California",
+          "Nurse Alliance of SEIU California",
+          "Planned Parenthood Affiliates of CA"
+        ],
+        "opponents": [
+          "Howard Jarvis Taxpayers Association",
+          "Hispanic Chambers of Commerce of San Francisco",
+          "Central Valley Business Federation",
+          "California Taxpayers Association",
+          "Family Business Association of California",
+          "California Hispanic Chambers of Commerce"
+        ],
+        "reading_minutes": 3
+      }
+    },
+    {
+      "prop": "39",
+      "verified": false,
+      "turing": {
+        "yes": 4,
+        "no": 4
+      },
+      "rewrites": 2,
+      "score": {
+        "claims": 13,
+        "supported": 13,
+        "unsupported": 0,
+        "contradicted": 0,
+        "fidelity": 1.0,
+        "effects_correct": 3,
+        "coverage_for": 0.8,
+        "coverage_against": 0.8,
+        "coverage": 0.8,
+        "neutrality_issues": 0
+      },
+      "grade": {
+        "claims": [
+          {
+            "claim": "The Legislative Analyst estimates the measure would raise state and local government costs by tens of millions to low hundreds of millions of dollars each year; the exact cost depends on future choices.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The measure keeps vote-by-mail voting and requires the state to provide a voter ID card at no cost to voters who request one.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Supporters argue that voter ID can increase participation because voters who trust elections are more likely to take part.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Supporters say signature mismatches can lead to rejected mail ballots and extra steps for voters; they cite their argument that more than 100,000 ballots were rejected for mismatches and more than 200,000 voters faced hassles in the last election.",
+            "verdict": "supported",
+            "note": "Both numbers appear in the supporters’ argument; the card appropriately attributes them rather than treating them as analyst findings."
+          },
+          {
+            "claim": "Supporters expect regular independent audits to give the public more confidence in how election officials follow the new rules.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The measure requires in-person voters to show government-issued ID and mail voters to designate an ID in their registration and provide matching ID-number digits on their ballot envelope.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Opponents warn that putting ID-number information on mail ballot envelopes could expose voters to identity theft and force a choice between privacy and voting.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Opponents worry that getting ID could require transportation, time off work, childcare, or obtaining required documents. They say seniors, students, low-income workers, voters of color, and women who changed their names at marriage may face the greatest burdens.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Opponents warn that an ID-number mismatch, an outdated address, or a misspelled name on ID could put a valid vote at risk; they also say a voter who does not designate an ID might not receive a mail ballot.",
+            "verdict": "supported",
+            "note": "These warnings are stated in the official opposition argument; they are not all independently established by the analyst."
+          },
+          {
+            "claim": "California already requires U.S. citizenship to vote in state and federal elections and most local elections; the analyst says voters establish identity during registration and mail-ballot signatures are checked before ballots are counted.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "About 13 million people voted by mail and about 3 million voted in person in California’s November 2024 election.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The measure requires voters to provide added identifying information each time they cast a ballot, with different requirements for in-person and mail voting.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The Legislative Analyst estimates added costs would likely exceed any savings from fewer people being registered to vote.",
+            "verdict": "supported",
+            "note": ""
+          }
+        ],
+        "yes_correct": true,
+        "no_correct": true,
+        "fiscal_correct": true,
+        "effect_notes": [],
+        "points_for": [
+          {
+            "point": "Voter ID would increase election trust and participation rather than suppress turnout.",
+            "covered": true
+          },
+          {
+            "point": "Voting would remain accessible through continued mail voting and other conveniences, with free voter ID available.",
+            "covered": true
+          },
+          {
+            "point": "Current mail-ballot signature matching puts votes at risk and creates substantial voter hassles.",
+            "covered": true
+          },
+          {
+            "point": "Citizenship verification, accurate voter lists, and independent audits would improve election management and accountability.",
+            "covered": true
+          },
+          {
+            "point": "The measure is a broadly supported bipartisan California solution, not a project about Trump or national partisan control.",
+            "covered": false
+          }
+        ],
+        "points_against": [
+          {
+            "point": "The measure is part of a Trump-aligned, billionaire-funded effort to suppress voters and consolidate partisan power.",
+            "covered": false
+          },
+          {
+            "point": "The measure would waste substantial recurring taxpayer funds pursuing election conspiracy claims.",
+            "covered": true
+          },
+          {
+            "point": "Putting personal identifying information on mail-ballot envelopes creates identity-theft and privacy risks.",
+            "covered": true
+          },
+          {
+            "point": "New ID-designation and matching requirements could prevent eligible voters from receiving mail ballots or having their votes counted.",
+            "covered": true
+          },
+          {
+            "point": "Even free IDs entail transportation, time, childcare, and documentation burdens that disproportionately affect vulnerable groups and women with changed names.",
+            "covered": true
+          }
+        ],
+        "neutrality_issues": []
+      },
+      "usage": {
+        "writer:gpt-6-luna": {
+          "requests": 4,
+          "input_tokens": 28633,
+          "cache_read_tokens": 19427,
+          "output_tokens": 6454,
+          "reasoning_tokens": 672,
+          "tool_calls": 3
+        },
+        "critic:gpt-6-luna": {
+          "requests": 3,
+          "input_tokens": 20826,
+          "cache_read_tokens": 0,
+          "output_tokens": 8322,
+          "reasoning_tokens": 6697,
+          "tool_calls": 0
+        }
+      },
+      "grader_usage": {
+        "requests": 1,
+        "input_tokens": 6806,
+        "cache_read_tokens": 0,
+        "output_tokens": 1160,
+        "reasoning_tokens": 57,
+        "tool_calls": 0
+      },
+      "seconds": 128.7,
+      "card": {
+        "measure_id": "CA-2026-11-03-prop-39",
+        "number": "Prop. 39",
+        "official_title": "PROHIBITS CITIZENS FROM VOTING UNLESS THEY PRESENT GOVERNMENT-ISSUED IDENTIFICATION. INITIATIVE CONSTITUTIONAL AMENDMENT.",
+        "plain_title": "Require government ID to vote in person or by mail",
+        "title_disputed": false,
+        "put_on_ballot_by": "Citizen initiative (initiative constitutional amendment)",
+        "yes_means": "Require voters to use government-issued ID to vote in person. Mail voters must designate a government-issued ID in their voter registration and put the last four digits of that designated number on their ballot envelope. If the digits do not match, the ballot is invalid. The measure also requires election officials to make best efforts to verify voter citizenship, report yearly on verification, provide free voter ID cards on request, and undergo regular audits. The Legislature would pass laws to fill in details.",
+        "no_means": "Keep the current system: voters generally identify themselves by signing in person or signing a mail-ballot envelope, and election officials verify mail-ballot signatures. No new ID-number requirements, citizenship-verification reports, voter ID card program, or audits under this measure would take effect.",
+        "who_is_affected": [
+          "People who vote in person, who would need to present government-issued ID",
+          "People who vote by mail, who would need to designate an ID and provide matching ID-number information",
+          "County and state election officials, who would verify identities and citizenship and carry out reporting and audits",
+          "Voters who request a free state-issued voter ID card"
+        ],
+        "fiscal_impact": {
+          "text": "The Legislative Analyst estimates the measure would raise state and local government costs by tens of millions to low hundreds of millions of dollars each year; the exact cost depends on future choices.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+          "quote": "increase state and local government costs each year by tens of millions of dollars to low hundreds of millions of dollars"
+        },
+        "steelman_yes": {
+          "side": "Yes",
+          "basis": "official_argument",
+          "core_claim": "Supporters argue that requiring voter ID, while keeping mail voting and offering a free state voter ID card, can strengthen confidence in elections without removing convenient ways to vote.",
+          "values": [
+            "Trust in elections",
+            "Accessible voting",
+            "Accurate voter lists"
+          ],
+          "best_evidence": [
+            {
+              "text": "The measure keeps vote-by-mail voting and requires the state to provide a voter ID card at no cost to voters who request one.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+              "quote": "provide a voter identification card at no cost to voters who request one"
+            },
+            {
+              "text": "Supporters argue that voter ID can increase participation because voters who trust elections are more likely to take part.",
+              "label": "prediction",
+              "whose": "Supporters",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/39/arguments-rebuttals.htm",
+              "quote": "Voter ID does not suppress voting—in fact it increases voter participation."
+            },
+            {
+              "text": "Supporters say signature mismatches can lead to rejected mail ballots and extra steps for voters; they cite their argument that more than 100,000 ballots were rejected for mismatches and more than 200,000 voters faced hassles in the last election.",
+              "label": "fact",
+              "whose": "Supporters",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/39/arguments-rebuttals.htm",
+              "quote": "more than 100,000 ballots were rejected due to signature mismatches—and more than 200,000 voters endured hassles"
+            },
+            {
+              "text": "Supporters expect regular independent audits to give the public more confidence in how election officials follow the new rules.",
+              "label": "prediction",
+              "whose": "Supporters",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/39/arguments-rebuttals.htm",
+              "quote": "Prop. 39 requires an independent audit be conducted every two years"
+            }
+          ],
+          "who_it_helps": "In supporters’ view, voters who want added assurance about voter identity and voter-roll accuracy, while retaining mail voting and access to a free state ID card.",
+          "answer_to_other_side": "Opponents warn that new ID steps could burden eligible voters and cost a lot. Supporters’ reply is that the measure preserves mail voting, offers a free voter ID card, and applies the same rules statewide to improve confidence and election management."
+        },
+        "steelman_no": {
+          "side": "No",
+          "basis": "official_argument",
+          "core_claim": "Opponents argue that California should keep its current identity checks rather than add ID requirements that could create new barriers, privacy concerns, and public costs for eligible voters.",
+          "values": [
+            "Voting access",
+            "Privacy",
+            "Careful use of public funds"
+          ],
+          "best_evidence": [
+            {
+              "text": "The measure requires in-person voters to show government-issued ID and mail voters to designate an ID in their registration and provide matching ID-number digits on their ballot envelope.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+              "quote": "When voting by mail, Proposition 39 requires voters to provide the last four digits of their selected government-issued identification number on the ballot envelope."
+            },
+            {
+              "text": "Opponents warn that putting ID-number information on mail ballot envelopes could expose voters to identity theft and force a choice between privacy and voting.",
+              "label": "prediction",
+              "whose": "Opponents",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/39/arguments-rebuttals.htm",
+              "quote": "No citizen should have to choose between their privacy and their right to vote."
+            },
+            {
+              "text": "Opponents worry that getting ID could require transportation, time off work, childcare, or obtaining required documents. They say seniors, students, low-income workers, voters of color, and women who changed their names at marriage may face the greatest burdens.",
+              "label": "prediction",
+              "whose": "Opponents",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/39/arguments-rebuttals.htm",
+              "quote": "voters still pay for transportation, time off work, and costs like childcare or getting required documents."
+            },
+            {
+              "text": "Opponents warn that an ID-number mismatch, an outdated address, or a misspelled name on ID could put a valid vote at risk; they also say a voter who does not designate an ID might not receive a mail ballot.",
+              "label": "prediction",
+              "whose": "Opponents",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/39/arguments-rebuttals.htm",
+              "quote": "if the address on your ID is not up to date or your name is misspelled—your vote might be rejected."
+            }
+          ],
+          "who_it_helps": "In opponents’ view, eligible voters who could face added steps or privacy concerns, and taxpayers who would avoid the measure’s added public costs.",
+          "answer_to_other_side": "Supporters point to a free ID card and continued mail voting. Opponents’ reply is that a free card does not remove every burden of obtaining ID, and the proposal still adds ID-number steps for mail voters and recurring costs for election agencies."
+        },
+        "crux": {
+          "kind": "both",
+          "text": "The sides disagree about whether added ID checks and audits would meaningfully improve trust and election management, and how much weight to give that goal against added voter steps, privacy risks, and recurring public costs. The analyst says costs would be substantial but does not estimate whether the measure would raise trust or participation."
+        },
+        "evidence": [
+          {
+            "text": "California already requires U.S. citizenship to vote in state and federal elections and most local elections; the analyst says voters establish identity during registration and mail-ballot signatures are checked before ballots are counted.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+            "quote": "Elections officials verify signatures for VBM ballots before counting them."
+          },
+          {
+            "text": "About 13 million people voted by mail and about 3 million voted in person in California’s November 2024 election.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+            "quote": "About 13 million voted using a VBM ballot, and about 3 million voted in person."
+          },
+          {
+            "text": "The measure requires voters to provide added identifying information each time they cast a ballot, with different requirements for in-person and mail voting.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+            "quote": "Proposition 39 requires voters to provide additional identifying information each time they cast a ballot"
+          },
+          {
+            "text": "The Legislative Analyst estimates added costs would likely exceed any savings from fewer people being registered to vote.",
+            "label": "prediction",
+            "whose": "Legislative Analyst",
+            "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+            "quote": "These savings likely would not exceed the costs of the measure."
+          }
+        ],
+        "supporters": [
+          "Margit Whitlock, Democratic Coalition Chair, Californians for Voter ID",
+          "Tafa Jefferson, Republican Coalition Chair, Californians for Voter ID",
+          "Joe Green, Independent Coalition Chair, Californians for Voter ID",
+          "Johnathan Hale, The Transparency Foundation",
+          "Cynthia Kaui, California Women’s Leadership Association",
+          "Ed Cervantes, Latino American Political Association"
+        ],
+        "opponents": [
+          "Alex Padilla, U.S. Senator for California",
+          "Catherine Kennedy, California Nurses Association",
+          "Adam Weinberger, California School Employees Association",
+          "David Trujillo, ACLU California Action",
+          "Darius Kemp, Common Cause",
+          "Lorrel Plimier, League of Women Voters of California"
+        ],
+        "reading_minutes": 3
+      }
+    }
+  ]
+}

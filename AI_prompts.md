@@ -52,3 +52,8 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 10: Critic and Candidate Profiler
 **Prompt (my own words):** "Yes, start" (approving the Critic, which runs the steelman tests and sends cards back for rewrites, and the Candidate Profiler for the Says / Did / Funded by cards)
 **What was lacking before:** Nothing tested the cards for strawmen, one-sided wording, unsupported claims or vote recommendations, and the app had no candidate cards.
+
+## Step 11: Cost-effective evaluation and model choice
+**Prompt (my own words):** "is this best aprocah or do you hvae more cost effective recomendation"
+**Follow-up prompt:** "yes" and then "what is lowest model to stil accurately and efficeintly get what you're looking for? i imagine the steelman argument creator and processes raound that should at least be at the model they're set at; is other info scraping okay to use lower token cost models? what do you reocmmend?"
+**What was lacking before:** Statewide measures were cached per district combination (so they'd be re-researched many times), page menus and footers were sent to the model, there was no independent accuracy score, and there was no evidence on whether a cheaper writer model hurts quality.

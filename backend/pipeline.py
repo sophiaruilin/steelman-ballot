@@ -14,8 +14,9 @@ import asyncio
 import json
 import sys
 import time
+from datetime import date
 
-from backend import config
+from backend import cache, config
 from backend.agents import critic, measure_analyst
 from backend.agents.common import ResearchDeps, log_run, usage_dict
 from backend.sources.web import WebReader
@@ -28,24 +29,26 @@ def _add(total: dict, u: dict, model: str) -> None:
 
 
 async def research_measure(state: str, number: str, election: str = "2026-11-03",
-                           urls: list[str] | None = None, reader: WebReader | None = None) -> dict:
+                           urls: list[str] | None = None, reader: WebReader | None = None,
+                           writer_model: str | None = None) -> dict:
     urls = urls or measure_analyst.start_urls(state, number)
     deps = ResearchDeps(reader=reader or WebReader())
     measure_id = f"{state.upper()}-{election}-prop-{number}"
     prompt = (f"Measure: {state.upper()} Proposition {number}, election {election}. measure_id = '{measure_id}'.\n"
               "Start by fetching these official pages:\n" + "\n".join(f"- {u}" for u in urls))
-    analyst = measure_analyst.get_agent()
+    writer = writer_model or config.MODEL_NAME
+    analyst = measure_analyst.get_agent(writer)
     usage: dict = {}
     rounds = []
     t0 = time.time()
 
     result = await analyst.run(prompt, deps=deps, usage_limits=measure_analyst.PER_MEASURE_LIMITS)
-    _add(usage, usage_dict(result.usage), config.MODEL_NAME)
+    _add(usage, usage_dict(result.usage), "writer:" + writer)
 
     for rnd in range(config.MAX_CRITIC_ROUNDS + 1):
         card = result.output
         verdict, checks, cu = await critic.review(card, deps.fetched)
-        _add(usage, usage_dict(cu), config.CRITIC_MODEL)
+        _add(usage, usage_dict(cu), "critic:" + config.CRITIC_MODEL)
         rounds.append({"round": rnd, "verdict": verdict.model_dump(), "checks": checks})
         if verdict.verdict == "pass" or rnd == config.MAX_CRITIC_ROUNDS:
             break
@@ -53,7 +56,7 @@ async def research_measure(state: str, number: str, election: str = "2026-11-03"
                     "already read, then return the full corrected card.\n" + verdict.instructions)
         result = await analyst.run(feedback, deps=deps, message_history=result.all_messages(),
                                    usage_limits=measure_analyst.PER_MEASURE_LIMITS)
-        _add(usage, usage_dict(result.usage), config.MODEL_NAME)
+        _add(usage, usage_dict(result.usage), "writer:" + writer)
 
     final = rounds[-1]["verdict"]
     record = {
@@ -64,15 +67,47 @@ async def research_measure(state: str, number: str, election: str = "2026-11-03"
         "rewrites": len(rounds) - 1,
         "review_rounds": rounds,
         "sources": list(deps.fetched),
-        "meta": {"seconds": round(time.time() - t0, 1), "usage_by_model": usage,
+        "meta": {"seconds": round(time.time() - t0, 1), "writer_model": writer, "usage_by_model": usage,
                  "blocked": deps.blocked, "injection_flags": deps.injection_flags},
     }
+    record["_source_text"] = dict(deps.fetched)   # for cache fingerprints; removed before saving
     log_run({"agent": "pipeline.measure", "measure_id": measure_id, "verified": record["steelman_verified"],
              "rewrites": record["rewrites"], "turing": record["turing"], **record["meta"]})
     return record
 
 
+async def get_measure(state: str, number: str, election: str = "2026-11-03", *, now=None,
+                      reader: WebReader | None = None) -> tuple[dict, str]:
+    """Serve a measure card from the contest cache, or research it. Returns (record, action).
+
+    One research run per statewide measure per refresh window, shared by every voter in the state.
+    """
+    key = cache.contest_key(state, "statewide", f"prop-{number}")
+    entry = cache.load(key, election)
+    now = now or cache.utcnow()
+    action = cache.decide(entry, now=now, election_day=date.fromisoformat(election))
+    if action == "serve":
+        return entry.payload, action
+    if action == "check" and entry is not None:
+        reader = reader or WebReader()
+        fresh = {}
+        for url in entry.payload.get("sources", []):
+            try:
+                fresh[url] = cache.fingerprint_text(reader.fetch(url).data["text"])
+            except Exception:
+                fresh[url] = entry.fingerprints.get(url, "")   # unreachable: keep the old card
+        if not cache.changed_sources(entry.fingerprints, fresh):
+            entry.checked_at = now
+            cache.save(entry)
+            return entry.payload, "checked_unchanged"
+    record = await research_measure(state, number, election, reader=reader)
+    fps = {u: cache.fingerprint_text(t) for u, t in record.pop("_source_text", {}).items()}
+    cache.save(cache.CacheEntry(key, election, built_at=now, checked_at=now, fingerprints=fps, payload=record))
+    return record, "researched"
+
+
 def save(record: dict) -> str:
+    record = {k: v for k, v in record.items() if not k.startswith("_")}
     out = config.ROOT / "output" / "cards" / f"{record['measure_id']}.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(record, indent=2, ensure_ascii=False), encoding="utf-8")

@@ -117,3 +117,14 @@ def save(entry: CacheEntry, cache_dir: Path | None = None) -> Path:
 
 def utcnow() -> datetime:
     return datetime.now(timezone.utc)
+
+
+# ---- Contest-level keys -------------------------------------------------------------
+# Research is cached per CONTEST, not per voter's district combination: a statewide measure is
+# the same card for every voter in the state, a House race the same for everyone in that district.
+# A voter's ballot is then just a list of contest keys, assembled from the cache.
+
+def contest_key(state: str, scope: str, contest_id: str) -> str:
+    """e.g. contest_key("CA", "statewide", "prop-3") -> "CA|statewide|prop-3";
+    contest_key("TX", "cd-4810", "us-house") -> "TX|cd-4810|us-house"."""
+    return f"{state.upper()}|{scope}|{contest_id}"
