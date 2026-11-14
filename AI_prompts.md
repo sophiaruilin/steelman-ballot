@@ -36,3 +36,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 6: Security against tampering and hacking
 **Prompt (my own words):** "anything to guard against from potential tampering, hacking, coding tricks from ai scraping, etc. to icnlude?"
 **What was lacking before:** The plan covered errors and bias but not deliberate attacks: poisoned or fake sources, injection hidden in scraped pages, bots running up costs, the shared cache spreading one bad run, and doctored screenshots.
+
+## Step 7: FEC and Congress.gov adapters
+**Prompt (my own words):** "Yes, start" (approving the next build step: the OpenFEC and Congress.gov adapters for each candidate's "Funded by" and "Did" sections)
+**What was lacking before:** The app could find an address's districts but couldn't yet say who funds a federal candidate or what a sitting member of Congress has done.

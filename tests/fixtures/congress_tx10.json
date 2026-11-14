@@ -1,0 +1,1605 @@
+{
+ "api.congress.gov/v3/member/congress/119/TX?currentMember=true&format=json&limit=250": {
+  "members": [
+   {
+    "bioguideId": "M001245",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/698206b2eb30d3271899373e_200.jpg"
+    },
+    "district": 18,
+    "name": "Menefee, Christian D.",
+    "partyName": "Democratic",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2026
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/M001245?format=json"
+   },
+   {
+    "bioguideId": "J000310",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/67742df60b34857ecc9090e9_200.jpg"
+    },
+    "district": 32,
+    "name": "Johnson, Julie",
+    "partyName": "Democratic",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2025
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/J000310?format=json"
+   },
+   {
+    "bioguideId": "G000603",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/677428ac0b34857ecc9090b3_200.jpg"
+    },
+    "district": 26,
+    "name": "Gill, Brandon",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2025
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/G000603?format=json"
+   },
+   {
+    "bioguideId": "H001095",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/h001095_200.jpg"
+    },
+    "district": 38,
+    "name": "Hunt, Wesley",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2023
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/H001095?format=json"
+   },
+   {
+    "bioguideId": "D000594",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/66d9fd54f440bf1dc174fbf6_200.jpg"
+    },
+    "district": 15,
+    "name": "De La Cruz, Monica",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2023
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/D000594?format=json"
+   },
+   {
+    "bioguideId": "C001130",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/c001130_200.jpg"
+    },
+    "district": 30,
+    "name": "Crockett, Jasmine",
+    "partyName": "Democratic",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2023
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/C001130?format=json"
+   },
+   {
+    "bioguideId": "C001131",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/c001131_200.jpg"
+    },
+    "district": 35,
+    "name": "Casar, Greg",
+    "partyName": "Democratic",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2023
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/C001131?format=json"
+   },
+   {
+    "bioguideId": "V000134",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/677461060b34857ecc9091af_200.jpg"
+    },
+    "district": 24,
+    "name": "Van Duyne, Beth",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2021
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/V000134?format=json"
+   },
+   {
+    "bioguideId": "N000026",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/n000026_200.jpg"
+    },
+    "district": 22,
+    "name": "Nehls, Troy E.",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2021
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/N000026?format=json"
+   },
+   {
+    "bioguideId": "G000587",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/g000587_200.jpg"
+    },
+    "district": 29,
+    "name": "Garcia, Sylvia R.",
+    "partyName": "Democratic",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2019
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/G000587?format=json"
+   },
+   {
+    "bioguideId": "R000614",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/r000614_200.jpg"
+    },
+    "district": 21,
+    "name": "Roy, Chip",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2019
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/R000614?format=json"
+   },
+   {
+    "bioguideId": "E000299",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/e000299_200.jpg"
+    },
+    "district": 16,
+    "name": "Escobar, Veronica",
+    "partyName": "Democratic",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2019
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/E000299?format=json"
+   },
+   {
+    "bioguideId": "C001115",
+    "depiction": {
+     "attribution": "Congressional Pictorial Directory",
+     "imageUrl": "https://www.congress.gov/img/member/115_rp_tx_27_cloud_michael_200.jpg"
+    },
+    "district": 27,
+    "name": "Cloud, Michael",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2018
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/C001115?format=json"
+   },
+   {
+    "bioguideId": "A000375",
+    "depiction": {
+     "attribution": "Congressional Pictorial Directory",
+     "imageUrl": "https://www.congress.gov/img/member/115_rp_tx_19_arrington_jodey_200.jpg"
+    },
+    "district": 19,
+    "name": "Arrington, Jodey C.",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2017
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/A000375?format=json"
+   },
+   {
+    "bioguideId": "G000581",
+    "depiction": {
+     "attribution": "Congressional Pictorial Directory",
+     "imageUrl": "https://www.congress.gov/img/member/115_rp_tx_15_gonzalez_vicente_200.jpg"
+    },
+    "district": 34,
+    "name": "Gonzalez, Vicente",
+    "partyName": "Democratic",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2017
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/G000581?format=json"
+   },
+   {
+    "bioguideId": "B001291",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/b001291_200.jpg"
+    },
+    "district": 36,
+    "name": "Babin, Brian",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2015
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/B001291?format=json"
+   },
+   {
+    "bioguideId": "V000131",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/v000131_200.jpg"
+    },
+    "district": 33,
+    "name": "Veasey, Marc A.",
+    "partyName": "Democratic",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2013
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/V000131?format=json"
+   },
+   {
+    "bioguideId": "W000816",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/w000816_200.jpg"
+    },
+    "district": 25,
+    "name": "Williams, Roger",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2013
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/W000816?format=json"
+   },
+   {
+    "bioguideId": "C001091",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/69d7f5b07304cef7a0c977b1_200.jpg"
+    },
+    "district": 20,
+    "name": "Castro, Joaquin",
+    "partyName": "Democratic",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2013
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/C001091?format=json"
+   },
+   {
+    "bioguideId": "W000814",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/w000814_200.jpg"
+    },
+    "district": 14,
+    "name": "Weber, Randy K. Sr.",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2013
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/W000814?format=json"
+   },
+   {
+    "bioguideId": "S000250",
+    "depiction": {
+     "attribution": "Collection of the U.S. House of Representatives <a href=\"https://history.house.gov/Collection/Detail/25769820951\" target=\"_blank\" rel=\"noopener\">About this object</a>",
+     "imageUrl": "https://www.congress.gov/img/member/c8be64cedcc68c174b2039b5debce8f5_200.jpg"
+    },
+    "district": 17,
+    "name": "Sessions, Pete",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "endYear": 2019,
+       "startYear": 1997
+      },
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2021
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/S000250?format=json"
+   },
+   {
+    "bioguideId": "C001063",
+    "depiction": {
+     "attribution": "Congressional Pictorial Directory",
+     "imageUrl": "https://www.congress.gov/img/member/116_rp_tx_28_cuellar_henry_200.jpg"
+    },
+    "district": 28,
+    "name": "Cuellar, Henry",
+    "partyName": "Democratic",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2005
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/C001063?format=json"
+   },
+   {
+    "bioguideId": "C001051",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/c001051_200.jpg"
+    },
+    "district": 31,
+    "name": "Carter, John R.",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2003
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/C001051?format=json"
+   },
+   {
+    "bioguideId": "D000399",
+    "depiction": {
+     "attribution": "Image, Congressional Pictorial Directory, 109th.",
+     "imageUrl": "https://www.congress.gov/img/member/d000399_200.jpg"
+    },
+    "district": 37,
+    "name": "Doggett, Lloyd",
+    "partyName": "Democratic",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 1995
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:10Z",
+    "url": "https://api.congress.gov/v3/member/D000399?format=json"
+   },
+   {
+    "bioguideId": "G000601",
+    "depiction": {
+     "imageUrl": "https://www.congress.gov/img/member/6774277d0b34857ecc9090a7_200.jpg"
+    },
+    "district": 12,
+    "name": "Goldman, Craig A.",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2025
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:09Z",
+    "url": "https://api.congress.gov/v3/member/G000601?format=json"
+   },
+   {
+    "bioguideId": "S001224",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/s001224_200.jpg"
+    },
+    "district": 3,
+    "name": "Self, Keith",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2023
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:09Z",
+    "url": "https://api.congress.gov/v3/member/S001224?format=json"
+   },
+   {
+    "bioguideId": "M001224",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/680008c5f22eaf56065817f4_200.jpg"
+    },
+    "district": 1,
+    "name": "Moran, Nathaniel",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2023
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:09Z",
+    "url": "https://api.congress.gov/v3/member/M001224?format=json"
+   },
+   {
+    "bioguideId": "L000603",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/l000603_200.jpg"
+    },
+    "district": 8,
+    "name": "Luttrell, Morgan",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2023
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:09Z",
+    "url": "https://api.congress.gov/v3/member/L000603?format=json"
+   },
+   {
+    "bioguideId": "E000071",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/e000071_200.jpg"
+    },
+    "district": 6,
+    "name": "Ellzey, Jake",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2021
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:09Z",
+    "url": "https://api.congress.gov/v3/member/E000071?format=json"
+   },
+   {
+    "bioguideId": "P000048",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/p000048_200.jpg"
+    },
+    "district": 11,
+    "name": "Pfluger, August",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2021
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:09Z",
+    "url": "https://api.congress.gov/v3/member/P000048?format=json"
+   },
+   {
+    "bioguideId": "J000304",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/j000304_200.jpg"
+    },
+    "district": 13,
+    "name": "Jackson, Ronny",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2021
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:09Z",
+    "url": "https://api.congress.gov/v3/member/J000304?format=json"
+   },
+   {
+    "bioguideId": "F000246",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/f000246_200.jpg"
+    },
+    "district": 4,
+    "name": "Fallon, Pat",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2021
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:09Z",
+    "url": "https://api.congress.gov/v3/member/F000246?format=json"
+   },
+   {
+    "bioguideId": "F000468",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/67813f931f9ad6ea6fb1eb6f_200.jpg"
+    },
+    "district": 7,
+    "name": "Fletcher, Lizzie",
+    "partyName": "Democratic",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2019
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:09Z",
+    "url": "https://api.congress.gov/v3/member/F000468?format=json"
+   },
+   {
+    "bioguideId": "G000589",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/g000589_200.jpg"
+    },
+    "district": 5,
+    "name": "Gooden, Lance",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2019
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:09Z",
+    "url": "https://api.congress.gov/v3/member/G000589?format=json"
+   },
+   {
+    "bioguideId": "C001120",
+    "depiction": {
+     "attribution": "Image courtesy of the Member",
+     "imageUrl": "https://www.congress.gov/img/member/698a13d0a7af728d4e6c2038_200.jpg"
+    },
+    "district": 2,
+    "name": "Crenshaw, Dan",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2019
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:09Z",
+    "url": "https://api.congress.gov/v3/member/C001120?format=json"
+   },
+   {
+    "bioguideId": "M001157",
+    "depiction": {
+     "attribution": "Congressional Pictorial Directory",
+     "imageUrl": "https://www.congress.gov/img/member/116_rp_tx_10_mccaul_michael_200.jpg"
+    },
+    "district": 10,
+    "name": "McCaul, Michael T.",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2005
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:09Z",
+    "url": "https://api.congress.gov/v3/member/M001157?format=json"
+   },
+   {
+    "bioguideId": "G000553",
+    "depiction": {
+     "attribution": "Congressional Pictorial Directory",
+     "imageUrl": "https://www.congress.gov/img/member/116_rp_tx_9_green_al_200.jpg"
+    },
+    "district": 9,
+    "name": "Green, Al",
+    "partyName": "Democratic",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "House of Representatives",
+       "startYear": 2005
+      }
+     ]
+    },
+    "updateDate": "2026-11-05T08:36:09Z",
+    "url": "https://api.congress.gov/v3/member/G000553?format=json"
+   },
+   {
+    "bioguideId": "C001098",
+    "depiction": {
+     "attribution": "<a href=\"http://www.senate.gov/artandhistory/history/common/generic/Photo_Collection_of_the_Senate_Historical_Office.htm\">Courtesy U.S. Senate Historical Office</a>",
+     "imageUrl": "https://www.congress.gov/img/member/c001098_200.jpg"
+    },
+    "district": null,
+    "name": "Cruz, Ted",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "Senate",
+       "startYear": 2013
+      }
+     ]
+    },
+    "updateDate": "2026-11-01T11:31:09Z",
+    "url": "https://api.congress.gov/v3/member/C001098?format=json"
+   },
+   {
+    "bioguideId": "C001056",
+    "depiction": {
+     "attribution": "<a href=\"http://www.senate.gov/artandhistory/history/common/generic/Photo_Collection_of_the_Senate_Historical_Office.htm\">Courtesy U.S. Senate Historical Office</a>",
+     "imageUrl": "https://www.congress.gov/img/member/c001056_200.jpg"
+    },
+    "district": null,
+    "name": "Cornyn, John",
+    "partyName": "Republican",
+    "state": "Texas",
+    "terms": {
+     "item": [
+      {
+       "chamber": "Senate",
+       "startYear": 2002
+      }
+     ]
+    },
+    "updateDate": "2026-11-01T11:31:08Z",
+    "url": "https://api.congress.gov/v3/member/C001056?format=json"
+   }
+  ],
+  "pagination": {
+   "count": 39
+  },
+  "request": {
+   "contentType": "application/json",
+   "format": "json"
+  }
+ },
+ "api.congress.gov/v3/member/M001157/sponsored-legislation?format=json&limit=50": {
+  "pagination": {
+   "count": 262,
+   "next": "https://api.congress.gov/v3/member/M001157/sponsored-legislation?offset=50&limit=50&format=json"
+  },
+  "request": {
+   "bioguideId": "m001157",
+   "contentType": "application/json",
+   "format": "json"
+  },
+  "sponsoredLegislation": [
+   {
+    "congress": 119,
+    "introducedDate": "2026-10-01",
+    "latestAction": {
+     "actionDate": "2026-10-01",
+     "text": "Referred to the House Committee on Education and Workforce."
+    },
+    "number": "1600",
+    "policyArea": {
+     "name": "Education"
+    },
+    "title": "Commending and congratulating Texas A&M University for 150 years of service to the State of Texas and the United States.",
+    "type": "HRES",
+    "url": "https://api.congress.gov/v3/bill/119/hres/1600?format=json"
+   },
+   {
+    "congress": 119,
+    "introducedDate": "2026-05-07",
+    "latestAction": {
+     "actionDate": "2026-05-07",
+     "text": "Referred to the Committee on Armed Services, and in addition to the Committees on Transportation and Infrastructure, and the Judiciary, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+    },
+    "number": "8697",
+    "policyArea": {
+     "name": "Armed Forces and National Security"
+    },
+    "title": "Guard the Skies Act",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/119/hr/8697?format=json"
+   },
+   {
+    "congress": 119,
+    "introducedDate": "2026-04-15",
+    "latestAction": {
+     "actionDate": "2026-04-22",
+     "text": "Ordered to be Reported (Amended) by the Yeas and Nays: 43 - 1."
+    },
+    "number": "8284",
+    "policyArea": {
+     "name": "Foreign Trade and International Finance"
+    },
+    "title": "Bureau of Industry and Security License Administration Enhancement Act",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/119/hr/8284?format=json"
+   },
+   {
+    "congress": 119,
+    "introducedDate": "2026-09-14",
+    "latestAction": {
+     "actionDate": "2026-09-14",
+     "text": "Referred to the House Committee on Energy and Commerce."
+    },
+    "number": "10370",
+    "policyArea": {
+     "name": "Health"
+    },
+    "title": "Ailani Myers Accelerating Innovation in Medicine to Cure Kids with Cancer Act",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/119/hr/10370?format=json"
+   },
+   {
+    "congress": 119,
+    "introducedDate": "2026-08-10",
+    "latestAction": {
+     "actionDate": "2026-08-10",
+     "text": "Referred to the Committee on Foreign Affairs, and in addition to the Committees on the Judiciary, Oversight and Government Reform, Financial Services, Ways and Means, Rules, and Energy and Commerce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+    },
+    "number": "10076",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/119/hr/10076?format=json"
+   },
+   {
+    "congress": 119,
+    "introducedDate": "2026-07-09",
+    "latestAction": {
+     "actionDate": "2026-07-09",
+     "text": "Referred to the Committee on Natural Resources, and in addition to the Committees on Foreign Affairs, and Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+    },
+    "number": "9631",
+    "policyArea": {
+     "name": "Animals"
+    },
+    "title": "Bear Poaching Elimination Act",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/119/hr/9631?format=json"
+   },
+   {
+    "congress": 119,
+    "introducedDate": "2026-07-09",
+    "latestAction": {
+     "actionDate": "2026-07-09",
+     "text": "Referred to the House Committee on Energy and Commerce."
+    },
+    "number": "9632",
+    "policyArea": {
+     "name": "Health"
+    },
+    "title": "Accelerating Innovation (AI) for Kids with Cancer Act",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/119/hr/9632?format=json"
+   },
+   {
+    "congress": 119,
+    "introducedDate": "2026-04-13",
+    "latestAction": {
+     "actionDate": "2026-04-14",
+     "text": "Referred to the Subcommittee on Border Security and Enforcement."
+    },
+    "number": "8253",
+    "policyArea": {
+     "name": "Immigration"
+    },
+    "title": "BITMAP Authorization Act",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/119/hr/8253?format=json"
+   },
+   {
+    "congress": 119,
+    "introducedDate": "2026-02-11",
+    "latestAction": {
+     "actionDate": "2026-02-11",
+     "text": "Referred to the House Committee on Foreign Affairs."
+    },
+    "number": "7506",
+    "policyArea": {
+     "name": "Foreign Trade and International Finance"
+    },
+    "title": "Decreasing Russian Oil Profits Act of 2026",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/119/hr/7506?format=json"
+   },
+   {
+    "congress": 119,
+    "introducedDate": "2025-06-30",
+    "latestAction": {
+     "actionDate": "2025-06-30",
+     "text": "Referred to the House Committee on Foreign Affairs."
+    },
+    "number": "564",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "Calling for the return of abducted Ukrainian children before finalizing any peace agreement to end the war against Ukraine.",
+    "type": "HRES",
+    "url": "https://api.congress.gov/v3/bill/119/hres/564?format=json"
+   },
+   {
+    "congress": 119,
+    "introducedDate": "2025-06-13",
+    "latestAction": {
+     "actionDate": "2026-01-21",
+     "text": "Ordered to be Reported in the Nature of a Substitute by the Yeas and Nays: 46 - 1."
+    },
+    "number": "515",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "Commemorating the 90th birthday of His Holiness the Dalai Lama on July 6, 2025, as \"A Day of Compassion\", and expressing support for the human rights, religious freedom, and cultural and linguistic protection of the Tibetan people.",
+    "type": "HRES",
+    "url": "https://api.congress.gov/v3/bill/119/hres/515?format=json"
+   },
+   {
+    "congress": 119,
+    "introducedDate": "2025-05-01",
+    "latestAction": {
+     "actionDate": "2025-05-01",
+     "text": "Referred to the House Committee on Energy and Commerce."
+    },
+    "number": "371",
+    "policyArea": {
+     "name": "Health"
+    },
+    "title": "Expressing support for the designation of May 2025 as \"National Brain Tumor Awareness Month\".",
+    "type": "HRES",
+    "url": "https://api.congress.gov/v3/bill/119/hres/371?format=json"
+   },
+   {
+    "congress": 119,
+    "introducedDate": "2025-02-12",
+    "latestAction": {
+     "actionDate": "2025-12-02",
+     "text": "Received in the Senate."
+    },
+    "number": "1262",
+    "policyArea": {
+     "name": "Health"
+    },
+    "title": "Mikaela Naylon Give Kids a Chance Act",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/119/hr/1262?format=json"
+   },
+   {
+    "congress": 119,
+    "introducedDate": "2025-01-22",
+    "latestAction": {
+     "actionDate": "2026-08-27",
+     "text": "Placed on the Union Calendar, Calendar No. 685."
+    },
+    "number": "625",
+    "policyArea": {
+     "name": "Law"
+    },
+    "title": "LACA of 2026",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/119/hr/625?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2024-11-21",
+    "latestAction": {
+     "actionDate": "2024-11-21",
+     "text": "Referred to the House Committee on the Judiciary."
+    },
+    "number": "10228",
+    "policyArea": {
+     "name": "Crime and Law Enforcement"
+    },
+    "title": "Sheila Jackson Lee Stop Human Trafficking in School Zones Act",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/10228?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2024-10-22",
+    "latestAction": {
+     "actionDate": "2024-10-22",
+     "text": "Referred to the House Committee on Education and the Workforce."
+    },
+    "number": "1547",
+    "policyArea": {
+     "name": "Education"
+    },
+    "title": "Honoring the investiture of Texas A&M University's 27th President, retired Air Force General Mark A. Welsh III, and extending best wishes to Aggies everywhere.",
+    "type": "HRES",
+    "url": "https://api.congress.gov/v3/bill/118/hres/1547?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2024-09-19",
+    "latestAction": {
+     "actionDate": "2024-09-25",
+     "actionTime": "17:13:34",
+     "text": "Motion to reconsider laid on the table Agreed to without objection."
+    },
+    "number": "1469",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "Ensuring accountability for key officials in the Biden-Harris administration responsible for decisionmaking and execution failures throughout the withdrawal from Afghanistan.",
+    "type": "HRES",
+    "url": "https://api.congress.gov/v3/bill/118/hres/1469?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2024-07-05",
+    "latestAction": {
+     "actionDate": "2024-07-05",
+     "text": "Referred to the Committee on Homeland Security, and in addition to the Committee on Appropriations, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+    },
+    "number": "8935",
+    "policyArea": {
+     "name": "Immigration"
+    },
+    "title": "Border Security and Enforcement Block Grant Act of 2024",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/8935?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2024-07-02",
+    "latestAction": {
+     "actionDate": "2024-07-11",
+     "text": "Ordered to be Reported (Amended) by the Yeas and Nays: 43 - 2."
+    },
+    "number": "8926",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "DFC Modernization and Reauthorization Act of 2024",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/8926?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2024-05-16",
+    "latestAction": {
+     "actionDate": "2024-05-22",
+     "text": "Ordered to be Reported (Amended) by the Yeas and Nays: 33 - 13."
+    },
+    "number": "8437",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "Maintaining Our Ironclad Commitment to Israel\u2019s Security Act",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/8437?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2024-05-08",
+    "latestAction": {
+     "actionDate": "2024-05-22",
+     "text": "Ordered to be Reported (Amended) by the Yeas and Nays: 43 - 3."
+    },
+    "number": "8315",
+    "policyArea": {
+     "name": "Foreign Trade and International Finance"
+    },
+    "title": "ENFORCE Act",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/8315?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2024-05-06",
+    "latestAction": {
+     "actionDate": "2024-05-06",
+     "text": "Referred to the Subcommittee on Emergency Management and Technology."
+    },
+    "number": "8256",
+    "policyArea": {
+     "name": "Immigration"
+    },
+    "title": "Border Security and Enforcement Block Grant Act of 2024",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/8256?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2024-04-17",
+    "latestAction": {
+     "actionDate": "2024-04-23",
+     "actionTime": "10:33:00",
+     "text": "Pursuant to the provisions of H. Res. 1160, H.R. 8038 is laid on the table."
+    },
+    "number": "8038",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "21st Century Peace through Strength Act",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/8038?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2024-02-15",
+    "latestAction": {
+     "actionDate": "2024-02-16",
+     "text": "Referred to the Subcommittee on Health."
+    },
+    "number": "7384",
+    "policyArea": {
+     "name": "Health"
+    },
+    "title": "Creating Hope Reauthorization Act of 2024",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/7384?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2024-01-29",
+    "latestAction": {
+     "actionDate": "2024-01-29",
+     "text": "Referred to the House Committee on Foreign Affairs."
+    },
+    "number": "982",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "Condemning the continued violence in Sudan and calling on the international community to unequivocally support diplomatic efforts to achieve a cessation of hostilities, ensure the protection of civilians and secure unfettered access for humanitarian aid.",
+    "type": "HRES",
+    "url": "https://api.congress.gov/v3/bill/118/hres/982?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-12-12",
+    "latestAction": {
+     "actionDate": "2024-03-21",
+     "text": "Ordered to be Reported by the Yeas and Nays: 42 - 7."
+    },
+    "number": "6727",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "United States Foundation for International Conservation Act of 2023",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/6727?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-11-09",
+    "latestAction": {
+     "actionDate": "2023-11-29",
+     "text": "Ordered to be Reported by Voice Vote."
+    },
+    "number": "6349",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "Preventing Adversaries from Developing Critical Capabilities Act",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/6349?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-10-16",
+    "latestAction": {
+     "actionDate": "2023-12-04",
+     "text": "Received in the Senate and Read twice and referred to the Committee on Foreign Relations."
+    },
+    "number": "5961",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "No Funds for Iranian Terrorism Act",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/5961?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-10-11",
+    "latestAction": {
+     "actionDate": "2023-10-25",
+     "actionTime": "17:26:42",
+     "text": "Motion to reconsider laid on the table Agreed to without objection."
+    },
+    "number": "771",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "Standing with Israel as it defends itself against the barbaric war launched by Hamas and other terrorists.",
+    "type": "HRES",
+    "url": "https://api.congress.gov/v3/bill/118/hres/771?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-10-10",
+    "latestAction": {
+     "actionDate": "2023-10-25",
+     "text": "Referred to the House Committee on Foreign Affairs."
+    },
+    "number": "768",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "Standing with Israel as it defends itself against the barbaric war launched by Hamas and other terrorists.",
+    "type": "HRES",
+    "url": "https://api.congress.gov/v3/bill/118/hres/768?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-09-21",
+    "latestAction": {
+     "actionDate": "2024-12-17",
+     "text": "Referred to the Subcommittee on Health."
+    },
+    "number": "5647",
+    "policyArea": {
+     "name": "Health"
+    },
+    "title": "Childhood Cancer Clinical Trials Act",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/5647?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-05-09",
+    "latestAction": {
+     "actionDate": "2023-09-13",
+     "text": "Received in the Senate and Read twice and referred to the Committee on Foreign Relations."
+    },
+    "number": "3152",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "Fight CRIME Act",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/3152?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-07-28",
+    "latestAction": {
+     "actionDate": "2023-07-28",
+     "text": "Referred to the House Committee on Oversight and Accountability."
+    },
+    "number": "5084",
+    "policyArea": {
+     "name": "Government Operations and Politics"
+    },
+    "title": "To designate the facility of the United States Postal Service located at 1106 Main Street in Bastrop, Texas, as the \"Sergeant Major Billy D. Waugh Post Office\".",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/5084?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-07-19",
+    "latestAction": {
+     "actionDate": "2023-07-26",
+     "text": "Ordered to be Reported in the Nature of a Substitute (Amended) by the Yeas and Nays: 49 - 0."
+    },
+    "number": "4725",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "AUKUS Oversight and Accountability Act",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/4725?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-07-11",
+    "latestAction": {
+     "actionDate": "2023-07-11",
+     "text": "Referred to the House Committee on Foreign Affairs."
+    },
+    "number": "579",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "Condemning the ongoing acts of repression and human rights violations against the Cuban people by the Cuban regime, and calling for the immediate release of all arbitrarily detained Cuban citizens.",
+    "type": "HRES",
+    "url": "https://api.congress.gov/v3/bill/118/hres/579?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-06-27",
+    "latestAction": {
+     "actionDate": "2023-11-01",
+     "actionTime": "19:21:13",
+     "text": "Motion to reconsider laid on the table Agreed to without objection."
+    },
+    "number": "559",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "Declaring it is the policy of the United States that a nuclear Islamic Republic of Iran is not acceptable.",
+    "type": "HRES",
+    "url": "https://api.congress.gov/v3/bill/118/hres/559?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-06-15",
+    "latestAction": {
+     "actionDate": "2023-11-07",
+     "text": "Ordered to be Reported in the Nature of a Substitute (Amended) by the Yeas and Nays: 40 - 2."
+    },
+    "number": "4175",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "REPO for Ukrainians Act",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/4175?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-05-18",
+    "latestAction": {
+     "actionDate": "2024-12-17",
+     "text": "Referred to the Subcommittee on Trade."
+    },
+    "number": "3518",
+    "policyArea": {
+     "name": "Animals"
+    },
+    "title": "Bear Protection Act of 2023",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/3518?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-05-17",
+    "latestAction": {
+     "actionDate": "2024-09-24",
+     "text": "Received in the Senate and Read twice and referred to the Committee on Health, Education, Labor, and Pensions."
+    },
+    "number": "3433",
+    "policyArea": {
+     "name": "Health"
+    },
+    "title": "Give Kids a Chance Act of 2024",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/3433?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-02-24",
+    "latestAction": {
+     "actionDate": "2023-05-16",
+     "text": "Placed on the Union Calendar, Calendar No. 43."
+    },
+    "number": "1153",
+    "policyArea": {
+     "name": "Foreign Trade and International Finance"
+    },
+    "title": "DATA Act",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/1153?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-05-15",
+    "latestAction": {
+     "actionDate": "2023-05-15",
+     "text": "Referred to the Committee on Foreign Affairs, and in addition to the Committees on Financial Services, the Judiciary, and Oversight and Accountability, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+    },
+    "number": "3333",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "FEND Off Fentanyl Act",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/3333?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-05-11",
+    "latestAction": {
+     "actionDate": "2023-05-16",
+     "text": "Ordered to be Reported in the Nature of a Substitute (Amended) by Voice Vote."
+    },
+    "number": "3205",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "Project Precursor Act",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/3205?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-05-09",
+    "latestAction": {
+     "actionDate": "2023-06-13",
+     "actionTime": "18:16:32",
+     "text": "Motion to reconsider laid on the table Agreed to without objection."
+    },
+    "number": "377",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "Calling for the immediate release of Evan Gershkovich, a United States citizen and journalist, who was wrongfully detained by the Government of the Russian Federation in March 2023.",
+    "type": "HRES",
+    "url": "https://api.congress.gov/v3/bill/118/hres/377?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-03-22",
+    "latestAction": {
+     "actionDate": "2023-05-05",
+     "text": "Placed on the Union Calendar, Calendar No. 30."
+    },
+    "number": "1690",
+    "policyArea": {
+     "name": "Immigration"
+    },
+    "title": "ORDER Act",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/1690?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-02-17",
+    "latestAction": {
+     "actionDate": "2023-03-23",
+     "text": "Received in the Senate and Read twice and referred to the Committee on Foreign Relations."
+    },
+    "number": "1093",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "To direct the Secretary of State to submit to Congress a report on implementation of the advanced capabilities pillar of the trilateral security partnership between Australia, the United Kingdom, and the United States.",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/118/hr/1093?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-02-17",
+    "latestAction": {
+     "actionDate": "2023-02-17",
+     "text": "Referred to the House Committee on House Administration."
+    },
+    "number": "137",
+    "policyArea": {
+     "name": "Congress"
+    },
+    "title": "Providing amounts for the expenses of the Committee on Foreign Affairs in the One Hundred Eighteenth Congress.",
+    "type": "HRES",
+    "url": "https://api.congress.gov/v3/bill/118/hres/137?format=json"
+   },
+   {
+    "congress": 118,
+    "introducedDate": "2023-02-08",
+    "latestAction": {
+     "actionDate": "2023-02-09",
+     "actionTime": "11:27:37",
+     "text": "Motion to reconsider laid on the table Agreed to without objection."
+    },
+    "number": "104",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "Condemning the Chinese Communist Party's use of a high-altitude surveillance balloon over United States territory as a brazen violation of United States sovereignty.",
+    "type": "HRES",
+    "url": "https://api.congress.gov/v3/bill/118/hres/104?format=json"
+   },
+   {
+    "congress": 117,
+    "introducedDate": "2022-09-28",
+    "latestAction": {
+     "actionDate": "2022-09-29",
+     "text": "Referred to the Subcommittee on Border Security, Facilitation, and Operations."
+    },
+    "number": "9010",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "Taiwan Policy Act of 2022",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/117/hr/9010?format=json"
+   },
+   {
+    "congress": 117,
+    "introducedDate": "2022-09-22",
+    "latestAction": {
+     "actionDate": "2022-09-22",
+     "text": "Referred to the House Committee on Foreign Affairs."
+    },
+    "number": "1389",
+    "policyArea": {
+     "name": "International Affairs"
+    },
+    "title": "Welcoming His Holiness, Hadhrat Mirza Masroor Ahmad, the worldwide spiritual head of the Ahmadiyya Muslim Community, to the United States, including Illinois, Texas and Maryland, and recognizing his commitment to world peace, absolute justice, global unity among nations, non-violence, rejection of extremism, eradication of poverty, economic equity, service to humanity, universal human rights, international religious freedom, and democracy.",
+    "type": "HRES",
+    "url": "https://api.congress.gov/v3/bill/117/hres/1389?format=json"
+   },
+   {
+    "congress": 117,
+    "introducedDate": "2022-07-28",
+    "latestAction": {
+     "actionDate": "2022-07-29",
+     "text": "Referred to the Subcommittee on Economic Development, Public Buildings, and Emergency Management."
+    },
+    "number": "8574",
+    "policyArea": {
+     "name": "Emergency Management"
+    },
+    "title": "Global Catastrophic Risk Management Act of 2022",
+    "type": "HR",
+    "url": "https://api.congress.gov/v3/bill/117/hr/8574?format=json"
+   }
+  ]
+ }
+}
