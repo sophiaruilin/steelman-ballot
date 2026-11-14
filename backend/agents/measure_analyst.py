@@ -20,7 +20,7 @@ from backend.agents import critic
 from backend.models import Claim, MeasureCard
 from backend.sources.web import WebReader
 
-PER_MEASURE_LIMITS = UsageLimits(request_limit=14, total_tokens_limit=150_000)
+PER_MEASURE_LIMITS = UsageLimits(request_limit=20, total_tokens_limit=150_000)
 
 
 @lru_cache(maxsize=4)

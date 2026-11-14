@@ -1,0 +1,267 @@
+{
+  "measure_id": "MA-2026-11-03-question-5",
+  "card": {
+    "measure_id": "MA-2026-11-03-question-5",
+    "number": "Question 5",
+    "official_title": "State Revenue Limit & Rebate",
+    "plain_title": "Change the state revenue cap and taxpayer rebate rules",
+    "title_disputed": false,
+    "put_on_ballot_by": "Citizen initiative",
+    "yes_means": "Starting July 1, 2027, the state would use a revised revenue cap tied to prior-year collections and wage growth, include the surtax on incomes over $1 million, and refund collections above the cap.",
+    "no_means": "The current state revenue limit and refund rules would remain unchanged.",
+    "what_changes": [
+      {
+        "topic": "Annual revenue cap",
+        "today": "State law already limits revenue collections.",
+        "if_passes": "The cap would equal the previous year's net revenue, increased by average Massachusetts wage and salary growth over the latest three years.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=14&pages=14-15"
+      },
+      {
+        "topic": "Taxpayer refunds",
+        "today": "Existing law requires taxpayer refunds under certain conditions.",
+        "if_passes": "Revenue above the revised cap, counting all surtax revenue from incomes over $1 million, would be refunded the following year.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=14&pages=14-15"
+      },
+      {
+        "topic": "Budget funding",
+        "today": "State revenue supports the state budget, including aid for schools and municipal budgets.",
+        "if_passes": "Stricter revenue growth limits would leave less money available for the state budget.",
+        "label": "prediction",
+        "whose": "Executive Office of Administration and Finance",
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=14&pages=14-15"
+      },
+      {
+        "topic": "Rainy day savings",
+        "today": "The state saves money in a rainy day fund to help manage downturns and emergencies.",
+        "if_passes": "Less money would be available to build that reserve.",
+        "label": "prediction",
+        "whose": "Executive Office of Administration and Finance",
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=14&pages=14-15"
+      }
+    ],
+    "who_is_affected": [
+      "Taxpayers who could receive refunds",
+      "People paying the surtax on incomes over $1 million",
+      "Residents who rely on state-funded services",
+      "Schools and municipal governments receiving state aid"
+    ],
+    "fiscal_impact": {
+      "text": "The official fiscal statement predicts less money for the state budget and rainy day fund. Refund frequency could change depending on future conditions. It gives no dollar estimate.",
+      "label": "prediction",
+      "whose": "Executive Office of Administration and Finance",
+      "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=14&pages=14-15",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "Supporters argue the revised cap would keep government revenue growth within what taxpayers can afford and return excess collections.",
+      "headline_topic": "Annual revenue cap",
+      "more_reasons": [
+        "Supporters argue stronger revenue limits would improve accountability and help guard against future tax increases.",
+        "Supporters argue refunds would help families manage housing, grocery, and childcare costs and make Massachusetts more affordable."
+      ],
+      "values": [
+        "Affordability",
+        "Fiscal restraint",
+        "Accountability"
+      ],
+      "best_evidence": [
+        {
+          "text": "The proposal ties the revenue cap to prior-year net collections and average wage and salary growth.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=14&pages=14-15",
+          "quote": null
+        },
+        {
+          "text": "Supporters argue taxpayers should receive money collected above the limit rather than have it added to the state budget.",
+          "label": "value",
+          "whose": "Taxpayers for an Affordable Massachusetts",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=14&pages=14-15",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Supporters say taxpayers and families facing rising living costs would benefit.",
+      "answer_to_other_side": "Supporters argue that limiting revenue growth and returning excess collections can preserve important services while keeping government growth affordable."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "headline": "Opponents argue the revised cap would squeeze essential services, leaving communities facing higher property taxes or cuts to teachers and firefighters.",
+      "headline_topic": "Budget funding",
+      "more_reasons": [
+        "Opponents argue smaller rainy day reserves would deepen service cuts during recessions, when residents need more help.",
+        "Opponents argue counting the surtax would expose money for schools and transportation to refunds benefiting millionaires."
+      ],
+      "values": [
+        "Reliable public services",
+        "Economic stability",
+        "Fairness"
+      ],
+      "best_evidence": [
+        {
+          "text": "The official fiscal statement predicts less money available for the state budget, including local aid for schools and municipal budgets.",
+          "label": "prediction",
+          "whose": "Executive Office of Administration and Finance",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=14&pages=14-15",
+          "quote": null
+        },
+        {
+          "text": "The official fiscal statement predicts less money available to build the state's rainy day fund.",
+          "label": "prediction",
+          "whose": "Executive Office of Administration and Finance",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=14&pages=14-15",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Opponents say keeping current rules would protect residents using public services, local taxpayers, and communities facing recessions.",
+      "answer_to_other_side": "Opponents argue that refunds would not necessarily make life more affordable if reduced state funding leads to higher property taxes, healthcare costs, or service cuts."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "The choice is between tighter limits with taxpayer refunds and more money available for public services and reserves. The sides also disagree about whether refunds would improve affordability or be offset by service cuts and higher local costs."
+    },
+    "evidence": [
+      {
+        "text": "The proposal changes a revenue limit; it does not specify cuts to individual services.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=39&pages=39-41",
+        "quote": null
+      },
+      {
+        "text": "Despite supporters' assurance about preserving services, the official fiscal statement predicts less money available for the state budget.",
+        "label": "prediction",
+        "whose": "Executive Office of Administration and Finance",
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=14&pages=14-15",
+        "quote": null
+      },
+      {
+        "text": "The official fiscal statement says refund frequency would depend on future conditions; it does not promise annual refunds.",
+        "label": "prediction",
+        "whose": "Executive Office of Administration and Finance",
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=14&pages=14-15",
+        "quote": null
+      },
+      {
+        "text": "All revenue from the surtax on incomes over $1 million would count both toward setting the cap and toward determining whether collections exceed it.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=14&pages=14-15",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 4
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 0,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "Fairly presents the supporters’ merits case in the source: tighter limits tied to wage growth, taxpayer refunds, affordability, accountability, and guarding against future tax increases. It also acknowledges the fiscal statement’s contrary forecast elsewhere in the card."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "Fairly presents opponents’ main merits concerns from their argument: reduced budget and rainy-day resources could put services, local taxpayers, and recession response at risk, while surtax revenue is included in the cap and refund calculation. It appropriately attributes the more specific service and tax consequences to opponents."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "Both headlines use parallel attribution and describe a consequence of the change. The Yes headline’s phrase “what taxpayers can afford” and the No headline’s phrase “squeeze essential services” are advocacy framings, but each is attributed to its side and reflects language in that side’s source argument."
+        ],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 120,
+          "no": 137,
+          "ratio": 1.14
+        },
+        "headline_words": {
+          "yes": 19,
+          "no": 21
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 4,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 8.1,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=14&pages=14-15",
+    "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf",
+    "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=39&pages=39-41",
+    "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=28&pages=28-30"
+  ],
+  "meta": {
+    "seconds": 63.0,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 5,
+        "input_tokens": 48146,
+        "cache_read_tokens": 34334,
+        "output_tokens": 2073,
+        "reasoning_tokens": 226,
+        "tool_calls": 4
+      },
+      "critic:gpt-6-luna": {
+        "requests": 1,
+        "input_tokens": 15895,
+        "cache_read_tokens": 0,
+        "output_tokens": 2295,
+        "reasoning_tokens": 2044,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {
+      "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=14&pages=14-15": [
+        "endorse"
+      ],
+      "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf": [
+        "endorse"
+      ],
+      "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=28&pages=28-30": [
+        "endorse"
+      ]
+    }
+  },
+  "format": "v3.1",
+  "scope": "statewide"
+}

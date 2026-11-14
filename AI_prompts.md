@@ -88,3 +88,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 18: Own API key, Connecticut, batch research, Spanish and Chinese
 **Prompt (my own words):** "how to increase my ai access?" then "great. just added my own open ai key. continue the reminaing things to finish. i also want to add connecticut state." and "just added crdits to api"
 **What was lacking before:** The app could only use the class Portkey key (at its limit), there was no way to research many contests at once with a spending cap, Connecticut wasn't covered, and nothing was translated.
+
+## Step 19: Research every remaining contest and publish
+**Prompt (my own words):** "push it when done"
+**What was lacking before:** Only 6 California props and 2 races had cards; Massachusetts, New York City and the rest of California showed "Research pending", nothing was translated, and one California sample card was still unverified.

@@ -1,0 +1,448 @@
+{
+  "measure_id": "MA-2026-11-03-question-8",
+  "card": {
+    "measure_id": "MA-2026-11-03-question-8",
+    "number": "Question 8",
+    "official_title": "Prohibit Retail Sale of Adult Recreational Use Marijuana",
+    "plain_title": "End legal sales of recreational marijuana in stores",
+    "title_disputed": false,
+    "put_on_ballot_by": "Citizen initiative petition",
+    "yes_means": "Starting January 1, 2028, the law would end legal recreational marijuana sales and change possession rules, while keeping medical marijuana legal.",
+    "no_means": "Current marijuana laws would stay in place, including legal, regulated and taxed recreational sales.",
+    "what_changes": [
+      {
+        "topic": "Recreational retail sales",
+        "today": "State law allows, regulates and taxes recreational marijuana sales in stores.",
+        "if_passes": "The laws allowing, regulating and taxing those sales would end.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=20&pages=20-21"
+      },
+      {
+        "topic": "Personal possession",
+        "today": "Current law allows personal possession of marijuana.",
+        "if_passes": "Adults 21 and older could possess, gift or transfer to another adult 21 or older up to 1 ounce, including at most 5 grams of concentrate.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=20&pages=20-21"
+      },
+      {
+        "topic": "Business licensing",
+        "today": "Licensed recreational marijuana businesses operate under the Cannabis Control Commission.",
+        "if_passes": "These businesses could apply faster for medical dispensary licenses and sell their leftover stock to medical dispensaries.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=20&pages=20-21"
+      },
+      {
+        "topic": "Marijuana tax revenue",
+        "today": "Recreational marijuana sales taxes raised about $280 million for the state and $50 million locally in fiscal year 2025.",
+        "if_passes": "State and local governments would receive less marijuana sales tax revenue.",
+        "label": "prediction",
+        "whose": "Executive Office of Administration and Finance",
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=20&pages=20-21"
+      }
+    ],
+    "who_is_affected": [
+      "Adults who use recreational marijuana",
+      "Young people subject to the proposed possession penalties",
+      "Recreational marijuana businesses and their workers",
+      "Medical marijuana patients and dispensaries",
+      "State and local governments receiving marijuana tax revenue"
+    ],
+    "fiscal_impact": {
+      "text": "The Executive Office of Administration and Finance expects lower state and local marijuana tax revenue. It gives no dollar estimate of the loss. These taxes raised about $280 million for the state and $50 million locally in fiscal year 2025.",
+      "label": "prediction",
+      "whose": "Executive Office of Administration and Finance",
+      "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=20&pages=20-21",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "Supporters argue ending store sales would reduce marijuana-related harm, including impaired driving and mental health risks.",
+      "headline_topic": "Recreational retail sales",
+      "more_reasons": [
+        "Supporters estimate that each $1 in marijuana tax revenue comes with $4.50 in societal costs, including healthcare, lost productivity and crime.",
+        "Supporters emphasize that the measure would keep personal possession and medical marijuana legal while ending recreational stores."
+      ],
+      "values": [
+        "Public health",
+        "Road safety",
+        "Reducing social costs"
+      ],
+      "best_evidence": [
+        {
+          "text": "The Yes argument says 85% of marijuana users drive after use and over 50% drive within an hour or less; these are supporters’ figures, not findings of the official summary.",
+          "label": "fact",
+          "whose": "Supporters in the official ballot argument",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=20&pages=20-21",
+          "quote": null
+        },
+        {
+          "text": "Supporters estimate that taxpayers spend $4.50 addressing the effects of legalization for each $1 gained in tax revenue. They include healthcare, lost productivity and crime in that estimate; it is not the official fiscal estimate.",
+          "label": "fact",
+          "whose": "Supporters in the official ballot argument",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=20&pages=20-21",
+          "quote": null
+        },
+        {
+          "text": "The proposal would keep possession legal within set limits and keep the Cannabis Control Commission to regulate medical marijuana.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=20&pages=20-21",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Supporters emphasize young people, road users, employers and taxpayers who bear marijuana-related health and social costs.",
+      "answer_to_other_side": "Supporters argue legal commercial sales themselves carry serious health and safety costs, pointing to driving risks and links between concentrates or edibles and mental health problems. Their proposal would end recreational stores without banning all personal possession or medical marijuana."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "headline": "Opponents argue ending store sales would push marijuana into illegal markets without product safety rules.",
+      "headline_topic": "Recreational retail sales",
+      "more_reasons": [
+        "Opponents argue marijuana enforcement would divert resources from serious crime and fall more heavily on communities of color.",
+        "Opponents argue closing recreational businesses would eliminate jobs and tax revenue."
+      ],
+      "values": [
+        "Consumer safety",
+        "Fair enforcement",
+        "Economic stability"
+      ],
+      "best_evidence": [
+        {
+          "text": "Opponents predict that ending the regulated market would move sales to illegal sellers without testing, packaging or labeling safeguards.",
+          "label": "prediction",
+          "whose": "Opponents in the official ballot argument",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=20&pages=20-21",
+          "quote": null
+        },
+        {
+          "text": "The official fiscal statement predicts reduced state and local revenue from recreational marijuana sales taxes.",
+          "label": "prediction",
+          "whose": "Executive Office of Administration and Finance",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=20&pages=20-21",
+          "quote": null
+        },
+        {
+          "text": "Opponents predict that marijuana arrests would take law enforcement time and resources away from serious crime.",
+          "label": "prediction",
+          "whose": "Opponents in the official ballot argument",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=20&pages=20-21",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Opponents emphasize consumers, marijuana business owners and workers, communities of color, and public services supported by tax revenue.",
+      "answer_to_other_side": "Opponents argue tested products and licensed adult sales protect health and safety better than an illegal market with no safeguards."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "The central disagreement is whether ending commercial recreational sales would reduce marijuana-related harm or shift sales into a less safe illegal market. Voters must also weigh health concerns against legal access, jobs, enforcement risks and public revenue."
+    },
+    "evidence": [
+      {
+        "text": "The proposal would end the laws allowing, regulating and taxing recreational retail sales. The Cannabis Control Commission would remain, but regulate only medical marijuana.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=20&pages=20-21",
+        "quote": null
+      },
+      {
+        "text": "Adults 21 and older could possess, gift or transfer to another person 21 or older up to 1 ounce, including no more than 5 grams of concentrate.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=20&pages=20-21",
+        "quote": null
+      },
+      {
+        "text": "Possession between 1 and 2 ounces would carry a $100 civil penalty and loss of the marijuana.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=20&pages=20-21",
+        "quote": null
+      },
+      {
+        "text": "For people “21 years of age and younger,” possessing 2 ounces or less would be a civil infraction. Penalties would include a $100 fine, loss of the marijuana, a drug awareness program, community service, and notice to their parents or legal guardian.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=20&pages=20-21",
+        "quote": "For persons 21 years of age and younger,"
+      },
+      {
+        "text": "The official summary and fiscal statement do not assess supporters’ driving figures or societal-cost estimate. They also do not forecast changes in health, illegal sales or jobs.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=20&pages=20-21",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 5
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 3,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "Fairly presents supporters’ merits case: claimed health and safety harms, costs to employers and taxpayers, and the measure’s limits (personal possession and medical marijuana remain). It could better capture the proponents’ specific claims about impaired driving, young people, and the asserted social-cost ratio, but it does not strawman them."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "Fairly captures opponents’ central arguments about illicit-market safety, enforcement burdens and disparate effects, jobs, and revenue. The fiscal point is appropriately supported separately by the official forecast."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [],
+        "fidelity_problems": [
+          "The account of possession changes omits the source’s separate rule for people described there as “21 years of age and younger”: possession of 2 ounces or less would carry a $100 fine, forfeiture, a drug-awareness program, community service, and notice to a parent or guardian. This is a material part of the change; include it using the source’s wording rather than resolving its age overlap with the 21-and-older provision.",
+          "The possession row says what adults could possess but omits that the proposal also permits them to gift or transfer up to that amount to another adult. Add this if the row is intended to summarize the full proposed rule."
+        ],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "Automatic checks:\n- Plainer words and shorter sentences in the title, yes/no, What-changes rows and headlines (reading grade 12.3; target about 9).\nCritic:\n1. Add the proposal’s stated possession penalties for people “21 years of age and younger” to the What-changes table or another concise change summary, preserving the source’s wording. 2. Include the proposed permission for adults to gift or transfer the specified amount to another adult, or make clear that the possession row is not a complete account of the rule."
+      },
+      "checks": {
+        "words": {
+          "yes": 135,
+          "no": 123,
+          "ratio": 1.1
+        },
+        "headline_words": {
+          "yes": 16,
+          "no": 15
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 4,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 12.3,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 1,
+      "verdict": {
+        "turing_yes": {
+          "score": 3,
+          "reason": "The summary captures supporters’ health-and-safety case and notes that possession and medical marijuana would remain legal. But it omits the supporters’ most concrete merits claim: their stated estimate that each $1 in tax revenue is accompanied by $4.50 in societal costs. It also leaves out their specific driving and health claims, so a committed Yes voter could find this weaker than the source’s strongest case."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The card fairly presents opponents’ main arguments: a shift to an illicit market without safeguards, enforcement burdens and unequal effects, and losses to businesses, jobs, and tax revenue. These are attributed to opponents rather than stated as established outcomes."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. Strengthen the Yes case using the official argument’s specific evidence: attribute to supporters their claim that each $1 in tax revenue is accompanied by $4.50 in societal costs, and consider including their driving or health claims. Keep these as supporters’ claims, not established findings."
+      },
+      "checks": {
+        "words": {
+          "yes": 136,
+          "no": 122,
+          "ratio": 1.11
+        },
+        "headline_words": {
+          "yes": 16,
+          "no": 15
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 4,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 10.6,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 2,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The card presents the Yes case in terms of public health and road safety, includes the supporters’ cost estimate, and explains that possession and medical marijuana would remain legal. Its headline and evidence reflect the Yes argument in the source. It could be more specific about the supporters’ claims on fatal crashes and teen emergency-room visits, but the central case is fairly represented."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The card captures the No case’s central claim that ending regulated sales could shift purchases to an illicit market without testing or labeling safeguards, and includes enforcement, jobs, and revenue concerns. It omits the opponents’ specific claims about hundreds of businesses, thousands of jobs, and billions in tax revenue, but the merits of their case are still represented fairly."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [],
+        "fidelity_problems": [],
+        "label_problems": [
+          "In steelman_yes.best_evidence, the $4.50 societal-cost estimate is labeled \"prediction.\" The source presents it as supporters’ estimate of costs, not as a forecast of a future outcome. Label it \"fact\" and keep it attributed to supporters (or otherwise classify it as a present estimate, not a prediction)."
+        ],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. Change the label on the Yes-side $4.50 societal-cost estimate in best_evidence from \"prediction\" to \"fact\"; retain its attribution to supporters. The source states an estimate, not a forecast."
+      },
+      "checks": {
+        "words": {
+          "yes": 201,
+          "no": 138,
+          "ratio": 1.46
+        },
+        "headline_words": {
+          "yes": 16,
+          "no": 15
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 4,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 3,
+          "no": 3
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 10.6,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 3,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The card fairly presents supporters’ core merits case: claimed health and road-safety harms, their societal-cost estimate, and the fact that the proposal would preserve limited possession and medical marijuana. The strongest sourced specifics are represented, with the supporters’ figures clearly attributed. A committed Yes voter might prefer more emphasis on the supporters’ claim about increased teen psychiatric ER visits, but its omission does not distort the case."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The card fairly presents opponents’ central case that ending the regulated retail market could shift sales to sellers without testing or other safeguards, along with enforcement, equity, jobs, and revenue concerns. The strongest points are attributed as opponents’ arguments or as the official fiscal forecast. A committed No voter might want the argument’s specific claims about hundreds of businesses, thousands of jobs, and billions in tax revenue, but the card accurately captures the main concerns without presenting those disputed figures as established facts."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The headlines are parallel in structure and attribution: each says what its side argues would happen if store sales end. Neither uses a noticeably more confident or sympathetic verb than the other.",
+          "The Yes steelman has more total text than the No steelman (201 versus 138 words in the automatic check), so there is some space asymmetry, but the No section still includes its major merits arguments."
+        ],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 201,
+          "no": 138,
+          "ratio": 1.46
+        },
+        "headline_words": {
+          "yes": 16,
+          "no": 15
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 4,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 3,
+          "no": 3
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 10.6,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=20&pages=20-21"
+  ],
+  "meta": {
+    "seconds": 190.8,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 5,
+        "input_tokens": 36125,
+        "cache_read_tokens": 27132,
+        "output_tokens": 8480,
+        "reasoning_tokens": 983,
+        "tool_calls": 1
+      },
+      "critic:gpt-6-luna": {
+        "requests": 4,
+        "input_tokens": 19577,
+        "cache_read_tokens": 0,
+        "output_tokens": 8016,
+        "reasoning_tokens": 6661,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {
+      "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=20&pages=20-21": [
+        "endorse"
+      ]
+    }
+  },
+  "format": "v3.1",
+  "scope": "statewide"
+}

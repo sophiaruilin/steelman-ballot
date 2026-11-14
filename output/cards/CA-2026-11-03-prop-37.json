@@ -1,0 +1,380 @@
+{
+  "measure_id": "CA-2026-11-03-prop-37",
+  "card": {
+    "measure_id": "CA-2026-11-03-prop-37",
+    "number": "Prop 37",
+    "official_title": "CREATES LOAN PROGRAM FOR MIDDLE-INCOME BUYERS OF QUALIFIED NEW HOMES. INITIATIVE STATUTE.",
+    "plain_title": "Authorize $25 billion in bonds for loans to buy qualified new homes",
+    "title_disputed": false,
+    "put_on_ballot_by": "Citizen initiative",
+    "yes_means": "CalHFA could issue up to $25 billion in bonds for new-home down payment loans repaid by borrowers, with optional changes to builders’ construction defect rules.",
+    "no_means": "Existing homebuyer assistance programs and construction defect rules would remain, without this new loan program or bond authority.",
+    "what_changes": [
+      {
+        "topic": "Bond funding",
+        "today": "CalHFA runs housing assistance programs, including down payment loans.",
+        "if_passes": "CalHFA could sell up to $25 billion in revenue bonds, repaid through borrowers’ payments, to fund a new program.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/37/analysis.htm"
+      },
+      {
+        "topic": "Down payment loans",
+        "today": "Existing government programs offer eligible buyers help with down payments.",
+        "if_passes": "The new program would lend up to 17% of the home price, with buyers putting down at least 3%.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/37/analysis.htm"
+      },
+      {
+        "topic": "Buyer eligibility",
+        "today": "Existing assistance programs serve eligible homebuyers; this measure would create a separate program.",
+        "if_passes": "Borrowers must have lived in California for one year, occupy the home as their primary residence, and earn less than twice their area’s median income.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/37/title-summary.htm"
+      },
+      {
+        "topic": "Eligible homes",
+        "today": "Existing assistance programs help eligible people buy homes.",
+        "if_passes": "The new program would require buyers to be a home’s first purchaser and meet home-price limits.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/37/analysis.htm"
+      },
+      {
+        "topic": "Builder defect rules",
+        "today": "State law sets construction standards and steps homeowners must follow before suing builders over defects.",
+        "if_passes": "Builders could choose higher labor standards in exchange for different defect rules generally giving them more flexibility.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/37/analysis.htm"
+      }
+    ],
+    "who_is_affected": [
+      "California homebuyers who meet the program’s income, residency, and occupancy requirements",
+      "Builders of eligible new homes and converted nonresidential properties",
+      "Construction workers on projects using the optional higher labor standards",
+      "Homeowners whose builders choose the different construction defect rules",
+      "Investors buying the program’s revenue bonds"
+    ],
+    "fiscal_impact": {
+      "text": "The Legislative Analyst estimates no direct state or local costs because homebuyers’ payments would repay bond investors.",
+      "label": "prediction",
+      "whose": "Legislative Analyst",
+      "source_url": "https://voterguide.sos.ca.gov/propositions/37/analysis.htm",
+      "quote": "it would not result in direct state or local costs."
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "The case for Yes centers on loans that supporters argue would help working and middle-income buyers overcome the down payment barrier.",
+      "headline_topic": "Down payment loans",
+      "more_reasons": [
+        "Supporters argue that helping people buy newly built homes would encourage construction and create good-paying jobs.",
+        "Supporters emphasize borrower-funded repayment and describe below-market, fixed-rate loans with limits on lender fees, protections against unfair lending, and no early-repayment penalty."
+      ],
+      "values": [
+        "Access to homeownership",
+        "Housing supply",
+        "Consumer and taxpayer protection"
+      ],
+      "best_evidence": [
+        {
+          "text": "The program would lend up to 17% of a home’s price, while requiring buyers to contribute at least 3%.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/37/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "The official supporting argument describes below-market, fixed-rate loans, protections from unfair lending practices, strict lender-fee limits, and no penalty for early repayment.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/37/arguments-rebuttals.htm",
+          "quote": "Consumer benefits include below-market, fixed-rate loans, protections from unfair lending practices, strict limits on lender fees, and no penalty for early repayment."
+        }
+      ],
+      "who_it_helps": "Supporters emphasize renters, first-time buyers, and working families who can afford monthly payments but struggle to save a down payment.",
+      "answer_to_other_side": "Supporters argue that low-interest loans tied to newly built homes would improve access and encourage construction, and they emphasize construction accountability standards and annual audits; the guide includes no direct rebuttal to these concerns."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "no_organized_side",
+      "headline": "No official argument against was submitted; the case centers on uncertain loan-cost and construction benefits alongside more flexible defect rules.",
+      "headline_topic": "Builder defect rules",
+      "more_reasons": [
+        "Keeping current law would preserve the existing construction defect process without the optional changes for builders.",
+        "The program’s reach would also depend on investors’ willingness to buy its bonds."
+      ],
+      "values": [
+        "Homeowner protections",
+        "Affordable borrowing",
+        "Certainty of benefits"
+      ],
+      "best_evidence": [
+        {
+          "text": "Builders choosing higher labor standards would receive different construction defect rules generally aimed at giving them more flexibility.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/37/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "The analyst identifies loan costs compared with other assistance options and increased construction and homebuying as unknown factors.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/37/analysis.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "This analysis-based case favors keeping the existing construction defect process for homeowners and existing assistance options for buyers.",
+      "answer_to_other_side": "The analysis-based response is that additional down payment loans do not establish cheaper borrowing or more housing; both depend on factors the analyst identifies as unknown."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "The trade-off is expanding down payment help while changing defect rules for builders choosing higher labor standards, with uncertain effects on housing supply and borrowing costs. No official opposition argument was submitted, so the No case is built from trade-offs in the nonpartisan analysis, not from an organized opposing position."
+    },
+    "evidence": [
+      {
+        "text": "The bond limit is $25 billion, but CalHFA would decide how much to issue and when.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/37/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "Borrowers’ monthly payments would be designed to cover both bond repayment and program administration; CalHFA would have to keep buyers’ interest costs as low as possible.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/37/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "All developers could build eligible homes; choosing the higher-labor-standard option and different defect rules would be voluntary.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/37/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The analyst says investor demand, relative loan costs, and effects on construction and homebuying are unknown.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/37/analysis.htm",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 4
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 2,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The card captures the supporters’ central merits case: down-payment loans could open homeownership to working and middle-income buyers, encourage new construction and jobs, and avoid direct taxpayer costs. It would be stronger with the supporters’ specific claim that the loans are below-market, fixed-rate, and include consumer protections."
+        },
+        "turing_no": {
+          "score": 3,
+          "reason": "The analysis-based case fairly identifies the main trade-offs: the loan program’s relative cost and effects on construction and homebuying are unknown, and participating builders would get more flexible defect rules. But the headline foregrounds the absence of an official opposition argument rather than stating that merits-based case, so it is not the No side’s strongest argument about the change."
+        },
+        "swap_test_pass": false,
+        "swap_notes": [
+          "The Yes headline directly states a benefit to buyers; the No headline begins with a procedural note about no official argument and only then names a trade-off. These are not parallel in structure or emphasis.",
+          "The Yes case presents benefits directly, while the No case is framed as an analysis-based fallback. The lack of an organized opposition should be disclosed, but not substituted for the No merits headline."
+        ],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. Rewrite the No headline to lead with the merits-based concern—for example, that the program’s effects on loan costs and housing construction are uncertain, while participating builders would receive more flexible defect rules. Preserve the note that no official opposition argument was submitted elsewhere if needed. 2. For a fuller Yes case, add the supporters’ specific claim that loans would be below-market and fixed-rate, and mention the consumer protections they emphasize. 3. Clarify the eligibility row with the one-year California residency and primary-residence requirements stated in the official title and summary."
+      },
+      "checks": {
+        "words": {
+          "yes": 134,
+          "no": 141,
+          "ratio": 1.05
+        },
+        "headline_words": {
+          "yes": 20,
+          "no": 20
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 5,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 7.7,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 1,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "It captures the official supporters’ central case: down-payment help for buyers who can manage monthly payments but struggle to save, alongside potential construction and consumer-protection benefits. The strongest supporting details—borrower repayment and the loan protections—are included. The wording appropriately attributes the predicted benefits to supporters."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "Given there was no organized opposition argument, this fairly presents analysis-based reasons a thoughtful No voter might weigh: loan costs and construction effects are unknown, while participating builders would have more flexibility under different defect rules. It could state that case more directly rather than foregrounding the absence of an official argument."
+        },
+        "swap_test_pass": false,
+        "swap_notes": [
+          "The Yes headline uses the warm benefit phrase “help ... overcome the down payment barrier”; the No headline leads with “No official argument against was submitted,” then gives a more qualified case. The difference is understandable given the source record, but the headlines are not parallel in structure or tone.",
+          "Move the fact that no official opposition argument was submitted to the crux or another contextual field. Make the No headline state its merits-based case directly, in a structure parallel to the Yes headline."
+        ],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. Revise the No headline to lead with its merits-based case, not the absence of an official argument. For example: “The case for No is that loan costs and construction effects are uncertain, while participating builders would get more flexible defect rules.” Keep the note that no official opposition argument was submitted in the crux or another contextual field. 2. Keep the Yes and No headlines parallel in structure and tone; do not imply that uncertain effects are certain."
+      },
+      "checks": {
+        "words": {
+          "yes": 158,
+          "no": 137,
+          "ratio": 1.15
+        },
+        "headline_words": {
+          "yes": 20,
+          "no": 21
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 5,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 8.0,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 2,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The card fairly captures supporters’ main merits case: down-payment help for buyers who can manage monthly payments, borrower-funded repayment, consumer protections, and possible construction and job benefits. The strongest point is well represented, though the headline could foreground the claimed affordability and taxpayer-cost benefits more directly."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "Given that no official opposition argument was submitted, the card responsibly builds a No case from the analyst’s identified uncertainties and the trade-off of more flexible defect rules for builders choosing higher labor standards. A thoughtful No voter might put greater emphasis on the fact that lower borrowing costs and increased construction are not assured, but the card does state that uncertainty."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The Yes headline uses the affirmative benefit phrase “help ... overcome the down payment barrier,” while the No headline stresses “uncertain” benefits. This is a reasonable reflection of the different cases, and both headlines attribute or frame their claims rather than asserting disputed outcomes as certain.",
+          "The No headline begins with the procedural point that no official argument was submitted, unlike the Yes headline. Consider moving that disclosure out of the headline so the two headlines are more parallel."
+        ],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 163,
+          "no": 136,
+          "ratio": 1.2
+        },
+        "headline_words": {
+          "yes": 21,
+          "no": 20
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 5,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 7.8,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://voterguide.sos.ca.gov/propositions/37/arguments-rebuttals.htm",
+    "https://voterguide.sos.ca.gov/propositions/37/analysis.htm",
+    "https://voterguide.sos.ca.gov/propositions/37/title-summary.htm"
+  ],
+  "meta": {
+    "seconds": 129.7,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 4,
+        "input_tokens": 25812,
+        "cache_read_tokens": 19202,
+        "output_tokens": 5147,
+        "reasoning_tokens": 413,
+        "tool_calls": 3
+      },
+      "critic:gpt-6-luna": {
+        "requests": 3,
+        "input_tokens": 15997,
+        "cache_read_tokens": 0,
+        "output_tokens": 6104,
+        "reasoning_tokens": 4990,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {}
+  },
+  "format": "v3.1",
+  "scope": "statewide"
+}

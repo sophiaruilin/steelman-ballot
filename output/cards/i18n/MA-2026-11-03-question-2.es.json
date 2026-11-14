@@ -1,0 +1,57 @@
+{
+ "lang": "es",
+ "card_id": "MA-2026-11-03-question-2",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Permitir que los empleados de servicios de defensa pública negocien colectivamente",
+  "yes_means": "Los empleados de CPCS podrían elegir formar un sindicato y negociar con su empleador, y CPCS tendría que solicitar fondos al Gobernador para cualquier acuerdo firmado.",
+  "no_means": "La ley que rige las relaciones laborales de los empleados de CPCS seguiría sin cambios.",
+  "what_changes": [
+   {
+    "topic": "Negociación colectiva",
+    "today": "La ley actual no otorga expresamente a los empleados de CPCS el permiso para negociar colectivamente con su empleador.",
+    "if_passes": "La ley permitiría expresamente que los empleados de CPCS negocien colectivamente con su empleador."
+   },
+   {
+    "topic": "Financiamiento del acuerdo",
+    "today": "CPCS recibe parte de su financiamiento mediante asignaciones presupuestarias estatales.",
+    "if_passes": "Después de firmar un acuerdo de negociación, CPCS tendría que solicitar al Gobernador la asignación presupuestaria necesaria para financiarlo."
+   },
+   {
+    "topic": "Gasto estatal",
+    "today": "Los fondos estatales ya financian parte de las operaciones de CPCS.",
+    "if_passes": "Las finanzas estatales podrían verse afectadas, pero el efecto dependería de los resultados de la negociación."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Elección de los empleados",
+    "Trato igualitario",
+    "Voz de los trabajadores"
+   ],
+   "headline": "Quienes apoyan la medida sostienen que permitiría a los empleados de CPCS elegir si quieren formar un sindicato y negociar juntos, como pueden hacerlo otros empleados estatales.",
+   "more_reasons": [
+    "Quienes apoyan la medida sostienen que los empleados deberían tener una voz común para negociar los salarios, los beneficios y las condiciones laborales."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Servicios legales confiables",
+    "Flexibilidad de gestión",
+    "Cautela fiscal"
+   ],
+   "headline": "El argumento oficial en contra advierte que la negociación colectiva podría limitar la flexibilidad y tener consecuencias no previstas para la prestación de servicios legales.",
+   "more_reasons": [
+    "El argumento oficial en contra advierte que la negociación podría desdibujar la autoridad de la gerencia y hacer que las operaciones sean menos eficientes.",
+    "El argumento oficial en contra también advierte sobre riesgos financieros para el poder judicial."
+   ]
+  },
+  "crux": "La disyuntiva central es entre la opción de los empleados de negociar juntos y las preocupaciones sobre la flexibilidad de la gerencia y la confiabilidad de los servicios legales. Los efectos financieros dependerían de los resultados de futuras negociaciones.",
+  "who_is_affected": [
+   "Empleados de CPCS",
+   "Gerentes de CPCS",
+   "Personas que no pueden pagar un abogado y reciben servicios legales de CPCS",
+   "Gobierno estatal, que financia parcialmente a CPCS"
+  ]
+ }
+}

@@ -1,0 +1,63 @@
+{
+ "lang": "es",
+ "card_id": "MA-2026-11-03-question-5",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Cambiar el límite de ingresos del estado y las reglas de reembolso a los contribuyentes",
+  "yes_means": "A partir del 1 de julio de 2027, el estado usaría un límite de ingresos revisado, vinculado a las recaudaciones del año anterior y al crecimiento de los salarios; incluiría el impuesto adicional sobre los ingresos superiores a $1 millón y reembolsaría las recaudaciones que excedan el límite.",
+  "no_means": "El límite actual de ingresos del estado y las reglas de reembolso permanecerían sin cambios.",
+  "what_changes": [
+   {
+    "topic": "Límite anual de ingresos",
+    "today": "La ley estatal ya limita las recaudaciones de ingresos.",
+    "if_passes": "El límite equivaldría a los ingresos netos del año anterior, aumentados según el crecimiento promedio de los salarios y sueldos de Massachusetts durante los últimos tres años."
+   },
+   {
+    "topic": "Reembolsos a los contribuyentes",
+    "today": "La ley vigente exige reembolsos a los contribuyentes en ciertas condiciones.",
+    "if_passes": "Los ingresos que superen el límite revisado, contando todos los ingresos del impuesto adicional sobre los ingresos superiores a $1 millón, se reembolsarían al año siguiente."
+   },
+   {
+    "topic": "Financiamiento del presupuesto",
+    "today": "Los ingresos estatales financian el presupuesto del estado, incluida la ayuda para las escuelas y los presupuestos municipales.",
+    "if_passes": "Los límites más estrictos al crecimiento de los ingresos dejarían menos dinero disponible para el presupuesto del estado."
+   },
+   {
+    "topic": "Ahorros para tiempos difíciles",
+    "today": "El estado ahorra dinero en un fondo para tiempos difíciles para ayudar a manejar las recesiones y las emergencias.",
+    "if_passes": "Habría menos dinero disponible para aumentar esa reserva."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Precios asequibles",
+    "Moderación fiscal",
+    "Rendición de cuentas"
+   ],
+   "headline": "Quienes apoyan la medida sostienen que el límite revisado mantendría el crecimiento de los ingresos del gobierno dentro de lo que los contribuyentes pueden pagar y devolvería las recaudaciones excedentes.",
+   "more_reasons": [
+    "Quienes apoyan la medida sostienen que límites más estrictos a los ingresos mejorarían la rendición de cuentas y ayudarían a proteger contra futuros aumentos de impuestos.",
+    "Quienes apoyan la medida sostienen que los reembolsos ayudarían a las familias a cubrir los costos de vivienda, alimentos y cuidado infantil, y harían que vivir en Massachusetts fuera más asequible."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Servicios públicos confiables",
+    "Estabilidad económica",
+    "Equidad"
+   ],
+   "headline": "Quienes se oponen sostienen que el límite revisado reduciría los fondos para servicios esenciales y dejaría a las comunidades ante la posibilidad de pagar impuestos prediales más altos o recortar puestos de maestros y bomberos.",
+   "more_reasons": [
+    "Quienes se oponen sostienen que contar con reservas menores para tiempos difíciles empeoraría los recortes de servicios durante las recesiones, cuando los residentes necesitan más ayuda.",
+    "Quienes se oponen sostienen que contar el impuesto adicional expondría a reembolsos el dinero destinado a las escuelas y al transporte, lo que beneficiaría a los millonarios."
+   ]
+  },
+  "crux": "La decisión es entre límites más estrictos con reembolsos a los contribuyentes, y más dinero disponible para los servicios públicos y las reservas. Las partes también discrepan sobre si los reembolsos harían más asequible vivir en el estado o si el efecto se anularía por los recortes de servicios y los mayores costos locales.",
+  "who_is_affected": [
+   "Contribuyentes que podrían recibir reembolsos",
+   "Personas que pagan el impuesto adicional sobre los ingresos superiores a $1 millón",
+   "Residentes que dependen de servicios financiados por el estado",
+   "Escuelas y gobiernos municipales que reciben ayuda estatal"
+  ]
+ }
+}

@@ -1,0 +1,306 @@
+{
+  "measure_id": "NY-2026-11-03-nyc-proposal-1",
+  "card": {
+    "measure_id": "NY-2026-11-03-nyc-proposal-1",
+    "number": "Proposal 1",
+    "official_title": "Speed Up Process for Granting a Revocable Consent to Use Public Spaces",
+    "plain_title": "Remove required public-space permit hearings and Council rejection of sidewalk-cafe permits",
+    "title_disputed": false,
+    "put_on_ballot_by": "Not specified in the official guide.",
+    "yes_means": "New applications to use public sidewalks and streets would no longer require hearings or newspaper ads, and the Council could no longer reject sidewalk-cafe permits.",
+    "no_means": "Applications would still require public hearings and applicant-paid newspaper ads, and the Council would retain authority to reject sidewalk-cafe permits.",
+    "what_changes": [
+      {
+        "topic": "Public hearings",
+        "today": "DOT or OTI must hold a public hearing on applications for permission to use public space.",
+        "if_passes": "Hearings would be optional, while community boards and elected officials would still receive notice and could comment.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-1/"
+      },
+      {
+        "topic": "Public notice costs",
+        "today": "Applicants must pay to publish notices in local newspapers.",
+        "if_passes": "Applicants would no longer pay for newspaper ads, but notices would still appear in the City Record.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-1/"
+      },
+      {
+        "topic": "Sidewalk cafe review",
+        "today": "The City Council can reject sidewalk-cafe permits even after DOT approves them.",
+        "if_passes": "The Council would lose that authority, and sidewalk cafes would follow the same process as other public-space permits.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-1/"
+      }
+    ],
+    "who_is_affected": [
+      "Property and business owners applying to use sidewalks or streets",
+      "Sidewalk-cafe operators",
+      "People using sidewalks, accessibility ramps, benches and bus shelters",
+      "Community boards, Council members and borough presidents",
+      "City agencies reviewing public-space applications"
+    ],
+    "fiscal_impact": {
+      "text": "The official guide does not include a cost estimate.",
+      "label": "fact",
+      "whose": null,
+      "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-1/",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "Removing mandatory hearings would speed up public-space permits while keeping community notice and comments.",
+      "headline_topic": "Public hearings",
+      "more_reasons": [
+        "The proposal would also remove applicants' required newspaper-ad expense.",
+        "Community boards and elected officials could still comment on applications."
+      ],
+      "values": [
+        "Timely decisions",
+        "Lower application costs",
+        "Community input"
+      ],
+      "best_evidence": [
+        {
+          "text": "The official guide describes a yes vote as speeding up the process while maintaining community input.",
+          "label": "prediction",
+          "whose": "NYC Votes official voter guide",
+          "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-1/",
+          "quote": "A \"yes\" vote speeds up process to use public space while maintaining community input."
+        },
+        {
+          "text": "The proposal removes required newspaper-ad payments but keeps notices in the City Record.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-1/",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "The guide's yes-vote summary focuses on applicants seeking permission to use public space.",
+      "answer_to_other_side": "The guide explains that hearings could still be held, and community boards, Council members and borough presidents would still receive notice and could submit comments."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "headline": "Keeping mandatory hearings would preserve guaranteed public participation, alongside the Council's power to reject sidewalk-cafe permits.",
+      "headline_topic": "Public hearings",
+      "more_reasons": [
+        "Keeping the current rules would preserve the Council's ability to reject a sidewalk-cafe permit after agency approval."
+      ],
+      "values": [
+        "Public participation",
+        "Elected oversight"
+      ],
+      "best_evidence": [
+        {
+          "text": "The official guide describes a no vote as retaining mandatory hearings and Council authority to reject sidewalk-cafe permits.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-1/",
+          "quote": "A \"no\" vote maintains longer process with mandatory public hearing to use public space and Council review of sidewalk cafes."
+        },
+        {
+          "text": "Under the proposal, local officials could comment, but there would be fewer formal review steps.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-1/",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "The guide's no-vote summary focuses on retaining public participation and Council oversight of sidewalk cafes.",
+      "answer_to_other_side": "The guide distinguishes continued notice and comments from required hearings and the Council's power to reject a cafe permit; those formal protections would be removed."
+    },
+    "crux": {
+      "kind": "values",
+      "text": "The central trade-off is a shorter, less costly application process versus guaranteed hearings and the Council's power to reject sidewalk-cafe permits. Notice and comments would remain, but some formal review powers would not."
+    },
+    "evidence": [
+      {
+        "text": "The proposal makes hearings optional; it does not prohibit them.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-1/",
+        "quote": null
+      },
+      {
+        "text": "Community boards, Council members and borough presidents would still be notified and could comment to DOT or OTI.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-1/",
+        "quote": null
+      },
+      {
+        "text": "The guide says the new process would start March 1, 2027, and would not apply to petitions already submitted.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-1/",
+        "quote": null
+      },
+      {
+        "text": "Under the current system, the City can take back these permissions at any time, and permit holders pay an annual fee.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-1/",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 3
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 1,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "It captures the Yes case stated in the guide: faster processing, lower applicant costs from ending newspaper ads, and continued notice and comment. It could be more direct, but it does not omit a clearly stronger Yes argument in the supplied sources."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "It captures the guide's No case: retaining mandatory hearings and retaining the Council's power to reject sidewalk-cafe permits. The case is somewhat less specific when it says “Council review,” which risks implying Council review of all public-space applications."
+        },
+        "swap_test_pass": false,
+        "swap_notes": [
+          "The No headline says “Council review before allowing uses of public space,” which can sound like Council review applies to all uses; the source limits the Council's rejection authority to sidewalk-cafe permits.",
+          "The headlines are both framed as summaries of what the guide emphasizes, but the No headline's “Council review” is broader than the Yes headline's description of continued community input. Make them direct and equally specific."
+        ],
+        "fidelity_problems": [
+          "The No headline says the Council would review uses of public space generally. The source says the Council can reject sidewalk-cafe permits after DOT approval; it does not describe Council review of other public-space permits.",
+          "The plain title “Council vetoes” may also suggest a broader Council veto power than the proposal changes. The source identifies that power specifically for sidewalk-cafe permits."
+        ],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. Narrow the plain title and the No headline to the specific Council power described in the source—for example, say “Council rejection of sidewalk-cafe permits,” not “Council vetoes” or general “Council review.” 2. Make both headlines direct statements of each side’s strongest merits argument rather than saying what the guide’s summary emphasizes; keep their scope and tone parallel."
+      },
+      "checks": {
+        "words": {
+          "yes": 108,
+          "no": 111,
+          "ratio": 1.03
+        },
+        "headline_words": {
+          "yes": 15,
+          "no": 18
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 2,
+          "no": 1
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 8.9,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 1,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The case captures the guide’s main Yes argument: a faster process with community input still available, plus removal of required newspaper-ad costs. It could more clearly acknowledge that Yes also removes the Council’s authority to reject sidewalk-cafe permits, but this is covered elsewhere in the card."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The case fairly presents the strongest No-side trade-off available in the source: mandatory hearings and Council review provide formal participation and oversight, which notice and comments do not fully replace. The source gives only a brief No summary, and the card stays within it."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The headlines are parallel in structure and similar in tone: each names the rule being retained or removed and its consequence. Neither side is described noticeably more warmly or confidently."
+        ],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 107,
+          "no": 110,
+          "ratio": 1.03
+        },
+        "headline_words": {
+          "yes": 14,
+          "no": 16
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 2,
+          "no": 1
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 1
+        },
+        "reading_grade": 9.6,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-1/",
+    "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/"
+  ],
+  "meta": {
+    "seconds": 124.4,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 13,
+        "input_tokens": 74228,
+        "cache_read_tokens": 67417,
+        "output_tokens": 5468,
+        "reasoning_tokens": 714,
+        "tool_calls": 28
+      },
+      "critic:gpt-6-luna": {
+        "requests": 2,
+        "input_tokens": 8447,
+        "cache_read_tokens": 0,
+        "output_tokens": 2879,
+        "reasoning_tokens": 2248,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {}
+  },
+  "format": "v3.1",
+  "scope": "New York City"
+}

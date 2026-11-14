@@ -1,0 +1,58 @@
+{
+ "lang": "es",
+ "card_id": "MA-2026-11-03-question-3",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Reemplazar las primarias partidistas por una primaria y dos finalistas",
+  "yes_means": "Las primarias separadas de los partidos para las elecciones estatales se convertirían en una sola primaria abierta a todos los candidatos, y los dos candidatos con más votos avanzarían a la elección general.",
+  "no_means": "Las leyes actuales que rigen las elecciones primarias, incluidas las primarias separadas de los partidos, seguirían vigentes.",
+  "what_changes": [
+   {
+    "topic": "Boleta de la primaria",
+    "today": "En las elecciones estatales se usan primarias separadas de los partidos políticos.",
+    "if_passes": "Todos los candidatos aparecerían en una sola boleta de la primaria, sin importar su afiliación partidista."
+   },
+   {
+    "topic": "Opciones de los votantes en la primaria",
+    "today": "Los votantes eligen candidatos mediante primarias separadas de los partidos, en vez de una sola primaria abierta a todos los partidos.",
+    "if_passes": "Los votantes podrían elegir a cualquier candidato en la boleta compartida de la primaria."
+   },
+   {
+    "topic": "Finalistas de la elección general",
+    "today": "Los candidatos compiten en primarias separadas de los partidos, en vez de una sola primaria compartida en la que pasan los dos más votados.",
+    "if_passes": "Solo los dos candidatos con más votos en la primaria avanzarían a la elección general."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Rendición de cuentas",
+    "Competencia",
+    "Capacidad de respuesta"
+   ],
+   "headline": "Quienes apoyan la medida sostienen que una primaria compartida y dos finalistas harían que las elecciones fueran más competitivas y que los funcionarios rindieran más cuentas a los votantes.",
+   "more_reasons": [
+    "Quienes apoyan la medida dicen que las convenciones partidistas pueden impedir que algunos candidatos se postulen y que dos tercios de la legislatura se postulan sin oposición; sostienen que una primaria compartida abriría oportunidades para nuevas voces.",
+    "Quienes apoyan la medida sostienen que una competencia más fuerte impulsaría a los funcionarios a responder a inquietudes como la vivienda, los costos de la energía y las escuelas."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Opciones para los votantes",
+    "Igualdad de oportunidades",
+    "Representación"
+   ],
+   "headline": "Quienes se oponen sostienen que una primaria compartida y dos finalistas reducirían las opciones en la elección general y dejarían a algunos votantes sin candidatos que los representen.",
+   "more_reasons": [
+    "Quienes se oponen dicen que sistemas similares en California y Washington favorecieron a candidatos adinerados que financiaban sus propias campañas y podían gastar más que otros en publicidad en contiendas con muchos candidatos; sostienen que esto perjudicaría a los candidatos de base comunitaria.",
+    "Quienes se oponen sostienen que habría menos opciones en la elección general, lo que reduciría la participación de los votantes y limitaría el debate público."
+   ]
+  },
+  "crux": "¿Una sola primaria con dos finalistas aumentaría la competencia y la rendición de cuentas, o limitaría la representación y favorecería a candidatos más conocidos y con más recursos? Las partes también sopesan una amplia variedad de opciones en la primaria frente a una mayor variedad de opciones en la elección general.",
+  "who_is_affected": [
+   "Votantes en las elecciones primarias y generales estatales",
+   "Candidatos a cargos estatales, incluidos candidatos independientes y de terceros partidos",
+   "Candidatos a gobernador y vicegobernador",
+   "Partidos políticos y grupos que buscan obtener la categoría de partido"
+  ]
+ }
+}

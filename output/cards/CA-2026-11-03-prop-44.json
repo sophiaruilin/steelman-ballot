@@ -1,0 +1,246 @@
+{
+  "measure_id": "CA-2026-11-03-prop-44",
+  "card": {
+    "measure_id": "CA-2026-11-03-prop-44",
+    "number": "Prop 44",
+    "official_title": "REQUIRES COMMUNITY HEALTH CLINICS SPEND 90% OF REVENUE ON PROGRAM SERVICES. INITIATIVE STATUTE.",
+    "plain_title": "Require nonprofit community clinics to spend 90% of revenue on program services",
+    "title_disputed": false,
+    "put_on_ballot_by": "Citizen initiative",
+    "yes_means": "Private nonprofit safety net clinics would have to spend at least 90% of annual revenue on qualifying services or pay penalties, with temporary waivers available in some cases.",
+    "no_means": "Private nonprofit safety net clinics would continue under existing spending and reporting rules, without this measure’s 90% minimum, penalties or enforcement fees.",
+    "what_changes": [
+      {
+        "topic": "Minimum service spending",
+        "today": "Private nonprofit safety net clinics report spending about 80% of revenue on health care services on average, with amounts varying by clinic.",
+        "if_passes": "Clinics must spend at least 90% on qualifying services each year, with the Attorney General defining eligible expenses and temporary waivers available.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/44/analysis.htm"
+      },
+      {
+        "topic": "Penalties for shortfalls",
+        "today": "Clinics are not subject to this proposed penalty for falling below 90%.",
+        "if_passes": "Clinics pay the shortfall, refundable if they comply within five years; otherwise, the money goes to clinic workforce programs.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/44/analysis.htm"
+      },
+      {
+        "topic": "Oversight and fees",
+        "today": "Private nonprofit safety net clinics report revenue and expenses to federal and state governments each year.",
+        "if_passes": "The state reviews reports and investigates compliance with the new rules, charging affected clinics fees to cover enforcement.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/44/analysis.htm"
+      }
+    ],
+    "who_is_affected": [
+      "Private nonprofit safety net clinics",
+      "Low-income and uninsured patients, including Medi-Cal patients",
+      "Clinic health care workers and administrative staff",
+      "State agencies responsible for oversight"
+    ],
+    "fiscal_impact": {
+      "text": "The Legislative Analyst estimates state enforcement costs in the low tens of millions of dollars each year, covered by fees on affected clinics; other state and local costs are uncertain.",
+      "label": "prediction",
+      "whose": "Legislative Analyst",
+      "source_url": "https://voterguide.sos.ca.gov/propositions/44/analysis.htm",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "Supporters argue the spending minimum would direct more clinic revenue toward patient care and services that support it.",
+      "headline_topic": "Minimum service spending",
+      "more_reasons": [
+        "Supporters argue public spending reports would help patients and taxpayers hold clinics accountable.",
+        "Supporters emphasize that clinics could recover penalties by complying, while unrecovered money would support recruiting, training and retaining clinic workers."
+      ],
+      "values": [
+        "Patient care",
+        "Accountability",
+        "Responsible use of public money"
+      ],
+      "best_evidence": [
+        {
+          "text": "Supporters argue the minimum would shift resources from unnecessary overhead to patient care and supporting services.",
+          "label": "prediction",
+          "whose": "Supporters in the official ballot argument",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/44/arguments-rebuttals.htm",
+          "quote": null
+        },
+        {
+          "text": "Clinics could recover penalties by meeting the spending requirements within five years; otherwise, the state would use the money for clinic workforce programs.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/44/analysis.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Supporters say patients would receive more resources for care, workers would gain support, and taxpayers would get stronger accountability.",
+      "answer_to_other_side": "Supporters argue qualifying spending can include interpretation, care coordination, clinical managers, equipment and technology, so the minimum need not reduce essential services."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "headline": "Opponents argue the spending minimum would strain clinic budgets, forcing service cuts or closures that reduce patients’ access to care.",
+      "headline_topic": "Minimum service spending",
+      "more_reasons": [
+        "Opponents argue the spending rules could limit essential support staff, equipment, technology and clinic improvements.",
+        "Opponents argue reduced clinic access would send more patients to hospital emergency rooms and increase wait times."
+      ],
+      "values": [
+        "Access to care",
+        "Stable clinic funding",
+        "Flexibility to meet patient needs"
+      ],
+      "best_evidence": [
+        {
+          "text": "The Legislative Analyst says some clinics unable to meet the minimum might close, with uncertain effects on state and local costs.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/44/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "Opponents argue clinic service cuts and closures would push patients toward emergency rooms and increase wait times.",
+          "label": "prediction",
+          "whose": "Opponents in the official ballot argument",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/44/arguments-rebuttals.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Opponents say keeping current rules would protect patients who depend on clinics, especially in rural and medically underserved communities.",
+      "answer_to_other_side": "Opponents argue clinics already face audits and spending rules, and that a fixed percentage could restrict services and support costs needed to deliver care."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "Would a 90% minimum redirect spending toward care, or leave clinics unable to cover necessary costs? The disagreement turns on which expenses qualify and how much spending flexibility clinics need."
+    },
+    "evidence": [
+      {
+        "text": "Clinics currently report spending about 80% of revenue on health care services on average; the percentage varies across clinics.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/44/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The official summary describes qualifying program services as advancing clinics’ charitable purpose, including but not limited to patient services.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/44/title-summary.htm",
+        "quote": null
+      },
+      {
+        "text": "The Attorney General would define eligible expenses in more detail, using existing federal reports as a starting point.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/44/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The Legislative Analyst says clinics might increase direct care spending to comply, while some unable to comply might close; the financial effects are uncertain.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/44/analysis.htm",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 4
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 0,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "Fairly captures the supporters’ core merits case: a 90% floor could shift more resources to patient care and supporting services, with public reporting and a way to recover penalties. It omits supporters’ more specific claim that some clinics spend less than half their funding on care and their emphasis on excessive executive pay, but those claims are campaign arguments rather than established analysis."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "Fairly presents opponents’ central merits case that a fixed spending rule could constrain necessary clinic costs, reduce access, and push more patients to emergency rooms. It could make the strongest access argument more concrete by noting opponents’ claim that some rural and medically underserved communities have no other nearby source of care."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 139,
+          "no": 144,
+          "ratio": 1.04
+        },
+        "headline_words": {
+          "yes": 18,
+          "no": 20
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 9.9,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://voterguide.sos.ca.gov/propositions/44/arguments-rebuttals.htm",
+    "https://voterguide.sos.ca.gov/propositions/44/title-summary.htm",
+    "https://voterguide.sos.ca.gov/propositions/44/analysis.htm"
+  ],
+  "meta": {
+    "seconds": 47.3,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 2,
+        "input_tokens": 10369,
+        "cache_read_tokens": 6316,
+        "output_tokens": 1658,
+        "reasoning_tokens": 155,
+        "tool_calls": 3
+      },
+      "critic:gpt-6-luna": {
+        "requests": 1,
+        "input_tokens": 6480,
+        "cache_read_tokens": 0,
+        "output_tokens": 1473,
+        "reasoning_tokens": 1251,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {}
+  },
+  "format": "v3.1",
+  "scope": "statewide"
+}

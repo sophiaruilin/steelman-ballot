@@ -1,0 +1,58 @@
+{
+ "lang": "es",
+ "card_id": "CA-2026-11-03-prop-43",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Exigir la aprobación de dos tercios para los impuestos locales especiales propuestos por los votantes",
+  "yes_means": "A partir del 1 de enero de 2027, los impuestos locales propuestos por los votantes para fines específicos necesitarían la aprobación de dos tercios, en lugar de una mayoría simple, para crearse, aumentarse o prorrogarse.",
+  "no_means": "Los impuestos locales especiales propuestos por los votantes seguirían necesitando solo la aprobación de una mayoría, mientras que los que los órganos de gobierno locales incluyan en la boleta seguirían necesitando la aprobación de dos tercios.",
+  "what_changes": [
+   {
+    "topic": "Impuestos nuevos o más altos",
+    "today": "Los impuestos locales propuestos por los votantes para fines específicos pueden aprobarse con más de la mitad de los votos.",
+    "if_passes": "A partir del 1 de enero de 2027, estos impuestos nuevos o aumentos de impuestos necesitarían la aprobación de dos tercios."
+   },
+   {
+    "topic": "Prórroga de impuestos que vencen",
+    "today": "Los votantes pueden prorrogar los impuestos locales especiales propuestos por los votantes con la aprobación de una mayoría.",
+    "if_passes": "A partir del 1 de enero de 2027, las prórrogas propuestas por los votantes también necesitarían la aprobación de dos tercios."
+   },
+   {
+    "topic": "Ingresos por impuestos locales",
+    "today": "Los gobiernos locales pueden recibir ingresos de impuestos especiales propuestos por los votantes y aprobados por una mayoría.",
+    "if_passes": "Los ingresos por impuestos locales podrían ser menores de lo que serían de otro modo, porque algunos impuestos quizá no se aprueben."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Asequibilidad",
+    "Protección de los contribuyentes",
+    "Amplio acuerdo de los votantes"
+   ],
+   "headline": "Quienes apoyan la medida sostienen que protegería a los contribuyentes de costos adicionales al dificultar la aprobación de impuestos locales especiales nuevos o más altos.",
+   "more_reasons": [
+    "Quienes apoyan la medida sostienen que el umbral más alto ayudaría a proteger a propietarios de viviendas, inquilinos y pequeñas empresas de impuestos inmobiliarios y costos de vivienda adicionales.",
+    "Quienes apoyan la medida sostienen que los impuestos destinados a fines específicos deberían requerir un amplio acuerdo de los votantes y confianza en que los ingresos se gastarán según lo prometido."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Servicios públicos confiables",
+    "Gobierno de la mayoría",
+    "Control local"
+   ],
+   "headline": "Quienes se oponen sostienen que la medida amenazaría el financiamiento de servicios locales esenciales al dificultar la aprobación de impuestos propuestos por los votantes, incluso cuando la mayoría de los votantes los apoya.",
+   "more_reasons": [
+    "Quienes se oponen sostienen que permitir que poco más de un tercio de los votantes bloquee un impuesto debilita el gobierno de la mayoría y la toma de decisiones locales.",
+    "Quienes se oponen sostienen que el umbral más alto podría bloquear el financiamiento de viviendas asequibles y programas que ayudan a las personas a conservar su vivienda."
+   ]
+  },
+  "crux": "¿Deberían los impuestos locales especiales propuestos por los votantes requerir un amplio acuerdo para proteger a los contribuyentes, o debería una mayoría poder financiar las necesidades locales? El intercambio práctico depende de qué impuestos futuros se bloquearían y en qué se gastarían esos ingresos.",
+  "who_is_affected": [
+   "Votantes locales que proponen o votan sobre impuestos para fines específicos",
+   "Personas y empresas que pagarían estos impuestos locales",
+   "Ciudades, condados, distritos escolares y distritos especiales",
+   "Residentes que dependen de servicios financiados por impuestos locales especiales"
+  ]
+ }
+}

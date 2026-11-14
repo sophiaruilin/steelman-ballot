@@ -1,0 +1,68 @@
+{
+ "lang": "es",
+ "card_id": "NY-2026-11-03-nyc-proposal-3",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Cambios en las revisiones de proyectos viales, propiedades de la ciudad y espacios de oficina",
+  "yes_means": "Un voto por el sí cambia las reglas de revisión para proyectos viales, acorta la revisión de ciertas transacciones de propiedades de la ciudad y elimina los requisitos de audiencias y aprobación para espacios de oficina de la ciudad.",
+  "no_means": "Un voto por el no mantiene las reglas actuales de consulta para proyectos viales, los procedimientos de revisión de propiedades de la ciudad y la facultad del Concejo Municipal de rechazar adquisiciones o arrendamientos de oficinas de la ciudad.",
+  "what_changes": [
+   {
+    "topic": "Revisión de proyectos viales",
+    "today": "El Departamento de Transporte (DOT) debe notificar a funcionarios locales y a las Juntas Comunitarias, y consultar con la policía, los bomberos, las oficinas de discapacidad y las oficinas de pequeñas empresas antes de realizar proyectos importantes de transporte.",
+    "if_passes": "Se aclara la autoridad del DOT para comenzar trabajos urgentes de seguridad respaldados por datos antes de notificar, y los errores técnicos o las consultas que no se hayan realizado no pueden detener un proyecto."
+   },
+   {
+    "topic": "Revisión de propiedades de la ciudad",
+    "today": "La mayoría de las ventas o arrendamientos de propiedades de la ciudad pasan por una revisión de uso del suelo de siete meses, con revisión del Concejo Municipal.",
+    "if_passes": "Los lotes más pequeños y los derechos de desarrollo en lugares de interés histórico propiedad de la ciudad pueden recibir una revisión más breve que termina con la Comisión de Planificación, si no se requiere una declaración de impacto ambiental."
+   },
+   {
+    "topic": "Venta de lotes no edificables",
+    "today": "Un programa permite vender lotes no edificables de la ciudad a propietarios vecinos sin subasta pública.",
+    "if_passes": "Esa autorización se vuelve permanente el 31 de diciembre de 2030."
+   },
+   {
+    "topic": "Transacciones de propiedades demoradas",
+    "today": "Se requiere una audiencia pública cuando pasan más de dos años después de que el Concejo Municipal aprueba la venta o adquisición de una propiedad.",
+    "if_passes": "Ya no se requiere esa audiencia pública adicional."
+   },
+   {
+    "topic": "Espacios de oficina de la ciudad",
+    "today": "Las adquisiciones o los arrendamientos de oficinas requieren una audiencia y una votación de la Comisión de Planificación, y el Concejo Municipal puede revisarlos y rechazarlos con un voto de dos tercios.",
+    "if_passes": "En su lugar, el comisionado de servicios administrativos de la ciudad certifica las adquisiciones, con aviso anticipado a nivel local, pero sin aprobación ni audiencias de la Comisión de Planificación o del Concejo Municipal."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Trabajos de seguridad oportunos",
+    "Eficiencia administrativa"
+   ],
+   "headline": "Argumento basado en el análisis a favor: los trabajos urgentes de seguridad vial respaldados por datos no deberían detenerse por errores técnicos o consultas que no se hayan realizado.",
+   "more_reasons": [
+    "Para las transacciones de propiedades que cumplen los requisitos, una revisión más breve mantiene los aportes de las Juntas Comunitarias y de los presidentes de distrito, a la vez que elimina una revisión final del Concejo Municipal.",
+    "Para los espacios de oficina, la certificación del comisionado y el aviso reemplazan las audiencias y los pasos de aprobación."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Supervisión pública",
+    "Participación local",
+    "Controles sobre las decisiones de las agencias"
+   ],
+   "headline": "Argumento basado en el análisis en contra: las decisiones sobre propiedades de la ciudad deberían mantener una revisión final del Concejo Municipal, en vez de terminar en la Comisión de Planificación.",
+   "more_reasons": [
+    "Mantener las reglas para espacios de oficina conserva una audiencia pública y la facultad del Concejo Municipal de rechazar una adquisición o un arrendamiento.",
+    "Mantener las reglas para proyectos viales conserva la posibilidad de detener un proyecto si no se realizaron las consultas requeridas."
+   ]
+  },
+  "crux": "La disyuntiva principal es entre menos obstáculos de procedimiento y una supervisión pública y de funcionarios electos más sólida. La propuesta combina reglas sobre seguridad vial con cambios distintos a las decisiones sobre propiedades de la ciudad y espacios de oficina.",
+  "who_is_affected": [
+   "Personas que usan calles afectadas por carriles para bicicletas, carriles para autobuses o rediseños viales",
+   "Residentes y Juntas Comunitarias cerca de propiedades de la ciudad afectadas",
+   "Propietarios de inmuebles junto a lotes no edificables de la ciudad",
+   "Empleados y agencias de la ciudad que usan espacios de oficina de la ciudad",
+   "Integrantes del Concejo Municipal, presidentes de distrito y la Comisión de Planificación de la Ciudad"
+  ]
+ }
+}

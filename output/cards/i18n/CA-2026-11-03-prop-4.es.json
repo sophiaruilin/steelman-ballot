@@ -1,0 +1,68 @@
+{
+ "lang": "es",
+ "card_id": "CA-2026-11-03-prop-4",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Permitir el financiamiento público estatal y local de las campañas de candidatos",
+  "yes_means": "Los gobiernos estatales y locales podrían crear programas de financiamiento público de campañas con nuevas protecciones, y la multa máxima por contribuciones a campañas de entidades extranjeras se triplicaría.",
+  "no_means": "Se mantendría, con las excepciones existentes, la prohibición del financiamiento público para la mayoría de las campañas de candidatos estatales y locales, y las multas máximas por contribuciones de entidades extranjeras a campañas no cambiarían.",
+  "what_changes": [
+   {
+    "topic": "Financiamiento público de campañas",
+    "today": "El financiamiento público está prohibido para la mayoría de las campañas de candidatos estatales y locales, con excepciones para ciertas ciudades con carta constitutiva.",
+    "if_passes": "Los gobiernos estatales y locales podrían crear programas de financiamiento público, pero esta medida por sí sola no crearía ninguno."
+   },
+   {
+    "topic": "Reglas de los programas",
+    "today": "La mayoría de los gobiernos estatales y locales no pueden ofrecer financiamiento público para campañas.",
+    "if_passes": "Los gobiernos podrían diseñar programas, pero los candidatos tendrían que demostrar que cuentan con un amplio apoyo en su distrito y aceptar límites de gastos."
+   },
+   {
+    "topic": "Fondos públicos protegidos",
+    "today": "La prohibición vigente impide que la mayoría de los gobiernos usen dinero público para campañas de candidatos.",
+    "if_passes": "Los nuevos programas no podrían usar dinero destinado a la educación, el transporte o la seguridad pública."
+   },
+   {
+    "topic": "Restricciones al gasto de campaña",
+    "today": "Conforme a la prohibición vigente, la mayoría de los candidatos no puede recibir financiamiento público para sus campañas.",
+    "if_passes": "El dinero público para campañas no podría usarse para pagar honorarios de defensa legal, multas ni el reembolso de préstamos personales de campaña de los candidatos."
+   },
+   {
+    "topic": "Multas por contribuciones de entidades extranjeras",
+    "today": "La multa máxima vigente por contribuciones a campañas de entidades extranjeras no cambia por ahora.",
+    "if_passes": "La multa máxima por contribuciones a campañas de entidades extranjeras se triplicaría."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Competencia justa",
+    "Decisiones locales",
+    "Rendición de cuentas ante los votantes"
+   ],
+   "headline": "Quienes apoyan la medida sostienen que el financiamiento público de campañas ayudaría a los candidatos calificados a competir sin depender de su patrimonio personal ni de donantes adinerados.",
+   "more_reasons": [
+    "Quienes apoyan la medida sostienen que las comunidades deberían tener la libertad de elegir y diseñar programas de financiamiento público que se ajusten a sus necesidades.",
+    "Quienes apoyan la medida sostienen que los requisitos de elegibilidad, los límites de gastos y las restricciones sobre el uso de los fondos protegerían a los contribuyentes."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Protección de los contribuyentes",
+    "Límites claros al financiamiento",
+    "Rendición de cuentas"
+   ],
+   "headline": "Quienes se oponen a la medida sostienen que los programas futuros opcionales podrían generar costos importantes para los contribuyentes; los montos dependerían de las decisiones posteriores de los gobiernos y del diseño de los programas.",
+   "more_reasons": [
+    "Quienes se oponen a la medida sostienen que el financiamiento público podría pagar más anuncios negativos, correo de campaña no deseado y mensajes de texto.",
+    "Quienes se oponen a la medida sostienen que el financiamiento público no eliminaría la influencia de los donantes privados, porque los candidatos aún podrían recibir contribuciones privadas."
+   ]
+  },
+  "crux": "El desacuerdo es si el financiamiento público opcional ampliaría de manera significativa la competencia y reduciría la dependencia de los donantes adinerados lo suficiente como para justificar los costos para los contribuyentes. Las partes también discrepan sobre si las protecciones estatales son suficientes cuando muchos detalles de los programas quedarían para que los gobiernos futuros los decidan.",
+  "who_is_affected": [
+   "Candidatos a cargos estatales y locales",
+   "Gobiernos estatales y locales que consideren el financiamiento público de campañas",
+   "Contribuyentes de las comunidades que adopten programas",
+   "Votantes y donantes de campañas"
+  ]
+ }
+}

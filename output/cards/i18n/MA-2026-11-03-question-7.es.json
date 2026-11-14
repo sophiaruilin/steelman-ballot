@@ -1,0 +1,58 @@
+{
+ "lang": "es",
+ "card_id": "MA-2026-11-03-question-7",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Permitir viviendas unifamiliares en lotes elegibles de 5,000 pies cuadrados",
+  "yes_means": "Se permitirían viviendas unifamiliares en zonas residenciales, en lotes de al menos 5,000 pies cuadrados, con al menos 50 pies de frente a la calle y acceso al alcantarillado y al agua públicos, sujetas a reglas locales razonables.",
+  "no_means": "La ley vigente que rige la construcción de viviendas unifamiliares no cambiaría.",
+  "what_changes": [
+   {
+    "topic": "Tamaño mínimo del lote",
+    "today": "Se aplican las reglas vigentes sobre el tamaño de los lotes; el resumen oficial no enumera los mínimos locales.",
+    "if_passes": "Se permitirían viviendas unifamiliares en lotes residenciales elegibles de al menos 5,000 pies cuadrados."
+   },
+   {
+    "topic": "Acceso a la calle y a los servicios públicos",
+    "today": "Siguen vigentes las reglas actuales sobre dónde se pueden construir viviendas unifamiliares.",
+    "if_passes": "La nueva autorización exigiría que el lote colinde con la calle, carretera o vía pública a lo largo de al menos 50 pies, y que tenga acceso al alcantarillado y al agua públicos."
+   },
+   {
+    "topic": "Reglas locales de construcción",
+    "today": "Sigue vigente la ley actual que rige la regulación local de las viviendas unifamiliares.",
+    "if_passes": "Las ciudades y los pueblos podrían regular razonablemente la altura, la distancia respecto de los edificios vecinos, los espacios abiertos, el estacionamiento y los alquileres de corto plazo."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Vivienda asequible",
+    "Acceso a la propiedad de vivienda",
+    "Lazos familiares y comunitarios"
+   ],
+   "headline": "Quienes apoyan la medida sostienen que permitir lotes más pequeños haría que las viviendas unifamiliares fueran más asequibles para las familias jóvenes y las personas mayores.",
+   "more_reasons": [
+    "Quienes apoyan la medida sostienen que los requisitos de lotes grandes llevan a los constructores a construir casas muy grandes para recuperar el costo del terreno, en vez de viviendas iniciales de menor costo.",
+    "Quienes apoyan la medida sostienen que las viviendas más asequibles ayudarían a los residentes a quedarse en Massachusetts, a mantener unidas a las familias extendidas y a apoyar la economía."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Toma de decisiones local",
+    "Capacidad de los servicios públicos",
+    "Protección del medioambiente"
+   ],
+   "headline": "Quienes se oponen sostienen que una regla estatal sobre el tamaño de los lotes limitaría la capacidad de las comunidades para planificar la vivienda según las necesidades y condiciones locales.",
+   "more_reasons": [
+    "Quienes se oponen sostienen que la planificación local es necesaria para equilibrar las nuevas viviendas con el tráfico, la seguridad pública, la capacidad de los servicios de agua y alcantarillado, las escuelas y la protección del medioambiente.",
+    "Quienes se oponen sostienen que los funcionarios responsables ante la comunidad y los residentes deberían orientar el crecimiento de la vivienda mediante la colaboración, en lugar de aplicar un requisito estatal uniforme."
+   ]
+  },
+  "crux": "El desacuerdo es si permitir lotes más pequeños en todo el estado mejoraría lo suficiente el acceso a viviendas asequibles como para justificar limitar las reglas locales sobre el tamaño de los lotes. Las partes también difieren sobre cuánto control necesitan las comunidades para gestionar el crecimiento y los servicios públicos.",
+  "who_is_affected": [
+   "Personas que buscan viviendas unifamiliares, incluidas familias jóvenes y personas mayores",
+   "Propietarios y constructores de lotes residenciales elegibles",
+   "Ciudades y pueblos responsables de la planificación y los servicios públicos",
+   "Residentes de vecindarios donde se podrían construir viviendas adicionales"
+  ]
+ }
+}

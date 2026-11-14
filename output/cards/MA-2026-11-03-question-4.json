@@ -1,0 +1,311 @@
+{
+  "measure_id": "MA-2026-11-03-question-4",
+  "card": {
+    "measure_id": "MA-2026-11-03-question-4",
+    "number": "Question 4",
+    "official_title": "Election Day Registration",
+    "plain_title": "Allow Election Day voter registration and address updates",
+    "title_disputed": false,
+    "put_on_ballot_by": "Citizen initiative petition",
+    "yes_means": "Eligible citizens could register to vote or update their registration address on Election Day, starting January 1, 2028.",
+    "no_means": "Existing voter registration laws would remain unchanged, without the proposed Election Day registration option.",
+    "what_changes": [
+      {
+        "topic": "Registration timing",
+        "today": "Existing law does not provide the proposed Election Day registration option.",
+        "if_passes": "Eligible citizens could register and vote on Election Day and remain registered for future elections.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=12&pages=12-13"
+      },
+      {
+        "topic": "Address updates",
+        "today": "Existing law does not provide the proposed Election Day registration address update option.",
+        "if_passes": "Registered voters could update their address on Election Day, but could not change their political party that day.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=12&pages=12-13"
+      },
+      {
+        "topic": "Registration safeguards",
+        "today": "Current law does not provide the proposed Election Day registration option.",
+        "if_passes": "Election Day registrants would need proof of residency and a signed eligibility oath; ballots without that proof would be provisional.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=12&pages=12-13"
+      }
+    ],
+    "who_is_affected": [
+      "Eligible citizens who are not registered before Election Day",
+      "Registered voters who have moved",
+      "People who move frequently, including young people and renters",
+      "Local election officials and polling-place workers"
+    ],
+    "fiscal_impact": {
+      "text": "The Executive Office of Administration and Finance estimates no discernible material effect on state or municipal government finances.",
+      "label": "prediction",
+      "whose": "Massachusetts Executive Office of Administration and Finance",
+      "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=12&pages=12-13",
+      "quote": "The proposed law has no discernible material fiscal consequences for state and municipal government finances."
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "Supporters argue it would let more eligible citizens participate, especially people who move frequently.",
+      "headline_topic": "Registration timing",
+      "more_reasons": [
+        "Supporters argue proof of residence and a signed oath warning that false information is a felony would protect security while expanding access.",
+        "Supporters argue provisional ballots would protect the vote when a registrant lacks required documentation."
+      ],
+      "values": [
+        "Voter access",
+        "Representative elections",
+        "Election security"
+      ],
+      "best_evidence": [
+        {
+          "text": "The proposal would allow eligible citizens to register or update their registration address on Election Day.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=12&pages=12-13",
+          "quote": null
+        },
+        {
+          "text": "Supporters expect the change to help people who move frequently, especially young people and renters.",
+          "label": "prediction",
+          "whose": "YES on Election Day Registration, official argument",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=12&pages=12-13",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Eligible citizens who otherwise could not participate because they need to register or update their address.",
+      "answer_to_other_side": "Supporters argue that proof of residency, an oath warning that false information is a felony, and provisional ballots provide security without excluding eligible citizens."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "headline": "Opponents argue it would leave election workers less time to verify eligibility before ballots are cast.",
+      "headline_topic": "Registration safeguards",
+      "more_reasons": [
+        "Opponents argue errors missed before ballots are mixed together may be impossible to correct by removing those ballots.",
+        "Opponents argue those risks could affect close contests and weaken public confidence in elections."
+      ],
+      "values": [
+        "Election security",
+        "Careful verification",
+        "Public confidence"
+      ],
+      "best_evidence": [
+        {
+          "text": "Opponents expect Election Day registration to force eligibility decisions under time pressure amid other polling-place duties.",
+          "label": "prediction",
+          "whose": "Opponents, official argument against Question 4",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=12&pages=12-13",
+          "quote": null
+        },
+        {
+          "text": "Opponents warn that errors or false statements might be discovered only after affected ballots can no longer be identified or removed.",
+          "label": "prediction",
+          "whose": "Opponents, official argument against Question 4",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=12&pages=12-13",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Voters who want eligibility checked before voting and election workers responsible for those checks.",
+      "answer_to_other_side": "Opponents argue that greater access does not replace the need for enough time to verify eligibility before a ballot is cast."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "The disagreement is whether the proposed safeguards would allow broader participation without weakening eligibility checks. The sides also weigh easier access against preserving time for advance review."
+    },
+    "evidence": [
+      {
+        "text": "Election Day registration would require proof of residency and an oath affirming citizenship, age, legal eligibility and that the person would not vote elsewhere in the same election.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=12&pages=12-13",
+        "quote": null
+      },
+      {
+        "text": "A provisional ballot cast without proof of residency would count only if the voter supplied the required information within the law's deadline.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=12&pages=12-13",
+        "quote": null
+      },
+      {
+        "text": "The required oath would warn that false information is a felony punishable by up to five years in prison, a fine of up to $10,000, or both.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=12&pages=12-13",
+        "quote": null
+      },
+      {
+        "text": "The official summary describes the safeguards but does not estimate their effect on turnout, fraud or administrative errors.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=12&pages=12-13",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 3
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 1,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "It presents the central Yes case—more eligible people, especially frequent movers, could participate—and includes supporters’ security-safeguard argument. It could more fully reflect the official argument’s claim that thousands could gain the chance to participate, but the case is not distorted."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "It captures the No case’s main merits concerns: less time for advance checks, possible errors discovered after ballots are commingled, and risks to close contests and confidence. The headline could be more specific about the checks opponents say lose advance review, including identity, residence, and duplicate registration."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The headlines use parallel attribution (“Supporters argue” / “Opponents argue”) and state the sides’ respective access and verification concerns. The Yes headline is framed as a benefit to voters, while the No headline is framed as a cost to election workers; that reflects the arguments rather than an evident tone imbalance."
+        ],
+        "fidelity_problems": [
+          "In the What-changes table, the current-law entry “There is no registration process under the proposed Election Day rules” is confusing and inaccurate: it describes proposed rules in the “today” column and could imply there is no voter-registration process at all. The source says a No vote makes no change to voter-registration laws and that the proposal would add an Election Day option."
+        ],
+        "label_problems": [],
+        "loaded_or_overconfident": [
+          "“Oath backed by felony penalties” echoes the Yes argument’s persuasive phrasing. Consider the more neutral “an oath warning that false information is a felony,” which matches the summary."
+        ],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "Automatic checks:\n- Keep the steelmen on the merits of the change: remove motive/funder/party points (['backed by']) and use the substantive concern underneath.\nCritic:\n1. Replace the current-law text in the “Registration safeguards” row with a clear statement that current law does not provide the proposed Election Day registration option; do not say there is no registration process. Keep the “if passes” entry tied to the proof-of-residency and oath requirements in the source. 2. For neutral wording, change “oath backed by felony penalties” to “oath warning that false information is a felony.”"
+      },
+      "checks": {
+        "words": {
+          "yes": 119,
+          "no": 126,
+          "ratio": 1.06
+        },
+        "headline_words": {
+          "yes": 14,
+          "no": 16
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 10.4,
+        "loaded_words": [],
+        "motive_or_funder": [
+          "backed by"
+        ],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 1,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The card captures supporters’ central merits case: Election Day registration could let eligible people participate despite a missed deadline or a recent move, with proof-of-residence, oath, and provisional-ballot safeguards. It could be stronger by including the source argument that the change would give thousands a chance to participate in national elections, but it is not a strawman."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The card fairly presents opponents’ core concern that polling-place workers would have to make identity and eligibility checks under Election Day time pressure, and that errors may be found only after ballots are mixed and cannot be withdrawn. The source also specifically names residence and duplicate-registration review, which could make the case more complete."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 127,
+          "no": 126,
+          "ratio": 1.01
+        },
+        "headline_words": {
+          "yes": 14,
+          "no": 16
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 10.4,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=12&pages=12-13",
+    "https://www.sec.state.ma.us/divisions/elections/voter-resources/registering-to-vote.htm"
+  ],
+  "meta": {
+    "seconds": 79.5,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 4,
+        "input_tokens": 19615,
+        "cache_read_tokens": 15629,
+        "output_tokens": 3336,
+        "reasoning_tokens": 233,
+        "tool_calls": 2
+      },
+      "critic:gpt-6-luna": {
+        "requests": 2,
+        "input_tokens": 8810,
+        "cache_read_tokens": 0,
+        "output_tokens": 3134,
+        "reasoning_tokens": 2447,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {
+      "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=12&pages=12-13": [
+        "endorse"
+      ]
+    }
+  },
+  "format": "v3.1",
+  "scope": "statewide"
+}

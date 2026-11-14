@@ -1,0 +1,69 @@
+{
+ "lang": "es",
+ "card_id": "CA-2026-11-03-prop-45",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Cambiar las reglas de evaluación ambiental y demandas para proyectos elegibles",
+  "yes_means": "Quienes soliciten realizar proyectos elegibles de vivienda, transporte, agua, salud y otros podrían elegir nuevos procedimientos de evaluación ambiental y permisos, con plazos más estrictos y límites a la evaluación y a las impugnaciones judiciales.",
+  "no_means": "Se mantendrían los procedimientos actuales de evaluación ambiental, permisos e impugnaciones judiciales.",
+  "what_changes": [
+   {
+    "topic": "Plazos de evaluación",
+    "today": "Los procedimientos actuales tienen plazos menos estrictos para las evaluaciones ambientales y de permisos.",
+    "if_passes": "Se aplicarían plazos más estrictos, incluido un límite de 365 días hábiles para los informes de impacto ambiental, que quienes soliciten los proyectos podrían tratar de hacer cumplir."
+   },
+   {
+    "topic": "Alternativas para los proyectos",
+    "today": "Para las evaluaciones ambientales detalladas, las agencias deben elaborar y considerar varias alternativas que podrían reducir el daño ambiental.",
+    "if_passes": "Quienes soliciten los proyectos podrían elaborar una sola alternativa para que la agencia la considere."
+   },
+   {
+    "topic": "Comentarios públicos",
+    "today": "La ley estatal establece períodos mínimos de revisión pública, pero no períodos máximos.",
+    "if_passes": "Las agencias tendrían límites sobre cuánto tiempo pueden aceptar comentarios del público y de otras agencias."
+   },
+   {
+    "topic": "Consultas con tribus",
+    "today": "Las agencias deben consultar con una variedad más amplia de tribus nativas de California que solo las tribus reconocidas por el gobierno federal.",
+    "if_passes": "Las agencias y quienes soliciten los proyectos solo tendrían que consultar con tribus nativas de California reconocidas por el gobierno federal."
+   },
+   {
+    "topic": "Impugnaciones judiciales",
+    "today": "Los tribunales pueden detener un proyecto completo mientras una agencia corrige una evaluación ambiental defectuosa.",
+    "if_passes": "Los tribunales tendrían plazos para tomar decisiones y una revisión más limitada, y podrían detener solo la parte de un proyecto cuya evaluación sea defectuosa."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Precios asequibles",
+    "Servicios públicos oportunos",
+    "Uso eficiente de los impuestos"
+   ],
+   "headline": "Quienes apoyan la medida sostienen que plazos de aprobación más estrictos permitirían construir más rápido y a menor costo la vivienda y la infraestructura necesarias, lo que ayudaría a reducir el costo de vida.",
+   "more_reasons": [
+    "Quienes apoyan la medida sostienen que construir obras públicas más rápido reduciría los sobrecostos que pagan los contribuyentes.",
+    "Quienes apoyan la medida sostienen que las impugnaciones judiciales más previsibles reducirían las demoras y, al mismo tiempo, preservarían la evaluación ambiental y las decisiones locales de aprobación."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Salud pública",
+    "Protección ambiental",
+    "Participación de la comunidad"
+   ],
+   "headline": "Quienes se oponen sostienen que una evaluación más limitada de las alternativas para los proyectos permitiría que proyectos dañinos sigan adelante con menos escrutinio, poniendo en riesgo el aire, el agua y la salud pública.",
+   "more_reasons": [
+    "Quienes se oponen sostienen que los períodos más cortos para presentar comentarios públicos reducirían la capacidad de las comunidades para identificar daños ambientales.",
+    "Quienes se oponen sostienen que los contribuyentes y los clientes de servicios públicos podrían terminar pagando los costos de limpieza por los daños ambientales."
+   ]
+  },
+  "crux": "Las partes no están de acuerdo sobre si los plazos más estrictos y una evaluación más limitada generarían ahorros importantes para los hogares o causarían costos ambientales y públicos. También valoran de manera diferente la construcción más rápida frente a una revisión pública más completa y recursos judiciales más sólidos.",
+  "who_is_affected": [
+   "Quienes soliciten realizar proyectos públicos y privados elegibles",
+   "Los residentes cerca de los proyectos propuestos y las personas que comenten sobre ellos o los impugnen",
+   "Las tribus nativas de California, incluidas las que no tienen reconocimiento federal",
+   "Las agencias estatales y locales y los tribunales",
+   "Los contribuyentes y las personas que usarían la nueva vivienda y la infraestructura"
+  ]
+ }
+}

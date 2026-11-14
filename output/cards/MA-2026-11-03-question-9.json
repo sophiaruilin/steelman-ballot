@@ -1,0 +1,464 @@
+{
+  "measure_id": "MA-2026-11-03-question-9",
+  "card": {
+    "measure_id": "MA-2026-11-03-question-9",
+    "number": "Question 9",
+    "official_title": "Firearms Regulation",
+    "plain_title": "Keep the 2024 firearms regulation law",
+    "title_disputed": false,
+    "put_on_ballot_by": "Referendum on an existing law approved by the Legislature; the guide does not identify who initiated the referendum.",
+    "yes_means": "A yes vote keeps the existing law regulating firearms, including ghost guns, machine guns, and assault-style weapons.",
+    "no_means": "A no vote repeals this law rather than keeping the current rules.",
+    "what_changes": [
+      {
+        "topic": "Court protection orders",
+        "today": "School administrators and licensed healthcare providers may request court orders requiring people who pose a present danger to surrender firearms and licenses.",
+        "if_passes": "This authority stays in place; a yes vote keeps the existing law rather than adding new rules.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=22&pages=22-23"
+      },
+      {
+        "topic": "Untraceable firearms",
+        "today": "The law penalizes possessing, making, and transferring untraceable firearms and requires serial numbers, with exceptions for antiques and relics.",
+        "if_passes": "These rules remain, including coverage of privately made guns and unfinished frames and receivers readily made into finished products.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=22&pages=22-23"
+      },
+      {
+        "topic": "Licensing and administration",
+        "today": "The law sets a minimum age of 21 to own semiautomatic rifles or shotguns and requires State Police training and a test for new applicants for licenses to carry or Firearm ID cards.",
+        "if_passes": "These requirements remain, along with statewide training for local authorities who inspect firearm dealers.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=22&pages=22-23"
+      },
+      {
+        "topic": "Weapon restrictions",
+        "today": "The machine-gun definition includes devices such as bump stocks and auto sears; the law also clarifies assault-style weapon restrictions.",
+        "if_passes": "These provisions remain, including rules on when owners may keep assault-style weapons and large-capacity feeding devices they already own.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=22&pages=22-23"
+      },
+      {
+        "topic": "Firearm data reporting",
+        "today": "The law expands firearm data reporting and requires a public dashboard of grouped data that does not identify individuals.",
+        "if_passes": "The reporting and dashboard requirements remain, along with a commission to study the data.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=22&pages=22-23"
+      }
+    ],
+    "who_is_affected": [
+      "Firearm owners and new applicants for licenses to carry or Firearm ID cards",
+      "Firearm dealers and private gun makers",
+      "Local licensing authorities and State Police",
+      "School administrators and licensed healthcare providers",
+      "People at risk of firearm harm and their communities"
+    ],
+    "fiscal_impact": {
+      "text": "The Executive Office of Administration and Finance says repeal would require state resources to suspend or redirect investments in employee training, licensing processes, and computer systems; it gives no dollar estimate.",
+      "label": "prediction",
+      "whose": "Massachusetts Executive Office of Administration and Finance",
+      "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=22&pages=22-23",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "Supporters argue the law is already helping keep communities safe, including through tools to prevent firearm suicides and mass shootings.",
+      "headline_topic": "Court protection orders",
+      "more_reasons": [
+        "Supporters argue restrictions on untraceable guns and devices that turn semiautomatic weapons into machine guns would protect communities.",
+        "Supporters argue the firearm data dashboard would help the state better understand gun trafficking."
+      ],
+      "values": [
+        "Public safety",
+        "Prevention",
+        "Better information"
+      ],
+      "best_evidence": [
+        {
+          "text": "The official Yes argument says parts of the law being implemented are already helping keep communities safe; this reports supporters’ position, not an independently established safety effect.",
+          "label": "fact",
+          "whose": "Vote Yes for a Safe Massachusetts, official argument",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=22&pages=22-23",
+          "quote": null
+        },
+        {
+          "text": "Supporters predict that keeping the law would further reduce gun violence.",
+          "label": "prediction",
+          "whose": "Vote Yes for a Safe Massachusetts, official argument",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=22&pages=22-23",
+          "quote": null
+        },
+        {
+          "text": "The official Yes argument reports that Massachusetts’ gun-death rate is 70% below the national average; this is a supporter-reported statistic, not proof of this law’s effect.",
+          "label": "fact",
+          "whose": "Vote Yes for a Safe Massachusetts, official argument",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=22&pages=22-23",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "In supporters’ view, communities across Massachusetts, especially people at risk of firearm suicide or mass shootings.",
+      "answer_to_other_side": "Supporters argue these are vital updates to existing protections, already being implemented and helping communities; repeal would sacrifice safety gains rather than simply remove administrative duties."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "headline": "Opponents argue the law unnecessarily replaces already-strict rules without proper planning, adding an unfunded tracking system and burdens on local police.",
+      "headline_topic": "Licensing and administration",
+      "more_reasons": [
+        "Opponents argue vague rules would pull local officers away from violent-crime investigations and into paperwork.",
+        "Opponents argue unclear rules would burden historical re-enactors and antique hobbyists and limit civil rights."
+      ],
+      "values": [
+        "Effective policing",
+        "Responsible spending",
+        "Civil rights"
+      ],
+      "best_evidence": [
+        {
+          "text": "The official No argument describes the law as an unnecessary reinvention of already-strict state firearm laws, passed without proper planning.",
+          "label": "value",
+          "whose": "The Civil Rights Coalition, official argument",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=22&pages=22-23",
+          "quote": null
+        },
+        {
+          "text": "The official No argument says the law requires a real-time electronic tracking system that the state has not funded and does not know how to build.",
+          "label": "fact",
+          "whose": "The Civil Rights Coalition, official argument",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=22&pages=22-23",
+          "quote": null
+        },
+        {
+          "text": "Opponents argue enforcing vague rules would pull local officers away from violent-crime investigations and into paperwork.",
+          "label": "prediction",
+          "whose": "The Civil Rights Coalition, official argument",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=22&pages=22-23",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "In opponents’ view, repeal would help local police departments, taxpayers, firearm owners, historical re-enactors, and antique hobbyists.",
+      "answer_to_other_side": "Opponents argue the state already had strict firearm laws and that safety is better served by focusing police resources on violent crime than by adding poorly planned administrative requirements."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "The sides disagree about whether the law's added protections improve safety enough to justify its costs and administrative demands. They also weigh firearm restrictions and civil rights differently."
+    },
+    "evidence": [
+      {
+        "text": "This is a vote on an existing law: yes keeps it, while no repeals it.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=22&pages=22-23",
+        "quote": null
+      },
+      {
+        "text": "The serial-number requirement has exceptions for antiques and relics; the official summary does not assess opponents’ broader concerns about hobbyists.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=22&pages=22-23",
+        "quote": null
+      },
+      {
+        "text": "Local licensing authorities may transfer responsibility for firearm-dealer inspections to State Police.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=22&pages=22-23",
+        "quote": null
+      },
+      {
+        "text": "The official summary describes expanded reporting and an anonymous public dashboard; it does not establish opponents’ assertions about an unfunded real-time tracking system.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=22&pages=22-23",
+        "quote": null
+      },
+      {
+        "text": "The guide does not establish that this law caused the lower gun-death rate cited by supporters; it says the state does not certify the accuracy of either side’s arguments.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=22&pages=22-23",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 5
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 3,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 3,
+          "reason": "The case is accurately attributed, but it leaves out the affirmative argument’s most forceful additional claim: supporters say the law is already being implemented and helping keep communities safe, and cite Massachusetts’ gun-death rate being 70% below the national average. That claim should be presented as supporters’ argument, not as independently established causation."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The card captures opponents’ central merits case: administrative requirements could divert police from violent-crime investigations, create costs, and burden owners and hobbyists. It could be more specific about their claim that the real-time tracking system is unfunded and that the rules are vague, but it is not a strawman."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [
+          "“Extreme” in “extreme-risk court orders” is the source’s formal term, not an advocacy claim, but consider using “risk-protection orders” for plainer, less loaded wording."
+        ],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. Strengthen the Yes case and headline using the official Yes argument’s claim that the law is already being implemented and helping keep communities safe; you may also attribute its claim that Massachusetts’ gun-death rate is 70% below the national average. Make clear these are supporters’ claims, not established proof that this law caused the rate. 2. In the No case, consider stating the opponents’ specific claims that the real-time electronic tracking system is unfunded and that the rules are vague, while keeping them clearly attributed. 3. For plainer, less loaded wording, consider replacing “extreme-risk court orders” with “risk-protection orders.”"
+      },
+      "checks": {
+        "words": {
+          "yes": 134,
+          "no": 128,
+          "ratio": 1.05
+        },
+        "headline_words": {
+          "yes": 19,
+          "no": 20
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 5,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 9.4,
+        "loaded_words": [
+          "extreme"
+        ],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 1,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The card presents the main Yes case in the source: the law adds safety tools, and supporters say implementation is already helping communities. It also captures the arguments about ghost guns and the data dashboard. A stronger version would preserve more of the Yes argument’s broad emphasis on keeping the law’s full set of safety measures in place."
+        },
+        "turing_no": {
+          "score": 3,
+          "reason": "The card fairly conveys concerns about police workload, administrative complexity, spending, and civil rights. But it underplays the No argument’s central claim that this is an unnecessary reinvention of already-strict state firearms law, passed without planning, and its specific concern about an expensive, unfunded tracking system. The headline emphasizes police burden rather than that broader case."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [],
+        "fidelity_problems": [
+          "The licensing row says State Police provide training and a test for all “new license applicants.” The source limits this to new applicants for licenses to carry or Firearm ID cards. Narrow the wording.",
+          "The Yes evidence combines the official argument’s claim that the law is already helping keep communities safe with the reported 70%-below-average gun-death rate. The source reports both as part of the Yes argument, but does not establish that the law caused the lower rate. Make that distinction explicit; the card’s separate evidence point does so correctly."
+        ],
+        "label_problems": [
+          "The Yes evidence item about the law “already helping keep communities safe” is labeled fact, although it is an attributed claim about the law’s effects. Label that claim as a prediction with the Yes argument as whose, or separate it from the fact that the argument makes the claim.",
+          "In the same Yes evidence item, the reported 70% comparison can remain a fact only if clearly framed as a statistic the official Yes argument reports, not evidence that the law caused the difference."
+        ],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. Narrow the licensing row to new applicants for licenses to carry or Firearm ID cards. 2. Rework the Yes evidence item to distinguish the reported gun-death statistic from the Yes argument’s claim that the law is already helping keep communities safe; label the latter as an attributed prediction or claim. 3. Strengthen the No headline or case summary to include its argument that the law is an unnecessary reinvention of already-strict state law, passed without proper planning, and its concern about the unfunded tracking system."
+      },
+      "checks": {
+        "words": {
+          "yes": 144,
+          "no": 150,
+          "ratio": 1.04
+        },
+        "headline_words": {
+          "yes": 20,
+          "no": 22
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 5,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 9.5,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 2,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The case reflects the official Yes argument’s main merits: preserving new prevention tools, restrictions on ghost guns and conversion devices, and data reporting, with the claimed safety benefit attributed to supporters. It also notes the reported gun-death statistic without treating it as proof of this law’s effect."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The case fairly captures the official No argument’s central trade-offs: alleged poor planning and unfunded administrative systems, possible diversion of local police from violent-crime work, and burdens on owners and hobbyists. It attributes those claims to opponents and separately notes that the official summary does not substantiate the real-time tracking-system claim."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The headlines use parallel attribution (\"Supporters argue\" / \"Opponents argue\") and comparable length. The Yes headline emphasizes a claimed safety benefit; the No headline emphasizes claimed administrative costs. Neither is clearly warmer or more forceful overall."
+        ],
+        "fidelity_problems": [],
+        "label_problems": [
+          "In Yes best evidence, the sentence that parts of the law are \"already helping keep communities safe\" combines a claim about current effects with a forecast that keeping the law would further reduce violence, but labels the whole sentence prediction. Split the current-effect assertion from the future forecast, or otherwise label the two claims separately while retaining their attribution to supporters."
+        ],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. In the second Yes best-evidence item, separate supporters’ claim about current safety effects from their forecast about future reductions in gun violence, and label each claim according to its type. Keep both attributed to supporters; do not present the claimed current effect as independently established."
+      },
+      "checks": {
+        "words": {
+          "yes": 170,
+          "no": 165,
+          "ratio": 1.03
+        },
+        "headline_words": {
+          "yes": 20,
+          "no": 21
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 5,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 3,
+          "no": 3
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 9.5,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 3,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "Fairly captures supporters’ core merits case: the law adds safety tools, supporters say some provisions are already helping, and repeal could sacrifice safety gains. It also accurately treats the reported 70% statistic as supporters’ claim rather than proof of this law’s effect. The case is somewhat compressed, but not a strawman."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "Captures opponents’ main merits arguments about planning, costs and administrative burdens, diversion of local police time, and civil-rights concerns. It also makes clear that the tracking-system assertion comes from opponents and is not established by the official summary."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "Both headlines use parallel attribution (supporters/opponents argue), and neither uses an unqualified recommendation or markedly more forceful verbs. The No headline contains more concrete criticisms, but these reflect the opponent argument and are attributed."
+        ],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 163,
+          "no": 165,
+          "ratio": 1.01
+        },
+        "headline_words": {
+          "yes": 20,
+          "no": 21
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 5,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 3,
+          "no": 3
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 9.5,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=22&pages=22-23"
+  ],
+  "meta": {
+    "seconds": 185.3,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 5,
+        "input_tokens": 36766,
+        "cache_read_tokens": 27759,
+        "output_tokens": 8203,
+        "reasoning_tokens": 294,
+        "tool_calls": 1
+      },
+      "critic:gpt-6-luna": {
+        "requests": 4,
+        "input_tokens": 21483,
+        "cache_read_tokens": 0,
+        "output_tokens": 8875,
+        "reasoning_tokens": 7267,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {
+      "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=22&pages=22-23": [
+        "endorse"
+      ]
+    }
+  },
+  "format": "v3.1",
+  "scope": "statewide"
+}

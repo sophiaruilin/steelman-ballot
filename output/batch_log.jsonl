@@ -1,0 +1,33 @@
+{"id": "CA-2026-11-03-prop-3", "group": "CA-rerun", "tokens": 20775, "spent": 20775, "seconds": 61.8, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 0, "ts": "2026-11-14T17:41:36"}
+{"id": "CA-2026-11-03-prop-5", "group": "CA-rerun", "tokens": 20897, "spent": 41672, "seconds": 49.9, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 0, "ts": "2026-11-14T17:42:26"}
+{"id": "CA-2026-11-03-prop-41", "group": "CA-rerun", "tokens": 40378, "spent": 82050, "seconds": 100.3, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 1, "ts": "2026-11-14T17:44:06"}
+{"id": "MA-2026-11-03-question-1", "group": "MA", "tokens": 64702, "spent": 146752, "seconds": 167.9, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 3, "ts": "2026-11-14T17:46:54"}
+{"id": "MA-2026-11-03-question-2", "group": "MA", "tokens": 44040, "spent": 190792, "seconds": 116.0, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 2, "ts": "2026-11-14T17:48:50"}
+{"id": "MA-2026-11-03-question-3", "group": "MA", "tokens": 45342, "spent": 236134, "seconds": 112.0, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 2, "ts": "2026-11-14T17:50:42"}
+{"id": "MA-2026-11-03-question-4", "group": "MA", "tokens": 34895, "spent": 271029, "seconds": 79.5, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 1, "ts": "2026-11-14T17:52:02"}
+{"id": "MA-2026-11-03-question-5", "group": "MA", "tokens": 68409, "spent": 339438, "seconds": 63.0, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 0, "ts": "2026-11-14T17:53:05"}
+{"id": "MA-2026-11-03-question-6", "group": "MA", "tokens": 52234, "spent": 391672, "seconds": 143.6, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 2, "ts": "2026-11-14T17:55:28"}
+{"id": "MA-2026-11-03-question-7", "group": "MA", "tokens": 15445, "spent": 407117, "seconds": 49.4, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 0, "ts": "2026-11-14T17:56:18"}
+{"id": "MA-2026-11-03-question-8", "group": "MA", "tokens": 72198, "spent": 479315, "seconds": 190.8, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 3, "ts": "2026-11-14T17:59:29"}
+{"id": "MA-2026-11-03-question-9", "group": "MA", "tokens": 75327, "spent": 554642, "seconds": 185.4, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 3, "ts": "2026-11-14T18:02:34"}
+{"id": "NY-2026-11-03-nyc-proposal-1", "error": "The next request would exceed the request_limit of 14. Consider raising the limit, or see the docs on usage limits for budget-aware patterns: https://pydantic.dev/docs/ai/core-concepts/agent/#usage-limits", "ts": "2026-11-14T18:04:43"}
+{"id": "NY-2026-11-03-nyc-proposal-2", "group": "NYC", "tokens": 80876, "spent": 635518, "seconds": 87.2, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 0, "ts": "2026-11-14T18:06:11"}
+{"id": "NY-2026-11-03-nyc-proposal-3", "group": "NYC", "tokens": 74155, "spent": 709673, "seconds": 82.1, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 0, "ts": "2026-11-14T18:07:33"}
+{"id": "NY-2026-11-03-nyc-proposal-4", "group": "NYC", "tokens": 147897, "spent": 857570, "seconds": 208.6, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 1, "ts": "2026-11-14T18:11:01"}
+{"id": "NY-2026-11-03-nyc-proposal-5", "error": "The next request would exceed the request_limit of 14. Consider raising the limit, or see the docs on usage limits for budget-aware patterns: https://pydantic.dev/docs/ai/core-concepts/agent/#usage-limits", "ts": "2026-11-14T18:12:24"}
+{"id": "CA-2026-11-03-prop-2", "group": "CA", "tokens": 21465, "spent": 879035, "seconds": 50.6, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 0, "ts": "2026-11-14T18:13:15"}
+{"id": "CA-2026-11-03-prop-4", "group": "CA", "tokens": 60324, "spent": 939359, "seconds": 126.4, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 2, "ts": "2026-11-14T18:15:21"}
+{"id": "CA-2026-11-03-prop-37", "group": "CA", "tokens": 53060, "spent": 992419, "seconds": 129.7, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 2, "ts": "2026-11-14T18:17:31"}
+{"id": "CA-2026-11-03-prop-38", "group": "CA", "tokens": 42525, "spent": 1034944, "seconds": 97.3, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 1, "ts": "2026-11-14T18:19:08"}
+{"id": "CA-2026-11-03-prop-40", "group": "CA", "tokens": 21144, "spent": 1056088, "seconds": 54.8, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 0, "ts": "2026-11-14T18:20:03"}
+{"id": "CA-2026-11-03-prop-42", "group": "CA", "tokens": 19101, "spent": 1075189, "seconds": 56.8, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 0, "ts": "2026-11-14T18:21:00"}
+{"id": "CA-2026-11-03-prop-43", "group": "CA", "tokens": 19777, "spent": 1094966, "seconds": 52.7, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 0, "ts": "2026-11-14T18:21:52"}
+{"id": "CA-2026-11-03-prop-44", "group": "CA", "tokens": 19980, "spent": 1114946, "seconds": 47.3, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 0, "ts": "2026-11-14T18:22:40"}
+{"id": "CA-2026-11-03-governor", "group": "CA-races", "tokens": 3685, "spent": 1118631, "seconds": 6.0, "candidates": 2, "ts": "2026-11-14T18:22:46"}
+{"id": "CA-2026-11-03-sos", "group": "CA-races", "tokens": 5166, "spent": 1123797, "seconds": 16.1, "candidates": 2, "ts": "2026-11-14T18:23:02"}
+{"id": "CA-2026-11-03-controller", "group": "CA-races", "tokens": 4708, "spent": 1128505, "seconds": 16.0, "candidates": 2, "ts": "2026-11-14T18:23:18"}
+{"id": "CA-2026-11-03-treasurer", "group": "CA-races", "tokens": 4931, "spent": 1133436, "seconds": 13.1, "candidates": 2, "ts": "2026-11-14T18:23:31"}
+{"id": "CA-2026-11-03-insurance-commissioner", "group": "CA-races", "tokens": 5142, "spent": 1138578, "seconds": 14.4, "candidates": 2, "ts": "2026-11-14T18:23:45"}
+{"id": "CA-2026-11-03-superintendent", "group": "CA-races", "tokens": 5199, "spent": 1143777, "seconds": 21.2, "candidates": 2, "ts": "2026-11-14T18:24:06"}
+{"id": "NY-2026-11-03-nyc-proposal-1", "group": "NYC", "tokens": 91022, "spent": 91022, "seconds": 124.8, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 1, "ts": "2026-11-14T18:26:36"}
+{"id": "NY-2026-11-03-nyc-proposal-5", "group": "NYC", "tokens": 173096, "spent": 264118, "seconds": 150.7, "verified": true, "turing": {"yes": 4, "no": 4}, "rewrites": 1, "ts": "2026-11-14T18:29:07"}

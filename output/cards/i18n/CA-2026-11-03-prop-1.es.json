@@ -1,0 +1,67 @@
+{
+ "lang": "es",
+ "card_id": "CA-2026-11-03-prop-1",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Pedir prestados $11.25 mil millones para viviendas asequibles y préstamos hipotecarios para veteranos",
+  "yes_means": "El estado podría pedir prestados $11.25 mil millones para financiar programas de viviendas asequibles y préstamos hipotecarios para veteranos, y devolver el dinero con intereses a lo largo del tiempo.",
+  "no_means": "Los programas de vivienda existentes continuarían sin los $11.25 mil millones adicionales en préstamos que autorizaría esta medida.",
+  "what_changes": [
+   {
+    "topic": "Préstamos estatales para vivienda",
+    "today": "El estado usa bonos para financiar algunos programas de vivienda y devuelve el dinero prestado con intereses.",
+    "if_passes": "Se devolverían $10 mil millones adicionales en bonos para vivienda con fondos del Fondo General, que paga la mayoría de los servicios estatales."
+   },
+   {
+    "topic": "Viviendas de alquiler asequibles",
+    "today": "Las subvenciones y los préstamos de bajo costo del estado ayudan a financiar viviendas que, por lo general, se reservan para los californianos de bajos ingresos.",
+    "if_passes": "La medida agrega $7.2 mil millones para adquirir, construir o renovar viviendas de alquiler. Por lo general, las unidades se reservarían durante 55 años para hogares de bajos ingresos."
+   },
+   {
+    "topic": "Ayuda para ser propietario de una vivienda",
+    "today": "El estado ha usado bonos para apoyar programas de acceso a la vivienda propia.",
+    "if_passes": "La medida agrega $1.1 mil millones para ayudar a personas de ingresos bajos y moderados a ser propietarias de una vivienda, incluida la ayuda para quienes compran por primera vez y para reparaciones de viviendas."
+   },
+   {
+    "topic": "Otros programas de vivienda",
+    "today": "Los fondos públicos ayudan a pagar la construcción de algunas viviendas; la mayoría de las viviendas se construyen exclusivamente con dinero privado.",
+    "if_passes": "La medida agrega $1 mil millones para viviendas para trabajadores agrícolas, estudiantes y comunidades tribales, $500 millones para infraestructura y $200 millones para proyectos piloto locales."
+   },
+   {
+    "topic": "Préstamos hipotecarios para veteranos",
+    "today": "Los veteranos que cumplen los requisitos reciben préstamos hipotecarios financiados con bonos y devuelven el dinero de los bonos mediante los pagos de sus préstamos.",
+    "if_passes": "Se usarían $1.25 mil millones adicionales en bonos para financiar préstamos hipotecarios para veteranos, que se devolverían mediante los pagos de los veteranos participantes."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Estabilidad de vivienda",
+    "Acceso a la vivienda propia",
+    "Apoyo a los veteranos"
+   ],
+   "headline": "Quienes apoyan la medida sostienen que los fondos adicionales permitirían construir y conservar viviendas que puedan pagar los veteranos, las personas mayores, las personas con discapacidades y las familias trabajadoras.",
+   "more_reasons": [
+    "Quienes apoyan la medida sostienen que la ayuda para compradores de vivienda ampliaría el acceso a la vivienda propia, incluso para los veteranos.",
+    "Quienes apoyan la medida sostienen que conservar las viviendas asequibles ayudaría a las personas en riesgo de quedarse sin hogar a mantener su vivienda."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Flexibilidad presupuestaria",
+    "Limitar los costos de los préstamos"
+   ],
+   "headline": "No se presentó ningún argumento oficial en contra; un argumento en contra es que los préstamos adicionales comprometerían fondos estatales para pagar la deuda durante décadas.",
+   "more_reasons": [
+    "Otra desventaja es que pedir prestado cuesta más que pagar por adelantado, porque el estado debe pagar intereses."
+   ]
+  },
+  "crux": "La principal disyuntiva es brindar más ayuda para vivienda ahora o asumir deuda estatal e intereses a largo plazo. No se presentó ningún argumento oficial en contra; el argumento en contra aquí refleja las disyuntivas presupuestarias del análisis no partidista.",
+  "who_is_affected": [
+   "Inquilinos de bajos ingresos, incluidas las personas que necesitan viviendas con servicios de apoyo en el lugar",
+   "Compradores de vivienda de ingresos bajos y moderados, y propietarios de vivienda de bajos ingresos",
+   "Veteranos que cumplen los requisitos para recibir préstamos hipotecarios estatales",
+   "Trabajadores agrícolas, comunidades tribales y estudiantes universitarios",
+   "Contribuyentes estatales y usuarios de servicios financiados por el Fondo General"
+  ]
+ }
+}

@@ -1,0 +1,69 @@
+{
+ "lang": "es",
+ "card_id": "MA-2026-11-03-question-9",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Mantener la ley de 2024 que regula las armas de fuego",
+  "yes_means": "Un voto por el sí mantiene la ley vigente que regula las armas de fuego, incluidas las armas fantasma, las ametralladoras y las armas de tipo asalto.",
+  "no_means": "Un voto por el no deroga esta ley en lugar de mantener las reglas actuales.",
+  "what_changes": [
+   {
+    "topic": "Órdenes de protección de los tribunales",
+    "today": "Los administradores escolares y los proveedores de atención médica con licencia pueden solicitar órdenes judiciales que exijan que las personas que representen un peligro actual entreguen sus armas de fuego y licencias.",
+    "if_passes": "Esta autoridad sigue vigente; un voto por el sí mantiene la ley actual en lugar de agregar nuevas reglas."
+   },
+   {
+    "topic": "Armas de fuego no rastreables",
+    "today": "La ley sanciona la posesión, fabricación y transferencia de armas de fuego no rastreables y exige números de serie, con excepciones para antigüedades y reliquias.",
+    "if_passes": "Estas reglas siguen vigentes, incluida su aplicación a las armas fabricadas por particulares y a los armazones y receptores sin terminar que pueden convertirse fácilmente en productos terminados."
+   },
+   {
+    "topic": "Licencias y administración",
+    "today": "La ley establece una edad mínima de 21 años para poseer rifles o escopetas semiautomáticos y exige que la Policía Estatal imparta capacitación y una prueba a quienes soliciten por primera vez licencias para portar armas o tarjetas de identificación de armas de fuego.",
+    "if_passes": "Estos requisitos siguen vigentes, junto con la capacitación estatal para las autoridades locales que inspeccionan a los vendedores de armas de fuego."
+   },
+   {
+    "topic": "Restricciones sobre armas",
+    "today": "La definición de ametralladora incluye dispositivos como las culatas de disparo rápido y los mecanismos de conversión a disparo automático; la ley también aclara las restricciones sobre las armas de tipo asalto.",
+    "if_passes": "Estas disposiciones siguen vigentes, incluidas las reglas sobre cuándo los propietarios pueden conservar las armas de tipo asalto y los dispositivos de alimentación de gran capacidad que ya poseen."
+   },
+   {
+    "topic": "Informes de datos sobre armas de fuego",
+    "today": "La ley amplía los informes de datos sobre armas de fuego y exige un tablero público con datos agrupados que no identifiquen a las personas.",
+    "if_passes": "Los requisitos de informes y del tablero siguen vigentes, junto con una comisión que estudiará los datos."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Seguridad pública",
+    "Prevención",
+    "Mejor información"
+   ],
+   "headline": "Quienes apoyan la ley sostienen que ya está ayudando a mantener seguras a las comunidades, incluso mediante herramientas para prevenir suicidios con armas de fuego y tiroteos masivos.",
+   "more_reasons": [
+    "Quienes apoyan la ley sostienen que las restricciones a las armas no rastreables y a los dispositivos que convierten armas semiautomáticas en ametralladoras protegerían a las comunidades.",
+    "Quienes apoyan la ley sostienen que el tablero de datos sobre armas de fuego ayudaría al estado a comprender mejor el tráfico de armas."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Labor policial eficaz",
+    "Gasto responsable",
+    "Derechos civiles"
+   ],
+   "headline": "Quienes se oponen a la ley sostienen que esta reemplaza innecesariamente reglas que ya son estrictas, sin una planificación adecuada, y agrega un sistema de seguimiento sin financiamiento y cargas para la policía local.",
+   "more_reasons": [
+    "Quienes se oponen a la ley sostienen que las reglas imprecisas apartarían a los agentes locales de las investigaciones de delitos violentos y los obligarían a ocuparse de trámites.",
+    "Quienes se oponen a la ley sostienen que las reglas poco claras impondrían cargas a quienes recrean hechos históricos y a los aficionados a las antigüedades, y limitarían los derechos civiles."
+   ]
+  },
+  "crux": "Las partes no están de acuerdo sobre si las protecciones adicionales de la ley mejoran lo suficiente la seguridad como para justificar sus costos y exigencias administrativas. También valoran de manera diferente las restricciones sobre armas de fuego y los derechos civiles.",
+  "who_is_affected": [
+   "Propietarios de armas de fuego y quienes solicitan por primera vez licencias para portar armas o tarjetas de identificación de armas de fuego",
+   "Vendedores de armas de fuego y fabricantes privados de armas",
+   "Autoridades locales encargadas de otorgar licencias y Policía Estatal",
+   "Administradores escolares y proveedores de atención médica con licencia",
+   "Personas en riesgo de sufrir daños por armas de fuego y sus comunidades"
+  ]
+ }
+}

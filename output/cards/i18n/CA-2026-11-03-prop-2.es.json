@@ -1,0 +1,68 @@
+{
+ "lang": "es",
+ "card_id": "CA-2026-11-03-prop-2",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Ampliar las reservas presupuestarias del estado y extender los pagos adicionales de deuda",
+  "yes_means": "El estado ahorraría para aumentar su fondo para emergencias, extendería y ampliaría los pagos adicionales de deuda y, en vez de contar ciertos depósitos en reservas para el límite de gastos, los contaría cuando se retiren.",
+  "no_means": "Los ahorros obligatorios para emergencias seguirían deteniéndose al llegar al 10% de los impuestos del Fondo General, los pagos adicionales de deuda serían opcionales después de 2030 y los depósitos en reservas seguirían contando para el límite de gastos.",
+  "what_changes": [
+   {
+    "topic": "Meta de ahorro para emergencias",
+    "today": "Los depósitos obligatorios se detienen cuando el fondo alcanza el 10% de los impuestos del Fondo General; el dinero que de otro modo se depositaría se destina a infraestructura.",
+    "if_passes": "Los depósitos obligatorios continuarían hasta que el fondo alcance el 20% de los impuestos del Fondo General."
+   },
+   {
+    "topic": "Años con ingresos altos",
+    "today": "El estado debe ahorrar una cantidad adicional cuando los impuestos sobre las ganancias de inversiones son más altos de lo normal.",
+    "if_passes": "El estado debe hacer depósitos aún mayores cuando los impuestos sobre las ganancias de inversiones son muy altos."
+   },
+   {
+    "topic": "Fecha límite para los pagos adicionales de deuda",
+    "today": "Los pagos adicionales de deuda obligatorios terminan en 2030; después, ese dinero puede destinarse a reservas en su lugar.",
+    "if_passes": "Los pagos adicionales de deuda seguirían siendo obligatorios hasta 2040."
+   },
+   {
+    "topic": "Usos de los pagos adicionales",
+    "today": "Los pagos adicionales de deuda solo pueden reducir las deudas a largo plazo por pensiones y atención médica para jubilados.",
+    "if_passes": "También podrían cubrir los pagos obligatorios a escuelas y colegios comunitarios, préstamos de otros fondos estatales y ciertos préstamos federales."
+   },
+   {
+    "topic": "Límite constitucional de gastos",
+    "today": "El dinero que se deposita en reservas cuenta para el límite constitucional de gastos del estado.",
+    "if_passes": "Los depósitos al fondo para emergencias y a otra cuenta donde se apartan ingresos contarían cuando se retiren, en vez de cuando se depositen; la exclusión de los depósitos en la segunda cuenta tendría un límite anual del 10% de los impuestos del Fondo General."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Servicios públicos estables",
+    "Planificación a largo plazo",
+    "Disciplina presupuestaria"
+   ],
+   "headline": "Quienes apoyan la medida sostienen que unas reservas mayores protegerían a las escuelas, la atención médica y la seguridad pública de los recortes cuando bajen los ingresos del estado.",
+   "more_reasons": [
+    "Quienes apoyan la medida sostienen que ahorrar más de los ingresos extraordinarios evitaría nuevos gastos continuos que el estado no puede mantener.",
+    "Quienes apoyan la medida sostienen que unas reservas mayores ayudarían a California a afrontar recortes federales en la atención médica y la asistencia alimentaria sin reducir los servicios."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Reembolsos a los contribuyentes",
+    "Moderación del gasto",
+    "Rendición de cuentas presupuestaria"
+   ],
+   "headline": "Quienes se oponen a la medida sostienen que excluir los depósitos en reservas del límite de gastos haría menos probables los reembolsos a los contribuyentes y debilitaría los límites al gasto estatal.",
+   "more_reasons": [
+    "Quienes se oponen a la medida sostienen que el mayor margen bajo el límite de gastos podría destinarse a gastos innecesarios en vez de mejorar los servicios.",
+    "Quienes se oponen a la medida sostienen que cambiar las reglas de ahorro no puede garantizar la estabilidad presupuestaria sin cumplir las reglas actuales y controlar el gasto."
+   ]
+  },
+  "crux": "¿Se deberían ahorrar más ingresos para los servicios futuros, aunque cambiar el cálculo del límite de gastos haga menos probables los reembolsos? Las partes también discrepan sobre si estas reglas mejorarían la estabilidad presupuestaria o debilitarían el control del gasto.",
+  "who_is_affected": [
+   "Personas que dependen de la educación, la atención médica, la seguridad pública y otros servicios financiados por el estado",
+   "Contribuyentes de California",
+   "Empleados estatales y jubilados que reciben beneficios de pensión y atención médica para jubilados",
+   "Escuelas y colegios comunitarios a los que se les deben pagos obligatorios"
+  ]
+ }
+}

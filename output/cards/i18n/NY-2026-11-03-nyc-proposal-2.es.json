@@ -1,0 +1,68 @@
+{
+ "lang": "es",
+ "card_id": "NY-2026-11-03-nyc-proposal-2",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Cambiar los trámites, las aprobaciones y las audiencias públicas de los contratos de la ciudad",
+  "yes_means": "Un voto por el sí permite que las juntas de la ciudad simplifiquen los cuestionarios para contratistas, amplía las aprobaciones de contratos delegadas, cambia los requisitos para las audiencias y exige que la Junta de Política de Adquisiciones (Procurement Policy Board) se reúna cada tres meses.",
+  "no_means": "Un voto por el no mantiene el cuestionario actual, los límites de aprobación, las reglas para las audiencias y la falta de un calendario obligatorio de reuniones de la Junta de Política de Adquisiciones (Procurement Policy Board).",
+  "what_changes": [
+   {
+    "topic": "Cuestionarios para contratistas",
+    "today": "Todos los posibles contratistas completan el mismo cuestionario detallado, que mantienen la Oficina de Servicios de Contratos de la Alcaldía (Mayor’s Office of Contract Services) y el Contralor (Comptroller), sin importar el valor del contrato.",
+    "if_passes": "La Junta de Política de Adquisiciones (Procurement Policy Board) podría reducir los requisitos para algunos contratistas; el Comité de Revisión de Franquicias y Concesiones (Franchise and Concession Review Committee) tendría una autoridad similar para las franquicias y concesiones."
+   },
+   {
+    "topic": "Audiencias sobre planes de servicios",
+    "today": "Las agencias que contratan servicios directos deben realizar audiencias públicas sobre sus proyectos de planes anuales de contratación.",
+    "if_passes": "Ya no se exigirían audiencias sobre los proyectos de planes, pero las agencias seguirían publicando los planes anuales finales."
+   },
+   {
+    "topic": "Aprobaciones de contratos grandes",
+    "today": "La Oficina de la Alcaldía no puede delegar en los directores de contratación de las agencias la aprobación de ciertos contratos de más de $5 millones.",
+    "if_passes": "También podría delegar esas aprobaciones, con la aprobación del comisionado de la agencia."
+   },
+   {
+    "topic": "Comentarios públicos sobre contratos",
+    "today": "La ley estatal permite recibir comentarios públicos en lugar de realizar audiencias presenciales para ciertos contratos de mayor valor.",
+    "if_passes": "La ley de la ciudad haría permanente esa opción, y la junta podría establecer el límite del valor del contrato para recibir comentarios públicos a partir del October 1, 2030."
+   },
+   {
+    "topic": "Calendario de reuniones de la junta",
+    "today": "La Junta de Política de Adquisiciones (Procurement Policy Board) no tiene un calendario obligatorio de reuniones regulares.",
+    "if_passes": "La junta tendría que reunirse al menos cada tres meses a partir del January 1, 2027."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Flexibilidad administrativa",
+    "Requisitos proporcionales",
+    "Supervisión regular"
+   ],
+   "headline": "Argumento de compensación de la reseña oficial: permitir trámites más sencillos para contratistas pequeños en lugar de exigir el mismo cuestionario detallado para todos los contratos.",
+   "more_reasons": [
+    "Otra razón que presenta la reseña es permitir que las agencias aprueben más contratos, sin eliminar la aprobación del comisionado.",
+    "La reseña también establece que la junta que fija las reglas de contratación deberá reunirse con regularidad."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Participación pública",
+    "Revisión uniforme",
+    "Aprobación centralizada"
+   ],
+   "headline": "Argumento de compensación de la reseña oficial: mantener las audiencias obligatorias sobre los proyectos de planes de servicios, en lugar de dejar como requisito solo la publicación de los planes finales.",
+   "more_reasons": [
+    "Otra razón que presenta la reseña es mantener un cuestionario uniforme bajo la Oficina de Servicios de Contratos de la Alcaldía (Mayor’s Office of Contract Services) y el Contralor (Comptroller).",
+    "La reseña también indica que rechazar la medida conservaría los límites para delegar la aprobación de ciertos contratos de más de $5 millones."
+   ]
+  },
+  "crux": "La compensación central es tener más flexibilidad en la contratación frente a conservar los requisitos actuales de revisión y participación. Los argumentos anteriores se basan en la reseña oficial; no se atribuyen a declaraciones presentadas a favor o en contra.",
+  "who_is_affected": [
+   "Empresas y organizaciones sin fines de lucro que buscan contratos con la ciudad, incluidos los contratistas pequeños",
+   "Agencias y funcionarios de la ciudad que aprueban contratos",
+   "Personas que usan servicios contratados, como albergues, capacitación laboral y programas para jóvenes",
+   "Residentes que participan en audiencias de contratación y períodos de comentarios públicos"
+  ]
+ }
+}

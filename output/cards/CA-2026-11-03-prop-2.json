@@ -1,0 +1,262 @@
+{
+  "measure_id": "CA-2026-11-03-prop-2",
+  "card": {
+    "measure_id": "CA-2026-11-03-prop-2",
+    "number": "Prop 2",
+    "official_title": "INCREASES STATE’S RAINY DAY FUND. LEGISLATIVE CONSTITUTIONAL AMENDMENT.",
+    "plain_title": "Expand state budget reserves and extend extra debt payments",
+    "title_disputed": false,
+    "put_on_ballot_by": "Legislature",
+    "yes_means": "The state would save toward a larger rainy day fund, extend and broaden extra debt payments, and count certain reserve deposits toward its spending limit when withdrawn instead.",
+    "no_means": "Required rainy day savings would still stop at 10% of General Fund taxes, extra debt payments would become optional after 2030, and reserve deposits would still count toward the spending limit.",
+    "what_changes": [
+      {
+        "topic": "Rainy day savings target",
+        "today": "Required deposits stop when the fund reaches 10% of General Fund taxes; money otherwise deposited goes to infrastructure.",
+        "if_passes": "Required deposits continue until the fund reaches 20% of General Fund taxes.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/2/analysis.htm"
+      },
+      {
+        "topic": "High revenue years",
+        "today": "The state must save extra when taxes on investment gains are higher than normal.",
+        "if_passes": "The state must make even larger deposits when taxes on investment gains are very high.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/2/analysis.htm"
+      },
+      {
+        "topic": "Extra debt payment deadline",
+        "today": "Required extra debt payments end in 2030; afterward, that money can go into reserves instead.",
+        "if_passes": "Extra debt payments remain required through 2040.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/2/analysis.htm"
+      },
+      {
+        "topic": "Extra payment uses",
+        "today": "Extra debt payments can pay down only long-term pension and retiree health care debts.",
+        "if_passes": "They could also cover required school and community college payments, borrowing from other state funds, and certain federal loans.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/2/analysis.htm"
+      },
+      {
+        "topic": "Constitutional spending limit",
+        "today": "Money put into reserves counts toward the state's constitutional spending limit.",
+        "if_passes": "Rainy day deposits and deposits into another revenue set-aside account count when withdrawn instead, with the latter exclusion capped annually at 10% of General Fund taxes.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/2/analysis.htm"
+      }
+    ],
+    "who_is_affected": [
+      "People who rely on state-funded education, health care, public safety, and other services",
+      "California taxpayers",
+      "State employees and retirees with pension and retiree health benefits",
+      "Schools and community colleges owed required payments"
+    ],
+    "fiscal_impact": {
+      "text": "The Legislative Analyst estimates higher state reserves, somewhat easier budget balancing when revenues fall, and possibly more debt payments; it gives no dollar estimate.",
+      "label": "prediction",
+      "whose": "Legislative Analyst",
+      "source_url": "https://voterguide.sos.ca.gov/propositions/2/analysis.htm",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "Supporters argue larger reserves would protect schools, health care, and public safety from cuts when state revenues fall.",
+      "headline_topic": "Rainy day savings target",
+      "more_reasons": [
+        "Supporters argue saving more revenue windfalls would prevent new ongoing spending that the state cannot sustain.",
+        "Supporters argue larger reserves would help California absorb federal health care and food assistance cuts without cutting services."
+      ],
+      "values": [
+        "Stable public services",
+        "Long-term planning",
+        "Budget discipline"
+      ],
+      "best_evidence": [
+        {
+          "text": "More reserves would make balancing the budget somewhat easier when revenues decline.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/2/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "The measure requires larger rainy day deposits in years when taxes on investment gains are very high.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/2/analysis.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Supporters say it helps people who depend on schools, health clinics, hospitals, and public safety during downturns.",
+      "answer_to_other_side": "Supporters argue the spending-limit change favors saving over spending and that keeping money available for downturns better protects services than potential rebates."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "headline": "Opponents argue excluding reserve deposits from the spending limit would make taxpayer rebates less likely and weaken limits on state spending.",
+      "headline_topic": "Constitutional spending limit",
+      "more_reasons": [
+        "Opponents argue greater room under the spending limit could support wasteful spending rather than better services.",
+        "Opponents argue changing savings rules cannot ensure budget stability without following existing rules and controlling spending."
+      ],
+      "values": [
+        "Taxpayer refunds",
+        "Spending restraint",
+        "Budget accountability"
+      ],
+      "best_evidence": [
+        {
+          "text": "Deposits into the rainy day fund would count toward the spending limit when withdrawn, rather than when deposited.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/2/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "Opponents argue moving deposits outside the current spending-limit calculation would make taxpayer rebates less likely.",
+          "label": "prediction",
+          "whose": "Opponents in the official ballot rebuttal",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/2/arguments-rebuttals.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Opponents say keeping the current rules helps taxpayers seeking rebates and tighter controls on state spending.",
+      "answer_to_other_side": "Opponents argue the measure does not dedicate new funding to schools, health care, or public safety, so a larger savings target does not guarantee protection for those services."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "Should more revenue be saved for future services even if changing the spending-limit calculation makes rebates less likely? The sides also disagree about whether these rules would improve budget stability or weaken spending restraint."
+    },
+    "evidence": [
+      {
+        "text": "Saving money means not spending it on programs now; reserves can later help avoid spending cuts, tax increases, and borrowing.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/2/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The measure changes when reserve money counts toward the spending limit; that money still counts when withdrawn.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/2/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "Rainy day money can be used for any state program; during a budget emergency, deposits can stop and money can be withdrawn.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/2/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The Legislative Analyst forecasts higher reserves and somewhat easier budget balancing, but does not estimate an effect on taxpayer rebates.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/2/analysis.htm",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 4
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 0,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The Yes case centers on its strongest merits-based point in the sources: larger reserves may help maintain public services during revenue downturns. It also captures supporters’ argument that saving windfalls can prevent unsustainable ongoing spending. The case is accurate, though not especially forceful."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The No case presents the central arguments in the official opposition text: changing the spending-limit calculation may make rebates less likely, the measure does not guarantee new funding for named services, and spending restraint matters. These are fairly attributed as opponents’ arguments rather than established outcomes."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 127,
+          "no": 136,
+          "ratio": 1.07
+        },
+        "headline_words": {
+          "yes": 18,
+          "no": 21
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 5,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 1
+        },
+        "reading_grade": 7.4,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://voterguide.sos.ca.gov/propositions/2/title-summary.htm",
+    "https://voterguide.sos.ca.gov/propositions/2/arguments-rebuttals.htm",
+    "https://voterguide.sos.ca.gov/propositions/2/analysis.htm"
+  ],
+  "meta": {
+    "seconds": 50.6,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 2,
+        "input_tokens": 10684,
+        "cache_read_tokens": 6316,
+        "output_tokens": 1759,
+        "reasoning_tokens": 155,
+        "tool_calls": 3
+      },
+      "critic:gpt-6-luna": {
+        "requests": 1,
+        "input_tokens": 6949,
+        "cache_read_tokens": 0,
+        "output_tokens": 2073,
+        "reasoning_tokens": 1877,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {}
+  },
+  "format": "v3.1",
+  "scope": "statewide"
+}

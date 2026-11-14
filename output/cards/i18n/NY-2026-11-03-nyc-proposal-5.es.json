@@ -1,0 +1,60 @@
+{
+ "lang": "es",
+ "card_id": "NY-2026-11-03-nyc-proposal-5",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Establecer una meta de reservas de la Ciudad y exigir un plan de ahorro",
+  "yes_means": "La Ciudad establecería una meta de reservas, exigiría un plan publicado para hacer depósitos y convertiría en permanente en la ley de la Ciudad el límite actual para los retiros.",
+  "no_means": "Las leyes actuales seguirían sin cambios, sin una meta de reservas ni el requisito de ahorrar una cantidad específica cada año.",
+  "what_changes": [
+   {
+    "topic": "Meta del saldo de reservas",
+    "today": "La Ciudad tiene un Fondo para Días Difíciles, pero no una meta de reservas.",
+    "if_passes": "La meta sería de al menos 12% de los ingresos tributarios de la Ciudad del año anterior, mantenidos en el Fondo para Días Difíciles u otras reservas."
+   },
+   {
+    "topic": "Plan publicado de depósitos",
+    "today": "No existe el requisito de ahorrar una cantidad específica cada año.",
+    "if_passes": "Para mayo de 2027, la oficina de presupuesto publicaría un plan de depósitos, en consulta con el Contralor, y lo actualizaría en mayo de 2030 y cada cuatro años después."
+   },
+   {
+    "topic": "Decisiones sobre el presupuesto anual",
+    "today": "La guía no describe por separado los requisitos actuales para aprobar depósitos.",
+    "if_passes": "Los depósitos para alcanzar la meta necesitarían la aprobación del Alcalde y el Concejo mediante el proceso de presupuesto anual, y podrían hacerse durante varios años o dejarse de hacer durante dificultades financieras."
+   },
+   {
+    "topic": "Límite para los retiros",
+    "today": "Un requisito estatal limita los retiros al 50% del fondo, a menos que el Alcalde certifique que existe una razón fiscal apremiante.",
+    "if_passes": "El mismo límite para los retiros y la misma excepción pasarían a ser permanentes en la ley de la Ciudad."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Preparación financiera",
+    "Planificación transparente"
+   ],
+   "headline": "Argumento basado en el resumen, no atribuido a quienes apoyan la propuesta: una meta de reservas y un plan de ahorro publicado formalizarían la preparación para enfrentar dificultades financieras.",
+   "more_reasons": [
+    "La propuesta exige la aprobación mediante el presupuesto anual y permite dejar de hacer depósitos durante dificultades financieras.",
+    "Convertiría en permanente en la ley de la Ciudad la protección actual que limita los retiros."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Flexibilidad presupuestaria",
+    "Protecciones existentes"
+   ],
+   "headline": "Argumento basado en el resumen, no atribuido a quienes se oponen a la propuesta: la ley actual ya permite ahorrar para emergencias, sin agregar una meta de reservas ni requisitos recurrentes de planificación.",
+   "more_reasons": [
+    "La meta propuesta no garantizaría que se hagan depósitos, ya que dependerían de las decisiones del presupuesto anual.",
+    "Ya existe un límite para los retiros conforme a los requisitos estatales."
+   ]
+  },
+  "crux": "La disyuntiva que presenta el resumen oficial es si se debe agregar una meta formal de ahorro y un plan público recurrente, y a la vez permitir flexibilidad en el presupuesto anual. Esta no es una descripción verificada de los argumentos presentados por ninguna de las partes.",
+  "who_is_affected": [
+   "Funcionarios del presupuesto de la Ciudad responsables de planificar las reservas",
+   "El Alcalde y el Concejo Municipal, quienes aprobarían los depósitos según la propuesta",
+   "Los neoyorquinos cuyo presupuesto municipal usa reservas durante dificultades financieras"
+  ]
+ }
+}

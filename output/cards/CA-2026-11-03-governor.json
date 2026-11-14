@@ -1,0 +1,79 @@
+{
+  "race_id": "CA-2026-11-03-governor",
+  "card": {
+    "race_id": "CA-2026-11-03-governor",
+    "office": "Governor",
+    "what_office_does": {
+      "text": "The governor oversees most state departments and agencies, appoints judges, and directs state resources during emergencies. The governor also proposes laws, approves or vetoes legislation, and submits the annual state budget to the Legislature.",
+      "label": "fact",
+      "whose": null,
+      "source_url": "https://voterguide.sos.ca.gov/candidates/governor-candidate-statements.htm",
+      "quote": null
+    },
+    "candidates": [
+      {
+        "name": "Xavier Becerra",
+        "party": "Democratic",
+        "says_basis": "none_found",
+        "says": [],
+        "headline": null,
+        "core_case": null,
+        "priorities": []
+      },
+      {
+        "name": "Steve Hilton",
+        "party": "Republican",
+        "says_basis": "none_found",
+        "says": [],
+        "headline": null,
+        "core_case": null,
+        "priorities": []
+      }
+    ],
+    "where_they_differ": null
+  },
+  "ballot_order_note": "Official order (California assigns it by randomized drawing).",
+  "did": {
+    "Xavier Becerra": null,
+    "Steve Hilton": null
+  },
+  "funded_by": {
+    "Xavier Becerra": {
+      "status": "not_connected",
+      "note": "State campaign finance (Cal-Access) not connected yet."
+    },
+    "Steve Hilton": {
+      "status": "not_connected",
+      "note": "State campaign finance (Cal-Access) not connected yet."
+    }
+  },
+  "checks": {
+    "candidates": 2,
+    "with_statements": 0,
+    "words": {},
+    "word_ratio": 1.0,
+    "headline_words": {},
+    "reading_grade": 0.0,
+    "loaded_words": [],
+    "attacks_or_funders": [],
+    "recommendation": [],
+    "outcome_or_polls": [],
+    "instruction_like_text": []
+  },
+  "sources": [
+    "https://voterguide.sos.ca.gov/candidates/governor-candidate-statements.htm"
+  ],
+  "meta": {
+    "seconds": 5.1,
+    "usage_by_model": {
+      "gpt-6-astra": {
+        "requests": 2,
+        "input_tokens": 3450,
+        "cache_read_tokens": 1458,
+        "output_tokens": 235,
+        "reasoning_tokens": 0,
+        "tool_calls": 1
+      }
+    }
+  }
+}

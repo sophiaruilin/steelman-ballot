@@ -1,0 +1,315 @@
+{
+  "measure_id": "NY-2026-11-03-nyc-proposal-5",
+  "card": {
+    "measure_id": "NY-2026-11-03-nyc-proposal-5",
+    "number": "Proposal 5",
+    "official_title": "Set Contribution Targets for Rainy Day Fund to Promote Sufficient Budgetary Reserves",
+    "plain_title": "Set a city reserve target and require a savings plan",
+    "title_disputed": false,
+    "put_on_ballot_by": "Not specified in the official guide summary.",
+    "yes_means": "The City would set a reserve target, require a published plan for deposits, and make the existing withdrawal limit permanent in City law.",
+    "no_means": "Current laws would remain unchanged, with no reserve target or requirement to save a particular amount each year.",
+    "what_changes": [
+      {
+        "topic": "Reserve balance target",
+        "today": "The City has a Rainy Day Fund but no reserve target.",
+        "if_passes": "The target would be at least 12% of the previous year's City tax revenue, held in the Rainy Day Fund or other reserves.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-5/"
+      },
+      {
+        "topic": "Published deposit plan",
+        "today": "There is no requirement to save a particular amount each year.",
+        "if_passes": "By May 2027, the budget office would publish a deposit plan, consulting the Comptroller, with updates in May 2030 and every four years afterward.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-5/"
+      },
+      {
+        "topic": "Annual budget decisions",
+        "today": "The guide does not separately describe current deposit-approval requirements.",
+        "if_passes": "Deposits toward the target would need Mayor and Council approval through the annual budget process and could span several years or be skipped during financial hardship.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-5/"
+      },
+      {
+        "topic": "Withdrawal limit",
+        "today": "A State requirement limits withdrawals to 50% of the fund unless the Mayor certifies a compelling fiscal reason.",
+        "if_passes": "The same withdrawal limit and exception would become permanent in City law.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-5/"
+      }
+    ],
+    "who_is_affected": [
+      "City budget officials responsible for planning reserves",
+      "The Mayor and City Council, who would approve deposits under the proposal",
+      "New Yorkers whose City budget uses reserves during financial hardship"
+    ],
+    "fiscal_impact": {
+      "text": "The official guide does not include a cost estimate.",
+      "label": "fact",
+      "whose": null,
+      "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-5/",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "no_organized_side",
+      "headline": "Summary-based case, not an attributed supporter argument: a reserve target and published savings plan would formalize preparation for financial hardship.",
+      "headline_topic": "Reserve balance target",
+      "more_reasons": [
+        "The proposal requires annual budget approval and allows deposits to be skipped during financial hardship.",
+        "It would make the existing withdrawal safeguard permanent in City law."
+      ],
+      "values": [
+        "Financial preparedness",
+        "Transparent planning"
+      ],
+      "best_evidence": [
+        {
+          "text": "The Rainy Day Fund allows the City to save money for downturns, emergencies, or unexpected revenue shortfalls.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-5/",
+          "quote": null
+        },
+        {
+          "text": "The proposal requires a published plan for deposits when reserves are below target, with regular updates.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-5/",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "This summary-based case concerns the City and residents who depend on its ability to respond to financial hardship; it is not attributed to submitted statements.",
+      "answer_to_other_side": "The proposal does not require a fixed deposit every year: deposits would need Mayor and Council approval, and they could be skipped during hardship."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "no_organized_side",
+      "headline": "Summary-based case, not an attributed opponent argument: existing law already allows emergency savings without adding a reserve target and recurring planning requirements.",
+      "headline_topic": "Reserve balance target",
+      "more_reasons": [
+        "The proposed target would not guarantee deposits, which would depend on annual budget decisions.",
+        "A withdrawal limit already exists under State requirements."
+      ],
+      "values": [
+        "Budget flexibility",
+        "Existing safeguards"
+      ],
+      "best_evidence": [
+        {
+          "text": "The City already has a Rainy Day Fund, with no requirement to save a particular amount each year.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-5/",
+          "quote": null
+        },
+        {
+          "text": "Under the proposal, deposits could occur over several years or be skipped during financial hardship.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-5/",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "This summary-based case concerns officials making annual budget choices; it is not attributed to submitted statements.",
+      "answer_to_other_side": "A target adds a planning rule, but the existing fund already permits saving for hardship, and the proposal leaves actual deposits to budget approval."
+    },
+    "crux": {
+      "kind": "values",
+      "text": "The trade-off in the official summary is whether to add a formal savings target and recurring public plan while allowing annual budget flexibility. This is not a verified account of the submitted arguments on either side."
+    },
+    "evidence": [
+      {
+        "text": "The 12% figure is a target for the reserve balance, not a requirement to deposit 12% of tax revenue each year.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-5/",
+        "quote": null
+      },
+      {
+        "text": "The target can be met through the Rainy Day Fund or other fund reserves.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-5/",
+        "quote": null
+      },
+      {
+        "text": "Under the proposal, deposits would require Mayor and City Council approval through the normal annual budget process.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-5/",
+        "quote": null
+      },
+      {
+        "text": "The withdrawal limit would still allow an exception when the Mayor certifies a compelling fiscal reason.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-5/",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 4
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 1,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The case gives the main merits-based Yes rationale supported by the guide: formalize a reserve goal and public deposit planning to prepare for hardship, while retaining annual budget approval and hardship flexibility. It could better explain why a target and recurring public plan are valuable even though they do not require deposits on a fixed schedule."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The case fairly identifies the central No trade-off in the available analysis: the City already has a rainy-day fund, while the proposal adds a target and recurring planning requirements without guaranteeing deposits. It could make the potential weakness of adding a target without assured deposits more explicit."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The Yes headline's phrase “formalize preparation” is affirmative, while the No headline emphasizes what the proposal adds. The two frames fit their respective cases and are not markedly unequal in warmth or confidence, though they could be made more parallel."
+        ],
+        "fidelity_problems": [
+          "In the “Annual budget decisions” row, the “today” statement that deposits are approved through the City's annual budget process is not explicitly established by the supplied source text. The guide says deposits under the proposal would require that approval; it does not state the current process."
+        ],
+        "label_problems": [
+          "The four “if_passes” descriptions in the What-changes table describe prospective effects but are labeled “fact.” Under the card's label rules, label them as predictions and identify the basis (for example, whose: “official guide/proposal summary”). The present-tense “today” descriptions can remain facts where supported."
+        ],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. In the “Annual budget decisions” row, replace or qualify the “today” claim: the supplied guide only confirms that deposits under the proposal would need Mayor and Council approval through the annual budget process. 2. Change the “if_passes” labels in the What-changes table from “fact” to “prediction,” with whose identified as the official guide/proposal summary."
+      },
+      "checks": {
+        "words": {
+          "yes": 132,
+          "no": 123,
+          "ratio": 1.07
+        },
+        "headline_words": {
+          "yes": 20,
+          "no": 22
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 4,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 1
+        },
+        "reading_grade": 8.2,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 1,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "A fair summary-based Yes case: it emphasizes setting a reserve-balance goal, publishing and updating a deposit plan, and retaining flexibility to skip deposits during hardship. The source does not provide an organized supporter statement, so it is appropriate not to attribute this case to one. The headline could foreground the concrete 12% target more clearly, but it is not a strawman."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "A fair summary-based No case: it identifies that the existing fund already serves emergencies, while the proposal adds a target and planning process without guaranteeing deposits because annual budget approval remains necessary and hardship can justify skipping them. This is a strong trade-off available from the analysis, even though no organized opponent statement is provided."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The headlines are close in length and both explicitly identify themselves as summary-based, unattributed cases. The Yes headline frames the change as preparation; the No headline frames it as adding rules without requiring yearly savings. Neither uses notably warmer or more forceful language."
+        ],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 132,
+          "no": 121,
+          "ratio": 1.09
+        },
+        "headline_words": {
+          "yes": 20,
+          "no": 22
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 4,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 1
+        },
+        "reading_grade": 8.6,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-5/",
+    "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/",
+    "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-5/#supporting-statements",
+    "https://www.nycvotes.org/sitemap.xml",
+    "https://www.nycvotes.org/whats-on-the-ballot/2026-ballot-proposals/"
+  ],
+  "meta": {
+    "seconds": 150.7,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 16,
+        "input_tokens": 142129,
+        "cache_read_tokens": 126373,
+        "output_tokens": 6163,
+        "reasoning_tokens": 1337,
+        "tool_calls": 27
+      },
+      "critic:gpt-6-luna": {
+        "requests": 2,
+        "input_tokens": 21635,
+        "cache_read_tokens": 0,
+        "output_tokens": 3169,
+        "reasoning_tokens": 2447,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {}
+  },
+  "format": "v3.1",
+  "scope": "New York City"
+}

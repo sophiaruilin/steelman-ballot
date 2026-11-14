@@ -1,0 +1,268 @@
+{
+  "measure_id": "CA-2026-11-03-prop-40",
+  "card": {
+    "measure_id": "CA-2026-11-03-prop-40",
+    "number": "Prop 40",
+    "official_title": "IMPOSES ONE-TIME TAX ON CERTAIN TAXPAYERS. INITIATIVE CONSTITUTIONAL AMENDMENT AND STATUTE.",
+    "plain_title": "Tax billionaire wealth once, mainly to fund health care",
+    "title_disputed": false,
+    "put_on_ballot_by": "Citizen initiative",
+    "yes_means": "A yes vote creates a one-time tax of up to 5% on covered wealth of California billionaires, with 90% of the revenue reserved for health care.",
+    "no_means": "A no vote leaves existing taxes and funding rules in place, without this new wealth tax or its dedicated revenue.",
+    "what_changes": [
+      {
+        "topic": "One-time wealth tax",
+        "today": "Billionaires pay state income taxes; this new wealth tax is not in place.",
+        "if_passes": "Billionaires resident on January 1, 2026 would owe the tax in 2027, with a five-year payment option that costs more.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/40/analysis.htm"
+      },
+      {
+        "topic": "Revenue uses",
+        "today": "State and federal governments spend over $200 billion yearly on state health care programs.",
+        "if_passes": "Of the new revenue, 90% must fund health care; the rest must fund education, food assistance and tax administration.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/40/analysis.htm"
+      },
+      {
+        "topic": "Constitutional spending rules",
+        "today": "The state Constitution limits spending and requires funding for schools and community colleges.",
+        "if_passes": "Those spending limits and school-funding requirements would not apply to the new revenue.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/40/analysis.htm"
+      },
+      {
+        "topic": "Ongoing income tax revenue",
+        "today": "Billionaires pay state taxes on their annual income.",
+        "if_passes": "Changes in taxpayers' behavior could reduce annual state income tax revenue by less than $1 billion.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/40/analysis.htm"
+      }
+    ],
+    "who_is_affected": [
+      "California billionaires subject to the new tax",
+      "People who use publicly funded health care",
+      "Health care providers receiving public funding",
+      "People served by education and food assistance programs",
+      "People relying on services funded by state income taxes"
+    ],
+    "fiscal_impact": {
+      "text": "The Legislative Analyst estimates temporary revenue totaling tens of billions of dollars over several years, with possible ongoing income tax losses of less than $1 billion annually. Administration could cost tens of millions of dollars annually for several years, paid from the new revenue.",
+      "label": "prediction",
+      "whose": "Legislative Analyst",
+      "source_url": "https://voterguide.sos.ca.gov/propositions/40/analysis.htm",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "Supporters argue it would protect health care access and affordability by raising substantial funds from a small group of billionaires.",
+      "headline_topic": "Revenue uses",
+      "more_reasons": [
+        "Supporters argue billionaires should contribute more toward public services rather than leaving working families to bear higher health care costs.",
+        "Supporters argue the additional money would also protect teaching jobs and help keep children fed."
+      ],
+      "values": [
+        "Access to health care",
+        "Tax fairness",
+        "Support for families"
+      ],
+      "best_evidence": [
+        {
+          "text": "The measure reserves 90% of the new revenue for health care services for the public.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/40/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "Supporters argue that billionaires should pay more toward health care rather than placing the burden on working families.",
+          "label": "value",
+          "whose": "Supporters in the official ballot argument",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/40/arguments-rebuttals.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Supporters say patients, seniors, veterans, working families, students and children needing food assistance would benefit.",
+      "answer_to_other_side": "Supporters argue that the tax would raise substantial new funding for urgent health care needs and place the tax burden on billionaires, not working families."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "headline": "Opponents argue it would weaken long-term public funding by driving wealthy taxpayers away, while providing only temporary money for health care.",
+      "headline_topic": "Ongoing income tax revenue",
+      "more_reasons": [
+        "Opponents worry that future changes could expand the tax beyond billionaires and reach more people's savings.",
+        "Opponents argue the spending exemptions and lack of stronger safeguards would weaken school-funding protections without ensuring lower health care costs for families."
+      ],
+      "values": [
+        "Stable public funding",
+        "Protection of savings",
+        "Spending accountability"
+      ],
+      "best_evidence": [
+        {
+          "text": "The Legislative Analyst says some billionaires may leave California, reducing the income taxes available for public services.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/40/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "Opponents argue that health care needs stable funding and stronger safeguards to ensure new spending helps patients.",
+          "label": "value",
+          "whose": "Opponents in the official ballot argument",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/40/arguments-rebuttals.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Opponents say rejection would protect people relying on ongoing public services, other taxpayers and residents concerned about future taxes on savings.",
+      "answer_to_other_side": "Opponents argue that earmarking temporary revenue for health care does not guarantee lower patient costs and could come at the expense of lasting income tax revenue."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "The central dispute is whether a large, temporary boost for health care outweighs the risk of lasting income tax losses. The sides also differ on tax fairness and whether the spending rules provide enough protection for schools and patients."
+    },
+    "evidence": [
+      {
+        "text": "The Legislative Analyst estimates tens of billions of dollars in new revenue, not a fixed total; collections depend on stock prices and taxpayers' responses.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/40/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The Legislative Analyst estimates possible ongoing income tax losses of less than $1 billion per year; the analysis does not give the opponents' $25 billion loss estimate.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/40/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The official summary describes a tax of up to 5% on covered assets over the $1 billion threshold, excluding real property and some pensions and retirement accounts.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/40/title-summary.htm",
+        "quote": null
+      },
+      {
+        "text": "The state would decide how and when to spend the money within the required categories; the official summary prohibits replacing existing funding with the new revenue.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/40/title-summary.htm",
+        "quote": null
+      },
+      {
+        "text": "The new revenue is exempt from constitutional school-funding requirements, budget reserve requirements and the state spending limit.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/40/title-summary.htm",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 4
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 0,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The card presents the central Yes case in the sources: a one-time tax on a small group would raise substantial revenue, most of it for health care, with supporters arguing that this would help patients and families and also support schools and food assistance. It omits supporters’ specific claim that the measure would replace health-care funding cuts, but it does not distort the case."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The card captures the No case’s main merits arguments: temporary funding may not justify possible lasting income-tax losses, and opponents object to the spending exemptions, safeguards, and potential expansion of the tax. It accurately distinguishes opponents’ claims from the Legislative Analyst’s narrower revenue estimate."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The headlines use opposing but reasonably parallel merits language: Yes says “protect health care access,” while No says “weaken long-term public funding.” Both attribute their claims to the respective side; neither is presented as an unqualified fact."
+        ],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 137,
+          "no": 148,
+          "ratio": 1.08
+        },
+        "headline_words": {
+          "yes": 20,
+          "no": 21
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 4,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 1
+        },
+        "reading_grade": 6.8,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://voterguide.sos.ca.gov/propositions/40/title-summary.htm",
+    "https://voterguide.sos.ca.gov/propositions/40/analysis.htm",
+    "https://voterguide.sos.ca.gov/propositions/40/arguments-rebuttals.htm"
+  ],
+  "meta": {
+    "seconds": 54.8,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 2,
+        "input_tokens": 10564,
+        "cache_read_tokens": 6316,
+        "output_tokens": 1857,
+        "reasoning_tokens": 177,
+        "tool_calls": 3
+      },
+      "critic:gpt-6-luna": {
+        "requests": 1,
+        "input_tokens": 6874,
+        "cache_read_tokens": 0,
+        "output_tokens": 1849,
+        "reasoning_tokens": 1589,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {
+      "https://voterguide.sos.ca.gov/propositions/40/arguments-rebuttals.htm": [
+        "endorse"
+      ]
+    }
+  },
+  "format": "v3.1",
+  "scope": "statewide"
+}

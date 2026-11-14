@@ -13,7 +13,8 @@ from backend.eval.grade import EVAL_DIR
 VERSIONS = [  # (file, label) in the order the card design evolved
     ("baseline_gpt-6-astra.json", "v1: pros/cons steelmen"),
     ("v2_top3_gpt-6-astra.json", "v2: + each side's top 3 official points"),
-    ("gpt-6-astra.json", "v3: What changes + one headline per side, on the merits only"),
+    ("v3_gpt-6-astra.json", "v3: What changes + one headline per side, on the merits only"),
+    ("gpt-6-astra.json", "v3.1 (published): narrower motive check, fuller 'more reasons', 3 rewrites"),
 ]
 
 
@@ -80,7 +81,7 @@ def main():
     if current.exists():
         run = json.loads(current.read_text(encoding="utf-8"))
         a = aggregate(run)
-        out += ["## Current cards", "", per_prop_table(run), "",
+        out += ["## Published cards (v3.1)", "", per_prop_table(run), "",
                 "## Targets", "", "| Metric | Target | Current |", "|---|---|---|",
                 f"| Claims supported by sources | >= 99%, 0 contradicted | {_pct(a['fidelity'])}, {a['contradicted']} contradicted |",
                 f"| Yes / No / cost correct | 100% | {a['effects_correct']} |",

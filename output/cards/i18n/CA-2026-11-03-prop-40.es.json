@@ -1,0 +1,64 @@
+{
+ "lang": "es",
+ "card_id": "CA-2026-11-03-prop-40",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Gravar una sola vez el patrimonio de multimillonarios, principalmente para financiar la atención médica",
+  "yes_means": "Un voto por el sí crea un impuesto único de hasta 5% sobre el patrimonio sujeto al impuesto de las personas multimillonarias de California, y reserva 90% de los ingresos para la atención médica.",
+  "no_means": "Un voto por el no mantiene los impuestos y las reglas de financiamiento actuales, sin este nuevo impuesto al patrimonio ni los ingresos destinados específicamente a ese fin.",
+  "what_changes": [
+   {
+    "topic": "Impuesto único al patrimonio",
+    "today": "Las personas multimillonarias pagan impuestos estatales sobre sus ingresos; este nuevo impuesto al patrimonio no existe actualmente.",
+    "if_passes": "Las personas multimillonarias que residan en California el 1 de enero de 2026 tendrían que pagar el impuesto en 2027, con la opción de pagarlo en cinco años, lo que costaría más."
+   },
+   {
+    "topic": "Usos de los ingresos",
+    "today": "Los gobiernos estatal y federal gastan más de $200 mil millones al año en programas estatales de atención médica.",
+    "if_passes": "De los nuevos ingresos, 90% debe financiar la atención médica; el resto debe financiar la educación, la asistencia alimentaria y la administración tributaria."
+   },
+   {
+    "topic": "Reglas constitucionales sobre el gasto",
+    "today": "La Constitución estatal limita el gasto y exige fondos para las escuelas y los colegios comunitarios.",
+    "if_passes": "Esos límites al gasto y requisitos de financiamiento para las escuelas no se aplicarían a los nuevos ingresos."
+   },
+   {
+    "topic": "Ingresos continuos del impuesto sobre la renta",
+    "today": "Las personas multimillonarias pagan impuestos estatales sobre sus ingresos anuales.",
+    "if_passes": "Los cambios en el comportamiento de los contribuyentes podrían reducir los ingresos anuales del impuesto estatal sobre la renta en menos de $1 mil millones."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Acceso a la atención médica",
+    "Equidad tributaria",
+    "Apoyo a las familias"
+   ],
+   "headline": "Quienes apoyan la medida sostienen que recaudaría fondos considerables de un pequeño grupo de personas multimillonarias para proteger el acceso a la atención médica y hacerla más asequible.",
+   "more_reasons": [
+    "Quienes apoyan la medida sostienen que las personas multimillonarias deberían contribuir más a los servicios públicos, en lugar de dejar que las familias trabajadoras asuman costos más altos de atención médica.",
+    "Quienes apoyan la medida sostienen que el dinero adicional también protegería los empleos docentes y ayudaría a que los niños tengan alimentos."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Financiamiento público estable",
+    "Protección de los ahorros",
+    "Rendición de cuentas sobre el gasto"
+   ],
+   "headline": "Quienes se oponen a la medida sostienen que debilitaría el financiamiento público a largo plazo al hacer que los contribuyentes adinerados se vayan, mientras que solo proporcionaría fondos temporales para la atención médica.",
+   "more_reasons": [
+    "A quienes se oponen les preocupa que cambios futuros puedan ampliar el impuesto más allá de las personas multimillonarias y afectar los ahorros de más personas.",
+    "Quienes se oponen a la medida sostienen que las exenciones a las reglas de gasto y la falta de salvaguardas más sólidas debilitarían las protecciones de financiamiento para las escuelas, sin garantizar que bajen los costos de atención médica para las familias."
+   ]
+  },
+  "crux": "La disputa central es si un aumento grande pero temporal de los fondos para la atención médica compensa el riesgo de pérdidas duraderas en los ingresos del impuesto sobre la renta. Las partes también discrepan sobre la equidad tributaria y sobre si las reglas de gasto ofrecen suficiente protección para las escuelas y los pacientes.",
+  "who_is_affected": [
+   "Personas multimillonarias de California sujetas al nuevo impuesto",
+   "Personas que usan servicios de atención médica financiados con fondos públicos",
+   "Proveedores de atención médica que reciben fondos públicos",
+   "Personas atendidas por programas de educación y asistencia alimentaria",
+   "Personas que dependen de servicios financiados con los impuestos estatales sobre la renta"
+  ]
+ }
+}

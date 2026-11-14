@@ -1,0 +1,248 @@
+{
+  "measure_id": "MA-2026-11-03-question-7",
+  "card": {
+    "measure_id": "MA-2026-11-03-question-7",
+    "number": "Question 7",
+    "official_title": "Single Family Homes",
+    "plain_title": "Allow single-family homes on qualifying 5,000-square-foot lots",
+    "title_disputed": false,
+    "put_on_ballot_by": "Citizen initiative petition",
+    "yes_means": "Single-family homes would be allowed in residential zones on lots of at least 5,000 square feet with at least 50 feet of street frontage and access to public sewer and water, subject to reasonable local rules.",
+    "no_means": "Existing law governing the construction of single-family homes would remain unchanged.",
+    "what_changes": [
+      {
+        "topic": "Minimum lot size",
+        "today": "Existing lot-size rules apply; the official summary does not list local minimums.",
+        "if_passes": "Single-family homes would be allowed on qualifying residential lots of at least 5,000 square feet.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=18&pages=18-19"
+      },
+      {
+        "topic": "Street and utility access",
+        "today": "Existing rules for where single-family homes may be built remain in place.",
+        "if_passes": "The new allowance would require at least 50 feet bordering the street, road, or public way and access to public sewer and water.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=18&pages=18-19"
+      },
+      {
+        "topic": "Local building rules",
+        "today": "Existing law governing local regulation of single-family homes remains in place.",
+        "if_passes": "Cities and towns could reasonably regulate height, distance from neighboring buildings, open space, parking, and short-term rentals.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=18&pages=18-19"
+      }
+    ],
+    "who_is_affected": [
+      "People seeking single-family homes, including young families and seniors",
+      "Owners and builders of qualifying residential lots",
+      "Cities and towns responsible for planning and public services",
+      "Residents of neighborhoods where additional homes could be built"
+    ],
+    "fiscal_impact": {
+      "text": "The Executive Office of Administration and Finance projects no discernible major effect on state or municipal finances; additional housing could bring municipalities new revenue, but its scale is difficult to estimate.",
+      "label": "prediction",
+      "whose": "Executive Office of Administration and Finance",
+      "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=18&pages=18-19",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "Supporters argue smaller permitted lots would make single-family homes more affordable for young families and seniors.",
+      "headline_topic": "Minimum lot size",
+      "more_reasons": [
+        "Supporters argue large required lots encourage builders to build very large houses to recover land costs, rather than lower-cost starter homes.",
+        "Supporters argue more affordable homes would help residents stay in Massachusetts, keep extended families together, and support the economy."
+      ],
+      "values": [
+        "Housing affordability",
+        "Access to homeownership",
+        "Family and community ties"
+      ],
+      "best_evidence": [
+        {
+          "text": "The proposal would allow single-family homes on qualifying lots of at least 5,000 square feet in residential zones.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=18&pages=18-19",
+          "quote": null
+        },
+        {
+          "text": "Supporters argue reducing required lot sizes would create more affordable homes for young families and seniors.",
+          "label": "prediction",
+          "whose": "Supporters in the official ballot argument",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=18&pages=18-19",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "In supporters' view, young adults seeking starter homes, families priced out of single-family housing, and seniors seeking nearby homes to downsize into.",
+      "answer_to_other_side": "Supporters argue large lot requirements themselves restrict affordable housing; their case emphasizes allowing smaller lots where infrastructure is available, rather than keeping those barriers."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "headline": "Opponents argue a statewide lot-size rule would limit communities' ability to plan housing around local needs and conditions.",
+      "headline_topic": "Minimum lot size",
+      "more_reasons": [
+        "Opponents argue local planning is needed to balance new homes with traffic, public safety, water and sewer capacity, schools, and environmental protection.",
+        "Opponents argue locally accountable officials and residents should guide housing growth through collaboration rather than a uniform statewide requirement."
+      ],
+      "values": [
+        "Local decision-making",
+        "Public-service capacity",
+        "Environmental protection"
+      ],
+      "best_evidence": [
+        {
+          "text": "The proposal would establish a statewide allowance for single-family homes on qualifying residential lots, while preserving reasonable local regulation of specified features.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=18&pages=18-19",
+          "quote": null
+        },
+        {
+          "text": "Opponents argue the statewide rule would reduce local oversight needed to balance housing growth with services and environmental conditions.",
+          "label": "prediction",
+          "whose": "Opponents in the official ballot argument",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=18&pages=18-19",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "In opponents' view, keeping current law helps residents and local officials manage housing growth alongside neighborhood needs, public services, and environmental protection.",
+      "answer_to_other_side": "Opponents agree more housing is needed but argue communities should expand it through local planning that accounts for infrastructure and neighborhood conditions."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "The disagreement is whether a statewide smaller-lot allowance would improve access to affordable homes enough to justify limiting local lot-size rules. The sides also differ on how much control communities need to manage growth and public services."
+    },
+    "evidence": [
+      {
+        "text": "The allowance applies in residential zones and requires both public sewer and water access, plus at least 50 feet bordering a street, road, or public way.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=18&pages=18-19",
+        "quote": null
+      },
+      {
+        "text": "The proposal preserves reasonable local regulation of height, distance from neighboring buildings, open space, parking, and short-term rentals; it does not remove all local oversight.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=18&pages=18-19",
+        "quote": null
+      },
+      {
+        "text": "The Executive Office of Housing and Livable Communities could issue guidance or regulations to administer the law.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=18&pages=18-19",
+        "quote": null
+      },
+      {
+        "text": "The official summary and fiscal statement do not estimate how many homes would be built or how much home prices would change.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=18&pages=18-19",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 4
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 0,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "This fairly captures supporters’ central merits case: large lot requirements raise costs and encourage larger homes, while smaller lots could enable more affordable homes for young families and seniors. It also includes the claimed benefits for staying in Massachusetts, family ties, and the economy. The source’s specific claim that 5,000 square feet is more typical of suburbs nationwide is omitted, but that does not distort the case."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "This fairly presents opponents’ central case that a statewide lot-size rule would constrain local planning and make it harder to balance housing with services and environmental conditions. The source is more emphatic that the measure would require every city and town to allow these homes regardless of local conditions; spelling out that universal requirement would make the No case stronger."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 145,
+          "no": 150,
+          "ratio": 1.03
+        },
+        "headline_words": {
+          "yes": 16,
+          "no": 18
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 9.1,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=18&pages=18-19"
+  ],
+  "meta": {
+    "seconds": 49.4,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 2,
+        "input_tokens": 7861,
+        "cache_read_tokens": 6291,
+        "output_tokens": 1969,
+        "reasoning_tokens": 308,
+        "tool_calls": 1
+      },
+      "critic:gpt-6-luna": {
+        "requests": 1,
+        "input_tokens": 4302,
+        "cache_read_tokens": 0,
+        "output_tokens": 1313,
+        "reasoning_tokens": 1082,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {
+      "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=18&pages=18-19": [
+        "endorse"
+      ]
+    }
+  },
+  "format": "v3.1",
+  "scope": "statewide"
+}

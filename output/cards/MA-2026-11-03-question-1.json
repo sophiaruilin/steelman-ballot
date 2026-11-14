@@ -1,0 +1,428 @@
+{
+  "measure_id": "MA-2026-11-03-question-1",
+  "card": {
+    "measure_id": "MA-2026-11-03-question-1",
+    "number": "Question 1",
+    "official_title": "Expanding the Public Records Law",
+    "plain_title": "Open most Legislature and Governor’s Office records to the public",
+    "title_disputed": false,
+    "put_on_ballot_by": "Citizen initiative petition",
+    "yes_means": "Most records held by the Legislature and Governor’s Office would become public, with exceptions for policy work and some residents’ messages to lawmakers.",
+    "no_means": "The public records law would stay the same, leaving the Legislature’s and Governor’s Office records generally outside its reach.",
+    "what_changes": [
+      {
+        "topic": "Public records access",
+        "today": "The public records law does not generally cover the Legislature’s or Governor’s Office records.",
+        "if_passes": "Most records held by both offices would fall under the public records law.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=6&pages=6-7"
+      },
+      {
+        "topic": "Policy development records",
+        "today": "The public records law does not generally cover these offices’ policy records.",
+        "if_passes": "Documents related to developing public policy would be exempt from disclosure.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=6&pages=6-7"
+      },
+      {
+        "topic": "Constituent communications",
+        "today": "The public records law does not generally cover lawmakers’ messages with residents they represent.",
+        "if_passes": "An exemption would protect messages reasonably tied to requests for help with government benefits, services, or agencies.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=6&pages=6-7"
+      }
+    ],
+    "who_is_affected": [
+      "People seeking government records",
+      "Legislators, the Governor’s Office, and their staff",
+      "Residents who contact legislators"
+    ],
+    "fiscal_impact": {
+      "text": "The state’s fiscal office estimates no meaningful effect on state or local government finances.",
+      "label": "prediction",
+      "whose": "Executive Office of Administration and Finance",
+      "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=6&pages=6-7",
+      "quote": "The proposed law has no discernible material fiscal consequences for state and municipal government finances."
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "Supporters argue the same records law should cover the Legislature and Governor’s Office, giving residents direct access to records now out of reach.",
+      "headline_topic": "Public records access",
+      "more_reasons": [
+        "Supporters argue the measure protects residents’ private requests for help while opening government records.",
+        "Supporters point to the official fiscal estimate, which finds no discernible material fiscal consequences for state or local governments."
+      ],
+      "values": [
+        "Transparency",
+        "Accountability",
+        "Privacy"
+      ],
+      "best_evidence": [
+        {
+          "text": "Supporters argue these offices should follow the same public records law as cities, towns, and state agencies.",
+          "label": "value",
+          "whose": "Supporters in the official argument for",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=6&pages=6-7",
+          "quote": null
+        },
+        {
+          "text": "The measure would open most records from both offices, while exempting lawmakers’ messages with residents about requests for government help.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=6&pages=6-7",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Residents and taxpayers who want to check government actions and spending directly.",
+      "answer_to_other_side": "Supporters emphasize that public access can coexist with privacy protections; the proposal also exempts records related to developing public policy."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "headline": "Opponents argue later release of policy records could limit frank talks among lawmakers and raise constitutional concerns about protections for legislative debate.",
+      "headline_topic": "Policy development records",
+      "more_reasons": [
+        "Opponents argue the narrow privacy exemption could expose sensitive letters and emails, making residents less willing to contact elected officials."
+      ],
+      "values": [
+        "Open legislative discussion",
+        "Constituent privacy",
+        "Civic participation"
+      ],
+      "best_evidence": [
+        {
+          "text": "The official argument against interprets the policy exemption as temporary and argues that later release could discourage frank talks and raise constitutional concerns.",
+          "label": "prediction",
+          "whose": "Secretary of the Commonwealth’s compiled argument against",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=6&pages=6-7",
+          "quote": null
+        },
+        {
+          "text": "The official argument against says exposing other messages from residents could make them less willing to contact elected officials.",
+          "label": "prediction",
+          "whose": "Secretary of the Commonwealth’s compiled argument against",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=6&pages=6-7",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Keeping current law would protect lawmakers’ private talks and residents worried about release of sensitive messages, in this argument’s view.",
+      "answer_to_other_side": "The case against argues that opening records does not ensure real accountability if it also weakens residents’ privacy and frank debate."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "Would broader access help the public hold government accountable enough to justify possible effects on private messages and frank lawmaking? The sides also differ on whether the exemptions offer enough protection."
+    },
+    "evidence": [
+      {
+        "text": "The Attorney General’s summary says most records would become public and exempts policy development documents; it does not specify when that exemption ends.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=6&pages=6-7",
+        "quote": null
+      },
+      {
+        "text": "The summary protects messages tied to residents’ requests for government help; it does not describe an exemption for all messages between residents and lawmakers.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=6&pages=6-7",
+        "quote": null
+      },
+      {
+        "text": "The official fiscal estimate is no meaningful financial effect, rather than a guarantee of zero costs.",
+        "label": "prediction",
+        "whose": "Executive Office of Administration and Finance",
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=6&pages=6-7",
+        "quote": null
+      },
+      {
+        "text": "No organized opposition existed when the guide was printed; the Secretary’s office compiled the official argument against, partly from the Legislature’s Majority Report.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=6&pages=6-7",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 3
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 3,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 3,
+          "reason": "The card gives a plausible accountability case, but misses the central emphasis of the Yes argument: bringing the Legislature and Governor’s Office under the same public-records law as other government bodies, in response to their claimed blanket exemption and Massachusetts’s poor transparency. The source’s argument also emphasizes direct access to see what government is doing with taxpayer dollars."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The card fairly presents the No case that later disclosure of policy-development records could chill lawmakers’ communications, and that the limited constituent-communications exemption could expose personal correspondence and deter civic participation. The phrase “threaten protections,” however, states the constitutional concern more definitively than the source does."
+        },
+        "swap_test_pass": false,
+        "swap_notes": [
+          "The headlines have parallel attribution and length, but “would let residents directly examine” presents the Yes benefit while “would discourage … and threaten protections” presents the No harms as more forceful outcomes. In particular, “threaten protections” is stronger than the source’s claim that the proposal raises constitutional concerns. Rephrase it as a concern, rather than an established effect."
+        ],
+        "fidelity_problems": [
+          "In the No headline, “threaten protections for legislative debate” overstates the source, which says later disclosure could chill communications and raise constitutional concerns around legislative speech and debate protections.",
+          "The “today” cells for policy-development records and constituent communications describe them as outside the *proposed* coverage, rather than clearly stating the current-law baseline. The source says the offices are not generally covered by the current law; describe that baseline, then state the proposal’s specific exemptions in the “if_passes” cells."
+        ],
+        "label_problems": [],
+        "loaded_or_overconfident": [
+          "“Threaten protections” implies a more definite effect than the source’s statement that the proposal raises constitutional concerns."
+        ],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "Automatic checks:\n- Plainer words and shorter sentences in the title, yes/no, What-changes rows and headlines (reading grade 11.5; target about 9).\nCritic:\n1. Strengthen the Yes headline or reasons with the source’s central point: the proposal would put the Legislature and Governor’s Office under the same public-records law as other government bodies, and supporters say this addresses a transparency gap and enables direct public access. 2. Rewrite the “today” cells for policy-development records and constituent communications to state the current-law baseline (the offices’ records are not generally covered), rather than referring to “proposed” coverage. Keep the proposal’s specific exemptions in the “if_passes” cells. 3. Change “threaten protections for legislative debate” to wording that accurately presents the source’s claim as a concern—for example, that opponents say later disclosure could chill communications and raise constitutional concerns about legislative debate protections."
+      },
+      "checks": {
+        "words": {
+          "yes": 108,
+          "no": 121,
+          "ratio": 1.12
+        },
+        "headline_words": {
+          "yes": 21,
+          "no": 21
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 2,
+          "no": 1
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 11.5,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 1,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The case is fairly presented: the proposal applies the same records law to these offices and offers residents greater direct access, while retaining privacy protections. It could better emphasize the supporters’ central accountability claim—giving taxpayers the ability to inspect government actions and spending directly."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The card captures the opponents’ strongest source-based concerns: policy-development records would be released later, potentially chilling candid discussion and raising legislative-debate concerns, while the limited constituent-communications exemption may deter residents from contacting officials."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [],
+        "fidelity_problems": [
+          "The What-changes row for policy-development records says they would be exempt from disclosure but omits the important limit stated in the source’s argument against: the exemption applies during policy development, and those records become public once the policy is developed. Add this timing to the row so the change is not presented as a permanent exemption."
+        ],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. In the policy-development What-changes row, specify that the records would be exempt while policy is being developed and would become public once the policy is developed. Keep the existing treatment of the No-side concern about the later release."
+      },
+      "checks": {
+        "words": {
+          "yes": 119,
+          "no": 133,
+          "ratio": 1.12
+        },
+        "headline_words": {
+          "yes": 23,
+          "no": 22
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 2,
+          "no": 1
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 9.8,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 2,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The case is framed around access to records now out of reach, parity with other public bodies, privacy protections, and accountability. It could better foreground supporters’ argument that residents and taxpayers would be able to inspect government actions and spending directly, but it is a fair account of the central merits."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "It captures the No case’s two main merits concerns: later release of policy-development records could chill candid legislative discussion and raise constitutional concerns, while the narrow constituent-communications exemption could deter residents from contacting lawmakers. The claims are attributed to the official argument against."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The headlines use parallel ‘Supporters argue’ / ‘Opponents argue’ framing and are similar in length and tone. The Yes headline emphasizes access; the No headline gives concrete potential harms, but does not make the overall presentation unfair."
+        ],
+        "fidelity_problems": [
+          "The policy-development row presents as the measure’s operative effect that records become public after policy is developed. The neutral summary says documents related to policy development would be exempt; the claim that the exemption is temporary and those records later become public comes from the argument against. Keep the table’s account to the summary, or explicitly identify the later-release description as the opponents’ interpretation rather than settled legal effect.",
+          "‘Greater access would come without added taxpayer costs’ overstates the official fiscal estimate, which says there are no ‘discernible material fiscal consequences,’ not that there will be no added costs. The supporters’ argument does claim ‘no cost to taxpayers,’ so keep that wording clearly attributed as their claim, or paraphrase the estimate more precisely."
+        ],
+        "label_problems": [
+          "The policy-development row is labeled fact although its ‘public afterward’ wording rests on the opponents’ interpretation of the exemption, not the neutral summary. Revise the claim and attribution; do not present that interpretation as an established fact about the law."
+        ],
+        "loaded_or_overconfident": [
+          "‘without added taxpayer costs’ is more certain than the fiscal estimate. It is supportable only as a clearly attributed claim made by supporters, not as an established fiscal result."
+        ],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. In the policy-development What-changes row, state the exemption as the neutral summary describes it: documents related to developing public policy would be exempt. If retaining the claim that records become public after policy is developed, clearly frame it as the opponents’ interpretation, not a settled provision of the measure.\n2. Revise the Yes-side cost reason so it does not imply a guaranteed absence of costs. For example, attribute ‘no cost to taxpayers’ explicitly to supporters, or say the fiscal estimate finds no discernible material fiscal consequences."
+      },
+      "checks": {
+        "words": {
+          "yes": 119,
+          "no": 133,
+          "ratio": 1.12
+        },
+        "headline_words": {
+          "yes": 23,
+          "no": 22
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 2,
+          "no": 1
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 9.9,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 3,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The card gives the Yes case’s central merits argument: extending public-records access to these offices would let residents inspect government actions directly, while retaining stated exemptions. The official Yes argument also makes an accountability case; the draft conveys that without repeating its more charged rhetoric."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "It fairly presents the No argument’s two main merits concerns: temporary policy-record protection may chill legislative discussion and raise constitutional concerns, and the limited constituent-communication exemption may deter residents from contacting officials. It could more explicitly capture the argument that the exemptions are poorly defined."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The headlines use parallel attribution and similar length. The Yes headline emphasizes expanded access; the No headline emphasizes possible harms. Neither uses noticeably warmer or more certain language than the other."
+        ],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 128,
+          "no": 132,
+          "ratio": 1.03
+        },
+        "headline_words": {
+          "yes": 23,
+          "no": 22
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 2,
+          "no": 1
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 9.9,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=6&pages=6-7"
+  ],
+  "meta": {
+    "seconds": 167.9,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 5,
+        "input_tokens": 32414,
+        "cache_read_tokens": 25113,
+        "output_tokens": 6488,
+        "reasoning_tokens": 451,
+        "tool_calls": 1
+      },
+      "critic:gpt-6-luna": {
+        "requests": 4,
+        "input_tokens": 16553,
+        "cache_read_tokens": 0,
+        "output_tokens": 9247,
+        "reasoning_tokens": 7568,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {
+      "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=6&pages=6-7": [
+        "endorse"
+      ]
+    }
+  },
+  "format": "v3.1",
+  "scope": "statewide"
+}

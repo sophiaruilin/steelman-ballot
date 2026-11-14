@@ -1,0 +1,140 @@
+{
+  "race_id": "CA-2026-11-03-treasurer",
+  "card": {
+    "race_id": "CA-2026-11-03-treasurer",
+    "office": "Treasurer",
+    "what_office_does": {
+      "text": "The Treasurer acts as California’s banker, manages state investments, and oversees sales of state bonds and notes. The office also pays out funds when the Controller and other state agencies spend them.",
+      "label": "fact",
+      "whose": null,
+      "source_url": "https://voterguide.sos.ca.gov/candidates/treasurer-candidate-statements.htm",
+      "quote": null
+    },
+    "candidates": [
+      {
+        "name": "Jennifer Hawks",
+        "party": "Republican",
+        "says_basis": "official_statement",
+        "says": [
+          {
+            "text": "Hawks says she would strengthen oversight and make it clearer how taxpayer money is managed.",
+            "label": "value",
+            "whose": "Jennifer Hawks, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/treasurer-candidate-statements.htm",
+            "quote": null
+          },
+          {
+            "text": "Hawks says she would insist on measurable results and work to expose waste, fraud, and mismanagement.",
+            "label": "value",
+            "whose": "Jennifer Hawks, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/treasurer-candidate-statements.htm",
+            "quote": null
+          },
+          {
+            "text": "Hawks says she would advocate for responsible investing and greater accountability in handling public money.",
+            "label": "value",
+            "whose": "Jennifer Hawks, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/treasurer-candidate-statements.htm",
+            "quote": null
+          }
+        ],
+        "headline": "Hawks says she would protect taxpayer money through greater transparency, stronger oversight, and responsible investing.",
+        "core_case": "Hawks says her experience managing budgets and improving business operations would guide her work as a financial watchdog. She would focus on transparent spending, measurable results, and responsible management of public money.",
+        "priorities": [
+          "Transparency",
+          "Accountability",
+          "Putting taxpayers first"
+        ]
+      },
+      {
+        "name": "Eleni Kounalakis",
+        "party": "Democratic",
+        "says_basis": "official_statement",
+        "says": [
+          {
+            "text": "Kounalakis says she would use public finance to build more affordable housing.",
+            "label": "value",
+            "whose": "Eleni Kounalakis, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/treasurer-candidate-statements.htm",
+            "quote": null
+          },
+          {
+            "text": "Kounalakis says she would invest in children’s and families’ financial futures and protect Californians’ pensions.",
+            "label": "value",
+            "whose": "Eleni Kounalakis, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/treasurer-candidate-statements.htm",
+            "quote": null
+          },
+          {
+            "text": "Kounalakis says she would defend health care and immigrant communities as part of her work as Treasurer.",
+            "label": "value",
+            "whose": "Eleni Kounalakis, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/treasurer-candidate-statements.htm",
+            "quote": null
+          }
+        ],
+        "headline": "Kounalakis says she would responsibly manage state finances and invest to strengthen the economy and create opportunity.",
+        "core_case": "Kounalakis says her experience building housing, financing infrastructure, and serving as Lieutenant Governor prepares her to manage California’s finances. She would use public finance to expand affordable housing while supporting families’ financial futures and protecting pensions.",
+        "priorities": [
+          "Affordable housing through public finance",
+          "Financial future of children and families",
+          "Protect pensions"
+        ]
+      }
+    ],
+    "where_they_differ": {
+      "kind": "values",
+      "text": "Hawks emphasizes taxpayer protection through transparency, oversight, and measurable results. Kounalakis emphasizes using public finance to expand affordable housing and support families, alongside protecting pensions, health care, and immigrant communities."
+    }
+  },
+  "ballot_order_note": "Official order (California assigns it by randomized drawing).",
+  "did": {
+    "Jennifer Hawks": null,
+    "Eleni Kounalakis": null
+  },
+  "funded_by": {
+    "Jennifer Hawks": {
+      "status": "not_connected",
+      "note": "State campaign finance (Cal-Access) not connected yet."
+    },
+    "Eleni Kounalakis": {
+      "status": "not_connected",
+      "note": "State campaign finance (Cal-Access) not connected yet."
+    }
+  },
+  "checks": {
+    "candidates": 2,
+    "with_statements": 2,
+    "words": {
+      "Jennifer Hawks": 93,
+      "Eleni Kounalakis": 97
+    },
+    "word_ratio": 1.04,
+    "headline_words": {
+      "Jennifer Hawks": 15,
+      "Eleni Kounalakis": 17
+    },
+    "reading_grade": 14.6,
+    "loaded_words": [],
+    "attacks_or_funders": [],
+    "recommendation": [],
+    "outcome_or_polls": [],
+    "instruction_like_text": []
+  },
+  "sources": [
+    "https://voterguide.sos.ca.gov/candidates/treasurer-candidate-statements.htm"
+  ],
+  "meta": {
+    "seconds": 12.5,
+    "usage_by_model": {
+      "gpt-6-astra": {
+        "requests": 2,
+        "input_tokens": 4074,
+        "cache_read_tokens": 2834,
+        "output_tokens": 857,
+        "reasoning_tokens": 74,
+        "tool_calls": 1
+      }
+    }
+  }
+}

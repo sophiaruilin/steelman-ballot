@@ -1,0 +1,57 @@
+{
+ "lang": "es",
+ "card_id": "NY-2026-11-03-nyc-proposal-1",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Eliminar las audiencias obligatorias para permisos de uso del espacio público y la facultad del Concejo Municipal de rechazar permisos para cafés en las aceras",
+  "yes_means": "Las nuevas solicitudes para usar aceras y calles públicas ya no requerirían audiencias ni avisos en periódicos, y el Concejo Municipal ya no podría rechazar permisos para cafés en las aceras.",
+  "no_means": "Las solicitudes seguirían requiriendo audiencias públicas y avisos en periódicos pagados por quienes solicitan los permisos, y el Concejo Municipal conservaría la facultad de rechazar permisos para cafés en las aceras.",
+  "what_changes": [
+   {
+    "topic": "Audiencias públicas",
+    "today": "El DOT o la OTI debe celebrar una audiencia pública sobre las solicitudes de permiso para usar espacios públicos.",
+    "if_passes": "Las audiencias serían opcionales, pero las juntas comunitarias y los funcionarios electos seguirían recibiendo avisos y podrían hacer comentarios."
+   },
+   {
+    "topic": "Costos de los avisos públicos",
+    "today": "Quienes solicitan los permisos deben pagar para publicar avisos en periódicos locales.",
+    "if_passes": "Quienes solicitan los permisos ya no pagarían por los anuncios en periódicos, pero los avisos seguirían apareciendo en el City Record."
+   },
+   {
+    "topic": "Revisión de permisos para cafés en las aceras",
+    "today": "El Concejo Municipal puede rechazar permisos para cafés en las aceras incluso después de que el DOT los apruebe.",
+    "if_passes": "El Concejo perdería esa facultad, y los cafés en las aceras seguirían el mismo proceso que otros permisos para usar espacios públicos."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Decisiones oportunas",
+    "Menores costos de solicitud",
+    "Participación de la comunidad"
+   ],
+   "headline": "Eliminar las audiencias obligatorias agilizaría los permisos para usar espacios públicos y mantendría los avisos y comentarios de la comunidad.",
+   "more_reasons": [
+    "La propuesta también eliminaría el gasto obligatorio de quienes solicitan permisos en anuncios de periódicos.",
+    "Las juntas comunitarias y los funcionarios electos todavía podrían hacer comentarios sobre las solicitudes."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Participación pública",
+    "Supervisión de funcionarios electos"
+   ],
+   "headline": "Mantener las audiencias obligatorias garantizaría la participación pública y conservaría la facultad del Concejo de rechazar permisos para cafés en las aceras.",
+   "more_reasons": [
+    "Mantener las reglas actuales conservaría la facultad del Concejo de rechazar un permiso para un café en la acera después de la aprobación de la agencia."
+   ]
+  },
+  "crux": "La disyuntiva principal es entre un proceso de solicitud más corto y menos costoso, y audiencias garantizadas junto con la facultad del Concejo de rechazar permisos para cafés en las aceras. Se mantendrían los avisos y los comentarios, pero no algunas facultades de revisión formal.",
+  "who_is_affected": [
+   "Propietarios de inmuebles y negocios que solicitan usar aceras o calles",
+   "Operadores de cafés en las aceras",
+   "Personas que usan aceras, rampas de acceso, bancas y refugios de autobús",
+   "Juntas comunitarias, miembros del Concejo y presidentes de los condados",
+   "Agencias de la Ciudad que revisan solicitudes para usar espacios públicos"
+  ]
+ }
+}

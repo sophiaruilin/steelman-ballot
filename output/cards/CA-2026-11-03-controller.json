@@ -1,0 +1,126 @@
+{
+  "race_id": "CA-2026-11-03-controller",
+  "card": {
+    "race_id": "CA-2026-11-03-controller",
+    "office": "Controller",
+    "what_office_does": {
+      "text": "The Controller is California’s chief fiscal officer and keeps accounts of all public funds. The office runs the state payroll system, administers unclaimed property laws, and audits and reviews state operations.",
+      "label": "fact",
+      "whose": null,
+      "source_url": "https://voterguide.sos.ca.gov/candidates/controller-candidate-statements.htm",
+      "quote": null
+    },
+    "candidates": [
+      {
+        "name": "Malia M. Cohen",
+        "party": "Democratic",
+        "says_basis": "official_statement",
+        "says": [
+          {
+            "text": "Cohen says taxpayer dollars should be managed with transparency, accountability, and fairness.",
+            "label": "value",
+            "whose": "Malia M. Cohen, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/controller-candidate-statements.htm",
+            "quote": "She is running for re-election to ensure taxpayer dollars are managed with transparency, accountability, and fairness."
+          },
+          {
+            "text": "Cohen says budgets should reflect shared values and invest in people, while protecting California’s financial future.",
+            "label": "value",
+            "whose": "Malia M. Cohen, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/controller-candidate-statements.htm",
+            "quote": null
+          }
+        ],
+        "headline": "Cohen says she would manage taxpayer dollars with transparency, accountability, and fairness.",
+        "core_case": "Cohen presents transparent and fair financial management as a way to protect California’s financial future. She points to her stated work expanding public financial data and advancing payroll modernization as the foundation for another term.",
+        "priorities": [
+          "Transparency, accountability, and fairness",
+          "Invest in people",
+          "Protecting California’s financial future"
+        ]
+      },
+      {
+        "name": "Herb W Morgan",
+        "party": "Republican",
+        "says_basis": "official_statement",
+        "says": [
+          {
+            "text": "Morgan says he would put all state expenditures in an easy-to-use online database with transaction-level details and near real-time reporting.",
+            "label": "prediction",
+            "whose": "Herb W Morgan, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/controller-candidate-statements.htm",
+            "quote": "placing all expenditures in an easy-to-use online database with transaction-level detail and near real-time reporting"
+          },
+          {
+            "text": "Morgan emphasizes audits before and after spending to promote efficiency and verify performance and proper use of public funds.",
+            "label": "value",
+            "whose": "Herb W Morgan, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/controller-candidate-statements.htm",
+            "quote": null
+          }
+        ],
+        "headline": "Morgan says he would publish all state expenditures online with transaction-level detail and near real-time reporting.",
+        "core_case": "Morgan proposes detailed, timely public spending information alongside rigorous audits. He says this transparency would build trust and direct resources more effectively to classrooms, communities, and essential programs.",
+        "priorities": [
+          "Transaction-level detail and near real-time reporting",
+          "Efficiency in state government",
+          "Rigorous post-audits"
+        ]
+      }
+    ],
+    "where_they_differ": {
+      "kind": "values",
+      "text": "Both emphasize transparency. Cohen stresses fairness and budgets that invest in people, while Morgan focuses on a detailed spending database and audits to improve efficiency and verify how funds are used."
+    }
+  },
+  "ballot_order_note": "Official order (California assigns it by randomized drawing).",
+  "did": {
+    "Malia M. Cohen": null,
+    "Herb W Morgan": null
+  },
+  "funded_by": {
+    "Malia M. Cohen": {
+      "status": "not_connected",
+      "note": "State campaign finance (Cal-Access) not connected yet."
+    },
+    "Herb W Morgan": {
+      "status": "not_connected",
+      "note": "State campaign finance (Cal-Access) not connected yet."
+    }
+  },
+  "checks": {
+    "candidates": 2,
+    "with_statements": 2,
+    "words": {
+      "Malia M. Cohen": 75,
+      "Herb W Morgan": 83
+    },
+    "word_ratio": 1.11,
+    "headline_words": {
+      "Malia M. Cohen": 12,
+      "Herb W Morgan": 16
+    },
+    "reading_grade": 13.5,
+    "loaded_words": [],
+    "attacks_or_funders": [],
+    "recommendation": [],
+    "outcome_or_polls": [],
+    "instruction_like_text": []
+  },
+  "sources": [
+    "https://voterguide.sos.ca.gov/candidates/controller-candidate-statements.htm"
+  ],
+  "meta": {
+    "seconds": 15.3,
+    "usage_by_model": {
+      "gpt-6-astra": {
+        "requests": 2,
+        "input_tokens": 3902,
+        "cache_read_tokens": 2829,
+        "output_tokens": 806,
+        "reasoning_tokens": 114,
+        "tool_calls": 1
+      }
+    }
+  }
+}

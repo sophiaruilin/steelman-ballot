@@ -1,0 +1,63 @@
+{
+ "lang": "es",
+ "card_id": "CA-2026-11-03-prop-42",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Prohibir nuevos impuestos estatales sobre los bienes personales y limitar los impuestos retroactivos",
+  "yes_means": "Un voto por el sí enmendaría la Constitución estatal para prohibir nuevos impuestos estatales por poseer bienes personales y ciertos impuestos nuevos aplicados a actividades o situaciones del pasado.",
+  "no_means": "Un voto por el no dejaría sin cambios la autoridad actual del estado para crear impuestos sobre los bienes personales y aplicar impuestos retroactivamente.",
+  "what_changes": [
+   {
+    "topic": "Impuestos sobre activos financieros",
+    "today": "El estado grava los ingresos provenientes de activos financieros, pero no el simple hecho de poseer acciones o cuentas de inversión.",
+    "if_passes": "Se prohibirían nuevos impuestos estatales por poseer activos financieros, incluidos los activos en cuentas de jubilación e inversión."
+   },
+   {
+    "topic": "Otros bienes personales",
+    "today": "Algunos bienes personales ya están sujetos a impuestos, incluidos los vehículos y los equipos comerciales.",
+    "if_passes": "También se prohibirían nuevos impuestos estatales por poseer bienes personales que no sean activos financieros."
+   },
+   {
+    "topic": "Impuestos retroactivos",
+    "today": "La Legislatura o una medida electoral pueden aumentar los impuestos que se aplican a cosas que ocurrieron en el pasado.",
+    "if_passes": "Se limitarían las situaciones en las que cualquiera de las dos podría aumentar los impuestos retroactivamente."
+   },
+   {
+    "topic": "Ingresos tributarios futuros",
+    "today": "El estado cuenta con opciones para aumentar los impuestos que esta medida restringiría.",
+    "if_passes": "Los ingresos tributarios futuros podrían ser menores de lo que serían de otro modo, en una cantidad desconocida."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Seguridad en la jubilación",
+    "Reglas tributarias previsibles",
+    "Asequibilidad"
+   ],
+   "headline": "Quienes apoyan la medida sostienen que protegería los ahorros para la jubilación de nuevos impuestos sobre el dinero que las personas ya ganaron y ahorraron.",
+   "more_reasons": [
+    "Sostienen que limitar los impuestos retroactivos daría a las personas reglas más previsibles al planificar sus finanzas.",
+    "Sostienen que evitar una carga tributaria adicional es importante cuando el alto costo de vida ya dificulta ahorrar."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Distribución equitativa de la carga tributaria",
+    "Acceso a la atención médica",
+    "Financiamiento de servicios públicos"
+   ],
+   "headline": "Quienes se oponen sostienen que impediría un impuesto sobre la riqueza de los multimillonarios que debería ayudar a pagar la atención médica.",
+   "more_reasons": [
+    "Sostienen que perder esos posibles ingresos podría poner en riesgo los hospitales y la atención médica asequible.",
+    "Sostienen que los multimillonarios deberían aportar más, en vez de dejar que las familias trabajadoras enfrenten costos más altos de atención médica."
+   ]
+  },
+  "crux": "¿Debería California descartar nuevos impuestos por poseer bienes personales para proteger los ahorros, o conservar esa opción para recaudar ingresos de la riqueza? Las partes también discrepan sobre el riesgo práctico para los ahorros de la gente común frente a la posible pérdida de fondos para la atención médica.",
+  "who_is_affected": [
+   "Personas con ahorros para la jubilación, acciones o cuentas de inversión",
+   "Propietarios de otros bienes personales, incluidos los activos comerciales",
+   "Contribuyentes que podrían enfrentar impuestos sobre actividades pasadas",
+   "El gobierno estatal y las personas que dependen de servicios financiados por el estado"
+  ]
+ }
+}

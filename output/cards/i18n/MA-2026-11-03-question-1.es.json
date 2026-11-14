@@ -1,0 +1,56 @@
+{
+ "lang": "es",
+ "card_id": "MA-2026-11-03-question-1",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Hacer públicos la mayoría de los registros de la Legislatura y la Oficina del Gobernador",
+  "yes_means": "La mayoría de los registros que tienen la Legislatura y la Oficina del Gobernador se harían públicos, con excepciones para el trabajo sobre políticas públicas y algunos mensajes de residentes a legisladores.",
+  "no_means": "La ley de registros públicos seguiría igual, por lo que, en general, los registros de la Legislatura y la Oficina del Gobernador seguirían fuera de su alcance.",
+  "what_changes": [
+   {
+    "topic": "Acceso a los registros públicos",
+    "today": "En general, la ley de registros públicos no abarca los registros de la Legislatura ni de la Oficina del Gobernador.",
+    "if_passes": "La mayoría de los registros que tienen ambas oficinas quedarían sujetos a la ley de registros públicos."
+   },
+   {
+    "topic": "Registros sobre la elaboración de políticas públicas",
+    "today": "En general, la ley de registros públicos no abarca los registros sobre políticas públicas de estas oficinas.",
+    "if_passes": "Los documentos relacionados con la elaboración de políticas públicas quedarían exentos de divulgación."
+   },
+   {
+    "topic": "Comunicaciones de los residentes con sus representantes",
+    "today": "En general, la ley de registros públicos no abarca los mensajes entre legisladores y los residentes a quienes representan.",
+    "if_passes": "Una exención protegería los mensajes que razonablemente estén relacionados con solicitudes de ayuda sobre beneficios, servicios o agencias del gobierno."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Transparencia",
+    "Rendición de cuentas",
+    "Privacidad"
+   ],
+   "headline": "Quienes apoyan la medida sostienen que la misma ley de registros debería aplicarse a la Legislatura y a la Oficina del Gobernador, para que los residentes tengan acceso directo a registros que ahora no pueden consultar.",
+   "more_reasons": [
+    "Quienes apoyan la medida sostienen que esta protege las solicitudes privadas de ayuda de los residentes y, al mismo tiempo, abre los registros del gobierno.",
+    "Quienes apoyan la medida señalan el cálculo fiscal oficial, que concluye que no habría consecuencias fiscales materiales perceptibles para los gobiernos estatales o locales."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Debate legislativo abierto",
+    "Privacidad de los residentes",
+    "Participación cívica"
+   ],
+   "headline": "Quienes se oponen sostienen que la divulgación posterior de los registros sobre políticas públicas podría limitar las conversaciones sinceras entre legisladores y generar inquietudes constitucionales sobre las protecciones del debate legislativo.",
+   "more_reasons": [
+    "Quienes se oponen sostienen que la exención limitada de privacidad podría dejar expuestas cartas y correos electrónicos delicados, y hacer que los residentes estén menos dispuestos a comunicarse con sus funcionarios electos."
+   ]
+  },
+  "crux": "¿El mayor acceso ayudaría al público a exigir cuentas al gobierno lo suficiente como para justificar los posibles efectos en los mensajes privados y en la elaboración franca de leyes? Las partes también discrepan sobre si las exenciones ofrecen suficiente protección.",
+  "who_is_affected": [
+   "Personas que buscan registros del gobierno",
+   "Legisladores, la Oficina del Gobernador y su personal",
+   "Residentes que se comunican con legisladores"
+  ]
+ }
+}

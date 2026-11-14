@@ -7,12 +7,12 @@
     "plain_title": "Change how state officials are replaced after a recall",
     "title_disputed": false,
     "put_on_ballot_by": "Legislature",
-    "yes_means": "A yes vote removes the replacement contest from state recall ballots and fills recalled officials’ offices through succession, appointment, or a later election.",
-    "no_means": "A no vote keeps the recall ballot’s two questions: whether to remove the official and who should replace them, with the replacement receiving the most votes taking office if the recall succeeds.",
+    "yes_means": "A yes vote removes the replacement contest from state recall ballots and fills recalled officials’ offices through succession, appointments or later elections.",
+    "no_means": "A no vote keeps the same-ballot choice of whether to remove a state official and who should replace them, with the replacement receiving the most votes winning.",
     "what_changes": [
       {
-        "topic": "Recall ballot choice",
-        "today": "Voters decide both whether to remove a state official and who should replace them.",
+        "topic": "Recall ballot choices",
+        "today": "Voters decide both whether to remove the official and who should replace them.",
         "if_passes": "Voters decide only whether to remove the official.",
         "label": "fact",
         "whose": null,
@@ -20,15 +20,15 @@
       },
       {
         "topic": "Replacing the Governor",
-        "today": "If the Governor is recalled, the replacement candidate with the most votes takes office.",
-        "if_passes": "If the recall occurs before the nomination period closes for the next statewide election during the first two years of the term, the Lieutenant Governor serves until that next statewide election; otherwise, the Lieutenant Governor serves the remainder of the term.",
+        "today": "The replacement candidate with the most recall-election votes becomes Governor.",
+        "if_passes": "The Lieutenant Governor takes over until a statewide election if the recall occurs before the nomination deadline in the term’s first two years; otherwise, for the remaining term.",
         "label": "fact",
         "whose": null,
         "source_url": "https://voterguide.sos.ca.gov/propositions/5/analysis.htm"
       },
       {
         "topic": "Replacing state legislators",
-        "today": "A recalled legislator is replaced by the candidate with the most votes on the same ballot.",
+        "today": "The replacement is chosen in the same recall election.",
         "if_passes": "The seat becomes vacant and typically is filled through a separate special election.",
         "label": "fact",
         "whose": null,
@@ -36,137 +36,122 @@
       },
       {
         "topic": "Replacing other officials",
-        "today": "Voters choose replacements for recalled officials on the recall ballot.",
-        "if_passes": "The Governor appoints replacements for other state offices under existing vacancy rules.",
+        "today": "Voters choose a replacement in the recall election.",
+        "if_passes": "The Governor appoints replacements under existing vacancy rules.",
         "label": "fact",
         "whose": null,
         "source_url": "https://voterguide.sos.ca.gov/propositions/5/analysis.htm"
       }
     ],
     "who_is_affected": [
-      "Voters in state recall elections",
+      "Voters deciding whether to recall state officials",
       "State officials facing recall and potential replacement candidates",
-      "The Lieutenant Governor and Governor, who would fill vacancies or choose replacements",
-      "Residents of legislative districts awaiting a replacement",
+      "The Governor and Lieutenant Governor",
       "State and county election offices and taxpayers"
     ],
     "fiscal_impact": {
-      "text": "The Legislative Analyst estimates unknown net costs or savings, potentially millions of dollars per recall election; separate elections could add costs, while shorter ballots could save money.",
+      "text": "The net effect is unknown: state and local governments could save or spend millions of dollars on rare recall elections, depending on which offices are recalled and whether separate elections are needed.",
       "label": "prediction",
       "whose": "Legislative Analyst",
-      "source_url": "https://voterguide.sos.ca.gov/propositions/5/analysis.htm",
+      "source_url": "https://voterguide.sos.ca.gov/propositions/5/title-summary.htm",
       "quote": null
     },
     "steelman_yes": {
       "side": "Yes",
       "basis": "official_argument",
-      "headline": "Supporters argue it would prevent a replacement from taking office through a recall contest with less than majority voter support.",
-      "headline_topic": "Recall ballot choice",
+      "headline": "Supporters argue it would prevent a replacement from winning a recall contest with only a small share of voters’ support.",
+      "headline_topic": "Recall ballot choices",
       "more_reasons": [
-        "Supporters argue removing the replacement contest would prevent recalls from becoming a shortcut to overturn a regular election and install someone who could not win one.",
-        "Supporters argue succession by the elected Lieutenant Governor provides continuity, with later elections for Governor when required and typically for legislative vacancies, while other recalled offices are filled by appointment."
+        "Supporters argue removing the replacement contest would reduce incentives for costly recalls that simply repeat a recent election.",
+        "Supporters argue succession by the elected Lieutenant Governor would provide continuity after a Governor’s recall."
       ],
       "values": [
         "Majority rule",
-        "Continuity of government",
-        "Accountability"
+        "Accountability",
+        "Continuity of government"
       ],
       "best_evidence": [
         {
-          "text": "Under current law, the replacement candidate with the most votes takes office if the official is recalled; a majority is not required.",
+          "text": "Under current rules, the replacement candidate with the most votes wins; a majority is not required.",
           "label": "fact",
           "whose": null,
           "source_url": "https://voterguide.sos.ca.gov/propositions/5/analysis.htm",
           "quote": null
         },
         {
-          "text": "The Lieutenant Governor would take over after a Governor’s recall, with the length of service depending on when the recall occurs.",
-          "label": "fact",
-          "whose": null,
-          "source_url": "https://voterguide.sos.ca.gov/propositions/5/analysis.htm",
-          "quote": null
-        },
-        {
-          "text": "Supporters argue eliminating the replacement contest would prevent recalls from installing candidates who could not win a regular election, while preserving voters’ power to remove officials.",
-          "label": "prediction",
-          "whose": "Supporters in the official argument",
+          "text": "Supporters argue separating removal from replacement would keep recalls focused on accountability rather than another contest for the office.",
+          "label": "value",
+          "whose": "Supporters in the official ballot argument",
           "source_url": "https://voterguide.sos.ca.gov/propositions/5/arguments-rebuttals.htm",
           "quote": null
         }
       ],
-      "who_it_helps": "In supporters’ view, voters who want recall accountability without a replacement winning through a contest that does not require majority support.",
-      "answer_to_other_side": "Supporters argue voters retain the removal decision and already elect the Lieutenant Governor; ending the same-day replacement contest prevents a candidate winning with only a small share of votes."
+      "who_it_helps": "Voters who want to remove an official without allowing a replacement to win a crowded recall contest with limited support.",
+      "answer_to_other_side": "Supporters reply that voters would retain the power to remove officials, while succession by an elected Lieutenant Governor and regular elections offer alternatives to a replacement winning with a small share of votes."
     },
     "steelman_no": {
       "side": "No",
       "basis": "official_argument",
-      "headline": "Opponents argue it would take away voters’ same-day replacement choice and give the Governor appointment power over many recalled officials’ replacements.",
-      "headline_topic": "Recall ballot choice",
+      "headline": "Opponents argue it would take away voters’ same-election choice of a replacement and leave many replacements to appointment or succession.",
+      "headline_topic": "Recall ballot choices",
       "more_reasons": [
-        "Opponents argue separate replacement elections could leave legislative seats vacant longer and require more taxpayer spending.",
+        "Opponents argue separate replacement elections could leave seats vacant and add taxpayer costs.",
         "Opponents argue allowing a recalled official to run in the later special election could undo the removal voters just approved."
       ],
       "values": [
         "Direct voter choice",
         "Accountability",
-        "Taxpayer cost"
+        "Cost"
       ],
       "best_evidence": [
         {
-          "text": "The measure removes the replacement question and uses appointments to fill recalled state offices other than the Governor and legislative seats.",
+          "text": "The measure replaces same-ballot replacement contests with succession, appointments or separate elections, depending on the office.",
           "label": "fact",
           "whose": null,
           "source_url": "https://voterguide.sos.ca.gov/propositions/5/analysis.htm",
           "quote": null
         },
         {
-          "text": "A separate special election that cannot be combined with a scheduled election could cost state and local governments millions of dollars.",
-          "label": "prediction",
-          "whose": "Legislative Analyst",
-          "source_url": "https://voterguide.sos.ca.gov/propositions/5/analysis.htm",
-          "quote": null
-        },
-        {
-          "text": "A recalled official may be a candidate in a special election to fill the office.",
+          "text": "A recalled official may run in a special election to fill the office.",
           "label": "fact",
           "whose": null,
           "source_url": "https://voterguide.sos.ca.gov/propositions/5/title-summary.htm",
           "quote": null
         }
       ],
-      "who_it_helps": "In opponents’ view, voters who want to choose a replacement immediately, residents who want uninterrupted representation, and taxpayers facing additional elections.",
-      "answer_to_other_side": "Opponents argue the current system lets voters choose who would do better; the concern about majority support does not justify replacing that choice with appointments or delayed elections."
+      "who_it_helps": "Voters who want to choose an immediate replacement themselves when removing a state official.",
+      "answer_to_other_side": "Opponents reply that even a replacement chosen without a majority is chosen directly by voters; they value that choice over having an appointment or succession determine who takes office."
     },
     "crux": {
       "kind": "both",
-      "text": "The central trade-off is preventing a replacement from winning a recall contest without majority support versus keeping voters’ immediate replacement choice. The sides also disagree about whether succession and later elections strengthen accountability or weaken it."
+      "text": "Should voters choose a replacement in the recall election even if that candidate lacks majority support, or should succession, appointments and later elections replace that choice? The sides also disagree about whether the change would reduce costly recalls or add costs and delays."
     },
     "evidence": [
       {
-        "text": "The measure keeps the decision whether to remove a state official but eliminates the same-ballot replacement contest.",
+        "text": "The measure removes the replacement question, not voters’ decision about whether to remove an official.",
         "label": "fact",
         "whose": null,
         "source_url": "https://voterguide.sos.ca.gov/propositions/5/analysis.htm",
         "quote": null
       },
       {
-        "text": "An early Governor recall means one before the nomination period closes for the next statewide election during the first two years of the term; otherwise, the Lieutenant Governor serves the remaining term.",
+        "text": "Not every replacement would face a later special election: the Governor would appoint replacements for offices other than Governor and state legislative seats.",
         "label": "fact",
         "whose": null,
         "source_url": "https://voterguide.sos.ca.gov/propositions/5/analysis.htm",
         "quote": null
       },
       {
-        "text": "Not every replacement would face a later election: legislative vacancies typically require special elections, while other offices besides Governor are filled by appointment.",
+        "text": "After a later-term recall, the Lieutenant Governor would serve the rest of the Governor’s term.",
         "label": "fact",
         "whose": null,
         "source_url": "https://voterguide.sos.ca.gov/propositions/5/analysis.htm",
         "quote": null
       },
       {
-        "text": "The Legislative Analyst does not predict net savings: the published analysis says the net fiscal effect is unknown and depends on which offices are recalled, how often recalls occur, and whether separate elections are needed.",
-        "label": "fact",
-        "whose": null,
+        "text": "Separate special elections could cost millions each, while shorter ballots without replacement candidates could save millions in other recalls; the net effect is unknown.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
         "source_url": "https://voterguide.sos.ca.gov/propositions/5/analysis.htm",
         "quote": null
       }
@@ -178,140 +163,24 @@
     "yes": 4,
     "no": 4
   },
-  "rewrites": 2,
+  "rewrites": 0,
   "review_rounds": [
     {
       "round": 0,
       "verdict": {
         "turing_yes": {
           "score": 4,
-          "reason": "The card captures supporters’ central merits argument: a recall can remove an official by majority vote while the replacement can win with far less, and it presents succession and ordinary elections as alternatives. It could better reflect supporters’ additional argument that separating the questions removes the recall as a shortcut to office, but the core case is fairly stated."
+          "reason": "Fairly captures the strongest merits-based Yes case in the sources: a recall should decide removal, not let a candidate take office with a small share of votes, and removing the replacement contest may reduce incentives to use recalls to replay a recent election. It could foreground the majority-rule concern more explicitly, but it is not a strawman."
         },
         "turing_no": {
           "score": 4,
-          "reason": "The card fairly states opponents’ strongest merits points: voters lose the immediate replacement choice, some vacancies are filled by gubernatorial appointment, and legislative special elections can add cost and delay. It also includes the concern that a recalled official could run again. These points are grounded in the opposition arguments and the analysis."
+          "reason": "Fairly presents the strongest No case: voters lose the same-election choice of a replacement, and appointments, succession, or a later election take its place. It also includes the possibility that a recalled official could run in a later special election. The direct-choice concern is clear, though the card could give the potential delay before a separate election slightly more emphasis."
         },
         "swap_test_pass": true,
         "swap_notes": [
-          "The headlines are similar in length and both make a direct merits claim. The Yes headline frames the change as preventing a low-support replacement; the No headline frames it as removing voter choice and giving the Governor appointment authority. Neither is notably warmer or more forceful than the other."
+          "The two headlines use parallel attribution and similar strength: each says what that side argues, without treating its case as established fact.",
+          "The Yes headline emphasizes the risk of a replacement winning with limited support; the No headline emphasizes loss of voter choice and the alternative filling methods. Neither is noticeably warmer or more confident."
         ],
-        "fidelity_problems": [
-          "The Governor row says the Lieutenant Governor serves until a future statewide election for an “early-term recall.” The analysis gives a more specific rule: the recall must occur before the nomination period closes for the next statewide election during the first two years of the term. Otherwise, the Lieutenant Governor serves the rest of the term. Clarify this threshold and say “next statewide election,” not merely “a future” one."
-        ],
-        "label_problems": [
-          "In evidence, “The Legislative Analyst does not predict net savings” is labeled prediction, though it reports what the analyst’s published analysis says and is checkable now. Label it fact, or rewrite it as a prediction explicitly attributed to the Legislative Analyst if that is what is intended. The separate claim that net fiscal effects are unknown and could be costs or savings is appropriately attributed as an estimate."
-        ],
-        "loaded_or_overconfident": [],
-        "off_the_merits": [],
-        "never_list": [],
-        "false_balance": [],
-        "verdict": "revise",
-        "instructions": "1. In the Governor row, replace “early-term recall” with the precise trigger from the analysis: before the nomination period closes for the next statewide election during the first two years of the term. State that the Lieutenant Governor serves until that next statewide election; otherwise, the Lieutenant Governor serves the remainder of the term. 2. In the evidence list, label “The Legislative Analyst does not predict net savings” as fact because it describes the published analysis, or rephrase it as an attributed forecast and label it prediction."
-      },
-      "checks": {
-        "words": {
-          "yes": 173,
-          "no": 169,
-          "ratio": 1.02
-        },
-        "headline_words": {
-          "yes": 20,
-          "no": 21
-        },
-        "headline_topics_ok": true,
-        "what_changes_rows": 4,
-        "more_reasons": {
-          "yes": 2,
-          "no": 2
-        },
-        "evidence_points": {
-          "yes": 3,
-          "no": 3
-        },
-        "certainty_words": {
-          "yes": 0,
-          "no": 0
-        },
-        "reading_grade": 8.7,
-        "loaded_words": [],
-        "motive_or_funder": [],
-        "recommendation": [],
-        "outcome_or_polls": [],
-        "instruction_like_text": []
-      }
-    },
-    {
-      "round": 1,
-      "verdict": {
-        "turing_yes": {
-          "score": 3,
-          "reason": "The card accurately presents the majority-support argument and continuity through the Lieutenant Governor, but it leaves out another central supporters’ case in the official arguments: that removing the same-ballot replacement contest would prevent recalls from serving as a shortcut to overturn regular election results or install a candidate who could not win a regular election. It also omits the supporters’ taxpayer-cost argument. Those omissions make this a fair summary, but not the Yes side’s strongest case."
-        },
-        "turing_no": {
-          "score": 4,
-          "reason": "It gives the No side’s central merits arguments: voters lose the immediate replacement choice, the Governor would appoint replacements for some offices, later special elections may cost money, and a recalled official could run again. These are well grounded in the official opposition arguments. The presentation could better preserve the opponents’ emphasis on immediate voter choice, but it is not a strawman."
-        },
-        "swap_test_pass": true,
-        "swap_notes": [
-          "The headlines are parallel in structure and similar in length: each attributes a consequence to one side. The Yes headline emphasizes avoiding a replacement without majority support; the No headline emphasizes lost voter choice and appointments. Neither side is plainly described in warmer language."
-        ],
-        "fidelity_problems": [
-          "Yes more_reasons says candidates would be left to compete through the “usual election process.” That overgeneralizes: under the measure, legislative vacancies typically go to a separate special election, but replacements for other offices besides Governor are appointed under existing vacancy rules. Narrow the claim to offices that are filled by election.",
-          "The Yes case omits the proponents’ sourced argument that the same-ballot replacement contest can be used as a shortcut to overturn regular election results or install a candidate who could not win a regular election. Consider including this central rationale, attributed to supporters."
-        ],
-        "label_problems": [],
-        "loaded_or_overconfident": [],
-        "off_the_merits": [],
-        "never_list": [],
-        "false_balance": [],
-        "verdict": "revise",
-        "instructions": "1. In Yes more_reasons, replace the broad claim about candidates competing through the “usual election process” with wording limited to offices that are filled by election; make clear that other recalled offices are filled by appointment. 2. Strengthen the Yes case using the official supporters’ argument that removing the replacement contest prevents a recall from being used as a shortcut to overturn a regular election or install a candidate who could not win a regular election. You may also include their taxpayer-cost argument if space allows."
-      },
-      "checks": {
-        "words": {
-          "yes": 173,
-          "no": 169,
-          "ratio": 1.02
-        },
-        "headline_words": {
-          "yes": 20,
-          "no": 21
-        },
-        "headline_topics_ok": true,
-        "what_changes_rows": 4,
-        "more_reasons": {
-          "yes": 2,
-          "no": 2
-        },
-        "evidence_points": {
-          "yes": 3,
-          "no": 3
-        },
-        "certainty_words": {
-          "yes": 0,
-          "no": 0
-        },
-        "reading_grade": 8.7,
-        "loaded_words": [],
-        "motive_or_funder": [],
-        "recommendation": [],
-        "outcome_or_polls": [],
-        "instruction_like_text": []
-      }
-    },
-    {
-      "round": 2,
-      "verdict": {
-        "turing_yes": {
-          "score": 4,
-          "reason": "It presents the central Yes case in the sources: removing the replacement contest prevents a candidate from taking office with less than majority support, while retaining the recall vote. It also accurately describes the succession and later-election arrangements."
-        },
-        "turing_no": {
-          "score": 4,
-          "reason": "It captures the No case’s strongest merits arguments: voters lose the immediate replacement choice, many offices are filled by gubernatorial appointment, and separate legislative elections may mean delay and added costs. It also notes that a recalled official may run in the later special election."
-        },
-        "swap_test_pass": true,
-        "swap_notes": [],
         "fidelity_problems": [],
         "label_problems": [],
         "loaded_or_overconfident": [],
@@ -323,13 +192,13 @@
       },
       "checks": {
         "words": {
-          "yes": 201,
-          "no": 169,
-          "ratio": 1.19
+          "yes": 147,
+          "no": 130,
+          "ratio": 1.13
         },
         "headline_words": {
           "yes": 20,
-          "no": 21
+          "no": 20
         },
         "headline_topics_ok": true,
         "what_changes_rows": 4,
@@ -338,8 +207,8 @@
           "no": 2
         },
         "evidence_points": {
-          "yes": 3,
-          "no": 3
+          "yes": 2,
+          "no": 2
         },
         "certainty_words": {
           "yes": 0,
@@ -355,32 +224,34 @@
     }
   ],
   "sources": [
-    "https://voterguide.sos.ca.gov/propositions/5/analysis.htm",
     "https://voterguide.sos.ca.gov/propositions/5/title-summary.htm",
+    "https://voterguide.sos.ca.gov/propositions/5/analysis.htm",
     "https://voterguide.sos.ca.gov/propositions/5/arguments-rebuttals.htm"
   ],
   "meta": {
-    "seconds": 132.4,
+    "seconds": 49.9,
     "writer_model": "gpt-6-astra",
     "usage_by_model": {
       "writer:gpt-6-astra": {
-        "requests": 4,
-        "input_tokens": 30522,
-        "cache_read_tokens": 22281,
-        "output_tokens": 4926,
-        "reasoning_tokens": 100,
+        "requests": 2,
+        "input_tokens": 10793,
+        "cache_read_tokens": 6316,
+        "output_tokens": 1649,
+        "reasoning_tokens": 164,
         "tool_calls": 3
       },
       "critic:gpt-6-luna": {
-        "requests": 3,
-        "input_tokens": 21549,
+        "requests": 1,
+        "input_tokens": 6917,
         "cache_read_tokens": 0,
-        "output_tokens": 5783,
-        "reasoning_tokens": 4549,
+        "output_tokens": 1538,
+        "reasoning_tokens": 1250,
         "tool_calls": 0
       }
     },
     "blocked": [],
     "injection_flags": {}
-  }
+  },
+  "format": "v3.1",
+  "scope": "statewide"
 }

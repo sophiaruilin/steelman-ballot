@@ -1,0 +1,332 @@
+{
+  "measure_id": "CA-2026-11-03-prop-38",
+  "card": {
+    "measure_id": "CA-2026-11-03-prop-38",
+    "number": "Prop 38",
+    "official_title": "AUTHORIZES BONDS FOR IMMUNOLOGY MEDICAL RESEARCH. INITIATIVE STATUTE.",
+    "plain_title": "Borrow $8.4 billion for immune-system medical research",
+    "title_disputed": false,
+    "put_on_ballot_by": "Citizen initiative",
+    "yes_means": "The state could borrow $8.4 billion for immune-system research, with rules for funding recipients, California treatment discounts, and sharing research revenue with the state.",
+    "no_means": "Existing medical research funding would continue without this new $8.4 billion bond or its funding requirements.",
+    "what_changes": [
+      {
+        "topic": "Research priorities",
+        "today": "Companies and government agencies fund medical research; earlier California research bonds support stem cell research.",
+        "if_passes": "A new $8.4 billion bond would fund immune-system research, with at least $4.2 billion for cancer, heart disease, and Alzheimer’s disease.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/38/analysis.htm"
+      },
+      {
+        "topic": "Funding decisions",
+        "today": "Companies and government agencies are the major research funding sources.",
+        "if_passes": "About half the new funds would go to one qualifying institute selected by the health department; a research council would award the rest to its member organizations.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/38/analysis.htm"
+      },
+      {
+        "topic": "State debt payments",
+        "today": "The General Fund pays for most state public services and existing bond obligations.",
+        "if_passes": "Repaying the new bond would cost the General Fund an estimated $500 million to $600 million annually for about 20 years.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/38/analysis.htm"
+      },
+      {
+        "topic": "Research revenue sharing",
+        "today": "The state has not issued this proposed bond or established its revenue-sharing requirement.",
+        "if_passes": "Ten percent of research revenue would go to the state, first to cover principal and interest, then to fund more immune-system research.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/38/analysis.htm"
+      },
+      {
+        "topic": "California treatment discounts",
+        "today": "This proposed bond’s treatment discount requirement is not in place.",
+        "if_passes": "Funding recipients would have to sell technology and drugs derived from the research in California for 20 percent below the national average price.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/38/title-summary.htm"
+      }
+    ],
+    "who_is_affected": [
+      "Patients and families affected by diseases studied through the funded research",
+      "California nonprofit research institutes and universities eligible for funding",
+      "California taxpayers and users of General Fund-supported services",
+      "Companies developing or selling treatments based on the funded research"
+    ],
+    "fiscal_impact": {
+      "text": "The bond would cost the state $500 million to $600 million annually for about 20 years. Research revenue could offset part or all of that cost, but the amount is uncertain and could take decades.",
+      "label": "prediction",
+      "whose": "Legislative Analyst",
+      "source_url": "https://voterguide.sos.ca.gov/propositions/38/analysis.htm",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "Supporters argue dedicated immune-system research funding would speed treatments and cures for diseases that affect many families.",
+      "headline_topic": "Research priorities",
+      "more_reasons": [
+        "Supporters argue stable state funding would help universities and nonprofit institutes continue research despite federal funding cuts and uncertainty.",
+        "Supporters argue treatment discounts and disease prevention would lower health costs, while research revenue would help repay the bond."
+      ],
+      "values": [
+        "Saving lives",
+        "Stable research funding",
+        "Affordable treatment"
+      ],
+      "best_evidence": [
+        {
+          "text": "At least $4.2 billion would be dedicated to immune-system research on cancer, heart disease, and Alzheimer’s disease.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/38/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "Supporters argue stable funding would sustain research threatened by federal funding cuts and uncertainty.",
+          "label": "prediction",
+          "whose": "Supporters in the official ballot argument",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/38/arguments-rebuttals.htm",
+          "quote": null
+        },
+        {
+          "text": "The measure generally requires a 20 percent California treatment discount and returns 10 percent of research revenue to the state.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/38/analysis.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Supporters say patients facing serious diseases, their families, and California’s nonprofit research institutions would benefit.",
+      "answer_to_other_side": "Supporters argue immune-system research can address many diseases and needs dependable funding now; public reports, independent audits, and a 2 percent state administration cap provide safeguards."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "headline": "Opponents argue dedicated immune-system research funding would lock in priorities rather than adapt to changing scientific opportunities and public health needs.",
+      "headline_topic": "Research priorities",
+      "more_reasons": [
+        "Opponents argue borrowing would limit budget flexibility because research often fails to produce treatments, and discoveries may not return enough money to repay the state.",
+        "Opponents argue mandatory California discounts could encourage companies to prioritize selling treatments in other states."
+      ],
+      "values": [
+        "Flexible research priorities",
+        "Budget responsibility",
+        "Patient access"
+      ],
+      "best_evidence": [
+        {
+          "text": "Opponents favor setting research priorities through scientific review and public health planning rather than separate ballot measures.",
+          "label": "value",
+          "whose": "Opponents in the official ballot argument",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/38/arguments-rebuttals.htm",
+          "quote": null
+        },
+        {
+          "text": "Opponents argue discoveries may not repay the state: many research efforts never produce treatments, universities rarely bring therapies to market alone, and companies bear substantial development, testing, manufacturing, and approval costs.",
+          "label": "prediction",
+          "whose": "Opponents in the official ballot argument",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/38/arguments-rebuttals.htm",
+          "quote": null
+        },
+        {
+          "text": "Opponents argue the required discount could encourage companies to prioritize sales outside California.",
+          "label": "prediction",
+          "whose": "Opponents in the official ballot argument",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/38/arguments-rebuttals.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Opponents say keeping budget flexibility would benefit taxpayers and people whose health needs fall outside the funded research.",
+      "answer_to_other_side": "Opponents agree that new treatments matter but argue all health priorities should be considered together. They argue that research can benefit patients without returning enough money to the state treasury; audits and spending limits cannot guarantee repayment."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "Is dependable funding for immune-system research worth committing future state budgets to one field? The sides also disagree about whether discoveries, revenue, and lower treatment costs would justify the debt."
+    },
+    "evidence": [
+      {
+        "text": "The Legislative Analyst estimates repayment at $500 million to $600 million a year for about 20 years—not the roughly 25 years stated in the opposition argument.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/38/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "Most medical research projects do not complete all stages through regulatory approval; universities do most basic research, while companies do most applied and clinical research.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/38/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The state’s research revenue is uncertain, and offsetting bond costs could take decades; full repayment from discoveries is not assured.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/38/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "New treatments could increase or decrease average patient-care costs, so the overall effect on state health-program spending is uncertain.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/38/analysis.htm",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 4
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 1,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The Yes case captures its central merits arguments in the sources: dedicated funding for research on serious diseases, a stable funding stream amid claimed federal cuts, and treatment discounts and revenue sharing. The benefits are presented as supporters’ arguments rather than established outcomes."
+        },
+        "turing_no": {
+          "score": 3,
+          "reason": "The card fairly represents the concerns about fixed research priorities, debt, and uncertain revenue, but it omits a major part of the opponents’ case: research often does not reach approval, universities rarely commercialize treatments on their own, and companies bear much of the costly development work—so research revenue may not flow back to the state. That is a central reason opponents give for doubting the bond’s financing model."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The headlines use parallel 'Supporters/Opponents argue...' constructions and convey each side’s distinct case without an evident label-based difference in attribution or certainty."
+        ],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. Strengthen the No case with the opponents’ source-based argument that most research does not reach approval, universities rarely commercialize treatments alone, and companies bear substantial development costs—so discoveries may not generate enough revenue for the state. Attribute this as opponents’ reasoning or clearly label it as their forecast, not as an established fact. 2. In the treatment-discount row, specify that the discount is 20 percent below the national average price, as stated in the official title and summary."
+      },
+      "checks": {
+        "words": {
+          "yes": 154,
+          "no": 157,
+          "ratio": 1.02
+        },
+        "headline_words": {
+          "yes": 17,
+          "no": 21
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 5,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 3,
+          "no": 3
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 1
+        },
+        "reading_grade": 8.9,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 1,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "Fairly presents supporters’ strongest merits-based case: dedicated, stable funding for immunology research aimed at serious diseases, alongside discounts and potential revenue returns. It could give slightly more weight to the supporters’ claim that immunotherapy is already producing treatments and that the measure could help California research institutions continue work amid federal funding cuts, but the existing headline and reasons cover the core case."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "Fairly presents opponents’ central case: a bond commits future budgets to one research field, while research outcomes and repayment are uncertain; the discount rule may also affect where treatments are sold. The case is supported by the official opposition argument and does not caricature the No position."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 154,
+          "no": 184,
+          "ratio": 1.19
+        },
+        "headline_words": {
+          "yes": 17,
+          "no": 21
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 5,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 3,
+          "no": 3
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 2
+        },
+        "reading_grade": 9.0,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://voterguide.sos.ca.gov/propositions/38/title-summary.htm",
+    "https://voterguide.sos.ca.gov/propositions/38/analysis.htm",
+    "https://voterguide.sos.ca.gov/propositions/38/arguments-rebuttals.htm"
+  ],
+  "meta": {
+    "seconds": 97.3,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 3,
+        "input_tokens": 20077,
+        "cache_read_tokens": 13558,
+        "output_tokens": 3687,
+        "reasoning_tokens": 200,
+        "tool_calls": 3
+      },
+      "critic:gpt-6-luna": {
+        "requests": 2,
+        "input_tokens": 14416,
+        "cache_read_tokens": 0,
+        "output_tokens": 4345,
+        "reasoning_tokens": 3773,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {}
+  },
+  "format": "v3.1",
+  "scope": "statewide"
+}

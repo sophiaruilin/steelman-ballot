@@ -1,0 +1,142 @@
+{
+  "race_id": "CA-2026-11-03-sos",
+  "card": {
+    "race_id": "CA-2026-11-03-sos",
+    "office": "Secretary of State",
+    "what_office_does": {
+      "text": "The Secretary of State oversees statewide elections and gives the public access to campaign and lobbying financial information. The office also maintains certain business filings, authenticates trademarks, regulates notaries, helps creditors protect financial interests, and preserves state history.",
+      "label": "fact",
+      "whose": null,
+      "source_url": "https://voterguide.sos.ca.gov/candidates/sos-candidate-statements.htm",
+      "quote": null
+    },
+    "candidates": [
+      {
+        "name": "Donald P. (Don) Wagner",
+        "party": "Republican",
+        "says_basis": "official_statement",
+        "says": [
+          {
+            "text": "Wagner says he would speed up vote counting.",
+            "label": "value",
+            "whose": "Donald P. (Don) Wagner",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/sos-candidate-statements.htm",
+            "quote": "I pledge to speed up vote counting"
+          },
+          {
+            "text": "Wagner says he would secure elections, protect eligible voters' participation, and ensure every legitimate vote is counted.",
+            "label": "value",
+            "whose": "Donald P. (Don) Wagner",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/sos-candidate-statements.htm",
+            "quote": "ensure every eligible voter's right to participate in our democracy, every legitimate vote is counted"
+          },
+          {
+            "text": "Wagner says the Secretary of State's office should be nonpartisan and administer elections fairly.",
+            "label": "value",
+            "whose": "Donald P. (Don) Wagner",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/sos-candidate-statements.htm",
+            "quote": "The Office of Secretary of State should be non-partisan"
+          }
+        ],
+        "headline": "Wagner says he would speed up vote counting and protect voters through secure, fair elections.",
+        "core_case": "Wagner proposes faster vote counting, stronger election security, and nonpartisan administration as a way to build trust in election results while protecting eligible voters' participation.",
+        "priorities": [
+          "Speed up vote counting",
+          "Secure our elections",
+          "Non-partisan Secretary of State"
+        ]
+      },
+      {
+        "name": "Shirley N. Weber",
+        "party": "Democratic",
+        "says_basis": "official_statement",
+        "says": [
+          {
+            "text": "Weber says she would continue protecting voting rights and removing barriers to casting a ballot.",
+            "label": "value",
+            "whose": "Shirley N. Weber",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/sos-candidate-statements.htm",
+            "quote": "I will continue to fight to make sure that nothing stands between you and the ballot box."
+          },
+          {
+            "text": "Weber says every eligible Californian should register and vote, regardless of political views.",
+            "label": "value",
+            "whose": "Shirley N. Weber",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/sos-candidate-statements.htm",
+            "quote": "Every eligible Californian should register to vote and cast their ballot whether we agree politically or not."
+          },
+          {
+            "text": "Weber emphasizes transparent leadership as important to maintaining public trust in elections.",
+            "label": "value",
+            "whose": "Shirley N. Weber",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/sos-candidate-statements.htm",
+            "quote": "And I've been a transparent leader because trust is everything."
+          }
+        ],
+        "headline": "Weber says she would protect voting rights and remove barriers between eligible Californians and the ballot box.",
+        "core_case": "Weber proposes continued protection of voting rights and access to the ballot, emphasizing participation regardless of political views and transparent leadership to maintain trust.",
+        "priorities": [
+          "Protecting your voting rights",
+          "Every eligible Californian should register to vote",
+          "Transparent leadership"
+        ]
+      }
+    ],
+    "where_they_differ": {
+      "kind": "values",
+      "text": "Wagner emphasizes faster vote counting, election security, and making the office nonpartisan; Weber emphasizes protecting voting rights, access to the ballot, and transparent leadership. Both stress eligible voters' participation and public trust, but place different weight on how to protect them."
+    }
+  },
+  "ballot_order_note": "Official order (California assigns it by randomized drawing).",
+  "did": {
+    "Donald P. (Don) Wagner": null,
+    "Shirley N. Weber": null
+  },
+  "funded_by": {
+    "Donald P. (Don) Wagner": {
+      "status": "not_connected",
+      "note": "State campaign finance (Cal-Access) not connected yet."
+    },
+    "Shirley N. Weber": {
+      "status": "not_connected",
+      "note": "State campaign finance (Cal-Access) not connected yet."
+    }
+  },
+  "checks": {
+    "candidates": 2,
+    "with_statements": 2,
+    "words": {
+      "Donald P. (Don) Wagner": 79,
+      "Shirley N. Weber": 81
+    },
+    "word_ratio": 1.03,
+    "headline_words": {
+      "Donald P. (Don) Wagner": 15,
+      "Shirley N. Weber": 17
+    },
+    "reading_grade": 9.8,
+    "loaded_words": [],
+    "attacks_or_funders": [],
+    "recommendation": [],
+    "outcome_or_polls": [
+      "election results"
+    ],
+    "instruction_like_text": []
+  },
+  "sources": [
+    "https://voterguide.sos.ca.gov/candidates/sos-candidate-statements.htm"
+  ],
+  "meta": {
+    "seconds": 15.7,
+    "usage_by_model": {
+      "gpt-6-astra": {
+        "requests": 2,
+        "input_tokens": 4155,
+        "cache_read_tokens": 2838,
+        "output_tokens": 1011,
+        "reasoning_tokens": 144,
+        "tool_calls": 1
+      }
+    }
+  }
+}

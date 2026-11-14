@@ -1,0 +1,374 @@
+{
+  "measure_id": "MA-2026-11-03-question-6",
+  "card": {
+    "measure_id": "MA-2026-11-03-question-6",
+    "number": "Question 6",
+    "official_title": "Natural Resource Conservation Fund",
+    "plain_title": "Dedicate existing tax revenue to natural resource conservation",
+    "title_disputed": false,
+    "put_on_ballot_by": "Citizen initiative petition",
+    "yes_means": "A yes vote creates a Nature for All Fund for conservation, using specified existing sales and use tax revenue subject to legislative approval of funding.",
+    "no_means": "A no vote leaves sales and use tax spending unchanged and does not create this conservation fund.",
+    "what_changes": [
+      {
+        "topic": "Conservation funding",
+        "today": "The affected tax receipts currently support the state operating budget.",
+        "if_passes": "Subject to legislative funding approval, the fund receives 50% of covered tax revenue in its first year of operation and 100% after July 1, 2028, excluding specified transit and school transfers.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=16&pages=16-17"
+      },
+      {
+        "topic": "Projects and recipients",
+        "today": "There is no Nature for All Fund providing these grants.",
+        "if_passes": "The fund can support land and water protection and outdoor recreation through state agencies, municipalities, conservation charities, tribal governments, and regional public entities.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=16&pages=16-17"
+      },
+      {
+        "topic": "Fund oversight",
+        "today": "There is no Nature for All Board overseeing this proposed fund.",
+        "if_passes": "A new 15-member board sets spending rules, and the environmental agency manages the fund and reports annually on funds spent to buy or improve land in communities with environmental justice populations.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=16&pages=16-17"
+      }
+    ],
+    "who_is_affected": [
+      "Residents who use parks, trails, and other outdoor spaces",
+      "State programs currently supported by the affected tax revenue",
+      "Municipalities, tribal governments, and conservation charities eligible for funding",
+      "Underserved communities and Indigenous peoples represented on the new board"
+    ],
+    "fiscal_impact": {
+      "text": "The Executive Office of Administration and Finance estimates that tens of millions of dollars a year would shift from the state operating budget to the fund, with substantial implementation costs; a full fiscal analysis was not feasible.",
+      "label": "prediction",
+      "whose": "Massachusetts Executive Office of Administration and Finance",
+      "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=16&pages=16-17",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "Supporters argue dedicated funding could protect clean water, land, and wildlife without raising taxes.",
+      "headline_topic": "Conservation funding",
+      "more_reasons": [
+        "Supporters predict that funded conservation projects could reduce pollution and help prevent flooding and storm damage.",
+        "Supporters emphasize accountability through oversight and a required annual report on funds spent to buy or improve land in communities with environmental justice populations."
+      ],
+      "values": [
+        "Environmental protection",
+        "Public access to nature",
+        "Accountability"
+      ],
+      "best_evidence": [
+        {
+          "text": "The proposal would direct eligible existing tax revenue from sporting goods, recreational vehicles, and golf courses to conservation, subject to legislative appropriation, rather than creating a new tax.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=16&pages=16-17",
+          "quote": null
+        },
+        {
+          "text": "Eligible uses include protecting drinking water, farms, forests, and connections between open spaces, as well as creating and improving parks and trails.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=16&pages=16-17",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Supporters emphasize people who need clean water and public outdoor spaces, including future generations.",
+      "answer_to_other_side": "Supporters emphasize redirecting taxes already paid toward water and nature protection rather than adding a tax, with board oversight and annual reporting on land purchases and improvements in communities with environmental justice populations."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "headline": "The against argument emphasizes that permanently earmarking existing revenue could reduce budget flexibility and funding available for other priorities.",
+      "headline_topic": "Conservation funding",
+      "more_reasons": [
+        "The compiled against argument warns that redirected revenue could displace existing infrastructure and environmental priorities, without identifying specific cuts.",
+        "It also argues that creating the fund does not guarantee funding, because the Legislature retains authority over annual spending decisions."
+      ],
+      "values": [
+        "Budget flexibility",
+        "Continuity of existing services",
+        "Reliable funding"
+      ],
+      "best_evidence": [
+        {
+          "text": "The official fiscal statement estimates that the fund would divert tens of millions of dollars annually from receipts now supporting the state operating budget.",
+          "label": "prediction",
+          "whose": "Massachusetts Executive Office of Administration and Finance",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=16&pages=16-17",
+          "quote": null
+        },
+        {
+          "text": "The proposed tax-revenue transfers are subject to appropriation, meaning the Legislature must approve funding.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=16&pages=16-17",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "This case emphasizes people served by existing state programs. No organized group urged No when the guide was printed; the Secretary nevertheless included a compiled against argument, drawn partly from the Legislature’s Majority Report.",
+      "answer_to_other_side": "The compiled against argument emphasizes that avoiding a tax increase does not avoid a budget trade-off: directing existing revenue to conservation could leave less for other priorities, while annual funding remains uncertain."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "The central trade-off is dedicated conservation funding versus keeping existing revenue available for other state priorities. The sources do not establish which programs would lose funding or the full size of the costs and benefits."
+    },
+    "evidence": [
+      {
+        "text": "The funding formula covers taxes on sporting goods, recreational vehicles, and golf courses, but excludes revenue transferred to the specified MBTA and school construction funds.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=16&pages=16-17",
+        "quote": null
+      },
+      {
+        "text": "The Attorney General's summary makes both the initial 50% transfer and the later 100% transfer subject to legislative funding approval.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=16&pages=16-17",
+        "quote": null
+      },
+      {
+        "text": "The board must include representatives of underserved communities and Indigenous peoples, and its rules must address environmental justice, Indigenous cultural resources, and affordable housing development.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=16&pages=16-17",
+        "quote": null
+      },
+      {
+        "text": "The required annual report concerns funds spent to buy or improve land in cities and towns with environmental justice populations, rather than expressly covering all fund spending.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=16&pages=16-17",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 4
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 2,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The Yes case captures the core merits: dedicated conservation funding from existing taxes, environmental and recreation uses, and the supporters’ claim that the measure does not raise taxes. It could be more careful that the fund’s transfers require legislative appropriation, and that annual reporting covers a specific category of land spending rather than all fund spending."
+        },
+        "turing_no": {
+          "score": 3,
+          "reason": "The card identifies real trade-offs—revenue diverted from the operating budget, implementation costs, and annual appropriation—but its headline leads with the absence of an organized No group rather than the strongest merits case in the source: permanent earmarking may displace funding for other priorities and constrain administrative and budget flexibility. The source also presents an against argument compiled by the Secretary, even though no organized group submitted one."
+        },
+        "swap_test_pass": false,
+        "swap_notes": [
+          "The Yes headline leads with the affirmative benefit, “would protect clean water, land, and wildlife,” while the No headline leads with a procedural disclaimer about no argument being submitted. That makes the Yes case warmer and more forceful.",
+          "The Yes headline says the measure acts “without raising taxes”; the No headline does not state its central trade-off in equally direct terms. Give the No headline a merits-focused formulation about earmarking and budget flexibility."
+        ],
+        "fidelity_problems": [
+          "The Yes reason that annual reporting would let the public see “how funds are spent” overstates the statutory reporting requirement. The source requires an annual report on funds spent to buy or improve land in cities and towns with environmental justice populations; it does not require a report on all fund spending. Narrow this claim.",
+          "The No headline says, “No official argument against was submitted.” The source says no organized group urged a No vote and that no argument was received from principal opponents; it then provides an against argument compiled by the Secretary, partly from the Legislature’s Majority Report. Rephrase to distinguish the absence of an organized opponent-submitted argument from the presence of the compiled argument.",
+          "The funding row says the fund receives 50% “in its first year.” The source specifies the first year of the fund’s operation. Use that wording to avoid suggesting a calendar or fiscal year."
+        ],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. Replace the No headline’s procedural disclaimer with the strongest sourced No-side merits point: the measure permanently earmarks revenue now supporting other priorities and may reduce budget flexibility. Keep claims about displacement or effects on particular programs qualified; the sources do not identify specific cuts. 2. Clarify that no organized group urged No, while the Secretary’s guide nevertheless includes a compiled against argument. 3. Narrow the Yes annual-reporting point to the required report on funds spent to buy or improve land in communities with environmental justice populations; do not imply reporting covers all fund spending. 4. Change “in its first year” in the funding row to “in its first year of operation.”"
+      },
+      "checks": {
+        "words": {
+          "yes": 128,
+          "no": 146,
+          "ratio": 1.14
+        },
+        "headline_words": {
+          "yes": 14,
+          "no": 17
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 1
+        },
+        "reading_grade": 10.0,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 1,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "Fairly captures the supporters’ central merits case: conservation benefits funded from existing taxes, without a tax increase, plus oversight and public access. It could better foreground the supporters’ stated scale—up to $100 million per year—and their future-generations argument, but the sources do not require repeating every point."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "Fairly states the main against case in the guide: earmarking revenue may displace other priorities and constrain budget flexibility, while legislative appropriation means funding is not guaranteed. It appropriately notes that the compiled argument identifies no specific cuts."
+        },
+        "swap_test_pass": false,
+        "swap_notes": [
+          "The Yes headline says the fund is for “protecting clean water, land, and wildlife,” while the No headline says earmarking “could reduce” flexibility and funding. The Yes phrasing sounds more certain about benefits than the No phrasing does about risks. Both are attributed to the respective arguments, but frame the Yes benefit as a claim rather than an established result."
+        ],
+        "fidelity_problems": [
+          "Yes best evidence says the proposal “directs existing taxes ... toward conservation” without mentioning the legislative-appropriation condition. The law’s summary says transfers are subject to appropriation, so this could imply funding is automatic. Qualify the sentence.",
+          "The Yes headline’s “protecting” wording may imply the fund will achieve those outcomes. The source presents these as supporters’ claimed benefits; make that attribution unmistakable."
+        ],
+        "label_problems": [
+          "The Yes reason that projects “would reduce pollution and help prevent flooding and storm damage” is a forecast. It is attributed to supporters in prose, but should be labeled as a prediction with supporters identified as whose claim, if the card’s format supports those fields."
+        ],
+        "loaded_or_overconfident": [
+          "“Protecting” in the Yes headline risks presenting a promised outcome rather than the supporters’ claim. Consider wording it explicitly as what supporters say the fund would help do."
+        ],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. Qualify the Yes best-evidence sentence to say that the proposal would direct eligible existing tax revenue to conservation subject to legislative appropriation. 2. Recast the Yes headline and the pollution/flooding reason as supporters’ projected benefits, not assured outcomes; label the latter a prediction with supporters as the source if the format allows."
+      },
+      "checks": {
+        "words": {
+          "yes": 151,
+          "no": 170,
+          "ratio": 1.13
+        },
+        "headline_words": {
+          "yes": 16,
+          "no": 19
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 1
+        },
+        "reading_grade": 10.4,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 2,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "A fair, strong Yes case: it explains the existing-revenue funding mechanism and names the source-backed benefits supporters emphasize, including clean water, pollution reduction, and flood protection. It could also mention the supporters’ stated estimate of up to $100 million per year, but omitting that does not distort the case."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "A fair, strong No case centered on the change’s main trade-off: revenue redirected to this fund may be less available for other priorities, while appropriations remain subject to legislative approval. It accurately notes that the compiled argument does not identify specific cuts. The substantial implementation costs in the fiscal statement could be made more prominent, but the card does not misrepresent the No case."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The headlines are attributed and both use cautious language about possible effects (“could protect” / “could reduce”). The Yes headline includes the appealing point that no new tax is raised, while the No headline emphasizes the budget trade-off; both are supported by the sources and neither is framed more confidently."
+        ],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 158,
+          "no": 170,
+          "ratio": 1.08
+        },
+        "headline_words": {
+          "yes": 14,
+          "no": 19
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 1
+        },
+        "reading_grade": 10.2,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=16&pages=16-17"
+  ],
+  "meta": {
+    "seconds": 143.6,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 4,
+        "input_tokens": 24707,
+        "cache_read_tokens": 18312,
+        "output_tokens": 5413,
+        "reasoning_tokens": 486,
+        "tool_calls": 1
+      },
+      "critic:gpt-6-luna": {
+        "requests": 3,
+        "input_tokens": 14672,
+        "cache_read_tokens": 0,
+        "output_tokens": 7442,
+        "reasoning_tokens": 6016,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {
+      "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=16&pages=16-17": [
+        "endorse"
+      ]
+    }
+  },
+  "format": "v3.1",
+  "scope": "statewide"
+}

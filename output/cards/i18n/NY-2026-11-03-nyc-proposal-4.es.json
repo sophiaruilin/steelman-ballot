@@ -1,0 +1,52 @@
+{
+ "lang": "es",
+ "card_id": "NY-2026-11-03-nyc-proposal-4",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Usar un solo sistema de permisos de construcción y transferir los permisos de la zona costera a Edificios",
+  "yes_means": "La ciudad usaría un solo sistema de permisos, permitiría que más funcionarios de Edificios aprobaran proyectos y transferiría ciertos permisos de la zona costera al Departamento de Edificios.",
+  "no_means": "Las agencias de la ciudad mantendrían sistemas de permisos separados, seguirían vigentes los límites actuales sobre los funcionarios que pueden aprobar y Servicios para Pequeñas Empresas seguiría gestionando ciertos permisos de la zona costera.",
+  "what_changes": [
+   {
+    "topic": "Un solo sistema de permisos",
+    "today": "Quienes solicitan permisos envían documentos a varias agencias de la ciudad mediante sistemas separados.",
+    "if_passes": "Para 2030, el Departamento de Edificios tendría que crear un solo sistema para solicitar y aprobar permisos, que todas las agencias de la ciudad tendrían que usar."
+   },
+   {
+    "topic": "Más funcionarios con autoridad para aprobar",
+    "today": "El Comisionado de Edificios solo puede nombrar a un número limitado de funcionarios para aprobar documentos de construcción.",
+    "if_passes": "El Comisionado podría nombrar a más funcionarios para aprobar esos documentos."
+   },
+   {
+    "topic": "Responsabilidades sobre los permisos de la zona costera",
+    "today": "Servicios para Pequeñas Empresas gestiona permisos para ciertas estructuras de la zona costera, incluidos edificios marítimos.",
+    "if_passes": "El Departamento de Edificios asumiría esa responsabilidad el 31 de diciembre de 2030 o cuando entre en vigor el nuevo código para estructuras de la zona costera, si eso ocurre antes; los permisos y las aprobaciones existentes no cambiarían."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Servicio más sencillo",
+    "Capacidad para tramitar permisos"
+   ],
+   "headline": "Argumentos a favor: un sistema compartido podría facilitar la solicitud de permisos en las agencias de la ciudad.",
+   "more_reasons": [
+    "Permitir que más funcionarios de Edificios aprueben documentos de construcción podría distribuir el trabajo de aprobación entre más empleados."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Continuidad del servicio",
+    "Implementación cuidadosa"
+   ],
+   "headline": "Argumentos en contra: mantener los sistemas actuales podría evitar las interrupciones que causaría exigir que todas las agencias de la ciudad cambien a un solo sistema.",
+   "more_reasons": []
+  },
+  "crux": "La disyuntiva es entre un proceso de permisos potencialmente más sencillo y el trabajo y las posibles interrupciones que implicaría trasladar a todas las agencias a un solo sistema. Estos argumentos se basan en el resumen oficial, no en las declaraciones presentadas; el resumen no calcula los costos, las demoras ni el tiempo que se ahorraría.",
+  "who_is_affected": [
+   "Personas y empresas que solicitan permisos de construcción",
+   "Propietarios de estructuras de la zona costera incluidas en la transferencia",
+   "Agencias de la ciudad que gestionan permisos de construcción",
+   "Funcionarios de Edificios que aprueban documentos de construcción"
+  ]
+ }
+}

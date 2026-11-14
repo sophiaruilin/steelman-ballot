@@ -1,0 +1,265 @@
+{
+  "measure_id": "NY-2026-11-03-nyc-proposal-2",
+  "card": {
+    "measure_id": "NY-2026-11-03-nyc-proposal-2",
+    "number": "Proposal 2",
+    "official_title": "Reduce City Contractor Paperwork: Require Regular Meetings of Procurement Policy Board",
+    "plain_title": "Change city contracting paperwork, approvals, and public hearings",
+    "title_disputed": false,
+    "put_on_ballot_by": "Not identified in the official guide.",
+    "yes_means": "A yes vote lets city boards simplify contractor questionnaires, expands delegated contract approvals, changes hearing requirements, and requires quarterly Procurement Policy Board meetings.",
+    "no_means": "A no vote keeps the existing questionnaire, approval limits, hearing rules, and lack of a required Procurement Policy Board meeting schedule.",
+    "what_changes": [
+      {
+        "topic": "Contractor questionnaires",
+        "today": "All prospective contractors complete the same detailed questionnaire, maintained by the Mayor’s Office of Contract Services and Comptroller, regardless of contract value.",
+        "if_passes": "The Procurement Policy Board could reduce requirements for some contractors; the Franchise and Concession Review Committee would gain similar authority for franchises and concessions.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-2/"
+      },
+      {
+        "topic": "Service plan hearings",
+        "today": "Agencies contracting for direct services must hold public hearings on their draft annual contracting plans.",
+        "if_passes": "Draft-plan hearings would no longer be required, but agencies would still publish final annual plans.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-2/"
+      },
+      {
+        "topic": "Large contract approvals",
+        "today": "The Mayor’s Office cannot delegate approval of certain contracts over $5 million to agency chief contracting officers.",
+        "if_passes": "It could delegate those approvals too, with the agency commissioner’s approval.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-2/"
+      },
+      {
+        "topic": "Contract public comments",
+        "today": "State law allows public comments instead of in-person hearings for certain higher-value contracts.",
+        "if_passes": "City law would make that option permanent, and the board could set the contract-value threshold for public comments starting October 1, 2030.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-2/"
+      },
+      {
+        "topic": "Board meeting schedule",
+        "today": "The Procurement Policy Board has no required regular meeting schedule.",
+        "if_passes": "The board would have to meet at least every three months beginning January 1, 2027.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-2/"
+      }
+    ],
+    "who_is_affected": [
+      "Businesses and nonprofits seeking city contracts, including smaller contractors",
+      "City agencies and officials who approve contracts",
+      "People using contracted services such as shelters, job training, and youth programs",
+      "Residents who participate in contracting hearings and public comment periods"
+    ],
+    "fiscal_impact": {
+      "text": "The official guide does not include a cost estimate.",
+      "label": "fact",
+      "whose": null,
+      "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-2/",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "no_organized_side",
+      "headline": "Trade-off case from the official summary: allow simpler paperwork for smaller contractors rather than require the same detailed questionnaire for every contract.",
+      "headline_topic": "Contractor questionnaires",
+      "more_reasons": [
+        "Another reason from the summary is allowing agency-level approval of more contracts while keeping commissioner approval.",
+        "The summary also establishes a regular meeting requirement for the board that sets contracting rules."
+      ],
+      "values": [
+        "Administrative flexibility",
+        "Proportionate requirements",
+        "Regular oversight"
+      ],
+      "best_evidence": [
+        {
+          "text": "The board could reduce questionnaire requirements for smaller contractors or lower-value contracts.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-2/",
+          "quote": null
+        },
+        {
+          "text": "Delegation of the additional large-contract approvals would require approval from the agency commissioner.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-2/",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "The analysis-based case centers on contractors eligible for simpler questionnaires and agencies receiving more approval flexibility.",
+      "answer_to_other_side": "The summary shows that removing draft-plan hearings would not eliminate the duty to publish final plans; public comments on certain contracts would also remain."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "no_organized_side",
+      "headline": "Trade-off case from the official summary: keep required hearings on draft service plans rather than leave publication of final plans as the requirement.",
+      "headline_topic": "Service plan hearings",
+      "more_reasons": [
+        "Another reason from the summary is keeping a uniform questionnaire under the Mayor’s Office of Contract Services and Comptroller.",
+        "The summary also shows that rejection would preserve limits on delegating approval of certain contracts over $5 million."
+      ],
+      "values": [
+        "Public participation",
+        "Uniform review",
+        "Central approval"
+      ],
+      "best_evidence": [
+        {
+          "text": "The proposal removes required public hearings on draft annual plans for direct-service contracts.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-2/",
+          "quote": null
+        },
+        {
+          "text": "Current rules require the same detailed questionnaire regardless of contract value and restrict delegation for certain contracts over $5 million.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-2/",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "The analysis-based case centers on residents who want required draft-plan hearings and retention of existing review requirements.",
+      "answer_to_other_side": "Simpler questionnaires are one part of a broader package; keeping current law would also preserve required draft-plan hearings and existing limits on delegated approvals."
+    },
+    "crux": {
+      "kind": "values",
+      "text": "The central trade-off is greater contracting flexibility versus retaining existing review and participation requirements. The cases above are drawn from the official summary, not attributed to submitted supporting or opposing statements."
+    },
+    "evidence": [
+      {
+        "text": "The proposal authorizes simpler questionnaires; the guide does not specify which questions would be removed.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-2/",
+        "quote": null
+      },
+      {
+        "text": "Hearings on draft service-contracting plans and public comments on individual higher-value contracts are separate requirements affected by the proposal.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-2/",
+        "quote": null
+      },
+      {
+        "text": "State law already allows public comments instead of in-person hearings for certain higher-value contracts.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-2/",
+        "quote": null
+      },
+      {
+        "text": "Except for the board’s meeting schedule and its authority to set the public-comment threshold, changes take effect upon certification of voter approval.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-2/",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 4
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 0,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "For a measure with no organized Yes statement, this fairly presents the strongest merits-based case available in the official summary: questionnaire requirements could be scaled for smaller or lower-value contractors, some approvals could be delegated with commissioner approval, and the board would have a regular meeting schedule. It could make the benefit of the meeting requirement clearer, but does not distort the case."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "For a measure with no organized No statement, this fairly presents the central trade-offs: loss of required hearings on draft service plans, retention of a uniform questionnaire, and current limits on delegated approvals. Those are plausible merits-based reasons to reject the package, and the card notes that final plans would still be published and contract comments remain available."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 124,
+          "no": 140,
+          "ratio": 1.13
+        },
+        "headline_words": {
+          "yes": 22,
+          "no": 23
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 5,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 9.5,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-2/",
+    "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/",
+    "https://www.nycvotes.org/sitemap/",
+    "https://www.nycvotes.org/whats-on-the-ballot/2026-ballot-proposals/",
+    "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-2/#supporting-statements",
+    "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-2/#opposing-statement"
+  ],
+  "meta": {
+    "seconds": 87.2,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 10,
+        "input_tokens": 63871,
+        "cache_read_tokens": 52212,
+        "output_tokens": 3391,
+        "reasoning_tokens": 405,
+        "tool_calls": 21
+      },
+      "critic:gpt-6-luna": {
+        "requests": 1,
+        "input_tokens": 11772,
+        "cache_read_tokens": 0,
+        "output_tokens": 1842,
+        "reasoning_tokens": 1614,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {}
+  },
+  "format": "v3.1",
+  "scope": "New York City"
+}

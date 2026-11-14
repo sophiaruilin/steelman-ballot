@@ -1,0 +1,68 @@
+{
+ "lang": "es",
+ "card_id": "CA-2026-11-03-prop-39",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Exigir verificaciones de identidad con documentos oficiales para votar y verificaciones de ciudadanía en los padrones electorales",
+  "yes_means": "Para votar se exigirían verificaciones adicionales de identidad con documentos oficiales del gobierno; habría tarjetas de identificación electoral gratuitas, verificaciones de ciudadanía en los padrones electorales y auditorías periódicas de cumplimiento.",
+  "no_means": "Se mantendrían las verificaciones actuales al inscribirse, los sobres de las boletas por correo firmados con verificación de firma y, por lo general, la identificación mediante firma para votar en persona.",
+  "what_changes": [
+   {
+    "topic": "Verificación de identidad en persona",
+    "today": "Por lo general, los votantes se identifican firmando una lista de votantes inscritos.",
+    "if_passes": "Los votantes deberán presentar un documento de identidad emitido por el gobierno, y los funcionarios deberán verificar su identidad antes de contar las boletas."
+   },
+   {
+    "topic": "Identificación para votar por correo",
+    "today": "Los funcionarios verifican las firmas en los sobres de las boletas por correo.",
+    "if_passes": "Los votantes deberán seleccionar un documento de identidad oficial del gobierno al inscribirse y escribir sus últimos cuatro dígitos en el sobre para que coincidan."
+   },
+   {
+    "topic": "Tarjetas electorales gratuitas",
+    "today": "Para establecer la identidad al inscribirse, se usa un número de licencia de conducir, un número de identificación estatal o los últimos cuatro dígitos del Seguro Social.",
+    "if_passes": "El estado deberá proporcionar una tarjeta de identificación electoral gratuita a los votantes que la soliciten."
+   },
+   {
+    "topic": "Verificación de ciudadanía",
+    "today": "La ciudadanía es un requisito para votar en elecciones estatales y federales; declarar falsamente que se tiene ciudadanía al inscribirse constituye perjurio.",
+    "if_passes": "Los funcionarios deberán hacer todo lo posible por verificar la ciudadanía usando datos del gobierno y presentar cada año el porcentaje verificado de cada condado."
+   },
+   {
+    "topic": "Auditorías de cumplimiento electoral",
+    "today": "El Auditor del Estado revisa los programas del gobierno mediante auditorías periódicas o únicas.",
+    "if_passes": "Cada año impar, el Auditor deberá informar sobre el cumplimiento de esta medida por parte del estado y los condados, y recomendar mejoras."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Confianza en las elecciones",
+    "Padrones electorales precisos",
+    "Acceso al voto"
+   ],
+   "headline": "Quienes apoyan la medida sostienen que las verificaciones de identidad con documentos oficiales del gobierno aumentarían la confianza en las elecciones y animarían a más personas a participar.",
+   "more_reasons": [
+    "Quienes apoyan la medida sostienen que el proceso actual de verificación de firmas en las boletas por correo puede retrasar los resultados y hacer que las boletas corran el riesgo de ser rechazadas cuando se señalan firmas como no coincidentes.",
+    "Quienes apoyan la medida sostienen que las verificaciones de ciudadanía y las auditorías independientes mejorarían la precisión de los padrones electorales y la administración de las elecciones."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Acceso al voto",
+    "Privacidad",
+    "Gasto público"
+   ],
+   "headline": "Quienes se oponen a la medida sostienen que los requisitos adicionales de identificación impedirían que se contaran las boletas por correo de algunos ciudadanos que reúnen los requisitos, debido a errores o información faltante.",
+   "more_reasons": [
+    "Quienes se oponen a la medida sostienen que los costos públicos anuales adicionales no se justifican, dado que ya existen verificaciones al inscribirse y verificaciones de firmas en las boletas por correo.",
+    "Quienes se oponen a la medida sostienen que escribir dígitos de identificación en los sobres crea riesgos para la privacidad, y que obtener un documento de identidad puede requerir tiempo y dinero incluso si la tarjeta no tiene costo."
+   ]
+  },
+  "crux": "Las partes no están de acuerdo sobre si las verificaciones adicionales de identidad aumentarían la confianza y la participación o crearían más obstáculos para los votantes que reúnen los requisitos. También valoran de manera distinta una verificación más estricta frente al acceso, la privacidad y el gasto público.",
+  "who_is_affected": [
+   "Votantes inscritos, incluidas las personas que votan por correo",
+   "Votantes que reúnen los requisitos y no tienen documentos de identidad emitidos por el gobierno",
+   "Funcionarios electorales estatales y de los condados",
+   "El Auditor del Estado y los contribuyentes"
+  ]
+ }
+}

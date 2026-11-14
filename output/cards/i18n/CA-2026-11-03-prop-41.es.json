@@ -1,0 +1,58 @@
+{
+ "lang": "es",
+ "card_id": "CA-2026-11-03-prop-41",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Limitar las nuevas exenciones tributarias del límite de gasto y exigir auditorías de impuestos especiales",
+  "yes_means": "Un voto por el sí prohibiría nuevos impuestos estatales cuyos ingresos queden excluidos del límite de gasto del estado y exigiría auditorías de los programas financiados por impuestos especiales nuevos o aumentados.",
+  "no_means": "Un voto por el no mantendría las reglas actuales sobre el límite de gasto y las prácticas de auditoría existentes, sin agregar estos requisitos.",
+  "what_changes": [
+   {
+    "topic": "Auditorías antes de votar sobre impuestos",
+    "today": "El Auditor Estatal (State Auditor) realiza algunas auditorías únicas, pero no conforme al requisito propuesto para las iniciativas de impuestos especiales.",
+    "if_passes": "Las auditorías comenzarían cuando se reúna el 25 por ciento de las firmas requeridas, identificarían maneras de reducir los costos de los programas en un 10 por ciento y se resumirían en la guía para votantes si la iniciativa reúne los requisitos."
+   },
+   {
+    "topic": "Auditorías periódicas de programas",
+    "today": "El Auditor Estatal ya realiza algunas revisiones periódicas.",
+    "if_passes": "Los programas financiados por impuestos especiales creados o aumentados después del 1 de enero de 2026 serían auditados cada cuatro años, y los costos de las auditorías se pagarían con los nuevos ingresos tributarios."
+   },
+   {
+    "topic": "Límite de gasto del estado",
+    "today": "El estado tiene un límite constitucional sobre los gastos financiados con impuestos, con excepciones para gastos como los de infraestructura.",
+    "if_passes": "Es posible que el estado ya no pueda excluir del límite los nuevos gastos financiados por impuestos especiales."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Rendición de cuentas",
+    "Decisiones informadas",
+    "Gasto eficiente"
+   ],
+   "headline": "Quienes apoyan la medida sostienen que las auditorías independientes periódicas harían más eficaces los programas financiados con impuestos y mejorarían los servicios que recibe la gente.",
+   "more_reasons": [
+    "Quienes apoyan la medida sostienen que los resúmenes públicos de las auditorías ayudarían a los votantes a decidir si los programas necesitan más dinero antes de aprobar impuestos especiales.",
+    "Quienes apoyan la medida sostienen que aplicar el límite de gasto a los nuevos impuestos protegería mejor a los contribuyentes."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Acceso a la atención médica",
+    "Financiamiento estable de los servicios",
+    "Equidad tributaria"
+   ],
+   "headline": "Quienes se oponen sostienen que las restricciones tributarias podrían impedir el impuesto propuesto a los multimillonarios y poner en peligro el financiamiento que mantiene abiertos los hospitales y hace que la atención médica sea asequible.",
+   "more_reasons": [
+    "Quienes se oponen sostienen que perder esos ingresos propuestos también pondría en peligro el apoyo a la educación pública y la asistencia alimentaria.",
+    "Quienes se oponen sostienen que los nuevos requisitos de auditoría le costarían tiempo y dinero al estado."
+   ]
+  },
+  "crux": "La disputa es si una mayor supervisión y reglas de gasto más estrictas mejorarían los servicios públicos lo suficiente como para justificar sus costos y los límites a los nuevos ingresos. Quienes se oponen destacan los riesgos para el impuesto propuesto a los multimillonarios; quienes apoyan la medida destacan que se obtendrían mejores resultados por cada dólar de impuestos.",
+  "who_is_affected": [
+   "Personas que usan programas financiados por impuestos especiales nuevos o aumentados",
+   "Contribuyentes y votantes que consideran iniciativas de impuestos especiales",
+   "Agencias estatales que reciben fondos de impuestos especiales",
+   "El Auditor Estatal (State Auditor)"
+  ]
+ }
+}

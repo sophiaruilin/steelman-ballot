@@ -1,0 +1,362 @@
+{
+  "measure_id": "MA-2026-11-03-question-2",
+  "card": {
+    "measure_id": "MA-2026-11-03-question-2",
+    "number": "Question 2",
+    "official_title": "Collective Bargaining for CPCS Employees",
+    "plain_title": "Allow public counsel employees to bargain collectively",
+    "title_disputed": false,
+    "put_on_ballot_by": "Citizen initiative petition",
+    "yes_means": "CPCS employees could choose to form a union and bargain with their employer, and CPCS would have to request funding from the Governor for any signed agreement.",
+    "no_means": "The law governing labor relations for CPCS employees would remain unchanged.",
+    "what_changes": [
+      {
+        "topic": "Collective bargaining",
+        "today": "Current law does not expressly give CPCS employees permission to bargain collectively with their employer.",
+        "if_passes": "The law would expressly allow CPCS employees to bargain collectively with their employer.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=8&pages=8-9"
+      },
+      {
+        "topic": "Agreement funding",
+        "today": "CPCS receives part of its funding through state appropriations.",
+        "if_passes": "After signing a bargaining agreement, CPCS would have to ask the Governor for the appropriation needed to fund it.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=8&pages=8-9"
+      },
+      {
+        "topic": "State spending",
+        "today": "State funds already support part of CPCS's operations.",
+        "if_passes": "State finances could be affected, but the effect would depend on bargaining outcomes.",
+        "label": "prediction",
+        "whose": "Executive Office of Administration and Finance",
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=8&pages=8-9"
+      }
+    ],
+    "who_is_affected": [
+      "CPCS employees",
+      "CPCS managers",
+      "People who cannot afford an attorney and receive CPCS legal services",
+      "State government, which partly funds CPCS"
+    ],
+    "fiscal_impact": {
+      "text": "The effect on state finances is difficult to estimate because the results of collective bargaining are uncertain; the official statement gives no dollar estimate.",
+      "label": "prediction",
+      "whose": "Executive Office of Administration and Finance",
+      "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=8&pages=8-9",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "Supporters argue it would let CPCS employees choose whether to form a union and bargain together, as other state employees can.",
+      "headline_topic": "Collective bargaining",
+      "more_reasons": [
+        "Supporters argue employees should have a shared voice in negotiating wages, benefits and working conditions."
+      ],
+      "values": [
+        "Employee choice",
+        "Equal treatment",
+        "Worker voice"
+      ],
+      "best_evidence": [
+        {
+          "text": "The proposal would expressly permit CPCS employees to bargain collectively with their employer.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=8&pages=8-9",
+          "quote": null
+        },
+        {
+          "text": "Supporters argue that employees who help protect the right to legal representation should have the same choice to organize as other state employees.",
+          "label": "value",
+          "whose": "Supporters in the official ballot argument",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=8&pages=8-9",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "CPCS employees who want the option to organize and negotiate together.",
+      "answer_to_other_side": "Supporters emphasize that the measure gives employees a choice about organizing; it does not require them to form a union."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "headline": "The official opposing argument warns collective bargaining could limit flexibility and have unintended consequences for legal-service delivery.",
+      "headline_topic": "Collective bargaining",
+      "more_reasons": [
+        "The official opposing argument warns that bargaining could blur management authority and make operations less efficient.",
+        "The official opposing argument also warns of financial risks for the judiciary."
+      ],
+      "values": [
+        "Reliable legal services",
+        "Management flexibility",
+        "Fiscal caution"
+      ],
+      "best_evidence": [
+        {
+          "text": "The official opposing argument warns that collective bargaining could limit CPCS's ability to respond to changing caseloads and staffing needs.",
+          "label": "prediction",
+          "whose": "The official opposing argument, prepared by the Secretary of the Commonwealth",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=8&pages=8-9",
+          "quote": null
+        },
+        {
+          "text": "The official fiscal statement says state finances may be affected, but bargaining outcomes make the impact difficult to estimate.",
+          "label": "prediction",
+          "whose": "Executive Office of Administration and Finance",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=8&pages=8-9",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "The official opposing argument says clients relying on CPCS services could be affected if bargaining limits the agency's flexibility to respond to caseloads, staffing needs and court demands.",
+      "answer_to_other_side": "The official opposing argument emphasizes CPCS's role as an independent judicial agency: employee choice must be weighed against flexibility in delivering constitutionally required defense services."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "The central trade-off is employees' choice to bargain together versus concerns about management flexibility and reliable legal services. The financial effects depend on future bargaining outcomes."
+    },
+    "evidence": [
+      {
+        "text": "The proposal requires CPCS to request funding from the Governor after signing an agreement; that is a requirement to request an appropriation.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=8&pages=8-9",
+        "quote": null
+      },
+      {
+        "text": "The official fiscal statement does not estimate a definite increase or savings because bargaining outcomes are uncertain.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=8&pages=8-9",
+        "quote": null
+      },
+      {
+        "text": "No organized opposition group was identified when the guide was printed; the Secretary prepared the opposing argument partly from the Legislature's Majority Report.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=8&pages=8-9",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 3
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 2,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The card captures the Yes case in the sources: employees would get the choice to organize and bargain, with supporters emphasizing equal treatment and a voice on wages, benefits, and working conditions. It is accurate, though it could more directly reflect the source’s emphasis that this is a choice rather than a requirement."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The card fairly presents the source’s main No concerns: possible disruption to management and supervisory arrangements, ambiguity, inefficiency, reduced flexibility, and fiscal uncertainty. The headline’s added claim that this would put legal services at risk goes beyond the source’s more qualified warning about possible unintended consequences for service delivery."
+        },
+        "swap_test_pass": false,
+        "swap_notes": [
+          "The No headline is more alarming than the Yes headline: “putting legal services at risk” adds a sharper consequence than the source states. The source says there could be unintended consequences for service delivery, particularly if flexibility is limited.",
+          "The Yes headline says “Supporters argue,” while the No headline says “Opponents argue.” Since the source says no organized No group existed and the Secretary compiled the opposing argument, use parallel attribution such as “The official opposing argument warns.”"
+        ],
+        "fidelity_problems": [
+          "The No headline’s “putting legal services at risk” overstates the source. The official argument warns of possible unintended consequences for legal-service delivery, especially if flexibility is limited; it does not say services would be put at risk.",
+          "The phrase “Opponents argue” may imply an organized opposing group, contrary to the source’s note that no such group existed. Attribute the points to the official opposing argument, compiled by the Secretary."
+        ],
+        "label_problems": [
+          "In the evidence item stating that the official fiscal statement does not estimate a definite increase or savings, the claim is about what a document says and is checkable now; label it fact rather than prediction. The uncertainty of future bargaining outcomes can remain described as a prediction or uncertainty."
+        ],
+        "loaded_or_overconfident": [
+          "“Putting legal services at risk” is more alarming and more definite than the source’s qualified warning about possible unintended consequences for service delivery."
+        ],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. Revise the No headline to say the official opposing argument warns that collective bargaining could limit flexibility and create possible unintended consequences for legal-service delivery; remove “putting legal services at risk.” 2. Attribute the No case consistently to “the official opposing argument” rather than “opponents,” given the source’s note that no organized No group existed. 3. Change the label on the evidence claim about what the fiscal statement does or does not estimate from prediction to fact."
+      },
+      "checks": {
+        "words": {
+          "yes": 109,
+          "no": 138,
+          "ratio": 1.27
+        },
+        "headline_words": {
+          "yes": 21,
+          "no": 21
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 1,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 7.9,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 1,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The card presents the strongest sourced Yes case: employees gain a choice to organize, with a shared voice on wages, benefits, and working conditions, and a right described as available to other state employees. It could be fuller, but it is not a strawman."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The card captures the official opposing argument’s main merits-based concerns: reduced flexibility, operational inefficiency, effects on legal-service delivery, and fiscal uncertainty. The source offers these as risks rather than demonstrated outcomes, and the card generally preserves that uncertainty."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [],
+        "fidelity_problems": [
+          "In No’s `who_it_helps`, “keeping current law protects clients” overstates the source. The opposing argument warns of possible disruption and reduced flexibility; it does not establish that keeping current law protects clients. The reference to managers who “must meet court demands” is also an inference, not a stated benefit."
+        ],
+        "label_problems": [],
+        "loaded_or_overconfident": [
+          "“Protects” in No’s `who_it_helps` presents a possible benefit as an assured effect."
+        ],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. Rewrite No’s `who_it_helps` to describe the source’s concern as a possible risk, not a proven protection—for example: “The opposing argument says clients relying on CPCS services could be affected if bargaining limits the agency’s flexibility to respond to caseloads, staffing needs, and court demands.” 2. Remove or qualify the claim that the measure protects managers; the source discusses management frameworks and court demands, but does not identify managers as beneficiaries."
+      },
+      "checks": {
+        "words": {
+          "yes": 109,
+          "no": 140,
+          "ratio": 1.28
+        },
+        "headline_words": {
+          "yes": 21,
+          "no": 17
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 1,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 8.6,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 2,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "Fairly captures the official Yes case: employees gain the choice to organize and bargain over wages, benefits, and working conditions, with equal treatment compared to other state employees as a supporting point. The source does not offer a broader claim about likely workplace outcomes, and the card does not overstate one."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "Fairly presents the official No argument’s main merits: possible limits on flexibility, operational and service-delivery risks, and uncertain fiscal effects. It also includes the concern about CPCS’s judicial role. These are attributed as warnings rather than established outcomes."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 109,
+          "no": 144,
+          "ratio": 1.32
+        },
+        "headline_words": {
+          "yes": 21,
+          "no": 17
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 1,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 8.6,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=8&pages=8-9"
+  ],
+  "meta": {
+    "seconds": 116.0,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 4,
+        "input_tokens": 22256,
+        "cache_read_tokens": 16955,
+        "output_tokens": 4775,
+        "reasoning_tokens": 484,
+        "tool_calls": 1
+      },
+      "critic:gpt-6-luna": {
+        "requests": 3,
+        "input_tokens": 11896,
+        "cache_read_tokens": 0,
+        "output_tokens": 5113,
+        "reasoning_tokens": 3973,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {
+      "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=8&pages=8-9": [
+        "endorse"
+      ]
+    }
+  },
+  "format": "v3.1",
+  "scope": "statewide"
+}

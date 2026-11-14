@@ -1,0 +1,64 @@
+{
+ "lang": "es",
+ "card_id": "MA-2026-11-03-question-8",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Poner fin a las ventas legales de marihuana recreativa en tiendas",
+  "yes_means": "A partir del 1 de enero de 2028, la ley pondría fin a las ventas legales de marihuana recreativa y cambiaría las reglas de posesión, mientras mantendría legal la marihuana medicinal.",
+  "no_means": "Las leyes actuales sobre la marihuana seguirían vigentes, incluidas las ventas recreativas legales, reguladas e imponibles.",
+  "what_changes": [
+   {
+    "topic": "Ventas minoristas de marihuana recreativa",
+    "today": "La ley estatal permite, regula e impone impuestos a las ventas de marihuana recreativa en tiendas.",
+    "if_passes": "Se pondría fin a las leyes que permiten, regulan e imponen impuestos a esas ventas."
+   },
+   {
+    "topic": "Posesión personal",
+    "today": "La ley actual permite la posesión personal de marihuana.",
+    "if_passes": "Los adultos de 21 años o más podrían poseer, regalar o transferir a otro adulto de 21 años o más hasta 1 onza, incluida una cantidad máxima de 5 gramos de concentrado."
+   },
+   {
+    "topic": "Licencias comerciales",
+    "today": "Los negocios con licencia de marihuana recreativa operan bajo la Cannabis Control Commission (Comisión de Control del Cannabis).",
+    "if_passes": "Estos negocios podrían solicitar más rápido licencias para dispensarios medicinales y vender sus existencias restantes a dispensarios medicinales."
+   },
+   {
+    "topic": "Ingresos por impuestos a la marihuana",
+    "today": "Los impuestos sobre las ventas de marihuana recreativa recaudaron alrededor de $280 millones para el estado y $50 millones a nivel local en el año fiscal 2025.",
+    "if_passes": "Los gobiernos estatales y locales recibirían menos ingresos por impuestos a las ventas de marihuana."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Salud pública",
+    "Seguridad vial",
+    "Reducción de los costos sociales"
+   ],
+   "headline": "Quienes apoyan la medida sostienen que poner fin a las ventas en tiendas reduciría los daños relacionados con la marihuana, incluida la conducción bajo sus efectos y los riesgos para la salud mental.",
+   "more_reasons": [
+    "Quienes apoyan la medida calculan que cada $1 de ingresos por impuestos a la marihuana conlleva $4.50 en costos sociales, incluidos los gastos de atención médica, la pérdida de productividad y el delito.",
+    "Quienes apoyan la medida destacan que la propuesta mantendría legal la posesión personal y la marihuana medicinal, mientras pondría fin a las tiendas recreativas."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Seguridad de los consumidores",
+    "Aplicación justa de la ley",
+    "Estabilidad económica"
+   ],
+   "headline": "Quienes se oponen sostienen que poner fin a las ventas en tiendas llevaría la marihuana a mercados ilegales sin reglas para garantizar la seguridad de los productos.",
+   "more_reasons": [
+    "Quienes se oponen sostienen que la aplicación de las leyes sobre la marihuana desviaría recursos de la atención de delitos graves y afectaría más a las comunidades de color.",
+    "Quienes se oponen sostienen que cerrar los negocios recreativos eliminaría empleos e ingresos por impuestos."
+   ]
+  },
+  "crux": "El desacuerdo central es si poner fin a las ventas comerciales de marihuana recreativa reduciría los daños relacionados con la marihuana o trasladaría las ventas a un mercado ilegal menos seguro. Los votantes también deben sopesar las preocupaciones de salud frente al acceso legal, los empleos, los riesgos de la aplicación de la ley y los ingresos públicos.",
+  "who_is_affected": [
+   "Adultos que consumen marihuana recreativa",
+   "Jóvenes sujetos a las sanciones de posesión propuestas",
+   "Negocios de marihuana recreativa y sus trabajadores",
+   "Pacientes de marihuana medicinal y dispensarios",
+   "Gobiernos estatales y locales que reciben ingresos por impuestos a la marihuana"
+  ]
+ }
+}

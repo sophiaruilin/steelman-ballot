@@ -1,0 +1,68 @@
+{
+ "lang": "es",
+ "card_id": "CA-2026-11-03-prop-38",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Pedir prestados $8.4 mil millones para investigación médica del sistema inmunitario",
+  "yes_means": "El estado podría pedir prestados $8.4 mil millones para investigar el sistema inmunitario, con reglas para quienes reciban fondos, descuentos en California para tratamientos y el reparto de los ingresos de la investigación con el estado.",
+  "no_means": "Continuaría el financiamiento actual para la investigación médica, sin este nuevo bono de $8.4 mil millones ni sus requisitos de financiamiento.",
+  "what_changes": [
+   {
+    "topic": "Prioridades de investigación",
+    "today": "Empresas y agencias gubernamentales financian la investigación médica; bonos anteriores de California para investigación apoyan la investigación con células madre.",
+    "if_passes": "Un nuevo bono de $8.4 mil millones financiaría la investigación del sistema inmunitario, con al menos $4.2 mil millones para el cáncer, las enfermedades cardíacas y la enfermedad de Alzheimer."
+   },
+   {
+    "topic": "Decisiones de financiamiento",
+    "today": "Las empresas y las agencias gubernamentales son las principales fuentes de financiamiento para la investigación.",
+    "if_passes": "Aproximadamente la mitad de los nuevos fondos se destinaría a un instituto que cumpla los requisitos y que sería seleccionado por el departamento de salud; un consejo de investigación asignaría el resto a las organizaciones que lo integran."
+   },
+   {
+    "topic": "Pagos de la deuda estatal",
+    "today": "El Fondo General paga la mayoría de los servicios públicos estatales y las obligaciones de bonos existentes.",
+    "if_passes": "Se estima que pagar el nuevo bono le costaría al Fondo General entre $500 millones y $600 millones al año durante unos 20 años."
+   },
+   {
+    "topic": "Reparto de los ingresos de la investigación",
+    "today": "El estado no ha emitido este bono propuesto ni establecido su requisito de reparto de ingresos.",
+    "if_passes": "El 10 por ciento de los ingresos de la investigación se destinaría al estado: primero para cubrir el capital y los intereses, y después para financiar más investigación del sistema inmunitario."
+   },
+   {
+    "topic": "Descuentos para tratamientos en California",
+    "today": "El requisito de descuentos para tratamientos de este bono propuesto no está vigente.",
+    "if_passes": "Quienes reciban fondos tendrían que vender en California la tecnología y los medicamentos derivados de la investigación a un precio 20 por ciento inferior al precio promedio nacional."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Salvar vidas",
+    "Financiamiento estable para la investigación",
+    "Tratamientos asequibles"
+   ],
+   "headline": "Quienes apoyan la medida sostienen que el financiamiento exclusivo para la investigación del sistema inmunitario aceleraría los tratamientos y las curas para enfermedades que afectan a muchas familias.",
+   "more_reasons": [
+    "Quienes apoyan la medida sostienen que el financiamiento estatal estable ayudaría a las universidades y los institutos sin fines de lucro a continuar la investigación a pesar de los recortes y la incertidumbre en el financiamiento federal.",
+    "Quienes apoyan la medida sostienen que los descuentos en los tratamientos y la prevención de enfermedades reducirían los costos de salud, mientras que los ingresos de la investigación ayudarían a pagar el bono."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Prioridades de investigación flexibles",
+    "Responsabilidad presupuestaria",
+    "Acceso de los pacientes"
+   ],
+   "headline": "Quienes se oponen a la medida sostienen que el financiamiento exclusivo para la investigación del sistema inmunitario fijaría las prioridades en lugar de adaptarse a los cambios en las oportunidades científicas y las necesidades de salud pública.",
+   "more_reasons": [
+    "Quienes se oponen a la medida sostienen que pedir dinero prestado limitaría la flexibilidad presupuestaria, porque la investigación a menudo no produce tratamientos y los descubrimientos quizá no generen suficiente dinero para devolverle al estado lo que pidió prestado.",
+    "Quienes se oponen a la medida sostienen que los descuentos obligatorios en California podrían incentivar a las empresas a dar prioridad a la venta de tratamientos en otros estados."
+   ]
+  },
+  "crux": "¿Vale la pena contar con financiamiento confiable para la investigación del sistema inmunitario a cambio de comprometer los presupuestos estatales futuros con un solo campo? Los dos lados también discrepan sobre si los descubrimientos, los ingresos y la reducción de los costos de los tratamientos justificarían la deuda.",
+  "who_is_affected": [
+   "Pacientes y familias afectados por enfermedades estudiadas mediante la investigación financiada",
+   "Institutos de investigación sin fines de lucro y universidades de California que reúnen los requisitos para recibir fondos",
+   "Contribuyentes de California y usuarios de servicios financiados por el Fondo General",
+   "Empresas que desarrollan o venden tratamientos basados en la investigación financiada"
+  ]
+ }
+}

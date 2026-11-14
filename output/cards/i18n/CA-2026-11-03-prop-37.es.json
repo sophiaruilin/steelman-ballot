@@ -1,0 +1,69 @@
+{
+ "lang": "es",
+ "card_id": "CA-2026-11-03-prop-37",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Autorizar $25 mil millones en bonos para préstamos para comprar viviendas nuevas que cumplan los requisitos",
+  "yes_means": "CalHFA podría emitir hasta $25 mil millones en bonos para financiar préstamos para el pago inicial de viviendas nuevas, que los prestatarios pagarían, con posibles cambios en las normas sobre defectos de construcción para los constructores.",
+  "no_means": "Se mantendrían los programas actuales de ayuda para compradores de vivienda y las normas sobre defectos de construcción, sin este nuevo programa de préstamos ni la autorización para emitir bonos.",
+  "what_changes": [
+   {
+    "topic": "Financiamiento con bonos",
+    "today": "CalHFA administra programas de ayuda para vivienda, incluidos préstamos para el pago inicial.",
+    "if_passes": "CalHFA podría vender hasta $25 mil millones en bonos de ingresos, que se pagarían con los pagos de los prestatarios, para financiar un nuevo programa."
+   },
+   {
+    "topic": "Préstamos para el pago inicial",
+    "today": "Los programas gubernamentales actuales ofrecen ayuda para el pago inicial a compradores que cumplen los requisitos.",
+    "if_passes": "El nuevo programa prestaría hasta 17% del precio de la vivienda, y los compradores tendrían que dar un pago inicial de al menos 3%."
+   },
+   {
+    "topic": "Requisitos para compradores",
+    "today": "Los programas actuales de ayuda atienden a compradores de vivienda que cumplen los requisitos; esta medida crearía un programa separado.",
+    "if_passes": "Los prestatarios deben haber vivido en California durante un año, ocupar la vivienda como su residencia principal y ganar menos del doble del ingreso medio de su zona."
+   },
+   {
+    "topic": "Viviendas que cumplen los requisitos",
+    "today": "Los programas actuales de ayuda ayudan a personas que cumplen los requisitos a comprar viviendas.",
+    "if_passes": "El nuevo programa exigiría que los compradores fueran los primeros compradores de una vivienda y que cumplieran los límites de precio de la vivienda."
+   },
+   {
+    "topic": "Normas sobre defectos para constructores",
+    "today": "La ley estatal establece normas de construcción y los pasos que los propietarios deben seguir antes de demandar a los constructores por defectos.",
+    "if_passes": "Los constructores podrían elegir normas laborales más estrictas a cambio de normas diferentes sobre defectos que, por lo general, les darían más flexibilidad."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Acceso a la propiedad de vivienda",
+    "Oferta de viviendas",
+    "Protección de consumidores y contribuyentes"
+   ],
+   "headline": "El argumento a favor del Sí se centra en préstamos que, según sus partidarios, ayudarían a compradores trabajadores y de ingresos medios a superar el obstáculo del pago inicial.",
+   "more_reasons": [
+    "Sus partidarios sostienen que ayudar a las personas a comprar viviendas recién construidas fomentaría la construcción y crearía empleos bien remunerados.",
+    "Sus partidarios destacan que los prestatarios pagarían los préstamos y describen préstamos con tasas fijas por debajo del mercado, límites a los cargos de los prestamistas, protecciones contra prácticas de préstamo injustas y sin penalidad por pago anticipado."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Protecciones para propietarios de vivienda",
+    "Préstamos asequibles",
+    "Certeza de los beneficios"
+   ],
+   "headline": "No se presentó ningún argumento oficial en contra; el caso se centra en la incertidumbre sobre los costos de los préstamos y los beneficios para la construcción, junto con normas sobre defectos más flexibles.",
+   "more_reasons": [
+    "Mantener la ley actual conservaría el proceso vigente para los defectos de construcción, sin los cambios opcionales para los constructores.",
+    "El alcance del programa también dependería de que los inversionistas estuvieran dispuestos a comprar sus bonos."
+   ]
+  },
+  "crux": "La decisión implica ampliar la ayuda para el pago inicial y, al mismo tiempo, cambiar las normas sobre defectos para los constructores que elijan normas laborales más estrictas, con efectos inciertos en la oferta de viviendas y los costos de los préstamos. No se presentó ningún argumento oficial en contra, así que el caso del No se basa en las ventajas y desventajas descritas en el análisis no partidista, no en una postura organizada de oposición.",
+  "who_is_affected": [
+   "Compradores de vivienda de California que cumplan los requisitos del programa de ingresos, residencia y ocupación",
+   "Constructores de viviendas nuevas que cumplan los requisitos y de propiedades no residenciales convertidas",
+   "Trabajadores de la construcción en proyectos que usen las normas laborales opcionales más estrictas",
+   "Propietarios de viviendas cuyos constructores elijan las normas diferentes sobre defectos de construcción",
+   "Inversionistas que compren los bonos de ingresos del programa"
+  ]
+ }
+}

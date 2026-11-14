@@ -1,0 +1,307 @@
+{
+  "measure_id": "NY-2026-11-03-nyc-proposal-4",
+  "card": {
+    "measure_id": "NY-2026-11-03-nyc-proposal-4",
+    "number": "Proposal 4",
+    "official_title": "Simplify Building Permitting and Move Waterfront Permitting to Department of Buildings",
+    "plain_title": "Use one building permit system and move waterfront permits to Buildings",
+    "title_disputed": false,
+    "put_on_ballot_by": "Not identified in the official overview.",
+    "yes_means": "The city would use one permit system, let more Buildings officials approve projects, and move certain waterfront permits to the Buildings Department.",
+    "no_means": "City agencies would keep separate permit systems, current limits on approval officials would stay, and Small Business Services would keep handling certain waterfront permits.",
+    "what_changes": [
+      {
+        "topic": "One permit system",
+        "today": "Applicants send documents to several city agencies through separate systems.",
+        "if_passes": "By 2030, Buildings must create one system for permit requests and approvals that all city agencies must use.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-4/"
+      },
+      {
+        "topic": "More approval officials",
+        "today": "The Buildings Commissioner can appoint only a limited number of officials to approve construction documents.",
+        "if_passes": "The Commissioner could appoint more officials to approve those documents.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-4/"
+      },
+      {
+        "topic": "Waterfront permit duties",
+        "today": "Small Business Services handles permits for certain waterfront structures, including maritime buildings.",
+        "if_passes": "Buildings would take over on December 31, 2030, or when the new waterfront-structure code takes effect, if earlier; existing permits and approvals would stay unchanged.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-4/"
+      }
+    ],
+    "who_is_affected": [
+      "People and businesses seeking construction permits",
+      "Owners of waterfront structures covered by the transfer",
+      "City agencies that handle construction permits",
+      "Buildings officials who approve construction documents"
+    ],
+    "fiscal_impact": {
+      "text": "The official overview does not include a cost estimate.",
+      "label": "fact",
+      "whose": null,
+      "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-4/",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "The case for: one shared system could make it simpler to apply for permits across city agencies.",
+      "headline_topic": "One permit system",
+      "more_reasons": [
+        "Allowing more Buildings officials to approve construction documents could spread the approval work across more staff."
+      ],
+      "values": [
+        "Simpler service",
+        "Capacity to process permits"
+      ],
+      "best_evidence": [
+        {
+          "text": "The overview states that the proposal aims to simplify permitting by creating a central permit hub.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-4/",
+          "quote": "Create centralized construction permits hub to simplify permitting."
+        },
+        {
+          "text": "The proposal would let the Buildings Commissioner appoint more officials to approve construction documents.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-4/",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "This overview-based case concerns applicants who now use separate agency systems. The overview links to supporting and opposing statements, but their contents are not available in the supplied source text; this is not a summary of submitted supporters’ arguments.",
+      "answer_to_other_side": "A shared system could make applications simpler once it is in place, even though agencies would have to change how they work; the overview does not estimate that trade-off."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "headline": "The case against: keeping current systems could avoid disruption from requiring every city agency to switch to one system.",
+      "headline_topic": "One permit system",
+      "more_reasons": [],
+      "values": [
+        "Continuity of service",
+        "Careful implementation"
+      ],
+      "best_evidence": [
+        {
+          "text": "Applicants currently submit construction documents through separate city agency systems.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-4/",
+          "quote": null
+        },
+        {
+          "text": "The proposal would require Buildings to develop one system by 2030 and would require all city agencies to use it.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-4/",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "This overview-based case concerns agencies and applicants who would otherwise have to adjust to the new system. The overview links to supporting and opposing statements, but their contents are not available in the supplied source text; this is not a summary of submitted opponents’ arguments.",
+      "answer_to_other_side": "One system and more approval officials could help applicants, but that does not establish how smoothly every agency could make the change or how much time it would save."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "The trade-off is a potentially simpler permit process versus the work and possible disruption of moving every agency to one system. These cases draw on the official overview, not the submitted statements; the overview does not estimate costs, delays, or time saved."
+    },
+    "evidence": [
+      {
+        "text": "All city agencies would have to use the shared permit system; using it would not be optional.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-4/",
+        "quote": null
+      },
+      {
+        "text": "The proposal allows more officials to approve construction documents, but the overview does not estimate how much faster approvals would become.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-4/",
+        "quote": null
+      },
+      {
+        "text": "The waterfront transfer would leave existing permits and approvals unchanged.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-4/",
+        "quote": "existing permits and approvals would remain unchanged"
+      },
+      {
+        "text": "The official overview gives no cost estimate or estimate of disruption from switching systems.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-4/",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 3
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 1,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 3,
+          "reason": "Accurately identifies the centralized system, but is a thin, summary-based case rather than the strongest merits argument. It omits the proposal’s other stated changes—additional officials authorized to approve permits and transferring waterfront permitting—and the official overview’s stated aim of simplifying permitting. A stronger source-grounded case could explain how one required system and more authorized approvers might simplify or expand permit processing, while clearly presenting those benefits as intended or possible rather than established results."
+        },
+        "turing_no": {
+          "score": 3,
+          "reason": "The continuity concern is a fair trade-off, but the case is narrow and mostly restates what No leaves unchanged. A thoughtful No case could focus on the burden or disruption of requiring every agency to adopt a centralized system, while acknowledging that the overview does not establish the size of that burden or whether the system would improve processing. The source does not provide the submitted opposing statement’s argument, so the card should not imply it has represented that argument."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The wording is broadly parallel, but the Yes headline centers applicants using one system, while the No headline frames the change as agencies being required to adopt a new one. The latter emphasizes compulsion more strongly. Use parallel, neutral wording for both, such as describing the choice between a mandatory shared system and retaining separate systems."
+        ],
+        "fidelity_problems": [
+          "The card’s `basis: no_organized_side` is not supported by the source page: it says supporting and opposing statements are available, though their contents are not included in the visible source text. The card itself correctly notes that the overview does not establish either side lacks an organized argument; align the basis and framing with that caveat.",
+          "The waterfront row omits the effective-date qualification: the transfer takes effect December 31, 2030, or earlier when a new waterfront-structure code takes effect. The separate evidence point includes this accurately, but the What-changes table should carry the timing.",
+          "The proposed waterfront transfer and unchanged existing permits are supported. The fiscal-impact statement that the overview gives no cost estimate is also supported. No numeric fiscal claim is misstated."
+        ],
+        "label_problems": [
+          "No clear mislabeled forecast: the future-tense What-changes statements describe what the proposal would require or change, rather than predicting measured outcomes. Keep any claims about faster processing, savings, or disruption labeled as forecasts with an identified source/whose, not as facts."
+        ],
+        "loaded_or_overconfident": [
+          "The No headline’s phrase “have to adopt a new one” is accurate in substance but more forcefully framed than the Yes headline; use parallel neutral language."
+        ],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "Automatic checks:\n- Plainer words and shorter sentences in the title, yes/no, What-changes rows and headlines (reading grade 11.3; target about 9).\nCritic:\n1. Replace `basis: no_organized_side` and the repeated “not an attributed argument” framing with a precise note that the visible overview links to supporting and opposing statements, but their contents are not available in the supplied source text. Do not claim either side lacks an organized argument. 2. Strengthen both merits cases using only the overview: include the stated simplification aim and additional approval officials in the Yes case; give No a concrete, cautious implementation/continuity concern about requiring every agency to use one system. Do not present unquantified effects as established facts. 3. Make the headlines parallel and neutral, and have each represent its side’s strongest case rather than merely label it summary-based. 4. Add the waterfront transfer’s effective timing to the What-changes row: December 31, 2030, or when the new waterfront-structure code takes effect, if earlier."
+      },
+      "checks": {
+        "words": {
+          "yes": 85,
+          "no": 84,
+          "ratio": 1.01
+        },
+        "headline_words": {
+          "yes": 18,
+          "no": 21
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 0,
+          "no": 0
+        },
+        "evidence_points": {
+          "yes": 1,
+          "no": 1
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 11.3,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 1,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The case fairly presents the overview’s stated aim—simpler applications through a shared system—and the additional approval capacity the proposal permits. It is cautious about unproven effects and clearly discloses that the submitted statements were not available. The case is necessarily limited, but not a strawman."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The case makes a reasonable merits-based argument for continuity: a mandatory switch involving every agency could bring transition difficulties, while the overview provides no estimate of disruption or time saved. It acknowledges the possible applicant benefits rather than denying them. The disruption concern is an inference, not an argument stated in the overview, but it is framed as a possibility."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The headlines are parallel in structure and cautious tone: each identifies a possible consequence of the change, using “could.”",
+          "The Yes side has one additional reason, but both sides have two evidence points and the overall word counts are close; this does not create a material tone imbalance."
+        ],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 137,
+          "no": 128,
+          "ratio": 1.07
+        },
+        "headline_words": {
+          "yes": 17,
+          "no": 19
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 1,
+          "no": 0
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 8.7,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-4/",
+    "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/",
+    "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-4/?tab=supporting-statements"
+  ],
+  "meta": {
+    "seconds": 208.5,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 16,
+        "input_tokens": 127297,
+        "cache_read_tokens": 100612,
+        "output_tokens": 8134,
+        "reasoning_tokens": 3502,
+        "tool_calls": 30
+      },
+      "critic:gpt-6-luna": {
+        "requests": 2,
+        "input_tokens": 9213,
+        "cache_read_tokens": 0,
+        "output_tokens": 3253,
+        "reasoning_tokens": 2223,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {}
+  },
+  "format": "v3.1",
+  "scope": "New York City"
+}

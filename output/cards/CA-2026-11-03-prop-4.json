@@ -1,0 +1,400 @@
+{
+  "measure_id": "CA-2026-11-03-prop-4",
+  "card": {
+    "measure_id": "CA-2026-11-03-prop-4",
+    "number": "Prop 4",
+    "official_title": "REPEALS PROHIBITION AGAINST PUBLIC FUNDING OF ELECTION CAMPAIGNS. LEGISLATIVE STATUTE.",
+    "plain_title": "Allow state and local public funding of candidate campaigns",
+    "title_disputed": false,
+    "put_on_ballot_by": "Legislature",
+    "yes_means": "State and local governments could create public campaign funding programs under new safeguards, and the maximum fine for campaign contributions by foreign entities would triple.",
+    "no_means": "The ban on public funding for most state and local candidate campaigns would remain, with existing exceptions, and maximum fines for foreign campaign contributions would stay unchanged.",
+    "what_changes": [
+      {
+        "topic": "Public campaign funding",
+        "today": "Public funding is banned for most state and local candidate campaigns, with exceptions for certain charter cities.",
+        "if_passes": "State and local governments could create public funding programs, but none would be created by this measure alone.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/4/analysis.htm"
+      },
+      {
+        "topic": "Program rules",
+        "today": "Most state and local governments cannot offer public campaign funding.",
+        "if_passes": "Governments could design programs, but candidates would have to show broad district support and accept spending limits.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/4/analysis.htm"
+      },
+      {
+        "topic": "Protected public funds",
+        "today": "The existing ban prevents most governments from using public money for candidate campaigns.",
+        "if_passes": "New programs could not use money meant for education, transportation, or public safety.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/4/analysis.htm"
+      },
+      {
+        "topic": "Campaign spending restrictions",
+        "today": "Most candidates cannot receive public campaign funding under the existing ban.",
+        "if_passes": "Public campaign money could not pay legal defense fees, fines, or repayment of candidates' personal campaign loans.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/4/analysis.htm"
+      },
+      {
+        "topic": "Foreign contribution fines",
+        "today": "The existing maximum fine for campaign contributions by foreign entities remains unchanged today.",
+        "if_passes": "The maximum fine for campaign contributions by foreign entities would triple.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/4/title-summary.htm"
+      }
+    ],
+    "who_is_affected": [
+      "Candidates for state and local office",
+      "State and local governments considering public campaign funding",
+      "Taxpayers in communities that adopt programs",
+      "Voters and campaign donors"
+    ],
+    "fiscal_impact": {
+      "text": "The Legislative Analyst estimates state guidance costs of a few hundred thousand dollars each year; future public funding programs could have significant costs, depending on government choices and program design.",
+      "label": "prediction",
+      "whose": "Legislative Analyst",
+      "source_url": "https://voterguide.sos.ca.gov/propositions/4/analysis.htm",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "Supporters argue public campaign funding would help qualified candidates compete without personal wealth or reliance on wealthy donors.",
+      "headline_topic": "Public campaign funding",
+      "more_reasons": [
+        "Supporters argue communities should be free to choose and design public funding programs that fit their needs.",
+        "Supporters argue eligibility rules, spending limits, and restrictions on fund use would protect taxpayers."
+      ],
+      "values": [
+        "Fair competition",
+        "Local choice",
+        "Accountability to voters"
+      ],
+      "best_evidence": [
+        {
+          "text": "Supporters argue small-donation matching programs help candidates compete without relying on wealthy donors.",
+          "label": "prediction",
+          "whose": "Supporters in the official ballot argument",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/4/arguments-rebuttals.htm",
+          "quote": null
+        },
+        {
+          "text": "The measure allows governments to create public funding programs but does not create one itself.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/4/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "Candidates receiving public funds would have to show broad district support and agree to spending limits.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/4/analysis.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Supporters say it helps qualified candidates without wealth or wealthy donor networks, and voters seeking more choices.",
+      "answer_to_other_side": "Supporters reply that public funding would be optional, with details decided locally and mandatory eligibility rules and spending limits protecting taxpayers."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "headline": "Opponents argue optional future programs could create significant taxpayer costs, with amounts depending on later government choices and program design.",
+      "headline_topic": "Public campaign funding",
+      "more_reasons": [
+        "Opponents argue public funding could pay for more negative ads, unwanted campaign mail, and text messages.",
+        "Opponents argue public funding would not remove private donor influence because candidates could still receive private contributions."
+      ],
+      "values": [
+        "Taxpayer protection",
+        "Clear funding limits",
+        "Accountability"
+      ],
+      "best_evidence": [
+        {
+          "text": "The Legislative Analyst says future programs could have significant costs, depending on which governments adopt them and how they are designed.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/4/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "Opponents argue public funding would increase negative advertising, campaign mail, and text messages.",
+          "label": "prediction",
+          "whose": "Opponents in the official ballot argument",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/4/arguments-rebuttals.htm",
+          "quote": null
+        },
+        {
+          "text": "Opponents argue allowing candidates to receive both public money and private contributions would leave private donor influence in place.",
+          "label": "prediction",
+          "whose": "Opponents in the official ballot argument",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/4/arguments-rebuttals.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Opponents say keeping the ban protects taxpayers who do not want public money used for candidate campaigns.",
+      "answer_to_other_side": "Opponents reply that adding public money does not end private fundraising. They also object to leaving public funding amounts to future decisions rather than setting statewide funding caps; that concern is distinct from the candidate spending limits the measure requires."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "The disagreement is whether optional public funding would meaningfully broaden competition and reduce reliance on wealthy donors enough to justify taxpayer costs. The sides also differ on whether statewide safeguards are enough when many program details remain for future governments to decide."
+    },
+    "evidence": [
+      {
+        "text": "The measure requires participating candidates to accept spending limits, but leaves many key program design decisions to future state and local officials.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/4/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "Money meant for education, transportation, or public safety could not be used for campaign funding.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/4/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The Legislative Analyst does not give a fixed total cost for future programs.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/4/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "Future costs would depend on which governments adopt programs and how they are designed.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/4/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The measure triples the maximum fine for campaign contributions by foreign entities.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/4/title-summary.htm",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 4
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 2,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The card fairly presents the Yes case that optional public funding could let qualified candidates compete without relying on personal wealth or wealthy donors, while local choice and eligibility/spending rules provide safeguards. It omits supporters’ additional argument that similar systems have worked elsewhere, but the core case is represented."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The card fairly gives the No case that future program costs could be significant and depend on later choices, while private contributions could continue and some campaign details remain unsettled. The official No argument also stresses the absence of a statewide cap on how much future programs might spend; that concern could be stated more explicitly, while making clear that the measure does impose candidate spending limits."
+        },
+        "swap_test_pass": false,
+        "swap_notes": [
+          "The headlines use parallel attribution and structure, but the No headline’s “would expose taxpayers to open-ended costs” is more categorical and alarming than the Yes headline’s “would help” phrasing. The analysis says future program costs could be significant and depend on later decisions; programs are optional. Make the No headline conditional and closer to that account."
+        ],
+        "fidelity_problems": [
+          "The What-changes table omits the measure’s separate change tripling the maximum fine for campaign contributions by foreign entities. It appears in the yes_means/no_means and evidence, but a voter reading the table would miss a provision of the measure.",
+          "The No headline says the change “would expose taxpayers to open-ended costs.” The analysis says programs could have significant costs if governments choose to create them, and that total costs depend on which governments adopt programs and how they are designed. The headline should preserve both qualifications. The official No argument does claim there is no limit on the amount, but the analysis does not characterize the resulting costs as certain or literally open-ended."
+        ],
+        "label_problems": [],
+        "loaded_or_overconfident": [
+          "“would expose taxpayers to open-ended costs” — overstates certainty and cost characterization relative to the analyst’s conditional fiscal analysis."
+        ],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. Add a What-changes row for the foreign-entity contribution fine: state the current maximum fine in the “today” cell only if supported by the provided sources; otherwise say the maximum is unchanged today, and say it triples if the measure passes. Cite the title-and-summary page. 2. Revise the No headline to say that opponents argue optional future programs could create significant taxpayer costs, with amounts dependent on later government choices and program design. Avoid presenting costs as certain or calling them “open-ended.” 3. Consider stating the No side’s concern about the absence of a statewide cap on total program funding, while distinguishing that from the measure’s required candidate spending limits."
+      },
+      "checks": {
+        "words": {
+          "yes": 138,
+          "no": 152,
+          "ratio": 1.1
+        },
+        "headline_words": {
+          "yes": 18,
+          "no": 20
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 4,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 3,
+          "no": 3
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 8.8,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 1,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "Fairly presents supporters’ central merits case: optional public programs could broaden competition for qualified candidates, with eligibility rules and spending limits. It could be stronger by including supporters’ argument that similar systems have been used in other states and localities, but the current case is not a strawman."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "Fairly captures opponents’ main merits concerns: potentially significant future public costs, continued private-donor influence, and possible increases in campaign advertising and messaging. It also notes the distinction between candidate spending limits and the absence of statewide caps on program funding."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [],
+        "fidelity_problems": [],
+        "label_problems": [
+          "In evidence, “The Legislative Analyst does not give a fixed total cost for future programs; costs would depend on later decisions” is labeled prediction as a whole. The first clause is a checkable fact about the analysis; separate it from the forecast that future costs depend on later decisions, and label that forecast prediction with the Legislative Analyst as whose."
+        ],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. Split the evidence point about costs: label “The Legislative Analyst does not give a fixed total cost for future programs” as fact; keep “future costs would depend on which governments adopt programs and how they are designed” as prediction attributed to the Legislative Analyst."
+      },
+      "checks": {
+        "words": {
+          "yes": 138,
+          "no": 169,
+          "ratio": 1.22
+        },
+        "headline_words": {
+          "yes": 18,
+          "no": 20
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 5,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 3,
+          "no": 3
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 8.8,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 2,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "Fairly states the central Yes case: optional public financing could help qualified candidates compete without relying on personal wealth or wealthy donors, with local choice and safeguards. It omits the supporters’ claim that similar systems have worked elsewhere, but captures the main merits argument."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "Fairly presents the main No concerns about potentially significant taxpayer costs, future program choices, negative campaign communications, and continued private-donor influence. It also distinguishes the lack of statewide funding caps from the spending limits candidates must accept."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 138,
+          "no": 169,
+          "ratio": 1.22
+        },
+        "headline_words": {
+          "yes": 18,
+          "no": 20
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 5,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 3,
+          "no": 3
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 8.8,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://voterguide.sos.ca.gov/propositions/4/arguments-rebuttals.htm",
+    "https://voterguide.sos.ca.gov/propositions/4/analysis.htm",
+    "https://voterguide.sos.ca.gov/propositions/4/title-summary.htm"
+  ],
+  "meta": {
+    "seconds": 126.3,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 4,
+        "input_tokens": 29940,
+        "cache_read_tokens": 21914,
+        "output_tokens": 5183,
+        "reasoning_tokens": 422,
+        "tool_calls": 3
+      },
+      "critic:gpt-6-luna": {
+        "requests": 3,
+        "input_tokens": 20141,
+        "cache_read_tokens": 0,
+        "output_tokens": 5060,
+        "reasoning_tokens": 3971,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {}
+  },
+  "format": "v3.1",
+  "scope": "statewide"
+}

@@ -1,0 +1,58 @@
+{
+ "lang": "es",
+ "card_id": "CA-2026-11-03-prop-3",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Hacer permanentes las tasas existentes más altas del impuesto sobre los ingresos",
+  "yes_means": "Las tasas existentes más altas del impuesto sobre los ingresos para el 2 por ciento de los contribuyentes de California con mayores ingresos se volverían permanentes, en lugar de vencer en 2031.",
+  "no_means": "Las tasas existentes más altas del impuesto sobre los ingresos seguirían siendo temporales y vencerían en 2031.",
+  "what_changes": [
+   {
+    "topic": "Vencimiento del impuesto",
+    "today": "Las tasas más altas del impuesto sobre los ingresos, aprobadas en 2012 y extendidas en 2016, vencen en 2031.",
+    "if_passes": "Esas tasas más altas continuarían de manera permanente."
+   },
+   {
+    "topic": "Ingresos anuales del estado",
+    "today": "El estado recauda ingresos con estas tasas más altas, pero está previsto que venzan en 2031.",
+    "if_passes": "Mantener las tasas conservaría un monto estimado de $5 mil millones a $15 mil millones al año después de su vencimiento previsto."
+   },
+   {
+    "topic": "Financiamiento de servicios",
+    "today": "Alrededor de la mitad de los gastos del Fondo General apoya la educación, incluidas las universidades, y cerca de un tercio apoya los servicios de salud y humanos.",
+    "if_passes": "Aproximadamente el 40 por ciento de los fondos que se mantengan apoyaría a las escuelas y los colegios comunitarios; el resto apoyaría otros programas y reservas."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Servicios públicos",
+    "Capacidad de pago",
+    "Rendición de cuentas"
+   ],
+   "headline": "Quienes apoyan la medida sostienen que mantener estos ingresos protegería a las escuelas y la atención médica de recortes cuando venzan las tasas impositivas más altas.",
+   "more_reasons": [
+    "Quienes apoyan la medida sostienen que conserva las tasas actuales únicamente para el 2 por ciento de los contribuyentes con mayores ingresos, en vez de aumentar la tasa actual de alguien.",
+    "Quienes apoyan la medida sostienen que las decisiones locales sobre gastos, las auditorías anuales y los límites al gasto administrativo protegerían los fondos para las aulas."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Impuestos limitados",
+    "Asequibilidad",
+    "Disciplina en el gasto"
+   ],
+   "headline": "Quienes se oponen a la medida sostienen que mantener estos impuestos para siempre les negaría a los contribuyentes las tasas más bajas que se prometieron cuando se aprobaron los impuestos temporales.",
+   "more_reasons": [
+    "Quienes se oponen a la medida sostienen que los impuestos sobre los ingresos permanentemente más altos aumentarían el costo de vida en California.",
+    "Quienes se oponen a la medida sostienen que el estado debería controlar el desperdicio y el gasto antes de comprometerse a mantener permanentemente los ingresos tributarios."
+   ]
+  },
+  "crux": "La decisión es entre conservar ingresos para los servicios públicos y permitir la reducción de impuestos prevista para las personas con mayores ingresos. También hay desacuerdo sobre si el vencimiento causaría recortes en los servicios o si estos podrían evitarse mediante mejores decisiones sobre el gasto.",
+  "who_is_affected": [
+   "Contribuyentes de altos ingresos sujetos a las tasas más altas",
+   "Estudiantes, familias y personal de las escuelas públicas",
+   "Estudiantes y personal de los colegios comunitarios",
+   "Personas que dependen de la atención médica y otros servicios financiados por el estado"
+  ]
+ }
+}

@@ -1,0 +1,372 @@
+{
+  "measure_id": "MA-2026-11-03-question-3",
+  "card": {
+    "measure_id": "MA-2026-11-03-question-3",
+    "number": "Question 3",
+    "official_title": "State Primary Elections",
+    "plain_title": "Replace party primaries with one primary and two finalists",
+    "title_disputed": false,
+    "put_on_ballot_by": "Citizen initiative petition",
+    "yes_means": "Separate party primaries for state elections would become one primary open to all candidates, with the two highest vote-getters advancing to the general election.",
+    "no_means": "The current laws governing primary elections, including separate party primaries, would stay in place.",
+    "what_changes": [
+      {
+        "topic": "Primary ballot",
+        "today": "State elections use separate political party primaries.",
+        "if_passes": "All candidates would appear on one primary ballot regardless of party affiliation.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=10&pages=10-11"
+      },
+      {
+        "topic": "Primary voter choice",
+        "today": "Voters choose candidates through separate party primaries rather than one all-party primary.",
+        "if_passes": "Voters could choose any candidate on the shared primary ballot.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=10&pages=10-11"
+      },
+      {
+        "topic": "General election finalists",
+        "today": "Candidates compete in separate party primaries rather than one shared top-two primary.",
+        "if_passes": "Only the two candidates with the most primary votes would advance to the general election.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=10&pages=10-11"
+      }
+    ],
+    "who_is_affected": [
+      "Voters in state primary and general elections",
+      "Candidates for state office, including independent and third-party candidates",
+      "Candidates for governor and lieutenant governor",
+      "Political parties and groups seeking party status"
+    ],
+    "fiscal_impact": {
+      "text": "The Executive Office of Administration and Finance expects no discernible material fiscal consequences for state and municipal finances.",
+      "label": "prediction",
+      "whose": "Executive Office of Administration and Finance",
+      "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=10&pages=10-11",
+      "quote": "The proposed law has no discernible material fiscal consequences for state and municipal government finances"
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "Supporters argue a shared primary and two finalists would make elections more competitive and officials more accountable to voters.",
+      "headline_topic": "General election finalists",
+      "more_reasons": [
+        "Supporters say party conventions can block candidates and two-thirds of the legislature is running unopposed; they argue a shared primary would open opportunities for new voices.",
+        "Supporters argue stronger competition would push officials to respond to concerns such as housing, energy costs and schools."
+      ],
+      "values": [
+        "Accountability",
+        "Competition",
+        "Responsiveness"
+      ],
+      "best_evidence": [
+        {
+          "text": "Supporters expect greater election competition to make officials listen more closely to voters.",
+          "label": "prediction",
+          "whose": "Supporters in the official ballot argument",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=10&pages=10-11",
+          "quote": "Legislators who know voters can replace them listen to us and deliver real results."
+        },
+        {
+          "text": "The supporters' official argument says conventions can block candidates and two-thirds of the legislature is running unopposed; these are supporters' statements, not findings in the official summary.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=10&pages=10-11",
+          "quote": "Candidates can be blocked at party conventions. Today, two-thirds of the legislature is running unopposed."
+        }
+      ],
+      "who_it_helps": "In supporters' view, voters seeking more responsive officials and new candidates seeking a chance to compete.",
+      "answer_to_other_side": "Supporters emphasize broader choice in the primary: all candidates would appear on one ballot and the top two would advance, though both could be from the same party."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "headline": "Opponents argue a shared primary and two finalists would narrow general-election choices and leave some voters without candidates who represent them.",
+      "headline_topic": "General election finalists",
+      "more_reasons": [
+        "Opponents say similar systems in California and Washington favored wealthy, self-funded candidates able to out-advertise crowded fields, and argue this would disadvantage grassroots candidates.",
+        "Opponents argue fewer general-election choices would reduce voter participation and narrow public debate."
+      ],
+      "values": [
+        "Voter choice",
+        "Equal opportunity",
+        "Representation"
+      ],
+      "best_evidence": [
+        {
+          "text": "The opponents' official argument says top-two systems in California and Washington favored wealthy, self-funded candidates who could out-advertise others; this is not a finding in the official summary.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=10&pages=10-11",
+          "quote": "Similar top-two systems in California and Washington have favored wealthy, self-funded candidates who can out-advertise crowded fields"
+        },
+        {
+          "text": "Opponents expect third-party and independent candidates to be excluded from the general election, working-class candidates to lose party support, and women and candidates of color to be sidelined.",
+          "label": "prediction",
+          "whose": "Opponents in the official ballot argument",
+          "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=10&pages=10-11",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "In opponents' view, keeping the current system protects voters seeking more general-election choices and candidates who rely on grassroots or party support.",
+      "answer_to_other_side": "Opponents argue that a larger primary field does not ensure meaningful competition: only two candidates would reach the general election, potentially from the same party."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "Would one primary with two finalists increase competition and accountability, or narrow representation and favor better-known, better-funded candidates? The sides also weigh broad primary choice against broader choice in the general election."
+    },
+    "evidence": [
+      {
+        "text": "The summary sets a top-two rule based on votes, not party affiliation; it does not reserve places for different parties.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=10&pages=10-11",
+        "quote": null
+      },
+      {
+        "text": "The summary does not bar independent or third-party candidates from advancing; they would have to finish in the top two.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=10&pages=10-11",
+        "quote": null
+      },
+      {
+        "text": "The official summary gives no forecast of effects on turnout, competition or candidate diversity; those forecasts appear in the advocates' arguments.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=10&pages=10-11",
+        "quote": null
+      },
+      {
+        "text": "The proposal would require governor and lieutenant governor candidates to run together on the primary ballot.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=10&pages=10-11",
+        "quote": null
+      },
+      {
+        "text": "The proposal would grant political party status to a group whose candidates for any statewide office received at least 3% of state primary ballots.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=10&pages=10-11",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 4
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 2,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 3,
+          "reason": "The card accurately captures supporters’ competition-and-accountability case, but leaves out the argument they emphasize most: that party conventions can block candidates and many legislative races are unopposed, so the existing system limits competition before voters cast ballots. Include that as a supporters’ claim, not as an established fact."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The card presents opponents’ central merits case: two finalists can narrow general-election choices, including when both are from one party, and opponents predict advantages for wealthy or better-known candidates and disadvantages for grassroots and underrepresented candidates. It could be more specific about opponents’ comparison to California and Washington, but the case is substantially represented."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [],
+        "fidelity_problems": [
+          "In the Yes answer_to_other_side, “the final two would need to appeal beyond a separate party primary” is not established by the sources. The primary is open to all voters, but the source expressly allows both finalists to be from the same party; the text does not establish that either candidate must appeal beyond their party’s voters."
+        ],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. Strengthen the Yes case by adding supporters’ stated argument that party conventions can block candidates and that many legislative races are unopposed, framing these as supporters’ claims. 2. Replace “the final two would need to appeal beyond a separate party primary” with a source-supported point: all candidates appear on one ballot and the top two advance, but both may be from the same party."
+      },
+      "checks": {
+        "words": {
+          "yes": 126,
+          "no": 139,
+          "ratio": 1.1
+        },
+        "headline_words": {
+          "yes": 19,
+          "no": 21
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 4,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 10.4,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 1,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "This captures supporters’ central merits case: one shared primary could open opportunities beyond party conventions, increase competition, and make officials more responsive. It is grounded in the official argument, though it could be clearer that these are supporters’ claims rather than established effects."
+        },
+        "turing_no": {
+          "score": 3,
+          "reason": "It fairly presents the concern that a top-two general election may narrow choices and favor money and name recognition. But it leaves out a prominent part of opponents’ case: they cite California and Washington as examples where, they argue, similar systems favored wealthy or self-funded candidates able to advertise more. That comparative claim is a substantial part of their argument about the change."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The headlines use parallel attribution (“Supporters argue” / “Opponents argue”) and comparable strength. The Yes headline emphasizes expected benefits; the No headline emphasizes expected costs, without a clear difference in warmth or certainty."
+        ],
+        "fidelity_problems": [
+          "In the What-changes rows for governor/lieutenant governor tickets and political-party status, “today” reports that the official summary does not describe current rules. That is a limitation of the cited source, not a description of current law; the rows do not fully provide a today-versus-if-passed comparison. Remove them or cite a source that establishes the current rules."
+        ],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. For the governor-ticket and party-status rows, either add a source establishing the current rules and state those rules in “today,” or remove the rows; do not substitute the summary’s silence for current law. 2. Strengthen the No case by adding, with clear attribution to opponents, their claim that similar top-two systems in California and Washington favored wealthy or self-funded candidates able to out-advertise others."
+      },
+      "checks": {
+        "words": {
+          "yes": 150,
+          "no": 139,
+          "ratio": 1.08
+        },
+        "headline_words": {
+          "yes": 19,
+          "no": 21
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 4,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 10.4,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 2,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "This is a fair account of the Yes case in the source: a shared primary and top-two runoff are presented as ways to increase competition, open opportunities for new candidates, and make officials more responsive. The supporting claims about conventions and unopposed legislators are clearly attributed to supporters rather than presented as official findings."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "This fairly captures the No case’s main merits arguments: only two candidates advance, possibly from the same party, and opponents warn that this could narrow voter choice, disadvantage grassroots candidates, and reduce participation or debate. It appropriately frames claims about other states and candidate impacts as opponents’ claims or forecasts, not as official findings."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The headlines use parallel framing: both begin with what supporters or opponents argue about the shared primary and two finalists, and each names a benefit or risk.",
+          "The Yes headline’s 'make elections more competitive and officials more accountable' and the No headline’s 'narrow general-election choices' are comparably direct claims, both attributed to the respective side."
+        ],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 150,
+          "no": 166,
+          "ratio": 1.11
+        },
+        "headline_words": {
+          "yes": 19,
+          "no": 21
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 10.4,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=10&pages=10-11"
+  ],
+  "meta": {
+    "seconds": 112.0,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 4,
+        "input_tokens": 22337,
+        "cache_read_tokens": 16916,
+        "output_tokens": 5256,
+        "reasoning_tokens": 295,
+        "tool_calls": 1
+      },
+      "critic:gpt-6-luna": {
+        "requests": 3,
+        "input_tokens": 12806,
+        "cache_read_tokens": 0,
+        "output_tokens": 4943,
+        "reasoning_tokens": 3884,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {
+      "https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf#page=10&pages=10-11": [
+        "endorse"
+      ]
+    }
+  },
+  "format": "v3.1",
+  "scope": "statewide"
+}

@@ -1,0 +1,58 @@
+{
+ "lang": "es",
+ "card_id": "MA-2026-11-03-question-4",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Permitir el registro de votantes y la actualización de domicilio el día de las elecciones",
+  "yes_means": "Los ciudadanos que cumplan los requisitos podrían registrarse para votar o actualizar el domicilio de su registro el día de las elecciones, a partir del 1 de enero de 2028.",
+  "no_means": "Las leyes actuales sobre el registro de votantes seguirían sin cambios, sin la opción propuesta de registrarse el día de las elecciones.",
+  "what_changes": [
+   {
+    "topic": "Fecha del registro",
+    "today": "La ley actual no ofrece la opción propuesta de registrarse el día de las elecciones.",
+    "if_passes": "Los ciudadanos que cumplan los requisitos podrían registrarse y votar el día de las elecciones, y seguirían registrados para futuras elecciones."
+   },
+   {
+    "topic": "Actualización de domicilio",
+    "today": "La ley actual no ofrece la opción propuesta de actualizar el domicilio del registro el día de las elecciones.",
+    "if_passes": "Los votantes registrados podrían actualizar su domicilio el día de las elecciones, pero no podrían cambiar de partido político ese día."
+   },
+   {
+    "topic": "Medidas de seguridad del registro",
+    "today": "La ley actual no ofrece la opción propuesta de registrarse el día de las elecciones.",
+    "if_passes": "Quienes se registren el día de las elecciones tendrían que presentar un comprobante de residencia y firmar una declaración jurada de que cumplen los requisitos; las papeletas sin ese comprobante serían provisionales."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Acceso al voto",
+    "Elecciones representativas",
+    "Seguridad electoral"
+   ],
+   "headline": "Quienes apoyan la medida sostienen que permitiría participar a más ciudadanos que cumplen los requisitos, especialmente a quienes se mudan con frecuencia.",
+   "more_reasons": [
+    "Quienes apoyan la medida sostienen que el comprobante de residencia y una declaración jurada firmada, que advierte que dar información falsa es un delito grave, protegerían la seguridad y ampliarían el acceso.",
+    "Quienes apoyan la medida sostienen que las papeletas provisionales protegerían el voto cuando una persona que se registra no tenga la documentación requerida."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Seguridad electoral",
+    "Verificación cuidadosa",
+    "Confianza pública"
+   ],
+   "headline": "Quienes se oponen sostienen que el personal electoral tendría menos tiempo para verificar si los votantes cumplen los requisitos antes de que se emitan las papeletas.",
+   "more_reasons": [
+    "Quienes se oponen sostienen que los errores que no se detecten antes de mezclar las papeletas podrían ser imposibles de corregir retirándolas.",
+    "Quienes se oponen sostienen que esos riesgos podrían afectar las contiendas reñidas y debilitar la confianza pública en las elecciones."
+   ]
+  },
+  "crux": "El desacuerdo es si las medidas de seguridad propuestas permitirían una participación más amplia sin debilitar la verificación de los requisitos. Las partes también sopesan un acceso más fácil frente a conservar tiempo para revisar la elegibilidad con anticipación.",
+  "who_is_affected": [
+   "Ciudadanos que cumplen los requisitos y no están registrados antes del día de las elecciones",
+   "Votantes registrados que se han mudado",
+   "Personas que se mudan con frecuencia, incluidos jóvenes e inquilinos",
+   "Funcionarios electorales locales y trabajadores de los centros de votación"
+  ]
+ }
+}

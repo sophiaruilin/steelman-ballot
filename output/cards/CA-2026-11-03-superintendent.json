@@ -1,0 +1,140 @@
+{
+  "race_id": "CA-2026-11-03-superintendent",
+  "card": {
+    "race_id": "CA-2026-11-03-superintendent",
+    "office": "Superintendent of Public Instruction",
+    "what_office_does": {
+      "text": "The superintendent is an independently elected, nonpartisan voice for the public in California’s education systems. The office advocates with the Legislature and governor and serves on governing boards from transitional kindergarten through higher education.",
+      "label": "fact",
+      "whose": null,
+      "source_url": "https://voterguide.sos.ca.gov/candidates/superintendent-candidate-statements.htm",
+      "quote": null
+    },
+    "candidates": [
+      {
+        "name": "Richard Barrera",
+        "party": "Nonpartisan office",
+        "says_basis": "official_statement",
+        "says": [
+          {
+            "text": "Barrera says he would bring San Diego Unified’s school reforms statewide to improve student success.",
+            "label": "value",
+            "whose": "Richard Barrera, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/superintendent-candidate-statements.htm",
+            "quote": null
+          },
+          {
+            "text": "Barrera says he brought parents, educators, and the community together to cut bureaucracy and invest in students and classrooms.",
+            "label": "fact",
+            "whose": "Richard Barrera, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/superintendent-candidate-statements.htm",
+            "quote": null
+          },
+          {
+            "text": "Barrera says he worked to keep ICE out of schools, support LGBTQ students, and ensure children were vaccinated.",
+            "label": "fact",
+            "whose": "Richard Barrera, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/superintendent-candidate-statements.htm",
+            "quote": null
+          }
+        ],
+        "headline": "Barrera says he would bring San Diego Unified’s reforms statewide to improve student success.",
+        "core_case": "Barrera presents his school board experience as a model for improving schools statewide. He says bringing families and educators together helped direct money to classrooms and improve reading, math, and readiness for college and careers.",
+        "priorities": [
+          "Improving student success",
+          "Investing in students and the classroom",
+          "Protecting students"
+        ]
+      },
+      {
+        "name": "Sonja Shaw",
+        "party": "Nonpartisan office",
+        "says_basis": "official_statement",
+        "says": [
+          {
+            "text": "Shaw says she would restore high academic standards in reading, writing, and math across California’s public schools.",
+            "label": "value",
+            "whose": "Sonja Shaw, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/superintendent-candidate-statements.htm",
+            "quote": null
+          },
+          {
+            "text": "Shaw says she would cut bureaucracy and require financial transparency so school funding reaches classrooms and supports students and teachers.",
+            "label": "value",
+            "whose": "Sonja Shaw, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/superintendent-candidate-statements.htm",
+            "quote": null
+          },
+          {
+            "text": "Shaw says she would protect Title IX, emphasizing fairness in girls’ sports and safety and privacy in girls’ spaces.",
+            "label": "value",
+            "whose": "Sonja Shaw, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/superintendent-candidate-statements.htm",
+            "quote": null
+          }
+        ],
+        "headline": "Shaw says she would restore high academic standards in reading, writing, and math statewide.",
+        "core_case": "Shaw presents her school board leadership as a model for improving schools statewide. She says focusing on basic academics, directing resources to classrooms, and involving parents improved student outcomes in her district.",
+        "priorities": [
+          "High academic standards",
+          "Protect Title IX",
+          "Fiscal transparency"
+        ]
+      }
+    ],
+    "where_they_differ": {
+      "kind": "values",
+      "text": "Both emphasize academics and classroom resources. Barrera highlights expanding San Diego’s reforms and his work on immigrant and LGBTQ student protections, while Shaw emphasizes basic academic standards, financial transparency, and protections for girls’ sports and private spaces."
+    }
+  },
+  "ballot_order_note": "Official order (California assigns it by randomized drawing).",
+  "did": {
+    "Richard Barrera": null,
+    "Sonja Shaw": null
+  },
+  "funded_by": {
+    "Richard Barrera": {
+      "status": "not_connected",
+      "note": "State campaign finance (Cal-Access) not connected yet."
+    },
+    "Sonja Shaw": {
+      "status": "not_connected",
+      "note": "State campaign finance (Cal-Access) not connected yet."
+    }
+  },
+  "checks": {
+    "candidates": 2,
+    "with_statements": 2,
+    "words": {
+      "Richard Barrera": 101,
+      "Sonja Shaw": 102
+    },
+    "word_ratio": 1.01,
+    "headline_words": {
+      "Richard Barrera": 14,
+      "Sonja Shaw": 14
+    },
+    "reading_grade": 10.0,
+    "loaded_words": [],
+    "attacks_or_funders": [],
+    "recommendation": [],
+    "outcome_or_polls": [],
+    "instruction_like_text": []
+  },
+  "sources": [
+    "https://voterguide.sos.ca.gov/candidates/superintendent-candidate-statements.htm"
+  ],
+  "meta": {
+    "seconds": 20.8,
+    "usage_by_model": {
+      "gpt-6-astra": {
+        "requests": 2,
+        "input_tokens": 4244,
+        "cache_read_tokens": 2824,
+        "output_tokens": 955,
+        "reasoning_tokens": 159,
+        "tool_calls": 1
+      }
+    }
+  }
+}

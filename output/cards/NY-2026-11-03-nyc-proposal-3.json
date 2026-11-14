@@ -1,0 +1,267 @@
+{
+  "measure_id": "NY-2026-11-03-nyc-proposal-3",
+  "card": {
+    "measure_id": "NY-2026-11-03-nyc-proposal-3",
+    "number": "Proposal 3",
+    "official_title": "Speed Up Street Safety Projects, Disposition of Unused City Property, Office Leasing",
+    "plain_title": "Change reviews for street projects, city property, and office space",
+    "title_disputed": false,
+    "put_on_ballot_by": "Not identified in the official guide's summary.",
+    "yes_means": "A yes vote changes review rules for street projects, shortens review for certain city property transactions, and removes hearing and approval requirements for city office space.",
+    "no_means": "A no vote keeps existing street-project consultation rules, city property review procedures, and the Council's power to reject city office acquisitions or leases.",
+    "what_changes": [
+      {
+        "topic": "Street project review",
+        "today": "DOT must notify local officials and Community Boards and consult police, fire, disability, and small-business offices before major transportation projects.",
+        "if_passes": "DOT's authority to begin urgent, data-backed safety work before notification is clarified, and technical errors or missed consultations cannot stop a project.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-3/"
+      },
+      {
+        "topic": "City property review",
+        "today": "Most city property sales or leases undergo a seven-month land-use review with City Council review.",
+        "if_passes": "Smaller lots and development rights at city-owned landmarks can receive shorter review ending with the Planning Commission, if no environmental impact statement is required.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-3/"
+      },
+      {
+        "topic": "Undevelopable lot sales",
+        "today": "A program allows sales of undevelopable city lots to neighboring owners without public auction.",
+        "if_passes": "That authority becomes permanent on December 31, 2030.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-3/"
+      },
+      {
+        "topic": "Delayed property transactions",
+        "today": "A public hearing is required when more than two years pass after Council approval of a property sale or acquisition.",
+        "if_passes": "That additional public hearing is no longer required.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-3/"
+      },
+      {
+        "topic": "City office space",
+        "today": "Office acquisitions or leases require a Planning Commission hearing and vote, with Council review and rejection possible by a two-thirds vote.",
+        "if_passes": "The city administrative services commissioner certifies acquisitions instead, with local advance notice but no Planning Commission or Council approval or hearings.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-3/"
+      }
+    ],
+    "who_is_affected": [
+      "People using streets affected by bike lanes, bus lanes, or road redesigns",
+      "Residents and Community Boards near affected city properties",
+      "Owners of property next to undevelopable city lots",
+      "City employees and agencies using city office space",
+      "City Council members, Borough Presidents, and the City Planning Commission"
+    ],
+    "fiscal_impact": {
+      "text": "The official guide does not include a cost estimate.",
+      "label": "fact",
+      "whose": null,
+      "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-3/",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "no_organized_side",
+      "headline": "Analysis-based case for: urgent, data-backed street safety work should not be stopped by technical errors or missed consultations.",
+      "headline_topic": "Street project review",
+      "more_reasons": [
+        "For eligible property transactions, shorter review keeps Community Board and Borough President input while removing a final Council review.",
+        "For office space, commissioner certification and notice replace hearings and approval steps."
+      ],
+      "values": [
+        "Timely safety work",
+        "Administrative efficiency"
+      ],
+      "best_evidence": [
+        {
+          "text": "Technical errors or missed consultations would no longer be valid reasons to stop a transportation project.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-3/",
+          "quote": null
+        },
+        {
+          "text": "The shorter property review allows Community Boards and Borough Presidents to review proposals at the same time, with a final Planning Commission decision.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-3/",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "This analysis-based case centers on people awaiting urgent street safety work and agencies handling property and office transactions.",
+      "answer_to_other_side": "The trade-off is fewer approval steps, not the removal of all local input: eligible property transactions retain local review, and office acquisitions retain advance notice."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "no_organized_side",
+      "headline": "Analysis-based case against: city property decisions should retain final Council review rather than end with the Planning Commission.",
+      "headline_topic": "City property review",
+      "more_reasons": [
+        "Keeping office-space rules preserves a public hearing and the Council's power to reject an acquisition or lease.",
+        "Keeping street-project rules preserves missed consultation as a possible basis for stopping a project."
+      ],
+      "values": [
+        "Public oversight",
+        "Local input",
+        "Checks on agency decisions"
+      ],
+      "best_evidence": [
+        {
+          "text": "Eligible property transactions would no longer receive final City Council review.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-3/",
+          "quote": null
+        },
+        {
+          "text": "Current office-space rules include a Planning Commission public hearing and allow the Council to disapprove by a two-thirds vote.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-3/",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "This analysis-based case centers on residents who value hearings and elected officials' review of city property and office decisions.",
+      "answer_to_other_side": "Urgent safety work is only one part of the proposal; keeping the current rules also preserves separate oversight of city property and office transactions."
+    },
+    "crux": {
+      "kind": "values",
+      "text": "The central trade-off is fewer procedural barriers versus stronger public and elected-official oversight. The proposal combines street safety rules with separate changes to city property and office-space decisions."
+    },
+    "evidence": [
+      {
+        "text": "The street provision clarifies existing authority for immediate action in limited safety cases supported by data; it does not broadly remove notification requirements.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-3/",
+        "quote": null
+      },
+      {
+        "text": "Shorter property review is limited to specified transactions that do not require an environmental impact statement.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-3/",
+        "quote": null
+      },
+      {
+        "text": "For office acquisitions, local officials and the Community Board receive advance notice; the Council and Comptroller receive notice after the acquisition is final.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-3/",
+        "quote": null
+      },
+      {
+        "text": "Most changes take effect upon certification of voter approval; permanent authority for undevelopable-lot sales begins December 31, 2030.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-3/",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 4
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 0,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The Yes case fairly emphasizes the proposal’s limited, data-backed authority for urgent street-safety work and the procedural efficiencies in property and office decisions. It could state the expected benefit of shorter project timelines more directly, but it is not a strawman."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The No case fairly presents the trade-off as reduced public and elected-official oversight, citing the removal of final Council review for eligible property transactions and hearings and Council disapproval authority for office space. It gives a thoughtful account of the main oversight concern."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The headlines use parallel “Analysis-based case for/against” framing and similarly measured language. They emphasize different parts of a proposal covering several topics—street safety for Yes and property review for No—but neither is materially warmer or more confident."
+        ],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 136,
+          "no": 130,
+          "ratio": 1.05
+        },
+        "headline_words": {
+          "yes": 18,
+          "no": 18
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 5,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 10.5,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-3/",
+    "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/",
+    "https://www.nycvotes.org/sitemap.xml",
+    "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-3/#supporting-statements",
+    "https://www.nycvotes.org/whats-on-the-ballot/2026-ballot-proposals/",
+    "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-3/#opposing-statement"
+  ],
+  "meta": {
+    "seconds": 82.1,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 9,
+        "input_tokens": 57040,
+        "cache_read_tokens": 45757,
+        "output_tokens": 2955,
+        "reasoning_tokens": 350,
+        "tool_calls": 14
+      },
+      "critic:gpt-6-luna": {
+        "requests": 1,
+        "input_tokens": 12157,
+        "cache_read_tokens": 0,
+        "output_tokens": 2003,
+        "reasoning_tokens": 1771,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {}
+  },
+  "format": "v3.1",
+  "scope": "New York City"
+}

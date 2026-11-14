@@ -1,0 +1,261 @@
+{
+  "measure_id": "CA-2026-11-03-prop-42",
+  "card": {
+    "measure_id": "CA-2026-11-03-prop-42",
+    "number": "Prop 42",
+    "official_title": "PROHIBITS NEW STATE PERSONAL PROPERTY TAXES AND CERTAIN RETROACTIVE STATE TAXES. INITIATIVE CONSTITUTIONAL AMENDMENT.",
+    "plain_title": "Ban new state taxes on personal property and limit retroactive taxes",
+    "title_disputed": false,
+    "put_on_ballot_by": "Citizen initiative",
+    "yes_means": "A yes vote would amend the state Constitution to prohibit new state taxes on owning personal property and certain new taxes applied to past activities or status.",
+    "no_means": "A no vote would leave the state's existing authority to create personal property taxes and apply taxes retroactively unchanged.",
+    "what_changes": [
+      {
+        "topic": "Financial asset taxes",
+        "today": "The state taxes income from financial assets, but not simply owning stocks or investment accounts.",
+        "if_passes": "New state taxes on owning financial assets, including assets in retirement and investment accounts, would be prohibited.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/42/analysis.htm"
+      },
+      {
+        "topic": "Other personal property",
+        "today": "Some personal property is already taxed, including vehicles and business equipment.",
+        "if_passes": "New state taxes on owning personal property other than financial assets would also be prohibited.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/42/analysis.htm"
+      },
+      {
+        "topic": "Retroactive taxes",
+        "today": "The Legislature or a ballot measure can raise taxes that apply to things that happened in the past.",
+        "if_passes": "The situations in which either could raise taxes retroactively would be limited.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/42/analysis.htm"
+      },
+      {
+        "topic": "Future tax revenue",
+        "today": "The state has tax-raising options that this measure would restrict.",
+        "if_passes": "Future tax revenue could be lower than otherwise, by an unknown amount.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/42/analysis.htm"
+      }
+    ],
+    "who_is_affected": [
+      "People with retirement savings, stocks or investment accounts",
+      "Owners of other personal property, including business assets",
+      "Taxpayers who could face taxes on past activities",
+      "State government and people who rely on state-funded services"
+    ],
+    "fiscal_impact": {
+      "text": "Future tax revenues could be lower because the state would have fewer ways to raise taxes; when and by how much is unclear.",
+      "label": "prediction",
+      "whose": "Legislative Analyst",
+      "source_url": "https://voterguide.sos.ca.gov/propositions/42/analysis.htm",
+      "quote": "When and by how much future revenues would be reduced is unclear."
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "Supporters argue it would protect retirement savings from new taxes on money people have already earned and saved.",
+      "headline_topic": "Financial asset taxes",
+      "more_reasons": [
+        "They argue limits on retroactive taxes would give people more predictable rules when planning their finances.",
+        "They argue preventing an additional layer of taxes matters when high living costs already make saving difficult."
+      ],
+      "values": [
+        "Retirement security",
+        "Predictable tax rules",
+        "Affordability"
+      ],
+      "best_evidence": [
+        {
+          "text": "The measure would prohibit new taxes on owning financial assets or other personal property.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/42/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "Supporters argue people who plan their retirement over many years deserve tax rules that do not change after they have saved.",
+          "label": "value",
+          "whose": "Supporters in the official ballot argument",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/42/arguments-rebuttals.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "In supporters' view, young workers building savings, people with pensions, retirees and small business owners saving for retirement.",
+      "answer_to_other_side": "Supporters argue a broad constitutional protection for savings is worthwhile even when it blocks a proposed tax: income already taxed when earned should not face another tax simply because it is saved."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "headline": "Opponents argue it would block a tax on billionaire wealth that should help pay for healthcare.",
+      "headline_topic": "Financial asset taxes",
+      "more_reasons": [
+        "They argue losing that potential revenue could put hospitals and affordable healthcare at risk.",
+        "They argue billionaires should contribute more rather than leaving working families with higher healthcare costs."
+      ],
+      "values": [
+        "Fair sharing of taxes",
+        "Healthcare access",
+        "Public service funding"
+      ],
+      "best_evidence": [
+        {
+          "text": "The measure says a conflicting measure on the same ballot would be void if both pass and Proposition 42 receives more yes votes.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/42/title-summary.htm",
+          "quote": null
+        },
+        {
+          "text": "Opponents argue blocking the proposed billionaire tax would threaten funding needed to keep hospitals open and healthcare affordable.",
+          "label": "prediction",
+          "whose": "Opponents in the official ballot argument",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/42/arguments-rebuttals.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "In opponents' view, rejecting the measure would help working families and patients who depend on affordable healthcare.",
+      "answer_to_other_side": "Opponents argue the proposed billionaire tax targets billionaires, not ordinary retirement savings, so protecting everyday savers does not justify blocking that healthcare funding source."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "Should California rule out new taxes on owning personal property to protect savings, or keep that option to raise revenue from wealth? The sides also disagree about the practical risk to ordinary savings versus the potential loss of healthcare funding."
+    },
+    "evidence": [
+      {
+        "text": "California does not currently tax the ownership of financial assets such as stocks and investment accounts, though it does tax income from those assets.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/42/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The ban concerns new taxes on owning personal property; it is not a general exemption for income earned from savings or investments.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/42/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The restrictions apply to new taxes enacted or taking effect on or after January 1, 2026.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/42/title-summary.htm",
+        "quote": null
+      },
+      {
+        "text": "The same-ballot override depends on a conflict between measures and Proposition 42 receiving more affirmative votes; it is not an unconditional cancellation.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/42/title-summary.htm",
+        "quote": null
+      },
+      {
+        "text": "The Legislative Analyst finds a possible reduction in future revenue but gives no amount or timing and does not forecast specific healthcare effects.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/42/analysis.htm",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 4
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 0,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "It captures the supporters’ main merits case: protecting retirement and other savings from new ownership taxes, alongside more predictable rules and affordability. The arguments and values are supported by the official Yes argument. It could foreground the supporters’ double-taxation framing more explicitly, but it is not a strawman."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "It captures opponents’ central merits case: Prop 42 could block the proposed billionaire wealth tax and thereby threaten healthcare funding. It also includes the crucial condition on the same-ballot conflict rule elsewhere in the card. The healthcare consequence is properly attributed to opponents rather than presented as the analyst’s forecast."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 142,
+          "no": 136,
+          "ratio": 1.04
+        },
+        "headline_words": {
+          "yes": 18,
+          "no": 16
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 4,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 7.6,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://voterguide.sos.ca.gov/propositions/42/title-summary.htm",
+    "https://voterguide.sos.ca.gov/propositions/42/arguments-rebuttals.htm",
+    "https://voterguide.sos.ca.gov/propositions/42/analysis.htm"
+  ],
+  "meta": {
+    "seconds": 56.8,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 2,
+        "input_tokens": 9586,
+        "cache_read_tokens": 6316,
+        "output_tokens": 2052,
+        "reasoning_tokens": 472,
+        "tool_calls": 3
+      },
+      "critic:gpt-6-luna": {
+        "requests": 1,
+        "input_tokens": 5824,
+        "cache_read_tokens": 0,
+        "output_tokens": 1639,
+        "reasoning_tokens": 1432,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {}
+  },
+  "format": "v3.1",
+  "scope": "statewide"
+}

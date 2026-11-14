@@ -1,0 +1,63 @@
+{
+ "lang": "es",
+ "card_id": "CA-2026-11-03-prop-5",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Cambiar cómo se reemplaza a los funcionarios estatales después de una revocación del mandato",
+  "yes_means": "Un voto por el sí elimina de las boletas de revocación estatales la elección para escoger un reemplazo, y los cargos de los funcionarios revocados se cubren mediante sucesión, nombramientos o elecciones posteriores.",
+  "no_means": "Un voto por el no mantiene en la misma boleta la opción de decidir si se destituye a un funcionario estatal y quién debe reemplazarlo; gana el candidato de reemplazo que reciba más votos.",
+  "what_changes": [
+   {
+    "topic": "Opciones en la boleta de revocación",
+    "today": "Los votantes deciden tanto si destituyen al funcionario como quién debe reemplazarlo.",
+    "if_passes": "Los votantes deciden únicamente si destituyen al funcionario."
+   },
+   {
+    "topic": "Reemplazo del Gobernador",
+    "today": "El candidato de reemplazo que recibe más votos en la elección de revocación se convierte en Gobernador.",
+    "if_passes": "El Vicegobernador asume el cargo hasta que se realice una elección estatal si la revocación ocurre antes del plazo de nominación durante los primeros dos años del período; de lo contrario, ocupa el cargo por el resto del período."
+   },
+   {
+    "topic": "Reemplazo de legisladores estatales",
+    "today": "El reemplazo se elige en la misma elección de revocación.",
+    "if_passes": "El escaño queda vacante y, por lo general, se cubre mediante una elección especial por separado."
+   },
+   {
+    "topic": "Reemplazo de otros funcionarios",
+    "today": "Los votantes eligen un reemplazo en la elección de revocación.",
+    "if_passes": "El Gobernador nombra a los reemplazos según las reglas vigentes para cubrir vacantes."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Regla de la mayoría",
+    "Rendición de cuentas",
+    "Continuidad del gobierno"
+   ],
+   "headline": "Quienes apoyan la medida sostienen que evitaría que un reemplazo gane una elección de revocación con el apoyo de solo una pequeña parte de los votantes.",
+   "more_reasons": [
+    "Quienes apoyan la medida sostienen que eliminar la elección de reemplazo reduciría los incentivos para realizar revocaciones costosas que simplemente repiten una elección reciente.",
+    "Quienes apoyan la medida sostienen que la sucesión por parte del Vicegobernador electo daría continuidad después de la revocación de un Gobernador."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Elección directa de los votantes",
+    "Rendición de cuentas",
+    "Costo"
+   ],
+   "headline": "Quienes se oponen sostienen que la medida quitaría a los votantes la opción de elegir un reemplazo en la misma elección y dejaría muchos reemplazos a nombramientos o sucesión.",
+   "more_reasons": [
+    "Quienes se oponen sostienen que las elecciones separadas para escoger reemplazos podrían dejar escaños vacantes y aumentar los costos para los contribuyentes.",
+    "Quienes se oponen sostienen que permitir que un funcionario revocado se postule en la elección especial posterior podría anular la destitución que los votantes acaban de aprobar."
+   ]
+  },
+  "crux": "¿Deben los votantes elegir un reemplazo en la elección de revocación aunque ese candidato no tenga el apoyo de la mayoría, o deben la sucesión, los nombramientos y las elecciones posteriores reemplazar esa opción? Las partes también discrepan sobre si el cambio reduciría las revocaciones costosas o aumentaría los costos y las demoras.",
+  "who_is_affected": [
+   "Votantes que deciden si revocan el mandato de funcionarios estatales",
+   "Funcionarios estatales que enfrentan una revocación y posibles candidatos de reemplazo",
+   "El Gobernador y el Vicegobernador",
+   "Oficinas electorales estatales y de condado, y contribuyentes"
+  ]
+ }
+}

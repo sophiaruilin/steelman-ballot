@@ -1,0 +1,58 @@
+{
+ "lang": "es",
+ "card_id": "MA-2026-11-03-question-6",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Dedicar ingresos tributarios existentes a la conservación de los recursos naturales",
+  "yes_means": "Un voto por el sí crea un Fondo Naturaleza para Todos para la conservación, financiado con ingresos especificados existentes del impuesto sobre las ventas y el uso, sujeto a la aprobación legislativa de los fondos.",
+  "no_means": "Un voto por el no deja sin cambios el gasto de los ingresos del impuesto sobre las ventas y el uso y no crea este fondo de conservación.",
+  "what_changes": [
+   {
+    "topic": "Financiamiento de la conservación",
+    "today": "Los ingresos tributarios afectados actualmente apoyan el presupuesto operativo del estado.",
+    "if_passes": "Sujeto a la aprobación legislativa del financiamiento, el fondo recibe el 50% de los ingresos tributarios incluidos durante su primer año de operación y el 100% después del 1 de julio de 2028, excluyendo las transferencias especificadas para el transporte público y las escuelas."
+   },
+   {
+    "topic": "Proyectos y beneficiarios",
+    "today": "No existe un Fondo Naturaleza para Todos que otorgue estas subvenciones.",
+    "if_passes": "El fondo puede apoyar la protección de la tierra y el agua, y la recreación al aire libre, por medio de agencias estatales, municipios, organizaciones benéficas de conservación, gobiernos tribales y entidades públicas regionales."
+   },
+   {
+    "topic": "Supervisión del fondo",
+    "today": "No existe una Junta Naturaleza para Todos que supervise este fondo propuesto.",
+    "if_passes": "Una nueva junta de 15 miembros establece las reglas de gasto, y la agencia ambiental administra el fondo y presenta informes anuales sobre los fondos gastados para comprar o mejorar terrenos en comunidades con poblaciones de justicia ambiental."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Protección ambiental",
+    "Acceso público a la naturaleza",
+    "Rendición de cuentas"
+   ],
+   "headline": "Quienes apoyan la medida sostienen que el financiamiento dedicado podría proteger el agua limpia, la tierra y la vida silvestre sin aumentar los impuestos.",
+   "more_reasons": [
+    "Quienes apoyan la medida predicen que los proyectos de conservación financiados podrían reducir la contaminación y ayudar a prevenir inundaciones y daños por tormentas.",
+    "Quienes apoyan la medida destacan la rendición de cuentas mediante la supervisión y un informe anual obligatorio sobre los fondos gastados para comprar o mejorar terrenos en comunidades con poblaciones de justicia ambiental."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Flexibilidad presupuestaria",
+    "Continuidad de los servicios existentes",
+    "Financiamiento confiable"
+   ],
+   "headline": "El argumento en contra destaca que asignar permanentemente los ingresos existentes podría reducir la flexibilidad presupuestaria y los fondos disponibles para otras prioridades.",
+   "more_reasons": [
+    "El argumento en contra recopilado advierte que la reasignación de ingresos podría desplazar prioridades existentes de infraestructura y medioambiente, sin identificar recortes específicos.",
+    "También sostiene que crear el fondo no garantiza que reciba fondos, porque la Legislatura conserva la autoridad para tomar decisiones anuales sobre el gasto."
+   ]
+  },
+  "crux": "La disyuntiva central es entre dedicar fondos a la conservación y mantener los ingresos existentes disponibles para otras prioridades estatales. Las fuentes no establecen qué programas perderían fondos ni el alcance total de los costos y beneficios.",
+  "who_is_affected": [
+   "Residentes que usan parques, senderos y otros espacios al aire libre",
+   "Programas estatales que actualmente reciben apoyo de los ingresos tributarios afectados",
+   "Municipios, gobiernos tribales y organizaciones benéficas de conservación que pueden recibir fondos",
+   "Comunidades desatendidas y pueblos indígenas representados en la nueva junta"
+  ]
+ }
+}

@@ -1,0 +1,248 @@
+{
+  "measure_id": "CA-2026-11-03-prop-43",
+  "card": {
+    "measure_id": "CA-2026-11-03-prop-43",
+    "number": "Prop 43",
+    "official_title": "LIMITS VOTERS’ ABILITY TO RAISE REVENUES FOR LOCAL GOVERNMENT SERVICES. LEGISLATIVE CONSTITUTIONAL AMENDMENT.",
+    "plain_title": "Require two-thirds approval for voter-proposed local special taxes",
+    "title_disputed": false,
+    "put_on_ballot_by": "Legislature",
+    "yes_means": "Voter-proposed local taxes for specific purposes would need two-thirds approval, rather than a simple majority, to be created, increased, or extended beginning January 1, 2027.",
+    "no_means": "Voter-proposed local special taxes would still need only majority approval, while those placed on the ballot by local governing boards would still need two-thirds approval.",
+    "what_changes": [
+      {
+        "topic": "New or higher taxes",
+        "today": "Voter-proposed local taxes for specific purposes can pass with more than half the vote.",
+        "if_passes": "Beginning January 1, 2027, these new taxes or tax increases would need two-thirds approval.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/43/analysis.htm"
+      },
+      {
+        "topic": "Extending expiring taxes",
+        "today": "Voters can extend voter-proposed local special taxes with majority approval.",
+        "if_passes": "Beginning January 1, 2027, voter-proposed extensions would also need two-thirds approval.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/43/analysis.htm"
+      },
+      {
+        "topic": "Local tax revenue",
+        "today": "Local governments can receive revenue from voter-proposed special taxes approved by a majority.",
+        "if_passes": "Local tax revenue could be lower than it would otherwise be because some taxes might not pass.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/43/analysis.htm"
+      }
+    ],
+    "who_is_affected": [
+      "Local voters proposing or voting on taxes for specific purposes",
+      "People and businesses that would pay these local taxes",
+      "Cities, counties, school districts, and special districts",
+      "Residents who rely on services funded by local special taxes"
+    ],
+    "fiscal_impact": {
+      "text": "Local tax revenue could grow less than it otherwise would; the amount is unknown and depends on future decisions by local governments and voters.",
+      "label": "prediction",
+      "whose": "Legislative Analyst",
+      "source_url": "https://voterguide.sos.ca.gov/propositions/43/analysis.htm",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "Supporters argue it would protect taxpayers from added costs by making new or higher local special taxes harder to pass.",
+      "headline_topic": "New or higher taxes",
+      "more_reasons": [
+        "Supporters argue the higher threshold would help protect homeowners, renters, and small businesses from added real estate taxes and housing costs.",
+        "Supporters argue taxes dedicated to particular purposes should require broad voter agreement and confidence that revenue will be spent as promised."
+      ],
+      "values": [
+        "Affordability",
+        "Taxpayer protection",
+        "Broad voter consent"
+      ],
+      "best_evidence": [
+        {
+          "text": "The measure would replace majority approval with two-thirds approval for voter-proposed local special taxes.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/43/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "Supporters argue making new real estate taxes harder to pass would protect home equity and limit added costs for renters and housing construction.",
+          "label": "prediction",
+          "whose": "Supporters in the official ballot argument",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/43/arguments-rebuttals.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "In supporters’ view, homeowners, renters, and small businesses facing additional local taxes and higher living costs.",
+      "answer_to_other_side": "Supporters argue local governments should prioritize essential services within existing budgets and seek broad voter support before asking taxpayers to pay more."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "headline": "Opponents argue it would threaten funding for essential local services by making voter-proposed taxes harder to pass even when most voters support them.",
+      "headline_topic": "Local tax revenue",
+      "more_reasons": [
+        "Opponents argue allowing just over one-third of voters to block a tax weakens majority rule and local decision-making.",
+        "Opponents argue the higher threshold could block funding for affordable housing and programs that help people stay housed."
+      ],
+      "values": [
+        "Reliable public services",
+        "Majority rule",
+        "Local control"
+      ],
+      "best_evidence": [
+        {
+          "text": "The Legislative Analyst says the higher threshold could leave local governments with less tax revenue than they would otherwise receive.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/43/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "Opponents argue blocked funding could mean slower emergency responses and fewer resources for roads, schools, healthcare, and housing.",
+          "label": "prediction",
+          "whose": "Opponents in the official ballot argument",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/43/arguments-rebuttals.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "In opponents’ view, keeping the current rule helps local majorities fund services and helps residents who rely on those services.",
+      "answer_to_other_side": "Opponents argue the measure does not cut existing taxes; instead, it limits voters’ ability to approve funding for services and housing they want."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "Should voter-proposed local special taxes require broad agreement to protect taxpayers, or should a majority be able to fund local needs? The practical trade-off depends on which future taxes would be blocked and what those taxes would fund."
+    },
+    "evidence": [
+      {
+        "text": "Local tax increases already require voter approval; the proposal changes the approval threshold for voter-proposed special taxes.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/43/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "Special taxes fund specific purposes, and recent court decisions have allowed voter-proposed special taxes to pass by majority vote.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/43/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The analyst describes a change to voting thresholds, not a new rule governing how special-tax revenue must be spent.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/43/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The revenue effect is unknown and depends on future decisions; the analysis does not estimate losses for particular services.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/43/analysis.htm",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 4
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 0,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The card fairly presents the supporters’ central merits case: a higher approval threshold could limit added local tax costs and require broader voter agreement. It also captures their concern about housing-related taxes. The official argument’s emphasis on restoring Proposition 13 protections and closing court-created loopholes is less explicit, but the card conveys the underlying tax-protection case."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The card fairly presents opponents’ central case that the change could let a minority block taxes supported by a majority, limiting local funding for services and housing. It also captures the uncertainty about which future proposals might fail. The service and housing consequences are appropriately framed as opponents’ arguments or possibilities, not established outcomes."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The headlines use parallel attributed framing (“Supporters/Opponents argue it would…”), though “protect taxpayers” and “threaten funding” naturally cast the competing effects in opposite terms. Neither is presented as an established fact."
+        ],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 143,
+          "no": 147,
+          "ratio": 1.03
+        },
+        "headline_words": {
+          "yes": 20,
+          "no": 23
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 1,
+          "no": 0
+        },
+        "reading_grade": 9.0,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://voterguide.sos.ca.gov/propositions/43/title-summary.htm",
+    "https://voterguide.sos.ca.gov/propositions/43/analysis.htm",
+    "https://voterguide.sos.ca.gov/propositions/43/arguments-rebuttals.htm"
+  ],
+  "meta": {
+    "seconds": 52.7,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 2,
+        "input_tokens": 9984,
+        "cache_read_tokens": 6316,
+        "output_tokens": 1684,
+        "reasoning_tokens": 168,
+        "tool_calls": 3
+      },
+      "critic:gpt-6-luna": {
+        "requests": 1,
+        "input_tokens": 6105,
+        "cache_read_tokens": 0,
+        "output_tokens": 2004,
+        "reasoning_tokens": 1742,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {}
+  },
+  "format": "v3.1",
+  "scope": "statewide"
+}

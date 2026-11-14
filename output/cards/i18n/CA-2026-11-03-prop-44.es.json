@@ -1,0 +1,58 @@
+{
+ "lang": "es",
+ "card_id": "CA-2026-11-03-prop-44",
+ "model": "gpt-6-luna",
+ "translated": {
+  "plain_title": "Exigir que las clínicas comunitarias sin fines de lucro destinen el 90% de sus ingresos a servicios del programa",
+  "yes_means": "Las clínicas privadas sin fines de lucro de la red de protección social tendrían que destinar al menos el 90% de sus ingresos anuales a servicios que cumplan los requisitos o pagar multas, con exenciones temporales disponibles en algunos casos.",
+  "no_means": "Las clínicas privadas sin fines de lucro de la red de protección social seguirían sujetas a las reglas actuales de gastos y presentación de informes, sin el mínimo del 90%, las multas ni los cargos de cumplimiento de esta medida.",
+  "what_changes": [
+   {
+    "topic": "Gasto mínimo en servicios",
+    "today": "En promedio, las clínicas privadas sin fines de lucro de la red de protección social informan que destinan cerca del 80% de sus ingresos a servicios de atención médica; la proporción varía según la clínica.",
+    "if_passes": "Las clínicas deben destinar al menos el 90% cada año a servicios que cumplan los requisitos. El fiscal general definirá qué gastos son elegibles y habrá exenciones temporales disponibles."
+   },
+   {
+    "topic": "Multas por no alcanzar el mínimo",
+    "today": "Las clínicas no están sujetas a esta multa propuesta por destinar menos del 90%.",
+    "if_passes": "Las clínicas pagan la diferencia; el pago se les devuelve si cumplen dentro de cinco años. De lo contrario, el dinero se destina a programas para el personal de las clínicas."
+   },
+   {
+    "topic": "Supervisión y cargos",
+    "today": "Cada año, las clínicas privadas sin fines de lucro de la red de protección social informan sus ingresos y gastos a los gobiernos federal y estatal.",
+    "if_passes": "El estado revisa los informes e investiga si se cumplen las nuevas reglas. Cobra cargos a las clínicas afectadas para cubrir los costos de hacer cumplir las reglas."
+   }
+  ],
+  "steelman_yes": {
+   "values": [
+    "Atención a los pacientes",
+    "Rendición de cuentas",
+    "Uso responsable del dinero público"
+   ],
+   "headline": "Quienes apoyan la medida sostienen que el gasto mínimo destinaría una mayor parte de los ingresos de las clínicas a la atención de los pacientes y a los servicios que la apoyan.",
+   "more_reasons": [
+    "Quienes apoyan la medida sostienen que los informes públicos sobre gastos ayudarían a los pacientes y a los contribuyentes a exigir que las clínicas rindan cuentas.",
+    "Quienes apoyan la medida destacan que las clínicas podrían recuperar las multas si cumplen las reglas, mientras que el dinero que no se recupere apoyaría la contratación, capacitación y retención de trabajadores de las clínicas."
+   ]
+  },
+  "steelman_no": {
+   "values": [
+    "Acceso a la atención",
+    "Financiamiento estable para las clínicas",
+    "Flexibilidad para atender las necesidades de los pacientes"
+   ],
+   "headline": "Quienes se oponen a la medida sostienen que el gasto mínimo presionaría los presupuestos de las clínicas y las obligaría a reducir servicios o cerrar, lo que disminuiría el acceso de los pacientes a la atención.",
+   "more_reasons": [
+    "Quienes se oponen a la medida sostienen que las reglas de gastos podrían limitar el personal de apoyo esencial, los equipos, la tecnología y las mejoras de las clínicas.",
+    "Quienes se oponen a la medida sostienen que un menor acceso a las clínicas enviaría a más pacientes a las salas de emergencia de los hospitales y aumentaría los tiempos de espera."
+   ]
+  },
+  "crux": "¿Un mínimo del 90% reorientaría los gastos hacia la atención, o impediría que las clínicas cubran los costos necesarios? El desacuerdo depende de qué gastos cumplen los requisitos y de cuánta flexibilidad necesitan las clínicas para gastar.",
+  "who_is_affected": [
+   "Clínicas privadas sin fines de lucro de la red de protección social",
+   "Pacientes de bajos ingresos y sin seguro, incluidos los pacientes de Medi-Cal",
+   "Trabajadores de atención médica y personal administrativo de las clínicas",
+   "Agencias estatales responsables de la supervisión"
+  ]
+ }
+}

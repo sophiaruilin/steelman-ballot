@@ -1,0 +1,156 @@
+{
+  "race_id": "CA-2026-11-03-insurance-commissioner",
+  "card": {
+    "race_id": "CA-2026-11-03-insurance-commissioner",
+    "office": "Insurance Commissioner",
+    "what_office_does": {
+      "text": "Heads the Department of Insurance, which enforces state insurance laws and adopts regulations. The office licenses, regulates, and examines insurers and answers public questions and complaints about insurance.",
+      "label": "fact",
+      "whose": null,
+      "source_url": "https://voterguide.sos.ca.gov/candidates/insurance-commissioner-candidate-statements.htm",
+      "quote": null
+    },
+    "candidates": [
+      {
+        "name": "Ben Allen",
+        "party": "Democratic",
+        "says_basis": "official_statement",
+        "says": [
+          {
+            "text": "Allen proposes increasing competition and insurance options to help lower costs.",
+            "label": "value",
+            "whose": "Ben Allen, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/insurance-commissioner-candidate-statements.htm",
+            "quote": null
+          },
+          {
+            "text": "Allen says he would protect consumers whose insurance coverage is unfairly dropped.",
+            "label": "value",
+            "whose": "Ben Allen, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/insurance-commissioner-candidate-statements.htm",
+            "quote": null
+          },
+          {
+            "text": "Allen says he would hold insurers accountable and make the insurance process more transparent.",
+            "label": "value",
+            "whose": "Ben Allen, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/insurance-commissioner-candidate-statements.htm",
+            "quote": null
+          },
+          {
+            "text": "Allen calls for fast, fair treatment after disasters and says he would speed up rebuilding.",
+            "label": "value",
+            "whose": "Ben Allen, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/insurance-commissioner-candidate-statements.htm",
+            "quote": null
+          }
+        ],
+        "headline": "Allen says he would lower insurance costs and protect consumers by increasing competition and insurance options.",
+        "core_case": "Allen proposes more insurance choices, stronger consumer protections, and faster rebuilding after disasters. He points to laws he says he authored to increase upfront claims payments and help homeowners reduce fire risks and keep coverage.",
+        "priorities": [
+          "Increase competition to bring down costs",
+          "Protect consumers who are unfairly dropped",
+          "Expedite rebuilding"
+        ]
+      },
+      {
+        "name": "Jane Kim",
+        "party": "Democratic",
+        "says_basis": "official_statement",
+        "says": [
+          {
+            "text": "Kim proposes capping excessive insurer profits and cracking down on illegal price-fixing to make insurance more affordable.",
+            "label": "value",
+            "whose": "Jane Kim, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/insurance-commissioner-candidate-statements.htm",
+            "quote": null
+          },
+          {
+            "text": "Kim proposes a public Disaster Insurance for All program that invests premiums in safer communities.",
+            "label": "value",
+            "whose": "Jane Kim, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/insurance-commissioner-candidate-statements.htm",
+            "quote": null
+          },
+          {
+            "text": "Kim says she would make insurance claims fast and fair for consumers.",
+            "label": "value",
+            "whose": "Jane Kim, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/insurance-commissioner-candidate-statements.htm",
+            "quote": null
+          },
+          {
+            "text": "Kim says she would fight for guaranteed healthcare for every California child.",
+            "label": "value",
+            "whose": "Jane Kim, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/insurance-commissioner-candidate-statements.htm",
+            "quote": null
+          }
+        ],
+        "headline": "Kim says she would make insurance more affordable and available through insurer accountability and a public disaster insurance program.",
+        "core_case": "Kim proposes limits on excessive insurer profits, a public disaster insurance program, and fast, fair claims. She points to her experience as a civil rights attorney and to gains she says she won in free community college, minimum wages, and affordable housing.",
+        "priorities": [
+          "Cap excessive profits",
+          "Disaster Insurance for All",
+          "Guaranteed healthcare for every California child"
+        ]
+      }
+    ],
+    "where_they_differ": {
+      "kind": "values",
+      "text": "Allen emphasizes increasing competition and insurance choices to lower costs, while Kim emphasizes profit limits and a public disaster insurance program. Both call for consumer protections and fair treatment after disasters; Kim also names guaranteed healthcare for every California child as a goal."
+    }
+  },
+  "ballot_order_note": "Official order (California assigns it by randomized drawing).",
+  "did": {
+    "Ben Allen": null,
+    "Jane Kim": null
+  },
+  "funded_by": {
+    "Ben Allen": {
+      "status": "not_connected",
+      "note": "State campaign finance (Cal-Access) not connected yet."
+    },
+    "Jane Kim": {
+      "status": "not_connected",
+      "note": "State campaign finance (Cal-Access) not connected yet."
+    }
+  },
+  "checks": {
+    "candidates": 2,
+    "with_statements": 2,
+    "words": {
+      "Ben Allen": 103,
+      "Jane Kim": 117
+    },
+    "word_ratio": 1.14,
+    "headline_words": {
+      "Ben Allen": 16,
+      "Jane Kim": 19
+    },
+    "reading_grade": 15.2,
+    "loaded_words": [
+      "claims"
+    ],
+    "attacks_or_funders": [],
+    "recommendation": [],
+    "outcome_or_polls": [],
+    "instruction_like_text": []
+  },
+  "sources": [
+    "https://voterguide.sos.ca.gov/candidates/insurance-commissioner-candidate-statements.htm"
+  ],
+  "meta": {
+    "seconds": 13.7,
+    "usage_by_model": {
+      "gpt-6-astra": {
+        "requests": 2,
+        "input_tokens": 4177,
+        "cache_read_tokens": 2835,
+        "output_tokens": 965,
+        "reasoning_tokens": 75,
+        "tool_calls": 1
+      }
+    }
+  }
+}
