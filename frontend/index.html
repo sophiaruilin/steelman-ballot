@@ -3,58 +3,175 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Steelman Ballot: get in the know before you vote</title>
-  <meta name="description" content="Everything on your ballot in plain English: what would change, and the strongest case for every side, with sources. We never tell you how to vote.">
-  <meta name="theme-color" content="#1d4f5c">
+  <title>Steelman Ballot · Think more deeply. Vote more thoughtfully.</title>
+  <meta name="description" content="The strongest case for every side of what's on your ballot, and what would actually change. Nonpartisan, sourced, plain English. We never tell you how to vote.">
+  <meta name="theme-color" content="#234742">
   <meta property="og:title" content="Steelman Ballot">
-  <meta property="og:description" content="Get informed: the strongest case for every side. What would change, with sources.">
+  <meta property="og:description" content="Think more deeply. Vote more thoughtfully. The strongest case for every side, with sources.">
   <meta property="og:type" content="website">
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/icon.svg">
+  <link rel="preload" href="/fonts/eb-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/app.css">
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
   <header class="top">
-    <div class="wrap">
-      <a class="brand" href="/" aria-label="Steelman Ballot home"><img src="/icon.svg" alt="" width="28" height="28"> Steelman Ballot</a>
-      <p class="tagline">Get in the know before you vote. <span>All the facts. All the sides. Your decision.</span></p>
+    <div class="wrap top-row">
+      <a class="brand" href="#" aria-label="Steelman Ballot home">
+        <img src="/icon.svg" alt="" width="30" height="30"><span>Steelman Ballot</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#" data-route="home">My ballot</a>
+        <a href="#how" data-route="how">How we work</a>
+        <a href="#steelman" data-route="steelman">Steelman vs. strawman</a>
+        <a href="#philosophy" data-route="philosophy">Our philosophy</a>
+      </nav>
     </div>
   </header>
 
-  <main class="wrap" id="main">
-    <section id="lookup" class="panel">
-      <form id="address-form" autocomplete="street-address">
-        <label for="address">Your home address</label>
-        <div class="row">
-          <input id="address" name="address" type="text" inputmode="text" placeholder="Street, city, state ZIP" minlength="5" maxlength="200" required>
-          <button type="submit" class="btn">See my ballot</button>
+  <main id="main" tabindex="-1">
+    <!-- HOME -->
+    <section id="view-home" class="view">
+      <div class="hero">
+        <div class="wrap">
+          <p class="eyebrow">Nonpartisan ballot guide · California · Massachusetts · New York City</p>
+          <h1>Think more deeply.<br>Vote more thoughtfully.</h1>
+          <p class="lede">The strongest argument isn't always your own.</p>
+          <p class="sub">Explore the most compelling perspectives on the issues that matter. Challenge your assumptions without abandoning your values.</p>
+
+          <form id="address-form" class="lookup" autocomplete="street-address">
+            <label for="address">Your home address</label>
+            <div class="row">
+              <input id="address" name="address" type="text" placeholder="Street, city, state ZIP" minlength="5" maxlength="200" required>
+              <button type="submit" class="btn">See my ballot</button>
+            </div>
+            <p class="hint">Used only to find your districts. Never stored.
+              Try an example:
+              <button type="button" class="linkish" data-example="1315 10th St, Sacramento, CA 95814">Sacramento</button> ·
+              <button type="button" class="linkish" data-example="24 Beacon St, Boston, MA 02133">Boston</button> ·
+              <button type="button" class="linkish" data-example="253 Broadway, New York, NY 10007">New York City</button>
+            </p>
+          </form>
         </div>
-        <p class="hint">Used only to find your districts. Never stored. <button type="button" class="linkish" id="example">Try a Sacramento, CA example</button></p>
-      </form>
-      <fieldset class="priorities">
-        <legend>What matters most to you? <span class="muted">(changes the order only, never the content)</span></legend>
-        <div id="chips" class="chips"></div>
-      </fieldset>
+      </div>
+
+      <div class="wrap">
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+
+        <section id="ballot" hidden>
+          <div class="panel summary" id="summary"></div>
+          <fieldset class="priorities">
+            <legend>What matters most to you? <span class="muted">Changes the order only, never the content.</span></legend>
+            <div id="chips" class="chips"></div>
+          </fieldset>
+          <h2 class="section-title">Ballot measures</h2>
+          <ul id="measures" class="list"></ul>
+          <h2 class="section-title">Races</h2>
+          <ul id="races" class="list"></ul>
+        </section>
+
+        <section class="band" aria-labelledby="map-title">
+          <div class="band-text">
+            <p class="eyebrow">Where we cover</p>
+            <h2 id="map-title">Starting with three states</h2>
+            <p>Any U.S. address shows your districts and races. Full ballot-measure cards are available where we
+              read the official voter guide directly.</p>
+            <ul class="legend">
+              <li><span class="key full"></span> Statewide measures</li>
+              <li><span class="key part"></span> Local measures (New York City)</li>
+              <li><span class="key none"></span> Coming later</li>
+            </ul>
+          </div>
+          <figure class="map-fig">
+            <div id="usmap" class="usmap"></div>
+            <figcaption id="map-caption" class="muted"></figcaption>
+          </figure>
+        </section>
+
+        <section class="band three" aria-label="How a card works">
+          <div><span class="step">I</span><h3>What would change</h3><p>Today, side by side with what happens if it passes, from the official guide.</p></div>
+          <div><span class="step">II</span><h3>Both sides, at their strongest</h3><p>Each side's best case on the merits, in the words its most thoughtful supporters would use.</p></div>
+          <div><span class="step">III</span><h3>Your decision</h3><p>Every claim is sourced. We never tell you how to vote.</p></div>
+        </section>
+      </div>
     </section>
 
-    <p id="status" class="status" role="status" aria-live="polite"></p>
+    <!-- CARD DETAIL -->
+    <section id="view-card" class="view wrap" hidden></section>
 
-    <section id="ballot" hidden>
-      <div class="panel summary" id="summary"></div>
-      <h2 class="section-title">Measures</h2>
-      <ul id="measures" class="list"></ul>
-      <h2 class="section-title">Races</h2>
-      <ul id="races" class="list"></ul>
+    <!-- HOW WE WORK -->
+    <section id="view-how" class="view wrap prose" hidden>
+      <p class="eyebrow">Methodology</p>
+      <h1>How we work</h1>
+      <p class="lede">In plain English: where every card comes from, and how we check it before you see it.</p>
+      <ol class="steps">
+        <li><h3>We find your ballot</h3><p>Your address is matched to your districts by the U.S. Census Bureau. We then read the list of measures from your state's or city's <b>official voter guide</b>. Your address is never stored.</p></li>
+        <li><h3>We read only official and nonpartisan sources</h3><p>California's Official Voter Information Guide and Legislative Analyst, Massachusetts' official <i>Information for Voters</i>, and New York City's NYC Votes guide. Candidate records come from Congress.gov, Open States and the Federal Election Commission. If sources disagree, the official ballot wins.</p></li>
+        <li><h3>An AI writer drafts the card</h3><p>It builds a <b>What changes</b> table (today vs. if it passes), then each side's strongest case <b>on the merits</b>: benefits, costs, risks, and who is affected. Never the other side's motives, donors or party. Facts are kept separate from arguments, and every claim is labeled <i>fact</i>, <i>prediction</i> (whose estimate) or <i>value</i>.</p></li>
+        <li><h3>A second AI checks it for fairness</h3><p>A separate reviewer plays a committed supporter of each side and asks, “Would I sign this as our best case?” It swaps the labels to catch one-sided wording, and checks every claim against the page it came from. Quotes must match word for word. A card gets up to two rewrites; if it still has problems, it's shown with a <b>“steelman unverified”</b> badge.</p></li>
+        <li><h3>We measure accuracy</h3><p>We graded our California cards against the state's nonpartisan Legislative Analyst: <b>100%</b> of claims backed by the official guide, <b>18 of 18</b> yes/no/cost descriptions correct, and <b>92%</b> of each side's top points covered.</p></li>
+        <li><h3>We keep it fresh and safe</h3><p>Cards refresh daily as an election nears. We read only an allowlist of official sites, strip hidden text that could trick an AI, respect sites that ask not to be read automatically, and cap how much the system can spend.</p></li>
+      </ol>
+      <h2>What we never do</h2>
+      <ul class="nevers">
+        <li>Tell you how to vote, or predict a result</li>
+        <li>Show polls or who's “winning”</li>
+        <li>Argue about motives, donors or party labels</li>
+        <li>Store your address, track you, or show ads</li>
+      </ul>
+      <h2>Honest limits</h2>
+      <p>Coverage is three states for now, and local measures only for New York City. AI can make mistakes: every claim links to its source so you can check, and you can report an issue on any card.</p>
     </section>
 
-    <section id="detail" hidden></section>
+    <!-- STEELMAN VS STRAWMAN -->
+    <section id="view-steelman" class="view wrap prose" hidden>
+      <p class="eyebrow">The idea behind the name</p>
+      <h1>Steelman vs. strawman</h1>
+      <p class="lede">A <b>strawman</b> is the weakest version of a view, built to be knocked down. A <b>steelman</b> is the strongest version, stated so well that its own supporters would say, “I wish I'd put it that way.”</p>
+      <div class="compare">
+        <div class="cmp straw"><p class="tag-l">Strawman</p><p class="q">“Opponents of the bus lanes just hate buses.”</p><p class="muted">Easy to dismiss. Teaches you nothing.</p></div>
+        <div class="cmp steel"><p class="tag-l">Steelman</p><p class="q">“Opponents argue that removing car lanes could lengthen trips for people who can't use transit, like night-shift workers and people with disabilities.”</p><p class="muted">A real trade-off worth weighing.</p></div>
+      </div>
+      <h2>Why it matters for your ballot</h2>
+      <p>When you only hear the weakest version of the other side, every decision looks obvious. Ballot measures rarely are. Seeing both sides at their strongest lets you test your own view against the best objection, and keep it, change it, or hold it more wisely.</p>
+      <h2>How we test every steelman</h2>
+      <ul class="tests">
+        <li><b>Would supporters sign it?</b> A reviewer plays a committed supporter of each side and scores the case from 1 (strawman) to 5 (“I'd sign it”). Below 4 means a rewrite.</li>
+        <li><b>The swap test.</b> Swap the labels. If one side suddenly sounds warmer, more certain, or more reasonable, the wording gets fixed.</li>
+        <li><b>On the merits.</b> Arguments must be about what the change would do, not about who supports it or why.</li>
+        <li><b>Equal weight.</b> Same structure, similar length, same number of points, and no red or blue: neither side is colored as the good guy.</li>
+      </ul>
+      <p class="muted">Based on the principle of charity, Anatol Rapoport's rules for criticism (popularized by Daniel Dennett), and the Ideological Turing Test (Bryan Caplan).</p>
+    </section>
+
+    <!-- PHILOSOPHY / ABOUT -->
+    <section id="view-philosophy" class="view wrap prose" hidden>
+      <p class="eyebrow">About us</p>
+      <h1>Our philosophy</h1>
+      <p class="lede">Democracy works better when people disagree well.</p>
+      <p>Most ballots ask voters to settle questions that experts spend months on: taxes, housing, how elections run. The information exists, but it's scattered across official guides, campaign sites and news, and most of what reaches us is written to persuade. Steelman Ballot puts what would actually change next to the strongest case for every side, in plain English, so you can decide for yourself.</p>
+      <h2>What we believe</h2>
+      <dl class="beliefs">
+        <dt>The strongest argument isn't always your own.</dt><dd>Understanding the best case against your view is how you hold it wisely, or change it.</dd>
+        <dt>All the facts. All the sides. Your decision.</dt><dd>We inform. We never recommend. Your values are yours.</dd>
+        <dt>On the merits, not the messengers.</dt><dd>We focus on what a change would do, not on who funds it or why they want it.</dd>
+        <dt>Official sources first, and always cited.</dt><dd>If anything here disagrees with your official ballot, the official ballot is right.</dd>
+        <dt>Equal treatment, by design.</dt><dd>Same structure, same space, same tone, same colors for every side and every candidate.</dd>
+        <dt>Your privacy.</dt><dd>No account, no tracking, no ads. Your address is used once to find your districts and never stored.</dd>
+      </dl>
+      <h2>Who we are</h2>
+      <p>An independent, nonpartisan student project. We are not affiliated with any campaign, party, or government. The code is public on <a href="https://github.com/sophiaruilin/steelman-ballot" rel="noopener noreferrer" target="_blank">GitHub</a>, so anyone can see exactly how it works.</p>
+    </section>
   </main>
 
   <footer class="foot">
     <div class="wrap">
-      <p><b>We never tell you how to vote.</b> Not affiliated with any campaign, party or government. Every claim links to its source; official election offices always win when sources disagree.</p>
-      <p class="muted">Steelman Ballot · <a href="https://github.com/sophiaruilin/steelman-ballot/issues" rel="noopener noreferrer" target="_blank">Report an issue</a> · <a href="https://github.com/sophiaruilin/steelman-ballot" rel="noopener noreferrer" target="_blank">How it works</a></p>
+      <p class="foot-motto">Think more deeply. Vote more thoughtfully.</p>
+      <p><b>We never tell you how to vote.</b> Not affiliated with any campaign, party or government. Official election offices always win when sources disagree.</p>
+      <p class="muted"><a href="#how">How we work</a> · <a href="#philosophy">Our philosophy</a> · <a href="https://github.com/sophiaruilin/steelman-ballot/issues" rel="noopener noreferrer" target="_blank">Report an issue</a></p>
     </div>
   </footer>
   <script src="/app.js" defer></script>

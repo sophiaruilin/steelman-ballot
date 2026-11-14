@@ -6,7 +6,9 @@
 
 Enter any U.S. address and get a plain-language, nonpartisan briefing on everything on your ballot. For each measure: **what would change** (today vs. if it passes), and each side's strongest case **on the merits**, with one headline per side and more reasons a tap away. For each candidate: what they **say**, what they've **done**, and who **funds** them. Every claim links to its source, and the app never tells you how to vote.
 
-> 🚧 **Work in progress.** This is a Yale SOM final project, due 11/23/2026. The data layer is working; the agents and dashboard are being built.
+**Coverage (Nov 3, 2026):** California (14 statewide propositions + statewide offices), Massachusetts (9 statewide ballot questions), New York (New York City's 5 charter proposals; no statewide proposals in 2026). Any U.S. address shows its districts and races.
+
+*Think more deeply. Vote more thoughtfully.* The strongest argument isn't always your own.
 
 ## How it works
 A team of AI agents researches each ballot from public sources. One research run per jurisdiction per day is shared by every voter there.
@@ -24,7 +26,7 @@ Address ─► [Ballot Mapper] ─► races and measures
          [Dashboard Writer] ─► [Translator] ─► EN · ES · 中文 · VI
 ```
 
-**Sources:** U.S. Census Geocoder and American Community Survey (ACS) · OpenFEC · Congress.gov · Open States · Vote Smart · Ballotpedia · VOTE411 · official state and county election offices. The official ballot always wins when sources disagree.
+**Sources:** official voter guides (California Secretary of State and Legislative Analyst; Massachusetts *Information for Voters*, read from the official PDF; NYC Votes) · U.S. Census Geocoder and ACS · OpenFEC · Congress.gov · Open States. The official ballot always wins when sources disagree.
 
 ## Setup
 You need **Python 3.11+**.

@@ -45,8 +45,8 @@ def get_agent(model_name: str | None = None) -> Agent[ResearchDeps, MeasureCard]
         rows_as_claims = [Claim(text=r.if_passes, label=r.label, whose=r.whose, source_url=r.source_url)
                           for r in card.what_changes]
         problems += check_claims(rows_as_claims, ctx.deps.fetched)
-        if card.fiscal_impact.label != "prediction":
-            problems.append("fiscal_impact must be labeled 'prediction' with `whose` set.")
+        if card.fiscal_impact.label == "value":
+            problems.append("fiscal_impact must be a 'prediction' (with `whose`), or a 'fact' saying the guide has no estimate.")
         for c in claims + rows_as_claims:
             if c.label in ("prediction", "value") and not c.whose:
                 problems.append(f"'{c.text[:50]}...' is a {c.label}: fill in `whose`.")

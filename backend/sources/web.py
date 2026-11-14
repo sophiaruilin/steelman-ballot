@@ -17,6 +17,7 @@ from __future__ import annotations
 import html
 import re
 import time
+import io
 import urllib.robotparser
 from dataclasses import dataclass, field
 from html.parser import HTMLParser
@@ -33,6 +34,8 @@ WEB_ALLOWED_DOMAINS = {
     "sos.ca.gov", "lao.ca.gov", "cdn.sos.ca.gov",
     "sos.texas.gov", "sos.state.tx.us", "capitol.texas.gov", "tlc.texas.gov", "lbb.texas.gov",
     "sos.ga.gov",
+    "sec.state.ma.us",                       # Massachusetts Secretary of the Commonwealth
+    "elections.ny.gov", "nycvotes.org",       # New York State BOE; NYC Campaign Finance Board
     "vote.gov", "usa.gov", "eac.gov",
     # members' official government sites (incumbents' own statements of positions)
     "house.gov", "senate.gov",
@@ -79,7 +82,7 @@ class _VisibleText(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.out: list[str] = []
         self.skip_depth = 0      # >0 while inside a dropped / hidden element
-        self.stack: list[tuple[bool, bool]] = []   # (hidden, opens_main)
+        self.stack: list[tuple[str, bool, bool]] = []   # (tag, hidden, opens_main)
         self.main_only = main_only   # page marks its main content: keep only that
         self.main_depth = 0
 
@@ -98,7 +101,7 @@ class _VisibleText(HTMLParser):
             or a.get("role", "").lower() in _DROP_ROLES
         )
         opens_main = tag == "main" or a.get("role", "").lower() == "main"
-        self.stack.append((hidden, opens_main))
+        self.stack.append((tag, hidden, opens_main))
         if opens_main:
             self.main_depth += 1
         if hidden:
@@ -107,14 +110,19 @@ class _VisibleText(HTMLParser):
             self.out.append("\n")
 
     def handle_endtag(self, tag):
-        if tag in _VOID or not self.stack:
+        # Real pages leave tags unclosed (<p>, <li>...). Close back to the matching open tag;
+        # ignore a stray end tag that has no matching open tag.
+        if tag in _VOID or not any(t == tag for t, _, _ in self.stack):
             return
-        hidden, opens_main = self.stack.pop()
-        if opens_main:
-            self.main_depth -= 1
-        if hidden:
-            self.skip_depth -= 1
-        elif tag in _BLOCK:
+        while self.stack:
+            t, hidden, opens_main = self.stack.pop()
+            if opens_main:
+                self.main_depth -= 1
+            if hidden:
+                self.skip_depth -= 1
+            if t == tag:
+                break
+        if tag in _BLOCK:
             self.out.append("\n")
 
     def handle_data(self, data):
@@ -174,7 +182,12 @@ class WebReader:
         return self._robots[base].can_fetch(config.USER_AGENT, url)
 
     def fetch(self, url: str, max_chars: int = MAX_CHARS) -> SourceRecord:
+        """Visible text of an allowlisted page. PDFs: `...file.pdf#page=6&pages=6-7` reads pages 6-7
+        (`page=6` also makes the citation open at that page in a browser)."""
         check_web_url(url)
+        base_url, _, frag = url.partition("#")
+        if base_url.lower().endswith(".pdf"):
+            return self._fetch_pdf(url, base_url, frag, max_chars)
         if self.respect_robots and not self._robots_ok(url):
             raise BlockedURL(f"robots.txt disallows {url}")
         wait = MIN_INTERVAL_S - (time.monotonic() - self._last)
@@ -205,6 +218,37 @@ class WebReader:
             "truncated": truncated,
             "injection_flags": find_injection(text),
         })
+
+    # ---- PDFs (official voter guides are often PDFs) -----------------------------------
+    _pdfs: dict = field(default_factory=dict)
+
+    def _pdf_pages(self, base_url: str) -> list[str]:
+        if base_url not in self._pdfs:
+            if self.respect_robots and not self._robots_ok(base_url):
+                raise BlockedURL(f"robots.txt disallows {base_url}")
+            try:
+                r = self.client.get(base_url, timeout=60)
+            except httpx.HTTPError as e:
+                raise SourceError(f"{urlparse(base_url).hostname} failed ({type(e).__name__})") from None
+            if r.status_code != 200 or not r.content.startswith(b"%PDF"):
+                raise SourceError(f"{urlparse(base_url).hostname} did not return the PDF (HTTP {r.status_code})")
+            from pypdf import PdfReader
+            reader = PdfReader(io.BytesIO(r.content))
+            self._pdfs[base_url] = [(p.extract_text() or "") for p in reader.pages]
+        return self._pdfs[base_url]
+
+    def _fetch_pdf(self, url: str, base_url: str, frag: str, max_chars: int) -> SourceRecord:
+        pages = self._pdf_pages(base_url)
+        params = dict(kv.split("=", 1) for kv in frag.split("&") if "=" in kv)
+        spec = params.get("pages") or params.get("page") or f"1-{len(pages)}"
+        a, _, b = spec.partition("-")
+        first, last = max(1, int(a)), min(len(pages), int(b or a))
+        text = "\n\n".join(f"[page {i}]\n{pages[i - 1]}" for i in range(first, last + 1))
+        text = re.sub(r"[ \t]+", " ", text).strip()
+        truncated = len(text) > max_chars
+        text = text[:max_chars]
+        return SourceRecord("web", url, now_iso(), {"url": url, "text": text, "truncated": truncated,
+                                                    "injection_flags": find_injection(text)})
 
     def close(self):
         self.client.close()

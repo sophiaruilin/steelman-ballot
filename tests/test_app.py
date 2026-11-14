@@ -75,3 +75,24 @@ def test_rate_limit(monkeypatch):
 def test_service_worker_never_caches_ballot_lookups():
     sw = client.get("/sw.js").text
     assert 'url.pathname.startsWith("/api/")) return;' in sw
+
+
+def test_coverage_endpoint_lists_three_states():
+    states = client.get("/api/coverage").json()["states"]
+    assert set(states) == {"CA", "MA", "NY"} and "New York City" in states["NY"]
+
+
+def test_site_pages_and_fonts_are_self_hosted():
+    html = client.get("/").text
+    for section in ('id="view-how"', 'id="view-steelman"', 'id="view-philosophy"', "Think more deeply."):
+        assert section in html
+    assert "fonts.googleapis" not in html and "cdn." not in html
+    assert client.get("/fonts/eb-garamond-latin-500-normal.woff2").status_code == 200
+    css = client.get("/app.css").text
+    assert "#234742" in css and "#F4F0E7" in css
+    # no partisan red or blue anywhere in the palette
+    import re
+    for hexcode in re.findall(r"#[0-9a-fA-F]{6}\b", css):
+        r, g, b = (int(hexcode[i:i + 2], 16) for i in (1, 3, 5))
+        assert not (r > 150 and g < 90 and b < 90), f"red-ish {hexcode}"
+        assert not (b > 150 and r < 90 and g < 120), f"blue-ish {hexcode}"

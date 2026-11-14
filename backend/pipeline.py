@@ -30,11 +30,14 @@ def _add(total: dict, u: dict, model: str) -> None:
 
 async def research_measure(state: str, number: str, election: str = "2026-11-03",
                            urls: list[str] | None = None, reader: WebReader | None = None,
-                           writer_model: str | None = None) -> dict:
+                           writer_model: str | None = None, slug: str | None = None,
+                           label: str | None = None, display_number: str | None = None) -> dict:
     urls = urls or measure_analyst.start_urls(state, number)
     deps = ResearchDeps(reader=reader or WebReader())
-    measure_id = f"{state.upper()}-{election}-prop-{number}"
-    prompt = (f"Measure: {state.upper()} Proposition {number}, election {election}. measure_id = '{measure_id}'.\n"
+    measure_id = f"{state.upper()}-{election}-{slug or f'prop-{number}'}"
+    label = label or f"{state.upper()} Proposition {number}"
+    prompt = (f"Measure: {label}, election {election}. measure_id = '{measure_id}', "
+              f"number = '{display_number or f'Prop {number}'}'.\n"
               "Start by fetching these official pages:\n" + "\n".join(f"- {u}" for u in urls))
     writer = writer_model or config.MODEL_NAME
     analyst = measure_analyst.get_agent(writer)

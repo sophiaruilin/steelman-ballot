@@ -27,11 +27,14 @@ MEASURE_TYPES = (r"Legislative Statute|Legislative Constitutional Amendment|"
 
 @dataclass
 class Measure:
-    number: str
+    number: str                 # as voters see it: "Prop 3", "Question 4", "Proposal 2"
     official_title: str
     measure_type: str
-    urls: list[str]
+    urls: list[str]             # official pages the Measure Analyst starts from
     source_url: str
+    slug: str = ""              # card id part: "prop-3", "question-4", "nyc-proposal-2"
+    label: str = ""             # for the agent: "California Proposition 3"
+    scope: str = "statewide"    # "statewide" or a local area, e.g. "New York City"
 
 
 @dataclass
@@ -74,12 +77,95 @@ def ca_measures(reader: WebReader, election: str) -> list[Measure]:
     base = "https://voterguide.sos.ca.gov/propositions/{n}/"
     return [
         Measure(number=f"Prop {n}", official_title=title, measure_type=kind, source_url=url,
-                urls=[base.format(n=n) + p for p in ("title-summary.htm", "analysis.htm", "arguments-rebuttals.htm")])
+                urls=[base.format(n=n) + p for p in ("title-summary.htm", "analysis.htm", "arguments-rebuttals.htm")],
+                slug=f"prop-{n}", label=f"California Proposition {n}")
         for n, title, kind in parse_ca_guide(text)
     ]
 
 
-STATE_GUIDES = {"CA": ca_measures}
+# Massachusetts: the official "Information for Voters" guide. Its web pages sit behind bot
+# protection (respected), but the official PDF is public and allowed by robots.txt.
+MA_PDF = ("https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/"
+          "IFV_2026%20English.pdf")
+
+
+def parse_ma_guide(pages: list[str]) -> list[tuple[str, str, int, int]]:
+    """(number, title, first_page, last_page) of each question's summary-and-arguments section."""
+    toc = "\n".join(pages[:5])
+    titles = {m.group(1): m.group(2).strip(" .")
+              for m in re.finditer(r"Question (\d+) - ([^\n.]+?)\s*\.{3,}", toc)}
+    starts = {}
+    for i, text in enumerate(pages, start=1):
+        for m in re.finditer(r"QUESTION (\d+): (?:Law Proposed|Referendum|Proposed Amendment)", text):
+            starts.setdefault(m.group(1), i)
+    nums = sorted(starts, key=int)
+    out = []
+    for k, n in enumerate(nums):
+        first = starts[n]
+        last = (starts[nums[k + 1]] - 1) if k + 1 < len(nums) else first + 1
+        out.append((n, titles.get(n, f"Question {n}"), first, max(first, min(last, first + 2))))
+    return out
+
+
+def ma_measures(reader: WebReader, election: str) -> list[Measure]:
+    if election != "2026-11-03":
+        return []
+    pages = reader._pdf_pages(MA_PDF)
+    return [
+        Measure(number=f"Question {n}", official_title=title, measure_type="Statewide ballot question",
+                source_url=f"{MA_PDF}#page=3",
+                urls=[f"{MA_PDF}#page={a}&pages={a}-{b}"], slug=f"question-{n}",
+                label=f"Massachusetts Question {n}")
+        for n, title, a, b in parse_ma_guide(pages)
+    ]
+
+
+# New York: no statewide proposals on the Nov 3, 2026 ballot. New York City voters have five City
+# Charter proposals; NYC Votes (the city's Campaign Finance Board) publishes summaries of public
+# statements for and against each one.
+NYC_PLACE_GEOID = "3651000"
+NYC_GUIDE = "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/"
+
+
+def parse_nyc_guide(text: str) -> list[tuple[str, str]]:
+    return [(m.group(1), m.group(2).strip())
+            for m in re.finditer(r"(?m)^\s*(\d)\. ([A-Z][^\n]{8,200})$", text)]
+
+
+def nyc_measures(reader: WebReader, election: str) -> list[Measure]:
+    if election != "2026-11-03":
+        return []
+    text = reader.fetch(NYC_GUIDE).data["text"]
+    return [
+        Measure(number=f"Proposal {n}", official_title=title, measure_type="New York City Charter amendment",
+                source_url=NYC_GUIDE, urls=[f"{NYC_GUIDE}ballot-proposal-{n}/"], slug=f"nyc-proposal-{n}",
+                label=f"New York City Ballot Proposal {n}", scope="New York City")
+        for n, title in parse_nyc_guide(text)
+    ]
+
+
+def ny_measures(reader: WebReader, election: str, place_geoid: str | None = None) -> list[Measure]:
+    return nyc_measures(reader, election) if place_geoid == NYC_PLACE_GEOID else []
+
+
+STATE_GUIDES = {"CA": ca_measures, "MA": ma_measures}
+LOCAL_GUIDES = {"NY": ny_measures}      # need the voter's city/county to know what's on the ballot
+COVERED_STATES = {
+    "CA": "Statewide propositions and statewide offices",
+    "MA": "Statewide ballot questions",
+    "NY": "New York City proposals (no statewide proposals in 2026)",
+}
+
+
+def measures_for(j: Jurisdiction, election: str, reader: WebReader) -> tuple[list[Measure], str]:
+    """Measures on this voter's ballot and a coverage status: official / none_on_ballot / not_mapped."""
+    if j.state_abbr in STATE_GUIDES:
+        ms = STATE_GUIDES[j.state_abbr](reader, election)
+        return ms, ("official" if ms else "not_mapped")
+    if j.state_abbr in LOCAL_GUIDES:
+        ms = LOCAL_GUIDES[j.state_abbr](reader, election, j.place.geoid if j.place else None)
+        return ms, "official" if ms else "none_on_ballot"
+    return [], "not_mapped"
 
 
 # ---- Races from districts --------------------------------------------------------
@@ -111,10 +197,7 @@ def map_ballot(address: str, election: str = "2026-11-03", reader: WebReader | N
                districts={k: (v.name if hasattr(v, "name") else v) for k, v in {
                    "congressional": j.congressional_district, "state_senate": j.state_senate,
                    "state_house": j.state_house, "county": j.county, "city": j.place}.items() if v})
-    guide = STATE_GUIDES.get(j.state_abbr)
-    if guide:
-        b.measures = guide(reader, election)
-        b.measures_status = "official" if b.measures else "not_mapped"
+    b.measures, b.measures_status = measures_for(j, election, reader)
     b.races = races_for(j, election)
     return b
 

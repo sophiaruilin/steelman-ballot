@@ -26,7 +26,7 @@ from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, Response
 from fastapi.staticfiles import StaticFiles
 
 from backend import config
-from backend.agents.ballot_mapper import STATE_GUIDES, races_for
+from backend.agents.ballot_mapper import COVERED_STATES, measures_for, races_for
 from backend.share import open_graph, share_text, whatsapp_link
 from backend.sources.geocoder import AddressNotFound, geocode
 from backend.sources.http import SourceError
@@ -115,19 +115,18 @@ def measure_summary(card_id: str, number: str, official_title: str) -> dict:
             "verified": rec.get("steelman_verified", False), "topics": topics_for(c), "status": "ready"}
 
 
-_measure_lists: dict[tuple, tuple[float, list]] = {}
+_measure_lists: dict[tuple, tuple[float, list, str]] = {}
 
 
-def state_measures(state: str) -> list:
-    """Official measure list for a state, cached for 6 hours (one fetch serves everyone)."""
-    key = (state, ELECTION)
+def ballot_measures(j) -> tuple[list, str]:
+    """Official measure list for this voter's state (and city, for NYC), cached for 6 hours."""
+    key = (j.state_abbr, j.place.geoid if (j.place and j.state_abbr == "NY") else "", ELECTION)
     hit = _measure_lists.get(key)
     if hit and time.time() - hit[0] < 6 * 3600:
-        return hit[1]
-    guide = STATE_GUIDES.get(state)
-    measures = guide(WebReader(), ELECTION) if guide else []
-    _measure_lists[key] = (time.time(), measures)
-    return measures
+        return hit[1], hit[2]
+    measures, status = measures_for(j, ELECTION, WebReader())
+    _measure_lists[key] = (time.time(), measures, status)
+    return measures, status
 
 
 CA_STATEWIDE = [("governor", "Governor"), ("lt-governor", "Lieutenant Governor"), ("sos", "Secretary of State"),
@@ -169,10 +168,10 @@ def ballot(request: Request, address: str = Query(..., min_length=5, max_length=
     except SourceError:
         raise HTTPException(503, "The address lookup service is busy. Please try again shortly.") from None
     try:
-        measures = state_measures(j.state_abbr)
+        measures, mstatus = ballot_measures(j)
     except SourceError:
-        measures = []
-    mlist = [measure_summary(f"{j.state_abbr}-{ELECTION}-prop-{m.number.split()[-1]}", m.number, m.official_title)
+        measures, mstatus = [], "unavailable"
+    mlist = [{**measure_summary(f"{j.state_abbr}-{ELECTION}-{m.slug}", m.number, m.official_title), "scope": m.scope}
              for m in measures]
     races = race_summaries(j)
     ready = [m for m in mlist if m["status"] == "ready"] + [r for r in races if r["status"] == "ready"]
@@ -186,11 +185,13 @@ def ballot(request: Request, address: str = Query(..., min_length=5, max_length=
             "State House / Assembly": j.state_house and j.state_house.name,
             "County": j.county and j.county.name,
             "City": j.place and j.place.name}.items() if v},
+        "covered_state": j.state_abbr in COVERED_STATES,
+        "coverage_note": COVERED_STATES.get(j.state_abbr, "Not covered yet: we show your districts and races only."),
         "coverage": {
-            "Statewide measures": "official" if mlist else "not_mapped",
+            "Ballot measures": mstatus,
             "Statewide offices": "official" if j.state_abbr == "CA" else "not_mapped",
             "Federal": "partial",
-            "Local": "not_mapped",
+            "Local": "official" if any(m.scope != "statewide" for m in measures) else "not_mapped",
         },
         "measures": mlist,
         "races": races,
@@ -203,6 +204,12 @@ def ballot(request: Request, address: str = Query(..., min_length=5, max_length=
         "note": "Confirm against your county's official sample ballot. If anything here disagrees with it, "
                 "the official ballot is right.",
     }
+
+
+@app.get("/api/coverage")
+def coverage():
+    """States we cover, for the map on the home page."""
+    return {"states": COVERED_STATES, "election": ELECTION}
 
 
 @app.get("/api/card/{card_id}")

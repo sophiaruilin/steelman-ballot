@@ -152,3 +152,49 @@ def test_page_chrome_dropped_when_main_content_marked():
 
 def test_pages_without_main_still_read_fully():
     assert visible_text("<p>One</p><div>Two</div>") == "One\n\nTwo"
+
+
+# ---- Massachusetts (official PDF) and New York City (NYC Votes) -------------------------
+
+import json as _json
+
+from backend.agents.ballot_mapper import NYC_PLACE_GEOID, parse_ma_guide, parse_nyc_guide
+
+
+def test_parse_ma_guide_finds_9_questions_and_their_pages():
+    pages = _json.loads((FIX / "ma_ifv2026_pages_1_25.json").read_text(encoding="utf-8"))
+    qs = parse_ma_guide(pages)
+    assert [q[0] for q in qs] == [str(i) for i in range(1, 10)]
+    assert qs[0] == ("1", "Expanding the Public Records Law", 6, 7)
+    assert qs[8][1] == "Firearms Regulation" and qs[8][2] == 22
+    assert all(b - a <= 2 for _, _, a, b in qs)          # only the summary + arguments pages, not the full law
+
+
+def test_parse_nyc_guide_finds_5_proposals():
+    props = parse_nyc_guide((FIX / "nyc_guide_2026.txt").read_text(encoding="utf-8"))
+    assert [p[0] for p in props] == ["1", "2", "3", "4", "5"]
+    assert props[4][1].startswith("Set Contribution Targets for Rainy Day Fund")
+
+
+def test_nyc_measures_only_for_nyc_addresses():
+    from backend.agents.ballot_mapper import ny_measures
+
+    class NoNetwork:
+        def fetch(self, url):
+            raise AssertionError("should not be called outside NYC")
+    assert ny_measures(NoNetwork(), "2026-11-03", place_geoid="3601000") == []   # Albany
+    assert NYC_PLACE_GEOID == "3651000"
+
+
+def test_pdf_page_ranges_and_fragment_citation():
+    reader = WebReader(transport=httpx.MockTransport(lambda req: httpx.Response(404)))
+    reader._pdfs["https://www.sec.state.ma.us/guide.pdf"] = ["one", "two", "three", "four"]
+    rec = reader.fetch("https://www.sec.state.ma.us/guide.pdf#page=2&pages=2-3")
+    assert "[page 2]\ntwo" in rec.data["text"] and "[page 3]\nthree" in rec.data["text"]
+    assert "four" not in rec.data["text"] and rec.cite_url.endswith("#page=2&pages=2-3")
+
+
+def test_unclosed_tags_do_not_hide_main_content():
+    page = '<main><p>First paragraph<p>Second paragraph<ul><li>item one<li>item two</ul></div></main><footer>x</footer>'
+    text = visible_text(page)
+    assert "First paragraph" in text and "item two" in text and "x" not in text.split()
