@@ -45,6 +45,12 @@ copy .env.example .env            # macOS/Linux: cp .env.example .env
 | `CENSUS_API_KEY` | ACS local demographics | Free |
 | `VOTESMART_API_KEY` | Voting records and ratings (optional) | Free on request |
 
+## Try it
+```bash
+python -m backend.agents.ballot_mapper "1315 10th St, Sacramento, CA 95814"
+python -m backend.agents.measure_analyst CA 3      # writes output/cards/CA-2026-11-03-prop-3.json
+```
+
 ## Tests
 ```bash
 python -m pytest -q
@@ -57,9 +63,11 @@ steelman-ballot/
 ├── backend/
 │   ├── config.py          keys, model, cache policy, spending limits
 │   ├── cache.py           shared per-jurisdiction cache + refresh rules
+│   ├── models.py          card formats (MeasureCard, Steelman, Claim)
+│   ├── agents/            ballot_mapper, measure_analyst, common (safe fetch tool, citation + quote checks)
 │   ├── sources/           one adapter per data source: geocoder, fec (Funded by),
 │   │                      congress + openstates (Did), http (allowlisted client),
-│   │                      filters, replay (test tapes)
+│   │                      filters, web (safe page reader), replay (test tapes)
 │   └── prompts/           system prompts for each agent
 ├── tests/                 offline tests + saved API responses
 ├── data/                  demo snapshots (runtime cache is git-ignored)

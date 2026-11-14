@@ -1,0 +1,160 @@
+{
+  "card": {
+    "measure_id": "CA-2026-11-03-prop-3",
+    "number": "Prop 3",
+    "official_title": "PROVIDES PERMANENT FUNDING FOR SCHOOLS AND HEALTH CARE BY EXTENDING EXISTING TAX ON HIGH INCOMES. INITIATIVE CONSTITUTIONAL AMENDMENT.",
+    "plain_title": "Make existing higher income tax rates on high earners permanent",
+    "title_disputed": false,
+    "put_on_ballot_by": "Citizen initiative",
+    "yes_means": "The higher income tax rates now paid by high-income Californians would continue permanently instead of expiring in 2031. Revenue would support education and other state programs.",
+    "no_means": "The higher rates would remain temporary and expire in 2031 as scheduled. Affected taxpayers would then pay lower rates, and the state would no longer collect revenue from those higher rates.",
+    "who_is_affected": [
+      "High-income taxpayers who pay the higher rates",
+      "K–12 students, families and school employees",
+      "Community college students and employees",
+      "People who rely on Medi-Cal and other state services"
+    ],
+    "fiscal_impact": {
+      "text": "The Legislative Analyst estimates that keeping the higher rates after their scheduled expiration would maintain $5 billion to $15 billion in annual state revenue. The amount would vary widely with the stock market.",
+      "label": "prediction",
+      "whose": "Legislative Analyst",
+      "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "core_claim": "Supporters argue that keeping existing rates on the highest incomes protects schools and health care from a large future loss of funding.",
+      "values": [
+        "Public services",
+        "Ability to pay",
+        "Local accountability"
+      ],
+      "best_evidence": [
+        {
+          "text": "The higher rates apply to the top 2 percent of California taxpayers; the measure would keep those rates rather than increase them above current levels.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "Supporters warn that losing this revenue could mean teacher layoffs, larger classes and cuts to health care.",
+          "label": "prediction",
+          "whose": "Supporters",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/3/arguments-rebuttals.htm",
+          "quote": null
+        },
+        {
+          "text": "The official summary says local school boards decide how school revenue is spent and that administrative costs are barred.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/3/title-summary.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Supporters say students, families, educators and people who rely on Medi-Cal benefit from continued funding.",
+      "answer_to_other_side": "Supporters argue that letting a temporary tax expire is not worth the risk to classrooms and clinics. They point to local control, audits and public spending reports as safeguards against misuse."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "core_claim": "Opponents argue that the state should honor the tax’s temporary design and improve spending oversight before making higher rates permanent.",
+      "values": [
+        "Keeping commitments",
+        "Taxpayer costs",
+        "Spending accountability"
+      ],
+      "best_evidence": [
+        {
+          "text": "Voters approved the higher rates as temporary in 2012 and extended them in 2016; Proposition 3 would remove their expiration.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "Keeping the rates would mean affected taxpayers continue paying a combined $5 billion to $15 billion each year that the state would otherwise stop collecting.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "Opponents argue that stronger control over waste and spending should come before a permanent commitment to higher taxes.",
+          "label": "value",
+          "whose": "Opponents",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/3/arguments-rebuttals.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Opponents say taxpayers benefit from keeping the scheduled tax reduction and demanding better use of public money.",
+      "answer_to_other_side": "Opponents argue that protecting services should start with spending reforms, not permanent taxes. They see school-funding safeguards as insufficient to address their concerns about the broader state budget."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "Should California keep this revenue permanently to support public services, or honor the scheduled tax reduction and demand spending reforms? The sides also disagree about how much losing the revenue would harm services and whether spending controls could make up for it."
+    },
+    "evidence": [
+      {
+        "text": "The measure keeps current higher rates permanently. It does not raise rates above today’s levels, but rates would be higher after 2030 than under current law.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The tax applies to income above about $371,000 for single filers, $742,000 for joint filers and $505,000 for heads of household at 2025 levels. These thresholds adjust annually for inflation.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/3/title-summary.htm",
+        "quote": null
+      },
+      {
+        "text": "The Legislative Analyst estimates roughly 40 percent of the added funding would go to schools and community colleges. The rest would support other state programs, with some set aside in reserves.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "Permanent tax rates would not guarantee steady annual revenue. The analyst expects large swings because much of the taxed income is tied to the stock market.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+        "quote": null
+      }
+    ],
+    "supporters": [
+      "California Teachers Association",
+      "California School Nurses Organization",
+      "Planned Parenthood Affiliates of California"
+    ],
+    "opponents": [
+      "California Taxpayers Association",
+      "Family Business Association of California",
+      "California Hispanic Chambers of Commerce"
+    ],
+    "reading_minutes": 4
+  },
+  "meta": {
+    "agent": "measure_analyst",
+    "measure_id": "CA-2026-11-03-prop-3",
+    "seconds": 26.6,
+    "usage": {
+      "requests": 2,
+      "input_tokens": 9322,
+      "cache_read_tokens": 4483,
+      "output_tokens": 1436,
+      "reasoning_tokens": 46,
+      "tool_calls": 3
+    },
+    "pages_read": [
+      "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+      "https://voterguide.sos.ca.gov/propositions/3/title-summary.htm",
+      "https://voterguide.sos.ca.gov/propositions/3/arguments-rebuttals.htm"
+    ],
+    "blocked": [],
+    "injection_flags": {}
+  }
+}

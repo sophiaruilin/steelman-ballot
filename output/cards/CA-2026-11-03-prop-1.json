@@ -1,0 +1,159 @@
+{
+  "card": {
+    "measure_id": "CA-2026-11-03-prop-1",
+    "number": "Prop 1",
+    "official_title": "AUTHORIZES BONDS FOR HOUSING AFFORDABILITY PROGRAMS. LEGISLATIVE STATUTE.",
+    "plain_title": "Borrow $11.25 billion for affordable housing and veterans’ home loans",
+    "title_disputed": false,
+    "put_on_ballot_by": "Legislature",
+    "yes_means": "The state could borrow $11.25 billion for rental housing, homebuying help, veterans’ home loans, and related programs. The state’s main budget would repay $10 billion plus interest; participating veterans’ loan payments would repay the other $1.25 billion.",
+    "no_means": "The state would not issue these new housing bonds. Existing housing programs would remain, but would not receive this additional funding.",
+    "who_is_affected": [
+      "Low- and moderate-income renters and homebuyers, including people facing homelessness",
+      "Veterans seeking home loans",
+      "Farmworkers, tribal communities, and university students eligible for housing assistance",
+      "Local governments, nonprofit housing groups, and housing developers",
+      "Taxpayers and people who use state-funded public services"
+    ],
+    "fiscal_impact": {
+      "text": "The Legislative Analyst estimates state costs of $500 million to $600 million a year for about 25 years. Veterans’ loan payments are expected to cover repayment of the separate $1.25 billion veterans bond.",
+      "label": "prediction",
+      "whose": "Legislative Analyst",
+      "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "core_claim": "Supporters argue that funding affordable homes now would help working families, veterans, and vulnerable residents gain stable housing and avoid homelessness.",
+      "values": [
+        "Housing stability",
+        "Opportunity to own a home",
+        "Support for veterans"
+      ],
+      "best_evidence": [
+        {
+          "text": "The measure sets aside $7.2 billion to acquire, build, or renovate affordable rental housing, including some housing with on-site support services.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "The measure provides $1.1 billion for homeownership programs and $1.25 billion for veterans’ home loans.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "Supporters argue that the funding would restart stalled housing projects and help people at risk of homelessness stay housed.",
+          "label": "prediction",
+          "whose": "Supporters in the official ballot argument",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/1/arguments-rebuttals.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Supporters emphasize working families, first-time buyers, veterans, seniors, people with disabilities, and people at risk of homelessness.",
+      "answer_to_other_side": "Supporters argue that the cost buys lasting affordable homes and brings in federal funds. They point to public reporting and accountability, and argue that the measure raises no new taxes. That does not mean repayment is free."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "no_organized_side",
+      "core_claim": "No organized opposition was found. A case against the measure, based on the nonpartisan analysis, is to avoid a long repayment commitment and preserve money for other public needs.",
+      "values": [
+        "Budget flexibility",
+        "Lower borrowing costs",
+        "Careful use of public money"
+      ],
+      "best_evidence": [
+        {
+          "text": "Repaying the housing-program bond would cost the state’s main budget $500 million to $600 million each year for about 25 years.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "Borrowing would cost about 15 percent more, after inflation, than paying up front with money the state already has.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "The same state fund that would repay the $10 billion bond pays for most public services, including education and health care.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "This case prioritizes taxpayers and people who depend on other state services funded from the same budget.",
+      "answer_to_other_side": "The housing assistance could be valuable while borrowing remains the wrong funding choice. Paying up front would avoid interest costs, and rejecting this bond would avoid its long-term budget commitment without ending existing housing programs."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "Is the added housing assistance worth decades of state payments and higher costs from borrowing? The trade-off is between funding housing now and keeping future budgets more flexible."
+    },
+    "evidence": [
+      {
+        "text": "Projects receiving the rental-housing loans generally must reserve units for low-income households for 55 years.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "Working with other government funding, the bonds would subsidize up to 40,000 multifamily rental units, about 2,500 farmworker units, and about 1,200 university student beds.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The funds would also help up to 40,000 households with homeownership, including about 2,100 veterans.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "Annual repayment costs would equal about 0.25 percent of the state’s main budget. Veterans’ home-loan payments have historically covered their program’s bond repayments.",
+        "label": "prediction",
+        "whose": "Legislative Analyst; the payment history is a reported fact",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+        "quote": null
+      }
+    ],
+    "supporters": [
+      "Habitat for Humanity California",
+      "California Alliance for Retired Americans",
+      "Housing California",
+      "California Housing Consortium",
+      "California Alliance of Child and Family Services"
+    ],
+    "opponents": [],
+    "reading_minutes": 4
+  },
+  "meta": {
+    "agent": "measure_analyst",
+    "measure_id": "CA-2026-11-03-prop-1",
+    "seconds": 34.0,
+    "usage": {
+      "requests": 3,
+      "input_tokens": 15059,
+      "cache_read_tokens": 8465,
+      "output_tokens": 1561,
+      "reasoning_tokens": 94,
+      "tool_calls": 4
+    },
+    "pages_read": [
+      "https://voterguide.sos.ca.gov/propositions/1/arguments-rebuttals.htm",
+      "https://voterguide.sos.ca.gov/propositions/1/title-summary.htm",
+      "https://voterguide.sos.ca.gov/propositions/1/analysis.htm"
+    ],
+    "blocked": [],
+    "injection_flags": {}
+  }
+}

@@ -44,3 +44,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 8: Open States adapter for state legislators
 **Prompt (my own words):** "Yes, start" (approving the Open States adapter for state legislators' "Did" section)
 **What was lacking before:** The app covered members of Congress but not the state house and senate members on most ballots, and honorary resolutions were crowding out real bills.
+
+## Step 9: First agents (Ballot Mapper and Measure Analyst)
+**Prompt (my own words):** "Yes, start" (approving the first agents: the Ballot Mapper and the Measure Analyst, starting with the California look-back)
+**What was lacking before:** The app had data sources but no agents, no card format, and no protection for reading web pages: hidden-text injection, look-alike sites, made-up citations or misquotes.
