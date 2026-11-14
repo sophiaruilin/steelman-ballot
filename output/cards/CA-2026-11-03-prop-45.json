@@ -1,0 +1,270 @@
+{
+  "measure_id": "CA-2026-11-03-prop-45",
+  "card": {
+    "measure_id": "CA-2026-11-03-prop-45",
+    "number": "Prop 45",
+    "official_title": "MODIFIES ENVIRONMENTAL REVIEW FOR CERTAIN PROJECTS. INITIATIVE STATUTE.",
+    "plain_title": "Change environmental review and lawsuit rules for eligible projects",
+    "title_disputed": false,
+    "put_on_ballot_by": "Citizen initiative",
+    "yes_means": "Eligible housing, transportation, water, health, and other project applicants could choose new environmental review and permit procedures with tighter deadlines and limits on review and court challenges.",
+    "no_means": "Existing environmental review, permitting, and court challenge procedures would remain in place.",
+    "what_changes": [
+      {
+        "topic": "Review deadlines",
+        "today": "Existing procedures have less binding time limits for environmental and permitting reviews.",
+        "if_passes": "Tighter deadlines apply, including a 365-business-day limit for environmental impact reports that applicants can seek to enforce.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm"
+      },
+      {
+        "topic": "Project alternatives",
+        "today": "For detailed environmental reviews, agencies must develop and consider multiple alternatives that could reduce environmental harm.",
+        "if_passes": "Applicants may develop just one alternative for the agency to consider.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm"
+      },
+      {
+        "topic": "Public comments",
+        "today": "State law sets minimum public review periods, not maximums.",
+        "if_passes": "Agencies face limits on how long they can accept public and other agencies’ comments.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm"
+      },
+      {
+        "topic": "Tribal consultation",
+        "today": "Agencies must consult with a wider range of California native tribes than only federally recognized tribes.",
+        "if_passes": "Agencies and applicants need consult only with federally recognized California native tribes.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm"
+      },
+      {
+        "topic": "Court challenges",
+        "today": "Courts can stop an entire project while an agency fixes a faulty environmental review.",
+        "if_passes": "Courts face decision deadlines and narrower review, and may stop only the part of a project with a faulty review.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm"
+      }
+    ],
+    "who_is_affected": [
+      "Applicants for eligible public and private projects",
+      "Residents near proposed projects and people who comment on or challenge them",
+      "California native tribes, including tribes without federal recognition",
+      "State and local agencies and courts",
+      "Taxpayers and people who would use new housing and infrastructure"
+    ],
+    "fiscal_impact": {
+      "text": "The Legislative Analyst estimates initial state and local costs in the high tens of millions of dollars annually, potentially exceeding $100 million annually, partly covered by fees. Longer-term effects could be larger, but whether they bring net costs or savings is uncertain.",
+      "label": "prediction",
+      "whose": "Legislative Analyst",
+      "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "Supporters argue tighter approval deadlines would make needed housing and infrastructure faster and less expensive to build, helping lower living costs.",
+      "headline_topic": "Review deadlines",
+      "more_reasons": [
+        "Supporters argue faster public construction would reduce cost overruns paid by taxpayers.",
+        "Supporters argue more predictable court challenges would reduce delays while preserving environmental review and local approval decisions."
+      ],
+      "values": [
+        "Affordability",
+        "Timely public services",
+        "Efficient use of taxes"
+      ],
+      "best_evidence": [
+        {
+          "text": "The measure sets more binding deadlines for environmental review, permits, and court challenges.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "If the changes speed public construction, state and local project costs would likely fall.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Supporters say families paying for housing, electricity, and water, taxpayers, and people waiting for schools, hospitals, and other infrastructure would benefit.",
+      "answer_to_other_side": "Supporters argue faster review need not sacrifice environmental protection: projects still undergo environmental review, and residents retain opportunities to comment, oppose projects, and sue."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "headline": "Opponents argue narrower review of project alternatives would let harmful projects move forward with less scrutiny, putting air, water, and public health at risk.",
+      "headline_topic": "Project alternatives",
+      "more_reasons": [
+        "Opponents argue shorter public comment periods would reduce communities’ ability to identify environmental harm.",
+        "Opponents argue environmental damage could leave taxpayers and utility customers paying cleanup costs."
+      ],
+      "values": [
+        "Public health",
+        "Environmental protection",
+        "Community participation"
+      ],
+      "best_evidence": [
+        {
+          "text": "Applicants may offer only one project alternative, replacing the requirement that agencies develop and consider multiple alternatives.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "If changed procedures lead to environmental harm that otherwise would not occur, governments could face higher response costs.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Opponents say keeping current rules protects nearby residents, people exposed to pollution, and taxpayers who might pay to address environmental damage.",
+      "answer_to_other_side": "Opponents argue faster, cheaper construction does not ensure lower household bills, and that reduced review could create health and cleanup costs instead."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "The sides disagree about whether tighter timelines and narrower review would deliver meaningful household savings or create environmental and public costs. They also weigh faster construction against fuller public review and stronger court remedies differently."
+    },
+    "evidence": [
+      {
+        "text": "The new procedures are optional for eligible applicants; the measure does not replace existing procedures for every project.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "Most projects already do not require a detailed environmental impact report, and some projects are exempt from environmental review.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "Under the new procedures, agencies assess impacts using laws and standards in place when the application is submitted; current law allows new information and revised review standards.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "Public comments and lawsuits would remain possible, but comment periods, what courts can consider, and courts’ ability to stop projects would be limited.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The long-term fiscal result depends partly on whether more projects get built and whether their environmental impacts differ.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 4
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 0,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The card presents the central pro case from the sources: tighter deadlines may speed essential housing and infrastructure and reduce costs, including public-project costs. It also fairly includes supporters’ claim that environmental review and public participation remain. The case is strong, though it could better foreground the supporters’ specific housing- and electricity-cost claims."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The card captures opponents’ central merits case: narrower alternatives review and shorter comment periods could mean less scrutiny and greater environmental and public-health risks, with possible public costs. It gives a fair account of their concerns without relying on their arguments about sponsors’ motives."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The headlines use parallel attribution (“Supporters argue” / “Opponents argue”) and comparable strength. Their different emphasis reflects the sides’ distinct claims, not an evident difference in tone."
+        ],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 130,
+          "no": 135,
+          "ratio": 1.04
+        },
+        "headline_words": {
+          "yes": 21,
+          "no": 24
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 5,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 10.0,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://voterguide.sos.ca.gov/propositions/45/arguments-rebuttals.htm",
+    "https://voterguide.sos.ca.gov/propositions/45/title-summary.htm",
+    "https://voterguide.sos.ca.gov/propositions/45/analysis.htm"
+  ],
+  "meta": {
+    "seconds": 50.2,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 2,
+        "input_tokens": 10771,
+        "cache_read_tokens": 5853,
+        "output_tokens": 1750,
+        "reasoning_tokens": 116,
+        "tool_calls": 3
+      },
+      "critic:gpt-6-luna": {
+        "requests": 1,
+        "input_tokens": 7563,
+        "cache_read_tokens": 0,
+        "output_tokens": 1788,
+        "reasoning_tokens": 1550,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {}
+  }
+}

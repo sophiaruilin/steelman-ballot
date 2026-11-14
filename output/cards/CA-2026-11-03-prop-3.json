@@ -4,187 +4,337 @@
     "measure_id": "CA-2026-11-03-prop-3",
     "number": "Prop 3",
     "official_title": "PROVIDES PERMANENT FUNDING FOR SCHOOLS AND HEALTH CARE BY EXTENDING EXISTING TAX ON HIGH INCOMES. INITIATIVE CONSTITUTIONAL AMENDMENT.",
-    "plain_title": "Make higher income tax rates on high earners permanent",
+    "plain_title": "Make temporary income tax rates on high earners permanent",
     "title_disputed": false,
     "put_on_ballot_by": "Citizen initiative",
-    "yes_means": "The current higher income tax rates on high earners would become permanent instead of expiring in 2031. Revenue would continue to support schools, community colleges, other state programs and budget reserves.",
-    "no_means": "The higher rates would remain temporary and expire in 2031 under current law. Affected high earners would then pay lower rates, and the state would stop collecting the revenue from those higher rates.",
+    "yes_means": "The higher income tax rates paid by the top 2 percent of California taxpayers would become permanent instead of expiring in 2031.",
+    "no_means": "The higher income tax rates would remain temporary and expire in 2031 under current law.",
+    "what_changes": [
+      {
+        "topic": "High income taxes",
+        "today": "The higher rates apply to the top 2 percent of taxpayers and expire in 2031.",
+        "if_passes": "Those existing higher rates would become permanent.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm"
+      },
+      {
+        "topic": "Education funding",
+        "today": "The state Constitution sets a minimum funding level for schools and community colleges.",
+        "if_passes": "The analyst estimates roughly 40 percent of the measure's funding would go to schools and community colleges.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm"
+      },
+      {
+        "topic": "Other programs and reserves",
+        "today": "Income taxes fund health care and other services through the state's main operating account.",
+        "if_passes": "The analyst estimates the rest of the funding would go to other state programs, with part set aside in budget reserves.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm"
+      }
+    ],
     "who_is_affected": [
-      "High-income Californians who pay the higher rates",
-      "Public school and community college students and staff",
-      "People who rely on Medi-Cal and other state services",
-      "State and local school budget planners"
+      "High-income taxpayers who pay the temporary higher rates",
+      "K–12 students, families, and school staff",
+      "Community college students and staff",
+      "People who use Medi-Cal and other state-funded services"
     ],
     "fiscal_impact": {
-      "text": "The Legislative Analyst estimates that keeping the higher rates after their scheduled expiration would maintain $5 billion to $15 billion in annual state revenue. The amount would vary widely with the economy and stock market.",
+      "text": "Compared with letting the higher rates expire in 2031, the measure would preserve $5 billion to $15 billion in annual state income tax revenue.",
       "label": "prediction",
       "whose": "Legislative Analyst",
-      "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+      "source_url": "https://voterguide.sos.ca.gov/propositions/3/title-summary.htm",
       "quote": null
     },
     "steelman_yes": {
       "side": "Yes",
       "basis": "official_argument",
-      "core_claim": "Supporters argue that keeping existing taxes on the highest incomes is better than losing money that schools and health care depend on.",
+      "headline": "Supporters argue it would protect school funding and reduce the risk of teacher layoffs, larger classes, and fewer student services.",
+      "headline_topic": "Education funding",
+      "more_reasons": [
+        "Supporters argue continued revenue would also protect Medi-Cal and other health services.",
+        "Supporters argue local control, annual audits, and limits on administrative spending would protect classroom funds."
+      ],
       "values": [
-        "Education and health care",
-        "Ability to pay",
-        "Local accountability"
+        "Reliable public services",
+        "Educational opportunity",
+        "Accountability"
       ],
       "best_evidence": [
         {
-          "text": "The higher rates apply to the top 2 percent of taxpayers, rather than taxpayers generally.",
-          "label": "fact",
-          "whose": null,
+          "text": "The analyst estimates roughly 40 percent of the measure's funding would go to schools and community colleges.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
           "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
           "quote": null
         },
         {
-          "text": "Supporters warn that allowing the rates to expire could lead to teacher layoffs, larger classes and reduced access to health care.",
-          "label": "prediction",
-          "whose": "Supporters",
-          "source_url": "https://voterguide.sos.ca.gov/propositions/3/arguments-rebuttals.htm",
-          "quote": null
-        },
-        {
-          "text": "The official summary says local school boards decide how school revenue is spent and bars its use for administrative costs.",
+          "text": "The official summary states that tax revenues are allocated 89 percent to K–12 schools and 11 percent to community colleges, with local school board spending decisions and no administrative costs.",
           "label": "fact",
           "whose": null,
           "source_url": "https://voterguide.sos.ca.gov/propositions/3/title-summary.htm",
           "quote": null
         }
       ],
-      "who_it_helps": "Supporters point to students, educators, families using health services and communities that depend on state-funded programs.",
-      "answer_to_other_side": "Supporters argue that this keeps current rates rather than raising them today. They say the school funding protections address accountability, while allowing the tax to expire would put essential services at risk."
+      "who_it_helps": "Supporters say students, school staff, and families relying on public health care would benefit.",
+      "answer_to_other_side": "Supporters argue keeping existing rates, rather than increasing them now, is worth preventing funding losses; they point to school spending safeguards."
     },
     "steelman_no": {
       "side": "No",
       "basis": "official_argument",
-      "core_claim": "Opponents argue that voters should preserve the promised end to temporary higher taxes and require better spending control before making them permanent.",
+      "headline": "Opponents argue the measure would make higher rates permanent instead of letting them expire as scheduled in 2031.",
+      "headline_topic": "High income taxes",
+      "more_reasons": [
+        "Opponents argue the state should control spending and improve results before making this revenue source permanent."
+      ],
       "values": [
-        "Keeping public promises",
-        "Taxpayer costs",
-        "Spending accountability"
+        "Tax relief",
+        "Keeping temporary limits",
+        "Spending discipline"
       ],
       "best_evidence": [
         {
-          "text": "The measure removes the scheduled expiration of higher rates that voters first approved as temporary in 2012.",
+          "text": "The measure would remove the scheduled 2031 expiration of the higher income tax rates.",
           "label": "fact",
           "whose": null,
           "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
           "quote": null
         },
         {
-          "text": "Opponents argue that taxpayers deserve to have the original temporary nature of the tax respected.",
-          "label": "value",
-          "whose": "Opponents",
-          "source_url": "https://voterguide.sos.ca.gov/propositions/3/arguments-rebuttals.htm",
-          "quote": null
-        },
-        {
-          "text": "Opponents argue that the state should bring spending under control and show better results before asking for permanent tax revenue.",
+          "text": "Opponents argue spending should be brought under control before taxpayers are asked to keep paying higher rates permanently.",
           "label": "value",
           "whose": "Opponents",
           "source_url": "https://voterguide.sos.ca.gov/propositions/3/arguments-rebuttals.htm",
           "quote": null
         }
       ],
-      "who_it_helps": "Opponents point to taxpayers who would otherwise keep paying higher rates and Californians who want tighter control over state spending.",
-      "answer_to_other_side": "Opponents argue that keeping today's rates still means higher taxes after the promised expiration. They say protecting services should start with better use of existing money, not a permanent extension."
+      "who_it_helps": "Opponents say rejection would help affected taxpayers by keeping their scheduled tax relief.",
+      "answer_to_other_side": "Opponents argue protecting services should start with spending discipline and better results, rather than permanently extending a temporary tax."
     },
     "crux": {
       "kind": "both",
-      "text": "Should California keep a major source of funding for services, or honor the scheduled end of a temporary tax? The sides also disagree about whether spending reforms could protect services without this revenue."
+      "text": "The choice weighs continued public-service funding against scheduled tax relief for high earners. The sides also disagree about whether spending reforms could protect services without extending the tax."
     },
     "evidence": [
       {
-        "text": "The measure keeps current higher rates; it does not raise them today. Compared with current law after their scheduled expiration in 2031, it keeps taxes higher for affected earners.",
+        "text": "The measure keeps existing higher rates; it does not raise them above today's levels, but it prevents their scheduled expiration.",
         "label": "fact",
         "whose": null,
         "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
         "quote": null
       },
       {
-        "text": "At 2025 income levels, the higher rates apply to income over about $371,000 for single filers, $742,000 for joint filers and $505,000 for heads of household. These thresholds adjust annually for inflation.",
+        "text": "The top 2 percent of taxpayers pay these higher rates and account for about half of all state income taxes.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "Annual revenue would vary widely because much of the taxed income is tied to the stock market; permanent rates do not mean a fixed yearly amount.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The official summary allocates tax revenues 89 percent to K–12 schools and 11 percent to community colleges, and says the measure increases General Fund revenues available for health care, reserves, and other programs.",
         "label": "fact",
         "whose": null,
         "source_url": "https://voterguide.sos.ca.gov/propositions/3/title-summary.htm",
         "quote": null
       },
       {
-        "text": "The Legislative Analyst estimates roughly 40 percent of the funding would go to schools and community colleges. The rest would support other state programs, with some set aside in reserves.",
-        "label": "prediction",
-        "whose": "Legislative Analyst",
-        "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
-        "quote": null
-      },
-      {
-        "text": "Permanent tax rates would not guarantee a steady revenue amount. The Legislative Analyst expects large yearly swings because much of the taxed income is tied to the stock market.",
+        "text": "In its estimate of funding effects, the analyst says roughly 40 percent of funding would go to schools and community colleges, with the rest supporting other programs and reserves.",
         "label": "prediction",
         "whose": "Legislative Analyst",
         "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
         "quote": null
       }
     ],
-    "supporters": [
-      "California State PTA",
-      "California Teachers Association",
-      "California Federation of Teachers",
-      "California Nurses Association",
-      "Planned Parenthood Affiliates of California"
-    ],
-    "opponents": [
-      "California Taxpayers Association",
-      "Family Business Association of California",
-      "California Hispanic Chambers of Commerce",
-      "Howard Jarvis Taxpayers Association",
-      "Central Valley Business Federation"
-    ],
-    "reading_minutes": 4
+    "reading_minutes": 3
   },
-  "steelman_verified": true,
+  "steelman_verified": false,
   "turing": {
     "yes": 4,
-    "no": 4
+    "no": 3
   },
-  "rewrites": 0,
+  "rewrites": 2,
   "review_rounds": [
     {
       "round": 0,
       "verdict": {
         "turing_yes": {
           "score": 4,
-          "reason": "A fair summary of the supporters’ case: keep rates already in place for top earners to preserve education funding and help protect health care and other services. It includes the top-2-percent fact, the supporters’ forecast of service cuts, and the school-spending safeguards. It could make the supporters’ accountability and direct-school-funding argument more prominent, but does not distort it."
+          "reason": "Fairly represents the supporters’ merits case: preserve funding for schools and health services without raising rates above their current levels, with safeguards on school spending. It could better capture their claim that letting the rates expire risks cuts to services, but the headline and reasons convey that case."
         },
         "turing_no": {
           "score": 4,
-          "reason": "A fair account of the opponents’ central case: the higher rates were presented as temporary, and voters should demand spending control and results before making them permanent. It captures the promise, taxpayer-cost, and accountability themes. It omits some of the opponents’ additional cost-of-living claims, but those are not necessary to state their core argument."
+          "reason": "Fairly conveys the case for scheduled tax relief and the argument that spending should be controlled before rates are made permanent. It could more directly reflect opponents’ emphasis on the original promise that the increase was temporary, but the headline’s reference to current law and future relief gets at that argument."
         },
         "swap_test_pass": true,
-        "swap_notes": [],
-        "fidelity_problems": [],
+        "swap_notes": [
+          "The Yes headline emphasizes possible service harms (“teacher layoffs, larger classes, and fewer student services”), while the No headline frames the change as a “tax burden” and “denying…future relief.” Both are attributed to their side and reflect arguments in the sources; neither uses an unsupported certainty claim."
+        ],
+        "fidelity_problems": [
+          "The education row and Yes evidence say roughly 40% of the “revenue preserved” would go to schools and community colleges. The Legislative Analyst’s analysis says roughly 40% of the “funding” would go there, while the official title and summary says tax revenues are allocated 89% to K–12 schools and 11% to community colleges. Do not present these as the same allocation. Clarify the distinction using the source wording, or present both source statements with their different terms; the current phrasing conflicts with the official summary.",
+          "The Yes evidence similarly paraphrases the analyst as saying 40% of preserved revenue goes to education. That is not the analyst’s wording and risks repeating the allocation conflict; revise it to say “roughly 40 percent of the funding” and account for the official summary’s separate 89%/11% revenue allocation. "
+        ],
         "label_problems": [],
         "loaded_or_overconfident": [],
+        "off_the_merits": [],
         "never_list": [],
         "false_balance": [],
-        "verdict": "pass",
-        "instructions": ""
+        "verdict": "revise",
+        "instructions": "1. Revise the education-funding row and Yes evidence to distinguish the analyst’s estimate that roughly 40% of “funding” would go to schools and community colleges from the official summary’s 89%/11% allocation of tax revenues. Do not call the analyst’s 40% estimate a share of preserved tax revenue unless the sources support that equivalence. 2. Keep the distinction clear anywhere the card summarizes how the measure allocates revenue versus the analyst’s estimate of funding for education."
       },
       "checks": {
         "words": {
-          "yes": 135,
-          "no": 131,
-          "ratio": 1.03
+          "yes": 126,
+          "no": 108,
+          "ratio": 1.17
+        },
+        "headline_words": {
+          "yes": 20,
+          "no": 21
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 2,
+          "no": 1
         },
         "evidence_points": {
-          "yes": 3,
-          "no": 3
+          "yes": 2,
+          "no": 2
         },
         "certainty_words": {
           "yes": 0,
           "no": 0
         },
+        "reading_grade": 7.4,
         "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 1,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "This fairly presents the strongest source-based Yes case: the measure keeps current rates rather than raising them now, may avert cuts to schools and health care, and includes school-spending safeguards. It could state more directly that supporters warn of specific consequences such as layoffs, larger classes, and reduced Medi-Cal access, but the headline and supporting points cover these concerns."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "This presents the core No case in the sources: the rates were temporary and are scheduled to expire, so making them permanent denies affected taxpayers the scheduled tax relief; opponents also argue spending should be controlled first. It is a credible merits-based case, though the headline's phrasing is more rhetorically charged than necessary."
+        },
+        "swap_test_pass": false,
+        "swap_notes": [
+          "The headlines have parallel attribution and structure, but the No headline uses the more charged phrases “tax burden” and “current law promises to end.” Consider neutralizing these to match the Yes headline’s tone."
+        ],
+        "fidelity_problems": [
+          "The card repeatedly says the analyst’s roughly 40% estimate is “separate from” the summary’s 89%/11% allocation. The sources report both figures but do not explain their relationship or explicitly say they are separate measures. Avoid asserting a reconciliation the analysis does not provide; describe the figures as two reported statements and note that the source text does not explain the difference, or omit the 40% figure from the What-changes row."
+        ],
+        "label_problems": [],
+        "loaded_or_overconfident": [
+          "“Current law promises to end” frames a statutory expiration as a promise. The sources establish that the rates are scheduled to expire in 2031; use “scheduled to end” or attribute the promise characterization explicitly to opponents.",
+          "“Tax burden” in the No headline is mildly loaded. “Higher tax rates” would be more neutral."
+        ],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. In the education What-changes row and Yes evidence, remove the unsupported assertion that the analyst’s roughly 40% estimate is “separate from” the summary’s 89%/11% allocation. Either report the two source statements without explaining their relationship, or omit the 40% estimate there. 2. Revise the No headline’s “tax burden that current law promises to end” to neutral wording such as “Opponents argue the measure would make higher rates permanent instead of letting them expire as scheduled in 2031.”"
+      },
+      "checks": {
+        "words": {
+          "yes": 148,
+          "no": 108,
+          "ratio": 1.37
+        },
+        "headline_words": {
+          "yes": 20,
+          "no": 21
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 2,
+          "no": 1
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 7.7,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 2,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The card captures the central Yes merits case in the sources: maintaining current rates is presented as protecting school and health services, with school-spending safeguards as supporting evidence. It appropriately attributes the predicted service risks to supporters."
+        },
+        "turing_no": {
+          "score": 3,
+          "reason": "The card includes the No case for spending discipline, but its headline mainly restates what the measure does rather than giving the strongest reason to oppose it. A thoughtful No voter’s central merits case is that taxpayers should retain the scheduled expiration and tax relief, and that permanent higher rates should not be continued without spending control. Bring that case forward, without relying on claims about politicians’ motives."
+        },
+        "swap_test_pass": false,
+        "swap_notes": [
+          "The Yes headline, “protect school funding and reduce the risk of teacher layoffs,” gives a concrete, favorable consequence; the No headline only says rates would be made permanent. This makes the Yes case more persuasive and the No case more mechanical.",
+          "The No card does mention spending discipline later, but it is not given comparable prominence in its headline."
+        ],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. Replace the No headline with its strongest merits case: opponents argue that taxpayers should keep the scheduled tax relief and that the state should control spending before making higher rates permanent. Keep it attributed to opponents. 2. Make the No case more parallel in prominence to the Yes headline by foregrounding this trade-off, rather than leading only with the measure’s mechanics."
+      },
+      "checks": {
+        "words": {
+          "yes": 135,
+          "no": 105,
+          "ratio": 1.29
+        },
+        "headline_words": {
+          "yes": 20,
+          "no": 18
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 3,
+        "more_reasons": {
+          "yes": 2,
+          "no": 1
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 7.2,
+        "loaded_words": [],
+        "motive_or_funder": [],
         "recommendation": [],
         "outcome_or_polls": [],
         "instruction_like_text": []
@@ -192,27 +342,28 @@
     }
   ],
   "sources": [
-    "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
     "https://voterguide.sos.ca.gov/propositions/3/title-summary.htm",
+    "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
     "https://voterguide.sos.ca.gov/propositions/3/arguments-rebuttals.htm"
   ],
   "meta": {
-    "seconds": 47.0,
+    "seconds": 127.3,
+    "writer_model": "gpt-6-astra",
     "usage_by_model": {
-      "gpt-6-astra": {
-        "requests": 2,
-        "input_tokens": 9370,
-        "cache_read_tokens": 4531,
-        "output_tokens": 1485,
-        "reasoning_tokens": 70,
+      "writer:gpt-6-astra": {
+        "requests": 4,
+        "input_tokens": 27661,
+        "cache_read_tokens": 20408,
+        "output_tokens": 4300,
+        "reasoning_tokens": 87,
         "tool_calls": 3
       },
-      "gpt-6-luna": {
-        "requests": 1,
-        "input_tokens": 6848,
+      "critic:gpt-6-luna": {
+        "requests": 3,
+        "input_tokens": 18961,
         "cache_read_tokens": 0,
-        "output_tokens": 1692,
-        "reasoning_tokens": 1467,
+        "output_tokens": 7136,
+        "reasoning_tokens": 5712,
         "tool_calls": 0
       }
     },

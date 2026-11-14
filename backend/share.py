@@ -4,7 +4,7 @@
     share_text(card, url, channel="whatsapp")   # *bold* formatting, wa.me link
     share_text(card, url, channel="wechat")     # plain text, no formatting symbols
 
-Neutrality rule: there is no way to share one side alone. Both steelmen's one-line core claims,
+Neutrality rule: there is no way to share one side alone. Both sides' headlines (the line the card shows first),
 the crux, and "We never tell you how to vote" are always included, in Yes/No order alternated by
 card number (the same alternation the dashboard uses).
 """
@@ -30,8 +30,8 @@ def yes_first(card: dict) -> bool:
 
 def share_text(card: dict, url: str, channel: Literal["whatsapp", "wechat", "plain"] = "plain") -> str:
     b = (lambda s: f"*{s}*") if channel == "whatsapp" else (lambda s: s)
-    yes = ("Strongest case for YES", card["steelman_yes"]["core_claim"])
-    no = ("Strongest case for NO", card["steelman_no"]["core_claim"])
+    yes = ("Strongest case for YES", card["steelman_yes"]["headline"])
+    no = ("Strongest case for NO", card["steelman_no"]["headline"])
     first, second = (yes, no) if yes_first(card) else (no, yes)
     lines = [
         b(f"{card['number']}: {_clip(card['plain_title'], 90)}"),

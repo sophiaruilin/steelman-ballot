@@ -29,11 +29,17 @@ def test_sabotaged_card_fails_code_checks():
     assert any("same number of evidence" in f for f in fails)
 
 
-def test_published_cards_pass_code_checks():
-    for name in ("CA-2026-11-03-prop-1.json", "CA-2026-11-03-prop-3.json"):
-        rec = json.loads((CARDS / name).read_text(encoding="utf-8"))
-        assert rec["steelman_verified"] is True
-        assert critic.hard_failures(critic.code_checks(MeasureCard(**rec["card"]))) == []
+def test_published_cards_are_verified_or_badged():
+    """Every verified card passes all automatic checks; anything else ships with the 'unverified' badge."""
+    measures = sorted(CARDS.glob("CA-2026-11-03-prop-*.json"))
+    assert len(measures) >= 6
+    for path in measures:
+        rec = json.loads(path.read_text(encoding="utf-8"))
+        hard = critic.hard_failures(critic.code_checks(MeasureCard(**rec["card"])))
+        if rec["steelman_verified"]:
+            assert hard == [], f"{path.name}: {hard}"
+        else:
+            assert rec["rewrites"] == 2   # it had every chance to fix itself before getting the badge
 
 
 def test_outcome_and_poll_language_detected():

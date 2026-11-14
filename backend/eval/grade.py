@@ -25,7 +25,7 @@ from pydantic_ai.usage import UsageLimits
 
 from backend import config
 from backend.agents.common import usage_dict
-from backend.pipeline import research_measure
+from backend.pipeline import research_measure, save
 from backend.sources.web import fence
 
 SAMPLE = ["1", "3", "5", "39", "41", "45"]   # bond, tax, recall rules, voter ID, tax limits, environmental review
@@ -40,8 +40,10 @@ class ClaimGrade(BaseModel):
 
 class Point(BaseModel):
     point: str
-    rank: int = 0          # 1 = the side's most emphasized point
+    kind: Literal["effect", "motive_or_funder"] = "effect"
+    rank: int = 0          # 1 = the side's most emphasized EFFECT point; 0 for motive/funder points
     covered: bool
+    in_headline: bool = False
 
 
 class Grade(BaseModel):
@@ -75,29 +77,52 @@ async def grade_card(record: dict, pages: dict[str, str]) -> tuple[Grade, dict]:
     return res.output, usage_dict(res.usage)
 
 
-def _top3(g: Grade) -> float | None:
-    """Share of each side's 3 highest-ranked official points that the card covers."""
-    top = []
-    for pts in (g.points_for, g.points_against):
-        top += sorted(pts, key=lambda p: p.rank or 99)[:3]
-    return round(sum(p.covered for p in top) / len(top), 3) if top else None
+def _effects(pts: list[Point]) -> list[Point]:
+    return sorted([p for p in pts if p.kind == "effect"], key=lambda p: p.rank or 99)
 
 
 def score(g: Grade) -> dict:
     n = len(g.claims)
     sup = sum(c.verdict == "supported" for c in g.claims)
     con = sum(c.verdict == "contradicted" for c in g.claims)
-    pts = g.points_for + g.points_against
+    sides = [_effects(p) for p in (g.points_for, g.points_against) if _effects(p)]
+    all_eff = [p for side in sides for p in side]
+    top3 = [p for side in sides for p in side[:3]]
+    top1 = [side[0] for side in sides]
     return {
         "claims": n, "supported": sup, "unsupported": n - sup - con, "contradicted": con,
         "fidelity": round(sup / n, 3) if n else None,
         "effects_correct": sum([g.yes_correct, g.no_correct, g.fiscal_correct]),
-        "coverage_for": round(sum(p.covered for p in g.points_for) / len(g.points_for), 3) if g.points_for else None,
-        "coverage_against": round(sum(p.covered for p in g.points_against) / len(g.points_against), 3) if g.points_against else None,
-        "coverage": round(sum(p.covered for p in pts) / len(pts), 3) if pts else None,
-        "coverage_top3": _top3(g),
+        "coverage": round(sum(p.covered for p in all_eff) / len(all_eff), 3) if all_eff else None,
+        "coverage_top3": round(sum(p.covered for p in top3) / len(top3), 3) if top3 else None,
+        "top1_in_headline": round(sum(p.in_headline for p in top1) / len(top1), 3) if top1 else None,
+        "top1_covered": round(sum(p.covered for p in top1) / len(top1), 3) if top1 else None,
+        "motive_points_set_aside": sum(p.kind == "motive_or_funder" for p in g.points_for + g.points_against),
         "neutrality_issues": len(g.neutrality_issues),
     }
+
+
+def average(scores: list[dict]) -> dict:
+    """Mean of two (or more) gradings of the same card: smooths grader noise."""
+    out = {}
+    for k in scores[0]:
+        vals = [s[k] for s in scores if isinstance(s.get(k), (int, float))]
+        out[k] = round(sum(vals) / len(vals), 3) if vals else None
+    return out
+
+
+GRADINGS = 2
+
+
+async def grade_twice(rec: dict, pages: dict[str, str]) -> tuple[list[dict], dict, list[dict]]:
+    grades, usages = [], []
+    for _ in range(GRADINGS):
+        g, gu = await grade_card(rec, pages)
+        grades.append(g.model_dump())
+        usages.append(gu)
+    scores = [score(Grade(**g)) for g in grades]
+    usage = {k: sum(u[k] for u in usages) for k in usages[0]}
+    return grades, usage, scores
 
 
 async def run(props: list[str], writer: str) -> dict:
@@ -107,15 +132,18 @@ async def run(props: list[str], writer: str) -> dict:
         rec = await research_measure("CA", n, writer_model=writer)
         rec.pop("_source_text", None)
         pages = official_pages(rec)
-        g, gu = await grade_card(rec, pages)
-        s = score(g)
+        grades, gu, scores = await grade_twice(rec, pages)
+        s = average(scores)
+        save(rec)                     # the published card (output/cards/)
+        checks = rec["review_rounds"][-1]["checks"]
         rows.append({"prop": n, "verified": rec["steelman_verified"], "turing": rec["turing"],
-                     "rewrites": rec["rewrites"], "score": s, "grade": g.model_dump(),
-                     "usage": rec["meta"]["usage_by_model"], "grader_usage": gu,
+                     "rewrites": rec["rewrites"], "score": s, "scores_each": scores, "grades": grades,
+                     "checks": checks, "usage": rec["meta"]["usage_by_model"], "grader_usage": gu,
                      "seconds": rec["meta"]["seconds"], "card": rec["card"]})
         print(f"Prop {n}: verified={rec['steelman_verified']} turing={rec['turing']} rewrites={rec['rewrites']} "
               f"fidelity={s['fidelity']} contradicted={s['contradicted']} effects={s['effects_correct']}/3 "
-              f"coverage={s['coverage']}", flush=True)
+              f"top1_headline={s['top1_in_headline']} top3={s['coverage_top3']} all={s['coverage']} "
+              f"reading_grade={checks['reading_grade']}", flush=True)
     out = {"writer": writer, "critic": config.CRITIC_MODEL, "props": props, "rows": rows}
     (EVAL_DIR / f"{writer}.json").write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
     return out
@@ -129,8 +157,8 @@ async def regrade(src: str = "gpt-6-astra.json") -> dict:
         rec = {"card": row["card"], "sources": [u for u in row.get("sources", [])] or
                [f"https://voterguide.sos.ca.gov/propositions/{row['prop']}/{p}"
                 for p in ("title-summary.htm", "analysis.htm", "arguments-rebuttals.htm")]}
-        g, gu = await grade_card(rec, official_pages(rec))
-        row["grade"], row["score"], row["grader_usage"] = g.model_dump(), score(g), gu
+        grades, gu, scores = await grade_twice(rec, official_pages(rec))
+        row["grades"], row["scores_each"], row["score"], row["grader_usage"] = grades, scores, average(scores), gu
         s = row["score"]
         print(f"Prop {row['prop']}: fidelity={s['fidelity']} contradicted={s['contradicted']} "
               f"coverage={s['coverage']} top3={s['coverage_top3']}", flush=True)

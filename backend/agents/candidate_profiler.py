@@ -64,10 +64,12 @@ def get_agent() -> Agent[ResearchDeps, RaceCard]:
         problems += check_claims(claims, ctx.deps.fetched)
         with_stmt = [c for c in card.candidates if c.says_basis != "none_found"]
         for c in card.candidates:
-            if c.says_basis == "none_found" and (c.says or c.core_case):
-                problems.append(f"{c.name} has no statement: leave says empty and core_case null.")
-            if c.says_basis != "none_found" and not (2 <= len(c.says) <= 4 and c.core_case):
-                problems.append(f"{c.name}: give 2-4 says items and a core_case.")
+            if c.says_basis == "none_found" and (c.says or c.core_case or c.headline):
+                problems.append(f"{c.name} has no statement: leave says empty and headline/core_case null.")
+            if c.says_basis != "none_found" and not (2 <= len(c.says) <= 4 and c.core_case and c.headline):
+                problems.append(f"{c.name}: give a headline, 2-4 says items and a core_case.")
+            if c.headline and len(c.headline.split()) > critic.HEADLINE_MAX_WORDS:
+                problems.append(f"{c.name}: headline must be at most {critic.HEADLINE_MAX_WORDS} words.")
             for s in c.says:
                 if s.label != "fact" or s.whose:
                     continue

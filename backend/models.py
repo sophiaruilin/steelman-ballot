@@ -22,24 +22,38 @@ class Claim(BaseModel):
                               "(verbatim, 5-40 words). Leave empty rather than paraphrase.")
 
 
+class ChangeRow(BaseModel):
+    """One row of the "What changes" table: today vs. if the measure passes."""
+
+    topic: str = Field(description="2-5 words naming what changes, e.g. 'Top income tax rate'.")
+    today: str = Field(description="Current law or situation, from the nonpartisan analysis (one short sentence).")
+    if_passes: str = Field(description="What it would be if the measure passes (one short sentence).")
+    label: Literal["fact", "prediction"] = Field(description="fact = what the law would say; prediction = an "
+                                                 "estimated effect (set `whose`).")
+    whose: str | None = Field(default=None, description="For predictions: whose estimate (e.g. 'Legislative Analyst').")
+    source_url: str = Field(description="URL of a page you fetched that supports this row.")
+
+
 class Steelman(BaseModel):
-    """One side's case, stated the way its own most thoughtful supporters would state it."""
+    """One side's case ON THE MERITS OF THE CHANGE, stated the way its most thoughtful supporters would.
+
+    Effects only: benefits, costs, risks, trade-offs and who is affected. Never the other side's
+    motives, character, funders or party labels."""
 
     side: str = Field(description="'Yes' or 'No' for a measure.")
     basis: Literal["official_argument", "named_advocates", "no_organized_side"] = Field(
         description="Where this case comes from: the official ballot argument; other named supporters/opponents "
                     "found on allowed sources; or no organized side exists, so the case is built from the "
-                    "trade-offs in the nonpartisan analysis (say so in core_claim).")
-    top_points: list[str] = Field(
-        default_factory=list,
-        description="This side's 3 most important distinct points from its official argument AND rebuttal "
-                    "(or from named advocates), each one short sentence in that side's own framing. "
-                    "Empty only if basis is no_organized_side.")
-    core_claim: str = Field(description="What this side wants, in one sentence.")
+                    "trade-offs in the nonpartisan analysis (say so in the headline).")
+    headline: str = Field(description="This side's single strongest point about what the change would do, in one "
+                          "plain sentence of at most 25 words. Always shown first.")
+    headline_topic: str = Field(description="The `topic` of the What-changes row this headline is about (copy it exactly).")
+    more_reasons: list[str] = Field(default_factory=list, description="0-2 further DISTINCT points about the change "
+                                    "that this side really makes, one sentence each. Shown behind 'More reasons'.")
     values: list[str] = Field(description="1-3 values this side cares about (e.g. fairness, cost, local control).")
-    best_evidence: list[Claim] = Field(description="2-4 of this side's strongest supporting points, each cited.")
+    best_evidence: list[Claim] = Field(description="1-3 cited supporting points for this side's case.")
     who_it_helps: str = Field(description="Which people this side says benefit, in their view.")
-    answer_to_other_side: str = Field(description="This side's best reply to the OTHER side's strongest objection.")
+    answer_to_other_side: str = Field(description="This side's best reply to the OTHER side's headline, on the merits.")
 
 
 class Crux(BaseModel):
@@ -54,8 +68,10 @@ class MeasureCard(BaseModel):
     plain_title: str = Field(description="A neutral, plain-language title (no loaded words).")
     title_disputed: bool = Field(description="True only if a source says the official title was challenged.")
     put_on_ballot_by: str = Field(description="e.g. 'Legislature' or 'Citizen initiative'.")
-    yes_means: str = Field(description="What happens if it passes.")
-    no_means: str = Field(description="What happens if it fails (the status quo).")
+    yes_means: str = Field(description="One sentence: what happens if it passes.")
+    no_means: str = Field(description="One sentence: what happens if it fails (the status quo).")
+    what_changes: list[ChangeRow] = Field(description="3-5 rows: the most important things that would change, "
+                                          "today vs. if it passes, from the nonpartisan analysis.")
     who_is_affected: list[str] = Field(description="2-5 groups most directly affected, neutrally described.")
     fiscal_impact: Claim = Field(description="Cost/savings estimate from the official nonpartisan analyst, labeled prediction.")
     steelman_yes: Steelman
@@ -63,8 +79,6 @@ class MeasureCard(BaseModel):
     crux: Crux
     evidence: list[Claim] = Field(description="'What the evidence says': 2-5 neutral facts from official/nonpartisan "
                                   "sources that bear on the disputed points. Not arguments.")
-    supporters: list[str] = Field(default_factory=list, description="Named supporters listed in official sources.")
-    opponents: list[str] = Field(default_factory=list, description="Named opponents listed in official sources.")
     reading_minutes: int = Field(description="Estimated minutes to read this card.")
 
 
@@ -82,8 +96,10 @@ class CandidateProfile(BaseModel):
     says: list[Claim] = Field(default_factory=list,
                               description="2-4 of the candidate's stated positions or goals, in neutral words, cited. "
                                           "Empty if says_basis is none_found.")
+    headline: str | None = Field(default=None, description="The candidate's #1 stated priority, as what they would "
+                                 "change or do in office, one sentence of at most 25 words. None if none_found.")
     core_case: str | None = Field(default=None, description="Their best case for themselves in one or two sentences, "
-                                  "as their most thoughtful supporters would put it. None if none_found.")
+                                  "about their own plans and record (never about opponents). None if none_found.")
     priorities: list[str] = Field(default_factory=list, description="1-3 priorities they name, in their terms.")
 
 

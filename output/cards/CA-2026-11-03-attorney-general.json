@@ -4,7 +4,7 @@
     "race_id": "CA-2026-11-03-attorney-general",
     "office": "Attorney General",
     "what_office_does": {
-      "text": "The Attorney General is California’s chief law officer, enforcing state laws and investigating fraud or illegal activity. The office leads the Department of Justice, provides legal services to state government, represents California in court, and oversees law enforcement agencies.",
+      "text": "The attorney general is California’s chief law officer, enforcing state laws and investigating fraud and illegal activity. The office heads the Department of Justice, represents the state in court, and oversees law enforcement agencies, including district attorneys and sheriffs.",
       "label": "fact",
       "whose": null,
       "source_url": "https://voterguide.sos.ca.gov/candidates/attorney-general-candidate-statements.htm",
@@ -16,6 +16,7 @@
         "party": "Democratic",
         "says_basis": "none_found",
         "says": [],
+        "headline": null,
         "core_case": null,
         "priorities": []
       },
@@ -25,28 +26,29 @@
         "says_basis": "official_statement",
         "says": [
           {
-            "text": "Gates says he would fully enforce Proposition 36 to restore accountability for repeat theft and drug offenses.",
-            "label": "value",
-            "whose": "Michael E. Gates",
+            "text": "Gates says he would fully enforce Proposition 36 to hold people accountable for repeat theft and drug offenses.",
+            "label": "prediction",
+            "whose": "Michael E. Gates, own statement",
             "source_url": "https://voterguide.sos.ca.gov/candidates/attorney-general-candidate-statements.htm",
             "quote": null
           },
           {
-            "text": "Gates says he would prosecute drug traffickers and protect victims, making public safety a nonpartisan priority.",
-            "label": "value",
-            "whose": "Michael E. Gates",
+            "text": "Gates says he would prosecute drug traffickers, protect victims, and help people off the streets and into treatment.",
+            "label": "prediction",
+            "whose": "Michael E. Gates, own statement",
             "source_url": "https://voterguide.sos.ca.gov/candidates/attorney-general-candidate-statements.htm",
             "quote": null
           },
           {
-            "text": "Gates says he would help people off the streets and into treatment, and ensure tax dollars are spent honestly and effectively.",
-            "label": "value",
-            "whose": "Michael E. Gates",
+            "text": "Gates says he would make sure tax dollars are spent honestly and effectively and bring residents, leaders, and law enforcement together.",
+            "label": "prediction",
+            "whose": "Michael E. Gates, own statement",
             "source_url": "https://voterguide.sos.ca.gov/candidates/attorney-general-candidate-statements.htm",
             "quote": null
           }
         ],
-        "core_case": "Gates presents his courtroom and prosecution experience as preparation to bring residents, local leaders, and law enforcement together. His case centers on enforcing theft and drug laws while protecting victims, connecting people with treatment, and pursuing safe streets and equal justice in every community.",
+        "headline": "Gates says he would make communities safer by enforcing Proposition 36, prosecuting drug traffickers, and protecting victims.",
+        "core_case": "Gates presents his experience as a trial attorney, prosecutor, and city attorney as preparation to strengthen public safety. He proposes combining enforcement of theft and drug laws with treatment, victim protection, and cooperation among residents and law enforcement.",
         "priorities": [
           "Safe streets and equal justice",
           "Fully enforce Prop. 36",
@@ -75,10 +77,15 @@
     "candidates": 2,
     "with_statements": 1,
     "words": {
-      "Michael E. Gates": 98
+      "Michael E. Gates": 112
     },
     "word_ratio": 1.0,
+    "headline_words": {
+      "Michael E. Gates": 17
+    },
+    "reading_grade": 15.0,
     "loaded_words": [],
+    "attacks_or_funders": [],
     "recommendation": [],
     "outcome_or_polls": [],
     "instruction_like_text": []
@@ -87,14 +94,14 @@
     "https://voterguide.sos.ca.gov/candidates/attorney-general-candidate-statements.htm"
   ],
   "meta": {
-    "seconds": 10.1,
+    "seconds": 13.2,
     "usage_by_model": {
       "gpt-6-astra": {
         "requests": 2,
-        "input_tokens": 3670,
-        "cache_read_tokens": 2501,
-        "output_tokens": 489,
-        "reasoning_tokens": 0,
+        "input_tokens": 3777,
+        "cache_read_tokens": 2815,
+        "output_tokens": 571,
+        "reasoning_tokens": 43,
         "tool_calls": 1
       }
     }

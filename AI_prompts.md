@@ -62,3 +62,8 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 **Prompt (my own words):** "implement these suggestions: A prompt tweak asking for each side's top three official points may help. The Grader runs on the same model as the writer. Classmate fairness ratings would add an independent check."
 **Follow-up prompt:** "ignore the classmate fairness rating kit. just build with top models for reasoning for greatest accuracy at reaosnable tokens, as you found. ocmmit. i also want this to be mobile app friendly and good for whatsapp and wechat"
 **What was lacking before:** Steelmen covered only about 76% of the official arguments' key points, the model choices weren't settled, and there was no way to share a card in WhatsApp or WeChat without risking one-sided sharing.
+
+## Step 13: Cards built around "what changes", one headline per side, on the merits only
+**Prompt (my own words):** "before you push wha would it take to 95%+? or another best practice percentage to reach?"
+**Follow-up prompt:** "i dont want to get into motivations or claims about donors, but rather, focus on what the change is from current state to proposed future state - what do you recommend to focus more on that?", then "is it possible to just list one key point for steelman argument rather than 3+ points, or what is best practice here", then "anything else to complete sa well before moving forward?" and "yes"
+**What was lacking before:** Cards didn't show today vs. if-it-passes side by side, led with several points instead of one clear headline per side, sometimes carried arguments about motives or donors, had no reading-level check, and were scored by a single grading pass.

@@ -1,0 +1,324 @@
+{
+  "measure_id": "CA-2026-11-03-prop-39",
+  "card": {
+    "measure_id": "CA-2026-11-03-prop-39",
+    "number": "Prop 39",
+    "official_title": "PROHIBITS CITIZENS FROM VOTING UNLESS THEY PRESENT GOVERNMENT-ISSUED IDENTIFICATION. INITIATIVE CONSTITUTIONAL AMENDMENT.",
+    "plain_title": "Require government ID checks for voting and citizenship checks of voter rolls",
+    "title_disputed": false,
+    "put_on_ballot_by": "Citizen initiative",
+    "yes_means": "Voting would require additional government ID checks, with free voter ID cards available, citizenship checks of voter rolls, and regular compliance audits.",
+    "no_means": "Current registration checks, signed mail ballot envelopes with signature verification, and generally signature-based identification for in-person voting would remain.",
+    "what_changes": [
+      {
+        "topic": "In-person identity checks",
+        "today": "Voters typically identify themselves by signing a list of registered voters.",
+        "if_passes": "Voters must present government-issued ID, and officials must verify identity before counting ballots.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm"
+      },
+      {
+        "topic": "Mail ballot identification",
+        "today": "Officials verify signatures on mail ballot envelopes.",
+        "if_passes": "Voters must select a government ID in their registration and put its last four digits on the envelope for matching.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm"
+      },
+      {
+        "topic": "Free voter cards",
+        "today": "Registration uses a driver's license number, state ID number, or the last four Social Security digits to establish identity.",
+        "if_passes": "The state must provide a free voter ID card to voters who request one.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm"
+      },
+      {
+        "topic": "Citizenship verification",
+        "today": "Citizenship is required for state and federal voting; falsely stating citizenship when registering is perjury.",
+        "if_passes": "Officials must make best efforts using government data to verify citizenship and report each county's verified share annually.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm"
+      },
+      {
+        "topic": "Election compliance audits",
+        "today": "The State Auditor reviews government programs through regular or one-time audits.",
+        "if_passes": "Every odd-numbered year, the auditor must report on state and county compliance with this measure and recommend improvements.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm"
+      }
+    ],
+    "who_is_affected": [
+      "Registered voters, including people voting by mail",
+      "Eligible voters without government-issued identification",
+      "State and county election officials",
+      "The State Auditor and taxpayers"
+    ],
+    "fiscal_impact": {
+      "text": "Annual state and local costs would rise by tens of millions to low hundreds of millions of dollars, depending on implementation decisions; possible savings likely would not cover those costs.",
+      "label": "prediction",
+      "whose": "Legislative Analyst",
+      "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "Supporters argue government ID checks would build trust in elections and encourage more people to participate.",
+      "headline_topic": "In-person identity checks",
+      "more_reasons": [
+        "Supporters argue the existing mail-ballot signature process can delay results and put ballots at risk of rejection when signatures are flagged as mismatched.",
+        "Supporters argue citizenship checks and independent audits would improve voter-list accuracy and election management."
+      ],
+      "values": [
+        "Trust in elections",
+        "Accurate voter lists",
+        "Voting access"
+      ],
+      "best_evidence": [
+        {
+          "text": "Supporters argue checking mail-ballot signatures can delay results and risk rejecting ballots over signature mismatches.",
+          "label": "prediction",
+          "whose": "Supporters in the official ballot argument",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/39/arguments-rebuttals.htm",
+          "quote": null
+        },
+        {
+          "text": "The measure requires free voter ID cards on request and regular independent compliance audits.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "In supporters' view, voters seeking greater confidence that elections are secure and well managed.",
+      "answer_to_other_side": "Supporters argue ID checks can coexist with voting access: mail voting remains, free cards are guaranteed, and stronger trust can encourage participation."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "headline": "Opponents argue added ID requirements would keep some eligible citizens' mail ballots from counting because of mistakes or missing information.",
+      "headline_topic": "Mail ballot identification",
+      "more_reasons": [
+        "Opponents argue the added annual public costs are not justified given existing registration and mail-ballot signature checks.",
+        "Opponents argue putting ID digits on envelopes creates privacy risks, while getting an ID can cost time and money even without a card fee."
+      ],
+      "values": [
+        "Voting access",
+        "Privacy",
+        "Public spending"
+      ],
+      "best_evidence": [
+        {
+          "text": "The official summary says mail ballots are invalid if the envelope's ID digits do not match the ID selected in registration.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/39/title-summary.htm",
+          "quote": null
+        },
+        {
+          "text": "The analyst anticipates some eligible voters lacking government ID could leave the voter rolls.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "In opponents' view, keeping current rules protects eligible voters facing ID-related hurdles, mail voters' privacy, and taxpayers.",
+      "answer_to_other_side": "Opponents argue added hurdles and risks of rejected ballots outweigh promised gains in trust, given existing checks. The analyst specifies that identity is established at registration and mail-ballot signatures are checked, while in-person signatures generally are not verified before counting."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "The sides disagree about whether added identity checks would increase trust and participation or create more barriers for eligible voters. They also weigh stronger verification differently against access, privacy, and public cost."
+    },
+    "evidence": [
+      {
+        "text": "Identity is already established during registration; mail ballot signatures are checked, but in-person signatures generally are not verified before counting.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The Legislature must clarify which IDs qualify and what counts as best efforts to verify citizenship.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The measure guarantees a voter ID card at no cost to voters who request one.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "Potential savings from fewer registered voters include both removal of ineligible voters and eligible voters lacking government ID.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 4
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 1,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 3,
+          "reason": "The card fairly presents supporters’ trust/participation case, free ID cards, and audits. But it omits a prominent merits argument in the official Yes case: supporters say the existing mail-ballot signature process can delay results and put ballots at risk of rejection, and that ID checks address that problem. Include this argument, clearly attributed to supporters rather than stated as established fact."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The card captures opponents’ central merits concerns about rejected mail ballots, privacy, access burdens, and public cost. Its answer to the other side also repeats opponents’ claim that officials already verify voters, but should make clear how current checks differ by voting method."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The headlines use parallel attributed constructions (“Supporters argue…” / “Opponents argue…”) and both describe a consequence with “would.” Neither side is noticeably warmer or more certain in its wording."
+        ],
+        "fidelity_problems": [
+          "In the No answer to the other side, “officials already verify voters” is too broad without qualification. The analysis says identity is established during registration and mail-ballot signatures are checked, but in-person signatures are generally not verified before ballots are counted. Clarify that distinction so the line does not imply equivalent checks for both voting methods."
+        ],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. Add the Yes supporters’ source-based argument that the existing mail-ballot signature process can delay results and risk ballot rejection; attribute it as supporters’ claim, not as an independently verified fact. 2. Revise “officials already verify voters” to specify that identity is established at registration and mail-ballot signatures are checked, while in-person signatures generally are not verified before counting."
+      },
+      "checks": {
+        "words": {
+          "yes": 113,
+          "no": 138,
+          "ratio": 1.22
+        },
+        "headline_words": {
+          "yes": 16,
+          "no": 20
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 5,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 1,
+          "no": 0
+        },
+        "reading_grade": 10.4,
+        "loaded_words": [
+          "falsely"
+        ],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 1,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "A fair summary of the official Yes case: it includes the claimed gains in trust and participation, voter-list accuracy, audits, and the concern supporters raise about signature mismatches delaying or risking rejection of mail ballots. It could foreground the argument that voters retain mail voting and can request a free ID, but those points appear elsewhere in the card."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "A fair summary of the official No case: it covers eligible voters' risk of ballot rejection, privacy, access burdens, and public costs, while acknowledging the analyst's estimate that some eligible voters without ID could leave the rolls. It could give the access-burden argument more prominence, but it is represented in the card."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [
+          "The word “falsely” in the current citizenship-check row is accurate to the source, but can be replaced with “making a false statement” for more neutral phrasing."
+        ],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 126,
+          "no": 158,
+          "ratio": 1.25
+        },
+        "headline_words": {
+          "yes": 16,
+          "no": 20
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 5,
+        "more_reasons": {
+          "yes": 2,
+          "no": 2
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 1,
+          "no": 0
+        },
+        "reading_grade": 10.4,
+        "loaded_words": [
+          "falsely"
+        ],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://voterguide.sos.ca.gov/propositions/39/title-summary.htm",
+    "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+    "https://voterguide.sos.ca.gov/propositions/39/arguments-rebuttals.htm"
+  ],
+  "meta": {
+    "seconds": 95.7,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 3,
+        "input_tokens": 19071,
+        "cache_read_tokens": 12828,
+        "output_tokens": 3345,
+        "reasoning_tokens": 336,
+        "tool_calls": 3
+      },
+      "critic:gpt-6-luna": {
+        "requests": 2,
+        "input_tokens": 13810,
+        "cache_read_tokens": 0,
+        "output_tokens": 4940,
+        "reasoning_tokens": 4283,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {}
+  }
+}

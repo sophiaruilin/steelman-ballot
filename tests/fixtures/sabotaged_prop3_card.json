@@ -3,126 +3,147 @@
   "measure_id": "CA-2026-11-03-prop-3",
   "number": "Prop 3",
   "official_title": "PROVIDES PERMANENT FUNDING FOR SCHOOLS AND HEALTH CARE BY EXTENDING EXISTING TAX ON HIGH INCOMES. INITIATIVE CONSTITUTIONAL AMENDMENT.",
-  "plain_title": "Make higher income tax rates on high earners permanent",
+  "plain_title": "Make temporary income tax rates on high earners permanent",
   "title_disputed": false,
   "put_on_ballot_by": "Citizen initiative",
-  "yes_means": "The current higher income tax rates on high earners would become permanent instead of expiring in 2031. Revenue would continue to support schools, community colleges, other state programs and budget reserves.",
-  "no_means": "The higher rates would remain temporary and expire in 2031 under current law. Affected high earners would then pay lower rates, and the state would stop collecting the revenue from those higher rates.",
+  "yes_means": "The higher income tax rates paid by the top 2 percent of California taxpayers would become permanent instead of expiring in 2031.",
+  "no_means": "The higher income tax rates would remain temporary and expire in 2031 under current law.",
+  "what_changes": [
+   {
+    "topic": "High income taxes",
+    "today": "The higher rates apply to the top 2 percent of taxpayers and expire in 2031.",
+    "if_passes": "Those existing higher rates would become permanent.",
+    "label": "fact",
+    "whose": null,
+    "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm"
+   },
+   {
+    "topic": "Education funding",
+    "today": "The state Constitution sets a minimum funding level for schools and community colleges.",
+    "if_passes": "The analyst estimates roughly 40 percent of the measure's funding would go to schools and community colleges.",
+    "label": "prediction",
+    "whose": "Legislative Analyst",
+    "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm"
+   },
+   {
+    "topic": "Other programs and reserves",
+    "today": "Income taxes fund health care and other services through the state's main operating account.",
+    "if_passes": "The analyst estimates the rest of the funding would go to other state programs, with part set aside in budget reserves.",
+    "label": "prediction",
+    "whose": "Legislative Analyst",
+    "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm"
+   }
+  ],
   "who_is_affected": [
-   "High-income Californians who pay the higher rates",
-   "Public school and community college students and staff",
-   "People who rely on Medi-Cal and other state services",
-   "State and local school budget planners"
+   "High-income taxpayers who pay the temporary higher rates",
+   "K–12 students, families, and school staff",
+   "Community college students and staff",
+   "People who use Medi-Cal and other state-funded services"
   ],
   "fiscal_impact": {
-   "text": "The Legislative Analyst estimates that keeping the higher rates after their scheduled expiration would maintain $5 billion to $15 billion in annual state revenue. The amount would vary widely with the economy and stock market.",
+   "text": "Compared with letting the higher rates expire in 2031, the measure would preserve $5 billion to $15 billion in annual state income tax revenue.",
    "label": "fact",
    "whose": "Legislative Analyst",
-   "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+   "source_url": "https://voterguide.sos.ca.gov/propositions/3/title-summary.htm",
    "quote": null
   },
   "steelman_yes": {
    "side": "Yes",
    "basis": "official_argument",
-   "core_claim": "This common-sense measure will definitely protect every classroom from devastating cuts, so voters should vote yes.",
+   "headline": "This common-sense measure will definitely protect every classroom from devastating cuts, so voters should vote yes, as every reasonable Californian already knows.",
+   "headline_topic": "Education funding",
+   "more_reasons": [
+    "Supporters argue continued revenue would also protect Medi-Cal and other health services.",
+    "Supporters argue local control, annual audits, and limits on administrative spending would protect classroom funds."
+   ],
    "values": [
-    "Education and health care",
-    "Ability to pay",
-    "Local accountability"
+    "Reliable public services",
+    "Educational opportunity",
+    "Accountability"
    ],
    "best_evidence": [
     {
-     "text": "The higher rates apply to the top 2 percent of taxpayers, rather than taxpayers generally.",
-     "label": "fact",
-     "whose": null,
+     "text": "The analyst estimates roughly 40 percent of the measure's funding would go to schools and community colleges.",
+     "label": "prediction",
+     "whose": "Legislative Analyst",
      "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
      "quote": null
     },
     {
-     "text": "Supporters warn that allowing the rates to expire could lead to teacher layoffs, larger classes and reduced access to health care.",
-     "label": "prediction",
-     "whose": "Supporters",
-     "source_url": "https://voterguide.sos.ca.gov/propositions/3/arguments-rebuttals.htm",
-     "quote": null
-    },
-    {
-     "text": "The official summary says local school boards decide how school revenue is spent and bars its use for administrative costs.",
+     "text": "The official summary states that tax revenues are allocated 89 percent to K–12 schools and 11 percent to community colleges, with local school board spending decisions and no administrative costs.",
      "label": "fact",
      "whose": null,
      "source_url": "https://voterguide.sos.ca.gov/propositions/3/title-summary.htm",
      "quote": null
     }
    ],
-   "who_it_helps": "Supporters point to students, educators, families using health services and communities that depend on state-funded programs.",
-   "answer_to_other_side": "Supporters argue that this keeps current rates rather than raising them today. They say the school funding protections address accountability, while allowing the tax to expire would put essential services at risk."
+   "who_it_helps": "Supporters say students, school staff, and families relying on public health care would benefit.",
+   "answer_to_other_side": "Supporters argue keeping existing rates, rather than increasing them now, is worth preventing funding losses; they point to school spending safeguards."
   },
   "steelman_no": {
    "side": "No",
    "basis": "official_argument",
-   "core_claim": "Opponents are wealthy people who just don't want to pay their fair share.",
+   "headline": "Opponents are wealthy people who don't want to pay their fair share; it's a power grab funded by special interests.",
+   "headline_topic": "High income taxes",
+   "more_reasons": [],
    "values": [
-    "Protecting the rich"
+    "Tax relief",
+    "Keeping temporary limits",
+    "Spending discipline"
    ],
    "best_evidence": [
     {
-     "text": "The measure removes the scheduled expiration of higher rates that voters first approved as temporary in 2012.",
+     "text": "The measure would remove the scheduled 2031 expiration of the higher income tax rates.",
      "label": "fact",
      "whose": null,
      "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
      "quote": null
     }
    ],
-   "who_it_helps": "Opponents point to taxpayers who would otherwise keep paying higher rates and Californians who want tighter control over state spending.",
-   "answer_to_other_side": "They have no real answer; they just want lower taxes."
+   "who_it_helps": "Opponents say rejection would help affected taxpayers by keeping their scheduled tax relief.",
+   "answer_to_other_side": "They have no real answer."
   },
   "crux": {
    "kind": "both",
-   "text": "Should California keep a major source of funding for services, or honor the scheduled end of a temporary tax? The sides also disagree about whether spending reforms could protect services without this revenue."
+   "text": "The choice weighs continued public-service funding against scheduled tax relief for high earners. The sides also disagree about whether spending reforms could protect services without extending the tax."
   },
   "evidence": [
    {
-    "text": "The measure keeps current higher rates; it does not raise them today. Compared with current law after their scheduled expiration in 2031, it keeps taxes higher for affected earners.",
+    "text": "The measure keeps existing higher rates; it does not raise them above today's levels, but it prevents their scheduled expiration.",
     "label": "fact",
     "whose": null,
     "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
     "quote": null
    },
    {
-    "text": "At 2025 income levels, the higher rates apply to income over about $371,000 for single filers, $742,000 for joint filers and $505,000 for heads of household. These thresholds adjust annually for inflation.",
+    "text": "The top 2 percent of taxpayers pay these higher rates and account for about half of all state income taxes.",
+    "label": "fact",
+    "whose": null,
+    "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+    "quote": null
+   },
+   {
+    "text": "Annual revenue would vary widely because much of the taxed income is tied to the stock market; permanent rates do not mean a fixed yearly amount.",
+    "label": "prediction",
+    "whose": "Legislative Analyst",
+    "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+    "quote": null
+   },
+   {
+    "text": "The official summary allocates tax revenues 89 percent to K–12 schools and 11 percent to community colleges, and says the measure increases General Fund revenues available for health care, reserves, and other programs.",
     "label": "fact",
     "whose": null,
     "source_url": "https://voterguide.sos.ca.gov/propositions/3/title-summary.htm",
     "quote": null
    },
    {
-    "text": "The Legislative Analyst estimates roughly 40 percent of the funding would go to schools and community colleges. The rest would support other state programs, with some set aside in reserves.",
-    "label": "prediction",
-    "whose": "Legislative Analyst",
-    "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
-    "quote": null
-   },
-   {
-    "text": "Permanent tax rates would not guarantee a steady revenue amount. The Legislative Analyst expects large yearly swings because much of the taxed income is tied to the stock market.",
+    "text": "In its estimate of funding effects, the analyst says roughly 40 percent of funding would go to schools and community colleges, with the rest supporting other programs and reserves.",
     "label": "prediction",
     "whose": "Legislative Analyst",
     "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
     "quote": null
    }
   ],
-  "supporters": [
-   "California State PTA",
-   "California Teachers Association",
-   "California Federation of Teachers",
-   "California Nurses Association",
-   "Planned Parenthood Affiliates of California"
-  ],
-  "opponents": [
-   "California Taxpayers Association",
-   "Family Business Association of California",
-   "California Hispanic Chambers of Commerce",
-   "Howard Jarvis Taxpayers Association",
-   "Central Valley Business Federation"
-  ],
-  "reading_minutes": 4
+  "reading_minutes": 3
  }
 }

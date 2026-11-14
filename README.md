@@ -2,7 +2,7 @@
 
 **Get informed: the strongest case for every side.**
 
-Enter any U.S. address and get a plain-language, nonpartisan briefing on everything on your ballot. For each measure: what a yes vote and a no vote do, who's affected, and the strongest case for and against. For each candidate: what they **say**, what they've **done**, and who **funds** them. Every claim links to its source, and the app never tells you how to vote.
+Enter any U.S. address and get a plain-language, nonpartisan briefing on everything on your ballot. For each measure: **what would change** (today vs. if it passes), and each side's strongest case **on the merits**, with one headline per side and more reasons a tap away. For each candidate: what they **say**, what they've **done**, and who **funds** them. Every claim links to its source, and the app never tells you how to vote.
 
 > 🚧 **Work in progress.** This is a Yale SOM final project, due 11/23/2026. The data layer is working; the agents and dashboard are being built.
 
@@ -89,6 +89,7 @@ steelman-ballot/
 
 ## Principles
 - **Steelman, never strawman.** Each side is stated so that its own supporters would sign it.
+- **On the merits.** Cards argue about what the change would do, never about the other side's motives, funders or party labels.
 - **Facts are separate from arguments.** "What the evidence says" is kept apart from the steelmen, so there's no false balance.
 - **Official sources win** on voting instructions, dates and ballot contents.
 - **No persuasion.** Your priorities change the order of the cards, never their content.

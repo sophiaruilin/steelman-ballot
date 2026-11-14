@@ -1,0 +1,375 @@
+{
+  "measure_id": "CA-2026-11-03-prop-41",
+  "card": {
+    "measure_id": "CA-2026-11-03-prop-41",
+    "number": "Prop 41",
+    "official_title": "PROHIBITS NEW STATE TAXES THAT EXCLUDE REVENUES FROM STATE SPENDING LIMIT. REQUIRES AUDITS FOR NEW STATE SPECIAL TAXES. INITIATIVE CONSTITUTIONAL AMENDMENT.",
+    "plain_title": "Require audits for new special taxes and restrict spending-limit exemptions",
+    "title_disputed": false,
+    "put_on_ballot_by": "Citizen initiative",
+    "yes_means": "A yes vote adds audits for new or increased state taxes dedicated to specific programs and prohibits new state taxes that exclude their revenues from the state spending limit.",
+    "no_means": "A no vote keeps existing audit practices and spending-limit rules, which allow certain spending to be excluded from the limit.",
+    "what_changes": [
+      {
+        "topic": "Pre-election program audits",
+        "today": "The State Auditor reviews government programs through one-time and recurring audits.",
+        "if_passes": "Voter-proposed new or increased special-tax initiatives trigger program audits after proponents gather 25 percent of required signatures, before qualification is known, with summaries in the voter guide if they qualify.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/41/analysis.htm"
+      },
+      {
+        "topic": "Recurring program audits",
+        "today": "Some State Auditor reviews occur regularly, while others happen only once.",
+        "if_passes": "Programs receiving revenue from special taxes created or increased after January 1, 2026 must be audited every four years.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/41/analysis.htm"
+      },
+      {
+        "topic": "State spending limit",
+        "today": "The limit covers general and special taxes, but excludes certain spending, such as infrastructure.",
+        "if_passes": "The state might no longer be able to exclude new special-tax spending from the limit.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/41/analysis.htm"
+      },
+      {
+        "topic": "Audit costs",
+        "today": "The state pays for the State Auditor's existing work.",
+        "if_passes": "Additional audits would likely cost low millions of dollars yearly, growing over time and mostly paid from new tax revenues.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/41/analysis.htm"
+      }
+    ],
+    "who_is_affected": [
+      "Voters considering state special-tax initiatives",
+      "People using programs receiving revenue from new or increased special taxes",
+      "Taxpayers funding state programs and audits",
+      "State Auditor staff and agencies running audited programs"
+    ],
+    "fiscal_impact": {
+      "text": "The Legislative Analyst estimates an unknown net fiscal effect: audit costs likely in the low millions of dollars yearly, growing over time, plus a few hundred thousand dollars in voter-guide costs per qualifying initiative. One-time and recurring audit costs for special taxes approved by voters or the Legislature would be paid from those taxes' revenues. The General Fund would cover one-time audits for special taxes that do not appear on the ballot or are rejected by voters. Savings depend on effective recommendations being adopted.",
+      "label": "prediction",
+      "whose": "Legislative Analyst",
+      "source_url": "https://voterguide.sos.ca.gov/propositions/41/analysis.htm",
+      "quote": null
+    },
+    "steelman_yes": {
+      "side": "Yes",
+      "basis": "official_argument",
+      "headline": "Supporters argue it would improve public services by requiring independent audits that identify waste and recommend better use of tax dollars.",
+      "headline_topic": "Recurring program audits",
+      "more_reasons": [
+        "Supporters argue publishing audit findings before a tax vote would help voters judge whether programs need more money.",
+        "Supporters argue applying the spending limit to new taxes would protect taxpayers."
+      ],
+      "values": [
+        "Accountability",
+        "Informed decisions",
+        "Effective public services"
+      ],
+      "best_evidence": [
+        {
+          "text": "The measure requires recurring audits every four years for programs receiving revenue from special taxes created or increased after January 1, 2026, including recommendations to improve program efficiency.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/41/analysis.htm",
+          "quote": null
+        },
+        {
+          "text": "Supporters argue independent audit findings would help voters assess program management and funding needs before approving new taxes.",
+          "label": "prediction",
+          "whose": "Supporters in the official ballot argument",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/41/arguments-rebuttals.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Supporters say taxpayers and people relying on education, health care, and other public services would benefit from more effective programs.",
+      "answer_to_other_side": "Supporters answer that wasted money also harms people who need services, and that audits can help health care and other programs deliver more with available funds."
+    },
+    "steelman_no": {
+      "side": "No",
+      "basis": "official_argument",
+      "headline": "Opponents argue it could block Proposition 40’s health care funding if the measures conflict and Proposition 41 receives more affirmative votes.",
+      "headline_topic": "State spending limit",
+      "more_reasons": [
+        "Opponents argue the new audit requirements would also consume state time and money."
+      ],
+      "values": [
+        "Access to health care",
+        "Stable service funding",
+        "Fair tax burdens"
+      ],
+      "best_evidence": [
+        {
+          "text": "Opponents argue losing the proposed Proposition 40 wealth-tax revenue would threaten hospitals and affordable health care.",
+          "label": "prediction",
+          "whose": "Opponents in the official ballot argument",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/41/arguments-rebuttals.htm",
+          "quote": null
+        },
+        {
+          "text": "The official summary makes cancellation conditional: another measure must conflict with Proposition 41, and Proposition 41 must receive more affirmative votes.",
+          "label": "fact",
+          "whose": null,
+          "source_url": "https://voterguide.sos.ca.gov/propositions/41/title-summary.htm",
+          "quote": null
+        }
+      ],
+      "who_it_helps": "Opponents say rejecting the measure would protect people relying on hospitals and affordable care from the risk of losing proposed Proposition 40 funding if the measures conflict and Proposition 41 receives more affirmative votes.",
+      "answer_to_other_side": "Opponents answer that audit benefits do not outweigh the risk to proposed health care funding—if the measures conflict and Proposition 41 receives more affirmative votes—especially when audits themselves cost money."
+    },
+    "crux": {
+      "kind": "both",
+      "text": "The sides disagree about whether added oversight and tighter spending rules are worth the costs and risks to future service funding. Supporters emphasize better program performance; opponents emphasize the risk to proposed health care revenue if the measures conflict and Proposition 41 receives more affirmative votes."
+    },
+    "evidence": [
+      {
+        "text": "Pre-election audits would begin before an initiative is known to qualify and must identify ways to reduce each audited program's annual costs by 10 percent; that is a requirement to recommend savings, not an automatic budget cut.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/41/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "Savings or improved services depend on policymakers adopting audit recommendations and those recommendations working; the amount of savings is unknown.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/41/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The Legislative Analyst says the state might not be able to exclude new special-tax spending from the spending limit.",
+        "label": "prediction",
+        "whose": "Legislative Analyst",
+        "source_url": "https://voterguide.sos.ca.gov/propositions/41/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The same-ballot cancellation rule has two conditions: another measure must conflict with Proposition 41, and Proposition 41 must receive more affirmative votes.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/41/title-summary.htm",
+        "quote": null
+      }
+    ],
+    "reading_minutes": 4
+  },
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 2,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The Yes case captures the sources’ main merits argument: public, independent audits could help voters assess proposed programs and improve accountability and efficiency. It could more clearly distinguish the pre-election audit from the recurring audits."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The No case fairly presents opponents’ central policy concern in the official argument: the measure could prevent the proposed Proposition 40 tax from funding health care, and the new audits would also cost time and money. Those are attributed as opponents’ claims rather than established outcomes."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The headlines use parallel attribution and a similar structure: “Supporters argue…” versus “Opponents argue…”. “Improve public services” and “threaten health care funding” are opposite-sided forecasts, both clearly attributed; the latter is more alarming, but reflects the No argument in the source."
+        ],
+        "fidelity_problems": [
+          "In the pre-election audit row, “Tax initiatives trigger program audits” is broader than the source, which specifies voter-proposed new or increased special taxes. Specify that scope.",
+          "In Yes best evidence, “The measure requires audits every four years” could sound like all audits recur on that schedule. The source says recurring audits of programs funded by special taxes created or increased after January 1, 2026 happen every four years."
+        ],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. In the pre-election audit row, replace “Tax initiatives” with “Voter-proposed new or increased special-tax initiatives.” 2. In Yes best evidence, make clear that the every-four-years schedule applies to recurring audits of programs funded by special taxes created or increased after January 1, 2026."
+      },
+      "checks": {
+        "words": {
+          "yes": 134,
+          "no": 126,
+          "ratio": 1.06
+        },
+        "headline_words": {
+          "yes": 21,
+          "no": 22
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 4,
+        "more_reasons": {
+          "yes": 2,
+          "no": 1
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 8.0,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 1,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The card captures the strongest merits case in the supporters’ argument: public, independent audits could improve accountability and help voters assess proposed taxes. It could better foreground that audits start before initiatives qualify and must identify ways to reduce program costs by 10%; those are important features and trade-offs of the change."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The card includes the opponents’ substantive concerns about possible loss of proposed health-care funding and the costs of added audits, without repeating their motive or funder claims. The funding concern needs to be stated as conditional: the same-ballot rule applies only if the measures conflict and Prop 41 receives more affirmative votes."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The headlines use parallel attribution and construction (each begins “Supporters/Opponents argue” and describes an expected effect). Their positive and negative verbs reflect the sides’ different claims, rather than an obvious difference in warmth or confidence. Still, qualify the No headline’s funding claim to match the ballot rule’s conditions."
+        ],
+        "fidelity_problems": [
+          "The fiscal-impact text says the General Fund would cover audits for initiatives that “fail to qualify or pass.” This is ambiguous and could mean audits for initiatives that pass are paid by the General Fund. The analysis says the General Fund covers one-time audit costs for special taxes that do not appear on the ballot or are rejected by voters.",
+          "The No headline says the measure would threaten health-care funding “by blocking” a proposed wealth tax. The sources establish only a conditional same-ballot cancellation rule; opponents claim it would affect Prop 40. State the condition and attribute the health-care funding consequence to opponents."
+        ],
+        "label_problems": [],
+        "loaded_or_overconfident": [
+          "“would threaten” and “blocking” in the No headline make the proposed funding loss sound certain. The source’s cancellation rule requires that the measures conflict and Prop 41 receive more affirmative votes. Use conditional wording such as “could threaten” and explain the conditions."
+        ],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "Automatic checks:\n- Keep the steelmen on the merits of the change: remove motive/funder/party points (['funded by']) and use the substantive concern underneath.\nCritic:\n1. Clarify the fiscal-impact sentence: say General Fund costs apply to one-time audits for special taxes that do not appear on the ballot or are rejected by voters; approved taxes’ audit costs are paid from their revenues. 2. Revise the No headline and related funding descriptions to say opponents argue Prop 41 could block Prop 40 only if the measures conflict and Prop 41 receives more affirmative votes. 3. Consider adding to the pre-election audit row that audits begin after proponents gather 25% of the required signatures, before qualification is known."
+      },
+      "checks": {
+        "words": {
+          "yes": 148,
+          "no": 126,
+          "ratio": 1.17
+        },
+        "headline_words": {
+          "yes": 21,
+          "no": 22
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 4,
+        "more_reasons": {
+          "yes": 2,
+          "no": 1
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 8.2,
+        "loaded_words": [],
+        "motive_or_funder": [
+          "funded by"
+        ],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    },
+    {
+      "round": 2,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The card captures the Yes case in the official argument: independent audits could give voters information before a tax vote and help improve program accountability and results. A somewhat fuller steelman would note that the audits are also required to identify ways to reduce program costs by 10 percent; that is a recommendation requirement, not an automatic cut."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "The card gives the strongest merits-based No point in the sources: proposed Proposition 40 health-care revenue could be put at risk under the same-ballot cancellation rule, and audits also take time and money. It correctly makes the funding risk conditional rather than presenting it as certain."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The headlines use parallel attribution (supporters argue / opponents argue). The Yes headline presents a benefit while the No headline describes a conditional risk; that difference is supported by the source text, not a discernible tone imbalance."
+        ],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "off_the_merits": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 149,
+          "no": 145,
+          "ratio": 1.03
+        },
+        "headline_words": {
+          "yes": 21,
+          "no": 21
+        },
+        "headline_topics_ok": true,
+        "what_changes_rows": 4,
+        "more_reasons": {
+          "yes": 2,
+          "no": 1
+        },
+        "evidence_points": {
+          "yes": 2,
+          "no": 2
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "reading_grade": 8.9,
+        "loaded_words": [],
+        "motive_or_funder": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://voterguide.sos.ca.gov/propositions/41/arguments-rebuttals.htm",
+    "https://voterguide.sos.ca.gov/propositions/41/title-summary.htm",
+    "https://voterguide.sos.ca.gov/propositions/41/analysis.htm"
+  ],
+  "meta": {
+    "seconds": 133.6,
+    "writer_model": "gpt-6-astra",
+    "usage_by_model": {
+      "writer:gpt-6-astra": {
+        "requests": 4,
+        "input_tokens": 28595,
+        "cache_read_tokens": 20863,
+        "output_tokens": 4951,
+        "reasoning_tokens": 268,
+        "tool_calls": 3
+      },
+      "critic:gpt-6-luna": {
+        "requests": 3,
+        "input_tokens": 19728,
+        "cache_read_tokens": 0,
+        "output_tokens": 7005,
+        "reasoning_tokens": 5796,
+        "tool_calls": 0
+      }
+    },
+    "blocked": [],
+    "injection_flags": {}
+  }
+}

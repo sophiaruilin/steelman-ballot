@@ -16,7 +16,8 @@ from pydantic_ai.usage import UsageLimits
 
 from backend import config
 from backend.agents.common import ResearchDeps, check_claims, fetch_page, log_run, usage_dict
-from backend.models import MeasureCard
+from backend.agents import critic
+from backend.models import Claim, MeasureCard
 from backend.sources.web import WebReader
 
 PER_MEASURE_LIMITS = UsageLimits(request_limit=14, total_tokens_limit=150_000)
@@ -41,17 +42,17 @@ def get_agent(model_name: str | None = None) -> Agent[ResearchDeps, MeasureCard]
         problems = []
         claims = [card.fiscal_impact, *card.evidence, *card.steelman_yes.best_evidence, *card.steelman_no.best_evidence]
         problems += check_claims(claims, ctx.deps.fetched)
-        ny, nn = len(card.steelman_yes.best_evidence), len(card.steelman_no.best_evidence)
-        if abs(ny - nn) > 1:
-            problems.append(f"Unbalanced steelmen: Yes has {ny} evidence points, No has {nn}. Make them equal (2-4 each).")
-        for side in (card.steelman_yes, card.steelman_no):
-            if side.basis != "no_organized_side" and len(side.top_points) != 3:
-                problems.append(f"The {side.side} side needs exactly 3 top_points from its official argument and rebuttal.")
+        rows_as_claims = [Claim(text=r.if_passes, label=r.label, whose=r.whose, source_url=r.source_url)
+                          for r in card.what_changes]
+        problems += check_claims(rows_as_claims, ctx.deps.fetched)
         if card.fiscal_impact.label != "prediction":
             problems.append("fiscal_impact must be labeled 'prediction' with `whose` set.")
-        for c in claims:
+        for c in claims + rows_as_claims:
             if c.label in ("prediction", "value") and not c.whose:
                 problems.append(f"'{c.text[:50]}...' is a {c.label}: fill in `whose`.")
+        # Format rules shared with the Critic. Judgment calls (on-the-merits wording, reading level,
+        # balance) go through the Critic's rewrite loop, which ends in an "unverified" badge, not a crash.
+        problems += critic.structural_failures(critic.code_checks(card))
         if problems:
             raise ModelRetry("Fix these problems and return the card again:\n- " + "\n- ".join(problems[:8]))
         return card
