@@ -49,7 +49,9 @@ def test_qr_code_svg():
 def test_share_page_has_link_preview_and_escapes_text():
     r = client.get(f"/c/{CARD}")
     assert r.status_code == 200
-    assert 'property="og:description"' in r.text and "Strongest case for YES" in r.text
+    assert 'property="og:description"' in r.text
+    # same fixed rule as the card: No (against) on the left, Yes (for) on the right
+    assert r.text.index("The strongest case against · No") < r.text.index("The strongest case for · Yes")
     assert "We never tell you how to vote" in r.text
     assert "<script" not in r.text            # no scripts at all on the share page
 

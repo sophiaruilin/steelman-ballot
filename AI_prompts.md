@@ -80,3 +80,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 16: Both sides first, side by side
 **Prompt (my own words):** "remove the "what matters most to you" sectoin on site, it's not that helpful to whta we're aiming to do. when clicking into each proposition, odn't put yes or no on top of ecah other, but rather side by side. include iconography of the weight fairness measure logo with each yes and no vote stance. same with the what would change section, from left to right, share today and arrow visual to if it passes. basically but each side at its strongest at the top and make horizontal rather than vertically stacked - i want that to be first headline takeaway, with option to scroll down below if interested"
 **What was lacking before:** On phones the two sides were stacked, so one always came first; the card opened with yes/no text instead of the two cases; and "What would change" didn't read as a before-and-after.
+
+## Step 17: One consistent left/right rule on every card
+**Prompt (my own words):** "is the order logical with strongest case for vs against, yes vote means vs no vote, and today vs if it passes - last section today vs if it psases is basically no to yes vote on right side? what order do you reocmmend for all /modifing anything if you changed anything"
+**What was lacking before:** The two sides and the yes/no boxes alternated by measure number while "Today → If it passes" was fixed, so on odd-numbered measures Yes sat on the left at the top and on the right at the bottom.

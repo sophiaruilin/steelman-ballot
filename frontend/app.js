@@ -211,7 +211,7 @@ function side(kind, s, panel) {
     if (!panel.hidden) panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
   } }, "Explore reasoning →");
   return el("section", { class: "side", "aria-label": `The strongest case ${kind}` },
-    el("p", { class: "label" }, `The strongest case ${kind}`),
+    el("p", { class: "label" }, `The strongest case ${kind} · ${kind === "for" ? "Yes" : "No"}`),
     el("p", { class: "values" }, sentence(s.values) || s.headline),
     el("p", { class: "headline" }, s.headline),
     btn);
@@ -219,14 +219,14 @@ function side(kind, s, panel) {
 
 function measureCard(rec) {
   const c = rec.card;
-  const yesFirst = (parseInt((c.number.match(/\d+/) || ["0"])[0], 10) % 2) === 1;   // alternate the order by number
+  // One fixed rule for the whole card, tied to the vote: LEFT = No (against, today),
+  // RIGHT = Yes (for, if it passes). It matches the Today -> If it passes arrow and never flips,
+  // even for referendums where a Yes vote keeps an existing law.
   const pFor = reasoningPanel("for", c.steelman_yes), pAgainst = reasoningPanel("against", c.steelman_no);
-  const sFor = side("for", c.steelman_yes, pFor), sAgainst = side("against", c.steelman_no, pAgainst);
-  const [left, right] = yesFirst ? [sFor, sAgainst] : [sAgainst, sFor];
+  const left = side("against", c.steelman_no, pAgainst), right = side("for", c.steelman_yes, pFor);
   const vote = (word, text) => el("div", { class: "vote" },
     el("p", { class: "vote-h" }, scaleIcon("mini"), `A ${word} vote means`), el("p", {}, text));
-  const [vLeft, vRight] = yesFirst
-    ? [vote("yes", c.yes_means), vote("no", c.no_means)] : [vote("no", c.no_means), vote("yes", c.yes_means)];
+  const vLeft = vote("no", c.no_means), vRight = vote("yes", c.yes_means);
 
   return el("article", {},
     el("header", { class: "card-head" },
@@ -239,7 +239,7 @@ function measureCard(rec) {
     // 1. The headline takeaway: each side at its strongest, side by side
     el("h2", { class: "sr-heading" }, "Each side, at its strongest"),
     el("div", { class: "balance" }, left, el("div", { class: "fulcrum" }, scaleIcon()), right),
-    yesFirst ? [pFor, pAgainst] : [pAgainst, pFor],
+    [pAgainst, pFor],
     el("p", { class: "more-below" }, el("a", { href: "#details", onclick: (e) => { e.preventDefault(); $("#details").scrollIntoView({ behavior: "smooth" }); } },
       "What a yes or no vote does, what would change, and the evidence ↓")),
 
@@ -248,7 +248,7 @@ function measureCard(rec) {
       el("div", { class: "votes" }, vLeft, el("div", { class: "fulcrum thin" }, scaleIcon("mini")), vRight),
       el("h2", {}, "What would change"),
       el("div", { class: "changes" },
-        el("div", { class: "changes-head" }, el("span", {}, "Today"), el("span", {}, ""), el("span", {}, "If it passes")),
+        el("div", { class: "changes-head" }, el("span", {}, "Today · if No wins"), el("span", {}, ""), el("span", {}, "If it passes · if Yes wins")),
         c.what_changes.map((r) => el("div", { class: "change" },
           el("div", { class: "topic" }, r.topic),
           el("div", { class: "flow" },
@@ -267,7 +267,7 @@ function measureCard(rec) {
       shareBar(c.measure_id),
       el("h3", {}, "Sources"),
       el("ul", { class: "sources" }, (rec.sources || []).map((u) => el("li", {}, extLink(u, u)))),
-      el("p", { class: "muted" }, "Order alternates from measure to measure. Same space, same structure, same colors for both sides. We never tell you how to vote.")));
+      el("p", { class: "muted" }, "Left column: No. Right column: Yes. Same space, same structure, same colors for both sides. We never tell you how to vote.")));
 }
 
 // ---- race card ------------------------------------------------------------------------------------

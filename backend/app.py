@@ -54,6 +54,11 @@ async def security_headers(request: Request, call_next):
     resp.headers["X-Content-Type-Options"] = "nosniff"
     resp.headers["Referrer-Policy"] = "no-referrer"
     resp.headers["Permissions-Policy"] = "geolocation=(), camera=(), microphone=()"
+    # App code and styles: always re-check with the server (cheap 304s) so updates show at once.
+    if request.url.path.endswith((".js", ".css", ".html", ".webmanifest")) or request.url.path == "/":
+        resp.headers["Cache-Control"] = "no-cache"
+    elif request.url.path.startswith("/fonts/"):
+        resp.headers["Cache-Control"] = "public, max-age=31536000, immutable"
     return resp
 
 
@@ -252,9 +257,9 @@ def share_page(card_id: str, request: Request):
         raise HTTPException(404)
     c, url, e = rec["card"], f"{public_base(request)}/c/{card_id}", html.escape
     tags = "\n".join(f'<meta property="{k}" content="{e(v)}">' for k, v in open_graph(c, url).items())
-    sides = [("Strongest case for YES", c["steelman_yes"]["headline"]), ("Strongest case for NO", c["steelman_no"]["headline"])]
-    if not (int(re.sub(r"\D", "", c["number"]) or 0) % 2):
-        sides.reverse()
+    # Same rule as the card: No on the left, Yes on the right.
+    sides = [("The strongest case against · No", c["steelman_no"]["headline"]),
+             ("The strongest case for · Yes", c["steelman_yes"]["headline"])]
     body = "".join(f'<section class="side"><h2>{e(t)}</h2><p>{e(h)}</p></section>' for t, h in sides)
     page = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
