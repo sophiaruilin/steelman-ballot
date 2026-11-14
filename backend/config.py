@@ -25,12 +25,17 @@ VOTESMART_API_KEY = os.getenv("VOTESMART_API_KEY", "").strip()
 HTTP_TIMEOUT_S = 20.0
 USER_AGENT = "SteelmanBallot/0.1 (nonpartisan student project)"
 
-# ---- Model ----------------------------------------------------------------
+# ---- Models (chosen from the CA look-back evaluation, output/eval/summary.md) ----
+# Writers (Measure Analyst, Candidate Profiler) and the eval Grader: gpt-6-astra, the strongest
+# reasoning model. A gpt-6-luna writer was about as accurate but needed 2 rewrites on every
+# measure, passed the steelman tests less often, and used ~1.7x input / ~2.1x output tokens.
 MODEL_NAME = os.getenv("MODEL_NAME", "gpt-6-astra").strip() or "gpt-6-astra"
 REASONING_EFFORT = "medium"
-# The Critic runs on a different (cheaper) model by default: a second perspective on the
-# writer's blind spots, and a cost comparison for the Tokenomics section.
+# Critic: gpt-6-luna. A second model's perspective on the writer's blind spots; it caught the
+# sabotaged test card and subtle overstatements, and code-level hard rules back it up.
 CRITIC_MODEL = os.getenv("CRITIC_MODEL", "gpt-6-luna").strip() or "gpt-6-luna"
+# Translator and simple extraction (e.g. reading a measure list from an official page): gpt-6-luna.
+LIGHT_MODEL = os.getenv("LIGHT_MODEL", "gpt-6-luna").strip() or "gpt-6-luna"
 PORTKEY_BASE_URL = os.getenv("PORTKEY_BASE_URL", "https://api.portkey.ai/v1").rstrip("/")
 
 # ---- Spending guards ------------------------------------------------------

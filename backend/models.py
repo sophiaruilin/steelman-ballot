@@ -30,6 +30,11 @@ class Steelman(BaseModel):
         description="Where this case comes from: the official ballot argument; other named supporters/opponents "
                     "found on allowed sources; or no organized side exists, so the case is built from the "
                     "trade-offs in the nonpartisan analysis (say so in core_claim).")
+    top_points: list[str] = Field(
+        default_factory=list,
+        description="This side's 3 most important distinct points from its official argument AND rebuttal "
+                    "(or from named advocates), each one short sentence in that side's own framing. "
+                    "Empty only if basis is no_organized_side.")
     core_claim: str = Field(description="What this side wants, in one sentence.")
     values: list[str] = Field(description="1-3 values this side cares about (e.g. fairness, cost, local control).")
     best_evidence: list[Claim] = Field(description="2-4 of this side's strongest supporting points, each cited.")

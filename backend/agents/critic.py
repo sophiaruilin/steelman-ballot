@@ -55,7 +55,7 @@ class CriticVerdict(BaseModel):
 # ---- Code checks ------------------------------------------------------------------
 
 def _side_text(s: Steelman) -> str:
-    return " ".join([s.core_claim, *s.values, *(c.text for c in s.best_evidence), s.who_it_helps, s.answer_to_other_side])
+    return " ".join([*s.top_points, s.core_claim, *s.values, *(c.text for c in s.best_evidence), s.who_it_helps, s.answer_to_other_side])
 
 
 def code_checks(card: MeasureCard) -> dict:

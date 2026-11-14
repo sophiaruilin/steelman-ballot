@@ -44,6 +44,9 @@ def get_agent(model_name: str | None = None) -> Agent[ResearchDeps, MeasureCard]
         ny, nn = len(card.steelman_yes.best_evidence), len(card.steelman_no.best_evidence)
         if abs(ny - nn) > 1:
             problems.append(f"Unbalanced steelmen: Yes has {ny} evidence points, No has {nn}. Make them equal (2-4 each).")
+        for side in (card.steelman_yes, card.steelman_no):
+            if side.basis != "no_organized_side" and len(side.top_points) != 3:
+                problems.append(f"The {side.side} side needs exactly 3 top_points from its official argument and rebuttal.")
         if card.fiscal_impact.label != "prediction":
             problems.append("fiscal_impact must be labeled 'prediction' with `whose` set.")
         for c in claims:

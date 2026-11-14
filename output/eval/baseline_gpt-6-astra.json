@@ -1,0 +1,1808 @@
+{
+  "writer": "gpt-6-astra",
+  "critic": "gpt-6-luna",
+  "props": [
+    "1",
+    "3",
+    "5",
+    "39",
+    "41",
+    "45"
+  ],
+  "rows": [
+    {
+      "prop": "1",
+      "verified": true,
+      "turing": {
+        "yes": 4,
+        "no": 4
+      },
+      "rewrites": 1,
+      "score": {
+        "claims": 11,
+        "supported": 11,
+        "unsupported": 0,
+        "contradicted": 0,
+        "fidelity": 1.0,
+        "effects_correct": 3,
+        "coverage_for": 0.8,
+        "coverage_against": null,
+        "coverage": 0.8,
+        "neutrality_issues": 0
+      },
+      "grade": {
+        "claims": [
+          {
+            "claim": "The Legislative Analyst estimates General Fund repayment costs of $500 million to $600 million a year for about 25 years. Veterans’ loan payments are expected to cover the veterans’ bonds, with no direct state cost. Some bond funds would pay program administration costs.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Supporters argue that the funding would move stalled housing projects into construction and help working families afford homes.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The measure sets aside $7.2 billion to acquire, build, or renovate rental housing, including some supportive housing with on-site services.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The measure provides $1.25 billion for veterans’ home loans. Veterans’ payments have always covered the bonds used by this program.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The Legislative Analyst estimates that repayment would use $500 million to $600 million from the General Fund each year for about 25 years.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The analyst estimates that interest would make the housing bond cost about 15 percent more, after inflation, than paying up front with available money.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The General Fund also pays for public services, including education and health care. Most California homebuilding uses only private money.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The analyst estimates subsidies for up to 40,000 multifamily rental units, about 2,500 farmworker units, and about 1,200 university student beds. Much of the money would be combined with other government funding.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The analyst estimates homeownership help for up to 40,000 households, including about 2,100 veterans, through buyer assistance and home construction or repair.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Rental projects funded through these programs generally must reserve homes for low-income households for 55 years. Funding would be allocated over several years.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The analyst estimates annual General Fund repayment costs at about 0.25 percent of the total General Fund budget. The veterans’ loan portion would be repaid separately by borrowers.",
+            "verdict": "supported",
+            "note": ""
+          }
+        ],
+        "yes_correct": true,
+        "no_correct": true,
+        "fiscal_correct": true,
+        "effect_notes": [],
+        "points_for": [
+          {
+            "point": "Address the housing-affordability crisis by accelerating stalled affordable housing construction and expanding homeownership for low- and middle-income families.",
+            "covered": true
+          },
+          {
+            "point": "Honor veterans by dedicating $1.25 billion to housing and homeownership through the existing CalVet Home Loan Program.",
+            "covered": true
+          },
+          {
+            "point": "Create and preserve stable housing for vulnerable residents, including seniors and people with disabilities, to prevent homelessness.",
+            "covered": true
+          },
+          {
+            "point": "Provide funding without new taxes, with strict accountability and public reporting, while unlocking federal matching funds.",
+            "covered": true
+          },
+          {
+            "point": "Strengthen communities by enabling essential workers such as teachers, firefighters, and nurses to live in the communities they serve.",
+            "covered": false
+          }
+        ],
+        "points_against": [],
+        "neutrality_issues": []
+      },
+      "usage": {
+        "writer:gpt-6-astra": {
+          "requests": 4,
+          "input_tokens": 20217,
+          "cache_read_tokens": 12857,
+          "output_tokens": 2927,
+          "reasoning_tokens": 40,
+          "tool_calls": 4
+        },
+        "critic:gpt-6-luna": {
+          "requests": 2,
+          "input_tokens": 10617,
+          "cache_read_tokens": 0,
+          "output_tokens": 2692,
+          "reasoning_tokens": 1997,
+          "tool_calls": 0
+        }
+      },
+      "grader_usage": {
+        "requests": 1,
+        "input_tokens": 5042,
+        "cache_read_tokens": 0,
+        "output_tokens": 926,
+        "reasoning_tokens": 131,
+        "tool_calls": 0
+      },
+      "seconds": 82.2,
+      "card": {
+        "measure_id": "CA-2026-11-03-prop-1",
+        "number": "Prop 1",
+        "official_title": "AUTHORIZES BONDS FOR HOUSING AFFORDABILITY PROGRAMS. LEGISLATIVE STATUTE.",
+        "plain_title": "Borrow $11.25 billion for affordable housing and veterans’ home loans",
+        "title_disputed": false,
+        "put_on_ballot_by": "Legislature",
+        "yes_means": "Allows the state to borrow $11.25 billion for rental housing, homeownership assistance, veterans’ home loans, and related housing programs. The state’s General Fund would repay $10 billion plus interest; veterans’ loan payments would repay the other $1.25 billion.",
+        "no_means": "Does not authorize this $11.25 billion in new borrowing. The measure’s proposed bond funding for housing programs and veterans’ home loans would not be available.",
+        "who_is_affected": [
+          "Low- and moderate-income renters and homebuyers, including people facing homelessness",
+          "Veterans seeking home loans",
+          "Farmworkers, tribal communities, and UC and CSU students",
+          "Local governments, nonprofit housing providers, and developers",
+          "State taxpayers and people who use General Fund-supported services"
+        ],
+        "fiscal_impact": {
+          "text": "The Legislative Analyst estimates General Fund repayment costs of $500 million to $600 million a year for about 25 years. Veterans’ loan payments are expected to cover the veterans’ bonds, with no direct state cost. Some bond funds would pay program administration costs.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+          "quote": null
+        },
+        "steelman_yes": {
+          "side": "Yes",
+          "basis": "official_argument",
+          "core_claim": "Supporters argue that California’s housing-affordability crisis calls for investment now to build and preserve affordable homes, expand homeownership, and help vulnerable residents stay housed.",
+          "values": [
+            "Housing stability",
+            "Opportunity to own a home",
+            "Support for veterans"
+          ],
+          "best_evidence": [
+            {
+              "text": "Supporters argue that the funding would move stalled housing projects into construction and help working families afford homes.",
+              "label": "prediction",
+              "whose": "Supporters",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/1/arguments-rebuttals.htm",
+              "quote": null
+            },
+            {
+              "text": "The measure sets aside $7.2 billion to acquire, build, or renovate rental housing, including some supportive housing with on-site services.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+              "quote": null
+            },
+            {
+              "text": "The measure provides $1.25 billion for veterans’ home loans. Veterans’ payments have always covered the bonds used by this program.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+              "quote": null
+            }
+          ],
+          "who_it_helps": "Supporters emphasize veterans, seniors, people with disabilities, working families, first-time homebuyers, and people at risk of homelessness.",
+          "answer_to_other_side": "Supporters argue that the housing crisis warrants investment now. They argue that the measure adds no new taxes, requires accountability and public reporting on housing costs and results, and would unlock federal matching funds. No new taxes does not mean repayment is free."
+        },
+        "steelman_no": {
+          "side": "No",
+          "basis": "no_organized_side",
+          "core_claim": "No official argument against this measure was submitted. A case based on the nonpartisan analysis is to avoid long-term debt and keep future state funds available for other needs.",
+          "values": [
+            "Budget flexibility",
+            "Lower borrowing costs",
+            "Careful use of public money"
+          ],
+          "best_evidence": [
+            {
+              "text": "The Legislative Analyst estimates that repayment would use $500 million to $600 million from the General Fund each year for about 25 years.",
+              "label": "prediction",
+              "whose": "Legislative Analyst",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+              "quote": null
+            },
+            {
+              "text": "The analyst estimates that interest would make the housing bond cost about 15 percent more, after inflation, than paying up front with available money.",
+              "label": "prediction",
+              "whose": "Legislative Analyst",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+              "quote": null
+            },
+            {
+              "text": "The General Fund also pays for public services, including education and health care. Most California homebuilding uses only private money.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+              "quote": null
+            }
+          ],
+          "who_it_helps": "This analysis-based case prioritizes taxpayers and people who depend on other General Fund services; it is not attributed to an organized opposition group.",
+          "answer_to_other_side": "The analysis-based reply is that helping households has benefits, but borrowing adds interest and commits future budgets. Rejecting this bond would avoid those new repayment commitments, although the measure’s proposed housing funding would not be available."
+        },
+        "crux": {
+          "kind": "both",
+          "text": "Is the expected housing assistance worth the added debt and long-term use of state funds? The trade-off turns on how much help the funding delivers and how voters weigh that help against borrowing costs and other public needs."
+        },
+        "evidence": [
+          {
+            "text": "The analyst estimates subsidies for up to 40,000 multifamily rental units, about 2,500 farmworker units, and about 1,200 university student beds. Much of the money would be combined with other government funding.",
+            "label": "prediction",
+            "whose": "Legislative Analyst",
+            "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+            "quote": null
+          },
+          {
+            "text": "The analyst estimates homeownership help for up to 40,000 households, including about 2,100 veterans, through buyer assistance and home construction or repair.",
+            "label": "prediction",
+            "whose": "Legislative Analyst",
+            "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+            "quote": null
+          },
+          {
+            "text": "Rental projects funded through these programs generally must reserve homes for low-income households for 55 years. Funding would be allocated over several years.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+            "quote": null
+          },
+          {
+            "text": "The analyst estimates annual General Fund repayment costs at about 0.25 percent of the total General Fund budget. The veterans’ loan portion would be repaid separately by borrowers.",
+            "label": "prediction",
+            "whose": "Legislative Analyst",
+            "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+            "quote": null
+          }
+        ],
+        "supporters": [
+          "Habitat for Humanity California",
+          "California Alliance for Retired Americans",
+          "Housing California",
+          "California Housing Consortium",
+          "California Alliance of Child and Family Services"
+        ],
+        "opponents": [],
+        "reading_minutes": 4
+      }
+    },
+    {
+      "prop": "3",
+      "verified": true,
+      "turing": {
+        "yes": 4,
+        "no": 4
+      },
+      "rewrites": 0,
+      "score": {
+        "claims": 11,
+        "supported": 11,
+        "unsupported": 0,
+        "contradicted": 0,
+        "fidelity": 1.0,
+        "effects_correct": 3,
+        "coverage_for": 0.6,
+        "coverage_against": 0.5,
+        "coverage": 0.556,
+        "neutrality_issues": 0
+      },
+      "grade": {
+        "claims": [
+          {
+            "claim": "The Legislative Analyst estimates that keeping the higher rates after their scheduled expiration would maintain $5 billion to $15 billion in annual state revenue. The amount would vary widely with investment income and the stock market.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The higher rates apply to the top 2 percent of California taxpayers, according to the Legislative Analyst.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Supporters warn that losing this revenue could mean teacher layoffs, larger classes, and reduced access to health care.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The official summary says local school boards decide how school revenues are spent and bars their use for administrative costs.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Voters first approved the higher rates as temporary in 2012 and extended them in 2016; this measure would make them permanent.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Opponents argue that government should control waste and overspending before asking taxpayers to keep paying higher rates.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Opponents argue that the commitment to a temporary tax matters even when the revenue supports important programs.",
+            "verdict": "supported",
+            "note": "Paraphrases opponents' insistence on honoring the temporary-tax promise despite the original justification of avoiding program cuts."
+          },
+          {
+            "claim": "The measure keeps current rates; it does not increase them above today's levels. It would prevent the rate reduction scheduled for 2031.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The official summary lists income thresholds of about $371,000 for single filers, $742,000 for joint filers, and $505,000 for heads of household, at 2025 levels. These thresholds adjust annually for inflation.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The Legislative Analyst estimates roughly 40 percent of the funding would go to schools and community colleges. The rest would support other state programs, with some set aside in budget reserves.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The Legislative Analyst expects revenue to vary widely because much of it comes from income tied to the stock market. Permanent tax rates would not mean a fixed annual amount of funding.",
+            "verdict": "supported",
+            "note": ""
+          }
+        ],
+        "yes_correct": true,
+        "no_correct": true,
+        "fiscal_correct": true,
+        "effect_notes": [],
+        "points_for": [
+          {
+            "point": "Maintains existing rates on the wealthiest 2 percent rather than raising current rates, preventing a tax cut for high earners.",
+            "covered": true
+          },
+          {
+            "point": "Protects education and health care against funding cuts, teacher layoffs, larger classes, and reduced health care access.",
+            "covered": true
+          },
+          {
+            "point": "Protects classroom funding through local control, restrictions on administrative spending, and accountability safeguards.",
+            "covered": true
+          },
+          {
+            "point": "Supports rainy-day reserves that protect schools and health care during economic downturns.",
+            "covered": false
+          },
+          {
+            "point": "School funding also frees resources for firefighters, emergency response, and wildfire protection.",
+            "covered": false
+          }
+        ],
+        "points_against": [
+          {
+            "point": "Making the higher rates permanent breaks the promise that the tax increases would be temporary.",
+            "covered": true
+          },
+          {
+            "point": "Permanently higher taxes worsen California's already high tax burden and cost of living.",
+            "covered": false
+          },
+          {
+            "point": "Waste, fraud, and overspending should be addressed before continuing higher taxes; the state has a spending problem rather than a revenue problem.",
+            "covered": true
+          },
+          {
+            "point": "Previous tax increases and substantially higher spending have failed to deliver promised improvements in schools, infrastructure, and public safety.",
+            "covered": false
+          }
+        ],
+        "neutrality_issues": []
+      },
+      "usage": {
+        "writer:gpt-6-astra": {
+          "requests": 2,
+          "input_tokens": 8468,
+          "cache_read_tokens": 4571,
+          "output_tokens": 1474,
+          "reasoning_tokens": 51,
+          "tool_calls": 3
+        },
+        "critic:gpt-6-luna": {
+          "requests": 1,
+          "input_tokens": 5912,
+          "cache_read_tokens": 0,
+          "output_tokens": 2238,
+          "reasoning_tokens": 1950,
+          "tool_calls": 0
+        }
+      },
+      "grader_usage": {
+        "requests": 1,
+        "input_tokens": 5636,
+        "cache_read_tokens": 0,
+        "output_tokens": 1140,
+        "reasoning_tokens": 220,
+        "tool_calls": 0
+      },
+      "seconds": 49.3,
+      "card": {
+        "measure_id": "CA-2026-11-03-prop-3",
+        "number": "Prop 3",
+        "official_title": "PROVIDES PERMANENT FUNDING FOR SCHOOLS AND HEALTH CARE BY EXTENDING EXISTING TAX ON HIGH INCOMES. INITIATIVE CONSTITUTIONAL AMENDMENT.",
+        "plain_title": "Make higher income tax rates on high earners permanent",
+        "title_disputed": false,
+        "put_on_ballot_by": "Citizen initiative",
+        "yes_means": "The current higher income tax rates on high earners would become permanent rather than expire in 2031. Revenue would continue to support education and other state programs.",
+        "no_means": "The higher rates would remain temporary and expire in 2031 as scheduled. Affected taxpayers would then pay lower rates, and the state would no longer receive the revenue from those higher rates.",
+        "who_is_affected": [
+          "High-income taxpayers who pay the higher rates",
+          "K–12 students, families, and school staff",
+          "Community college students and staff",
+          "People who rely on Medi-Cal and other state services"
+        ],
+        "fiscal_impact": {
+          "text": "The Legislative Analyst estimates that keeping the higher rates after their scheduled expiration would maintain $5 billion to $15 billion in annual state revenue. The amount would vary widely with investment income and the stock market.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+          "quote": null
+        },
+        "steelman_yes": {
+          "side": "Yes",
+          "basis": "official_argument",
+          "core_claim": "Supporters argue that keeping current rates on the highest earners protects schools and health care from losing a major source of funding.",
+          "values": [
+            "Public services",
+            "Ability to pay",
+            "School funding accountability"
+          ],
+          "best_evidence": [
+            {
+              "text": "The higher rates apply to the top 2 percent of California taxpayers, according to the Legislative Analyst.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+              "quote": null
+            },
+            {
+              "text": "Supporters warn that losing this revenue could mean teacher layoffs, larger classes, and reduced access to health care.",
+              "label": "prediction",
+              "whose": "Supporters",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/3/arguments-rebuttals.htm",
+              "quote": null
+            },
+            {
+              "text": "The official summary says local school boards decide how school revenues are spent and bars their use for administrative costs.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/3/title-summary.htm",
+              "quote": null
+            }
+          ],
+          "who_it_helps": "Supporters emphasize students, school staff, and families who depend on public health care.",
+          "answer_to_other_side": "Supporters argue that this keeps today's rates rather than raising them above current levels. They point to school spending protections and argue that letting the rates expire would put essential services at risk."
+        },
+        "steelman_no": {
+          "side": "No",
+          "basis": "official_argument",
+          "core_claim": "Opponents argue that voters should preserve the promised end to temporary higher taxes and demand better spending decisions before making them permanent.",
+          "values": [
+            "Limits on taxation",
+            "Government accountability",
+            "Keeping commitments"
+          ],
+          "best_evidence": [
+            {
+              "text": "Voters first approved the higher rates as temporary in 2012 and extended them in 2016; this measure would make them permanent.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+              "quote": null
+            },
+            {
+              "text": "Opponents argue that government should control waste and overspending before asking taxpayers to keep paying higher rates.",
+              "label": "value",
+              "whose": "Opponents",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/3/arguments-rebuttals.htm",
+              "quote": null
+            },
+            {
+              "text": "Opponents argue that the commitment to a temporary tax matters even when the revenue supports important programs.",
+              "label": "value",
+              "whose": "Opponents",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/3/arguments-rebuttals.htm",
+              "quote": null
+            }
+          ],
+          "who_it_helps": "Opponents emphasize taxpayers who would receive the scheduled rate reduction and residents who want tighter control of state spending.",
+          "answer_to_other_side": "Opponents argue that protecting services should start with better use of existing funds. Keeping current rates still means affected taxpayers would pay more after 2030 than under the scheduled expiration."
+        },
+        "crux": {
+          "kind": "both",
+          "text": "Should California keep this revenue permanently to support public services, or honor the scheduled tax reduction and adjust spending? The sides also disagree about whether spending reforms could protect services without the continued revenue."
+        },
+        "evidence": [
+          {
+            "text": "The measure keeps current rates; it does not increase them above today's levels. It would prevent the rate reduction scheduled for 2031.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+            "quote": null
+          },
+          {
+            "text": "The official summary lists income thresholds of about $371,000 for single filers, $742,000 for joint filers, and $505,000 for heads of household, at 2025 levels. These thresholds adjust annually for inflation.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/3/title-summary.htm",
+            "quote": null
+          },
+          {
+            "text": "The Legislative Analyst estimates roughly 40 percent of the funding would go to schools and community colleges. The rest would support other state programs, with some set aside in budget reserves.",
+            "label": "prediction",
+            "whose": "Legislative Analyst",
+            "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+            "quote": null
+          },
+          {
+            "text": "The Legislative Analyst expects revenue to vary widely because much of it comes from income tied to the stock market. Permanent tax rates would not mean a fixed annual amount of funding.",
+            "label": "prediction",
+            "whose": "Legislative Analyst",
+            "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+            "quote": null
+          }
+        ],
+        "supporters": [
+          "California State PTA",
+          "California Teachers Association",
+          "California Federation of Teachers",
+          "California Nurses Association",
+          "Planned Parenthood Affiliates of California"
+        ],
+        "opponents": [
+          "Robert Gutierrez, President, California Taxpayers Association",
+          "Robert Rivinius, President, Family Business Association of California",
+          "Julian Canete, President, California Hispanic Chambers of Commerce",
+          "Jon Coupal, President, Howard Jarvis Taxpayers Association"
+        ],
+        "reading_minutes": 4
+      }
+    },
+    {
+      "prop": "5",
+      "verified": true,
+      "turing": {
+        "yes": 4,
+        "no": 4
+      },
+      "rewrites": 0,
+      "score": {
+        "claims": 11,
+        "supported": 11,
+        "unsupported": 0,
+        "contradicted": 0,
+        "fidelity": 1.0,
+        "effects_correct": 3,
+        "coverage_for": 0.75,
+        "coverage_against": 0.8,
+        "coverage": 0.778,
+        "neutrality_issues": 0
+      },
+      "grade": {
+        "claims": [
+          {
+            "claim": "The net effect is unknown. The Legislative Analyst estimates possible state and local costs or savings of millions of dollars, occurring rarely. Separate special elections could add costs; removing replacement candidates from ballots could save money.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Under current law, the replacement candidate with the most votes wins; a majority is not required.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The measure keeps the vote on removing an official and makes the Lieutenant Governor the successor to a recalled Governor.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Supporters argue that ending the same-day replacement contest would reduce the incentive to use recalls for partisan advantage.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "For state offices other than Governor or legislative seats, the Governor would choose the replacement after a recall.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "A separate, standalone election to fill a vacancy could cost state and local governments millions of dollars.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "A recalled official could run in the special election to fill the office.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The measure removes the replacement question, not the vote on whether to remove the official.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Voters would still typically elect replacements for recalled legislators, but through a separate special election. Other non-Governor vacancies would be filled by the Governor.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "A recalled Governor’s replacement would not always face an election before the term ends. After the measure’s early-term deadline, the Lieutenant Governor would serve the rest of the term.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Since 1913, 11 state recall efforts have reached the ballot and six have removed an official, according to the Legislative Analyst.",
+            "verdict": "supported",
+            "note": ""
+          }
+        ],
+        "yes_correct": true,
+        "no_correct": true,
+        "fiscal_correct": true,
+        "effect_notes": [],
+        "points_for": [
+          {
+            "point": "Protect majority rule by ending the same-day replacement contest in which a candidate can win with far less than majority support.",
+            "covered": true
+          },
+          {
+            "point": "Preserve voters’ power to remove corrupt or abusive officials while discouraging partisan recalls aimed at redoing regular elections.",
+            "covered": true
+          },
+          {
+            "point": "Use established vacancy rules and an already elected Lieutenant Governor to provide continuity rather than a shortcut to office for replacement candidates.",
+            "covered": true
+          },
+          {
+            "point": "Defend taxpayers against wasteful recall efforts, illustrated by supporters’ account of the more than $200 million spent on the unsuccessful 2021 recall.",
+            "covered": false
+          }
+        ],
+        "points_against": [
+          {
+            "point": "Voters should retain the right both to remove an official and to choose the replacement immediately in the same election.",
+            "covered": true
+          },
+          {
+            "point": "Appointment-based replacements shift power from voters to politicians, who could select friends or political allies.",
+            "covered": true
+          },
+          {
+            "point": "Separate special elections delay replacement, leave seats vacant, and impose additional taxpayer costs.",
+            "covered": true
+          },
+          {
+            "point": "A recalled official could run in the subsequent special election and regain the office.",
+            "covered": true
+          },
+          {
+            "point": "The existing century-old system works; opponents portray the proposal as retaliation by its recalled author and an effort to protect politicians from accountability.",
+            "covered": false
+          }
+        ],
+        "neutrality_issues": []
+      },
+      "usage": {
+        "writer:gpt-6-astra": {
+          "requests": 2,
+          "input_tokens": 9053,
+          "cache_read_tokens": 4571,
+          "output_tokens": 1551,
+          "reasoning_tokens": 113,
+          "tool_calls": 3
+        },
+        "critic:gpt-6-luna": {
+          "requests": 1,
+          "input_tokens": 6513,
+          "cache_read_tokens": 0,
+          "output_tokens": 1236,
+          "reasoning_tokens": 1034,
+          "tool_calls": 0
+        }
+      },
+      "grader_usage": {
+        "requests": 1,
+        "input_tokens": 6237,
+        "cache_read_tokens": 0,
+        "output_tokens": 945,
+        "reasoning_tokens": 85,
+        "tool_calls": 0
+      },
+      "seconds": 42.6,
+      "card": {
+        "measure_id": "CA-2026-11-03-prop-5",
+        "number": "Prop 5",
+        "official_title": "CHANGES RECALL ELECTION PROCESS FOR STATEWIDE OFFICERS. LEGISLATIVE CONSTITUTIONAL AMENDMENT.",
+        "plain_title": "Separate state recall votes from choosing replacements",
+        "title_disputed": false,
+        "put_on_ballot_by": "Legislature",
+        "yes_means": "State recall ballots would ask only whether to remove an official. Legislative vacancies would typically be filled through a later special election; other offices, except Governor, would be filled by appointment under existing rules. The Lieutenant Governor would replace a recalled Governor. If the recall happens before the nomination deadline for the next statewide election in the term’s first two years, voters would elect a new Governor at a future statewide election. Otherwise, the Lieutenant Governor would serve the remaining term. A recalled official could run in a special election to fill the vacancy.",
+        "no_means": "Recall ballots would continue to ask both whether to remove a state official and who should replace that official. If the recall succeeds, the replacement candidate with the most votes would take office.",
+        "who_is_affected": [
+          "Voters in state recall elections",
+          "State officials facing recall and candidates seeking to replace them",
+          "The Governor and Lieutenant Governor",
+          "State and county election agencies and taxpayers"
+        ],
+        "fiscal_impact": {
+          "text": "The net effect is unknown. The Legislative Analyst estimates possible state and local costs or savings of millions of dollars, occurring rarely. Separate special elections could add costs; removing replacement candidates from ballots could save money.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/5/analysis.htm",
+          "quote": null
+        },
+        "steelman_yes": {
+          "side": "Yes",
+          "basis": "official_argument",
+          "core_claim": "Supporters argue that recalls should decide whether to remove an official, not offer a route to office for a replacement who lacks majority support.",
+          "values": [
+            "Majority rule",
+            "Accountability",
+            "Continuity of government"
+          ],
+          "best_evidence": [
+            {
+              "text": "Under current law, the replacement candidate with the most votes wins; a majority is not required.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/5/analysis.htm",
+              "quote": null
+            },
+            {
+              "text": "The measure keeps the vote on removing an official and makes the Lieutenant Governor the successor to a recalled Governor.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/5/analysis.htm",
+              "quote": null
+            },
+            {
+              "text": "Supporters argue that ending the same-day replacement contest would reduce the incentive to use recalls for partisan advantage.",
+              "label": "prediction",
+              "whose": "Supporters",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/5/arguments-rebuttals.htm",
+              "quote": null
+            }
+          ],
+          "who_it_helps": "In supporters’ view, voters who want to hold officials accountable without letting a replacement win through a divided field with less than majority support.",
+          "answer_to_other_side": "Supporters argue that voters would retain the power to remove officials. For Governor, an already elected Lieutenant Governor would provide continuity, rather than a replacement chosen by a small share of recall voters. Other vacancies would follow established appointment or election rules."
+        },
+        "steelman_no": {
+          "side": "No",
+          "basis": "official_argument",
+          "core_claim": "Opponents argue that voters should keep the power to remove an official and directly choose the replacement in the same election.",
+          "values": [
+            "Direct voter choice",
+            "Accountability",
+            "Limits on appointment power"
+          ],
+          "best_evidence": [
+            {
+              "text": "For state offices other than Governor or legislative seats, the Governor would choose the replacement after a recall.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/5/analysis.htm",
+              "quote": null
+            },
+            {
+              "text": "A separate, standalone election to fill a vacancy could cost state and local governments millions of dollars.",
+              "label": "prediction",
+              "whose": "Legislative Analyst",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/5/analysis.htm",
+              "quote": null
+            },
+            {
+              "text": "A recalled official could run in the special election to fill the office.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/5/title-summary.htm",
+              "quote": null
+            }
+          ],
+          "who_it_helps": "In opponents’ view, voters who want immediate control over the replacement, rather than an appointment or a later election, and taxpayers concerned about added elections.",
+          "answer_to_other_side": "Opponents argue that a direct replacement vote is an important part of accountability, even when the winner gets less than a majority. Removing that choice would shift power to officeholders in appointment cases and delay voters’ choice in others."
+        },
+        "crux": {
+          "kind": "both",
+          "text": "Should a recall let voters remove and replace an official at once, even if the replacement lacks majority support, or should replacement follow succession, appointment, or a later election? The sides also disagree about whether separating those decisions would discourage partisan recalls or weaken voter control."
+        },
+        "evidence": [
+          {
+            "text": "The measure removes the replacement question, not the vote on whether to remove the official.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/5/analysis.htm",
+            "quote": null
+          },
+          {
+            "text": "Voters would still typically elect replacements for recalled legislators, but through a separate special election. Other non-Governor vacancies would be filled by the Governor.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/5/analysis.htm",
+            "quote": null
+          },
+          {
+            "text": "A recalled Governor’s replacement would not always face an election before the term ends. After the measure’s early-term deadline, the Lieutenant Governor would serve the rest of the term.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/5/analysis.htm",
+            "quote": null
+          },
+          {
+            "text": "Since 1913, 11 state recall efforts have reached the ballot and six have removed an official, according to the Legislative Analyst.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/5/analysis.htm",
+            "quote": null
+          }
+        ],
+        "supporters": [
+          "Lorrel Plimier, Co-President, League of Women Voters of California",
+          "Darius L. Kemp, Executive Director, California Common Cause",
+          "Dan Schnur, former Chair, California Fair Political Practices Commission"
+        ],
+        "opponents": [
+          "Brian W. Jones, Senate Minority Leader",
+          "Joe Patterson, Assemblymember"
+        ],
+        "reading_minutes": 4
+      }
+    },
+    {
+      "prop": "39",
+      "verified": false,
+      "turing": {
+        "yes": 3,
+        "no": 4
+      },
+      "rewrites": 2,
+      "score": {
+        "claims": 13,
+        "supported": 12,
+        "unsupported": 0,
+        "contradicted": 1,
+        "fidelity": 0.923,
+        "effects_correct": 3,
+        "coverage_for": 1.0,
+        "coverage_against": 0.8,
+        "coverage": 0.9,
+        "neutrality_issues": 0
+      },
+      "grade": {
+        "claims": [
+          {
+            "claim": "The Legislative Analyst estimates added state and local costs of tens of millions to low hundreds of millions of dollars each year. Costs depend on implementation choices. Possible savings from fewer registered voters likely would not cover the added costs.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Supporters argue that checking government-issued ID would increase confidence that votes count fairly, encouraging more people to participate.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Supporters present the measure as a bipartisan reform rather than a national partisan fight. Their official argument is signed by the Democratic, Republican, and Independent coalition chairs of Californians for Voter ID.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The measure requires a voter ID card at no charge for voters who request one. It keeps mail voting, with an added requirement to provide the selected ID number’s last four digits.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The measure requires citizenship verification efforts, annual reports, and State Auditor reviews of compliance every two years.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "A mail ballot would be invalid if the last four digits on its envelope do not match the government-issued ID number selected in the voter’s registration.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Opponents argue that obtaining even a free ID can require transportation, time off work, childcare, or documents, putting some voters at greater risk of being left out.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Opponents argue that requiring ID-number digits on mail ballot envelopes would expose personal information and increase the risk of identity theft.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The Legislative Analyst estimates added government costs of tens of millions to low hundreds of millions of dollars each year.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Current registration establishes identity using a driver’s license number, state ID number, or the last four Social Security digits. Mail ballot signatures are checked before ballots are counted.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "U.S. citizenship is already required for state and federal elections. The measure adds government-data verification efforts and annual reports; it does not create that citizenship requirement.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The Legislature would need to decide which IDs qualify and what counts as “best efforts” to verify citizenship. Those details are not defined in the measure.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The Legislative Analyst anticipates fewer registered voters, potentially including both ineligible people and eligible people lacking government-issued ID. Resulting savings likely would not exceed the measure’s costs.",
+            "verdict": "contradicted",
+            "note": "The analyst says there could be savings from fewer registered voters, not that a registration decline is an anticipated outcome. The card strengthens a conditional possibility into an expected decline; the examples and savings comparison are supported."
+          }
+        ],
+        "yes_correct": true,
+        "no_correct": true,
+        "fiscal_correct": true,
+        "effect_notes": [],
+        "points_for": [
+          {
+            "point": "Voter ID would increase election trust and participation rather than suppress turnout.",
+            "covered": true
+          },
+          {
+            "point": "The measure is a bipartisan California solution with cross-party support, not a national partisan project.",
+            "covered": true
+          },
+          {
+            "point": "Free voter IDs and continued mail voting and other conveniences would preserve voting accessibility.",
+            "covered": true
+          },
+          {
+            "point": "Current signature checks can burden voters and cause ballots not to count.",
+            "covered": true
+          },
+          {
+            "point": "Citizenship verification and independent biennial audits would improve voter-roll accuracy and election officials’ accountability.",
+            "covered": true
+          }
+        ],
+        "points_against": [
+          {
+            "point": "Opponents portray the measure as a Trump-aligned, billionaire-backed effort to manipulate elections and entrench partisan power.",
+            "covered": false
+          },
+          {
+            "point": "The measure would waste hundreds of millions of taxpayer dollars pursuing election-fraud allegations.",
+            "covered": true
+          },
+          {
+            "point": "Putting personal ID information on mail ballot envelopes would threaten privacy and increase identity-theft risk.",
+            "covered": true
+          },
+          {
+            "point": "Existing verification already protects elections; additional ID-selection and matching requirements could exclude eligible voters or invalidate their ballots.",
+            "covered": true
+          },
+          {
+            "point": "Even free IDs entail transportation, work, childcare, and documentation costs, disproportionately burdening vulnerable voters and people whose names have changed.",
+            "covered": true
+          }
+        ],
+        "neutrality_issues": []
+      },
+      "usage": {
+        "writer:gpt-6-astra": {
+          "requests": 4,
+          "input_tokens": 26796,
+          "cache_read_tokens": 18822,
+          "output_tokens": 4863,
+          "reasoning_tokens": 220,
+          "tool_calls": 3
+        },
+        "critic:gpt-6-luna": {
+          "requests": 3,
+          "input_tokens": 19830,
+          "cache_read_tokens": 0,
+          "output_tokens": 5655,
+          "reasoning_tokens": 4513,
+          "tool_calls": 0
+        }
+      },
+      "grader_usage": {
+        "requests": 1,
+        "input_tokens": 6452,
+        "cache_read_tokens": 0,
+        "output_tokens": 1206,
+        "reasoning_tokens": 124,
+        "tool_calls": 0
+      },
+      "seconds": 130.4,
+      "card": {
+        "measure_id": "CA-2026-11-03-prop-39",
+        "number": "Prop 39",
+        "official_title": "PROHIBITS CITIZENS FROM VOTING UNLESS THEY PRESENT GOVERNMENT-ISSUED IDENTIFICATION. INITIATIVE CONSTITUTIONAL AMENDMENT.",
+        "plain_title": "Require government-issued voter ID and citizenship verification efforts",
+        "title_disputed": false,
+        "put_on_ballot_by": "Citizen initiative",
+        "yes_means": "Amend the state Constitution to require government-issued identification for in-person voting. Mail ballot envelopes would have to include the last four digits of the government-issued ID number selected in the voter’s registration, and those digits must match. Require free voter ID cards on request, efforts to verify registered voters’ citizenship, annual verification reports, and independent audits every two years. The Legislature would need to define some details.",
+        "no_means": "Keep current identity checks through voter registration, signatures on mail ballot envelopes, and generally a signed voter list for in-person voting. The measure’s additional ID requirements, citizenship reports, free voter ID cards, and audits would not take effect.",
+        "who_is_affected": [
+          "Registered voters, including people who vote by mail",
+          "Eligible voters who lack government-issued identification",
+          "State and county election officials and the State Auditor",
+          "Taxpayers funding election administration"
+        ],
+        "fiscal_impact": {
+          "text": "The Legislative Analyst estimates added state and local costs of tens of millions to low hundreds of millions of dollars each year. Costs depend on implementation choices. Possible savings from fewer registered voters likely would not cover the added costs.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+          "quote": null
+        },
+        "steelman_yes": {
+          "side": "Yes",
+          "basis": "official_argument",
+          "core_claim": "Supporters argue that voter ID offers a cross-party way to increase election confidence and participation, with free identification and continued mail voting to preserve access.",
+          "values": [
+            "Election integrity",
+            "Public trust",
+            "Accountability"
+          ],
+          "best_evidence": [
+            {
+              "text": "Supporters argue that checking government-issued ID would increase confidence that votes count fairly, encouraging more people to participate.",
+              "label": "prediction",
+              "whose": "Supporters",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/39/arguments-rebuttals.htm",
+              "quote": null
+            },
+            {
+              "text": "Supporters present the measure as a bipartisan reform rather than a national partisan fight. Their official argument is signed by the Democratic, Republican, and Independent coalition chairs of Californians for Voter ID.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/39/arguments-rebuttals.htm",
+              "quote": null
+            },
+            {
+              "text": "The measure requires a voter ID card at no charge for voters who request one. It keeps mail voting, with an added requirement to provide the selected ID number’s last four digits.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+              "quote": null
+            },
+            {
+              "text": "The measure requires citizenship verification efforts, annual reports, and State Auditor reviews of compliance every two years.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+              "quote": null
+            }
+          ],
+          "who_it_helps": "In supporters’ view, voters across political parties who want reliable identity checks, accountable election officials, and greater confidence in participating.",
+          "answer_to_other_side": "Supporters argue that free voter ID cards and continued mail voting would keep voting accessible. They also argue that current signature checks can burden voters whose signatures vary. In their view, ID checks and independent audits offer a California approach to building trust, rather than a tool for national partisan advantage."
+        },
+        "steelman_no": {
+          "side": "No",
+          "basis": "official_argument",
+          "core_claim": "Opponents argue that existing checks should be kept rather than adding costly rules that could prevent eligible citizens from having their votes counted and put their privacy at risk.",
+          "values": [
+            "Voting access",
+            "Privacy",
+            "Responsible spending"
+          ],
+          "best_evidence": [
+            {
+              "text": "A mail ballot would be invalid if the last four digits on its envelope do not match the government-issued ID number selected in the voter’s registration.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/39/title-summary.htm",
+              "quote": null
+            },
+            {
+              "text": "Opponents argue that obtaining even a free ID can require transportation, time off work, childcare, or documents, putting some voters at greater risk of being left out.",
+              "label": "prediction",
+              "whose": "Opponents",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/39/arguments-rebuttals.htm",
+              "quote": null
+            },
+            {
+              "text": "Opponents argue that requiring ID-number digits on mail ballot envelopes would expose personal information and increase the risk of identity theft.",
+              "label": "prediction",
+              "whose": "Opponents",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/39/arguments-rebuttals.htm",
+              "quote": null
+            },
+            {
+              "text": "The Legislative Analyst estimates added government costs of tens of millions to low hundreds of millions of dollars each year.",
+              "label": "prediction",
+              "whose": "Legislative Analyst",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+              "quote": null
+            }
+          ],
+          "who_it_helps": "In opponents’ view, mail voters concerned about privacy and eligible voters facing ID barriers, especially seniors, students, low-income workers, voters of color, and people whose names have changed.",
+          "answer_to_other_side": "Opponents argue that existing identity checks already protect elections, while a free card does not eliminate the cost of obtaining it. They warn that mistakes could exclude eligible voters, citing incorrect digits, outdated ID addresses, or misspelled names. The address and name examples are their concerns, not settled implementation rules in the analyst’s account."
+        },
+        "crux": {
+          "kind": "both",
+          "text": "The sides disagree about whether added ID checks would increase trust and participation or keep eligible voters from voting. They also weigh added verification and oversight differently against access, privacy, and public costs."
+        },
+        "evidence": [
+          {
+            "text": "Current registration establishes identity using a driver’s license number, state ID number, or the last four Social Security digits. Mail ballot signatures are checked before ballots are counted.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+            "quote": null
+          },
+          {
+            "text": "U.S. citizenship is already required for state and federal elections. The measure adds government-data verification efforts and annual reports; it does not create that citizenship requirement.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+            "quote": null
+          },
+          {
+            "text": "The Legislature would need to decide which IDs qualify and what counts as “best efforts” to verify citizenship. Those details are not defined in the measure.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+            "quote": null
+          },
+          {
+            "text": "The Legislative Analyst anticipates fewer registered voters, potentially including both ineligible people and eligible people lacking government-issued ID. Resulting savings likely would not exceed the measure’s costs.",
+            "label": "prediction",
+            "whose": "Legislative Analyst",
+            "source_url": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm",
+            "quote": null
+          }
+        ],
+        "supporters": [
+          "Californians for Voter ID",
+          "The Transparency Foundation",
+          "California Women’s Leadership Association",
+          "Latino American Political Association",
+          "Howard Jarvis Taxpayers Association"
+        ],
+        "opponents": [
+          "David Trujillo, Executive Director, ACLU California Action",
+          "Darius Kemp, California State Director, Common Cause",
+          "Lorrel Plimier, Co-President, League of Women Voters of California",
+          "Alex Padilla, U.S. Senator for California",
+          "Catherine Kennedy, President, California Nurses Association",
+          "Adam Weinberger, President, California School Employees Association"
+        ],
+        "reading_minutes": 4
+      }
+    },
+    {
+      "prop": "41",
+      "verified": true,
+      "turing": {
+        "yes": 4,
+        "no": 4
+      },
+      "rewrites": 1,
+      "score": {
+        "claims": 12,
+        "supported": 12,
+        "unsupported": 0,
+        "contradicted": 0,
+        "fidelity": 1.0,
+        "effects_correct": 3,
+        "coverage_for": 0.6,
+        "coverage_against": 0.8,
+        "coverage": 0.7,
+        "neutrality_issues": 0
+      },
+      "grade": {
+        "claims": [
+          {
+            "claim": "The net effect is unknown. Audit costs would likely start in the low millions of dollars each year and grow over time, mostly paid from new special-tax revenue. The General Fund would pay one-time audit costs for proposals that do not appear on the ballot or are rejected by voters. Voter-guide costs could rise by a few hundred thousand dollars per qualifying initiative. Effective audit recommendations could produce savings if adopted.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Voters should have independent information about how programs operate and whether they need more money before approving taxes.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The measure requires pre-election audits and public voter-guide summaries for qualifying special-tax initiatives, plus ongoing audits of programs funded by new or increased special taxes.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Supporters argue that identifying waste and recommending improvements would make tax-funded services more effective.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Opponents argue that Prop 41 would cancel Prop 40, the California Billionaire Tax, and threaten the service funding they expect from it.",
+            "verdict": "supported",
+            "note": "Accurately attributes the cancellation claim to opponents rather than presenting it as the Legislative Analyst's conclusion."
+          },
+          {
+            "claim": "Opponents argue that billionaires should contribute more to keep health care affordable for working families.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Required audits would increase state costs; the General Fund would pay one-time audit costs for proposals that do not appear on the ballot or are rejected by voters.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "A special tax dedicates revenue to a specific purpose. The state spending limit already applies to general and special taxes, but excludes some spending, such as infrastructure.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Pre-election audits begin when initiative supporters collect 25 percent of the required signatures, before anyone knows whether the proposal will qualify. Audits must identify ways to cut the program’s annual costs by 10 percent.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Savings or better services would depend on policymakers adopting audit recommendations and those recommendations working. Savings are not known.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The official summary makes cancellation of another same-ballot measure conditional: it must conflict with Prop 41, and Prop 41 must receive more affirmative votes. It does not name Prop 40.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The Legislative Analyst says the state might no longer be able to exclude new special-tax spending from the spending limit.",
+            "verdict": "supported",
+            "note": ""
+          }
+        ],
+        "yes_correct": true,
+        "no_correct": true,
+        "fiscal_correct": true,
+        "effect_notes": [],
+        "points_for": [
+          {
+            "point": "Independent pre-election audits and public voter-guide findings would help voters judge program management and funding needs.",
+            "covered": true
+          },
+          {
+            "point": "Recurring performance and financial audits would provide transparency, oversight, and accountability for programs funded by new taxes.",
+            "covered": true
+          },
+          {
+            "point": "Identifying waste, fraud, and mismanagement and recommending improvements would deliver better services and more effective spending.",
+            "covered": true
+          },
+          {
+            "point": "California's already-high taxes, rising living costs, and sharply increased state spending with disappointing results make reform urgent.",
+            "covered": false
+          },
+          {
+            "point": "The measure does not raise taxes and would enforce the voter-approved spending limit, including refunds of excess revenue.",
+            "covered": false
+          }
+        ],
+        "points_against": [
+          {
+            "point": "Prop 41 is intended to cancel Prop 40 or make the California Billionaire Tax unenforceable.",
+            "covered": true
+          },
+          {
+            "point": "The audit rationale is a deceptive cover for a billionaire-funded effort, backed by Sergey Brin and other Trump donors, to protect their own wealth.",
+            "covered": false
+          },
+          {
+            "point": "Billionaires should pay their fair share through a modest one-time wealth tax rather than shift health care burdens onto working families.",
+            "covered": true
+          },
+          {
+            "point": "Rejecting Prop 41 would protect anticipated billionaire-tax funding for hospitals, affordable health care, public education, and food assistance.",
+            "covered": true
+          },
+          {
+            "point": "The measure would itself cost the state time and money.",
+            "covered": true
+          }
+        ],
+        "neutrality_issues": []
+      },
+      "usage": {
+        "writer:gpt-6-astra": {
+          "requests": 3,
+          "input_tokens": 16274,
+          "cache_read_tokens": 10538,
+          "output_tokens": 3100,
+          "reasoning_tokens": 63,
+          "tool_calls": 3
+        },
+        "critic:gpt-6-luna": {
+          "requests": 2,
+          "input_tokens": 12340,
+          "cache_read_tokens": 0,
+          "output_tokens": 3635,
+          "reasoning_tokens": 3047,
+          "tool_calls": 0
+        }
+      },
+      "grader_usage": {
+        "requests": 1,
+        "input_tokens": 5903,
+        "cache_read_tokens": 0,
+        "output_tokens": 1240,
+        "reasoning_tokens": 186,
+        "tool_calls": 0
+      },
+      "seconds": 85.0,
+      "card": {
+        "measure_id": "CA-2026-11-03-prop-41",
+        "number": "Prop 41",
+        "official_title": "PROHIBITS NEW STATE TAXES THAT EXCLUDE REVENUES FROM STATE SPENDING LIMIT. REQUIRES AUDITS FOR NEW STATE SPECIAL TAXES. INITIATIVE CONSTITUTIONAL AMENDMENT.",
+        "plain_title": "Prohibit excluding new state tax revenues from the spending limit and require special-tax audits",
+        "title_disputed": false,
+        "put_on_ballot_by": "Citizen initiative",
+        "yes_means": "Amend the state Constitution to prohibit new state taxes that exclude their revenue from the state spending limit. Require audits before voter-proposed special taxes reach the ballot and every four years for programs funded by special taxes created or increased after January 1, 2026. Conflicting measures on the same ballot would be void if Prop 41 receives more yes votes.",
+        "no_means": "Keep current spending-limit rules, including existing exclusions for certain spending. Do not add these required audits or this rule voiding conflicting ballot measures. The State Auditor would continue its existing work.",
+        "who_is_affected": [
+          "State taxpayers",
+          "People who use programs funded by special taxes",
+          "Groups proposing new or increased special taxes",
+          "State agencies and the State Auditor"
+        ],
+        "fiscal_impact": {
+          "text": "The net effect is unknown. Audit costs would likely start in the low millions of dollars each year and grow over time, mostly paid from new special-tax revenue. The General Fund would pay one-time audit costs for proposals that do not appear on the ballot or are rejected by voters. Voter-guide costs could rise by a few hundred thousand dollars per qualifying initiative. Effective audit recommendations could produce savings if adopted.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/41/analysis.htm",
+          "quote": null
+        },
+        "steelman_yes": {
+          "side": "Yes",
+          "basis": "official_argument",
+          "core_claim": "Voters deserve independent information before approving new taxes, and regular reviews should help public programs deliver better results.",
+          "values": [
+            "Accountability",
+            "Informed decisions",
+            "Responsible spending"
+          ],
+          "best_evidence": [
+            {
+              "text": "Voters should have independent information about how programs operate and whether they need more money before approving taxes.",
+              "label": "value",
+              "whose": "Supporters",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/41/arguments-rebuttals.htm",
+              "quote": null
+            },
+            {
+              "text": "The measure requires pre-election audits and public voter-guide summaries for qualifying special-tax initiatives, plus ongoing audits of programs funded by new or increased special taxes.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/41/analysis.htm",
+              "quote": null
+            },
+            {
+              "text": "Supporters argue that identifying waste and recommending improvements would make tax-funded services more effective.",
+              "label": "prediction",
+              "whose": "Supporters",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/41/arguments-rebuttals.htm",
+              "quote": null
+            }
+          ],
+          "who_it_helps": "Supporters say taxpayers and people relying on education, health care, and other public services would benefit from better use of public money.",
+          "answer_to_other_side": "Supporters answer the concern about service funding by arguing that more money alone does not ensure good services: independent reviews can help direct money toward programs that work."
+        },
+        "steelman_no": {
+          "side": "No",
+          "basis": "official_argument",
+          "core_claim": "Protect the ability to fund essential services through a billionaire tax rather than adopt an audit measure that opponents argue would block that tax.",
+          "values": [
+            "Fair tax burdens",
+            "Health care access",
+            "Public-service funding"
+          ],
+          "best_evidence": [
+            {
+              "text": "Opponents argue that Prop 41 would cancel Prop 40, the California Billionaire Tax, and threaten the service funding they expect from it.",
+              "label": "prediction",
+              "whose": "Opponents",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/41/arguments-rebuttals.htm",
+              "quote": null
+            },
+            {
+              "text": "Opponents argue that billionaires should contribute more to keep health care affordable for working families.",
+              "label": "value",
+              "whose": "Opponents",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/41/arguments-rebuttals.htm",
+              "quote": null
+            },
+            {
+              "text": "Required audits would increase state costs; the General Fund would pay one-time audit costs for proposals that do not appear on the ballot or are rejected by voters.",
+              "label": "prediction",
+              "whose": "Legislative Analyst",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/41/analysis.htm",
+              "quote": null
+            }
+          ],
+          "who_it_helps": "Opponents say rejecting the measure would protect working families and people who depend on health care, public education, and food assistance.",
+          "answer_to_other_side": "Opponents argue that the transparency case does not address the measure’s tax restrictions and conflict rule. In their view, the risk to service funding outweighs the promised benefits of new audits."
+        },
+        "crux": {
+          "kind": "both",
+          "text": "The disagreement is about whether added oversight and tighter spending rules are worth the costs and limits on new taxes. It also turns on opponents’ forecast that Prop 41 would block Prop 40 and threaten service funding."
+        },
+        "evidence": [
+          {
+            "text": "A special tax dedicates revenue to a specific purpose. The state spending limit already applies to general and special taxes, but excludes some spending, such as infrastructure.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/41/analysis.htm",
+            "quote": null
+          },
+          {
+            "text": "Pre-election audits begin when initiative supporters collect 25 percent of the required signatures, before anyone knows whether the proposal will qualify. Audits must identify ways to cut the program’s annual costs by 10 percent.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/41/analysis.htm",
+            "quote": null
+          },
+          {
+            "text": "Savings or better services would depend on policymakers adopting audit recommendations and those recommendations working. Savings are not known.",
+            "label": "prediction",
+            "whose": "Legislative Analyst",
+            "source_url": "https://voterguide.sos.ca.gov/propositions/41/analysis.htm",
+            "quote": null
+          },
+          {
+            "text": "The official summary makes cancellation of another same-ballot measure conditional: it must conflict with Prop 41, and Prop 41 must receive more affirmative votes. It does not name Prop 40.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/41/title-summary.htm",
+            "quote": null
+          },
+          {
+            "text": "The Legislative Analyst says the state might no longer be able to exclude new special-tax spending from the spending limit.",
+            "label": "prediction",
+            "whose": "Legislative Analyst",
+            "source_url": "https://voterguide.sos.ca.gov/propositions/41/analysis.htm",
+            "quote": null
+          }
+        ],
+        "supporters": [
+          "Denise LeDuc Froemming, President, California Society of Certified Public Accountants",
+          "Tom Hayes, former California State Auditor",
+          "Robert Gutierrez, President, California Taxpayers Association",
+          "Pat Fong Kushida, President, CalAsian Chamber of Commerce",
+          "Steve Westly, former California State Controller"
+        ],
+        "opponents": [
+          "Suzanne Jimenez, Chief of Staff, SEIU-United Healthcare Workers West"
+        ],
+        "reading_minutes": 4
+      }
+    },
+    {
+      "prop": "45",
+      "verified": true,
+      "turing": {
+        "yes": 4,
+        "no": 4
+      },
+      "rewrites": 0,
+      "score": {
+        "claims": 12,
+        "supported": 12,
+        "unsupported": 0,
+        "contradicted": 0,
+        "fidelity": 1.0,
+        "effects_correct": 3,
+        "coverage_for": 0.8,
+        "coverage_against": 0.8,
+        "coverage": 0.8,
+        "neutrality_issues": 0
+      },
+      "grade": {
+        "claims": [
+          {
+            "claim": "The Legislative Analyst estimates initial state and local costs in the high tens of millions of dollars a year, potentially above $100 million a year. Applicant and lawsuit fees would cover part. Longer-term effects could be larger, but could be savings or costs, depending on construction and environmental effects.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The measure sets tighter deadlines for environmental reviews, permits, and court challenges for eligible projects.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Supporters argue that faster approvals would lower housing and electricity costs and reduce overruns on public projects.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The Legislative Analyst says faster construction of public projects could lower government project costs, and more completed projects could raise tax revenue.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The measure allows one applicant-developed alternative instead of multiple agency-developed alternatives and caps public comment periods.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Opponents argue that weaker review would increase pollution near homes and schools and leave residents paying health and cleanup costs.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The Legislative Analyst says governments could face higher costs if the changes allow projects with negative environmental effects that otherwise would not occur.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Eligible applicants could choose the new procedures or keep existing procedures. Environmental review would continue, but its rules would change.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Most projects do not require a detailed environmental impact report. For eligible projects using the new rules, applicants could offer only one alternative instead of agencies developing multiple alternatives.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "The new rules cap public comment periods and require tribal consultation only with federally recognized California Native tribes. Current law requires consultation with a wider range of tribes.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Courts could consider less in environmental review lawsuits and could stop only the noncompliant part of a project, rather than the whole project, while review problems are fixed.",
+            "verdict": "supported",
+            "note": ""
+          },
+          {
+            "claim": "Agencies would assess environmental impacts using laws and standards in place when the application was submitted. Current law allows new information and revised review standards during the detailed review.",
+            "verdict": "supported",
+            "note": ""
+          }
+        ],
+        "yes_correct": true,
+        "no_correct": true,
+        "fiscal_correct": true,
+        "effect_notes": [],
+        "points_for": [
+          {
+            "point": "Faster approvals would lower housing and electricity costs and reduce taxpayer-funded public-project overruns.",
+            "covered": true
+          },
+          {
+            "point": "Enforceable deadlines and more predictable reviews and legal challenges would overcome delays blocking essential housing and infrastructure.",
+            "covered": true
+          },
+          {
+            "point": "The measure would create tens of thousands of good-paying jobs and billions in economic activity.",
+            "covered": false
+          },
+          {
+            "point": "Essential projects could be expedited while maintaining environmental protections and requiring environmental review.",
+            "covered": true
+          },
+          {
+            "point": "Communities would retain their voice through public comments and challenges, and local governments would retain approval authority.",
+            "covered": true
+          }
+        ],
+        "points_against": [
+          {
+            "point": "Reduced environmental scrutiny would weaken protections for air, water, wildlife, and public health.",
+            "covered": true
+          },
+          {
+            "point": "Limits on public input and challenges would reduce communities' ability to identify and prevent harmful development.",
+            "covered": true
+          },
+          {
+            "point": "Pollution would leave residents, taxpayers, and utility ratepayers bearing health and cleanup costs.",
+            "covered": true
+          },
+          {
+            "point": "The measure does not require lower rents, mortgages, or utility bills, so lower developer costs need not translate into household savings.",
+            "covered": true
+          },
+          {
+            "point": "The measure was written by the California Chamber of Commerce and financed by utilities and corporate PACs to benefit corporate interests.",
+            "covered": false
+          }
+        ],
+        "neutrality_issues": []
+      },
+      "usage": {
+        "writer:gpt-6-astra": {
+          "requests": 2,
+          "input_tokens": 9489,
+          "cache_read_tokens": 4571,
+          "output_tokens": 1577,
+          "reasoning_tokens": 62,
+          "tool_calls": 3
+        },
+        "critic:gpt-6-luna": {
+          "requests": 1,
+          "input_tokens": 7056,
+          "cache_read_tokens": 0,
+          "output_tokens": 1516,
+          "reasoning_tokens": 1208,
+          "tool_calls": 0
+        }
+      },
+      "grader_usage": {
+        "requests": 1,
+        "input_tokens": 6780,
+        "cache_read_tokens": 0,
+        "output_tokens": 1048,
+        "reasoning_tokens": 90,
+        "tool_calls": 0
+      },
+      "seconds": 50.2,
+      "card": {
+        "measure_id": "CA-2026-11-03-prop-45",
+        "number": "Prop 45",
+        "official_title": "MODIFIES ENVIRONMENTAL REVIEW FOR CERTAIN PROJECTS. INITIATIVE STATUTE.",
+        "plain_title": "Change environmental review and approval rules for housing and other eligible projects",
+        "title_disputed": false,
+        "put_on_ballot_by": "Citizen initiative",
+        "yes_means": "Applicants for eligible housing, transportation, water, health, wildfire prevention, education, internet access, and clean energy projects could choose new review procedures. These set tighter deadlines, narrow review of alternatives and public comment periods, and limit court review and orders stopping projects.",
+        "no_means": "Existing environmental review and permitting rules would remain. Agencies would continue to consider multiple alternatives when a detailed environmental report is required. Existing public comment rules and courts’ authority to stop an entire project over an inadequate review would remain.",
+        "who_is_affected": [
+          "People seeking housing and users of public services and infrastructure",
+          "Residents near eligible projects and people challenging project approvals",
+          "Builders and public agencies proposing eligible projects",
+          "State and local reviewing agencies and courts",
+          "California Native tribes involved in project consultation"
+        ],
+        "fiscal_impact": {
+          "text": "The Legislative Analyst estimates initial state and local costs in the high tens of millions of dollars a year, potentially above $100 million a year. Applicant and lawsuit fees would cover part. Longer-term effects could be larger, but could be savings or costs, depending on construction and environmental effects.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
+          "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm",
+          "quote": null
+        },
+        "steelman_yes": {
+          "side": "Yes",
+          "basis": "official_argument",
+          "core_claim": "Supporters argue that firm deadlines and more predictable reviews would help California build needed housing and infrastructure at lower cost while keeping environmental review.",
+          "values": [
+            "Affordability",
+            "Reliable public services",
+            "Predictable decisions"
+          ],
+          "best_evidence": [
+            {
+              "text": "The measure sets tighter deadlines for environmental reviews, permits, and court challenges for eligible projects.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm",
+              "quote": null
+            },
+            {
+              "text": "Supporters argue that faster approvals would lower housing and electricity costs and reduce overruns on public projects.",
+              "label": "prediction",
+              "whose": "Supporters",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/45/arguments-rebuttals.htm",
+              "quote": null
+            },
+            {
+              "text": "The Legislative Analyst says faster construction of public projects could lower government project costs, and more completed projects could raise tax revenue.",
+              "label": "prediction",
+              "whose": "Legislative Analyst",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm",
+              "quote": null
+            }
+          ],
+          "who_it_helps": "In supporters’ view, families facing high housing and utility costs, taxpayers funding public projects, and people waiting for schools, hospitals, water systems, and wildfire protection.",
+          "answer_to_other_side": "Supporters argue that faster review need not mean abandoning environmental protection: projects would still undergo environmental review, and residents could still comment and challenge approvals. They view more predictable deadlines and narrower challenges as a way to deliver needed projects, rather than end oversight."
+        },
+        "steelman_no": {
+          "side": "No",
+          "basis": "official_argument",
+          "core_claim": "Opponents argue that California should keep fuller environmental review and public oversight because faster approvals could shift health and cleanup costs onto communities.",
+          "values": [
+            "Public health",
+            "Community participation",
+            "Environmental protection"
+          ],
+          "best_evidence": [
+            {
+              "text": "The measure allows one applicant-developed alternative instead of multiple agency-developed alternatives and caps public comment periods.",
+              "label": "fact",
+              "whose": null,
+              "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm",
+              "quote": null
+            },
+            {
+              "text": "Opponents argue that weaker review would increase pollution near homes and schools and leave residents paying health and cleanup costs.",
+              "label": "prediction",
+              "whose": "Opponents",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/45/arguments-rebuttals.htm",
+              "quote": null
+            },
+            {
+              "text": "The Legislative Analyst says governments could face higher costs if the changes allow projects with negative environmental effects that otherwise would not occur.",
+              "label": "prediction",
+              "whose": "Legislative Analyst",
+              "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm",
+              "quote": null
+            }
+          ],
+          "who_it_helps": "In opponents’ view, residents exposed to pollution, communities seeking a voice in nearby development, and taxpayers and utility customers who could bear cleanup costs.",
+          "answer_to_other_side": "Opponents argue that cheaper or faster construction does not assure lower household bills. They also argue that keeping environmental laws on the books is not enough if agencies consider fewer alternatives and residents and courts have less ability to address harmful projects."
+        },
+        "crux": {
+          "kind": "both",
+          "text": "Would more predictable approvals deliver enough cheaper housing and infrastructure to outweigh the risks of narrower environmental review? The sides also differ on how much public participation and court oversight should be preserved even when they add time."
+        },
+        "evidence": [
+          {
+            "text": "Eligible applicants could choose the new procedures or keep existing procedures. Environmental review would continue, but its rules would change.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm",
+            "quote": null
+          },
+          {
+            "text": "Most projects do not require a detailed environmental impact report. For eligible projects using the new rules, applicants could offer only one alternative instead of agencies developing multiple alternatives.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm",
+            "quote": null
+          },
+          {
+            "text": "The new rules cap public comment periods and require tribal consultation only with federally recognized California Native tribes. Current law requires consultation with a wider range of tribes.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm",
+            "quote": null
+          },
+          {
+            "text": "Courts could consider less in environmental review lawsuits and could stop only the noncompliant part of a project, rather than the whole project, while review problems are fixed.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm",
+            "quote": null
+          },
+          {
+            "text": "Agencies would assess environmental impacts using laws and standards in place when the application was submitted. Current law allows new information and revised review standards during the detailed review.",
+            "label": "fact",
+            "whose": null,
+            "source_url": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm",
+            "quote": null
+          }
+        ],
+        "supporters": [
+          "American Clean Power—California",
+          "California League of United Latin American Citizens (LULAC)",
+          "NAACP California/Hawaii State Conference",
+          "California Taxpayers Association",
+          "Environmental Policy Innovation Center"
+        ],
+        "opponents": [
+          "National Wildlife Federation",
+          "California Communities Against Toxics",
+          "California Environmental Voters",
+          "California Environmental Justice Alliance",
+          "Clean Water Action"
+        ],
+        "reading_minutes": 4
+      }
+    }
+  ]
+}

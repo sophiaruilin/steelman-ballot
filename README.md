@@ -76,6 +76,7 @@ steelman-ballot/
 │   │                      common (safe fetch tool, citation + quote checks)
 │   ├── pipeline.py        Analyst -> Critic -> rewrite loop (max 2); per-contest cache
 │   ├── eval/              CA look-back grader + summary (output/eval/summary.md)
+│   ├── share.py           WhatsApp / WeChat / share-sheet text (always both sides)
 │   ├── sources/           one adapter per data source: geocoder, fec (Funded by),
 │   │                      congress + openstates (Did), http (allowlisted client),
 │   │                      filters, web (safe page reader), replay (test tapes)

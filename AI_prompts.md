@@ -57,3 +57,8 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 **Prompt (my own words):** "is this best aprocah or do you hvae more cost effective recomendation"
 **Follow-up prompt:** "yes" and then "what is lowest model to stil accurately and efficeintly get what you're looking for? i imagine the steelman argument creator and processes raound that should at least be at the model they're set at; is other info scraping okay to use lower token cost models? what do you reocmmend?"
 **What was lacking before:** Statewide measures were cached per district combination (so they'd be re-researched many times), page menus and footers were sent to the model, there was no independent accuracy score, and there was no evidence on whether a cheaper writer model hurts quality.
+
+## Step 12: Better argument coverage, final model setup, mobile and chat sharing
+**Prompt (my own words):** "implement these suggestions: A prompt tweak asking for each side's top three official points may help. The Grader runs on the same model as the writer. Classmate fairness ratings would add an independent check."
+**Follow-up prompt:** "ignore the classmate fairness rating kit. just build with top models for reasoning for greatest accuracy at reaosnable tokens, as you found. ocmmit. i also want this to be mobile app friendly and good for whatsapp and wechat"
+**What was lacking before:** Steelmen covered only about 76% of the official arguments' key points, the model choices weren't settled, and there was no way to share a card in WhatsApp or WeChat without risking one-sided sharing.
