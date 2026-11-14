@@ -40,3 +40,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 7: FEC and Congress.gov adapters
 **Prompt (my own words):** "Yes, start" (approving the next build step: the OpenFEC and Congress.gov adapters for each candidate's "Funded by" and "Did" sections)
 **What was lacking before:** The app could find an address's districts but couldn't yet say who funds a federal candidate or what a sitting member of Congress has done.
+
+## Step 8: Open States adapter for state legislators
+**Prompt (my own words):** "Yes, start" (approving the Open States adapter for state legislators' "Did" section)
+**What was lacking before:** The app covered members of Congress but not the state house and senate members on most ballots, and honorary resolutions were crowding out real bills.

@@ -58,7 +58,8 @@ steelman-ballot/
 │   ├── config.py          keys, model, cache policy, spending limits
 │   ├── cache.py           shared per-jurisdiction cache + refresh rules
 │   ├── sources/           one adapter per data source: geocoder, fec (Funded by),
-│   │                      congress (Did), http (allowlisted client), replay (test tapes)
+│   │                      congress + openstates (Did), http (allowlisted client),
+│   │                      filters, replay (test tapes)
 │   └── prompts/           system prompts for each agent
 ├── tests/                 offline tests + saved API responses
 ├── data/                  demo snapshots (runtime cache is git-ignored)

@@ -131,3 +131,59 @@ def test_key_sent_in_header_not_url():
     SourceClient(headers={"X-Api-Key": "k123"}, transport=httpx.MockTransport(capture)).get_json(
         "https://api.congress.gov/v3/member", {"format": "json"})
     assert "k123" not in seen["url"] and seen["hdr"] == "k123"
+
+
+# ---- Open States (state legislators, "Did") ----------------------------------
+
+from backend.sources.filters import is_ceremonial
+from backend.sources.geocoder import parse
+from backend.sources.openstates import OpenStates
+
+
+@pytest.fixture
+def ost():
+    with OpenStates(transport=ReplayTransport(FIX / "openstates_austin.json")) as o:
+        yield o
+
+
+def test_geocoder_returns_coordinates():
+    import json
+    j = parse(json.loads((FIX / "census_new_haven.json").read_text(encoding="utf-8")))
+    assert 41 < j.lat < 42 and -73 < j.lng < -72
+
+
+def test_openstates_state_legislators_only(ost):
+    rec = ost.legislators(lat=30.27644, lng=-97.73975)
+    people = rec.data["legislators"]
+    assert [(p["chamber"], p["district"], p["name"]) for p in people] == [
+        ("upper", "14", "Sarah Eckhardt"), ("lower", "49", "Gina Hinojosa")]
+    # federal members (Cruz, Cornyn, Doggett) come from Congress.gov, not here
+    assert all(p["state"] == "Texas" for p in people)
+
+
+def test_openstates_bills_linked_and_ceremonial_skipped(ost):
+    eck = ost.legislators(lat=30.27644, lng=-97.73975).data["legislators"][0]
+    data = ost.bills(eck).data
+    assert data["bills"] and all(b["match"] == "linked" for b in data["bills"])
+    assert data["ceremonial_skipped"] > 0
+    assert not any(is_ceremonial(b["title"]) for b in data["bills"])
+    assert all(b["cite_url"].startswith("https://openstates.org/") for b in data["bills"])
+
+
+def test_openstates_unlinked_sponsor_needs_name_and_chamber(ost):
+    hin = ost.legislators(lat=30.27644, lng=-97.73975).data["legislators"][1]
+    bills = ost.bills(hin).data["bills"]
+    assert bills and all(b["match"] == "name_match" for b in bills)
+    assert all(b["bill"].startswith("H") for b in bills)   # House bills only, not Sen. Hinojosa's
+
+
+@pytest.mark.parametrize("title,expected", [
+    ("Congratulating Michael Rye of the Rosedale School on his selection", True),
+    ("Recognizing Richard San Jose on the occasion of his retirement", True),
+    ("Commending and congratulating Texas A&M University for 150 years", True),
+    ("Relating to designating July as American Patriotism Month.", True),
+    ("Relating to disaster preparedness, response, and recovery", False),
+    ("Guard the Skies Act", False),
+])
+def test_ceremonial_filter(title, expected):
+    assert is_ceremonial(title) is expected

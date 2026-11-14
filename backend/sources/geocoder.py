@@ -56,6 +56,8 @@ class Jurisdiction:
     state_house: Area | None
     school_district: Area | None
     congress_label: str                 # e.g. "120th Congressional Districts"
+    lat: float | None = None            # used for Open States people.geo
+    lng: float | None = None
 
     @property
     def jurisdiction_key(self) -> str:
@@ -108,6 +110,8 @@ def parse(payload: dict) -> Jurisdiction:
         state_house=_first(geos, pattern=r"State Legislative Districts - Lower$")[0],
         school_district=_first(geos, pattern=r"School Districts$")[0],
         congress_label=cd_label,
+        lat=(m.get("coordinates") or {}).get("y"),
+        lng=(m.get("coordinates") or {}).get("x"),
     )
 
 

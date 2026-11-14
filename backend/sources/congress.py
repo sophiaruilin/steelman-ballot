@@ -14,6 +14,7 @@ from datetime import date
 import httpx
 
 from backend import config
+from backend.sources.filters import is_ceremonial
 from backend.sources.http import SourceClient, SourceError, SourceRecord, now_iso
 
 BASE = "https://api.congress.gov/v3"
@@ -83,10 +84,13 @@ class Congress:
         key = "sponsoredLegislation" if kind == "sponsored" else "cosponsoredLegislation"
         raw = self.http.get_json(f"{BASE}/member/{bioguide_id}/{kind}-legislation",
                                  {"format": "json", "limit": 50}).get(key, [])
-        rows = []
+        rows, ceremonial = [], 0
         for b in raw:
             if not b.get("title") or not b.get("type") or not b.get("number"):
                 continue  # amendments have no title/type
+            if is_ceremonial(b["title"]):
+                ceremonial += 1
+                continue
             la = b.get("latestAction") or {}
             rows.append({
                 "congress": b.get("congress"),
@@ -101,7 +105,8 @@ class Congress:
         rows.sort(key=lambda r: r["introduced"] or "", reverse=True)
         rows = rows[:limit]
         return SourceRecord("congress", member_url(bioguide_id), now_iso(),
-                            {"bioguide_id": bioguide_id, "kind": kind, "bills": rows})
+                            {"bioguide_id": bioguide_id, "kind": kind, "bills": rows,
+                             "ceremonial_skipped": ceremonial})
 
     def close(self):
         self.http.close()
