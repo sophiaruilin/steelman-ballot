@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Steelman Ballot: get in the know before you vote</title>
+  <meta name="description" content="Everything on your ballot in plain English: what would change, and the strongest case for every side, with sources. We never tell you how to vote.">
+  <meta name="theme-color" content="#1d4f5c">
+  <meta property="og:title" content="Steelman Ballot">
+  <meta property="og:description" content="Get informed: the strongest case for every side. What would change, with sources.">
+  <meta property="og:type" content="website">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icon.svg">
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Steelman Ballot home"><img src="/icon.svg" alt="" width="28" height="28"> Steelman Ballot</a>
+      <p class="tagline">Get in the know before you vote. <span>All the facts. All the sides. Your decision.</span></p>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <section id="lookup" class="panel">
+      <form id="address-form" autocomplete="street-address">
+        <label for="address">Your home address</label>
+        <div class="row">
+          <input id="address" name="address" type="text" inputmode="text" placeholder="Street, city, state ZIP" minlength="5" maxlength="200" required>
+          <button type="submit" class="btn">See my ballot</button>
+        </div>
+        <p class="hint">Used only to find your districts. Never stored. <button type="button" class="linkish" id="example">Try a Sacramento, CA example</button></p>
+      </form>
+      <fieldset class="priorities">
+        <legend>What matters most to you? <span class="muted">(changes the order only, never the content)</span></legend>
+        <div id="chips" class="chips"></div>
+      </fieldset>
+    </section>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+
+    <section id="ballot" hidden>
+      <div class="panel summary" id="summary"></div>
+      <h2 class="section-title">Measures</h2>
+      <ul id="measures" class="list"></ul>
+      <h2 class="section-title">Races</h2>
+      <ul id="races" class="list"></ul>
+    </section>
+
+    <section id="detail" hidden></section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <p><b>We never tell you how to vote.</b> Not affiliated with any campaign, party or government. Every claim links to its source; official election offices always win when sources disagree.</p>
+      <p class="muted">Steelman Ballot · <a href="https://github.com/sophiaruilin/steelman-ballot/issues" rel="noopener noreferrer" target="_blank">Report an issue</a> · <a href="https://github.com/sophiaruilin/steelman-ballot" rel="noopener noreferrer" target="_blank">How it works</a></p>
+    </div>
+  </footer>
+  <script src="/app.js" defer></script>
+</body>
+</html>

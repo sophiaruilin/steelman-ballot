@@ -45,7 +45,14 @@ copy .env.example .env            # macOS/Linux: cp .env.example .env
 | `CENSUS_API_KEY` | ACS local demographics | Free |
 | `VOTESMART_API_KEY` | Voting records and ratings (optional) | Free on request |
 
-## Try it
+## Run the web app
+```bash
+python -m uvicorn backend.app:app --port 8020     # then open http://localhost:8020
+```
+Mobile-first and installable (Add to Home Screen); works inside WhatsApp and WeChat browsers; the last ballot
+and opened cards stay readable offline. `SNAPSHOT_ONLY=1` (default) serves only researched cards and never calls a model.
+
+## Try the agents
 ```bash
 python -m backend.agents.ballot_mapper "1315 10th St, Sacramento, CA 95814"
 python -m backend.pipeline CA 3                    # Analyst + Critic -> output/cards/CA-2026-11-03-prop-3.json
@@ -81,6 +88,8 @@ steelman-ballot/
 │   │                      congress + openstates (Did), http (allowlisted client),
 │   │                      filters, web (safe page reader), replay (test tapes)
 │   └── prompts/           system prompts for each agent
+├── backend/app.py         web API: ballot, cards, share text, QR, share pages (Open Graph)
+├── frontend/              mobile-first web app (plain HTML/CSS/JS, no CDNs), PWA + offline
 ├── tests/                 offline tests + saved API responses
 ├── data/                  demo snapshots (runtime cache is git-ignored)
 ├── output/                evaluation results, report assets

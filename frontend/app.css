@@ -1,0 +1,111 @@
+/* Steelman Ballot: mobile-first, system fonts, no external assets.
+   Neutral palette on purpose: Yes and No share the same colors (no party red/blue). */
+:root {
+  --ink: #1f2933; --muted: #5f6b7a; --line: #d8dee6; --bg: #f6f7f9; --card: #fff;
+  --brand: #1d4f5c; --brand-ink: #fff; --accent: #e8f1f3; --warn: #8a5a00; --warn-bg: #fff6e0;
+  --ok: #24624a; --ok-bg: #e5f3ec; --radius: 14px;
+  --side-a: #f1f3f8; --side-b: #f1f3f8;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "PingFang SC",
+       "Microsoft YaHei", sans-serif; color: var(--ink); background: var(--bg); }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+a { color: var(--brand); }
+.muted { color: var(--muted); font-weight: normal; }
+
+/* header */
+.top { background: var(--brand); color: var(--brand-ink); padding: 14px 0 12px; padding-top: max(14px, env(safe-area-inset-top)); }
+.brand { display: inline-flex; gap: 8px; align-items: center; color: inherit; text-decoration: none; font-weight: 700; font-size: 1.15rem; }
+.tagline { margin: 4px 0 0; font-size: .95rem; opacity: .95; }
+.tagline span { display: block; opacity: .85; font-size: .88rem; }
+
+/* panels and forms */
+.panel { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; margin: 16px 0; }
+label { font-weight: 600; display: block; margin-bottom: 6px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; }
+input[type=text] { flex: 1 1 240px; min-height: 48px; font-size: 17px; padding: 10px 12px; border: 1px solid #b8c2cc; border-radius: 10px; }
+.btn { min-height: 48px; padding: 10px 18px; font-size: 1rem; font-weight: 600; border: 0; border-radius: 10px;
+       background: var(--brand); color: var(--brand-ink); cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
+.btn.secondary { background: var(--accent); color: var(--brand); }
+.btn:focus-visible, button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid #f0b429; outline-offset: 2px; }
+.linkish { background: none; border: 0; padding: 0; color: var(--brand); text-decoration: underline; font: inherit; cursor: pointer; }
+.hint { font-size: .9rem; color: var(--muted); margin: 8px 0 0; }
+.priorities { border: 0; padding: 0; margin: 14px 0 0; }
+.priorities legend { font-weight: 600; margin-bottom: 8px; padding: 0; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { min-height: 40px; padding: 6px 14px; border-radius: 999px; border: 1px solid #b8c2cc; background: #fff; font: inherit; font-size: .95rem; cursor: pointer; }
+.chip[aria-pressed=true] { background: var(--brand); color: #fff; border-color: var(--brand); }
+.status { min-height: 1.2em; margin: 4px 0; font-weight: 600; }
+
+/* ballot summary and lists */
+.summary h2 { margin: 0 0 6px; font-size: 1.2rem; }
+.stats { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 8px 0; }
+.stats b { font-size: 1.3rem; }
+.districts, .coverage { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; padding: 0; list-style: none; }
+.pill { font-size: .82rem; background: var(--accent); color: var(--brand); border-radius: 999px; padding: 3px 10px; }
+.pill.ok { background: var(--ok-bg); color: var(--ok); }
+.pill.warn { background: var(--warn-bg); color: var(--warn); }
+.notice { background: var(--warn-bg); color: #5c3d00; border-radius: 10px; padding: 10px 12px; font-size: .92rem; margin: 10px 0 0; }
+.section-title { font-size: 1.1rem; margin: 22px 0 8px; }
+.list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.item { display: block; width: 100%; text-align: left; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+        padding: 14px 16px; font: inherit; color: inherit; cursor: pointer; }
+.item:hover { border-color: var(--brand); }
+.item .num { font-weight: 700; color: var(--brand); }
+.item .ttl { font-weight: 600; display: block; margin: 2px 0 6px; }
+.item .meta { display: flex; flex-wrap: wrap; gap: 6px; font-size: .85rem; color: var(--muted); align-items: center; }
+.item.disabled { cursor: default; opacity: .75; }
+
+/* card detail */
+.back { margin: 14px 0 0; }
+.card h1 { font-size: 1.45rem; line-height: 1.25; margin: 6px 0; }
+.official { font-size: .85rem; color: var(--muted); margin: 0 0 8px; }
+.badges { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+.yesno { display: grid; gap: 8px; margin: 12px 0; }
+.yesno p { margin: 0; padding: 10px 12px; background: var(--bg); border-radius: 10px; }
+h3 { font-size: 1.05rem; margin: 20px 0 8px; }
+
+/* What changes: table on wide screens, stacked rows on phones */
+.changes { display: grid; gap: 8px; }
+.change { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.change .topic { background: var(--accent); color: var(--brand); font-weight: 700; padding: 8px 12px; font-size: .95rem; }
+.change .cols { display: grid; grid-template-columns: 1fr; }
+.change .col { padding: 8px 12px; }
+.change .col + .col { border-top: 1px dashed var(--line); }
+.change .lbl { display: block; font-size: .75rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+@media (min-width: 620px) {
+  .change .cols { grid-template-columns: 1fr 1fr; }
+  .change .col + .col { border-top: 0; border-left: 1px dashed var(--line); }
+}
+
+/* the two sides: identical styling */
+.sides { display: grid; gap: 12px; margin: 8px 0; }
+@media (min-width: 680px) { .sides { grid-template-columns: 1fr 1fr; } }
+.side { background: var(--side-a); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; }
+.side h4 { margin: 0 0 6px; font-size: .9rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+.side .headline { font-size: 1.08rem; font-weight: 600; margin: 0 0 8px; }
+.side ul { margin: 6px 0 0 1.1em; padding: 0; }
+.side li { margin: 4px 0; }
+.toggle { background: none; border: 1px solid #b8c2cc; border-radius: 8px; min-height: 40px; padding: 6px 12px; font: inherit; font-size: .92rem; cursor: pointer; margin-top: 6px; }
+.more { margin-top: 8px; }
+.tag { display: inline-block; font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; background: #e3e7ed; color: #3e4c59; border-radius: 6px; padding: 1px 6px; margin-right: 4px; vertical-align: 1px; }
+.src { font-size: .82rem; }
+.crux { background: var(--accent); border-radius: 12px; padding: 12px 14px; margin: 14px 0; }
+.evidence { padding-left: 1.1em; }
+.sources { font-size: .85rem; word-break: break-all; padding-left: 1.1em; }
+
+/* share bar */
+.share { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 6px; }
+.qr { text-align: center; margin: 10px 0; }
+.qr img { width: 180px; height: 180px; background: #fff; border-radius: 10px; border: 1px solid var(--line); }
+
+/* candidates */
+.cands { display: grid; gap: 12px; }
+.cand .party { color: var(--muted); font-size: .9rem; }
+
+.foot { border-top: 1px solid var(--line); margin-top: 32px; padding: 16px 0 calc(24px + env(safe-area-inset-bottom)); font-size: .9rem; }
+
+/* shared-link landing page */
+.share-page .brand { color: var(--brand); font-weight: 700; margin-top: 16px; }
+.share-page h1 { font-size: 1.4rem; }

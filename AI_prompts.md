@@ -67,3 +67,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 **Prompt (my own words):** "before you push wha would it take to 95%+? or another best practice percentage to reach?"
 **Follow-up prompt:** "i dont want to get into motivations or claims about donors, but rather, focus on what the change is from current state to proposed future state - what do you recommend to focus more on that?", then "is it possible to just list one key point for steelman argument rather than 3+ points, or what is best practice here", then "anything else to complete sa well before moving forward?" and "yes"
 **What was lacking before:** Cards didn't show today vs. if-it-passes side by side, led with several points instead of one clear headline per side, sometimes carried arguments about motives or donors, had no reading-level check, and were scored by a single grading pass.
+
+## Step 14: Dashboard (mobile-first web app)
+**Prompt (my own words):** "Build dashboard meanwhile" (while the class Portkey key was at its usage limit)
+**What was lacking before:** The cards existed only as JSON files. There was no way for a voter to enter an address, see their ballot, read the cards on a phone, or share a card in WhatsApp or WeChat.
