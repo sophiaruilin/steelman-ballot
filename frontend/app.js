@@ -4,12 +4,11 @@
 
 const $ = (sel) => document.querySelector(sel);
 const SVGNS = "http://www.w3.org/2000/svg";
-const TOPICS = ["Housing", "Taxes", "Schools", "Health care", "Elections", "Environment", "Public safety", "State budget"];
 const store = {
   get: (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } },
   set: (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* private mode */ } },
 };
-let state = { ballot: store.get("sb.ballot", null), priorities: store.get("sb.priorities", []) };
+let state = { ballot: store.get("sb.ballot", null) };
 
 function el(tag, attrs = {}, ...kids) {
   const n = document.createElement(tag);
@@ -47,8 +46,8 @@ async function api(path) {
 }
 
 // ---- the balance mark (same for every card: neither side is favored) ----------------------
-function scaleIcon() {
-  return svg("svg", { viewBox: "0 0 48 48", "aria-hidden": "true", fill: "none", stroke: "#234742", "stroke-width": "1.6", "stroke-linecap": "round", "stroke-linejoin": "round" },
+function scaleIcon(cls = "") {
+  return svg("svg", { viewBox: "0 0 48 48", "aria-hidden": "true", class: cls, fill: "none", stroke: "#234742", "stroke-width": "1.6", "stroke-linecap": "round", "stroke-linejoin": "round" },
     svg("path", { d: "M24 8v30M16 40h16M8 14h32" }),
     svg("circle", { cx: "24", cy: "8", r: "2", fill: "#AD7857", stroke: "none" }),
     svg("path", { d: "M8 14l-5 10h10zM40 14l-5 10h10z" }),
@@ -88,20 +87,6 @@ async function renderMap() {
   $("#map-caption").textContent = Object.entries(covered).map(([k, v]) => `${STATE_NAMES[k] || k}: ${v}`).join(" · ");
 }
 
-// ---- priorities (order only) -----------------------------------------------------------------
-function renderChips() {
-  $("#chips").replaceChildren(...TOPICS.map((t) => el("button", {
-    type: "button", class: "chip", "aria-pressed": String(state.priorities.includes(t)),
-    onclick: () => {
-      state.priorities = state.priorities.includes(t) ? state.priorities.filter((x) => x !== t) : [...state.priorities, t];
-      store.set("sb.priorities", state.priorities);
-      renderChips();
-      if (state.ballot) renderBallot();
-    },
-  }, t)));
-}
-const priorityScore = (m) => (m.topics || []).filter((t) => state.priorities.includes(t)).length;
-
 // ---- ballot ------------------------------------------------------------------------------------
 async function lookup(address) {
   status("Finding your districts and ballot…");
@@ -140,7 +125,7 @@ function renderBallot() {
     el("p", { class: "notice" }, b.coverage_note || ""),
     b.election_passed ? el("p", { class: "notice" }, `Look-back: this is the ${b.election} ballot as it stood before the vote. No results are shown.`) : null,
     el("p", { class: "notice" }, b.note, " ", b.official_links.map((l) => [extLink(l.url, l.label), " "])));
-  const measures = [...b.measures].sort((a, c) => priorityScore(c) - priorityScore(a));
+  const measures = b.measures;   // official ballot order
   $("#measures").replaceChildren(...(measures.length ? measures.map((m) => el("li", {}, listItem(m)))
     : [el("li", { class: "muted item disabled" }, el("span", {}), el("span", {}, "No ballot measures on your ballot in our sources."))]));
   $("#races").replaceChildren(...b.races.map((r) => el("li", {}, raceItem(r))));
@@ -151,13 +136,11 @@ function listItem(m) {
     return el("div", { class: "item disabled" }, el("span", { class: "num" }, m.number),
       el("span", { class: "ttl" }, m.official_title), el("span", { class: "meta" }, "Research pending", m.scope && m.scope !== "statewide" ? el("span", { class: "pill" }, m.scope) : null));
   }
-  const matched = (m.topics || []).filter((t) => state.priorities.includes(t));
   return el("button", { class: "item", onclick: () => go(`card=${m.id}`) },
     el("span", { class: "num" }, m.number), el("span", { class: "ttl" }, m.plain_title),
     el("span", { class: "meta" }, `${m.reading_minutes} min read`,
       m.verified ? el("span", { class: "pill ok" }, "Both sides checked") : el("span", { class: "pill warn" }, "Steelman unverified"),
-      m.scope && m.scope !== "statewide" ? el("span", { class: "pill" }, m.scope) : null,
-      matched.map((t) => el("span", { class: "pill" }, t))));
+      m.scope && m.scope !== "statewide" ? el("span", { class: "pill" }, m.scope) : null));
 }
 
 function raceItem(r) {
@@ -209,63 +192,82 @@ function claimLi(c) {
     el("span", { class: "src" }, "[", extLink(c.source_url, "source"), "]"));
 }
 
-function side(kind, s) {
-  const reasoning = el("div", { class: "reasoning", hidden: true },
+function reasoningPanel(kind, s) {
+  return el("section", { class: "reasoning", hidden: true, "aria-label": `Reasoning: the case ${kind}` },
+    el("p", { class: "label" }, `The reasoning · the case ${kind}`),
+    el("p", { class: "headline-lg" }, s.headline),
+    s.basis === "no_organized_side" ? el("p", { class: "basis" }, "No official argument was submitted for this side; this case comes from the official analysis.") : null,
     s.more_reasons.length ? [el("h4", {}, "More reasons"), el("ul", {}, s.more_reasons.map((r) => el("li", {}, r)))] : null,
     el("h4", {}, "Evidence they point to"), el("ul", {}, s.best_evidence.map(claimLi)),
     el("h4", {}, "Who it helps, in their view"), el("p", {}, s.who_it_helps),
     el("h4", {}, "Their answer to the other side"), el("p", {}, s.answer_to_other_side));
+}
+
+function side(kind, s, panel) {
   const btn = el("button", { class: "explore", "aria-expanded": "false", onclick: () => {
-    reasoning.hidden = !reasoning.hidden;
-    btn.setAttribute("aria-expanded", String(!reasoning.hidden));
-    btn.textContent = reasoning.hidden ? "Explore reasoning →" : "Close reasoning ↑";
+    panel.hidden = !panel.hidden;
+    btn.setAttribute("aria-expanded", String(!panel.hidden));
+    btn.textContent = panel.hidden ? "Explore reasoning →" : "Close reasoning ↑";
+    if (!panel.hidden) panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
   } }, "Explore reasoning →");
   return el("section", { class: "side", "aria-label": `The strongest case ${kind}` },
     el("p", { class: "label" }, `The strongest case ${kind}`),
     el("p", { class: "values" }, sentence(s.values) || s.headline),
-    s.basis === "no_organized_side" ? el("p", { class: "basis" }, "No official argument was submitted for this side; this case comes from the official analysis.") : null,
     el("p", { class: "headline" }, s.headline),
-    btn, reasoning);
+    btn);
 }
 
 function measureCard(rec) {
   const c = rec.card;
   const yesFirst = (parseInt((c.number.match(/\d+/) || ["0"])[0], 10) % 2) === 1;   // alternate the order by number
-  const a = side("for", c.steelman_yes), b = side("against", c.steelman_no);
-  const balance = el("div", { class: "balance" }, yesFirst ? a : b, el("div", { class: "fulcrum" }, scaleIcon()), yesFirst ? b : a);
+  const pFor = reasoningPanel("for", c.steelman_yes), pAgainst = reasoningPanel("against", c.steelman_no);
+  const sFor = side("for", c.steelman_yes, pFor), sAgainst = side("against", c.steelman_no, pAgainst);
+  const [left, right] = yesFirst ? [sFor, sAgainst] : [sAgainst, sFor];
+  const vote = (word, text) => el("div", { class: "vote" },
+    el("p", { class: "vote-h" }, scaleIcon("mini"), `A ${word} vote means`), el("p", {}, text));
+  const [vLeft, vRight] = yesFirst
+    ? [vote("yes", c.yes_means), vote("no", c.no_means)] : [vote("no", c.no_means), vote("yes", c.yes_means)];
+
   return el("article", {},
     el("header", { class: "card-head" },
       el("p", { class: "eyebrow" }, c.number),
       el("h1", {}, c.plain_title),
-      el("p", { class: "official" }, "Official title: ", c.official_title, c.title_disputed ? " · title challenged" : ""),
       el("ul", { class: "pills" },
         el("li", { class: `pill ${rec.steelman_verified ? "ok" : "warn"}` }, rec.steelman_verified ? "Both sides checked by our fairness review" : "Steelman unverified: our fairness review still had notes"),
-        el("li", { class: "pill" }, `${c.reading_minutes} min read`),
-        el("li", { class: "pill" }, `Placed on ballot by: ${c.put_on_ballot_by}`))),
-    el("div", { class: "yesno" },
-      el("p", {}, el("b", {}, "A yes vote means"), c.yes_means),
-      el("p", {}, el("b", {}, "A no vote means"), c.no_means)),
-    el("h2", {}, "What would change"),
-    el("div", { class: "changes" },
-      el("div", { class: "changes-head" }, el("span", {}, ""), el("span", {}, "Today"), el("span", {}, "If it passes")),
-      c.what_changes.map((r) => el("div", { class: "change" },
-        el("div", { class: "topic" }, r.topic),
-        el("div", {}, el("span", { class: "lbl" }, "Today"), r.today),
-        el("div", {}, el("span", { class: "lbl" }, "If it passes"), r.if_passes,
-          r.label === "prediction" ? el("span", { class: "muted" }, ` (estimate: ${r.whose || "unattributed"})`) : null, " ",
-          el("span", { class: "src" }, "[", extLink(r.source_url, "source"), "]"))))),
-    el("h2", {}, "Each side, at its strongest"),
-    balance,
-    el("p", { class: "muted" }, "Order alternates from measure to measure. Same space, same structure, same colors for both sides."),
-    el("div", { class: "crux" }, el("b", {}, `Where they really disagree · ${c.crux.kind}`), c.crux.text),
-    el("h2", {}, "What the evidence says"),
-    el("ul", { class: "evidence" }, [c.fiscal_impact, ...c.evidence].filter(Boolean).map(claimLi)),
-    el("h3", {}, "Who is affected"),
-    el("ul", { class: "affected" }, c.who_is_affected.map((w) => el("li", {}, w))),
-    shareBar(c.measure_id),
-    el("h3", {}, "Sources"),
-    el("ul", { class: "sources" }, (rec.sources || []).map((u) => el("li", {}, extLink(u, u)))),
-    el("p", { class: "muted" }, "We never tell you how to vote."));
+        el("li", { class: "pill" }, `${c.reading_minutes} min read`))),
+
+    // 1. The headline takeaway: each side at its strongest, side by side
+    el("h2", { class: "sr-heading" }, "Each side, at its strongest"),
+    el("div", { class: "balance" }, left, el("div", { class: "fulcrum" }, scaleIcon()), right),
+    yesFirst ? [pFor, pAgainst] : [pAgainst, pFor],
+    el("p", { class: "more-below" }, el("a", { href: "#details", onclick: (e) => { e.preventDefault(); $("#details").scrollIntoView({ behavior: "smooth" }); } },
+      "What a yes or no vote does, what would change, and the evidence ↓")),
+
+    // 2. Details, for anyone who wants to go deeper
+    el("div", { id: "details" },
+      el("div", { class: "votes" }, vLeft, el("div", { class: "fulcrum thin" }, scaleIcon("mini")), vRight),
+      el("h2", {}, "What would change"),
+      el("div", { class: "changes" },
+        el("div", { class: "changes-head" }, el("span", {}, "Today"), el("span", {}, ""), el("span", {}, "If it passes")),
+        c.what_changes.map((r) => el("div", { class: "change" },
+          el("div", { class: "topic" }, r.topic),
+          el("div", { class: "flow" },
+            el("div", { class: "now" }, el("span", { class: "lbl" }, "Today"), r.today),
+            el("div", { class: "arrow", "aria-hidden": "true" }, "→"),
+            el("div", { class: "then" }, el("span", { class: "lbl" }, "If it passes"), r.if_passes,
+              r.label === "prediction" ? el("span", { class: "muted" }, ` (estimate: ${r.whose || "unattributed"})`) : null, " ",
+              el("span", { class: "src" }, "[", extLink(r.source_url, "source"), "]")))))),
+      el("div", { class: "crux" }, el("b", {}, `Where they really disagree · ${c.crux.kind}`), c.crux.text),
+      el("h2", {}, "What the evidence says"),
+      el("ul", { class: "evidence" }, [c.fiscal_impact, ...c.evidence].filter(Boolean).map(claimLi)),
+      el("h3", {}, "Who is affected"),
+      el("ul", { class: "affected" }, c.who_is_affected.map((w) => el("li", {}, w))),
+      el("p", { class: "official" }, "Official title: ", c.official_title, c.title_disputed ? " · title challenged" : "",
+        ` · Placed on ballot by: ${c.put_on_ballot_by}`),
+      shareBar(c.measure_id),
+      el("h3", {}, "Sources"),
+      el("ul", { class: "sources" }, (rec.sources || []).map((u) => el("li", {}, extLink(u, u)))),
+      el("p", { class: "muted" }, "Order alternates from measure to measure. Same space, same structure, same colors for both sides. We never tell you how to vote.")));
 }
 
 // ---- race card ------------------------------------------------------------------------------------
@@ -315,7 +317,6 @@ $("#address-form").addEventListener("submit", (e) => { e.preventDefault(); looku
 document.querySelectorAll("[data-example]").forEach((b) => b.addEventListener("click", () => {
   $("#address").value = b.dataset.example; lookup(b.dataset.example);
 }));
-renderChips();
 renderMap();
 route();
 if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js").catch(() => {});
