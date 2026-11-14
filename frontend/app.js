@@ -8,7 +8,32 @@ const store = {
   get: (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } },
   set: (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* private mode */ } },
 };
-let state = { ballot: store.get("sb.ballot", null) };
+let state = { ballot: store.get("sb.ballot", null), lang: store.get("sb.lang", null) || guessLang() };
+
+// ---- language (English, Spanish, Simplified Chinese) -------------------------------------
+function guessLang() {
+  const l = (navigator.language || "en").toLowerCase();
+  return l.startsWith("es") ? "es" : l.startsWith("zh") ? "zh" : "en";
+}
+function t(key, vars = {}) {
+  const dict = (window.I18N || {})[state.lang] || {};
+  let s = dict[key] ?? (window.I18N?.en || {})[key] ?? key;
+  for (const [k, v] of Object.entries(vars)) s = s.replace(`{${k}}`, v);
+  return s;
+}
+function applyLang() {
+  document.documentElement.lang = { en: "en", es: "es", zh: "zh-Hans" }[state.lang];
+  document.querySelectorAll("[data-i18n]").forEach((n) => { n.textContent = t(n.dataset.i18n); });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((n) => { n.placeholder = t(n.dataset.i18nPlaceholder); });
+  document.querySelectorAll("[data-langblock]").forEach((n) => { n.hidden = n.dataset.langblock !== state.lang; });
+  document.querySelectorAll("[data-setlang]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.setlang === state.lang)));
+}
+function setLang(lang) {
+  state.lang = lang;
+  store.set("sb.lang", lang);
+  applyLang();
+  route();
+}
 
 function el(tag, attrs = {}, ...kids) {
   const n = document.createElement(tag);
@@ -65,19 +90,19 @@ const TILES = {
   OK: [6, 4], LA: [6, 5], MS: [6, 6], AL: [6, 7], GA: [6, 8],
   HI: [7, 0], TX: [7, 4], FL: [7, 9],
 };
-const STATE_NAMES = { CA: "California", MA: "Massachusetts", NY: "New York" };
-const PARTIAL = new Set(["NY"]);   // local measures only (New York City)
+const STATE_NAMES = { CA: "California", MA: "Massachusetts", NY: "New York", CT: "Connecticut" };
 
 async function renderMap() {
-  let covered = {};
-  try { covered = (await api("/api/coverage")).states; } catch { covered = { CA: "", MA: "", NY: "" }; }
+  let covered = {}, kinds = {};
+  try { const cov = await api("/api/coverage"); covered = cov.states; kinds = cov.kinds || {}; }
+  catch { covered = { CA: "", MA: "", NY: "", CT: "" }; kinds = { CA: "full", MA: "full", NY: "part", CT: "checked" }; }
   const S = 46, G = 4;
   const root = svg("svg", { viewBox: `0 0 ${12 * (S + G)} ${8 * (S + G)}`, role: "img", "aria-labelledby": "map-title map-desc" },
     svg("desc", { id: "map-desc" }, `Covered: ${Object.keys(covered).map((k) => STATE_NAMES[k] || k).join(", ")}.`),
     svg("defs", {}, svg("pattern", { id: "hatch", width: "6", height: "6", patternUnits: "userSpaceOnUse", patternTransform: "rotate(45)" },
       svg("rect", { width: "6", height: "6", fill: "#F3E9E1" }), svg("line", { x1: "0", y1: "0", x2: "0", y2: "6", stroke: "#AD7857", "stroke-width": "2.2" }))));
   for (const [st, [r, c]] of Object.entries(TILES)) {
-    const kind = st in covered ? (PARTIAL.has(st) ? "part" : "full") : "";
+    const kind = st in covered ? (kinds[st] || "full") : "";
     const g = svg("g", {}, svg("title", {}, st in covered ? `${STATE_NAMES[st] || st}: ${covered[st]}` : `${st}: coming later`));
     g.append(svg("rect", { x: c * (S + G), y: r * (S + G), width: S, height: S, rx: 2, class: `tile ${kind}` }));
     g.append(svg("text", { x: c * (S + G) + S / 2, y: r * (S + G) + S / 2, class: kind ? `lbl-${kind}` : "" }, st));
@@ -89,7 +114,7 @@ async function renderMap() {
 
 // ---- ballot ------------------------------------------------------------------------------------
 async function lookup(address) {
-  status("Finding your districts and ballot…");
+  status(t("status.finding"));
   try {
     const b = await api(`/api/ballot?address=${encodeURIComponent(address)}`);
     state.ballot = b;
@@ -104,9 +129,8 @@ async function lookup(address) {
 }
 
 function coveragePill(name, v) {
-  const map = { official: ["ok", "from the official guide"], partial: ["", "partial"], not_mapped: ["warn", "not covered yet"],
-                none_on_ballot: ["ok", "none on your ballot"], unavailable: ["warn", "temporarily unavailable"] };
-  const [cls, txt] = map[v] || ["", v];
+  const cls = { official: "ok", none_on_ballot: "ok", not_mapped: "warn", unavailable: "warn" }[v] || "";
+  const txt = t(`cov.${v}`);
   return el("li", { class: `pill ${cls}` }, `${name}: ${txt}`);
 }
 
@@ -114,37 +138,37 @@ function renderBallot() {
   const b = state.ballot;
   const ready = b.measures.filter((m) => m.status === "ready").length + b.races.filter((r) => r.status === "ready").length;
   $("#summary").replaceChildren(
-    el("p", { class: "eyebrow" }, `${b.state} · Election of ${b.election}`),
-    el("h2", {}, "Your ballot in 60 seconds"),
+    el("p", { class: "eyebrow" }, `${b.state} · ${t("ballot.election")} ${b.election}`),
+    el("h2", {}, t("ballot.title")),
     el("div", { class: "stats" },
-      el("span", {}, el("b", {}, b.measures.length), "ballot measures"),
-      el("span", {}, el("b", {}, b.races.length), "races"),
-      el("span", {}, el("b", {}, b.minutes_to_read), `minutes to read the ${ready} ready cards`)),
+      el("span", {}, el("b", {}, b.measures.length), t("ballot.measures")),
+      el("span", {}, el("b", {}, b.races.length), t("ballot.races")),
+      el("span", {}, el("b", {}, b.minutes_to_read), t("ballot.minutes", { n: ready }))),
     el("ul", { class: "pills", "aria-label": "Your districts" }, Object.entries(b.districts).map(([k, v]) => el("li", { class: "pill" }, `${k}: ${v}`))),
     el("ul", { class: "pills", "aria-label": "Coverage" }, Object.entries(b.coverage).map(([k, v]) => coveragePill(k, v))),
     el("p", { class: "notice" }, b.coverage_note || ""),
-    b.election_passed ? el("p", { class: "notice" }, `Look-back: this is the ${b.election} ballot as it stood before the vote. No results are shown.`) : null,
+    b.election_passed ? el("p", { class: "notice" }, t("ballot.lookback", { d: b.election })) : null,
     el("p", { class: "notice" }, b.note, " ", b.official_links.map((l) => [extLink(l.url, l.label), " "])));
   const measures = b.measures;   // official ballot order
   $("#measures").replaceChildren(...(measures.length ? measures.map((m) => el("li", {}, listItem(m)))
-    : [el("li", { class: "muted item disabled" }, el("span", {}), el("span", {}, "No ballot measures on your ballot in our sources."))]));
+    : [el("li", { class: "muted item disabled" }, el("span", {}), el("span", {}, t("ballot.none")))]));
   $("#races").replaceChildren(...b.races.map((r) => el("li", {}, raceItem(r))));
 }
 
 function listItem(m) {
   if (m.status !== "ready") {
     return el("div", { class: "item disabled" }, el("span", { class: "num" }, m.number),
-      el("span", { class: "ttl" }, m.official_title), el("span", { class: "meta" }, "Research pending", m.scope && m.scope !== "statewide" ? el("span", { class: "pill" }, m.scope) : null));
+      el("span", { class: "ttl" }, m.official_title), el("span", { class: "meta" }, t("item.pending"), m.scope && m.scope !== "statewide" ? el("span", { class: "pill" }, m.scope) : null));
   }
   return el("button", { class: "item", onclick: () => go(`card=${m.id}`) },
     el("span", { class: "num" }, m.number), el("span", { class: "ttl" }, m.plain_title),
-    el("span", { class: "meta" }, `${m.reading_minutes} min read`,
-      m.verified ? el("span", { class: "pill ok" }, "Both sides checked") : el("span", { class: "pill warn" }, "Steelman unverified"),
+    el("span", { class: "meta" }, `${m.reading_minutes} ${t("item.read")}`,
+      m.verified ? el("span", { class: "pill ok" }, t("item.checked")) : el("span", { class: "pill warn" }, t("item.unverified")),
       m.scope && m.scope !== "statewide" ? el("span", { class: "pill" }, m.scope) : null));
 }
 
 function raceItem(r) {
-  const label = { not_researched: "Research pending", check_official_ballot: "May not be on your ballot: check your official sample ballot" }[r.status];
+  const label = { not_researched: t("item.pending"), check_official_ballot: t("item.maybe") }[r.status];
   if (r.status !== "ready" || !r.id) {
     return el("div", { class: "item disabled" }, el("span", { class: "num" }, r.level), el("span", { class: "ttl" }, r.office), el("span", { class: "meta" }, label));
   }
@@ -174,44 +198,44 @@ async function route() {
   }
   show("card");
   const box = $("#view-card");
-  box.replaceChildren(el("p", { class: "status" }, "Loading…"));
+  box.replaceChildren(el("p", { class: "status" }, t("status.loading")));
   try {
-    const rec = await api(`/api/card/${encodeURIComponent(id)}`);
+    const rec = await api(`/api/card/${encodeURIComponent(id)}?lang=${state.lang}`);
     box.replaceChildren(backButton(), "steelman_yes" in rec.card ? measureCard(rec) : raceCard(rec));
   } catch (e) {
     box.replaceChildren(backButton(), el("p", { class: "status" }, e.message));
   }
   window.scrollTo(0, 0);
 }
-const backButton = () => el("p", { class: "back" }, el("button", { class: "btn ghost", onclick: () => go("") }, "← Back to my ballot"));
+const backButton = () => el("p", { class: "back" }, el("button", { class: "btn ghost", onclick: () => go("") }, t("card.back")));
 
 // ---- measure card ---------------------------------------------------------------------------------
 function claimLi(c) {
   return el("li", {}, el("span", { class: "tag" }, c.label), c.text,
     c.whose ? el("span", { class: "muted" }, ` (${c.whose})`) : null, " ",
-    el("span", { class: "src" }, "[", extLink(c.source_url, "source"), "]"));
+    el("span", { class: "src" }, "[", extLink(c.source_url, t("card.source")), "]"));
 }
 
 function reasoningPanel(kind, s) {
   return el("section", { class: "reasoning", hidden: true, "aria-label": `Reasoning: the case ${kind}` },
-    el("p", { class: "label" }, `The reasoning · the case ${kind}`),
+    el("p", { class: "label" }, `${t("card.reasoning")} · ${t(kind === "for" ? "card.for" : "card.against")}`),
     el("p", { class: "headline-lg" }, s.headline),
-    s.basis === "no_organized_side" ? el("p", { class: "basis" }, "No official argument was submitted for this side; this case comes from the official analysis.") : null,
-    s.more_reasons.length ? [el("h4", {}, "More reasons"), el("ul", {}, s.more_reasons.map((r) => el("li", {}, r)))] : null,
-    el("h4", {}, "Evidence they point to"), el("ul", {}, s.best_evidence.map(claimLi)),
-    el("h4", {}, "Who it helps, in their view"), el("p", {}, s.who_it_helps),
-    el("h4", {}, "Their answer to the other side"), el("p", {}, s.answer_to_other_side));
+    s.basis === "no_organized_side" ? el("p", { class: "basis" }, t("card.nobasis")) : null,
+    s.more_reasons.length ? [el("h4", {}, t("card.more")), el("ul", {}, s.more_reasons.map((r) => el("li", {}, r)))] : null,
+    el("h4", {}, t("card.evidence")), el("ul", {}, s.best_evidence.map(claimLi)),
+    el("h4", {}, t("card.helps")), el("p", {}, s.who_it_helps),
+    el("h4", {}, t("card.answer")), el("p", {}, s.answer_to_other_side));
 }
 
 function side(kind, s, panel) {
   const btn = el("button", { class: "explore", "aria-expanded": "false", onclick: () => {
     panel.hidden = !panel.hidden;
     btn.setAttribute("aria-expanded", String(!panel.hidden));
-    btn.textContent = panel.hidden ? "Explore reasoning →" : "Close reasoning ↑";
+    btn.textContent = panel.hidden ? t("card.explore") : t("card.close");
     if (!panel.hidden) panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
-  } }, "Explore reasoning →");
-  return el("section", { class: "side", "aria-label": `The strongest case ${kind}` },
-    el("p", { class: "label" }, `The strongest case ${kind} · ${kind === "for" ? "Yes" : "No"}`),
+  } }, t("card.explore"));
+  return el("section", { class: "side", "aria-label": t(kind === "for" ? "card.for" : "card.against") },
+    el("p", { class: "label" }, t(kind === "for" ? "card.for" : "card.against")),
     el("p", { class: "values" }, sentence(s.values) || s.headline),
     el("p", { class: "headline" }, s.headline),
     btn);
@@ -225,7 +249,7 @@ function measureCard(rec) {
   const pFor = reasoningPanel("for", c.steelman_yes), pAgainst = reasoningPanel("against", c.steelman_no);
   const left = side("against", c.steelman_no, pAgainst), right = side("for", c.steelman_yes, pFor);
   const vote = (word, text) => el("div", { class: "vote" },
-    el("p", { class: "vote-h" }, scaleIcon("mini"), `A ${word} vote means`), el("p", {}, text));
+    el("p", { class: "vote-h" }, scaleIcon("mini"), t(word === "yes" ? "card.yes" : "card.no")), el("p", {}, text));
   const vLeft = vote("no", c.no_means), vRight = vote("yes", c.yes_means);
 
   return el("article", {},
@@ -233,59 +257,60 @@ function measureCard(rec) {
       el("p", { class: "eyebrow" }, c.number),
       el("h1", {}, c.plain_title),
       el("ul", { class: "pills" },
-        el("li", { class: `pill ${rec.steelman_verified ? "ok" : "warn"}` }, rec.steelman_verified ? "Both sides checked by our fairness review" : "Steelman unverified: our fairness review still had notes"),
-        el("li", { class: "pill" }, `${c.reading_minutes} min read`))),
+        el("li", { class: `pill ${rec.steelman_verified ? "ok" : "warn"}` }, rec.steelman_verified ? t("card.checked") : t("card.unverified")),
+        el("li", { class: "pill" }, `${c.reading_minutes} ${t("card.min")}`)),
+      state.lang !== "en" ? el("p", { class: "notice" }, rec.lang === state.lang ? t("card.translated") : t("card.notyet")) : null),
 
     // 1. The headline takeaway: each side at its strongest, side by side
-    el("h2", { class: "sr-heading" }, "Each side, at its strongest"),
+    el("h2", { class: "sr-heading" }, t("three.2h")),
     el("div", { class: "balance" }, left, el("div", { class: "fulcrum" }, scaleIcon()), right),
     [pAgainst, pFor],
     el("p", { class: "more-below" }, el("a", { href: "#details", onclick: (e) => { e.preventDefault(); $("#details").scrollIntoView({ behavior: "smooth" }); } },
-      "What a yes or no vote does, what would change, and the evidence ↓")),
+      t("card.below"))),
 
     // 2. Details, for anyone who wants to go deeper
     el("div", { id: "details" },
       el("div", { class: "votes" }, vLeft, el("div", { class: "fulcrum thin" }, scaleIcon("mini")), vRight),
-      el("h2", {}, "What would change"),
+      el("h2", {}, t("card.changes")),
       el("div", { class: "changes" },
-        el("div", { class: "changes-head" }, el("span", {}, "Today · if No wins"), el("span", {}, ""), el("span", {}, "If it passes · if Yes wins")),
+        el("div", { class: "changes-head" }, el("span", {}, t("card.today")), el("span", {}, ""), el("span", {}, t("card.ifpasses"))),
         c.what_changes.map((r) => el("div", { class: "change" },
           el("div", { class: "topic" }, r.topic),
           el("div", { class: "flow" },
-            el("div", { class: "now" }, el("span", { class: "lbl" }, "Today"), r.today),
+            el("div", { class: "now" }, el("span", { class: "lbl" }, t("card.today")), r.today),
             el("div", { class: "arrow", "aria-hidden": "true" }, "→"),
-            el("div", { class: "then" }, el("span", { class: "lbl" }, "If it passes"), r.if_passes,
-              r.label === "prediction" ? el("span", { class: "muted" }, ` (estimate: ${r.whose || "unattributed"})`) : null, " ",
-              el("span", { class: "src" }, "[", extLink(r.source_url, "source"), "]")))))),
-      el("div", { class: "crux" }, el("b", {}, `Where they really disagree · ${c.crux.kind}`), c.crux.text),
-      el("h2", {}, "What the evidence says"),
+            el("div", { class: "then" }, el("span", { class: "lbl" }, t("card.ifpasses")), r.if_passes,
+              r.label === "prediction" ? el("span", { class: "muted" }, ` (${t("card.estimate")}: ${r.whose || "?"})`) : null, " ",
+              el("span", { class: "src" }, "[", extLink(r.source_url, t("card.source")), "]")))))),
+      el("div", { class: "crux" }, el("b", {}, t("card.crux")), c.crux.text),
+      el("h2", {}, t("card.whatevidence")),
       el("ul", { class: "evidence" }, [c.fiscal_impact, ...c.evidence].filter(Boolean).map(claimLi)),
-      el("h3", {}, "Who is affected"),
+      el("h3", {}, t("card.affected")),
       el("ul", { class: "affected" }, c.who_is_affected.map((w) => el("li", {}, w))),
-      el("p", { class: "official" }, "Official title: ", c.official_title, c.title_disputed ? " · title challenged" : "",
-        ` · Placed on ballot by: ${c.put_on_ballot_by}`),
+      el("p", { class: "official" }, `${t("card.official")}: `, c.official_title, c.title_disputed ? " · ⚖" : "",
+        ` · ${t("card.placed")}: ${c.put_on_ballot_by}`),
       shareBar(c.measure_id),
-      el("h3", {}, "Sources"),
+      el("h3", {}, t("card.sources")),
       el("ul", { class: "sources" }, (rec.sources || []).map((u) => el("li", {}, extLink(u, u)))),
-      el("p", { class: "muted" }, "Left column: No. Right column: Yes. Same space, same structure, same colors for both sides. We never tell you how to vote.")));
+      el("p", { class: "muted" }, t("card.rule"))));
 }
 
 // ---- race card ------------------------------------------------------------------------------------
 function raceCard(rec) {
   const c = rec.card;
   return el("article", {},
-    el("header", { class: "card-head" }, el("p", { class: "eyebrow" }, "Race"), el("h1", {}, c.office),
-      el("p", {}, el("b", {}, "What this office does: "), c.what_office_does.text, " ",
-        el("span", { class: "src" }, "[", extLink(c.what_office_does.source_url, "source"), "]")),
+    el("header", { class: "card-head" }, el("p", { class: "eyebrow" }, t("race.label")), el("h1", {}, c.office),
+      el("p", {}, el("b", {}, `${t("race.does")}: `), c.what_office_does.text, " ",
+        el("span", { class: "src" }, "[", extLink(c.what_office_does.source_url, t("card.source")), "]")),
       el("p", { class: "muted" }, rec.ballot_order_note || "Candidates in official ballot order.")),
     el("div", { class: "cands" }, c.candidates.map((p) => el("section", { class: "cand" },
       el("h3", {}, p.name), el("p", { class: "party" }, p.party),
       p.says_basis === "none_found"
-        ? el("p", {}, "No statement submitted to the official voter guide.")
+        ? el("p", {}, t("race.nostatement"))
         : [el("p", { class: "values" }, p.headline || ""), el("p", {}, p.core_case), el("ul", {}, p.says.map(claimLi))],
-      el("p", { class: "muted" }, "Did: no legislative record in our sources · Funded by: state campaign finance not connected yet")))),
-    c.where_they_differ ? el("div", { class: "crux" }, el("b", {}, "Where they differ"), c.where_they_differ.text) : null,
-    el("p", { class: "muted" }, "Statements were written by the candidates and not checked by any official agency. We never tell you how to vote."));
+      el("p", { class: "muted" }, t("race.didfunded"))))),
+    c.where_they_differ ? el("div", { class: "crux" }, el("b", {}, t("race.differ")), c.where_they_differ.text) : null,
+    el("p", { class: "muted" }, t("race.note")));
 }
 
 // ---- sharing (always both sides) --------------------------------------------------------------
@@ -294,21 +319,21 @@ function shareBar(id) {
   const qrBox = el("div", { class: "qr", hidden: true });
   const copy = async (text, msg) => {
     try { await navigator.clipboard.writeText(text); out.textContent = msg; }
-    catch { out.textContent = "Copy didn't work here. Press and hold the text to copy it."; }
+    catch { out.textContent = t("share.copyfail"); }
   };
   const getShare = () => api(`/api/share/${encodeURIComponent(id)}`);
-  return el("section", {}, el("h3", {}, "Share both sides"),
+  return el("section", {}, el("h3", {}, t("share.title")),
     el("div", { class: "share" },
       el("button", { class: "btn", onclick: async () => { const s = await getShare(); location.href = s.whatsapp_link; } }, "WhatsApp"),
       el("button", { class: "btn", onclick: async () => {
-        const s = await getShare(); await copy(s.wechat, "Copied for WeChat: paste it into a chat, or let a friend scan the QR code.");
+        const s = await getShare(); await copy(s.wechat, t("share.wechat_copied"));
         qrBox.replaceChildren(el("img", { src: `/api/qr/${encodeURIComponent(id)}.svg`, alt: "QR code linking to this card" }));
         qrBox.hidden = false;
       } }, "WeChat"),
       navigator.share ? el("button", { class: "btn ghost", onclick: async () => {
         const s = await getShare(); try { await navigator.share({ title: "Steelman Ballot", text: s.plain }); } catch { /* cancelled */ }
-      } }, "More…") : null,
-      el("button", { class: "btn ghost", onclick: async () => { const s = await getShare(); copy(s.url, "Link copied."); } }, "Copy link")),
+      } }, t("share.more")) : null,
+      el("button", { class: "btn ghost", onclick: async () => { const s = await getShare(); copy(s.url, t("share.copied")); } }, t("share.copy"))),
     qrBox, out);
 }
 
@@ -317,6 +342,8 @@ $("#address-form").addEventListener("submit", (e) => { e.preventDefault(); looku
 document.querySelectorAll("[data-example]").forEach((b) => b.addEventListener("click", () => {
   $("#address").value = b.dataset.example; lookup(b.dataset.example);
 }));
+document.querySelectorAll("[data-setlang]").forEach((b) => b.addEventListener("click", () => setLang(b.dataset.setlang)));
+applyLang();
 renderMap();
 route();
 if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js").catch(() => {});

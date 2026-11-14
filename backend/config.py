@@ -41,7 +41,7 @@ PORTKEY_BASE_URL = os.getenv("PORTKEY_BASE_URL", "https://api.portkey.ai/v1").rs
 # ---- Spending guards ------------------------------------------------------
 DAILY_TOKEN_CAP = int(os.getenv("DAILY_TOKEN_CAP", "2000000"))
 BALLOT_TOKEN_BUDGET = int(os.getenv("BALLOT_TOKEN_BUDGET", "250000"))
-MAX_CRITIC_ROUNDS = 2          # a card may be sent back for rewrite at most twice
+MAX_CRITIC_ROUNDS = int(os.getenv("MAX_CRITIC_ROUNDS", "3"))   # rewrites a card may get before the "unverified" badge
 
 # ---- Cache / refresh policy (see cache.py) --------------------------------
 # days-to-election threshold -> (full refresh every N days, change-check every N hours)
@@ -51,15 +51,32 @@ REFRESH_POLICY = [
 ]
 
 
+def llm_provider() -> str:
+    """'openai' (your own key, direct) or 'portkey' (class key). LLM_PROVIDER overrides."""
+    explicit = os.getenv("LLM_PROVIDER", "").strip().lower()
+    if explicit in ("openai", "portkey"):
+        return explicit
+    return "openai" if os.getenv("OPENAI_API_KEY", "").strip() else "portkey"
+
+
 def build_model(model_name: str | None = None):
-    """Model + settings for an agent (Portkey, Responses API, medium reasoning)."""
+    """Model + settings for an agent (OpenAI Responses API, medium reasoning), via your own
+    OpenAI key when OPENAI_API_KEY is set, otherwise via the class Portkey key."""
     from openai import AsyncOpenAI
     from pydantic_ai.models.openai import OpenAIResponsesModel, OpenAIResponsesModelSettings
     from pydantic_ai.providers.openai import OpenAIProvider
 
+    settings = OpenAIResponsesModelSettings(openai_reasoning_effort=REASONING_EFFORT)
+    if llm_provider() == "openai":
+        key = os.getenv("OPENAI_API_KEY", "").strip()
+        if not key:
+            raise RuntimeError("OPENAI_API_KEY is not set (see .env.example).")
+        client = AsyncOpenAI(api_key=key, max_retries=2)
+        return OpenAIResponsesModel(model_name or MODEL_NAME, provider=OpenAIProvider(openai_client=client)), settings
+
     api_key = os.getenv("PORTKEY_API_KEY")
     if not api_key:
-        raise RuntimeError("PORTKEY_API_KEY is not set. Copy .env.example to .env and add your key.")
+        raise RuntimeError("Set OPENAI_API_KEY (your own key) or PORTKEY_API_KEY (class key) in .env.")
     client = AsyncOpenAI(
         api_key="unused",  # Portkey authenticates with the header below
         base_url=PORTKEY_BASE_URL,
@@ -71,5 +88,4 @@ def build_model(model_name: str | None = None):
         },
     )
     model = OpenAIResponsesModel(model_name or MODEL_NAME, provider=OpenAIProvider(openai_client=client))
-    settings = OpenAIResponsesModelSettings(openai_reasoning_effort=REASONING_EFFORT)
     return model, settings

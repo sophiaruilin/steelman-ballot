@@ -149,12 +149,23 @@ def ny_measures(reader: WebReader, election: str, place_geoid: str | None = None
 
 
 STATE_GUIDES = {"CA": ca_measures, "MA": ma_measures}
-LOCAL_GUIDES = {"NY": ny_measures}      # need the voter's city/county to know what's on the ballot
+def ct_measures(reader: WebReader, election: str, place_geoid: str | None = None) -> list[Measure]:
+    # Connecticut has no statewide ballot questions on Nov 3, 2026 (Secretary of the State's 2026
+    # election guide, as reported by Decode the Vote). Town charter questions vary by municipality
+    # and are published by each town clerk; not covered yet.
+    return []
+
+
+LOCAL_GUIDES = {"NY": ny_measures, "CT": ct_measures}   # need the voter's city/town to know what's on the ballot
 COVERED_STATES = {
     "CA": "Statewide propositions and statewide offices",
     "MA": "Statewide ballot questions",
     "NY": "New York City proposals (no statewide proposals in 2026)",
+    "CT": "No statewide questions in 2026; races shown (town charter questions not covered yet)",
 }
+# How each covered state shows on the map: full = statewide measures, part = local measures only,
+# checked = we confirmed there are no statewide measures this election.
+MAP_KIND = {"CA": "full", "MA": "full", "NY": "part", "CT": "checked"}
 
 
 def measures_for(j: Jurisdiction, election: str, reader: WebReader) -> tuple[list[Measure], str]:

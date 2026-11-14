@@ -84,3 +84,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 17: One consistent left/right rule on every card
 **Prompt (my own words):** "is the order logical with strongest case for vs against, yes vote means vs no vote, and today vs if it passes - last section today vs if it psases is basically no to yes vote on right side? what order do you reocmmend for all /modifing anything if you changed anything"
 **What was lacking before:** The two sides and the yes/no boxes alternated by measure number while "Today → If it passes" was fixed, so on odd-numbered measures Yes sat on the left at the top and on the right at the bottom.
+
+## Step 18: Own API key, Connecticut, batch research, Spanish and Chinese
+**Prompt (my own words):** "how to increase my ai access?" then "great. just added my own open ai key. continue the reminaing things to finish. i also want to add connecticut state." and "just added crdits to api"
+**What was lacking before:** The app could only use the class Portkey key (at its limit), there was no way to research many contests at once with a spending cap, Connecticut wasn't covered, and nothing was translated.

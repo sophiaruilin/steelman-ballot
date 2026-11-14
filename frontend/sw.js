@@ -2,7 +2,7 @@
 // with no connection (for example at the polling place). API calls: network first, cache fallback.
 const SHELL = "sb-shell-v2";
 const DATA = "sb-data-v1";
-const SHELL_FILES = ["/", "/app.css", "/app.js", "/icon.svg", "/manifest.webmanifest",
+const SHELL_FILES = ["/", "/app.css", "/app.js", "/i18n.js", "/icon.svg", "/manifest.webmanifest",
   "/fonts/eb-garamond-latin-500-normal.woff2", "/fonts/ibm-plex-sans-latin-400-normal.woff2"];
 
 self.addEventListener("install", (e) => {

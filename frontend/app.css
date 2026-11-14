@@ -49,6 +49,9 @@ h3 { font-size: 1.3rem; margin: 1.2em 0 .4em; }
 .nav { display: flex; gap: 4px 18px; flex-wrap: wrap; font-size: .9rem; }
 .nav a { text-decoration: none; color: var(--graphite); padding: 6px 0; border-bottom: 1px solid transparent; }
 .nav a[aria-current=page], .nav a:hover { color: var(--verdigris); border-bottom-color: var(--copper); }
+.langs { display: flex; gap: 2px; border: var(--rule); border-radius: 999px; padding: 2px; }
+.langs button { border: 0; background: transparent; font: 500 .8rem var(--sans); color: var(--graphite); padding: 4px 10px; border-radius: 999px; cursor: pointer; min-height: 30px; }
+.langs button[aria-pressed=true] { background: var(--verdigris); color: var(--paper); }
 @media (max-width: 640px) { .nav { width: 100%; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; font-size: .86rem; } .nav a { white-space: nowrap; } }
 
 /* ---- hero ---- */
@@ -101,15 +104,18 @@ input[type=text]:focus { border-color: var(--verdigris); }
 .key { display: inline-block; width: 16px; height: 16px; vertical-align: -3px; margin-right: 6px; border: 1px solid var(--verdigris); }
 .key.full { background: var(--verdigris); }
 .key.part { background: repeating-linear-gradient(135deg, var(--copper) 0 2px, var(--card) 2px 5px); border-color: var(--copper); }
+.key.checked { background: var(--verdigris-10); }
 .key.none { background: var(--card); border-color: var(--steel); }
 .map-fig { margin: 0; }
 .usmap svg { width: 100%; height: auto; display: block; }
 .usmap .tile { fill: var(--card); stroke: var(--steel); stroke-width: 1; }
 .usmap .tile.full { fill: var(--verdigris); stroke: var(--verdigris); }
 .usmap .tile.part { fill: url(#hatch); stroke: var(--copper); }
+.usmap .tile.checked { fill: var(--verdigris-10); stroke: var(--verdigris); }
 .usmap text { font: 500 9px var(--sans); fill: var(--muted); pointer-events: none; text-anchor: middle; dominant-baseline: central; }
 .usmap .lbl-full { fill: var(--paper); }
 .usmap .lbl-part { fill: #5a3a26; }
+.usmap .lbl-checked { fill: var(--verdigris); }
 .three { grid-template-columns: 1fr; }
 @media (min-width: 760px) { .three { grid-template-columns: repeat(3, 1fr); } }
 .three h3 { margin-top: .2em; }
@@ -228,3 +234,7 @@ svg.mini { width: 18px; height: 18px; flex: none; }
 .share-page .side { border: var(--rule); background: var(--card); border-radius: var(--radius); }
 .share-page .side h2 { font: 500 .74rem var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--copper); margin: 0 0 6px; }
 .share-page .crux { margin-top: 16px; }
+
+/* Chinese: no synthetic italics; slightly roomier line height */
+:lang(zh-Hans) .lede, :lang(zh-Hans) .foot-motto, :lang(zh-Hans) .cmp .q, :lang(zh-Hans) i { font-style: normal; }
+:lang(zh-Hans) body { line-height: 1.75; }

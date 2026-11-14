@@ -81,7 +81,8 @@ def test_service_worker_never_caches_ballot_lookups():
 
 def test_coverage_endpoint_lists_three_states():
     states = client.get("/api/coverage").json()["states"]
-    assert set(states) == {"CA", "MA", "NY"} and "New York City" in states["NY"]
+    assert set(states) == {"CA", "MA", "NY", "CT"} and "New York City" in states["NY"]
+    assert client.get("/api/coverage").json()["kinds"]["CT"] == "checked"
 
 
 def test_site_pages_and_fonts_are_self_hosted():
@@ -98,3 +99,34 @@ def test_site_pages_and_fonts_are_self_hosted():
         r, g, b = (int(hexcode[i:i + 2], 16) for i in (1, 3, 5))
         assert not (r > 150 and g < 90 and b < 90), f"red-ish {hexcode}"
         assert not (b > 150 and r < 90 and g < 120), f"blue-ish {hexcode}"
+
+
+def test_every_interface_string_exists_in_all_three_languages():
+    import json, re
+    js = client.get("/i18n.js").text
+    body = js[js.index("window.I18N = ") + len("window.I18N = "): js.rstrip().rindex("}") + 1]
+    # the dictionary is plain JSON-like JS: quote the language keys and drop trailing commas
+    body = re.sub(r"\b(en|es|zh):", r'"\1":', body)
+    body = re.sub(r",(\s*[}\]])", r"\1", body)
+    d = json.loads(body)
+    assert set(d["en"]) == set(d["es"]) == set(d["zh"])
+    html = client.get("/").text
+    for key in re.findall(r'data-i18n(?:-placeholder)?="([^"]+)"', html):
+        assert key in d["en"], key
+    assert html.count('data-langblock="es"') == 3 and html.count('data-langblock="zh"') == 3
+
+
+def test_card_api_serves_translation_when_available(tmp_path, monkeypatch):
+    import json
+    from backend.agents import translator
+    monkeypatch.setattr(translator, "I18N", tmp_path)
+    rec = client.get(f"/api/card/{CARD}").json()
+    from backend.agents.translator import key_layer
+    t = key_layer(rec["card"])
+    t["plain_title"] = "Título traducido"
+    (tmp_path / f"{CARD}.es.json").write_text(json.dumps({"translated": t}), encoding="utf-8")
+    es = client.get(f"/api/card/{CARD}", params={"lang": "es"}).json()
+    assert es["lang"] == "es" and es["card"]["plain_title"] == "Título traducido"
+    assert es["card"]["evidence"] == rec["card"]["evidence"]          # details stay in English
+    assert client.get(f"/api/card/{CARD}", params={"lang": "zh"}).json()["lang"] == "en"   # not translated yet
+    assert client.get(f"/api/card/{CARD}", params={"lang": "fr"}).status_code == 422

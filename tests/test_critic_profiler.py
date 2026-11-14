@@ -39,7 +39,7 @@ def test_published_cards_are_verified_or_badged():
         if rec["steelman_verified"]:
             assert hard == [], f"{path.name}: {hard}"
         else:
-            assert rec["rewrites"] == 2   # it had every chance to fix itself before getting the badge
+            assert rec["rewrites"] >= 2   # it had every chance to fix itself before getting the badge
 
 
 def test_outcome_and_poll_language_detected():

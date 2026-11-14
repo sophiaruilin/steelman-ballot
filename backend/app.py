@@ -26,7 +26,7 @@ from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, Response
 from fastapi.staticfiles import StaticFiles
 
 from backend import config
-from backend.agents.ballot_mapper import COVERED_STATES, measures_for, races_for
+from backend.agents.ballot_mapper import COVERED_STATES, MAP_KIND, measures_for, races_for
 from backend.share import open_graph, share_text, whatsapp_link
 from backend.sources.geocoder import AddressNotFound, geocode
 from backend.sources.http import SourceError
@@ -214,14 +214,22 @@ def ballot(request: Request, address: str = Query(..., min_length=5, max_length=
 @app.get("/api/coverage")
 def coverage():
     """States we cover, for the map on the home page."""
-    return {"states": COVERED_STATES, "election": ELECTION}
+    return {"states": COVERED_STATES, "kinds": MAP_KIND, "election": ELECTION}
 
 
 @app.get("/api/card/{card_id}")
-def card(card_id: str):
+def card(card_id: str, lang: str = Query("en", pattern="^(en|es|zh)$")):
     rec = load_card(card_id)
     if not rec:
         raise HTTPException(404, "This card hasn't been researched yet.")
+    rec["lang"] = "en"
+    if lang != "en" and "steelman_yes" in rec["card"]:
+        from backend.agents.translator import I18N, apply
+        tpath = I18N / f"{card_id}.{lang}.json"
+        if tpath.exists():
+            rec["card"] = apply(rec["card"], json.loads(tpath.read_text(encoding="utf-8")))
+            rec["lang"] = lang
+            rec["translation_scope"] = "key_points"   # evidence details and sources stay in English
     return rec
 
 
