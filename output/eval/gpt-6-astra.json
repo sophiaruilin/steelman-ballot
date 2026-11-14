@@ -28,6 +28,7 @@
         "coverage_for": 1.0,
         "coverage_against": null,
         "coverage": 1.0,
+        "coverage_top3": 1.0,
         "neutrality_issues": 0
       },
       "grade": {
@@ -94,23 +95,28 @@
         "effect_notes": [],
         "points_for": [
           {
-            "point": "Jumpstart stalled affordable housing construction and expand homeownership so working families and essential workers can afford to live in their communities.",
+            "point": "Build affordable homes and expand homeownership for low- and middle-income working families and essential workers priced out of their communities.",
+            "rank": 1,
             "covered": true
           },
           {
             "point": "Honor veterans by dedicating $1.25 billion to housing and homeownership through the existing CalVet Home Loan Program.",
+            "rank": 2,
             "covered": true
           },
           {
-            "point": "Create and preserve stable housing for vulnerable residents, including seniors and people with disabilities, to prevent homelessness.",
+            "point": "Provide funding without new taxes, with strict fiscal accountability and public reporting, while unlocking federal matching funds.",
+            "rank": 3,
             "covered": true
           },
           {
-            "point": "Provide housing funding without new taxes, with strict fiscal accountability and public reporting of results and costs.",
+            "point": "Create and preserve stable housing to prevent homelessness among seniors, people with disabilities, veterans, and other vulnerable residents.",
+            "rank": 4,
             "covered": true
           },
           {
-            "point": "Unlock federal matching funds to bring federal tax dollars back to California.",
+            "point": "Fast-track housing production by jumpstarting shovel-ready affordable homes and moving stalled construction forward.",
+            "rank": 5,
             "covered": true
           }
         ],
@@ -137,10 +143,10 @@
       },
       "grader_usage": {
         "requests": 1,
-        "input_tokens": 5131,
+        "input_tokens": 5223,
         "cache_read_tokens": 0,
-        "output_tokens": 848,
-        "reasoning_tokens": 77,
+        "output_tokens": 909,
+        "reasoning_tokens": 96,
         "tool_calls": 0
       },
       "seconds": 52.9,
@@ -309,7 +315,8 @@
         "coverage_for": 1.0,
         "coverage_against": 1.0,
         "coverage": 1.0,
-        "neutrality_issues": 1
+        "coverage_top3": 1.0,
+        "neutrality_issues": 0
       },
       "grade": {
         "claims": [
@@ -375,39 +382,44 @@
         "effect_notes": [],
         "points_for": [
           {
-            "point": "Maintains current rates only on the wealthiest 2%, rather than raising current rates or allowing a tax cut for those taxpayers.",
+            "point": "Maintains existing rates only on the wealthiest 2%, without raising current rates, rather than giving wealthy taxpayers a tax cut.",
+            "rank": 1,
             "covered": true
           },
           {
-            "point": "Protects school and health care funding against cuts, including teacher layoffs, larger classes and threats to Medi-Cal.",
+            "point": "Protects schools, health care and community services from billions in cuts, including teacher layoffs, larger classes and reduced Medi-Cal access.",
+            "rank": 2,
             "covered": true
           },
           {
-            "point": "Protects classroom funding through local control, restrictions on administrative spending, independent annual audits, public reporting and penalties for misuse.",
+            "point": "Protects classroom funding through direct local funding, restrictions on administrative spending, independent annual audits, public accounting and penalties for misuse.",
+            "rank": 3,
             "covered": true
           }
         ],
         "points_against": [
           {
-            "point": "Making the higher rates permanent breaks the promise that the tax increases would be temporary.",
+            "point": "Breaks the promise that higher income taxes would be temporary by making them permanent; unchanged rates still mean higher taxes than scheduled after expiration.",
+            "rank": 1,
             "covered": true
           },
           {
-            "point": "Continuing higher taxes permanently would worsen California's already high cost of living.",
+            "point": "Sacramento should fix waste, fraud and excessive spending before seeking permanent taxes; the problem is spending rather than insufficient revenue.",
+            "rank": 2,
             "covered": true
           },
           {
-            "point": "Waste, fraud and overspending should be addressed before taxpayers are committed to permanent higher taxes.",
+            "point": "Permanent higher income taxes would worsen California's already high cost of living.",
+            "rank": 3,
             "covered": true
           },
           {
-            "point": "Past spending increases have not delivered promised improvements; voters deserve better results and accountability.",
+            "point": "Voters deserve better public-service results and accountability before committing to permanently higher taxes.",
+            "rank": 4,
             "covered": true
           }
         ],
-        "neutrality_issues": [
-          "The unattributed crux phrase “honor their scheduled end date” adopts opponents’ promise-keeping framing, mildly favoring No. “Require spending changes” also presents their preferred response to revenue loss as a requirement rather than a policy choice."
-        ]
+        "neutrality_issues": []
       },
       "usage": {
         "writer:gpt-6-astra": {
@@ -429,10 +441,10 @@
       },
       "grader_usage": {
         "requests": 1,
-        "input_tokens": 5727,
+        "input_tokens": 5819,
         "cache_read_tokens": 0,
-        "output_tokens": 1071,
-        "reasoning_tokens": 240,
+        "output_tokens": 1200,
+        "reasoning_tokens": 352,
         "tool_calls": 0
       },
       "seconds": 87.7,
@@ -606,9 +618,10 @@
         "contradicted": 0,
         "fidelity": 1.0,
         "effects_correct": 3,
-        "coverage_for": 0.8,
+        "coverage_for": 0.75,
         "coverage_against": 0.8,
-        "coverage": 0.8,
+        "coverage": 0.778,
+        "coverage_top3": 0.833,
         "neutrality_issues": 0
       },
       "grade": {
@@ -626,7 +639,7 @@
           {
             "claim": "Removing the replacement contest would reduce the incentive to use recalls for partisan advantage, supporters argue.",
             "verdict": "supported",
-            "note": "Accurately attributes this prediction to supporters rather than the Legislative Analyst."
+            "note": "Accurately attributed to supporters, rather than presented as an analyst finding."
           },
           {
             "claim": "The measure keeps the vote on removal and makes the Lieutenant Governor the successor to a recalled Governor.",
@@ -675,46 +688,51 @@
         "effect_notes": [],
         "points_for": [
           {
-            "point": "Close the loophole allowing a replacement to win with far less than majority support.",
+            "point": "Protect majority rule by closing the loophole allowing a replacement to win with far less than majority support.",
+            "rank": 1,
             "covered": true
           },
           {
-            "point": "Prevent recalls from being used as partisan shortcuts to overturn regular election results.",
+            "point": "Prevent partisan actors from using recalls to redo regular elections or gain a shortcut to power.",
+            "rank": 2,
             "covered": true
           },
           {
-            "point": "Preserve voters' power to remove corrupt or abusive officials and restore recalls' accountability purpose.",
+            "point": "Preserve voters' majority-vote removal power and accountability while using succession and vacancy rules, including an elected Lieutenant Governor providing continuity.",
+            "rank": 3,
             "covered": true
           },
           {
-            "point": "Use established vacancy procedures, including succession by an already statewide-elected Lieutenant Governor, to provide continuity.",
-            "covered": true
-          },
-          {
-            "point": "Protect taxpayers from wasteful recall efforts, exemplified by the more than $200 million spent on the unsuccessful 2021 recall.",
+            "point": "Defend taxpayers against wasteful recall efforts, illustrated by the more than $200 million spent on the unsuccessful 2021 recall.",
+            "rank": 4,
             "covered": false
           }
         ],
         "points_against": [
           {
-            "point": "Voters should retain the right to remove an official and immediately choose the replacement.",
+            "point": "Voters should retain the right both to remove an official and to choose an immediate replacement.",
+            "rank": 1,
             "covered": true
           },
           {
-            "point": "Appointments transfer power to political insiders, who could select friends or political allies.",
+            "point": "Appointments transfer power from voters to political insiders who could install friends or allies.",
+            "rank": 2,
             "covered": true
           },
           {
-            "point": "Separate elections could leave seats vacant for months and impose additional taxpayer costs.",
-            "covered": true
-          },
-          {
-            "point": "A recalled politician could run in the subsequent election and regain the same office.",
-            "covered": true
-          },
-          {
-            "point": "The century-old system already works; opponents portray the measure as its recalled author's effort to protect politicians from accountability.",
+            "point": "The century-old system works; the proposal is a recalled politician's self-serving attempt to rewrite the rules and protect politicians from accountability.",
+            "rank": 3,
             "covered": false
+          },
+          {
+            "point": "Separate replacement elections would leave seats vacant while voters wait and pay for another costly election.",
+            "rank": 4,
+            "covered": true
+          },
+          {
+            "point": "An ousted official could run in the subsequent election and regain the same office.",
+            "rank": 5,
+            "covered": true
           }
         ],
         "neutrality_issues": []
@@ -739,10 +757,10 @@
       },
       "grader_usage": {
         "requests": 1,
-        "input_tokens": 6327,
+        "input_tokens": 6419,
         "cache_read_tokens": 0,
-        "output_tokens": 995,
-        "reasoning_tokens": 105,
+        "output_tokens": 1026,
+        "reasoning_tokens": 82,
         "tool_calls": 0
       },
       "seconds": 43.8,
@@ -910,8 +928,9 @@
         "fidelity": 1.0,
         "effects_correct": 3,
         "coverage_for": 0.8,
-        "coverage_against": 1.0,
-        "coverage": 0.9,
+        "coverage_against": 0.8,
+        "coverage": 0.8,
+        "coverage_top3": 0.833,
         "neutrality_issues": 0
       },
       "grade": {
@@ -983,45 +1002,55 @@
         "effect_notes": [],
         "points_for": [
           {
-            "point": "Voter ID builds election trust and increases participation rather than suppressing voting.",
+            "point": "Voter ID is a broadly supported bipartisan California solution to declining election trust, not a contest over Trump or Newsom.",
+            "rank": 1,
             "covered": true
           },
           {
-            "point": "The measure is a bipartisan California solution with support across parties, not a contest over national politicians.",
+            "point": "Greater trust increases voter participation rather than suppressing turnout; supporters cite states with voter ID laws.",
+            "rank": 2,
             "covered": true
           },
           {
-            "point": "Free voter IDs and preservation of mail voting and other voting conveniences keep voting accessible.",
+            "point": "Voting remains accessible through free voter IDs, multiple acceptable IDs, continued mail voting, and existing voting conveniences.",
+            "rank": 3,
             "covered": true
           },
           {
-            "point": "Citizenship verification and independent audits improve voter-list accuracy, accountability, and election management.",
+            "point": "Citizenship verification and independent biennial audits improve voter-list accuracy, accountability, and election management.",
+            "rank": 4,
             "covered": true
           },
           {
-            "point": "Existing signature checks delay results and cause ballot rejections and burdens for voters whose signatures are flagged.",
+            "point": "Existing signature checks delay results and cause ballot rejections and burdens for voters whose signatures do not match.",
+            "rank": 5,
             "covered": false
           }
         ],
         "points_against": [
           {
-            "point": "Voting barriers serve a partisan power grab, allowing politicians to choose whose votes count and avoid accountability.",
+            "point": "The measure advances a Trump/MAGA power grab, funded by right-wing billionaires and built on election lies, to control elections and evade accountability.",
+            "rank": 1,
+            "covered": false
+          },
+          {
+            "point": "The measure wastes potentially hundreds of millions of taxpayer dollars annually on unnecessary checks when officials already verify voters.",
+            "rank": 2,
             "covered": true
           },
           {
-            "point": "The measure wastes substantial taxpayer money on added hurdles even though election officials already verify voters.",
+            "point": "Personal identifying information on mail-ballot return envelopes exposes voters to identity theft and forces a choice between privacy and voting.",
+            "rank": 3,
             "covered": true
           },
           {
-            "point": "Personal identification details on mail-ballot envelopes expose voters to identity-theft risks.",
+            "point": "Additional ID-designation and matching requirements create hurdles that can prevent eligible citizens from receiving mail ballots or having their votes counted.",
+            "rank": 4,
             "covered": true
           },
           {
-            "point": "ID-number errors, designation requirements, and mismatched records could prevent eligible voters from receiving mail ballots or having their votes counted.",
-            "covered": true
-          },
-          {
-            "point": "Even free IDs entail transportation, documents, childcare, and lost work time, disproportionately burdening vulnerable groups and voters with changed names.",
+            "point": "Nominally free IDs still entail transportation, documentation, childcare, and lost-work costs, disproportionately burdening vulnerable groups and voters with changed names.",
+            "rank": 5,
             "covered": true
           }
         ],
@@ -1047,10 +1076,10 @@
       },
       "grader_usage": {
         "requests": 1,
-        "input_tokens": 6322,
+        "input_tokens": 6414,
         "cache_read_tokens": 0,
-        "output_tokens": 958,
-        "reasoning_tokens": 55,
+        "output_tokens": 1223,
+        "reasoning_tokens": 210,
         "tool_calls": 0
       },
       "seconds": 43.1,
@@ -1230,9 +1259,10 @@
         "contradicted": 0,
         "fidelity": 1.0,
         "effects_correct": 3,
-        "coverage_for": 0.8,
-        "coverage_against": 0.8,
-        "coverage": 0.8,
+        "coverage_for": 0.75,
+        "coverage_against": 0.75,
+        "coverage": 0.75,
+        "coverage_top3": 0.667,
         "neutrality_issues": 0
       },
       "grade": {
@@ -1260,7 +1290,7 @@
           {
             "claim": "The measure says conflicting measures on the same ballot are void if Prop 41 receives more affirmative votes.",
             "verdict": "supported",
-            "note": "The official summary specifies other voter-approved measures on the same ballot."
+            "note": "The official summary specifies other voter-approved measures."
           },
           {
             "claim": "Opponents argue that billionaires should pay a fair share to support affordable health care for working families.",
@@ -1295,7 +1325,7 @@
           {
             "claim": "The same-ballot provision has two conditions: another measure must conflict with Prop 41, and Prop 41 must receive more yes votes. The official summary does not name Prop 40 as automatically canceled.",
             "verdict": "supported",
-            "note": "These are the two conflict-rule conditions for other voter-approved measures; the summary does not name Prop 40."
+            "note": "These are the two conditions stated for other voter-approved measures; the summary does not name Prop 40."
           }
         ],
         "yes_correct": true,
@@ -1304,45 +1334,45 @@
         "effect_notes": [],
         "points_for": [
           {
-            "point": "Independent public performance and financial audits, repeated after approval, would improve accountability and program results.",
+            "point": "Independent public performance and financial audits would expose waste, strengthen accountability, and improve results from tax-funded programs.",
+            "rank": 1,
             "covered": true
           },
           {
-            "point": "Pre-election audit findings in the Voter Information Guide would give voters independent information rather than relying on politicians or special interests.",
-            "covered": true
-          },
-          {
-            "point": "Identifying waste, fraud, and mismanagement would protect taxpayers and free resources to help people who rely on public services.",
-            "covered": true
-          },
-          {
-            "point": "The measure would enforce the voter-approved spending limit and its taxpayer protections, including excess-revenue refunds, without raising taxes.",
-            "covered": true
-          },
-          {
-            "point": "Already-high taxes, rising living costs, and sharply increased state spending with disappointing results make additional accountability urgent.",
+            "point": "California already has very high taxes and sharply increased state spending, yet billions spent on programs such as homelessness have produced too little.",
+            "rank": 2,
             "covered": false
+          },
+          {
+            "point": "Publishing independent audit findings before elections would help voters judge program management and funding needs without relying on politicians or special interests.",
+            "rank": 3,
+            "covered": true
+          },
+          {
+            "point": "The measure protects taxpayers rather than raising taxes, including enforcing the voter-approved spending limit and its excess-revenue refund requirement.",
+            "rank": 4,
+            "covered": true
           }
         ],
         "points_against": [
           {
-            "point": "The measure is designed to undo Prop 40, the proposed billionaire tax, rather than merely provide audits.",
+            "point": "The measure is designed to cancel or make unenforceable Prop 40, the proposed billionaire tax, rather than genuinely being about audits.",
+            "rank": 1,
             "covered": true
           },
           {
-            "point": "Billionaires should pay their fair share instead of shifting costs onto working families.",
-            "covered": true
-          },
-          {
-            "point": "Billionaire-tax revenues are needed to replace federal funding cuts, keep hospitals open, and protect affordable health care, public education, and food assistance.",
-            "covered": true
-          },
-          {
-            "point": "The measure is funded by self-interested billionaires, including Trump donor Sergey Brin, seeking to avoid the proposed tax.",
+            "point": "Billionaires, including Google founder and Trump donor Sergey Brin, funded the measure to protect their own wealth and avoid taxes.",
+            "rank": 2,
             "covered": false
           },
           {
-            "point": "The measure would impose additional state costs and consume time and money.",
+            "point": "Billionaires should pay their fair share to keep hospitals open and health care affordable, protecting working families and essential services rather than shifting costs onto them.",
+            "rank": 3,
+            "covered": true
+          },
+          {
+            "point": "The measure would also cost the state additional time and money.",
+            "rank": 4,
             "covered": true
           }
         ],
@@ -1368,10 +1398,10 @@
       },
       "grader_usage": {
         "requests": 1,
-        "input_tokens": 6025,
+        "input_tokens": 6117,
         "cache_read_tokens": 0,
-        "output_tokens": 1176,
-        "reasoning_tokens": 136,
+        "output_tokens": 1325,
+        "reasoning_tokens": 292,
         "tool_calls": 0
       },
       "seconds": 142.8,
@@ -1550,6 +1580,7 @@
         "coverage_for": 0.8,
         "coverage_against": 0.8,
         "coverage": 0.8,
+        "coverage_top3": 1.0,
         "neutrality_issues": 0
       },
       "grade": {
@@ -1621,45 +1652,55 @@
         "effect_notes": [],
         "points_for": [
           {
-            "point": "Faster construction of essential projects would reduce the cost of living, especially housing, electricity, and water costs.",
+            "point": "Cutting approval delays would deliver essential projects and lower the cost of living, especially housing and electricity.",
+            "rank": 1,
             "covered": true
           },
           {
-            "point": "Enforceable approval deadlines and faster, more predictable legal challenges would reduce delays and help deliver essential projects.",
+            "point": "Faster approvals can coexist with strong environmental protections; projects remain subject to environmental laws and review.",
+            "rank": 2,
             "covered": true
           },
           {
-            "point": "Reducing public-project delays and cost overruns would protect taxpayers and keep projects on time and on budget.",
+            "point": "Communities retain a meaningful voice, including public comments, opposition, and lawsuits.",
+            "rank": 3,
+            "covered": true
+          },
+          {
+            "point": "Enforceable approval timelines and more predictable legal challenges reduce costly delays and taxpayer-funded project overruns.",
+            "rank": 4,
             "covered": true
           },
           {
             "point": "The measure would create tens of thousands of good-paying jobs and billions in economic activity.",
+            "rank": 5,
             "covered": false
-          },
-          {
-            "point": "Faster approvals can coexist with environmental protections and community participation: projects remain subject to environmental laws and review, and residents retain comment and lawsuit rights.",
-            "covered": true
           }
         ],
         "points_against": [
           {
-            "point": "Weakening CEQA review would reduce protections for air, water, wildlife, and public health.",
+            "point": "Weaker CEQA review threatens air, water, and public health by allowing development with less scrutiny of environmental harms.",
+            "rank": 1,
             "covered": true
           },
           {
-            "point": "Limits on public input and challenges would weaken communities' ability to expose and prevent project harms.",
+            "point": "Limits on public input and challenges reduce communities' ability to identify harms and protect themselves.",
+            "rank": 2,
             "covered": true
           },
           {
-            "point": "Pollution and environmental damage could shift health and cleanup costs onto taxpayers and ratepayers.",
+            "point": "The measure does not require lower rents, mortgages, or utility bills; reduced developer costs do not ensure household savings.",
+            "rank": 3,
             "covered": true
           },
           {
-            "point": "The measure does not require lower rents, mortgages, or utility bills, so developer savings need not benefit households.",
+            "point": "Taxpayers and ratepayers could bear pollution cleanup and health costs that corporations avoid.",
+            "rank": 4,
             "covered": true
           },
           {
-            "point": "The measure was written by the California Chamber of Commerce and financed by utilities and corporate PACs, benefiting corporate interests at communities' expense.",
+            "point": "The measure was written by the California Chamber of Commerce and financed by utilities and corporate PACs, shifting power toward its corporate backers.",
+            "rank": 5,
             "covered": false
           }
         ],
@@ -1685,10 +1726,10 @@
       },
       "grader_usage": {
         "requests": 1,
-        "input_tokens": 6924,
+        "input_tokens": 7016,
         "cache_read_tokens": 0,
-        "output_tokens": 1060,
-        "reasoning_tokens": 86,
+        "output_tokens": 1167,
+        "reasoning_tokens": 137,
         "tool_calls": 0
       },
       "seconds": 53.1,

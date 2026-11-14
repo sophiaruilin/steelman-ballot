@@ -22,9 +22,12 @@ A forecast presented as certain counts as `contradicted` if the analyst only say
 Give a one-line note for any `false`.
 
 ## 3. Argument coverage
-From the official ARGUMENT IN FAVOR (plus its rebuttal), list its 3-5 most important distinct points.
-Do the same for the ARGUMENT AGAINST, if one was submitted (otherwise leave that list empty).
-For each point, mark `covered` if the matching steelman conveys it (not word for word, but the same idea).
+From the official ARGUMENT IN FAVOR (plus its rebuttal), list its 3-5 most important distinct points,
+**ranked** by how much that side emphasizes them (`rank` 1 = most important: the headline, the opening,
+what the rebuttal repeats). Do the same for the ARGUMENT AGAINST, if one was submitted (otherwise leave
+that list empty). Rank independently: decide the ranking from the official text BEFORE looking at the card.
+For each point, mark `covered` if the matching side of the card conveys it anywhere (top points, core claim,
+evidence or answer to the other side), not word for word but the same idea.
 
 ## 4. Neutrality
 List any wording in the card that favors one side, if any. Empty if none.

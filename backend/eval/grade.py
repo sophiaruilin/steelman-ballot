@@ -40,6 +40,7 @@ class ClaimGrade(BaseModel):
 
 class Point(BaseModel):
     point: str
+    rank: int = 0          # 1 = the side's most emphasized point
     covered: bool
 
 
@@ -74,6 +75,14 @@ async def grade_card(record: dict, pages: dict[str, str]) -> tuple[Grade, dict]:
     return res.output, usage_dict(res.usage)
 
 
+def _top3(g: Grade) -> float | None:
+    """Share of each side's 3 highest-ranked official points that the card covers."""
+    top = []
+    for pts in (g.points_for, g.points_against):
+        top += sorted(pts, key=lambda p: p.rank or 99)[:3]
+    return round(sum(p.covered for p in top) / len(top), 3) if top else None
+
+
 def score(g: Grade) -> dict:
     n = len(g.claims)
     sup = sum(c.verdict == "supported" for c in g.claims)
@@ -86,6 +95,7 @@ def score(g: Grade) -> dict:
         "coverage_for": round(sum(p.covered for p in g.points_for) / len(g.points_for), 3) if g.points_for else None,
         "coverage_against": round(sum(p.covered for p in g.points_against) / len(g.points_against), 3) if g.points_against else None,
         "coverage": round(sum(p.covered for p in pts) / len(pts), 3) if pts else None,
+        "coverage_top3": _top3(g),
         "neutrality_issues": len(g.neutrality_issues),
     }
 
@@ -111,9 +121,27 @@ async def run(props: list[str], writer: str) -> dict:
     return out
 
 
+async def regrade(src: str = "gpt-6-astra.json") -> dict:
+    """Grade the cards already in an eval file again (no new cards written) and update the scores."""
+    path = EVAL_DIR / src
+    run = json.loads(path.read_text(encoding="utf-8"))
+    for row in run["rows"]:
+        rec = {"card": row["card"], "sources": [u for u in row.get("sources", [])] or
+               [f"https://voterguide.sos.ca.gov/propositions/{row['prop']}/{p}"
+                for p in ("title-summary.htm", "analysis.htm", "arguments-rebuttals.htm")]}
+        g, gu = await grade_card(rec, official_pages(rec))
+        row["grade"], row["score"], row["grader_usage"] = g.model_dump(), score(g), gu
+        s = row["score"]
+        print(f"Prop {row['prop']}: fidelity={s['fidelity']} contradicted={s['contradicted']} "
+              f"coverage={s['coverage']} top3={s['coverage_top3']}", flush=True)
+    path.write_text(json.dumps(run, indent=2, ensure_ascii=False), encoding="utf-8")
+    return run
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--writer", default=config.MODEL_NAME)
     ap.add_argument("--props", nargs="*", default=SAMPLE)
+    ap.add_argument("--regrade", metavar="EVAL_FILE", help="re-grade cards in output/eval/EVAL_FILE")
     a = ap.parse_args()
-    asyncio.run(run(a.props, a.writer))
+    asyncio.run(regrade(a.regrade) if a.regrade else run(a.props, a.writer))

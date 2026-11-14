@@ -27,13 +27,13 @@ def _avg(xs):
 
 def table(run: dict) -> tuple[str, dict]:
     lines = ["| Prop | Verified | Turing (Yes/No) | Rewrites | Claims | Supported | Unsupported | Contradicted | "
-             "Yes/No/Fiscal correct | Argument coverage | Input tok | Cached | Output tok |",
-             "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+             "Yes/No/Fiscal correct | Argument coverage | Top-3 coverage | Input tok | Cached | Output tok |",
+             "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
     for r in run["rows"]:
         s, t = r["score"], _tokens(r)
         lines.append(f"| {r['prop']} | {'yes' if r['verified'] else 'no'} | {r['turing']['yes']}/{r['turing']['no']} | "
                      f"{r['rewrites']} | {s['claims']} | {s['supported']} | {s['unsupported']} | {s['contradicted']} | "
-                     f"{s['effects_correct']}/3 | {s['coverage']} | {t['input']:,} | {t['cached']:,} | {t['output']:,} |")
+                     f"{s['effects_correct']}/3 | {s['coverage']} | {s.get('coverage_top3', '-')} | {t['input']:,} | {t['cached']:,} | {t['output']:,} |")
     rows = run["rows"]
     agg = {
         "props": len(rows),
@@ -42,6 +42,7 @@ def table(run: dict) -> tuple[str, dict]:
         "contradicted": sum(r["score"]["contradicted"] for r in rows),
         "effects_correct": f"{sum(r['score']['effects_correct'] for r in rows)}/{3 * len(rows)}",
         "coverage": _avg([r["score"]["coverage"] for r in rows]),
+        "coverage_top3": _avg([r["score"].get("coverage_top3") for r in rows]),
         "rewrites": _avg([r["rewrites"] for r in rows]),
         "turing_min_avg": _avg([min(r["turing"].values()) for r in rows]),
         "input_per_prop": round(mean(_tokens(r)["input"] for r in rows)),
@@ -81,10 +82,20 @@ def main():
                 "| Metric | Before | After |", "|---|---|---|"]
         for k, label in [("verified", "Steelmen verified (of 6)"), ("fidelity", "Claims supported"),
                          ("contradicted", "Claims contradicted"), ("effects_correct", "Yes/No/cost correct"),
-                         ("coverage", "Official argument points covered"), ("rewrites", "Rewrites per prop"),
+                         ("coverage", "Official argument points covered"),
+                         ("coverage_top3", "Each side's top-3 points covered"), ("rewrites", "Rewrites per prop"),
                          ("turing_min_avg", "Lowest Turing score (avg)"), ("input_per_prop", "Input tokens / prop"),
                          ("cached_per_prop", "Cached tokens / prop"), ("output_per_prop", "Output tokens / prop")]:
             out.append(f"| {label} | {b[k]} | {a[k]} |")
+    if "gpt-6-astra" in runs:
+        _, a = table(runs["gpt-6-astra"])
+        rows = runs["gpt-6-astra"]["rows"]
+        out += ["", "## Targets", "", "| Metric | Target | Current |", "|---|---|---|",
+                f"| Claims supported by sources | >= 99%, 0 contradicted | {a['fidelity']:.1%}, {a['contradicted']} contradicted |",
+                f"| Yes / No / cost correct | 100% | {a['effects_correct']} |",
+                f"| Each side's top-3 official points covered | >= 95% | {a['coverage_top3']:.1%} |",
+                f"| All official points covered | 85-90% | {a['coverage']:.1%} |",
+                f"| Steelmen verified by the Critic | >= 85-90% | {a['verified']}/{len(rows)} |"]
     (EVAL_DIR / "summary.md").write_text("\n".join(out) + "\n", encoding="utf-8")
     print("\n".join(out))
 
