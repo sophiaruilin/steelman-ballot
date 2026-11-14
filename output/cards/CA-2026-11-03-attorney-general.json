@@ -1,0 +1,102 @@
+{
+  "race_id": "CA-2026-11-03-attorney-general",
+  "card": {
+    "race_id": "CA-2026-11-03-attorney-general",
+    "office": "Attorney General",
+    "what_office_does": {
+      "text": "The Attorney General is California’s chief law officer, enforcing state laws and investigating fraud or illegal activity. The office leads the Department of Justice, provides legal services to state government, represents California in court, and oversees law enforcement agencies.",
+      "label": "fact",
+      "whose": null,
+      "source_url": "https://voterguide.sos.ca.gov/candidates/attorney-general-candidate-statements.htm",
+      "quote": null
+    },
+    "candidates": [
+      {
+        "name": "Rob Bonta",
+        "party": "Democratic",
+        "says_basis": "none_found",
+        "says": [],
+        "core_case": null,
+        "priorities": []
+      },
+      {
+        "name": "Michael E. Gates",
+        "party": "Republican",
+        "says_basis": "official_statement",
+        "says": [
+          {
+            "text": "Gates says he would fully enforce Proposition 36 to restore accountability for repeat theft and drug offenses.",
+            "label": "value",
+            "whose": "Michael E. Gates",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/attorney-general-candidate-statements.htm",
+            "quote": null
+          },
+          {
+            "text": "Gates says he would prosecute drug traffickers and protect victims, making public safety a nonpartisan priority.",
+            "label": "value",
+            "whose": "Michael E. Gates",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/attorney-general-candidate-statements.htm",
+            "quote": null
+          },
+          {
+            "text": "Gates says he would help people off the streets and into treatment, and ensure tax dollars are spent honestly and effectively.",
+            "label": "value",
+            "whose": "Michael E. Gates",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/attorney-general-candidate-statements.htm",
+            "quote": null
+          }
+        ],
+        "core_case": "Gates presents his courtroom and prosecution experience as preparation to bring residents, local leaders, and law enforcement together. His case centers on enforcing theft and drug laws while protecting victims, connecting people with treatment, and pursuing safe streets and equal justice in every community.",
+        "priorities": [
+          "Safe streets and equal justice",
+          "Fully enforce Prop. 36",
+          "Help people off the streets and into treatment"
+        ]
+      }
+    ],
+    "where_they_differ": null
+  },
+  "ballot_order_note": "Official order (California assigns it by randomized drawing).",
+  "did": {
+    "Rob Bonta": null,
+    "Michael E. Gates": null
+  },
+  "funded_by": {
+    "Rob Bonta": {
+      "status": "not_connected",
+      "note": "State campaign finance (Cal-Access) not connected yet."
+    },
+    "Michael E. Gates": {
+      "status": "not_connected",
+      "note": "State campaign finance (Cal-Access) not connected yet."
+    }
+  },
+  "checks": {
+    "candidates": 2,
+    "with_statements": 1,
+    "words": {
+      "Michael E. Gates": 98
+    },
+    "word_ratio": 1.0,
+    "loaded_words": [],
+    "recommendation": [],
+    "outcome_or_polls": [],
+    "instruction_like_text": []
+  },
+  "sources": [
+    "https://voterguide.sos.ca.gov/candidates/attorney-general-candidate-statements.htm"
+  ],
+  "meta": {
+    "seconds": 10.1,
+    "usage_by_model": {
+      "gpt-6-astra": {
+        "requests": 2,
+        "input_tokens": 3670,
+        "cache_read_tokens": 2501,
+        "output_tokens": 489,
+        "reasoning_tokens": 0,
+        "tool_calls": 1
+      }
+    }
+  }
+}

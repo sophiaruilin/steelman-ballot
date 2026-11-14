@@ -1,0 +1,128 @@
+{
+ "card": {
+  "measure_id": "CA-2026-11-03-prop-3",
+  "number": "Prop 3",
+  "official_title": "PROVIDES PERMANENT FUNDING FOR SCHOOLS AND HEALTH CARE BY EXTENDING EXISTING TAX ON HIGH INCOMES. INITIATIVE CONSTITUTIONAL AMENDMENT.",
+  "plain_title": "Make higher income tax rates on high earners permanent",
+  "title_disputed": false,
+  "put_on_ballot_by": "Citizen initiative",
+  "yes_means": "The current higher income tax rates on high earners would become permanent instead of expiring in 2031. Revenue would continue to support schools, community colleges, other state programs and budget reserves.",
+  "no_means": "The higher rates would remain temporary and expire in 2031 under current law. Affected high earners would then pay lower rates, and the state would stop collecting the revenue from those higher rates.",
+  "who_is_affected": [
+   "High-income Californians who pay the higher rates",
+   "Public school and community college students and staff",
+   "People who rely on Medi-Cal and other state services",
+   "State and local school budget planners"
+  ],
+  "fiscal_impact": {
+   "text": "The Legislative Analyst estimates that keeping the higher rates after their scheduled expiration would maintain $5 billion to $15 billion in annual state revenue. The amount would vary widely with the economy and stock market.",
+   "label": "fact",
+   "whose": "Legislative Analyst",
+   "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+   "quote": null
+  },
+  "steelman_yes": {
+   "side": "Yes",
+   "basis": "official_argument",
+   "core_claim": "This common-sense measure will definitely protect every classroom from devastating cuts, so voters should vote yes.",
+   "values": [
+    "Education and health care",
+    "Ability to pay",
+    "Local accountability"
+   ],
+   "best_evidence": [
+    {
+     "text": "The higher rates apply to the top 2 percent of taxpayers, rather than taxpayers generally.",
+     "label": "fact",
+     "whose": null,
+     "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+     "quote": null
+    },
+    {
+     "text": "Supporters warn that allowing the rates to expire could lead to teacher layoffs, larger classes and reduced access to health care.",
+     "label": "prediction",
+     "whose": "Supporters",
+     "source_url": "https://voterguide.sos.ca.gov/propositions/3/arguments-rebuttals.htm",
+     "quote": null
+    },
+    {
+     "text": "The official summary says local school boards decide how school revenue is spent and bars its use for administrative costs.",
+     "label": "fact",
+     "whose": null,
+     "source_url": "https://voterguide.sos.ca.gov/propositions/3/title-summary.htm",
+     "quote": null
+    }
+   ],
+   "who_it_helps": "Supporters point to students, educators, families using health services and communities that depend on state-funded programs.",
+   "answer_to_other_side": "Supporters argue that this keeps current rates rather than raising them today. They say the school funding protections address accountability, while allowing the tax to expire would put essential services at risk."
+  },
+  "steelman_no": {
+   "side": "No",
+   "basis": "official_argument",
+   "core_claim": "Opponents are wealthy people who just don't want to pay their fair share.",
+   "values": [
+    "Protecting the rich"
+   ],
+   "best_evidence": [
+    {
+     "text": "The measure removes the scheduled expiration of higher rates that voters first approved as temporary in 2012.",
+     "label": "fact",
+     "whose": null,
+     "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+     "quote": null
+    }
+   ],
+   "who_it_helps": "Opponents point to taxpayers who would otherwise keep paying higher rates and Californians who want tighter control over state spending.",
+   "answer_to_other_side": "They have no real answer; they just want lower taxes."
+  },
+  "crux": {
+   "kind": "both",
+   "text": "Should California keep a major source of funding for services, or honor the scheduled end of a temporary tax? The sides also disagree about whether spending reforms could protect services without this revenue."
+  },
+  "evidence": [
+   {
+    "text": "The measure keeps current higher rates; it does not raise them today. Compared with current law after their scheduled expiration in 2031, it keeps taxes higher for affected earners.",
+    "label": "fact",
+    "whose": null,
+    "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+    "quote": null
+   },
+   {
+    "text": "At 2025 income levels, the higher rates apply to income over about $371,000 for single filers, $742,000 for joint filers and $505,000 for heads of household. These thresholds adjust annually for inflation.",
+    "label": "fact",
+    "whose": null,
+    "source_url": "https://voterguide.sos.ca.gov/propositions/3/title-summary.htm",
+    "quote": null
+   },
+   {
+    "text": "The Legislative Analyst estimates roughly 40 percent of the funding would go to schools and community colleges. The rest would support other state programs, with some set aside in reserves.",
+    "label": "prediction",
+    "whose": "Legislative Analyst",
+    "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+    "quote": null
+   },
+   {
+    "text": "Permanent tax rates would not guarantee a steady revenue amount. The Legislative Analyst expects large yearly swings because much of the taxed income is tied to the stock market.",
+    "label": "prediction",
+    "whose": "Legislative Analyst",
+    "source_url": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm",
+    "quote": null
+   }
+  ],
+  "supporters": [
+   "California State PTA",
+   "California Teachers Association",
+   "California Federation of Teachers",
+   "California Nurses Association",
+   "Planned Parenthood Affiliates of California"
+  ],
+  "opponents": [
+   "California Taxpayers Association",
+   "Family Business Association of California",
+   "California Hispanic Chambers of Commerce",
+   "Howard Jarvis Taxpayers Association",
+   "Central Valley Business Federation"
+  ],
+  "reading_minutes": 4
+ }
+}

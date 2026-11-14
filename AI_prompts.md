@@ -48,3 +48,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 9: First agents (Ballot Mapper and Measure Analyst)
 **Prompt (my own words):** "Yes, start" (approving the first agents: the Ballot Mapper and the Measure Analyst, starting with the California look-back)
 **What was lacking before:** The app had data sources but no agents, no card format, and no protection for reading web pages: hidden-text injection, look-alike sites, made-up citations or misquotes.
+
+## Step 10: Critic and Candidate Profiler
+**Prompt (my own words):** "Yes, start" (approving the Critic, which runs the steelman tests and sends cards back for rewrites, and the Candidate Profiler for the Says / Did / Funded by cards)
+**What was lacking before:** Nothing tested the cards for strawmen, one-sided wording, unsupported claims or vote recommendations, and the app had no candidate cards.

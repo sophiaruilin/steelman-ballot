@@ -48,7 +48,8 @@ copy .env.example .env            # macOS/Linux: cp .env.example .env
 ## Try it
 ```bash
 python -m backend.agents.ballot_mapper "1315 10th St, Sacramento, CA 95814"
-python -m backend.agents.measure_analyst CA 3      # writes output/cards/CA-2026-11-03-prop-3.json
+python -m backend.pipeline CA 3                    # Analyst + Critic -> output/cards/CA-2026-11-03-prop-3.json
+python -m backend.agents.candidate_profiler CA lt-governor
 ```
 
 ## Tests
@@ -64,7 +65,9 @@ steelman-ballot/
 │   ├── config.py          keys, model, cache policy, spending limits
 │   ├── cache.py           shared per-jurisdiction cache + refresh rules
 │   ├── models.py          card formats (MeasureCard, Steelman, Claim)
-│   ├── agents/            ballot_mapper, measure_analyst, common (safe fetch tool, citation + quote checks)
+│   ├── agents/            ballot_mapper, measure_analyst, candidate_profiler, critic,
+│   │                      common (safe fetch tool, citation + quote checks)
+│   ├── pipeline.py        Analyst -> Critic -> rewrite loop (max 2) for each measure
 │   ├── sources/           one adapter per data source: geocoder, fec (Funded by),
 │   │                      congress + openstates (Did), http (allowlisted client),
 │   │                      filters, web (safe page reader), replay (test tapes)

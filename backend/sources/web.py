@@ -34,6 +34,8 @@ WEB_ALLOWED_DOMAINS = {
     "sos.texas.gov", "sos.state.tx.us", "capitol.texas.gov", "tlc.texas.gov", "lbb.texas.gov",
     "sos.ga.gov",
     "vote.gov", "usa.gov", "eac.gov",
+    # members' official government sites (incumbents' own statements of positions)
+    "house.gov", "senate.gov",
     # national nonpartisan sources named in the plan
     "ballotpedia.org", "vote411.org", "votesmart.org", "justfacts.votesmart.org",
     "congress.gov", "fec.gov", "openstates.org",

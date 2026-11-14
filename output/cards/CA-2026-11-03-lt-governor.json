@@ -1,0 +1,132 @@
+{
+  "race_id": "CA-2026-11-03-lt-governor",
+  "card": {
+    "race_id": "CA-2026-11-03-lt-governor",
+    "office": "Lieutenant Governor",
+    "what_office_does": {
+      "text": "The lieutenant governor takes over the governor’s duties when the governor is absent from the state or leaves office, and presides over the State Senate with a tie-breaking vote. The office also chairs the Commission for Economic Development and serves on the State Lands Commission, Ocean Protection Council, and boards of California’s university systems.",
+      "label": "fact",
+      "whose": null,
+      "source_url": "https://voterguide.sos.ca.gov/candidates/lt-governor-candidate-statements.htm",
+      "quote": null
+    },
+    "candidates": [
+      {
+        "name": "Fiona Ma",
+        "party": "Democratic",
+        "says_basis": "official_statement",
+        "says": [
+          {
+            "text": "Ma wants a more affordable California and less government red tape that delays housing and discourages business investment.",
+            "label": "value",
+            "whose": "Fiona Ma, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/lt-governor-candidate-statements.htm",
+            "quote": null
+          },
+          {
+            "text": "Ma names accountability, transparency, fixing broken systems, and cutting waste as priorities in public office.",
+            "label": "value",
+            "whose": "Fiona Ma, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/lt-governor-candidate-statements.htm",
+            "quote": null
+          },
+          {
+            "text": "Ma proposes making higher education more affordable, expanding paid internships, and strengthening pathways to careers.",
+            "label": "value",
+            "whose": "Fiona Ma, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/lt-governor-candidate-statements.htm",
+            "quote": "As Lieutenant Governor, I will make higher education more affordable, expand paid internships, and strengthen career pathways."
+          }
+        ],
+        "core_case": "Ma presents her financial training and public-service experience as tools for making California more affordable while supporting economic growth. She emphasizes working with communities across all 58 counties and connecting affordable education to career opportunities.",
+        "priorities": [
+          "A more affordable future",
+          "Accountability and transparency",
+          "Higher education and career pathways"
+        ]
+      },
+      {
+        "name": "Gloria Romero",
+        "party": "Republican",
+        "says_basis": "official_statement",
+        "says": [
+          {
+            "text": "Romero proposes restoring education standards, defending Title IX for girls in sports, and fighting antisemitism on college campuses.",
+            "label": "value",
+            "whose": "Gloria Romero, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/lt-governor-candidate-statements.htm",
+            "quote": null
+          },
+          {
+            "text": "Romero wants an economic plan that helps businesses thrive and criticizes bureaucracy and waste in California’s budget.",
+            "label": "value",
+            "whose": "Gloria Romero, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/lt-governor-candidate-statements.htm",
+            "quote": null
+          },
+          {
+            "text": "Romero proposes reining in commissions she describes as politicized, with a focus on protecting water, farmland, and Californians’ way of life.",
+            "label": "value",
+            "whose": "Gloria Romero, own statement",
+            "source_url": "https://voterguide.sos.ca.gov/candidates/lt-governor-candidate-statements.htm",
+            "quote": null
+          }
+        ],
+        "core_case": "Romero presents her legislative experience and break with one-party rule as a basis for challenging Sacramento’s existing approach. She proposes using the office actively to raise education standards, support businesses, and change how state commissions operate.",
+        "priorities": [
+          "Restore education standards",
+          "Help businesses thrive",
+          "Rein in politicized commissions"
+        ]
+      }
+    ],
+    "where_they_differ": {
+      "kind": "values",
+      "text": "Both emphasize affordability and government reform, but Ma focuses on financial management, affordable higher education, and career opportunities. Romero focuses on challenging one-party rule, restoring school standards, changing state commissions, and addressing Title IX and campus antisemitism."
+    }
+  },
+  "ballot_order_note": "Official order (California assigns it by randomized drawing).",
+  "did": {
+    "Fiona Ma": null,
+    "Gloria Romero": null
+  },
+  "funded_by": {
+    "Fiona Ma": {
+      "status": "not_connected",
+      "note": "State campaign finance (Cal-Access) not connected yet."
+    },
+    "Gloria Romero": {
+      "status": "not_connected",
+      "note": "State campaign finance (Cal-Access) not connected yet."
+    }
+  },
+  "checks": {
+    "candidates": 2,
+    "with_statements": 2,
+    "words": {
+      "Fiona Ma": 83,
+      "Gloria Romero": 92
+    },
+    "word_ratio": 1.11,
+    "loaded_words": [],
+    "recommendation": [],
+    "outcome_or_polls": [],
+    "instruction_like_text": []
+  },
+  "sources": [
+    "https://voterguide.sos.ca.gov/candidates/lt-governor-candidate-statements.htm"
+  ],
+  "meta": {
+    "seconds": 18.6,
+    "usage_by_model": {
+      "gpt-6-astra": {
+        "requests": 2,
+        "input_tokens": 4157,
+        "cache_read_tokens": 1296,
+        "output_tokens": 955,
+        "reasoning_tokens": 125,
+        "tool_calls": 1
+      }
+    }
+  }
+}

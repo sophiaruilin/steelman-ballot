@@ -61,3 +61,31 @@ class MeasureCard(BaseModel):
     supporters: list[str] = Field(default_factory=list, description="Named supporters listed in official sources.")
     opponents: list[str] = Field(default_factory=list, description="Named opponents listed in official sources.")
     reading_minutes: int = Field(description="Estimated minutes to read this card.")
+
+
+# ---- Candidate races ------------------------------------------------------------
+
+class CandidateProfile(BaseModel):
+    """What a candidate SAYS, and their steelman. "Did" and "Funded by" are filled in by code
+    from Congress.gov / Open States / FEC, never written by a model."""
+
+    name: str = Field(description="Exactly as given in the candidate list.")
+    party: str
+    says_basis: Literal["official_statement", "official_government_site", "none_found"] = Field(
+        description="official_statement = the candidate's own statement in the official voter guide; "
+                    "official_government_site = their house.gov / senate.gov / state site; none_found = neither.")
+    says: list[Claim] = Field(default_factory=list,
+                              description="2-4 of the candidate's stated positions or goals, in neutral words, cited. "
+                                          "Empty if says_basis is none_found.")
+    core_case: str | None = Field(default=None, description="Their best case for themselves in one or two sentences, "
+                                  "as their most thoughtful supporters would put it. None if none_found.")
+    priorities: list[str] = Field(default_factory=list, description="1-3 priorities they name, in their terms.")
+
+
+class RaceCard(BaseModel):
+    race_id: str
+    office: str
+    what_office_does: Claim = Field(description="One or two sentences from the official source on what this office does.")
+    candidates: list[CandidateProfile] = Field(description="Every candidate, in the official order given.")
+    where_they_differ: Crux | None = Field(default=None, description="Where the candidates' stated priorities really "
+                                           "differ, if their statements allow it. None if fewer than two have statements.")

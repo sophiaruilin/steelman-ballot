@@ -28,6 +28,9 @@ USER_AGENT = "SteelmanBallot/0.1 (nonpartisan student project)"
 # ---- Model ----------------------------------------------------------------
 MODEL_NAME = os.getenv("MODEL_NAME", "gpt-6-astra").strip() or "gpt-6-astra"
 REASONING_EFFORT = "medium"
+# The Critic runs on a different (cheaper) model by default: a second perspective on the
+# writer's blind spots, and a cost comparison for the Tokenomics section.
+CRITIC_MODEL = os.getenv("CRITIC_MODEL", "gpt-6-luna").strip() or "gpt-6-luna"
 PORTKEY_BASE_URL = os.getenv("PORTKEY_BASE_URL", "https://api.portkey.ai/v1").rstrip("/")
 
 # ---- Spending guards ------------------------------------------------------
@@ -43,8 +46,8 @@ REFRESH_POLICY = [
 ]
 
 
-def build_model():
-    """The model + settings every agent uses (Portkey, Responses API, medium reasoning)."""
+def build_model(model_name: str | None = None):
+    """Model + settings for an agent (Portkey, Responses API, medium reasoning)."""
     from openai import AsyncOpenAI
     from pydantic_ai.models.openai import OpenAIResponsesModel, OpenAIResponsesModelSettings
     from pydantic_ai.providers.openai import OpenAIProvider
@@ -62,6 +65,6 @@ def build_model():
             "x-portkey-cache-force-refresh": "true",
         },
     )
-    model = OpenAIResponsesModel(MODEL_NAME, provider=OpenAIProvider(openai_client=client))
+    model = OpenAIResponsesModel(model_name or MODEL_NAME, provider=OpenAIProvider(openai_client=client))
     settings = OpenAIResponsesModelSettings(openai_reasoning_effort=REASONING_EFFORT)
     return model, settings

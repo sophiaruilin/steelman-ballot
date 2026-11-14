@@ -1,4 +1,5 @@
 {
+  "measure_id": "CA-2026-11-03-prop-1",
   "card": {
     "measure_id": "CA-2026-11-03-prop-1",
     "number": "Prop 1",
@@ -6,17 +7,17 @@
     "plain_title": "Borrow $11.25 billion for affordable housing and veterans’ home loans",
     "title_disputed": false,
     "put_on_ballot_by": "Legislature",
-    "yes_means": "The state could borrow $11.25 billion for rental housing, homebuying help, veterans’ home loans, and related programs. The state’s main budget would repay $10 billion plus interest; participating veterans’ loan payments would repay the other $1.25 billion.",
-    "no_means": "The state would not issue these new housing bonds. Existing housing programs would remain, but would not receive this additional funding.",
+    "yes_means": "Allow the state to borrow $11.25 billion for rental housing, homeownership help, veterans’ home loans, and related housing programs. The state’s main budget would repay $10 billion plus interest; veterans’ loan payments would repay the remaining $1.25 billion.",
+    "no_means": "Do not authorize this $11.25 billion bond or its added housing funding and debt.",
     "who_is_affected": [
       "Low- and moderate-income renters and homebuyers, including people facing homelessness",
-      "Veterans seeking home loans",
-      "Farmworkers, tribal communities, and university students eligible for housing assistance",
+      "Veterans eligible for state home loans",
+      "Farmworkers, tribal communities, and university students",
       "Local governments, nonprofit housing groups, and housing developers",
-      "Taxpayers and people who use state-funded public services"
+      "State taxpayers and people who use state-funded services"
     ],
     "fiscal_impact": {
-      "text": "The Legislative Analyst estimates state costs of $500 million to $600 million a year for about 25 years. Veterans’ loan payments are expected to cover repayment of the separate $1.25 billion veterans bond.",
+      "text": "The Legislative Analyst estimates state repayment costs of $500 million to $600 million a year for about 25 years. Veterans’ loan payments are expected to cover the veterans’ portion, with no direct state cost.",
       "label": "prediction",
       "whose": "Legislative Analyst",
       "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
@@ -25,7 +26,7 @@
     "steelman_yes": {
       "side": "Yes",
       "basis": "official_argument",
-      "core_claim": "Supporters argue that funding affordable homes now would help working families, veterans, and vulnerable residents gain stable housing and avoid homelessness.",
+      "core_claim": "Supporters argue that funding affordable homes now would help working families and vulnerable residents find stable housing and give more veterans a path to homeownership.",
       "values": [
         "Housing stability",
         "Opportunity to own a home",
@@ -33,97 +34,104 @@
       ],
       "best_evidence": [
         {
-          "text": "The measure sets aside $7.2 billion to acquire, build, or renovate affordable rental housing, including some housing with on-site support services.",
+          "text": "The measure provides $7.2 billion to buy, build, or renovate rental housing, including some housing with on-site support services.",
           "label": "fact",
           "whose": null,
           "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
           "quote": null
         },
         {
-          "text": "The measure provides $1.1 billion for homeownership programs and $1.25 billion for veterans’ home loans.",
-          "label": "fact",
-          "whose": null,
+          "text": "The Legislative Analyst estimates that the funds would subsidize up to 40,000 multifamily rental units and help up to 40,000 households with homeownership.",
+          "label": "prediction",
+          "whose": "Legislative Analyst",
           "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
           "quote": null
         },
         {
-          "text": "Supporters argue that the funding would restart stalled housing projects and help people at risk of homelessness stay housed.",
+          "text": "Supporters argue that creating and preserving affordable homes would help seniors, veterans, people with disabilities, and families avoid homelessness.",
           "label": "prediction",
           "whose": "Supporters in the official ballot argument",
           "source_url": "https://voterguide.sos.ca.gov/propositions/1/arguments-rebuttals.htm",
           "quote": null
         }
       ],
-      "who_it_helps": "Supporters emphasize working families, first-time buyers, veterans, seniors, people with disabilities, and people at risk of homelessness.",
-      "answer_to_other_side": "Supporters argue that the cost buys lasting affordable homes and brings in federal funds. They point to public reporting and accountability, and argue that the measure raises no new taxes. That does not mean repayment is free."
+      "who_it_helps": "Supporters emphasize working families, essential workers, veterans, seniors, people with disabilities, and others at risk of losing their homes.",
+      "answer_to_other_side": "Supporters argue that the housing need warrants investment now. They point to public reporting and accountability, access to federal funds, and homes that working people could afford as reasons to accept the borrowing costs."
     },
     "steelman_no": {
       "side": "No",
       "basis": "no_organized_side",
-      "core_claim": "No organized opposition was found. A case against the measure, based on the nonpartisan analysis, is to avoid a long repayment commitment and preserve money for other public needs.",
+      "core_claim": "No argument against the measure was submitted; this case is built from the nonpartisan analysis’s trade-off between added housing assistance and long-term debt costs that limit future budget flexibility.",
       "values": [
         "Budget flexibility",
         "Lower borrowing costs",
-        "Careful use of public money"
+        "Careful use of public funds"
       ],
       "best_evidence": [
         {
-          "text": "Repaying the housing-program bond would cost the state’s main budget $500 million to $600 million each year for about 25 years.",
+          "text": "The Legislative Analyst estimates that repayment would use $500 million to $600 million from the state’s main budget each year for about 25 years.",
           "label": "prediction",
           "whose": "Legislative Analyst",
           "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
           "quote": null
         },
         {
-          "text": "Borrowing would cost about 15 percent more, after inflation, than paying up front with money the state already has.",
+          "text": "The Legislative Analyst estimates that borrowing would cost about 15 percent more than paying up front, after adjusting for inflation.",
           "label": "prediction",
           "whose": "Legislative Analyst",
           "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
           "quote": null
         },
         {
-          "text": "The same state fund that would repay the $10 billion bond pays for most public services, including education and health care.",
+          "text": "The same state budget account that would repay the $10 billion housing bond also pays for education, health care, and other public services.",
           "label": "fact",
           "whose": null,
           "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
           "quote": null
         }
       ],
-      "who_it_helps": "This case prioritizes taxpayers and people who depend on other state services funded from the same budget.",
-      "answer_to_other_side": "The housing assistance could be valuable while borrowing remains the wrong funding choice. Paying up front would avoid interest costs, and rejecting this bond would avoid its long-term budget commitment without ending existing housing programs."
+      "who_it_helps": "This analysis-based, budget-focused case puts weight on taxpayers and people who depend on other state services funded from the same account.",
+      "answer_to_other_side": "The analysis supports expecting more housing assistance. The counterargument is that those benefits still carry interest costs and a long repayment commitment; a No vote would not authorize this bond or its added funding and debt."
     },
     "crux": {
-      "kind": "both",
-      "text": "Is the added housing assistance worth decades of state payments and higher costs from borrowing? The trade-off is between funding housing now and keeping future budgets more flexible."
+      "kind": "values",
+      "text": "Is added housing assistance now worth committing part of the state budget to debt payments for about 25 years? The main trade-off is housing investment today versus borrowing costs and future budget flexibility."
     },
     "evidence": [
       {
-        "text": "Projects receiving the rental-housing loans generally must reserve units for low-income households for 55 years.",
+        "text": "Of the $11.25 billion authorized, $10 billion would be repaid from the state’s main budget and $1.25 billion through veterans’ home loan payments.",
         "label": "fact",
         "whose": null,
         "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
         "quote": null
       },
       {
-        "text": "Working with other government funding, the bonds would subsidize up to 40,000 multifamily rental units, about 2,500 farmworker units, and about 1,200 university student beds.",
+        "text": "Rental projects receiving these funds generally must reserve units for low-income households for 55 years.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
+        "quote": null
+      },
+      {
+        "text": "The Legislative Analyst estimates annual repayment at about 0.25 percent of the state’s main budget.",
         "label": "prediction",
         "whose": "Legislative Analyst",
         "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
         "quote": null
       },
       {
-        "text": "The funds would also help up to 40,000 households with homeownership, including about 2,100 veterans.",
-        "label": "prediction",
-        "whose": "Legislative Analyst",
+        "text": "The housing assistance estimates rely on using much of the bond funding together with other government money; the funds would be allocated over several years.",
+        "label": "fact",
+        "whose": null,
         "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
         "quote": null
       },
       {
-        "text": "Annual repayment costs would equal about 0.25 percent of the state’s main budget. Veterans’ home-loan payments have historically covered their program’s bond repayments.",
-        "label": "prediction",
-        "whose": "Legislative Analyst; the payment history is a reported fact",
-        "source_url": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm",
-        "quote": null
+        "text": "No argument against Proposition 1 was submitted for the official voter guide.",
+        "label": "fact",
+        "whose": null,
+        "source_url": "https://voterguide.sos.ca.gov/propositions/1/arguments-rebuttals.htm",
+        "quote": "NO ARGUMENT AGAINST PROPOSITION 1 WAS SUBMITTED."
       }
     ],
     "supporters": [
@@ -136,23 +144,126 @@
     "opponents": [],
     "reading_minutes": 4
   },
-  "meta": {
-    "agent": "measure_analyst",
-    "measure_id": "CA-2026-11-03-prop-1",
-    "seconds": 34.0,
-    "usage": {
-      "requests": 3,
-      "input_tokens": 15059,
-      "cache_read_tokens": 8465,
-      "output_tokens": 1561,
-      "reasoning_tokens": 94,
-      "tool_calls": 4
+  "steelman_verified": true,
+  "turing": {
+    "yes": 4,
+    "no": 4
+  },
+  "rewrites": 1,
+  "review_rounds": [
+    {
+      "round": 0,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "A fair account of the supporters’ case: housing assistance, homeownership, and veteran support are central arguments in the official Yes statement. It could better represent that statement’s strongest points by explicitly including its claims of no tax increase, fiscal accountability, and federal matching funds."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "Given that no argument against was submitted, this builds a reasonable No case from the analysis: long-term repayment and interest costs compete with other uses of the General Fund. It states the trade-off without pretending it is an official opposition argument."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [],
+        "fidelity_problems": [
+          "“No organized opposition was found” is not established by the source. It says only that no argument against Proposition 1 was submitted.",
+          "“Existing housing programs would remain in place” (in no_means and the No response) is not explicitly guaranteed by the sources. They establish that the measure adds bond funding for housing programs, not what funding or programs would continue if it fails."
+        ],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "revise",
+        "instructions": "1. Change “No organized opposition was found” to the source-supported statement that no argument against the measure was submitted; keep the No case clearly identified as an analysis-based trade-off. 2. Replace claims that existing programs “would remain in place” with the narrower point that a No vote would not authorize this bond or its added funding and debt."
+      },
+      "checks": {
+        "words": {
+          "yes": 149,
+          "no": 161,
+          "ratio": 1.08
+        },
+        "evidence_points": {
+          "yes": 3,
+          "no": 3
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "loaded_words": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
     },
-    "pages_read": [
-      "https://voterguide.sos.ca.gov/propositions/1/arguments-rebuttals.htm",
-      "https://voterguide.sos.ca.gov/propositions/1/title-summary.htm",
-      "https://voterguide.sos.ca.gov/propositions/1/analysis.htm"
-    ],
+    {
+      "round": 1,
+      "verdict": {
+        "turing_yes": {
+          "score": 4,
+          "reason": "The case fairly captures supporters’ main claims about affordable housing, homeownership, veterans, and homelessness prevention, and its response includes accountability and potential federal matching funds. It could better represent the official argument’s explicit claim that the bond would not raise taxes, but the case is still credible."
+        },
+        "turing_no": {
+          "score": 4,
+          "reason": "Given that no organized No argument was submitted, this fairly builds a budget-focused case from the analyst’s estimates: decades of General Fund payments, interest costs, and trade-offs with other public services. It identifies these as an analysis-based trade-off rather than attributing them to an opponent."
+        },
+        "swap_test_pass": true,
+        "swap_notes": [
+          "The Yes case uses benefit-oriented language such as “help working families and vulnerable residents find stable housing,” while the No case emphasizes “debt costs” and “budget flexibility.” These differences reflect the sides’ arguments and are appropriately attributed or grounded in the analysis; neither side is described with noticeably more certainty or warmth."
+        ],
+        "fidelity_problems": [],
+        "label_problems": [],
+        "loaded_or_overconfident": [],
+        "never_list": [],
+        "false_balance": [],
+        "verdict": "pass",
+        "instructions": ""
+      },
+      "checks": {
+        "words": {
+          "yes": 149,
+          "no": 163,
+          "ratio": 1.09
+        },
+        "evidence_points": {
+          "yes": 3,
+          "no": 3
+        },
+        "certainty_words": {
+          "yes": 0,
+          "no": 0
+        },
+        "loaded_words": [],
+        "recommendation": [],
+        "outcome_or_polls": [],
+        "instruction_like_text": []
+      }
+    }
+  ],
+  "sources": [
+    "https://voterguide.sos.ca.gov/propositions/1/arguments-rebuttals.htm",
+    "https://voterguide.sos.ca.gov/propositions/1/title-summary.htm",
+    "https://voterguide.sos.ca.gov/propositions/1/analysis.htm"
+  ],
+  "meta": {
+    "seconds": 80.8,
+    "usage_by_model": {
+      "gpt-6-astra": {
+        "requests": 4,
+        "input_tokens": 22887,
+        "cache_read_tokens": 20897,
+        "output_tokens": 2946,
+        "reasoning_tokens": 134,
+        "tool_calls": 4
+      },
+      "gpt-6-luna": {
+        "requests": 2,
+        "input_tokens": 12451,
+        "cache_read_tokens": 0,
+        "output_tokens": 2833,
+        "reasoning_tokens": 2241,
+        "tool_calls": 0
+      }
+    },
     "blocked": [],
     "injection_flags": {}
   }
