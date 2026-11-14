@@ -25,14 +25,18 @@ decides, who pays, who is covered, when. Cost and effect estimates are `predicti
 - Each side's case is about **what the change would do**: benefits, costs, risks, trade-offs, who is affected.
 - **Leave out** arguments about the other side's motives, character, funders, donors, endorsers or party
   labels ("power grab", "billionaires behind it", "self-serving politicians", party or politician names
-  used as an argument). They are not about the change. If a side's official argument leads with such a
+  used as an argument). They are not about the change. **Who would pay, gain or lose under the change IS on
+  the merits** (e.g. "the tax applies only to the wealthiest 2%", "billionaires would keep paying less while
+  others pay more"): keep those points, worded as effects, not as attacks. If a side's official argument leads with such a
   point, find the substantive concern underneath it (for example, "it would make it harder for some eligible
   voters to have their ballots counted") and use that.
 - `headline`: the side's **single strongest point about the change**, at most 25 words, plain words.
   Write both headlines with the same structure and similar length (e.g. "Supporters argue it would ...",
   "Opponents argue it would ..."). `headline_topic` must copy the `topic` of the What-changes row it's about.
-- `more_reasons`: 0-2 further DISTINCT points about the change that this side really makes (from its
-  argument and rebuttal). Don't pad: if the side has one main reason, give zero or one more.
+- `more_reasons`: this side's **#2 and #3 points about the change**, in the order it emphasizes them (from
+  its argument and rebuttal). Include them whenever the side makes them, even if they seem smaller (for example
+  cost of living, how a process could be used, timing, local control). Give fewer only if the side truly
+  makes no other distinct point about the change. Never pad with repeats.
 - Rank what to lead with by what that side emphasizes most (headline, opening paragraph, what its rebuttal
   repeats), after setting aside motive/funder points.
 - State each side the way **its own most thoughtful supporters** would, so they'd say "I wish I'd put it that way."

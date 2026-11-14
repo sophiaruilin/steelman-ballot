@@ -125,7 +125,7 @@ async def grade_twice(rec: dict, pages: dict[str, str]) -> tuple[list[dict], dic
     return grades, usage, scores
 
 
-async def run(props: list[str], writer: str) -> dict:
+async def run(props: list[str], writer: str, out_name: str | None = None) -> dict:
     EVAL_DIR.mkdir(parents=True, exist_ok=True)
     rows = []
     for n in props:
@@ -145,7 +145,8 @@ async def run(props: list[str], writer: str) -> dict:
               f"top1_headline={s['top1_in_headline']} top3={s['coverage_top3']} all={s['coverage']} "
               f"reading_grade={checks['reading_grade']}", flush=True)
     out = {"writer": writer, "critic": config.CRITIC_MODEL, "props": props, "rows": rows}
-    (EVAL_DIR / f"{writer}.json").write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
+    (EVAL_DIR / (out_name or f"{writer}.json")).write_text(json.dumps(out, indent=2, ensure_ascii=False),
+                                                         encoding="utf-8")
     return out
 
 
@@ -171,5 +172,6 @@ if __name__ == "__main__":
     ap.add_argument("--writer", default=config.MODEL_NAME)
     ap.add_argument("--props", nargs="*", default=SAMPLE)
     ap.add_argument("--regrade", metavar="EVAL_FILE", help="re-grade cards in output/eval/EVAL_FILE")
+    ap.add_argument("--out", help="results file name in output/eval/ (default: <writer>.json)")
     a = ap.parse_args()
-    asyncio.run(regrade(a.regrade) if a.regrade else run(a.props, a.writer))
+    asyncio.run(regrade(a.regrade) if a.regrade else run(a.props, a.writer, a.out))

@@ -2,7 +2,7 @@
 
 Each card: Analyst (gpt-6-astra) writes -> Critic (gpt-6-luna) reviews -> up to 2 rewrites. A separate Grader (gpt-6-astra) scores the final card against the official voter guide, with the Legislative Analyst as the answer key. Current cards are graded twice and averaged to smooth grader noise.
 
-## Current cards (v3)
+## Current cards
 
 | Prop | Verified | Turing (Yes/No) | Rewrites | Claims supported | Contradicted | Yes/No/cost correct | #1 point = headline | Top-3 covered | All covered | Reading grade | Input tok | Cached | Output tok |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|

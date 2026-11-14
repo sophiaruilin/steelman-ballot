@@ -80,7 +80,7 @@ def main():
     if current.exists():
         run = json.loads(current.read_text(encoding="utf-8"))
         a = aggregate(run)
-        out += ["## Current cards (v3)", "", per_prop_table(run), "",
+        out += ["## Current cards", "", per_prop_table(run), "",
                 "## Targets", "", "| Metric | Target | Current |", "|---|---|---|",
                 f"| Claims supported by sources | >= 99%, 0 contradicted | {_pct(a['fidelity'])}, {a['contradicted']} contradicted |",
                 f"| Yes / No / cost correct | 100% | {a['effects_correct']} |",

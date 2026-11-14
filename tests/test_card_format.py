@@ -41,7 +41,7 @@ def test_good_card_has_no_hard_failures():
 def test_motive_and_funder_arguments_are_rejected():
     bad = card(no_headline="Opponents argue it is a power grab funded by billionaires and special interests.")
     checks = critic.code_checks(bad)
-    assert {"power grab", "funded by", "billionaires", "special interests"} <= set(checks["motive_or_funder"])
+    assert {"power grab", "funded by", "special interests"} <= set(checks["motive_or_funder"])
     assert any("on the merits" in f for f in critic.hard_failures(checks))
 
 
@@ -90,3 +90,21 @@ def test_hard_to_read_card_is_flagged():
     for r in c.what_changes:
         r.if_passes = c.yes_means
     assert any("reading grade" in f for f in critic.hard_failures(critic.code_checks(c)))
+
+
+@pytest.mark.parametrize("text", [
+    "Opponents argue billionaires would keep paying less while working families pay more.",
+    "Supporters argue the tax applies only to the wealthiest 2% of taxpayers.",
+    "Opponents argue donors could give more to campaigns under the new limits.",
+])
+def test_who_pays_or_gains_is_on_the_merits(text):
+    assert critic.code_checks(card(no_headline=text))["motive_or_funder"] == []
+
+
+@pytest.mark.parametrize("text", [
+    "Opponents argue the measure is backed by billionaires to protect their wealth.",
+    "Opponents argue it is billionaire-funded and serves a hidden agenda.",
+    "Supporters argue career politicians want to keep one-party rule.",
+])
+def test_funding_and_motive_attacks_are_flagged(text):
+    assert critic.code_checks(card(no_headline=text))["motive_or_funder"]

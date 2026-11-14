@@ -32,10 +32,15 @@ RECOMMEND = re.compile(r"\b((you|voters) should vote|we recommend|vote (yes|no) 
 OUTCOME = re.compile(r"\b(voters (approved|rejected|passed|defeated)|(passed|failed|won|lost) (on|in) (november|the election)|"
                      r"election results?|polls? (show|found|suggest)|leading in|ahead in the polls)\b", re.IGNORECASE)
 # Arguments about the other side's motives, character, funders or party labels: not about the change.
+# Phrases, not bare words: "billionaires would pay less" is about WHO PAYS (on the merits);
+# "backed by billionaires" is about who funds the campaign (off the merits).
 MOTIVE = re.compile(
-    r"\b(power[- ]grab|billionaires?|millionaires?|donors?|bankroll\w*|funded by|financed by|special[- ]interests?|"
-    r"self[- ]serving|corrupt\w*|lobbyists?|maga|trump|biden|newsom|republicans? (want|are trying)|"
-    r"democrats? (want|are trying)|politicians? (want|are trying) to protect|insiders?|elites?)\b", re.IGNORECASE)
+    r"\b(power[- ]grab|funded by|financed by|paid for by|bankroll\w*|backed by|bought by|"
+    r"(billionaire|millionaire|donor|corporate|union|special[- ]interest)s?[- ](funded|backed|bankrolled)|"
+    r"(billionaires?|millionaires?|donors?|special[- ]interests?|lobbyists?|insiders?) (behind|who wrote|"
+    r"who paid for|wrote|are pushing|bought)|special[- ]interests?|self[- ]serving|corrupt\w*|lobbyists?|"
+    r"maga|trump|biden|newsom|(republicans?|democrats?|politicians?) (want|are trying|just want)|"
+    r"one[- ]party rule|career politicians?|hidden agenda|real (agenda|motive))\b", re.IGNORECASE)
 
 HEADLINE_MAX_WORDS = 25
 TARGET_GRADE = 9.0        # reading level the plan promises (about 8th-9th grade)
