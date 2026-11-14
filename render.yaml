@@ -1,0 +1,25 @@
+# Render Blueprint: one free web service runs the API and serves the frontend.
+# In Render: New -> Blueprint -> pick this repo -> Apply.
+services:
+  - type: web
+    name: steelman-ballot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.app:app --host 0.0.0.0 --port $PORT --proxy-headers --forwarded-allow-ips "*"
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      # Public site serves researched cards only and never calls a model (no token spending).
+      - key: SNAPSHOT_ONLY
+        value: "1"
+      - key: ELECTION
+        value: "2026-11-03"
+      - key: PYDANTIC_AI_NO_BANNER
+        value: "1"
+      # Set after the first deploy to the address Render gives you, e.g. https://steelman-ballot.onrender.com
+      # (used in share links, QR codes and link previews).
+      - key: PUBLIC_BASE_URL
+        sync: false

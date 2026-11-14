@@ -52,6 +52,11 @@ python -m uvicorn backend.app:app --port 8020     # then open http://localhost:8
 Mobile-first and installable (Add to Home Screen); works inside WhatsApp and WeChat browsers; the last ballot
 and opened cards stay readable offline. `SNAPSHOT_ONLY=1` (default) serves only researched cards and never calls a model.
 
+## Deploy (Render, free)
+In Render: **New → Blueprint →** pick this repo → **Apply** (uses `render.yaml`). No API keys are needed:
+the public site runs in snapshot mode. After the first deploy, set `PUBLIC_BASE_URL` to the site's address so
+share links and QR codes point to it.
+
 ## Try the agents
 ```bash
 python -m backend.agents.ballot_mapper "1315 10th St, Sacramento, CA 95814"
