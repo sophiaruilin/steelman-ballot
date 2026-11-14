@@ -73,6 +73,18 @@ def main():
             out.append(f"| {name} | {sorted(common, key=int)} | {a['fidelity']} | {a['contradicted']} | {a['effects_correct']} | "
                        f"{a['coverage']} | {a['rewrites']} | {a['turing_min_avg']} | {a['input_per_prop']:,} | "
                        f"{a['cached_per_prop']:,} | {a['output_per_prop']:,} |")
+    base = EVAL_DIR / "baseline_gpt-6-astra.json"
+    if base.exists() and "gpt-6-astra" in runs:
+        _, b = table(json.loads(base.read_text(encoding="utf-8")))
+        _, a = table(runs["gpt-6-astra"])
+        out += ["", "## Prompt change: each side's top 3 official points (same 6 props, same models)", "",
+                "| Metric | Before | After |", "|---|---|---|"]
+        for k, label in [("verified", "Steelmen verified (of 6)"), ("fidelity", "Claims supported"),
+                         ("contradicted", "Claims contradicted"), ("effects_correct", "Yes/No/cost correct"),
+                         ("coverage", "Official argument points covered"), ("rewrites", "Rewrites per prop"),
+                         ("turing_min_avg", "Lowest Turing score (avg)"), ("input_per_prop", "Input tokens / prop"),
+                         ("cached_per_prop", "Cached tokens / prop"), ("output_per_prop", "Output tokens / prop")]:
+            out.append(f"| {label} | {b[k]} | {a[k]} |")
     (EVAL_DIR / "summary.md").write_text("\n".join(out) + "\n", encoding="utf-8")
     print("\n".join(out))
 
