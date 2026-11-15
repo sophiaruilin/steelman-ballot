@@ -100,3 +100,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 21: Example addresses showing the wrong state; no total reading time
 **Prompt (my own words):** "The Try an Example section is linke to the wrong places (Scaramento links to MA etc.) can you check again. also i want to remove the time to read all ballot cards, since some people may skim more and the full length of time may be discouraging"
 **What was lacking before:** A new lookup left the previous address's ballot on screen while loading, and a slower earlier lookup could overwrite a newer one; the summary also showed a total reading time that could discourage people.
+
+## Step 22: Philosophy page icons and tighter copy
+**Prompt (my own words):** "i don't mind the "your ballot in 60 seconds" - i don't like the "35 min total read for all ballots" / on the "our philosophy page" can you include a little iconography next to each bullet of "what we believe"? / any way to make it even more concise while still compelling? can keep as is as well"
+**What was lacking before:** The beliefs were a plain text list, and the page ran longer than it needed to.
