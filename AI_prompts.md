@@ -92,3 +92,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 19: Research every remaining contest and publish
 **Prompt (my own words):** "push it when done"
 **What was lacking before:** Only 6 California props and 2 races had cards; Massachusetts, New York City and the rest of California showed "Research pending", nothing was translated, and one California sample card was still unverified.
+
+## Step 20: User-testing kit
+**Prompt (my own words):** "i also will bring back in user feedback per class instructions + what would best opitimize and get feedbcak for this app, bring it back in" then "great. push the latest"
+**What was lacking before:** No structured way to test the app with real users, so the report had no real-user evidence on time saved, understanding, fairness or ease of use.

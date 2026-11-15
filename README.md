@@ -75,6 +75,10 @@ python -m backend.eval.grade --writer gpt-6-luna --props 1 3 39
 python -m backend.eval.summary                                 # -> output/eval/summary.md
 ```
 
+## User testing
+A 20-minute session script, questions and results template for testing with real voters:
+[docs/user_testing](docs/user_testing/README.md) (by hand vs. with the app, fairness, ease of use, sharing).
+
 ## Tests
 ```bash
 python -m pytest -q
