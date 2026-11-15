@@ -74,6 +74,12 @@
 
       <div class="wrap">
         <p id="status" class="status" role="status" aria-live="polite"></p>
+        <section id="progress" class="panel progress" hidden aria-live="polite">
+          <p class="eyebrow" id="prog-title"></p>
+          <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="prog-fill"></span></div>
+          <ol id="prog-steps" class="psteps"></ol>
+          <p id="prog-hint" class="muted" hidden></p>
+        </section>
 
         <section id="ballot" hidden>
           <div class="panel summary" id="summary"></div>
@@ -102,8 +108,8 @@
         </section>
 
         <section class="band three" aria-label="How a card works">
-          <div><span class="step">I</span><h3 data-i18n="three.1h">What would change</h3><p data-i18n="three.1p">Today, side by side with what happens if it passes, from the official guide.</p></div>
-          <div><span class="step">II</span><h3 data-i18n="three.2h">Both sides, at their strongest</h3><p data-i18n="three.2p">Each side's best case on the merits, in the words its most thoughtful supporters would use.</p></div>
+          <div><span class="step">I</span><h3 data-i18n="three.2h">Both sides, at their strongest</h3><p data-i18n="three.2p">Each side's best case on the merits, in the words its most thoughtful supporters would use.</p></div>
+          <div><span class="step">II</span><h3 data-i18n="three.1h">What would change</h3><p data-i18n="three.1p">Today, side by side with what happens if it passes, from the official guide.</p></div>
           <div><span class="step">III</span><h3 data-i18n="three.3h">Your decision</h3><p data-i18n="three.3p">Every claim is sourced. We never tell you how to vote.</p></div>
         </section>
       </div>

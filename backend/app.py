@@ -22,7 +22,8 @@ from datetime import date
 
 import segno
 from fastapi import FastAPI, HTTPException, Query, Request
-from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, Response
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, Response, StreamingResponse
+from starlette.concurrency import run_in_threadpool
 from fastapi.staticfiles import StaticFiles
 
 from backend import config
@@ -163,23 +164,9 @@ def health():
     return {"ok": True, "snapshot_only": SNAPSHOT_ONLY, "election": ELECTION}
 
 
-@app.get("/api/ballot")
-def ballot(request: Request, address: str = Query(..., min_length=5, max_length=200)):
-    rate_limit(request)
-    try:
-        j = geocode(address)
-    except AddressNotFound as e:
-        raise HTTPException(404, str(e)) from None
-    except SourceError:
-        raise HTTPException(503, "The address lookup service is busy. Please try again shortly.") from None
-    try:
-        measures, mstatus = ballot_measures(j)
-    except SourceError:
-        measures, mstatus = [], "unavailable"
+def assemble_ballot(j, measures, mstatus) -> dict:
     mlist = [{**measure_summary(f"{j.state_abbr}-{ELECTION}-{m.slug}", m.number, m.official_title), "scope": m.scope}
              for m in measures]
-    races = race_summaries(j)
-    ready = [m for m in mlist if m["status"] == "ready"] + [r for r in races if r["status"] == "ready"]
     return {
         "election": ELECTION,
         "election_passed": date.fromisoformat(ELECTION) < date.today(),
@@ -199,8 +186,7 @@ def ballot(request: Request, address: str = Query(..., min_length=5, max_length=
             "Local": "official" if any(m.scope != "statewide" for m in measures) else "not_mapped",
         },
         "measures": mlist,
-        "races": races,
-        "minutes_to_read": sum(m.get("reading_minutes", 2) for m in ready),
+        "races": race_summaries(j),
         "official_links": [
             {"label": "Find your official election office (vote.gov)", "url": "https://vote.gov/"},
             *([{"label": "California Official Voter Information Guide",
@@ -209,6 +195,74 @@ def ballot(request: Request, address: str = Query(..., min_length=5, max_length=
         "note": "Confirm against your county's official sample ballot. If anything here disagrees with it, "
                 "the official ballot is right.",
     }
+
+
+def guide_source(j) -> str:
+    """Which official source step 2 reads, named for the voter (shown in the progress steps)."""
+    if j.state_abbr == "CA":
+        return "California Secretary of State: Official Voter Information Guide"
+    if j.state_abbr == "MA":
+        return "Massachusetts Secretary of the Commonwealth: Information for Voters (PDF)"
+    if j.state_abbr == "NY":
+        return "NYC Votes (New York City)" if (j.place and j.place.geoid == "3651000") else "New York: statewide proposals"
+    if j.state_abbr == "CT":
+        return "Connecticut: statewide questions"
+    return ""
+
+
+@app.get("/api/ballot")
+def ballot(request: Request, address: str = Query(..., min_length=5, max_length=200)):
+    rate_limit(request)
+    try:
+        j = geocode(address)
+    except AddressNotFound as e:
+        raise HTTPException(404, str(e)) from None
+    except SourceError:
+        raise HTTPException(503, "The address lookup service is busy. Please try again shortly.") from None
+    try:
+        measures, mstatus = ballot_measures(j)
+    except SourceError:
+        measures, mstatus = [], "unavailable"
+    return assemble_ballot(j, measures, mstatus)
+
+
+@app.get("/api/ballot/stream")
+async def ballot_stream(request: Request, address: str = Query(..., min_length=5, max_length=200)):
+    """Same as /api/ballot, but streams real progress (Server-Sent Events) so voters can see each step."""
+    rate_limit(request)
+
+    def ev(kind: str, **data) -> str:
+        return f"event: {kind}\ndata: {json.dumps(data, ensure_ascii=False)}\n\n"
+
+    async def steps():
+        t0 = time.monotonic()
+        yield ev("step", id="districts", state="start")
+        try:
+            j = await run_in_threadpool(geocode, address)
+        except AddressNotFound as e:
+            yield ev("fail", message=str(e)); return
+        except Exception:
+            yield ev("fail", message="The address lookup service is busy. Please try again shortly."); return
+        yield ev("step", id="districts", state="done", seconds=round(time.monotonic() - t0, 1), detail=j.state_abbr)
+
+        src = guide_source(j)
+        t1 = time.monotonic()
+        yield ev("step", id="guide", state="start", source=src)
+        try:
+            measures, mstatus = await run_in_threadpool(ballot_measures, j)
+        except Exception:
+            measures, mstatus = [], "unavailable"
+        yield ev("step", id="guide", state="done", seconds=round(time.monotonic() - t1, 1), source=src, count=len(measures))
+
+        t2 = time.monotonic()
+        yield ev("step", id="cards", state="start")
+        data = await run_in_threadpool(assemble_ballot, j, measures, mstatus)
+        ready = sum(m["status"] == "ready" for m in data["measures"])
+        yield ev("step", id="cards", state="done", seconds=round(time.monotonic() - t2, 1), count=ready)
+        yield ev("ballot", **data)
+
+    return StreamingResponse(steps(), media_type="text/event-stream",
+                             headers={"Cache-Control": "no-store", "X-Accel-Buffering": "no"})
 
 
 @app.get("/api/coverage")

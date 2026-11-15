@@ -286,3 +286,16 @@ svg.mini { width: 18px; height: 18px; flex: none; }
   .side .headline { font-size: .92rem; line-height: 1.42; color: var(--graphite); font-weight: 500; }
 }
 .demo-note { margin: 10px 0 0; font-size: .88rem; color: var(--muted); border-left: 2px solid var(--copper); padding-left: 10px; max-width: 40em; }
+
+/* Ballot lookup progress (real backend steps, streamed) */
+.progress { margin-top: 16px; }
+.progress .bar { height: 6px; background: var(--verdigris-10); border-radius: 999px; overflow: hidden; margin: 8px 0 12px; }
+.progress .bar span { display: block; height: 100%; width: 0; background: var(--verdigris); transition: width .5s ease; }
+.psteps { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; font-size: .92rem; }
+.pstep { display: grid; grid-template-columns: 22px 1fr auto; gap: 8px; align-items: baseline; color: var(--muted); }
+.pstep.active { color: var(--graphite); font-weight: 500; }
+.pstep.done { color: var(--graphite); }
+.pstep .mark { color: var(--copper-ink); text-align: center; }
+.pstep.done .mark { color: var(--verdigris); }
+.pstep .pmeta { font-size: .8rem; white-space: nowrap; }
+#prog-hint { margin: 10px 0 0; font-size: .86rem; }

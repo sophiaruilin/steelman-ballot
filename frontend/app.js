@@ -114,22 +114,86 @@ async function renderMap() {
 
 // ---- ballot ------------------------------------------------------------------------------------
 let lookupSeq = 0;
+const STEPS = ["districts", "guide", "cards"];
+const PCT = { districts: [5, 30], guide: [35, 85], cards: [88, 100] };   // start/done percent per step
+
+function progress(open) {
+  const box = $("#progress");
+  box.hidden = !open;
+  if (!open) return;
+  $("#prog-title").textContent = t("prog.title");
+  $("#prog-hint").hidden = true;
+  setBar(2);
+  $("#prog-steps").replaceChildren(...STEPS.map((id) => el("li", { id: `ps-${id}`, class: "pstep" },
+    el("span", { class: "mark", "aria-hidden": "true" }, "○"), el("span", { class: "plabel" }, t(`prog.${id}`)),
+    el("span", { class: "pmeta muted" }, ""))));
+}
+function setBar(pct) {
+  $("#prog-fill").style.width = `${pct}%`;
+  $("#progress .bar").setAttribute("aria-valuenow", String(Math.round(pct)));
+}
+function stepUpdate(d) {
+  const li = $(`#ps-${d.id}`);
+  if (!li) return;
+  if (d.id === "guide" && d.source !== undefined) {
+    li.querySelector(".plabel").textContent = d.source ? `${t("prog.guide")}: ${d.source}` : t("prog.guide_none");
+  }
+  if (d.state === "start") {
+    li.className = "pstep active"; li.querySelector(".mark").textContent = "◐";
+    setBar(PCT[d.id][0]);
+  } else {
+    li.className = "pstep done"; li.querySelector(".mark").textContent = "✓";
+    const bits = [];
+    if (d.count !== undefined) bits.push(t("prog.found", { n: d.count }));
+    if (d.seconds !== undefined) bits.push(`${d.seconds}s`);
+    li.querySelector(".pmeta").textContent = bits.join(" · ");
+    setBar(PCT[d.id][1]);
+  }
+}
+
+function showBallotData(b, mine) {
+  if (mine !== lookupSeq) return;          // a newer lookup started while this one was loading
+  state.ballot = b;
+  store.set("sb.ballot", b);               // districts and card list only; the address is not saved
+  status("");
+  setBar(100);
+  setTimeout(() => { if (mine === lookupSeq) progress(false); }, 500);
+  renderBallot();
+  $("#ballot").hidden = false;
+  $("#ballot").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 async function lookup(address) {
-  const mine = ++lookupSeq;                 // only the most recent lookup may update the screen
+  const mine = ++lookupSeq;                // only the most recent lookup may update the screen
   state.ballot = null;
-  $("#ballot").hidden = true;               // never leave the previous address's ballot showing
-  status(t("status.finding"));
+  $("#ballot").hidden = true;              // never leave the previous address's ballot showing
+  status("");
+  progress(true);
+  const slow = setTimeout(() => { if (mine === lookupSeq) $("#prog-hint").hidden = false; $("#prog-hint").textContent = t("prog.slow"); }, 7000);
+  const fail = (msg) => { if (mine !== lookupSeq) return; clearTimeout(slow); progress(false); status(msg); };
+
+  if ("EventSource" in window) {
+    let got = false;
+    const es = new EventSource(`/api/ballot/stream?address=${encodeURIComponent(address)}`);
+    es.addEventListener("step", (e) => { got = true; if (mine === lookupSeq) stepUpdate(JSON.parse(e.data)); });
+    es.addEventListener("ballot", (e) => { es.close(); clearTimeout(slow); showBallotData(JSON.parse(e.data), mine); });
+    es.addEventListener("fail", (e) => { es.close(); fail(JSON.parse(e.data).message); });
+    es.onerror = () => {
+      es.close();
+      if (got) return fail(t("prog.slow"));
+      // Streaming not available here (some in-app browsers): fall back to a single request.
+      api(`/api/ballot?address=${encodeURIComponent(address)}`)
+        .then((b) => { clearTimeout(slow); showBallotData(b, mine); })
+        .catch((err) => fail(err.message));
+    };
+    return;
+  }
   try {
     const b = await api(`/api/ballot?address=${encodeURIComponent(address)}`);
-    if (mine !== lookupSeq) return;         // a newer lookup started while this one was loading
-    state.ballot = b;
-    store.set("sb.ballot", b);              // districts and card list only; the address is not saved
-    status("");
-    renderBallot();
-    $("#ballot").hidden = false;
-    $("#ballot").scrollIntoView({ behavior: "smooth", block: "start" });
+    clearTimeout(slow);
+    showBallotData(b, mine);
   } catch (e) {
-    if (mine === lookupSeq) status(e.message);
+    fail(e.message);
   }
 }
 

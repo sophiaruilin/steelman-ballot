@@ -130,3 +130,30 @@ def test_card_api_serves_translation_when_available(tmp_path, monkeypatch):
     assert es["card"]["evidence"] == rec["card"]["evidence"]          # details stay in English
     assert client.get(f"/api/card/{CARD}", params={"lang": "zh"}).json()["lang"] == "en"   # not translated yet
     assert client.get(f"/api/card/{CARD}", params={"lang": "fr"}).status_code == 422
+
+
+def test_ballot_stream_reports_real_steps_in_order(monkeypatch):
+    import json
+    from backend.sources.geocoder import parse
+    from pathlib import Path
+    j = parse(json.loads((Path(__file__).parent / "fixtures" / "census_new_haven.json").read_text(encoding="utf-8")))
+    monkeypatch.setattr(app_module, "geocode", lambda a: j)
+    monkeypatch.setattr(app_module, "ballot_measures", lambda jj: ([], "none_on_ballot"))
+    app_module._hits.clear()
+    r = client.get("/api/ballot/stream", params={"address": "165 Church St, New Haven, CT 06510"})
+    assert r.headers["content-type"].startswith("text/event-stream")
+    events = [(blk.split("\n")[0][len("event: "):], json.loads(blk.split("\n")[1][len("data: "):]))
+              for blk in r.text.strip().split("\n\n")]
+    kinds = [(k, d.get("id"), d.get("state")) for k, d in events]
+    assert kinds == [("step", "districts", "start"), ("step", "districts", "done"),
+                     ("step", "guide", "start"), ("step", "guide", "done"),
+                     ("step", "cards", "start"), ("step", "cards", "done"), ("ballot", None, None)]
+    assert events[2][1]["source"] == "Connecticut: statewide questions"
+    assert events[-1][1]["state"] == "CT" and "measures" in events[-1][1]
+
+
+def test_ballot_stream_bad_address_fails_cleanly(monkeypatch):
+    monkeypatch.setattr(app_module, "geocode", lambda a: (_ for _ in ()).throw(app_module.AddressNotFound("No match")))
+    app_module._hits.clear()
+    r = client.get("/api/ballot/stream", params={"address": "123 Nowhere Lane"})
+    assert "event: fail" in r.text and "No match" in r.text and "event: ballot" not in r.text

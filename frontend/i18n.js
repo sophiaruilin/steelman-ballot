@@ -3,6 +3,7 @@
 "use strict";
 window.I18N = {
   en: {
+    "prog.title": "Building your ballot", "prog.districts": "Finding your districts (U.S. Census Bureau)", "prog.guide": "Reading the official voter guide", "prog.guide_none": "Checking for an official voter guide for your state", "prog.cards": "Matching our researched cards", "prog.found": "{n} found", "prog.slow": "Taking longer than usual: our free server may be waking up. The first lookup can take up to a minute.",
     "hero.demo": "Demo: shows the November 3, 2026 ballot as it stood before the vote. No results are shown.", "ballot.details": "Coverage and official sources", "ballot.notice": "The official ballot always wins if anything here disagrees.", "ballot.notcovered": "{n} races not covered yet:", "ballot.coverage": "What we cover here",
     "nav.ballot": "My ballot", "nav.how": "How we work", "nav.steelman": "Steelman vs. strawman", "nav.philosophy": "Our philosophy",
     "hero.eyebrow": "Nonpartisan ballot guide · California · Massachusetts · New York · Connecticut",
@@ -47,6 +48,7 @@ window.I18N = {
     "race.differ": "Where they differ", "race.note": "Statements were written by the candidates and not checked by any official agency. We never tell you how to vote.",
   },
   es: {
+    "prog.title": "Preparando su boleta", "prog.districts": "Buscando sus distritos (Oficina del Censo de EE. UU.)", "prog.guide": "Leyendo la guía oficial para votantes", "prog.guide_none": "Buscando una guía oficial para votantes de su estado", "prog.cards": "Buscando nuestras fichas investigadas", "prog.found": "{n} encontradas", "prog.slow": "Está tardando más de lo normal: nuestro servidor gratuito puede estar despertando. La primera búsqueda puede tardar hasta un minuto.",
     "hero.demo": "Demostración: muestra la boleta del 3 de noviembre de 2026 tal como estaba antes de la votación. No se muestran resultados.", "ballot.details": "Cobertura y fuentes oficiales", "ballot.notice": "Si algo aquí no coincide, la boleta oficial siempre tiene la razón.", "ballot.notcovered": "{n} contiendas aún no cubiertas:", "ballot.coverage": "Qué cubrimos aquí",
     "nav.ballot": "Mi boleta", "nav.how": "Cómo trabajamos", "nav.steelman": "Argumento de acero vs. de paja", "nav.philosophy": "Nuestra filosofía",
     "hero.eyebrow": "Guía electoral imparcial · California · Massachusetts · Nueva York · Connecticut",
@@ -91,6 +93,7 @@ window.I18N = {
     "race.differ": "En qué se diferencian", "race.note": "Las declaraciones fueron escritas por los candidatos y ninguna agencia oficial las verificó. Nunca le decimos cómo votar.",
   },
   zh: {
+    "prog.title": "正在生成您的选票", "prog.districts": "正在查找您的选区（美国人口普查局）", "prog.guide": "正在读取官方选民指南", "prog.guide_none": "正在查找您所在州的官方选民指南", "prog.cards": "正在匹配我们已研究的卡片", "prog.found": "找到 {n} 项", "prog.slow": "比平时慢：我们的免费服务器可能正在启动，首次查询最多需要一分钟。",
     "hero.demo": "演示：显示2026年11月3日投票前的选票内容，不显示结果。", "ballot.details": "覆盖范围与官方来源", "ballot.notice": "如有不一致，以官方选票为准。", "ballot.notcovered": "{n} 项竞选尚未覆盖：", "ballot.coverage": "此处覆盖的内容",
     "nav.ballot": "我的选票", "nav.how": "我们的方法", "nav.steelman": "钢人论证与稻草人论证", "nav.philosophy": "我们的理念",
     "hero.eyebrow": "无党派选票指南 · 加利福尼亚州 · 马萨诸塞州 · 纽约州 · 康涅狄格州",
