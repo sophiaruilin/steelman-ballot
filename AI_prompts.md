@@ -96,3 +96,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 20: User-testing kit
 **Prompt (my own words):** "i also will bring back in user feedback per class instructions + what would best opitimize and get feedbcak for this app, bring it back in" then "great. push the latest"
 **What was lacking before:** No structured way to test the app with real users, so the report had no real-user evidence on time saved, understanding, fairness or ease of use.
+
+## Step 21: Example addresses showing the wrong state; no total reading time
+**Prompt (my own words):** "The Try an Example section is linke to the wrong places (Scaramento links to MA etc.) can you check again. also i want to remove the time to read all ballot cards, since some people may skim more and the full length of time may be discouraging"
+**What was lacking before:** A new lookup left the previous address's ballot on screen while loading, and a slower earlier lookup could overwrite a newer one; the summary also showed a total reading time that could discourage people.

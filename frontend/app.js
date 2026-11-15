@@ -113,10 +113,15 @@ async function renderMap() {
 }
 
 // ---- ballot ------------------------------------------------------------------------------------
+let lookupSeq = 0;
 async function lookup(address) {
+  const mine = ++lookupSeq;                 // only the most recent lookup may update the screen
+  state.ballot = null;
+  $("#ballot").hidden = true;               // never leave the previous address's ballot showing
   status(t("status.finding"));
   try {
     const b = await api(`/api/ballot?address=${encodeURIComponent(address)}`);
+    if (mine !== lookupSeq) return;         // a newer lookup started while this one was loading
     state.ballot = b;
     store.set("sb.ballot", b);              // districts and card list only; the address is not saved
     status("");
@@ -124,7 +129,7 @@ async function lookup(address) {
     $("#ballot").hidden = false;
     $("#ballot").scrollIntoView({ behavior: "smooth", block: "start" });
   } catch (e) {
-    status(e.message);
+    if (mine === lookupSeq) status(e.message);
   }
 }
 
@@ -136,14 +141,12 @@ function coveragePill(name, v) {
 
 function renderBallot() {
   const b = state.ballot;
-  const ready = b.measures.filter((m) => m.status === "ready").length + b.races.filter((r) => r.status === "ready").length;
   $("#summary").replaceChildren(
     el("p", { class: "eyebrow" }, `${b.state} · ${t("ballot.election")} ${b.election}`),
     el("h2", {}, t("ballot.title")),
     el("div", { class: "stats" },
       el("span", {}, el("b", {}, b.measures.length), t("ballot.measures")),
-      el("span", {}, el("b", {}, b.races.length), t("ballot.races")),
-      el("span", {}, el("b", {}, b.minutes_to_read), t("ballot.minutes", { n: ready }))),
+      el("span", {}, el("b", {}, b.races.length), t("ballot.races"))),
     el("ul", { class: "pills", "aria-label": "Your districts" }, Object.entries(b.districts).map(([k, v]) => el("li", { class: "pill" }, `${k}: ${v}`))),
     el("ul", { class: "pills", "aria-label": "Coverage" }, Object.entries(b.coverage).map(([k, v]) => coveragePill(k, v))),
     el("p", { class: "notice" }, b.coverage_note || ""),
