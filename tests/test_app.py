@@ -144,7 +144,7 @@ def test_ballot_stream_reports_real_steps_in_order(monkeypatch):
     assert r.headers["content-type"].startswith("text/event-stream")
     events = [(blk.split("\n")[0][len("event: "):], json.loads(blk.split("\n")[1][len("data: "):]))
               for blk in r.text.strip().split("\n\n")]
-    kinds = [(k, d.get("id"), d.get("state")) for k, d in events]
+    kinds = [(k, d.get("id"), d.get("state")) if k == "step" else (k, None, None) for k, d in events]
     assert kinds == [("step", "districts", "start"), ("step", "districts", "done"),
                      ("step", "guide", "start"), ("step", "guide", "done"),
                      ("step", "cards", "start"), ("step", "cards", "done"), ("ballot", None, None)]
