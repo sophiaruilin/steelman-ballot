@@ -104,3 +104,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 22: Philosophy page icons and tighter copy
 **Prompt (my own words):** "i don't mind the "your ballot in 60 seconds" - i don't like the "35 min total read for all ballots" / on the "our philosophy page" can you include a little iconography next to each bullet of "what we believe"? / any way to make it even more concise while still compelling? can keep as is as well"
 **What was lacking before:** The beliefs were a plain text list, and the page ran longer than it needed to.
+
+## Step 23: Fixes from a harsh-TA and busy-voter review
+**Prompt (my own words):** "if you reviewed the whole site as both a harsh ta as well as a time-short potentially interested voter trying to understand what's on the ballot, review whole site pages and let me know feedback and how would score/grade" then "Yes, fix them"
+**What was lacking before:** Copper labels failed WCAG contrast (3.3:1), the sticky phone header took a sixth of the screen, the ballot summary showed 9 pills and 3 notices before any measure, unresearched races were a list of dead ends, the two sides started halfway down a phone screen, and the home page didn't say the ballot was a look-back demo.

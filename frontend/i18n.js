@@ -3,6 +3,7 @@
 "use strict";
 window.I18N = {
   en: {
+    "hero.demo": "Demo: shows the November 3, 2026 ballot as it stood before the vote. No results are shown.", "ballot.details": "Coverage and official sources", "ballot.notice": "The official ballot always wins if anything here disagrees.", "ballot.notcovered": "{n} races not covered yet:", "ballot.coverage": "What we cover here",
     "nav.ballot": "My ballot", "nav.how": "How we work", "nav.steelman": "Steelman vs. strawman", "nav.philosophy": "Our philosophy",
     "hero.eyebrow": "Nonpartisan ballot guide · California · Massachusetts · New York · Connecticut",
     "hero.h1a": "Think more deeply.", "hero.h1b": "Vote more thoughtfully.",
@@ -46,6 +47,7 @@ window.I18N = {
     "race.differ": "Where they differ", "race.note": "Statements were written by the candidates and not checked by any official agency. We never tell you how to vote.",
   },
   es: {
+    "hero.demo": "Demostración: muestra la boleta del 3 de noviembre de 2026 tal como estaba antes de la votación. No se muestran resultados.", "ballot.details": "Cobertura y fuentes oficiales", "ballot.notice": "Si algo aquí no coincide, la boleta oficial siempre tiene la razón.", "ballot.notcovered": "{n} contiendas aún no cubiertas:", "ballot.coverage": "Qué cubrimos aquí",
     "nav.ballot": "Mi boleta", "nav.how": "Cómo trabajamos", "nav.steelman": "Argumento de acero vs. de paja", "nav.philosophy": "Nuestra filosofía",
     "hero.eyebrow": "Guía electoral imparcial · California · Massachusetts · Nueva York · Connecticut",
     "hero.h1a": "Piense con más profundidad.", "hero.h1b": "Vote con más reflexión.",
@@ -89,6 +91,7 @@ window.I18N = {
     "race.differ": "En qué se diferencian", "race.note": "Las declaraciones fueron escritas por los candidatos y ninguna agencia oficial las verificó. Nunca le decimos cómo votar.",
   },
   zh: {
+    "hero.demo": "演示：显示2026年11月3日投票前的选票内容，不显示结果。", "ballot.details": "覆盖范围与官方来源", "ballot.notice": "如有不一致，以官方选票为准。", "ballot.notcovered": "{n} 项竞选尚未覆盖：", "ballot.coverage": "此处覆盖的内容",
     "nav.ballot": "我的选票", "nav.how": "我们的方法", "nav.steelman": "钢人论证与稻草人论证", "nav.philosophy": "我们的理念",
     "hero.eyebrow": "无党派选票指南 · 加利福尼亚州 · 马萨诸塞州 · 纽约州 · 康涅狄格州",
     "hero.h1a": "思考更深入。", "hero.h1b": "投票更审慎。",

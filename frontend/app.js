@@ -141,21 +141,30 @@ function coveragePill(name, v) {
 
 function renderBallot() {
   const b = state.ballot;
+  const d = b.districts;
+  const districtLine = [d["Congress"], d["State Senate"], d["State House / Assembly"], d["City"]].filter(Boolean).join(" · ");
   $("#summary").replaceChildren(
     el("p", { class: "eyebrow" }, `${b.state} · ${t("ballot.election")} ${b.election}`),
     el("h2", {}, t("ballot.title")),
     el("div", { class: "stats" },
       el("span", {}, el("b", {}, b.measures.length), t("ballot.measures")),
       el("span", {}, el("b", {}, b.races.length), t("ballot.races"))),
-    el("ul", { class: "pills", "aria-label": "Your districts" }, Object.entries(b.districts).map(([k, v]) => el("li", { class: "pill" }, `${k}: ${v}`))),
-    el("ul", { class: "pills", "aria-label": "Coverage" }, Object.entries(b.coverage).map(([k, v]) => coveragePill(k, v))),
-    el("p", { class: "notice" }, b.coverage_note || ""),
-    b.election_passed ? el("p", { class: "notice" }, t("ballot.lookback", { d: b.election })) : null,
-    el("p", { class: "notice" }, b.note, " ", b.official_links.map((l) => [extLink(l.url, l.label), " "])));
+    el("p", { class: "districts-line" }, districtLine),
+    el("p", { class: "notice" }, t("ballot.notice"), " ", b.official_links.map((l) => [extLink(l.url, l.label), " "])),
+    el("details", {},
+      el("summary", {}, t("ballot.details")),
+      el("p", { class: "muted" }, b.coverage_note || ""),
+      el("ul", { class: "pills", "aria-label": t("ballot.coverage") }, Object.entries(b.coverage).map(([k, v]) => coveragePill(k, v))),
+      b.election_passed ? el("p", { class: "muted" }, t("ballot.lookback", { d: b.election })) : null));
   const measures = b.measures;   // official ballot order
   $("#measures").replaceChildren(...(measures.length ? measures.map((m) => el("li", {}, listItem(m)))
     : [el("li", { class: "muted item disabled" }, el("span", {}), el("span", {}, t("ballot.none")))]));
-  $("#races").replaceChildren(...b.races.map((r) => el("li", {}, raceItem(r))));
+  const ready = b.races.filter((r) => r.status === "ready" && r.id);
+  const rest = b.races.filter((r) => !(r.status === "ready" && r.id));
+  $("#races").replaceChildren(
+    ...ready.map((r) => el("li", {}, raceItem(r))),
+    rest.length ? el("li", { class: "uncovered" }, el("b", {}, t("ballot.notcovered", { n: rest.length })), " ",
+      rest.map((r) => r.office).join(" · ")) : null);
 }
 
 function listItem(m) {
