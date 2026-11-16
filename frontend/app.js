@@ -8,7 +8,9 @@ const store = {
   get: (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } },
   set: (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* private mode */ } },
 };
-let state = { ballot: store.get("sb.ballot", null), lang: store.get("sb.lang", null) || guessLang() };
+// A new visit starts blank. The last ballot (districts and card list only, never the address)
+// stays on this device and comes back with one tap: "Show my last ballot".
+let state = { ballot: null, saved: store.get("sb.ballot", null), lang: store.get("sb.lang", null) || guessLang() };
 
 // ---- language (English, Spanish, Simplified Chinese) -------------------------------------
 function guessLang() {
@@ -156,10 +158,30 @@ function stepUpdate(d) {
   }
 }
 
+function renderLastBallotLink() {
+  const box = $("#last-ballot");
+  const show = !state.ballot && state.saved;
+  box.hidden = !show;
+  if (!show) return;
+  const city = (state.saved.districts?.City || "").replace(/ (city|town|village|borough|CDP)$/i, "");
+  const where = [city, state.saved.state].filter(Boolean).join(", ");
+  box.replaceChildren(el("button", { type: "button", class: "linkish", onclick: () => {
+    state.ballot = state.saved;
+    renderBallot(); $("#ballot").hidden = false; box.hidden = true;
+    $("#ballot").scrollIntoView({ behavior: "smooth", block: "start" });
+  } }, t("last.show", { where })),
+  " · ",
+  el("button", { type: "button", class: "linkish muted", onclick: () => {
+    store.set("sb.ballot", null); state.saved = null; box.hidden = true;
+  } }, t("last.forget")));
+}
+
 function showBallotData(b, mine) {
   if (mine !== lookupSeq) return;          // a newer lookup started while this one was loading
   state.ballot = b;
+  state.saved = b;
   store.set("sb.ballot", b);               // districts and card list only; the address is not saved
+  $("#last-ballot").hidden = true;
   status("");
   setBar(100);
   setTimeout(() => { if (mine === lookupSeq) progress(false); }, 500);
@@ -289,6 +311,7 @@ async function route() {
   if (!id) {
     show("home");
     if (state.ballot) { $("#ballot").hidden = false; renderBallot(); }
+    renderLastBallotLink();
     return;
   }
   show("card");

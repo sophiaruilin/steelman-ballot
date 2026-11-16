@@ -152,3 +152,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 34: "How a card works" above the map, matching the card
 **Prompt (my own words):** "is this section on front page in the best section or where would it make most logical and user friendly sense? I Both sides, at their strongest ... II What would change ... III Your decision ..."
 **What was lacking before:** The three-step explainer sat below the coverage map, so first-time visitors saw coverage before learning what a card shows, and step II still described the old card order.
+
+## Step 35: A new visit starts blank
+**Prompt (my own words):** "if opening new page should front pgae be blank with any ballots or last search / claifornia results? the how we work section is back to 6 steps not sure if you reocmmend that or if some recent changes got lots"
+**What was lacking before:** Every visit re-showed the last lookup's ballot (confusing for first-timers and testers, and visible to the next person on a shared device), and an old cached stylesheet could still show How we work's nested bullets as extra numbered steps.

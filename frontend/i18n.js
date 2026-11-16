@@ -3,6 +3,8 @@
 "use strict";
 window.I18N = {
   en: {
+    "last.forget": "Forget it",
+    "last.show": "Show my last ballot ({where})",
     "help.states": "Available for addresses in California, Massachusetts, New York and Connecticut.",
     "tag.value": "Perspective",
     "tag.prediction": "Estimate",
@@ -66,6 +68,8 @@ window.I18N = {
     "race.differ": "Where they differ", "race.note": "Statements were written by the candidates and not checked by any official agency. We never tell you how to vote.",
   },
   es: {
+    "last.forget": "Olvidarla",
+    "last.show": "Ver mi última boleta ({where})",
     "help.states": "Disponible para direcciones en California, Massachusetts, Nueva York y Connecticut.",
     "tag.value": "Perspectiva",
     "tag.prediction": "Estimación",
@@ -129,6 +133,8 @@ window.I18N = {
     "race.differ": "En qué se diferencian", "race.note": "Las declaraciones fueron escritas por los candidatos y ninguna agencia oficial las verificó. Nunca le decimos cómo votar.",
   },
   zh: {
+    "last.forget": "清除",
+    "last.show": "显示我上次的选票（{where}）",
     "help.states": "适用于加利福尼亚州、马萨诸塞州、纽约州和康涅狄格州的地址。",
     "tag.value": "观点",
     "tag.prediction": "估计",
