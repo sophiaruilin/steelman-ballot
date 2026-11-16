@@ -136,3 +136,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 30: How we work, for every state
 **Prompt (my own words):** "for how we work section, it says california specific info. do you want to make more general by state"
 **What was lacking before:** The sources and accuracy steps read as California-only, and step 3 still used the old fact / prediction / value labels.
+
+## Step 31: One AI writes, a second AI stress-tests
+**Prompt (my own words):** "wouldit be more compelling in the how section to merge III and IV, because some may balk at AI drafting the card... but extra air tight to have a 2nd AI test that one... one user was pleasantly surprised and even impressed about the 2nd ai testing the other, so i want to merge that together as the compelling part of process. collectively it is ai writing - and re-writing / strress testing - of what gets written on the card"
+**What was lacking before:** "An AI drafts the card" stood alone as its own step, inviting skepticism, while the reassuring part (a second AI trying to break it) came separately afterward.
