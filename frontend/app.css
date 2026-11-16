@@ -333,3 +333,10 @@ svg.mini { width: 18px; height: 18px; flex: none; }
 .tag.prediction { border-color: var(--copper); color: var(--copper-ink); }
 .tag.value { border-style: dashed; }
 .crux { margin-top: 18px; }
+
+/* How we work: sources by state */
+table.srcs { width: 100%; border-collapse: collapse; margin: 6px 0 10px; font-size: .9rem; }
+table.srcs th, table.srcs td { text-align: left; vertical-align: top; padding: 6px 8px; border-bottom: var(--rule); }
+table.srcs th { font: 500 .72rem var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+table.srcs td:first-child { font-weight: 500; color: var(--verdigris); white-space: nowrap; }
+@media (max-width: 560px) { table.srcs th:nth-child(3), table.srcs td:nth-child(3) { display: none; } }

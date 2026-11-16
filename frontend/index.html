@@ -131,11 +131,19 @@
       <h1>How we work</h1>
       <p class="lede">In plain English: where every card comes from, and how we check it before you see it.</p>
       <ol class="steps">
-        <li><h3>We find your ballot</h3><p>Your address is matched to your districts by the U.S. Census Bureau (a ZIP code alone gives statewide measures). It is sent in the request body, never in a web address, and is not saved or logged. We then read the list of measures from your state's or city's <b>official voter guide</b>. Your address is never stored.</p></li>
-        <li><h3>We read only official and nonpartisan sources</h3><p>California's Official Voter Information Guide and Legislative Analyst, Massachusetts' official <i>Information for Voters</i>, and New York City's NYC Votes guide. Candidate records come from Congress.gov, Open States and the Federal Election Commission. If sources disagree, the official ballot wins.</p></li>
-        <li><h3>An AI writer drafts the card</h3><p>It builds a <b>What changes</b> table (today vs. if it passes), then each side's strongest case <b>on the merits</b>: benefits, costs, risks, and who is affected. Never the other side's motives, donors or party. Facts are kept separate from arguments, and every claim is labeled <i>fact</i>, <i>prediction</i> (whose estimate) or <i>value</i>.</p></li>
+        <li><h3>We find your ballot</h3><p>The U.S. Census Bureau matches your address to your districts (a ZIP code alone gives statewide measures). Then we read the list of measures from your state's or city's <b>official voter guide</b>. Your address is used once and never stored.</p></li>
+        <li><h3>We read only official and nonpartisan sources</h3>
+          <table class="srcs">
+            <tr><th>Where</th><th>Official source we read</th><th>What it gives us</th></tr>
+            <tr><td>California</td><td>Official Voter Information Guide (Secretary of State)</td><td>Title and summary, the nonpartisan Legislative Analyst's analysis, official arguments for and against</td></tr>
+            <tr><td>Massachusetts</td><td><i>Information for Voters</i> (Secretary of the Commonwealth)</td><td>Summary, what a yes or no vote does, fiscal statement, official arguments for and against</td></tr>
+            <tr><td>New York City</td><td>NYC Votes (Campaign Finance Board)</td><td>Summary of each proposal and of public statements for and against</td></tr>
+            <tr><td>Connecticut</td><td>Secretary of the State</td><td>No statewide questions in 2026; town questions not covered yet</td></tr>
+          </table>
+          <p>Candidate records come from Congress.gov, Open States and the Federal Election Commission. If sources disagree, the official ballot wins.</p></li>
+        <li><h3>An AI writer drafts the card</h3><p>It writes each side's strongest case <b>on the merits</b> (benefits, costs, risks, who is affected), never the other side's motives, donors or party. Then where they really disagree, what the evidence says, and a <b>What would change</b> table (today vs. if it passes). Facts are kept apart from arguments, and every claim is labeled <i>fact</i>, <i>estimate</i> (and whose) or <i>perspective</i>.</p></li>
         <li><h3>A second AI checks it for fairness</h3><p>A separate reviewer plays a committed supporter of each side and asks, “Would I sign this as our best case?” It swaps the labels to catch one-sided wording, and checks every claim against the page it came from. Quotes must match word for word. A card gets up to three rewrites; if it still has problems, it's shown with a <b>“steelman unverified”</b> badge.</p></li>
-        <li><h3>We measure accuracy</h3><p>We graded our California cards against the state's nonpartisan Legislative Analyst: <b>100%</b> of claims backed by the official guide, <b>18 of 18</b> yes/no/cost descriptions correct, <b>99%</b> of each side's top points covered, and all six fairness checks passed.</p></li>
+        <li><h3>We measure accuracy</h3><p><b>In every state:</b> all 28 measure cards passed the fairness review. <b>Accuracy test:</b> we graded a sample against California's nonpartisan Legislative Analyst, the one independent answer key we have: <b>100%</b> of claims backed by the official guide, <b>18 of 18</b> yes/no/cost descriptions correct, and <b>99%</b> of each side's top points covered.</p></li>
         <li><h3>We keep it fresh and safe</h3><p>Cards refresh daily as an election nears. We read only an allowlist of official sites, strip hidden text that could trick an AI, respect sites that ask not to be read automatically, and cap how much the system can spend.</p></li>
       </ol>
       <h2>What we never do</h2>
@@ -153,11 +161,19 @@
       <h1>Cómo trabajamos</h1>
       <p class="lede">En palabras sencillas: de dónde sale cada ficha y cómo la revisamos antes de que usted la vea.</p>
       <ol class="steps">
-        <li><h3>Encontramos su boleta</h3><p>La Oficina del Censo de EE. UU. asocia su dirección con sus distritos. Luego leemos la lista de medidas en la <b>guía oficial para votantes</b> de su estado o ciudad. Su dirección nunca se guarda.</p></li>
-        <li><h3>Solo leemos fuentes oficiales e imparciales</h3><p>La Guía Oficial de Información para Votantes de California y su Analista Legislativo, la guía oficial <i>Information for Voters</i> de Massachusetts y la guía NYC Votes de la Ciudad de Nueva York. Los historiales de los candidatos provienen de Congress.gov, Open States y la Comisión Federal de Elecciones. Si las fuentes no coinciden, prevalece la boleta oficial.</p></li>
-        <li><h3>Un redactor de IA prepara la ficha</h3><p>Arma una tabla de <b>qué cambiaría</b> (hoy frente a si se aprueba) y luego el argumento más sólido de cada lado <b>sobre el fondo</b>: beneficios, costos, riesgos y a quién afecta. Nunca los motivos, donantes o partido del otro lado. Los hechos se separan de los argumentos y cada afirmación se marca como <i>hecho</i>, <i>predicción</i> (de quién) o <i>valor</i>.</p></li>
+        <li><h3>Encontramos su boleta</h3><p>La Oficina del Censo de EE. UU. asocia su dirección con sus distritos (un código postal basta para las medidas estatales). Luego leemos la lista de medidas en la <b>guía oficial para votantes</b> de su estado o ciudad. Su dirección se usa una vez y nunca se guarda.</p></li>
+        <li><h3>Solo leemos fuentes oficiales e imparciales</h3>
+          <table class="srcs">
+            <tr><th>Dónde</th><th>Fuente oficial que leemos</th><th>Qué nos da</th></tr>
+            <tr><td>California</td><td>Guía Oficial de Información para Votantes (Secretaría de Estado)</td><td>Título y resumen, el análisis imparcial del Analista Legislativo, argumentos oficiales a favor y en contra</td></tr>
+            <tr><td>Massachusetts</td><td><i>Information for Voters</i> (Secretaría del Estado Libre Asociado)</td><td>Resumen, qué significa votar sí o no, declaración fiscal, argumentos oficiales a favor y en contra</td></tr>
+            <tr><td>Ciudad de Nueva York</td><td>NYC Votes (Junta de Financiamiento de Campañas)</td><td>Resumen de cada propuesta y de las declaraciones públicas a favor y en contra</td></tr>
+            <tr><td>Connecticut</td><td>Secretaría del Estado</td><td>Sin preguntas estatales en 2026; las preguntas municipales aún no están cubiertas</td></tr>
+          </table>
+          <p>Los historiales de los candidatos provienen de Congress.gov, Open States y la Comisión Federal de Elecciones. Si las fuentes no coinciden, prevalece la boleta oficial.</p></li>
+        <li><h3>Un redactor de IA prepara la ficha</h3><p>Escribe el argumento más sólido de cada lado <b>sobre el fondo</b> (beneficios, costos, riesgos, a quién afecta), nunca los motivos, donantes o partido del otro lado. Luego, dónde está el verdadero desacuerdo, qué dice la evidencia y una tabla de <b>qué cambiaría</b> (hoy frente a si se aprueba). Los hechos se separan de los argumentos, y cada afirmación se marca como <i>hecho</i>, <i>estimación</i> (y de quién) o <i>perspectiva</i>.</p></li>
         <li><h3>Una segunda IA revisa su imparcialidad</h3><p>Un revisor distinto se pone en el lugar de un partidario convencido de cada lado y pregunta: “¿Firmaría esto como nuestro mejor argumento?”. Intercambia las etiquetas para detectar lenguaje parcial y verifica cada afirmación con la página de donde salió. Las citas deben coincidir palabra por palabra. Una ficha puede reescribirse hasta tres veces; si aún tiene problemas, se muestra con la etiqueta <b>“argumento sin verificar”</b>.</p></li>
-        <li><h3>Medimos la exactitud</h3><p>Calificamos nuestras fichas de California frente al Analista Legislativo imparcial del estado: <b>100 %</b> de las afirmaciones respaldadas por la guía oficial, <b>18 de 18</b> descripciones de sí/no/costo correctas <b>99 %</b> de los puntos principales de cada lado cubiertos, y las seis revisiones de imparcialidad aprobadas.</p></li>
+        <li><h3>Medimos la exactitud</h3><p><b>En todos los estados:</b> las 28 fichas de medidas aprobaron la revisión de imparcialidad. <b>Prueba de exactitud:</b> calificamos una muestra frente al Analista Legislativo imparcial de California, la única clave de respuestas independiente que tenemos: <b>100 %</b> de las afirmaciones respaldadas por la guía oficial, <b>18 de 18</b> descripciones de sí/no/costo correctas y <b>99 %</b> de los puntos principales de cada lado cubiertos.</p></li>
         <li><h3>La mantenemos actualizada y segura</h3><p>Las fichas se actualizan a diario cuando se acerca una elección. Solo leemos una lista aprobada de sitios oficiales, quitamos texto oculto que podría engañar a una IA, respetamos los sitios que piden no ser leídos automáticamente y limitamos cuánto puede gastar el sistema.</p></li>
       </ol>
       <h2>Lo que nunca hacemos</h2>
@@ -175,11 +191,19 @@
       <h1>我们的方法</h1>
       <p class="lede">用通俗的话说明：每张卡片从何而来，以及在您看到之前我们如何核查。</p>
       <ol class="steps">
-        <li><h3>找到您的选票</h3><p>由美国人口普查局将您的地址对应到所属选区。然后我们从您所在州或城市的<b>官方选民指南</b>读取投票提案清单。您的地址绝不会被保存。</p></li>
-        <li><h3>只读取官方和无党派来源</h3><p>加州官方选民信息指南及其立法分析师、马萨诸塞州官方《选民须知》以及纽约市的 NYC Votes 指南。候选人记录来自 Congress.gov、Open States 和联邦选举委员会。来源不一致时，以官方选票为准。</p></li>
-        <li><h3>由人工智能撰稿</h3><p>先建立<b>会有什么变化</b>的对照表（现状与通过后），再就提案<b>本身</b>写出双方最有力的论点：好处、成本、风险以及受影响的人群。绝不涉及对方的动机、捐款人或政党。事实与论点分开，每项陈述都标注为<i>事实</i>、<i>预测</i>（谁的估计）或<i>价值判断</i>。</p></li>
+        <li><h3>找到您的选票</h3><p>由美国人口普查局将您的地址对应到所属选区（只填邮编即可查看全州提案）。然后我们从您所在州或城市的<b>官方选民指南</b>读取投票提案清单。您的地址只使用一次，绝不保存。</p></li>
+        <li><h3>只读取官方和无党派来源</h3>
+          <table class="srcs">
+            <tr><th>地区</th><th>我们读取的官方来源</th><th>提供的内容</th></tr>
+            <tr><td>加利福尼亚州</td><td>官方选民信息指南（州务卿）</td><td>标题与摘要、无党派立法分析师的分析、官方支持与反对论点</td></tr>
+            <tr><td>马萨诸塞州</td><td>《选民须知》（州务卿办公室）</td><td>摘要、投赞成或反对票的含义、财政说明、官方支持与反对论点</td></tr>
+            <tr><td>纽约市</td><td>NYC Votes（竞选财务委员会）</td><td>每项提案的摘要，以及支持与反对的公众意见摘要</td></tr>
+            <tr><td>康涅狄格州</td><td>州务卿</td><td>2026年无全州提案；镇级提案尚未覆盖</td></tr>
+          </table>
+          <p>候选人记录来自 Congress.gov、Open States 和联邦选举委员会。来源不一致时，以官方选票为准。</p></li>
+        <li><h3>由人工智能撰稿</h3><p>它就提案<b>本身</b>写出每一方最有力的论点（好处、成本、风险、受影响的人群），绝不涉及对方的动机、捐款人或政党。然后是真正的分歧所在、证据怎么说，以及<b>会有什么变化</b>的对照表（现状与通过后）。事实与论点分开，每项陈述都标注为<i>事实</i>、<i>估计</i>（谁的估计）或<i>观点</i>。</p></li>
         <li><h3>由第二个人工智能审核公正性</h3><p>另一位审核者分别扮演双方的坚定支持者，问自己：“我会把这签成我们最好的论点吗？”它会对调标签来发现偏向性措辞，并逐条对照来源页面核查。引文必须逐字一致。一张卡片最多可重写三次；若仍有问题，会标注<b>“钢人论证未经核实”</b>。</p></li>
-        <li><h3>我们衡量准确性</h3><p>我们以加州无党派立法分析师为标准为加州卡片评分：<b>100%</b>的陈述有官方指南支持，赞成/反对/成本描述<b>18项全部</b>正确，各方主要论点覆盖率<b>99%</b>，六项公正性审核全部通过。</p></li>
+        <li><h3>我们衡量准确性</h3><p><b>所有州：</b>全部28张提案卡片均通过公正性审核。<b>准确性测试：</b>我们以加州无党派立法分析师（我们唯一的独立标准答案）为准对样本评分：<b>100%</b>的陈述有官方指南支持，赞成/反对/成本描述<b>18项全部</b>正确，各方主要论点覆盖率<b>99%</b>。</p></li>
         <li><h3>保持及时与安全</h3><p>临近选举时卡片每日更新。我们只读取经批准的官方网站清单，去除可能误导人工智能的隐藏文字，尊重要求不被自动读取的网站，并限制系统的花费上限。</p></li>
       </ol>
       <h2>我们绝不做的事</h2>

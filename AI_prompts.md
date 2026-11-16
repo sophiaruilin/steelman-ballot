@@ -132,3 +132,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 29: Card order that puts the evidence next to the disagreement
 **Prompt (my own words):** "is it true that each ballot will only have vote yes or no? in that case, both sides and language around two sides makes sense. if there would be a reason not to, then 'all sides / each sides' language can fit. keep consistent. ... for actual balllot page, do you think the order of information and visualization of the info makes sense? ... the evidence often has hidden gems locked in for the discerning voter, like in california bilionaires tax, mentioning that there may be some loss of income if implemented ..."
 **What was lacking before:** The crux and the evidence sat near the bottom of each card, after the mechanics, so the facts that settle or sharpen the disagreement were easy to miss; labels said "prediction" and "value"; and some cards showed "Placed on ballot by: Not specified".
+
+## Step 30: How we work, for every state
+**Prompt (my own words):** "for how we work section, it says california specific info. do you want to make more general by state"
+**What was lacking before:** The sources and accuracy steps read as California-only, and step 3 still used the old fact / prediction / value labels.
