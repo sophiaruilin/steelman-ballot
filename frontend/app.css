@@ -299,3 +299,20 @@ svg.mini { width: 18px; height: 18px; flex: none; }
 .pstep.done .mark { color: var(--verdigris); }
 .pstep .pmeta { font-size: .8rem; white-space: nowrap; }
 #prog-hint { margin: 10px 0 0; font-size: .86rem; }
+
+/* Search bar: privacy first, then what to type */
+.privacy { display: grid; grid-template-columns: 26px 1fr; gap: 10px; align-items: start; margin: 12px 0 0;
+           padding: 10px 12px; border: 1px solid var(--verdigris); border-radius: var(--radius); background: var(--card); }
+.privacy p { margin: 0; font-size: .92rem; line-height: 1.5; }
+.privacy b { color: var(--verdigris); font-weight: 600; }
+.picon { width: 24px; height: 24px; fill: none; stroke: var(--verdigris); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; margin-top: 1px; }
+.picon .dot { fill: var(--copper); stroke: none; }
+.addr-help { list-style: none; padding: 0; margin: 10px 0 0; font-size: .88rem; color: var(--graphite); display: grid; gap: 4px; }
+.addr-help b { font-weight: 600; }
+
+/* Steelman page: real two-sided example */
+.compare2 { display: grid; gap: 18px; margin: 18px 0 8px; }
+@media (min-width: 720px) { .compare2 { grid-template-columns: 1fr 1fr; } }
+.cmp-col { display: grid; gap: 10px; align-content: start; }
+.cmp-side { font: 500 .78rem var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0; }
+.compare2 .cmp .q { font-size: 1.12rem; }

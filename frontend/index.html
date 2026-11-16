@@ -56,17 +56,28 @@
           <p class="sub" data-i18n="hero.sub">Explore the most compelling perspectives on the issues that matter. Challenge your assumptions without abandoning your values.</p>
           <p class="demo-note" data-i18n="hero.demo">Demo: shows the November 3, 2026 ballot as it stood before the vote. No results are shown.</p>
 
-          <form id="address-form" class="lookup" autocomplete="street-address">
-            <label for="address" data-i18n="form.label">Your home address</label>
+          <form id="address-form" class="lookup" autocomplete="off">
+            <label for="address" data-i18n="form.label">Your address or ZIP code</label>
             <div class="row">
-              <input id="address" name="address" type="text" placeholder="Street, city, state ZIP" data-i18n-placeholder="form.placeholder" minlength="5" maxlength="200" required>
+              <input id="address" name="address" type="text" inputmode="text" autocomplete="off" spellcheck="false"
+                     placeholder="e.g. 123 Main St, Boston, MA — or a ZIP code" data-i18n-placeholder="form.placeholder"
+                     minlength="5" maxlength="200" required aria-describedby="privacy-note address-help">
               <button type="submit" class="btn" data-i18n="form.button">See my ballot</button>
             </div>
-            <p class="hint"><span data-i18n="form.hint">Used only to find your districts. Never stored. Try an example:</span>
+            <div class="privacy" id="privacy-note">
+              <svg class="picon" aria-hidden="true"><use href="#i-lock"/></svg>
+              <p><b data-i18n="privacy.head">Never stored.</b> <span data-i18n="privacy.body">We use what you type once, to look up your districts with the U.S. Census Bureau, then discard it. It isn't saved, logged, or tracked, and it never appears in a web address.</span></p>
+            </div>
+            <ul class="addr-help" id="address-help">
+              <li><b data-i18n="help.min_h">Minimum:</b> <span data-i18n="help.min">house number + street + city and state (or ZIP).</span></li>
+              <li><b data-i18n="help.private_h">Rather not use your home?</b> <span data-i18n="help.private">A nearby address on your street usually gives the same ballot. Or type just a ZIP code to see statewide measures.</span></li>
+            </ul>
+            <p class="hint"><span data-i18n="form.examples">Try an example:</span>
               <button type="button" class="linkish" data-example="1315 10th St, Sacramento, CA 95814">Sacramento</button> ·
               <button type="button" class="linkish" data-example="24 Beacon St, Boston, MA 02133">Boston</button> ·
               <button type="button" class="linkish" data-example="253 Broadway, New York, NY 10007">New York City</button> ·
-              <button type="button" class="linkish" data-example="165 Church St, New Haven, CT 06510">New Haven</button>
+              <button type="button" class="linkish" data-example="165 Church St, New Haven, CT 06510">New Haven</button> ·
+              <button type="button" class="linkish" data-example="02139" data-i18n="form.zip_example">ZIP only: 02139</button>
             </p>
           </form>
         </div>
@@ -125,7 +136,7 @@
       <h1>How we work</h1>
       <p class="lede">In plain English: where every card comes from, and how we check it before you see it.</p>
       <ol class="steps">
-        <li><h3>We find your ballot</h3><p>Your address is matched to your districts by the U.S. Census Bureau. We then read the list of measures from your state's or city's <b>official voter guide</b>. Your address is never stored.</p></li>
+        <li><h3>We find your ballot</h3><p>Your address is matched to your districts by the U.S. Census Bureau (a ZIP code alone gives statewide measures). It is sent in the request body, never in a web address, and is not saved or logged. We then read the list of measures from your state's or city's <b>official voter guide</b>. Your address is never stored.</p></li>
         <li><h3>We read only official and nonpartisan sources</h3><p>California's Official Voter Information Guide and Legislative Analyst, Massachusetts' official <i>Information for Voters</i>, and New York City's NYC Votes guide. Candidate records come from Congress.gov, Open States and the Federal Election Commission. If sources disagree, the official ballot wins.</p></li>
         <li><h3>An AI writer drafts the card</h3><p>It builds a <b>What changes</b> table (today vs. if it passes), then each side's strongest case <b>on the merits</b>: benefits, costs, risks, and who is affected. Never the other side's motives, donors or party. Facts are kept separate from arguments, and every claim is labeled <i>fact</i>, <i>prediction</i> (whose estimate) or <i>value</i>.</p></li>
         <li><h3>A second AI checks it for fairness</h3><p>A separate reviewer plays a committed supporter of each side and asks, “Would I sign this as our best case?” It swaps the labels to catch one-sided wording, and checks every claim against the page it came from. Quotes must match word for word. A card gets up to three rewrites; if it still has problems, it's shown with a <b>“steelman unverified”</b> badge.</p></li>
@@ -194,10 +205,20 @@
       <p class="eyebrow">The idea behind the name</p>
       <h1>Steelman vs. strawman</h1>
       <p class="lede">A <b>strawman</b> is the weakest version of a view, built to be knocked down. A <b>steelman</b> is the strongest version, stated so well that its own supporters would say, “I wish I'd put it that way.”</p>
-      <div class="compare">
-        <div class="cmp straw"><p class="tag-l">Strawman</p><p class="q">“Opponents of the bus lanes just hate buses.”</p><p class="muted">Easy to dismiss. Teaches you nothing.</p></div>
-        <div class="cmp steel"><p class="tag-l">Steelman</p><p class="q">“Opponents argue that removing car lanes could lengthen trips for people who can't use transit, like night-shift workers and people with disabilities.”</p><p class="muted">A real trade-off worth weighing.</p></div>
+      <p>A real example from our cards: <b>California Prop 39</b>, “Require government ID checks for voting and citizenship checks of voter rolls.” Strawmen are what you often hear. Steelmen are what our cards say, checked by our fairness review.</p>
+      <div class="compare2">
+        <div class="cmp-col">
+          <p class="cmp-side">Opponents · No</p>
+          <div class="cmp straw"><p class="tag-l">Strawman</p><p class="q">“Opponents just don't care about election fraud.”</p><p class="muted">Easy to dismiss. Teaches you nothing.</p></div>
+          <div class="cmp steel"><p class="tag-l">Steelman</p><p class="q">“Opponents argue added ID requirements would keep some eligible citizens' mail ballots from counting because of mistakes or missing information.”</p><p class="muted">A real reason that thoughtful people on this side hold.</p></div>
+        </div>
+        <div class="cmp-col">
+          <p class="cmp-side">Supporters · Yes</p>
+          <div class="cmp straw"><p class="tag-l">Strawman</p><p class="q">“Supporters just want to make it harder for certain people to vote.”</p><p class="muted">Easy to dismiss. Teaches you nothing.</p></div>
+          <div class="cmp steel"><p class="tag-l">Steelman</p><p class="q">“Supporters argue government ID checks would build trust in elections and encourage more people to participate.”</p><p class="muted">A real reason that thoughtful people on this side hold.</p></div>
+        </div>
       </div>
+      <p><a href="#card=CA-2026-11-03-prop-39">See the full Prop 39 card →</a></p>
       <h2>Why it matters for your ballot</h2>
       <p>When you only hear the weakest version of the other side, every decision looks obvious. Ballot measures rarely are. Seeing both sides at their strongest lets you test your own view against the best objection, and keep it, change it, or hold it more wisely.</p>
       <h2>How we test every steelman</h2>
@@ -213,10 +234,20 @@
       <p class="eyebrow">La idea detrás del nombre</p>
       <h1>Argumento de acero vs. argumento de paja</h1>
       <p class="lede">Un <b>argumento de paja</b> es la versión más débil de una opinión, hecha para derribarla. Un <b>argumento de acero</b> es la versión más sólida, expresada tan bien que sus propios defensores dirían: “Ojalá lo hubiera dicho así”.</p>
-      <div class="compare">
-        <div class="cmp straw"><p class="tag-l">De paja</p><p class="q">“Los que se oponen a los carriles de autobús simplemente odian los autobuses”.</p><p class="muted">Fácil de descartar. No enseña nada.</p></div>
-        <div class="cmp steel"><p class="tag-l">De acero</p><p class="q">“Los opositores argumentan que quitar carriles para autos podría alargar los viajes de quienes no pueden usar el transporte público, como trabajadores del turno nocturno y personas con discapacidad”.</p><p class="muted">Una disyuntiva real que vale la pena sopesar.</p></div>
+      <p>Un ejemplo real de nuestras fichas: <b>Proposición 39 de California</b> (exigir verificaciones de identidad con documentos oficiales para votar y verificaciones de ciudadanía en los padrones electorales). Los argumentos de paja son lo que se oye a menudo. Los de acero son lo que dicen nuestras fichas, revisadas por nuestra revisión de imparcialidad.</p>
+      <div class="compare2">
+        <div class="cmp-col">
+          <p class="cmp-side">Quienes se oponen · No</p>
+          <div class="cmp straw"><p class="tag-l">De paja</p><p class="q">“A quienes se oponen simplemente no les importa el fraude electoral”.</p><p class="muted">Fácil de descartar. No enseña nada.</p></div>
+          <div class="cmp steel"><p class="tag-l">De acero</p><p class="q">“Quienes se oponen a la medida sostienen que los requisitos adicionales de identificación impedirían que se contaran las boletas por correo de algunos ciudadanos que reúnen los requisitos, debido a errores o información faltante.”</p><p class="muted">Una razón real que sostienen personas reflexivas de este lado.</p></div>
+        </div>
+        <div class="cmp-col">
+          <p class="cmp-side">Quienes la apoyan · Yes</p>
+          <div class="cmp straw"><p class="tag-l">De paja</p><p class="q">“Quienes la apoyan solo quieren dificultarle el voto a cierta gente”.</p><p class="muted">Fácil de descartar. No enseña nada.</p></div>
+          <div class="cmp steel"><p class="tag-l">De acero</p><p class="q">“Quienes apoyan la medida sostienen que las verificaciones de identidad con documentos oficiales del gobierno aumentarían la confianza en las elecciones y animarían a más personas a participar.”</p><p class="muted">Una razón real que sostienen personas reflexivas de este lado.</p></div>
+        </div>
       </div>
+      <p><a href="#card=CA-2026-11-03-prop-39">Ver la ficha completa de la Proposición 39 →</a></p>
       <h2>Por qué importa para su boleta</h2>
       <p>Cuando solo escucha la versión más débil del otro lado, toda decisión parece obvia. Las medidas en la boleta rara vez lo son. Ver ambos lados en su mejor versión le permite poner a prueba su opinión frente a la mejor objeción, y mantenerla, cambiarla o sostenerla con más sabiduría.</p>
       <h2>Cómo ponemos a prueba cada argumento</h2>
@@ -232,10 +263,20 @@
       <p class="eyebrow">名称背后的理念</p>
       <h1>钢人论证与稻草人论证</h1>
       <p class="lede"><b>稻草人论证</b>是某种观点最弱的版本，专为被驳倒而设。<b>钢人论证</b>则是最有力的版本，表述得好到连其支持者都会说：“我真希望自己能这么说。”</p>
-      <div class="compare">
-        <div class="cmp straw"><p class="tag-l">稻草人</p><p class="q">“反对公交专用道的人就是讨厌公交车。”</p><p class="muted">很容易驳斥，却让人一无所获。</p></div>
-        <div class="cmp steel"><p class="tag-l">钢人</p><p class="q">“反对者认为，取消汽车车道可能会让无法乘坐公共交通的人通勤时间变长，例如夜班工人和残障人士。”</p><p class="muted">这是一个值得权衡的真实取舍。</p></div>
+      <p>来自我们卡片的真实例子：<b>加州第39号提案</b>（要求核验政府身份证件并核查选民名册上的公民身份）。稻草人论证是你常听到的说法；钢人论证是我们卡片中的表述，并经过公正性审核。</p>
+      <div class="compare2">
+        <div class="cmp-col">
+          <p class="cmp-side">反对者 · No</p>
+          <div class="cmp straw"><p class="tag-l">稻草人</p><p class="q">“反对者根本不在乎选举舞弊。”</p><p class="muted">很容易驳斥，却让人一无所获。</p></div>
+          <div class="cmp steel"><p class="tag-l">钢人</p><p class="q">“反对者认为，增加身份证件要求可能会因错误或资料缺失，导致部分符合资格公民的邮寄选票无法计入。”</p><p class="muted">这一方深思熟虑者真正持有的理由。</p></div>
+        </div>
+        <div class="cmp-col">
+          <p class="cmp-side">支持者 · Yes</p>
+          <div class="cmp straw"><p class="tag-l">稻草人</p><p class="q">“支持者就是想让某些人更难投票。”</p><p class="muted">很容易驳斥，却让人一无所获。</p></div>
+          <div class="cmp steel"><p class="tag-l">钢人</p><p class="q">“支持者认为，核验政府身份证件可以增强公众对选举的信任，并鼓励更多人参与投票。”</p><p class="muted">这一方深思熟虑者真正持有的理由。</p></div>
+        </div>
       </div>
+      <p><a href="#card=CA-2026-11-03-prop-39">查看第39号提案完整卡片 →</a></p>
       <h2>为什么这对您的选票很重要</h2>
       <p>如果只听到对方最弱的说法，每个决定都显得理所当然。但投票提案很少如此。看到双方最有力的论点，您才能用最好的反对意见检验自己的看法，然后坚持、改变，或更明智地持有它。</p>
       <h2>我们如何检验每一个钢人论证</h2>

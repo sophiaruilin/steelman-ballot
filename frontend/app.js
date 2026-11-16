@@ -163,42 +163,54 @@ function showBallotData(b, mine) {
   $("#ballot").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+async function postJSON(path, body) {
+  return fetch(path, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" },
+                       body: JSON.stringify(body) });
+}
+
 async function lookup(address) {
   const mine = ++lookupSeq;                // only the most recent lookup may update the screen
   state.ballot = null;
   $("#ballot").hidden = true;              // never leave the previous address's ballot showing
   status("");
   progress(true);
-  const slow = setTimeout(() => { if (mine === lookupSeq) $("#prog-hint").hidden = false; $("#prog-hint").textContent = t("prog.slow"); }, 7000);
+  const slow = setTimeout(() => { if (mine === lookupSeq) { $("#prog-hint").hidden = false; $("#prog-hint").textContent = t("prog.slow"); } }, 7000);
   const fail = (msg) => { if (mine !== lookupSeq) return; clearTimeout(slow); progress(false); status(msg); };
-
-  if ("EventSource" in window) {
-    let got = false;
-    const es = new EventSource(`/api/ballot/stream?address=${encodeURIComponent(address)}`);
-    es.addEventListener("step", (e) => { got = true; if (mine === lookupSeq) stepUpdate(JSON.parse(e.data)); });
-    es.addEventListener("ballot", (e) => { es.close(); clearTimeout(slow); showBallotData(JSON.parse(e.data), mine); });
-    es.addEventListener("fail", (e) => { es.close(); fail(JSON.parse(e.data).message); });
-    es.onerror = () => {
-      es.close();
-      if (got) return fail(t("prog.slow"));
-      // Streaming not available here (some in-app browsers): fall back to a single request.
-      api(`/api/ballot?address=${encodeURIComponent(address)}`)
-        .then((b) => { clearTimeout(slow); showBallotData(b, mine); })
-        .catch((err) => fail(err.message));
-    };
-    return;
-  }
+  const done = (b) => { clearTimeout(slow); showBallotData(b, mine); };
+  // The address goes in the request body (POST), never in a URL, so it isn't kept in history or logs.
   try {
-    const b = await api(`/api/ballot?address=${encodeURIComponent(address)}`);
-    clearTimeout(slow);
-    showBallotData(b, mine);
+    const res = await postJSON("/api/ballot/stream", { address });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      return fail(res.status === 422 ? t("help.min") : (err.error || `Request failed (${res.status})`));
+    }
+    if (!res.body || !res.body.getReader) {           // very old in-app browsers: no streaming
+      return done(await (await postJSON("/api/ballot", { address })).json());
+    }
+    const reader = res.body.getReader();
+    const dec = new TextDecoder();
+    let buf = "", finished = false;
+    while (!finished) {
+      const { value, done: end } = await reader.read();
+      if (end) break;
+      buf += dec.decode(value, { stream: true });
+      let i;
+      while ((i = buf.indexOf("\n\n")) >= 0) {
+        const block = buf.slice(0, i); buf = buf.slice(i + 2);
+        const kind = (block.match(/^event: (.+)$/m) || [])[1];
+        const data = JSON.parse((block.match(/^data: (.+)$/m) || [, "{}"])[1]);
+        if (kind === "step" && mine === lookupSeq) stepUpdate(data);
+        else if (kind === "fail") { finished = true; fail(data.message); }
+        else if (kind === "ballot") { finished = true; done(data); }
+      }
+    }
   } catch (e) {
-    fail(e.message);
+    fail(e.message || t("prog.slow"));
   }
 }
 
 function coveragePill(name, v) {
-  const cls = { official: "ok", none_on_ballot: "ok", not_mapped: "warn", unavailable: "warn" }[v] || "";
+  const cls = { official: "ok", none_on_ballot: "ok", not_mapped: "warn", unavailable: "warn", needs_address: "" }[v] || "";
   const txt = t(`cov.${v}`);
   return el("li", { class: `pill ${cls}` }, `${name}: ${txt}`);
 }
@@ -213,7 +225,7 @@ function renderBallot() {
     el("div", { class: "stats" },
       el("span", {}, el("b", {}, b.measures.length), t("ballot.measures")),
       el("span", {}, el("b", {}, b.races.length), t("ballot.races"))),
-    el("p", { class: "districts-line" }, districtLine),
+    b.zip_only ? el("p", { class: "notice" }, t("ballot.ziponly")) : el("p", { class: "districts-line" }, districtLine),
     el("p", { class: "notice" }, t("ballot.notice"), " ", b.official_links.map((l) => [extLink(l.url, l.label), " "])),
     el("details", {},
       el("summary", {}, t("ballot.details")),

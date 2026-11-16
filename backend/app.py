@@ -6,8 +6,10 @@ SNAPSHOT_ONLY=1 (default) serves only cards already researched (output/cards/) a
 model, so the public site can't spend tokens. SNAPSHOT_ONLY=0 researches missing measures on demand
 through the shared per-contest cache (backend/pipeline.get_measure), within the spending caps.
 
-Privacy: addresses are used only to look up districts with the Census Geocoder. They are never
-logged, stored or returned; responses contain district names only.
+Privacy: addresses are sent in the request BODY (POST), never in a URL, so they don't appear in
+browser history or server/proxy access logs (and uvicorn runs with --no-access-log). They are used
+once to look up districts with the Census Geocoder and are never logged, stored or returned.
+A ZIP code alone also works: it gives the statewide measures for the covered states.
 """
 
 from __future__ import annotations
@@ -22,6 +24,7 @@ from datetime import date
 
 import segno
 from fastapi import FastAPI, HTTPException, Query, Request
+from pydantic import BaseModel, Field
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, Response, StreamingResponse
 from starlette.concurrency import run_in_threadpool
 from fastapi.staticfiles import StaticFiles
@@ -29,7 +32,7 @@ from fastapi.staticfiles import StaticFiles
 from backend import config
 from backend.agents.ballot_mapper import COVERED_STATES, MAP_KIND, measures_for, races_for
 from backend.share import open_graph, share_text, whatsapp_link
-from backend.sources.geocoder import AddressNotFound, geocode
+from backend.sources.geocoder import AddressNotFound, Area, Jurisdiction, geocode
 from backend.sources.http import SourceError
 from backend.sources.web import WebReader
 
@@ -210,11 +213,51 @@ def guide_source(j) -> str:
     return ""
 
 
-@app.get("/api/ballot")
-def ballot(request: Request, address: str = Query(..., min_length=5, max_length=200)):
+class Lookup(BaseModel):
+    address: str = Field(..., min_length=5, max_length=200)
+
+
+# ZIP-only lookups: the first three digits of a ZIP code tell us the state (and New York City),
+# which is all statewide measures depend on. Only the covered states are mapped.
+ZIP3 = {"CA": [(900, 961)], "MA": [(10, 27), (55, 55)], "NY": [(5, 5), (100, 149)], "CT": [(60, 69)]}
+STATE_INFO = {"CA": ("California", "06"), "MA": ("Massachusetts", "25"), "NY": ("New York", "36"), "CT": ("Connecticut", "09")}
+NYC_ZIP3 = {100, 101, 102, 103, 104, 111, 112, 113, 114, 116}
+ZIP_RE = re.compile(r"^\s*(\d{5})(?:-\d{4})?\s*$")
+
+
+def zip_jurisdiction(zip5: str) -> Jurisdiction:
+    z3 = int(zip5[:3])
+    state = next((st for st, ranges in ZIP3.items() if any(lo <= z3 <= hi for lo, hi in ranges)), None)
+    if not state:
+        raise AddressNotFound("A ZIP code alone works for the states we cover (California, Massachusetts, "
+                              "New York, Connecticut). Elsewhere, enter a street address to see your districts.")
+    name, fips = STATE_INFO[state]
+    place = Area("New York city", "3651000") if state == "NY" and z3 in NYC_ZIP3 else None
+    return Jurisdiction(matched_address="", state_name=name, state_abbr=state, state_fips=fips, county=None,
+                        county_subdivision=None, place=place, congressional_district=None, state_senate=None,
+                        state_house=None, school_district=None, congress_label="")
+
+
+def resolve(address: str) -> tuple[Jurisdiction, bool]:
+    m = ZIP_RE.match(address)
+    if m:
+        return zip_jurisdiction(m.group(1)), True
+    return geocode(address), False
+
+
+def with_zip_note(data: dict, zip_only: bool) -> dict:
+    data["zip_only"] = zip_only
+    if zip_only:
+        data["coverage"]["Federal"] = "needs_address"
+        data["coverage"]["Local"] = data["coverage"]["Local"] if data["coverage"]["Local"] == "official" else "needs_address"
+    return data
+
+
+@app.post("/api/ballot")
+def ballot(request: Request, body: Lookup):
     rate_limit(request)
     try:
-        j = geocode(address)
+        j, zip_only = resolve(body.address)
     except AddressNotFound as e:
         raise HTTPException(404, str(e)) from None
     except SourceError:
@@ -223,13 +266,14 @@ def ballot(request: Request, address: str = Query(..., min_length=5, max_length=
         measures, mstatus = ballot_measures(j)
     except SourceError:
         measures, mstatus = [], "unavailable"
-    return assemble_ballot(j, measures, mstatus)
+    return with_zip_note(assemble_ballot(j, measures, mstatus), zip_only)
 
 
-@app.get("/api/ballot/stream")
-async def ballot_stream(request: Request, address: str = Query(..., min_length=5, max_length=200)):
-    """Same as /api/ballot, but streams real progress (Server-Sent Events) so voters can see each step."""
+@app.post("/api/ballot/stream")
+async def ballot_stream(request: Request, body: Lookup):
+    """Same as /api/ballot, but streams real progress (Server-Sent Events format) so voters can see each step."""
     rate_limit(request)
+    address = body.address
 
     def ev(kind: str, **data) -> str:
         return f"event: {kind}\ndata: {json.dumps(data, ensure_ascii=False)}\n\n"
@@ -238,12 +282,13 @@ async def ballot_stream(request: Request, address: str = Query(..., min_length=5
         t0 = time.monotonic()
         yield ev("step", id="districts", state="start")
         try:
-            j = await run_in_threadpool(geocode, address)
+            j, zip_only = await run_in_threadpool(resolve, address)
         except AddressNotFound as e:
             yield ev("fail", message=str(e)); return
         except Exception:
             yield ev("fail", message="The address lookup service is busy. Please try again shortly."); return
-        yield ev("step", id="districts", state="done", seconds=round(time.monotonic() - t0, 1), detail=j.state_abbr)
+        yield ev("step", id="districts", state="done", seconds=round(time.monotonic() - t0, 1),
+                 detail=j.state_abbr, zip_only=zip_only)
 
         src = guide_source(j)
         t1 = time.monotonic()
@@ -256,7 +301,7 @@ async def ballot_stream(request: Request, address: str = Query(..., min_length=5
 
         t2 = time.monotonic()
         yield ev("step", id="cards", state="start")
-        data = await run_in_threadpool(assemble_ballot, j, measures, mstatus)
+        data = with_zip_note(await run_in_threadpool(assemble_ballot, j, measures, mstatus), zip_only)
         ready = sum(m["status"] == "ready" for m in data["measures"])
         yield ev("step", id="cards", state="done", seconds=round(time.monotonic() - t2, 1), count=ready)
         yield ev("ballot", **data)

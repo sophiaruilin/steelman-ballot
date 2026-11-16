@@ -62,14 +62,14 @@ def test_topics_drive_order_only():
 
 
 def test_ballot_rejects_bad_address_input():
-    assert client.get("/api/ballot", params={"address": "abc"}).status_code == 422
+    assert client.post("/api/ballot", json={"address": "abc"}).status_code == 422
 
 
 def test_rate_limit(monkeypatch):
     monkeypatch.setattr(app_module, "RATE", (2, 60.0))
     app_module._hits.clear()
     monkeypatch.setattr(app_module, "geocode", lambda a: (_ for _ in ()).throw(app_module.AddressNotFound("x")))
-    codes = [client.get("/api/ballot", params={"address": "123 Main St"}).status_code for _ in range(3)]
+    codes = [client.post("/api/ballot", json={"address": "123 Main St"}).status_code for _ in range(3)]
     assert codes == [404, 404, 429]
     app_module._hits.clear()
 
@@ -140,7 +140,7 @@ def test_ballot_stream_reports_real_steps_in_order(monkeypatch):
     monkeypatch.setattr(app_module, "geocode", lambda a: j)
     monkeypatch.setattr(app_module, "ballot_measures", lambda jj: ([], "none_on_ballot"))
     app_module._hits.clear()
-    r = client.get("/api/ballot/stream", params={"address": "165 Church St, New Haven, CT 06510"})
+    r = client.post("/api/ballot/stream", json={"address": "165 Church St, New Haven, CT 06510"})
     assert r.headers["content-type"].startswith("text/event-stream")
     events = [(blk.split("\n")[0][len("event: "):], json.loads(blk.split("\n")[1][len("data: "):]))
               for blk in r.text.strip().split("\n\n")]
@@ -155,5 +155,31 @@ def test_ballot_stream_reports_real_steps_in_order(monkeypatch):
 def test_ballot_stream_bad_address_fails_cleanly(monkeypatch):
     monkeypatch.setattr(app_module, "geocode", lambda a: (_ for _ in ()).throw(app_module.AddressNotFound("No match")))
     app_module._hits.clear()
-    r = client.get("/api/ballot/stream", params={"address": "123 Nowhere Lane"})
+    r = client.post("/api/ballot/stream", json={"address": "123 Nowhere Lane"})
     assert "event: fail" in r.text and "No match" in r.text and "event: ballot" not in r.text
+
+
+def test_addresses_never_go_in_a_url():
+    # Lookups are POST-only: a GET with ?address= is refused, so addresses can't land in logs or history.
+    assert client.get("/api/ballot", params={"address": "1315 10th St, Sacramento, CA"}).status_code in (404, 405)
+    assert client.get("/api/ballot/stream", params={"address": "1315 10th St, Sacramento, CA"}).status_code in (404, 405)
+    js = client.get("/app.js").text
+    assert "/api/ballot?address" not in js and "ballot/stream?address" not in js
+
+
+@pytest.mark.parametrize("zip5,state,nyc", [("95814", "CA", False), ("02139", "MA", False), ("10007", "NY", True),
+                                            ("12207", "NY", False), ("06510", "CT", False)])
+def test_zip_only_lookup(zip5, state, nyc):
+    j, zip_only = app_module.resolve(zip5)
+    assert zip_only and j.state_abbr == state and (j.place is not None and j.place.geoid == "3651000") == nyc
+    assert j.congressional_district is None   # no street address, so no district races
+
+
+def test_zip_outside_covered_states_is_explained():
+    with pytest.raises(app_module.AddressNotFound, match="street address"):
+        app_module.resolve("78701")   # Austin, TX
+
+
+def test_render_runs_without_access_logs():
+    from pathlib import Path
+    assert "--no-access-log" in (Path(__file__).parent.parent / "render.yaml").read_text(encoding="utf-8")
