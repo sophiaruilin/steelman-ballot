@@ -174,6 +174,8 @@ def assemble_ballot(j, measures, mstatus) -> dict:
         "election": ELECTION,
         "election_passed": date.fromisoformat(ELECTION) < date.today(),
         "state": j.state_abbr,
+        # Shown back to the voter so they can confirm the match. Never logged, counted or cached.
+        "matched_address": j.matched_address or "",
         "districts": {k: v for k, v in {
             "Congress": j.congressional_district and j.congressional_district.name,
             "State Senate": j.state_senate and j.state_senate.name,

@@ -25,3 +25,9 @@ def test_schedule_covers_class_ii_plus_specials():
     up = SENATE_UP[2026]
     assert len(up) == 35 and {"FL", "OH", "MA", "TX"} <= up
     assert not ({"CA", "NY", "CT"} & up)
+
+
+def test_zip_lookup_has_no_matched_address():
+    """A ZIP-only lookup has no street to confirm, so the field is empty (never a guess)."""
+    r = client.post("/api/ballot", json={"address": "95814"}).json()
+    assert r["matched_address"] == ""

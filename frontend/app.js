@@ -34,6 +34,7 @@ function setLang(lang) {
   state.lang = lang;
   store.set("sb.lang", lang);
   applyLang();
+  if ($("#ready-hint")) updateHint();
   route();
 }
 
@@ -186,8 +187,9 @@ function compactHero(on) {
 function showBallotData(b, mine) {
   if (mine !== lookupSeq) return;          // a newer lookup started while this one was loading
   state.ballot = b;
-  state.saved = b;
-  store.set("sb.ballot", b);               // districts and card list only; the address is not saved
+  const { matched_address, ...keep } = b;  // the matched address is shown once, never saved
+  state.saved = keep;
+  store.set("sb.ballot", keep);            // districts and card list only; the address is not saved
   $("#last-ballot").hidden = true;
   status("");
   setBar(100);
@@ -257,6 +259,15 @@ const fmtDate = (iso) => new Intl.DateTimeFormat(LOCALE[state.lang] || "en-US", 
 const readIds = () => new Set(store.get("sb.read") || []);
 function markRead(id) { const r = readIds(); if (!r.has(id)) { r.add(id); store.set("sb.read", [...r]); } }
 
+// "1315 10TH ST, SACRAMENTO, CA, 95814" -> "1315 10th St, Sacramento, CA 95814"
+function prettyAddress(a) {
+  const cap = (x) => x.toLowerCase().replace(/(^|[\s-])([a-z])/g, (m, p, c) => p + c.toUpperCase());
+  const parts = a.split(/\s*,\s*/);
+  if (parts.length < 4) return a;
+  const [street, city, st, zip] = parts;
+  return `${cap(street)}, ${cap(city)}, ${st.toUpperCase()} ${zip}`;
+}
+
 function renderBallot() {
   const b = state.ballot;
   const d = b.districts;
@@ -266,6 +277,10 @@ function renderBallot() {
   $("#summary").replaceChildren(
     el("p", { class: "eyebrow" }, `${b.state} · ${t("ballot.election")} ${fmtDate(b.election)}`),
     el("h2", {}, t("ballot.title")),
+    b.matched_address ? el("p", { class: "matched" },
+      el("span", { class: "ok", "aria-hidden": "true" }, "✓ "), `${t("ballot.matched")}: `, el("b", {}, prettyAddress(b.matched_address)), " · ",
+      el("button", { type: "button", class: "linkish", onclick: () => { window.scrollTo({ top: 0 }); $("#address").focus(); $("#address").select(); } },
+        t("ballot.edit"))) : null,
     el("div", { class: "stats" },
       el("span", {}, el("b", {}, b.measures.length), t(b.measures.length === 1 ? "ballot.measure" : "ballot.measures")),
       el("span", {}, el("b", {}, ready.length), t(ready.length === 1 ? "ballot.race" : "ballot.races"),
@@ -501,6 +516,25 @@ function shareBar(id) {
       el("button", { class: "btn ghost", onclick: async () => { const s = await getShare("copy"); copy(s.url, t("share.copied")); } }, t("share.copy"))),
     qrBox, out);
 }
+
+// ---- address hint (runs on this device only; nothing is sent while typing) ---------------------------
+const STATE_CODES = new Set(("AL AK AZ AR CA CO CT DE DC FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY").split(" "));
+const STATE_NAME_END = /(alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware|florida|georgia|hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|michigan|minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|new mexico|new york|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|washington|west virginia|wisconsin|wyoming)$/i;
+function addressHint(v) {
+  v = v.trim();
+  if (/^\d{5}(-\d{4})?$/.test(v)) return { ok: true, key: "form.ziponly" };
+  if (!/^\d+[a-z]?\s+\S+/i.test(v)) return null;                 // not a street address yet
+  const words = v.replace(/[.,]/g, " ").split(/\s+/).filter(Boolean);
+  const last = words[words.length - 1] || "";
+  const complete = words.length >= 4 && (/^\d{5}(-\d{4})?$/.test(last) || STATE_CODES.has(last.toUpperCase()) || STATE_NAME_END.test(v.replace(/[.,]+$/, "")));
+  return complete ? { ok: true, key: "form.ready" } : { ok: false, key: "form.addcity" };
+}
+function updateHint() {
+  const h = addressHint($("#address").value), box = $("#ready-hint");
+  box.className = `ready-hint${h ? (h.ok ? " ok" : " todo") : ""}`;
+  box.textContent = h ? `${h.ok ? "✓ " : ""}${t(h.key)}` : "";
+}
+$("#address").addEventListener("input", updateHint);
 
 // ---- start -----------------------------------------------------------------------------------------
 $("#address-form").addEventListener("submit", (e) => { e.preventDefault(); lookup($("#address").value.trim()); });

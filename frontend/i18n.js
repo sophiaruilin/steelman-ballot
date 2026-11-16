@@ -3,6 +3,11 @@
 "use strict";
 window.I18N = {
   en: {
+    "ballot.edit": "Not right? Edit",
+    "ballot.matched": "Matched to",
+    "form.addcity": "Add your city and state, or ZIP",
+    "form.ziponly": "Ready · a ZIP shows statewide measures only",
+    "form.ready": "Ready",
     "race.office": "Your official election office (vote.gov)",
     "race.money": "Campaign contributions (Cal-Access, Secretary of State)",
     "race.statements": "Candidate statements (official voter guide)",
@@ -88,6 +93,11 @@ window.I18N = {
     "race.differ": "Where they differ", "race.note": "Statements were written by the candidates and not checked by any official agency. We never tell you how to vote.",
   },
   es: {
+    "ballot.edit": "¿No es correcta? Editar",
+    "ballot.matched": "Dirección encontrada",
+    "form.addcity": "Agregue su ciudad y estado, o código postal",
+    "form.ziponly": "Listo · un código postal muestra solo las medidas estatales",
+    "form.ready": "Listo",
     "race.office": "Su oficina electoral oficial (vote.gov)",
     "race.money": "Contribuciones de campaña (Cal-Access, Secretaría de Estado)",
     "race.statements": "Declaraciones de los candidatos (guía oficial)",
@@ -173,6 +183,11 @@ window.I18N = {
     "race.differ": "En qué se diferencian", "race.note": "Las declaraciones fueron escritas por los candidatos y ninguna agencia oficial las verificó. Nunca le decimos cómo votar.",
   },
   zh: {
+    "ballot.edit": "不对？修改",
+    "ballot.matched": "匹配地址",
+    "form.addcity": "请加上城市和州，或邮编",
+    "form.ziponly": "可以查询 · 仅邮编只显示全州提案",
+    "form.ready": "可以查询",
     "race.office": "您所在地的官方选举办公室（vote.gov）",
     "race.money": "竞选捐款（Cal-Access，州务卿）",
     "race.statements": "候选人声明（官方选民指南）",

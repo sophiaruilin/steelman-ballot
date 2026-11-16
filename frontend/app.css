@@ -411,3 +411,11 @@ table.srcs td:first-child { font-weight: 500; color: var(--verdigris); white-spa
 .learn-more ul { padding-left: 1.1em; }
 .nav .ns { display: none; }
 @media (max-width: 640px) { .nav .nl { display: none; } .nav .ns { display: inline; } }
+
+/* ---- address confirmation: "Ready" while typing, "Matched to" on the result ---- */
+.ready-hint { align-self: center; font: 500 .92rem var(--sans); color: var(--muted); }
+.ready-hint.ok { color: var(--verdigris); }
+.ready-hint:empty { display: none; }
+.summary .matched { margin: 0 0 10px; font: 400 .95rem var(--sans); color: var(--graphite); }
+.summary .matched .ok { color: var(--verdigris); font-weight: 600; }
+.summary .matched .linkish { font-size: .92rem; }
