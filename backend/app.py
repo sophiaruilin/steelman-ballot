@@ -332,7 +332,7 @@ def stats_page():
     days = "".join(f"<tr><td>{e(d)}</td><td>{(v.get('lookup') or {}).get('all', 0)}</td>"
                    f"<td>{sum((v.get('card') or {}).values())}</td><td>{sum((v.get('share') or {}).values())}</td>"
                    f"<td>{v.get('visit', 0)}</td></tr>" for d, v in r["by_day"].items())
-    body = (f"<p class='muted'>{e(r['note'])} Storage: {e(r['storage'])}"
+    body = (f"<p class='notice'>{e(r['error'])}</p>" if r.get("error") else "") + (f"<p class='muted'>{e(r['note'])} Storage: {e(r['storage'])}"
             f"{' (resets when the server restarts)' if r['storage'] == 'memory' else ''}.</p>"
             f"<h2>Last 14 days</h2><table><tr><th>Day</th><th>Lookups</th><th>Cards opened</th><th>Shares</th>"
             f"<th>Home page loads</th></tr>{days}</table>"

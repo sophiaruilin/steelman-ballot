@@ -22,8 +22,13 @@ from datetime import date, timedelta
 
 import httpx
 
-URL = os.getenv("UPSTASH_REDIS_REST_URL", "").rstrip("/")
-TOKEN = os.getenv("UPSTASH_REDIS_REST_TOKEN", "")
+def _env(name: str) -> str:
+    # tolerate the usual copy-paste slips: spaces, newlines, surrounding quotes
+    return os.getenv(name, "").strip().strip('"').strip("'").strip()
+
+
+URL = _env("UPSTASH_REDIS_REST_URL").rstrip("/")
+TOKEN = _env("UPSTASH_REDIS_REST_TOKEN")
 DAY_TTL = 120 * 24 * 3600
 FIELD = re.compile(r"^[a-z_]+:[A-Za-z0-9_-]{1,60}$|^visit$")
 
@@ -69,17 +74,30 @@ def _hgetall_many(keys: list[str]) -> list[dict[str, int]]:
             return [dict(_mem.get(k, {})) for k in keys]
     r = httpx.post(f"{URL}/pipeline", json=[["HGETALL", k] for k in keys],
                    headers={"Authorization": f"Bearer {TOKEN}"}, timeout=10)
+    body = r.json() if r.headers.get("content-type", "").startswith("application/json") else None
+    if r.status_code != 200 or not isinstance(body, list):
+        msg = body.get("error") if isinstance(body, dict) else r.text[:120]
+        raise StatsUnavailable(f"Upstash returned HTTP {r.status_code}: {str(msg).replace(TOKEN, '***')}")
     out = []
-    for item in r.json():
+    for item in body:
         flat = item.get("result") or []
         out.append({flat[i]: int(flat[i + 1]) for i in range(0, len(flat), 2)})
     return out
 
 
+class StatsUnavailable(RuntimeError):
+    pass
+
+
 def report(days: int = 14) -> dict:
-    """Totals overall and per day, grouped for reading."""
+    """Totals overall and per day, grouped for reading. Never raises: shows the problem instead."""
     day_keys = [f"d:{(date.today() - timedelta(days=i)).isoformat()}" for i in range(days)]
-    total, *per_day = _hgetall_many(["total", *day_keys])
+    try:
+        total, *per_day = _hgetall_many(["total", *day_keys])
+    except Exception as e:
+        return {"storage": backend(), "error": f"Totals unavailable right now ({str(e)[:200]})",
+                "note": "Anonymous totals only: no addresses, IPs, cookies or per-person data.",
+                "total": {}, "by_day": {}}
 
     def group(d: dict[str, int]) -> dict:
         g: dict = defaultdict(dict)

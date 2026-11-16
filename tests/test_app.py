@@ -227,3 +227,15 @@ def test_stats_page_is_public_and_anonymous():
     assert r.status_code == 200 and "Anonymous usage" in r.text and "noindex" in r.text
     j = client.get("/api/stats").json()
     assert j["storage"] in ("memory", "upstash") and "no addresses" in j["note"]
+
+
+def test_stats_page_survives_a_bad_upstash_setting(monkeypatch):
+    from backend import stats
+    monkeypatch.setattr(stats, "URL", "https://example.upstash.io")
+    monkeypatch.setattr(stats, "TOKEN", "bad-token")
+    def boom(keys):
+        raise stats.StatsUnavailable("Upstash returned HTTP 401: Unauthorized")
+    monkeypatch.setattr(stats, "_hgetall_many", boom)
+    r = client.get("/stats")
+    assert r.status_code == 200 and "Totals unavailable" in r.text and "bad-token" not in r.text
+    assert client.get("/api/stats").json()["error"].startswith("Totals unavailable")
