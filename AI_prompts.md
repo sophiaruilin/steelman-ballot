@@ -184,3 +184,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 42: "Ready" while typing, "Matched to" on the result
 **Prompt (my own words):** "when type in address shuold it show drpo down of matching address or some way to confirm the info is all set and ready to click see my ballot" then "maybe just Looks complete: a small ✓ "Ready" next to the button? or would you recommend differently" and "Ready + matched address"
 **What was lacking before:** Nothing told voters their entry was complete before clicking, or which address the Census actually matched afterward. We chose not to add an autocomplete dropdown, because it would send every keystroke of a partial address to a third party, which conflicts with "We never store addresses."
+
+## Step 43: Keep the free server awake
+**Prompt (my own words):** "push any other recommendations we haven't pushed yet" then "yes implement. also what about the voter user experience recommendations, did we implement those"
+**What was lacking before:** Render's free plan puts the site to sleep after about 15 idle minutes, so the first visitor after a quiet spell (a tester, or a TA opening the link) waited 30–60 seconds on a blank page.
