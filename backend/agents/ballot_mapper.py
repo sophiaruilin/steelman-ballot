@@ -181,6 +181,15 @@ def measures_for(j: Jurisdiction, election: str, reader: WebReader) -> tuple[lis
 
 # ---- Races from districts --------------------------------------------------------
 
+# States with a U.S. Senate seat on the ballot: the 33 Class II seats in 2026, plus the 2026 special
+# elections in Florida and Ohio. (California, New York and Connecticut have no Senate race in 2026.)
+SENATE_UP = {
+    2026: {"AL", "AK", "AR", "CO", "DE", "GA", "ID", "IL", "IA", "KS", "KY", "LA", "ME", "MA", "MI", "MN",
+           "MS", "MT", "NE", "NH", "NJ", "NM", "NC", "OK", "OR", "RI", "SC", "SD", "TN", "TX", "VA", "WV",
+           "WY", "FL", "OH"},
+}
+
+
 def races_for(j: Jurisdiction, election: str) -> list[Race]:
     year = int(election[:4])
     races = []
@@ -188,9 +197,15 @@ def races_for(j: Jurisdiction, election: str) -> list[Race]:
         n = j.congressional_district.geoid[-2:]
         races.append(Race(office=f"U.S. House {j.state_abbr}-{int(n)}", level="federal", district=n,
                           lookup={"fec": {"state": j.state_abbr, "office": "H", "district": int(n), "cycle": year}}))
-    # Senate: whether a seat is up is settled by FEC filings for this cycle (checked by the profiler).
-    races.append(Race(office="U.S. Senate", level="federal", district=None, confirmed=False,
-                      lookup={"fec": {"state": j.state_abbr, "office": "S", "cycle": year}}))
+    # Senate: only list it where a seat is actually up. For years we have a schedule for, that is
+    # settled; otherwise it stays unconfirmed (check the official sample ballot).
+    if year in SENATE_UP:
+        if j.state_abbr in SENATE_UP[year]:
+            races.append(Race(office="U.S. Senate", level="federal", district=None,
+                              lookup={"fec": {"state": j.state_abbr, "office": "S", "cycle": year}}))
+    else:
+        races.append(Race(office="U.S. Senate", level="federal", district=None, confirmed=False,
+                          lookup={"fec": {"state": j.state_abbr, "office": "S", "cycle": year}}))
     if j.state_senate:
         races.append(Race(office=j.state_senate.name, level="state_legislative", district=j.state_senate.geoid,
                           lookup={"openstates": {"lat": j.lat, "lng": j.lng, "chamber": "upper"}}))

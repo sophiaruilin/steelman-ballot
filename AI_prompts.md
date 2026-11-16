@@ -176,3 +176,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 40: The result shows without scrolling
 **Prompt (my own words):** "i want to compress the beginning part of home page so the ballot in 60 seconds shows when it's done running - without needing to scroll - to make as user friendly and inutitive as posisble. make necessary adjustments you'd reocmmend"
 **What was lacking before:** After a lookup, the full intro (headline, motto, purpose lines, coverage line) stayed above the result, so "Your ballot in 60 seconds" started below the fold on a laptop and needed a scroll on a phone.
+
+## Step 41: A first-time voter's review, all eight fixes
+**Prompt (my own words):** "pretend you're a ui design expert and civic engagement advocate and geniune voter who is not in the know. comb through site and make a list of any potential upgrades/recommendations if would meaningfully improve or keep as is if none no problem" then "Do all 1–8"
+**What was lacking before:** Race cards showed placeholder lines ("Funded by: state campaign finance not connected yet") and called a 20-year congressman someone with "no legislative record"; California listed a U.S. Senate race that isn't on its 2026 ballot; the summary counted uncovered races as if they had cards; reading 14 propositions meant going back to the list after each one, with no sign of which were already read; dates showed as 2026-11-03; the phone menu cut off "Our philosophy"; and "Look-back demo" didn't say plainly that the election had already happened.

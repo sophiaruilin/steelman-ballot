@@ -250,16 +250,26 @@ function coveragePill(name, v) {
   return el("li", { class: `pill ${cls}` }, `${name}: ${txt}`);
 }
 
+const LOCALE = { en: "en-US", es: "es-US", zh: "zh-CN" };
+const fmtDate = (iso) => new Intl.DateTimeFormat(LOCALE[state.lang] || "en-US", { dateStyle: "long", timeZone: "UTC" })
+  .format(new Date(`${iso}T00:00:00Z`));
+// Which measure cards this browser has opened. Kept only on this device; no vote is ever recorded.
+const readIds = () => new Set(store.get("sb.read") || []);
+function markRead(id) { const r = readIds(); if (!r.has(id)) { r.add(id); store.set("sb.read", [...r]); } }
+
 function renderBallot() {
   const b = state.ballot;
   const d = b.districts;
   const districtLine = [d["Congress"], d["State Senate"], d["State House / Assembly"], d["City"]].filter(Boolean).join(" · ");
+  const ready = b.races.filter((r) => r.status === "ready" && r.id);
+  const rest = b.races.filter((r) => !(r.status === "ready" && r.id));
   $("#summary").replaceChildren(
-    el("p", { class: "eyebrow" }, `${b.state} · ${t("ballot.election")} ${b.election}`),
+    el("p", { class: "eyebrow" }, `${b.state} · ${t("ballot.election")} ${fmtDate(b.election)}`),
     el("h2", {}, t("ballot.title")),
     el("div", { class: "stats" },
-      el("span", {}, el("b", {}, b.measures.length), t("ballot.measures")),
-      el("span", {}, el("b", {}, b.races.length), t("ballot.races"))),
+      el("span", {}, el("b", {}, b.measures.length), t(b.measures.length === 1 ? "ballot.measure" : "ballot.measures")),
+      el("span", {}, el("b", {}, ready.length), t(ready.length === 1 ? "ballot.race" : "ballot.races"),
+        rest.length ? el("small", { class: "more-races" }, t("ballot.morerace", { n: rest.length })) : null)),
     b.zip_only ? el("p", { class: "notice" }, t("ballot.ziponly")) : el("p", { class: "districts-line" }, districtLine),
     el("p", { class: "notice" }, t("ballot.notice"), " ", b.official_links.map((l) => [extLink(l.url, l.label), " "])),
     b.measures.some((m) => m.status === "ready")
@@ -269,12 +279,10 @@ function renderBallot() {
       el("summary", {}, t("ballot.details")),
       el("p", { class: "muted" }, b.coverage_note || ""),
       el("ul", { class: "pills", "aria-label": t("ballot.coverage") }, Object.entries(b.coverage).map(([k, v]) => coveragePill(k, v))),
-      b.election_passed ? el("p", { class: "muted" }, t("ballot.lookback", { d: b.election })) : null));
+      b.election_passed ? el("p", { class: "muted" }, t("ballot.lookback", { d: fmtDate(b.election) })) : null));
   const measures = b.measures;   // official ballot order
   $("#measures").replaceChildren(...(measures.length ? measures.map((m) => el("li", {}, listItem(m)))
     : [el("li", { class: "muted item disabled" }, el("span", {}), el("span", {}, t("ballot.none")))]));
-  const ready = b.races.filter((r) => r.status === "ready" && r.id);
-  const rest = b.races.filter((r) => !(r.status === "ready" && r.id));
   $("#races").replaceChildren(
     ...ready.map((r) => el("li", {}, raceItem(r))),
     rest.length ? el("li", { class: "uncovered" }, el("b", {}, t("ballot.notcovered", { n: rest.length })), " ",
@@ -292,6 +300,7 @@ function listItem(m) {
       el("span", { class: "cta" }, t("item.cta")),
       m.verified ? null : el("span", { class: "pill warn" }, t("item.unverified")),
       `· ${m.reading_minutes} ${t("item.read")}`,
+      readIds().has(m.id) ? el("span", { class: "pill done" }, `✓ ${t("item.done")}`) : null,
       m.scope && m.scope !== "statewide" ? el("span", { class: "pill" }, m.scope) : null));
 }
 
@@ -332,11 +341,26 @@ async function route() {
   box.replaceChildren(el("p", { class: "status" }, t("status.loading")));
   try {
     const rec = await api(`/api/card/${encodeURIComponent(id)}?lang=${state.lang}`);
-    box.replaceChildren(backButton(), "steelman_yes" in rec.card ? measureCard(rec) : raceCard(rec));
+    const isMeasure = "steelman_yes" in rec.card;
+    box.replaceChildren(...[backButton(), isMeasure ? measureCard(rec) : raceCard(rec), isMeasure ? cardNav(id) : null].filter(Boolean));
+    if (isMeasure) markRead(id);
   } catch (e) {
     box.replaceChildren(backButton(), el("p", { class: "status" }, e.message));
   }
   window.scrollTo(0, 0);
+}
+// Previous / next measure on this ballot, so a voter can read straight through without going back each time.
+function cardNav(id) {
+  const list = ((state.ballot || state.saved)?.measures || []).filter((m) => m.status === "ready");
+  const i = list.findIndex((m) => m.id === id);
+  if (i < 0 || list.length < 2) return null;
+  const prev = list[i - 1], next = list[i + 1];
+  const link = (m, dir) => el("button", { class: `navcard ${dir}`, onclick: () => go(`card=${m.id}`) },
+    el("span", { class: "dir" }, dir === "prev" ? `← ${t("nav.prev")}` : `${t("nav.next")} →`),
+    el("span", { class: "nt" }, `${m.number}: ${m.plain_title}`));
+  return el("nav", { class: "card-nav", "aria-label": t("nav.cards") },
+    prev ? link(prev, "prev") : el("span", {}), next ? link(next, "next") : el("span", {}),
+    el("p", { class: "muted pos" }, t("nav.pos", { i: i + 1, n: list.length })));
 }
 const backButton = () => el("p", { class: "back" }, el("button", { class: "btn ghost", onclick: () => go("") }, t("card.back")));
 
@@ -443,8 +467,13 @@ function raceCard(rec) {
       p.says_basis === "none_found"
         ? el("p", {}, t("race.nostatement"))
         : [el("p", { class: "values" }, p.headline || ""), el("p", {}, p.core_case), el("ul", {}, p.says.map(claimLi))],
-      el("p", { class: "muted" }, t("race.didfunded"))))),
+      ))),
     c.where_they_differ ? el("div", { class: "crux" }, el("b", {}, t("race.differ")), c.where_they_differ.text) : null,
+    el("section", { class: "learn-more" }, el("h3", {}, t("race.more")),
+      el("ul", {},
+        (rec.sources || []).slice(0, 1).map((u) => el("li", {}, extLink(u, t("race.statements")))),
+        c.race_id.startsWith("CA-") ? el("li", {}, extLink("https://cal-access.sos.ca.gov/Campaign/Candidates/", t("race.money"))) : null,
+        el("li", {}, extLink("https://vote.gov/", t("race.office"))))),
     el("p", { class: "muted" }, t("race.note")),
     reportLink(`${c.office} (${c.race_id})`));
 }

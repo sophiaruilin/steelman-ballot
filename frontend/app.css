@@ -397,3 +397,17 @@ table.srcs td:first-child { font-weight: 500; color: var(--verdigris); white-spa
 .hero.compact + .wrap .status:empty { margin: 0; min-height: 0; height: 0; padding: 0; }
 .hero.compact + .wrap #ballot { margin-top: 0; }
 .hero.compact + .wrap #summary { margin-top: 16px; }
+
+/* ---- voter review: race count, read marks, prev/next, short nav ---- */
+.summary .more-races { display: block; font: 400 .85rem var(--sans); color: var(--muted); }
+.pill.done { border-color: var(--verdigris); color: var(--verdigris); background: var(--verdigris-10); }
+.card-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 28px 0 8px; padding-top: 16px; border-top: var(--rule); }
+.card-nav .navcard { text-align: left; padding: 12px 14px; background: var(--card); border: 1px solid var(--steel); border-radius: var(--radius);
+                     color: var(--graphite); font: 400 .92rem/1.35 var(--sans); cursor: pointer; }
+.card-nav .navcard:hover, .card-nav .navcard:focus-visible { border-color: var(--verdigris); }
+.card-nav .navcard.next { text-align: right; grid-column: 2; }
+.card-nav .dir { display: block; font-weight: 600; color: var(--verdigris); margin-bottom: 2px; }
+.card-nav .pos { grid-column: 1 / -1; text-align: center; margin: 2px 0 0; font-size: .85rem; }
+.learn-more ul { padding-left: 1.1em; }
+.nav .ns { display: none; }
+@media (max-width: 640px) { .nav .nl { display: none; } .nav .ns { display: inline; } }
