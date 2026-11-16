@@ -15,8 +15,9 @@ Turing score because such points are missing;** judge each side by its strongest
 
 ## Tests
 1. **Ideological Turing Test, once per side.** Become a committed, thoughtful supporter of that side.
-   Score 1-5: "Would I sign this as our best case?" 5 = I wish I'd put it that way; 3 = accurate but weak,
-   missing our strongest point; 1 = a strawman. Name the missing or distorted point if below 4.
+   Score 1-5: "Would I sign this as our best case?" 5 = I wish I'd put it that way; 4 = strong and accurate,
+   only small gaps; 3 = accurate but weak, missing our strongest point; 2 = recognizable but weak or partly
+   distorted; 1 = a strawman. Name the missing or distorted point if below 4.
    Judge against what that side actually argues in the sources. If a side's `basis` is "no_organized_side",
    judge whether it fairly states the trade-offs a thoughtful No (or Yes) voter would weigh, from the analysis.
 2. **Swap test.** Mentally swap the Yes and No labels. Is one side described more warmly, more confidently,

@@ -164,3 +164,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 37: Say plainly what the site is (and is not)
 **Prompt (my own words):** "for the 'see your balot, with strongest case...' shold i emphase strongest case for each side as that main value of the site? one user who enlgihs wasnt so easy for them was confused and thought this was a voting polling site, i want to make it clear that this is steelman concept arguments to better understand what's on the ballot, to get informed..."
 **What was lacking before:** The purpose line did not stress the steelman idea, and nothing told visitors that this is a guide to read, not a poll or a place to vote. That confused a tester whose first language is not English.
+
+## Step 38: The full 1–5 scale, with 4 as the pass line
+**Prompt (my own words):** "In the how we work setion, the scale of 1-5 only shows 1, 3, 5 - is that ok? othewise would someone be confused about it scoring 4 and what that means as it needs to get that minimum score?"
+**What was lacking before:** The scale defined only 1, 3 and 5, yet the pass rule was "4 or 5", so readers could not tell what a 4 meant. The challenger's own rubric had the same gap. Both now define all five points.

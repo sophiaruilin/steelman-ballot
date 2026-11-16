@@ -345,7 +345,15 @@ table.srcs td:first-child { font-weight: 500; color: var(--verdigris); white-spa
 
 /* How we work, step III: writer / challenger */
 .steps h4.part { font: 500 .78rem var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--copper-ink); margin: 16px 0 4px; }
-.scale5 { display: block; margin: 4px 0; padding: 6px 10px; background: var(--verdigris-10); border-radius: var(--radius); font-size: .92rem; }
+.steps ul.scale5 { list-style: none; margin: 8px 0 6px; padding: 0; border: 1px solid var(--steel); border-radius: var(--radius); overflow: hidden; font-size: .92rem; }
+.steps ul.scale5 li { display: flex; gap: 10px; align-items: baseline; margin: 0; padding: 5px 10px; border-top: 1px solid rgba(169,176,171,.45); }
+.steps ul.scale5 li:first-child { border-top: 0; }
+.steps ul.scale5 li::before { content: none; }
+.steps ul.scale5 li b { flex: 0 0 1.4em; text-align: center; font: 600 1rem var(--sans); color: var(--muted); }
+.steps ul.scale5 li.pass { background: var(--verdigris-10); }
+.steps ul.scale5 li.pass b { color: var(--verdigris); }
+.steps ul.scale5 li.pass + li:not(.pass) { border-top: 2px solid var(--verdigris); }
+.pass-note { display: block; font-size: .92rem; }
 
 .coverage-line { margin: 8px 0 0; font-size: .9rem; color: var(--muted); }
 
