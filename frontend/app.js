@@ -255,8 +255,10 @@ function listItem(m) {
   }
   return el("button", { class: "item", onclick: () => go(`card=${m.id}`) },
     el("span", { class: "num" }, m.number), el("span", { class: "ttl" }, m.plain_title),
-    el("span", { class: "meta" }, `${m.reading_minutes} ${t("item.read")}`,
-      m.verified ? el("span", { class: "pill ok" }, t("item.checked")) : el("span", { class: "pill warn" }, t("item.unverified")),
+    el("span", { class: "meta" },
+      el("span", { class: "cta" }, t("item.cta")),
+      m.verified ? null : el("span", { class: "pill warn" }, t("item.unverified")),
+      `· ${m.reading_minutes} ${t("item.read")}`,
       m.scope && m.scope !== "statewide" ? el("span", { class: "pill" }, m.scope) : null));
 }
 

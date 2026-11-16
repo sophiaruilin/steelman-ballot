@@ -50,34 +50,29 @@
     <section id="view-home" class="view">
       <div class="hero">
         <div class="wrap">
-          <p class="eyebrow" data-i18n="hero.eyebrow">Nonpartisan ballot guide · California · Massachusetts · New York · Connecticut</p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Nonpartisan ballot guide · Look-back demo: Nov 3, 2026 ballot</p>
           <h1><span data-i18n="hero.h1a">Think more deeply.</span><br><span data-i18n="hero.h1b">Vote more thoughtfully.</span></h1>
           <p class="lede" data-i18n="hero.lede">The strongest argument isn't always your own.</p>
-          <p class="sub" data-i18n="hero.sub">Explore the most compelling perspectives on the issues that matter. Challenge your assumptions without abandoning your values.</p>
-          <p class="demo-note" data-i18n="hero.demo">Demo: shows the November 3, 2026 ballot as it stood before the vote. No results are shown.</p>
+          <p class="sub purpose" data-i18n="hero.sub">Enter your address to see what's on your ballot, and the strongest case for each side.</p>
 
           <form id="address-form" class="lookup" autocomplete="off">
-            <label for="address" data-i18n="form.label">Your address or ZIP code</label>
+            <label for="address" class="sr-heading" data-i18n="form.label">Your address or ZIP code</label>
             <div class="row">
               <input id="address" name="address" type="text" inputmode="text" autocomplete="off" spellcheck="false"
                      placeholder="e.g. 123 Main St, Boston, MA — or a ZIP code" data-i18n-placeholder="form.placeholder"
                      minlength="5" maxlength="200" required aria-describedby="privacy-note address-help">
               <button type="submit" class="btn" data-i18n="form.button">See my ballot</button>
             </div>
-            <div class="privacy" id="privacy-note">
+            <p class="privacy" id="privacy-note">
               <svg class="picon" aria-hidden="true"><use href="#i-lock"/></svg>
-              <p><b data-i18n="privacy.head">We never store addresses.</b> <span data-i18n="privacy.body">We use what you type once, to look up your districts with the U.S. Census Bureau, then discard it. It isn't saved, logged, or tracked, and it never appears in a web address.</span></p>
-            </div>
-            <ul class="addr-help" id="address-help">
-              <li><b data-i18n="help.min_h">Minimum:</b> <span data-i18n="help.min">house number + street + city and state (or ZIP).</span></li>
-              <li><b data-i18n="help.private_h">Rather not use your home?</b> <span data-i18n="help.private">A nearby address on your street usually gives the same ballot. Or type just a ZIP code to see statewide measures.</span></li>
-            </ul>
-            <p class="hint"><span data-i18n="form.examples">Try an example:</span>
+              <span><b data-i18n="privacy.head">We never store addresses.</b> <span data-i18n="privacy.body">Used once to find your districts, then discarded.</span></span>
+            </p>
+            <p class="hint" id="address-help"><span data-i18n="help.short">Street and city, or just a ZIP code for statewide measures. Try:</span>
               <button type="button" class="linkish" data-example="1315 10th St, Sacramento, CA 95814">Sacramento</button> ·
               <button type="button" class="linkish" data-example="24 Beacon St, Boston, MA 02133">Boston</button> ·
-              <button type="button" class="linkish" data-example="253 Broadway, New York, NY 10007">New York City</button> ·
+              <button type="button" class="linkish" data-example="253 Broadway, New York, NY 10007">NYC</button> ·
               <button type="button" class="linkish" data-example="165 Church St, New Haven, CT 06510">New Haven</button> ·
-              <button type="button" class="linkish" data-example="02139" data-i18n="form.zip_example">ZIP only: 02139</button>
+              <button type="button" class="linkish" data-example="02139">02139</button>
             </p>
           </form>
         </div>

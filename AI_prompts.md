@@ -124,3 +124,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 27: Report-an-issue form without a GitHub account
 **Prompt (my own words):** "if someone reports an issue, how would i be notified? i see it brings it to github to create an issue" then "created the form: ... can you take a quick look and see if any changes or looks good, and tell me how to edit the design to match the website a bit more?"
 **What was lacking before:** Reporting a problem required a GitHub account, which most voters don't have, and reports didn't say which card they were about.
+
+## Step 28: Clear call to action on each measure; a calmer home page
+**Prompt (my own words):** "for each ballot, i know i can click in to see more. one user didn't know to click more. can you include text of instead of "both sides checked", to "click to view each side" or "click to read more" ... something more steelman per the nmission/site, similar language with the call to action clearly and concisely? / the top front section looks quite busy. if it were my first time using the site, i wonder how it can be more crystal clear what is happening while not being overwhelming with things ot read? ... open to your anlaysis and recommendations"
+**What was lacking before:** Measure rows ended with a status badge instead of telling people to tap, and the top of the home page had about 150 words in 8 blocks without a plain sentence saying what the site does.

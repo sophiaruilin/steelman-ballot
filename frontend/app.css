@@ -301,8 +301,8 @@ svg.mini { width: 18px; height: 18px; flex: none; }
 #prog-hint { margin: 10px 0 0; font-size: .86rem; }
 
 /* Search bar: privacy first, then what to type */
-.privacy { display: grid; grid-template-columns: 26px 1fr; gap: 10px; align-items: start; margin: 12px 0 0;
-           padding: 10px 12px; border: 1px solid var(--verdigris); border-radius: var(--radius); background: var(--card); }
+.privacy { display: flex; gap: 10px; align-items: center; margin: 12px 0 0; max-width: 640px;
+           padding: 9px 12px; border: 1px solid var(--verdigris); border-radius: var(--radius); background: var(--card); }
 .privacy p { margin: 0; font-size: .92rem; line-height: 1.5; }
 .privacy b { color: var(--verdigris); font-weight: 600; }
 .picon { width: 24px; height: 24px; fill: none; stroke: var(--verdigris); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; margin-top: 1px; }
@@ -323,3 +323,8 @@ svg.mini { width: 18px; height: 18px; flex: none; }
 .stats th { font-weight: 500; color: var(--muted); }
 
 .report { margin: 18px 0 0; font-size: .92rem; }
+
+.hero .purpose { color: var(--graphite); font-size: 1.08rem; max-width: 34em; }
+.item .cta { color: var(--verdigris); font-weight: 500; border-bottom: 1px solid var(--copper); }
+.item:hover .cta { color: var(--copper-ink); }
+.privacy .picon { flex: none; width: 22px; height: 22px; }
