@@ -3,6 +3,7 @@
 "use strict";
 window.I18N = {
   en: {
+    "help.states": "Available for addresses in California, Massachusetts, New York and Connecticut.",
     "tag.value": "Perspective",
     "tag.prediction": "Estimate",
     "tag.fact": "Fact",
@@ -26,8 +27,8 @@ window.I18N = {
     "hero.eyebrow": "Nonpartisan ballot guide · Look-back demo: Nov 3, 2026 ballot",
     "hero.h1a": "Think more deeply.", "hero.h1b": "Vote more thoughtfully.",
     "hero.lede": "The strongest argument isn't always your own.",
-    "hero.sub": "Enter your address to see what's on your ballot, and the strongest case for each side.",
-    "form.label": "Your address or ZIP code", "form.placeholder": "e.g. 123 Main St, Boston, MA — or a ZIP code", "form.button": "See my ballot",
+    "hero.sub": "See your ballot, with the strongest case for each side.",
+    "form.label": "Your address or ZIP code", "form.placeholder": "Street address or ZIP code", "form.button": "See my ballot",
     "form.hint": "Used only to find your districts. Never stored. Try an example:",
     "map.eyebrow": "Where we cover", "map.title": "Starting with four states",
     "map.body": "Any U.S. address shows your districts and races. Full ballot-measure cards are available where we read the official voter guide directly.",
@@ -65,6 +66,7 @@ window.I18N = {
     "race.differ": "Where they differ", "race.note": "Statements were written by the candidates and not checked by any official agency. We never tell you how to vote.",
   },
   es: {
+    "help.states": "Disponible para direcciones en California, Massachusetts, Nueva York y Connecticut.",
     "tag.value": "Perspectiva",
     "tag.prediction": "Estimación",
     "tag.fact": "Hecho",
@@ -88,8 +90,8 @@ window.I18N = {
     "hero.eyebrow": "Guía electoral imparcial · Demostración retrospectiva: boleta del 3 nov. 2026",
     "hero.h1a": "Piense con más profundidad.", "hero.h1b": "Vote con más reflexión.",
     "hero.lede": "El argumento más sólido no siempre es el suyo.",
-    "hero.sub": "Escriba su dirección para ver qué hay en su boleta y el argumento más sólido de cada lado.",
-    "form.label": "Su dirección o código postal", "form.placeholder": "p. ej., 123 Main St, Boston, MA — o un código postal", "form.button": "Ver mi boleta",
+    "hero.sub": "Vea su boleta, con el argumento más sólido de cada lado.",
+    "form.label": "Su dirección o código postal", "form.placeholder": "Dirección o código postal", "form.button": "Ver mi boleta",
     "form.hint": "Solo se usa para encontrar sus distritos. Nunca se guarda. Pruebe un ejemplo:",
     "map.eyebrow": "Dónde estamos", "map.title": "Empezamos con cuatro estados",
     "map.body": "Cualquier dirección de EE. UU. muestra sus distritos y contiendas. Las fichas completas de las medidas están disponibles donde leemos directamente la guía oficial para votantes.",
@@ -127,6 +129,7 @@ window.I18N = {
     "race.differ": "En qué se diferencian", "race.note": "Las declaraciones fueron escritas por los candidatos y ninguna agencia oficial las verificó. Nunca le decimos cómo votar.",
   },
   zh: {
+    "help.states": "适用于加利福尼亚州、马萨诸塞州、纽约州和康涅狄格州的地址。",
     "tag.value": "观点",
     "tag.prediction": "估计",
     "tag.fact": "事实",
@@ -150,8 +153,8 @@ window.I18N = {
     "hero.eyebrow": "无党派选票指南 · 回顾演示：2026年11月3日选票",
     "hero.h1a": "思考更深入。", "hero.h1b": "投票更审慎。",
     "hero.lede": "最有力的论点，未必是你自己的。",
-    "hero.sub": "输入您的地址，查看选票上的内容，以及每一方最有力的论点。",
-    "form.label": "您的地址或邮编", "form.placeholder": "例如：123 Main St, Boston, MA，或只填邮编", "form.button": "查看我的选票",
+    "hero.sub": "查看您的选票，以及每一方最有力的论点。",
+    "form.label": "您的地址或邮编", "form.placeholder": "街道地址或邮编", "form.button": "查看我的选票",
     "form.hint": "仅用于查找您的选区，绝不保存。试试示例：",
     "map.eyebrow": "覆盖范围", "map.title": "从四个州开始",
     "map.body": "任何美国地址都会显示您的选区和竞选职位。在我们直接读取官方选民指南的地方，提供完整的投票提案卡片。",

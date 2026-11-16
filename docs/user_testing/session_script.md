@@ -28,7 +28,7 @@ Ask the **background** questions (questions.md, section 0).
 - Ask: "How confident do you feel about how you'd vote?" (1–5)
 
 ## 2. With the app (max 6 min, timed)
-> "Now open steelman-ballot.onrender.com on your phone. Use the Sacramento example, then open [the other measure].
+> "Now open steelman-ballot.onrender.com on your phone. Type a California address (any is fine, e.g. *1315 10th St, Sacramento, CA* or the ZIP *95814*), then open [the other measure].
 > Same thing: tell me when you feel ready to vote."
 
 - Timer, comprehension questions for that measure, confidence (1–5).

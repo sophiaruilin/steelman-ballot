@@ -346,3 +346,5 @@ table.srcs td:first-child { font-weight: 500; color: var(--verdigris); white-spa
 /* How we work, step III: writer / challenger */
 .steps h4.part { font: 500 .78rem var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--copper-ink); margin: 16px 0 4px; }
 .scale5 { display: block; margin: 4px 0; padding: 6px 10px; background: var(--verdigris-10); border-radius: var(--radius); font-size: .92rem; }
+
+.coverage-line { margin: 8px 0 0; font-size: .9rem; color: var(--muted); }

@@ -53,26 +53,20 @@
           <p class="eyebrow" data-i18n="hero.eyebrow">Nonpartisan ballot guide · Look-back demo: Nov 3, 2026 ballot</p>
           <h1><span data-i18n="hero.h1a">Think more deeply.</span><br><span data-i18n="hero.h1b">Vote more thoughtfully.</span></h1>
           <p class="lede" data-i18n="hero.lede">The strongest argument isn't always your own.</p>
-          <p class="sub purpose" data-i18n="hero.sub">Enter your address to see what's on your ballot, and the strongest case for each side.</p>
+          <p class="sub purpose" data-i18n="hero.sub">See your ballot, with the strongest case for each side.</p>
 
           <form id="address-form" class="lookup" autocomplete="off">
             <label for="address" class="sr-heading" data-i18n="form.label">Your address or ZIP code</label>
             <div class="row">
               <input id="address" name="address" type="text" inputmode="text" autocomplete="off" spellcheck="false"
-                     placeholder="e.g. 123 Main St, Boston, MA — or a ZIP code" data-i18n-placeholder="form.placeholder"
+                     placeholder="Street address or ZIP code" data-i18n-placeholder="form.placeholder"
                      minlength="5" maxlength="200" required aria-describedby="privacy-note address-help">
               <button type="submit" class="btn" data-i18n="form.button">See my ballot</button>
             </div>
+            <p class="coverage-line" id="address-help" data-i18n="help.states">Available for addresses in California, Massachusetts, New York and Connecticut.</p>
             <p class="privacy" id="privacy-note">
               <svg class="picon" aria-hidden="true"><use href="#i-lock"/></svg>
               <span><b data-i18n="privacy.head">We never store addresses.</b> <span data-i18n="privacy.body">Used once to find your districts, then discarded.</span></span>
-            </p>
-            <p class="hint" id="address-help"><span data-i18n="help.short">Street and city, or just a ZIP code for statewide measures. Try:</span>
-              <button type="button" class="linkish" data-example="1315 10th St, Sacramento, CA 95814">Sacramento</button> ·
-              <button type="button" class="linkish" data-example="24 Beacon St, Boston, MA 02133">Boston</button> ·
-              <button type="button" class="linkish" data-example="253 Broadway, New York, NY 10007">NYC</button> ·
-              <button type="button" class="linkish" data-example="165 Church St, New Haven, CT 06510">New Haven</button> ·
-              <button type="button" class="linkish" data-example="02139">02139</button>
             </p>
           </form>
         </div>
