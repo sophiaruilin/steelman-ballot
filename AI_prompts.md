@@ -120,3 +120,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 26: Anonymous usage totals
 **Prompt (my own words):** "can i see how many users have tested it / how many unique addresses have been entered?" then "yes" (to anonymous counters) and "for 'never stored', change to 'we never store addresses' and don't need to mention we count totals"
 **What was lacking before:** Because addresses and access logs are never kept, there was no way to see whether anyone used the app at all.
+
+## Step 27: Report-an-issue form without a GitHub account
+**Prompt (my own words):** "if someone reports an issue, how would i be notified? i see it brings it to github to create an issue" then "created the form: ... can you take a quick look and see if any changes or looks good, and tell me how to edit the design to match the website a bit more?"
+**What was lacking before:** Reporting a problem required a GitHub account, which most voters don't have, and reports didn't say which card they were about.

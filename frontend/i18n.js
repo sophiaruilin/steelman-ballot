@@ -3,6 +3,8 @@
 "use strict";
 window.I18N = {
   en: {
+    "foot.github": "Technical issue? GitHub",
+    "card.report": "Report an issue with this card →",
     "cov.needs_address": "needs a street address",
     "ballot.ziponly": "ZIP code only: showing statewide measures. Enter a street address to see your district races.",
     "help.private": "A nearby address on your street usually gives the same ballot. Or type just a ZIP code to see statewide measures.",
@@ -58,6 +60,8 @@ window.I18N = {
     "race.differ": "Where they differ", "race.note": "Statements were written by the candidates and not checked by any official agency. We never tell you how to vote.",
   },
   es: {
+    "foot.github": "¿Problema técnico? GitHub",
+    "card.report": "Reportar un problema con esta ficha →",
     "cov.needs_address": "requiere una dirección",
     "ballot.ziponly": "Solo código postal: se muestran las medidas estatales. Escriba una dirección para ver las contiendas de sus distritos.",
     "help.private": "Una dirección cercana en su misma calle suele dar la misma boleta. O escriba solo un código postal para ver las medidas estatales.",
@@ -113,6 +117,8 @@ window.I18N = {
     "race.differ": "En qué se diferencian", "race.note": "Las declaraciones fueron escritas por los candidatos y ninguna agencia oficial las verificó. Nunca le decimos cómo votar.",
   },
   zh: {
+    "foot.github": "技术问题？GitHub",
+    "card.report": "报告此卡片的问题 →",
     "cov.needs_address": "需要街道地址",
     "ballot.ziponly": "仅邮编：显示全州提案。输入街道地址可查看您选区的竞选。",
     "help.private": "同一条街上附近的地址通常会得到相同的选票。也可以只输入邮编，查看全州提案。",

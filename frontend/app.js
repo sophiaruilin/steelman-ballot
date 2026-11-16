@@ -53,6 +53,11 @@ function svg(tag, attrs = {}, ...kids) {
   for (const kid of kids.flat()) if (kid !== null && kid !== undefined) n.append(kid instanceof Node ? kid : document.createTextNode(String(kid)));
   return n;
 }
+const REPORT_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdEMz4oFJH_zGy1xtdHiAsf12pKQJD1jVn4ktJWbIQTBfQvKw/viewform";
+const REPORT_FIELD = "entry.1541200026";   // "Which card?" (pre-filled so reporters don't have to type it)
+const reportUrl = (label) => `${REPORT_FORM}?usp=pp_url&${REPORT_FIELD}=${encodeURIComponent(label)}`;
+const reportLink = (label) => el("p", { class: "report" },
+  el("a", { href: reportUrl(label), target: "_blank", rel: "noopener noreferrer" }, t("card.report")));
 const safeUrl = (u) => (/^https:\/\//i.test(u || "") ? u : null);
 const extLink = (url, text) => safeUrl(url)
   ? el("a", { href: url, target: "_blank", rel: "noopener noreferrer" }, text || new URL(url).hostname) : (text || "");
@@ -380,6 +385,7 @@ function measureCard(rec) {
       shareBar(c.measure_id),
       el("h3", {}, t("card.sources")),
       el("ul", { class: "sources" }, (rec.sources || []).map((u) => el("li", {}, extLink(u, u)))),
+      reportLink(`${c.number}: ${c.plain_title} (${c.measure_id})`),
       el("p", { class: "muted" }, t("card.rule"))));
 }
 
@@ -398,7 +404,8 @@ function raceCard(rec) {
         : [el("p", { class: "values" }, p.headline || ""), el("p", {}, p.core_case), el("ul", {}, p.says.map(claimLi))],
       el("p", { class: "muted" }, t("race.didfunded"))))),
     c.where_they_differ ? el("div", { class: "crux" }, el("b", {}, t("race.differ")), c.where_they_differ.text) : null,
-    el("p", { class: "muted" }, t("race.note")));
+    el("p", { class: "muted" }, t("race.note")),
+    reportLink(`${c.office} (${c.race_id})`));
 }
 
 // ---- sharing (always both sides) --------------------------------------------------------------
