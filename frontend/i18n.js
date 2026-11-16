@@ -3,7 +3,7 @@
 "use strict";
 window.I18N = {
   en: {
-    "tag.value": "View",
+    "tag.value": "Perspective",
     "tag.prediction": "Estimate",
     "tag.fact": "Fact",
     "item.cta": "See both sides at their strongest →",
@@ -65,7 +65,7 @@ window.I18N = {
     "race.differ": "Where they differ", "race.note": "Statements were written by the candidates and not checked by any official agency. We never tell you how to vote.",
   },
   es: {
-    "tag.value": "Opinión",
+    "tag.value": "Perspectiva",
     "tag.prediction": "Estimación",
     "tag.fact": "Hecho",
     "item.cta": "Ver ambos lados en su mejor versión →",
