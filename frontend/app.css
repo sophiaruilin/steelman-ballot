@@ -384,3 +384,16 @@ table.srcs td:first-child { font-weight: 500; color: var(--verdigris); white-spa
 
 /* home band: each preview links to the page that covers it in full */
 .band-link { display: inline-block; margin-top: 8px; font: 500 .92rem var(--sans); color: var(--verdigris); }
+
+/* ---- compact hero: after a lookup, only the address box stays above the result ---- */
+.hero.compact { padding: 14px 0 12px; }
+.hero.compact .eyebrow, .hero.compact h1, .hero.compact .lede, .hero.compact .purpose,
+.hero.compact .not-poll, .hero.compact .coverage-line { display: none; }
+.hero.compact .lookup { margin-top: 0; }
+.hero.compact #address, .hero.compact #address-form .btn { min-height: 48px; }
+.hero.compact .privacy { margin-top: 8px; padding: 6px 12px; font-size: .86rem; }
+.hero.compact .privacy .picon { width: 18px; height: 18px; }
+.hero.compact + .wrap .progress, .hero.compact + .wrap #ballot { margin-top: 12px; }
+.hero.compact + .wrap .status:empty { margin: 0; min-height: 0; height: 0; padding: 0; }
+.hero.compact + .wrap #ballot { margin-top: 0; }
+.hero.compact + .wrap #summary { margin-top: 16px; }

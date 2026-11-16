@@ -121,6 +121,7 @@ async function renderMap() {
 
 // ---- ballot ------------------------------------------------------------------------------------
 let lookupSeq = 0;
+const lookupBusy = () => !$("#progress").hidden;
 const STEPS = ["districts", "guide", "cards"];
 const PCT = { districts: [5, 30], guide: [35, 85], cards: [88, 100] };   // start/done percent per step
 
@@ -168,12 +169,18 @@ function renderLastBallotLink() {
   box.replaceChildren(el("button", { type: "button", class: "linkish", onclick: () => {
     state.ballot = state.saved;
     renderBallot(); $("#ballot").hidden = false; box.hidden = true;
-    $("#ballot").scrollIntoView({ behavior: "smooth", block: "start" });
+    compactHero(true);
   } }, t("last.show", { where })),
   " · ",
   el("button", { type: "button", class: "linkish muted", onclick: () => {
     store.set("sb.ballot", null); state.saved = null; box.hidden = true;
   } }, t("last.forget")));
+}
+
+// Once someone looks up a ballot, the intro steps aside: only the address box stays above the result.
+function compactHero(on) {
+  $(".hero").classList.toggle("compact", on);
+  if (on) window.scrollTo({ top: 0 });
 }
 
 function showBallotData(b, mine) {
@@ -187,7 +194,7 @@ function showBallotData(b, mine) {
   setTimeout(() => { if (mine === lookupSeq) progress(false); }, 500);
   renderBallot();
   $("#ballot").hidden = false;
-  $("#ballot").scrollIntoView({ behavior: "smooth", block: "start" });
+  compactHero(true);
 }
 
 async function postJSON(path, body) {
@@ -200,6 +207,7 @@ async function lookup(address) {
   state.ballot = null;
   $("#ballot").hidden = true;              // never leave the previous address's ballot showing
   status("");
+  compactHero(true);
   progress(true);
   const slow = setTimeout(() => { if (mine === lookupSeq) { $("#prog-hint").hidden = false; $("#prog-hint").textContent = t("prog.slow"); } }, 7000);
   const fail = (msg) => { if (mine !== lookupSeq) return; clearTimeout(slow); progress(false); status(msg); };
@@ -314,6 +322,7 @@ async function route() {
   if (h === "map") { show("home"); renderLastBallotLink(); setTimeout(() => $("#map-title").scrollIntoView(), 0); return; }
   if (!id) {
     show("home");
+    $(".hero").classList.toggle("compact", !!state.ballot || lookupBusy());
     if (state.ballot) { $("#ballot").hidden = false; renderBallot(); }
     renderLastBallotLink();
     return;
