@@ -311,6 +311,7 @@ async function route() {
   const h = location.hash.slice(1);
   const id = (h.match(/^card=([A-Za-z0-9-]+)$/) || [])[1];
   if (["how", "steelman", "philosophy"].includes(h)) { show(h); window.scrollTo(0, 0); return; }
+  if (h === "map") { show("home"); renderLastBallotLink(); setTimeout(() => $("#map-title").scrollIntoView(), 0); return; }
   if (!id) {
     show("home");
     if (state.ballot) { $("#ballot").hidden = false; renderBallot(); }

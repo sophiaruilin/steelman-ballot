@@ -33,8 +33,8 @@
       </a>
       <nav class="nav" aria-label="Main">
         <a href="#" data-route="home" data-i18n="nav.ballot">My ballot</a>
-        <a href="#how" data-route="how" data-i18n="nav.how">How we work</a>
         <a href="#steelman" data-route="steelman" data-i18n="nav.steelman">Steelman vs. strawman</a>
+        <a href="#how" data-route="how" data-i18n="nav.how">How we work</a>
         <a href="#philosophy" data-route="philosophy" data-i18n="nav.philosophy">Our philosophy</a>
       </nav>
       <div class="langs" role="group" aria-label="Language / Idioma / 语言">
@@ -64,7 +64,7 @@
                      minlength="5" maxlength="200" required aria-describedby="privacy-note address-help">
               <button type="submit" class="btn" data-i18n="form.button">See my ballot</button>
             </div>
-            <p class="coverage-line" id="address-help" data-i18n="help.states">Available for addresses in California, Massachusetts, New York and Connecticut.</p>
+            <p class="coverage-line" id="address-help" data-i18n="help.states">Full ballot cards in California, Massachusetts, New York and Connecticut. Other states: enter a street address to see your districts and races.</p>
             <p class="privacy" id="privacy-note">
               <svg class="picon" aria-hidden="true"><use href="#i-lock"/></svg>
               <span><b data-i18n="privacy.head">We never store addresses.</b> <span data-i18n="privacy.body">Used once to find your districts, then discarded.</span></span>
@@ -92,16 +92,16 @@
         </section>
 
         <section class="band three" aria-label="How a card works">
-          <div><span class="step">I</span><h3 data-i18n="three.2h">Both sides, at their strongest</h3><p data-i18n="three.2p">Each side's best case on the merits, in the words its most thoughtful supporters would use.</p></div>
-          <div><span class="step">II</span><h3 data-i18n="three.1h">The facts that matter</h3><p data-i18n="three.1p">Where they really disagree, what the evidence says, and what would change, from the official guide.</p></div>
-          <div><span class="step">III</span><h3 data-i18n="three.3h">Your decision</h3><p data-i18n="three.3p">Every claim is sourced. We never tell you how to vote.</p></div>
+          <div><span class="step">I</span><h3 data-i18n="three.2h">Both sides, at their strongest</h3><p data-i18n="three.2p">Each side's best case on the merits, in the words its most thoughtful supporters would use.</p><a class="band-link" href="#steelman" data-i18n="three.2link">What's a steelman? →</a></div>
+          <div><span class="step">II</span><h3 data-i18n="three.1h">The facts that matter</h3><p data-i18n="three.1p">Where they really disagree, what the evidence says, and what would change, from the official guide.</p><a class="band-link" href="#how" data-i18n="three.1link">Where it comes from →</a></div>
+          <div><span class="step">III</span><h3 data-i18n="three.3h">Your decision</h3><p data-i18n="three.3p">Every claim is sourced. We never tell you how to vote.</p><a class="band-link" href="#philosophy" data-i18n="three.3link">What we never do →</a></div>
         </section>
 
         <section class="band" aria-labelledby="map-title">
           <div class="band-text">
             <p class="eyebrow" data-i18n="map.eyebrow">Where we cover</p>
             <h2 id="map-title" data-i18n="map.title">Starting with four states</h2>
-            <p data-i18n="map.body">Any U.S. address shows your districts and races. Full ballot-measure cards are available where we read the official voter guide directly.</p>
+            <p data-i18n="map.body">Any U.S. street address shows your districts and races. Full ballot-measure cards are available where we read the official voter guide directly.</p>
             <ul class="legend">
               <li><span class="key full"></span> <span data-i18n="map.full">Statewide measures</span></li>
               <li><span class="key part"></span> <span data-i18n="map.part">Local measures (New York City)</span></li>
@@ -165,15 +165,9 @@
         <li><h3>We measure accuracy</h3><p><b>In every state:</b> all 28 measure cards passed the fairness review. <b>Accuracy test:</b> we graded a sample against California's nonpartisan Legislative Analyst, the one independent answer key we have: <b>100%</b> of claims backed by the official guide, <b>18 of 18</b> yes/no/cost descriptions correct, and <b>99%</b> of each side's top points covered.</p></li>
         <li><h3>We keep it fresh and safe</h3><p>Cards refresh daily as an election nears. We read only an allowlist of official sites, strip hidden text that could trick an AI, respect sites that ask not to be read automatically, and cap how much the system can spend.</p></li>
       </ol>
-      <h2>What we never do</h2>
-      <ul class="nevers">
-        <li>Tell you how to vote, or predict a result</li>
-        <li>Show polls or who's “winning”</li>
-        <li>Argue about motives, donors or party labels</li>
-        <li>Store your address, track you, or show ads</li>
-      </ul>
       <h2>Honest limits</h2>
-      <p>Coverage is four states for now: statewide measures in California and Massachusetts, New York City's local proposals, and Connecticut (which has no statewide questions in 2026; its town charter questions aren't covered yet). AI can make mistakes: every claim links to its source so you can check, and you can report an issue on any card.</p>
+      <p>Full ballot cards cover four states for now (<a href="#map">see the map</a>). AI can make mistakes: every claim links to its source so you can check, and you can report an issue on any card.</p>
+      <p class="muted">Why we hold these rules: <a href="#philosophy">Our philosophy</a>, including what we never do.</p>
       </div>
       <div data-langblock="es" lang="es" hidden>
       <p class="eyebrow">Metodología</p>
@@ -218,15 +212,9 @@
         <li><h3>Medimos la exactitud</h3><p><b>En todos los estados:</b> las 28 fichas de medidas aprobaron la revisión de imparcialidad. <b>Prueba de exactitud:</b> calificamos una muestra frente al Analista Legislativo imparcial de California, la única clave de respuestas independiente que tenemos: <b>100 %</b> de las afirmaciones respaldadas por la guía oficial, <b>18 de 18</b> descripciones de sí/no/costo correctas y <b>99 %</b> de los puntos principales de cada lado cubiertos.</p></li>
         <li><h3>La mantenemos actualizada y segura</h3><p>Las fichas se actualizan a diario cuando se acerca una elección. Solo leemos una lista aprobada de sitios oficiales, quitamos texto oculto que podría engañar a una IA, respetamos los sitios que piden no ser leídos automáticamente y limitamos cuánto puede gastar el sistema.</p></li>
       </ol>
-      <h2>Lo que nunca hacemos</h2>
-      <ul class="nevers">
-        <li>Decirle cómo votar o predecir un resultado</li>
-        <li>Mostrar encuestas o quién “va ganando”</li>
-        <li>Discutir motivos, donantes o partidos</li>
-        <li>Guardar su dirección, rastrearle o mostrar anuncios</li>
-      </ul>
       <h2>Límites, con honestidad</h2>
-      <p>Por ahora cubrimos cuatro estados. La IA puede equivocarse: cada afirmación enlaza a su fuente para que usted la verifique, y puede reportar un problema en cualquier ficha.</p>
+      <p>Por ahora, las fichas completas cubren cuatro estados (<a href="#map">vea el mapa</a>). La IA puede equivocarse: cada afirmación enlaza a su fuente para que usted la verifique, y puede reportar un problema en cualquier ficha.</p>
+      <p class="muted">Por qué seguimos estas reglas: <a href="#philosophy">Nuestra filosofía</a>, incluido lo que nunca hacemos.</p>
       </div>
       <div data-langblock="zh" lang="zh-Hans" hidden>
       <p class="eyebrow">方法</p>
@@ -271,15 +259,9 @@
         <li><h3>我们衡量准确性</h3><p><b>所有州：</b>全部28张提案卡片均通过公正性审核。<b>准确性测试：</b>我们以加州无党派立法分析师（我们唯一的独立标准答案）为准对样本评分：<b>100%</b>的陈述有官方指南支持，赞成/反对/成本描述<b>18项全部</b>正确，各方主要论点覆盖率<b>99%</b>。</p></li>
         <li><h3>保持及时与安全</h3><p>临近选举时卡片每日更新。我们只读取经批准的官方网站清单，去除可能误导人工智能的隐藏文字，尊重要求不被自动读取的网站，并限制系统的花费上限。</p></li>
       </ol>
-      <h2>我们绝不做的事</h2>
-      <ul class="nevers">
-        <li>告诉您如何投票或预测结果</li>
-        <li>展示民调或谁“领先”</li>
-        <li>争论动机、捐款人或党派</li>
-        <li>保存您的地址、追踪您或展示广告</li>
-      </ul>
       <h2>坦诚说明局限</h2>
-      <p>目前覆盖四个州。人工智能可能出错：每项陈述都链接到来源供您核查，您也可以在任何卡片上报告问题。</p>
+      <p>目前完整的选票卡片覆盖四个州（<a href="#map">查看地图</a>）。人工智能可能出错：每项陈述都链接到来源供您核查，您也可以在任何卡片上报告问题。</p>
+      <p class="muted">我们为何坚持这些原则：请见<a href="#philosophy">我们的理念</a>，包括我们绝不做的事。</p>
       </div>
     </section>
 
@@ -306,12 +288,7 @@
       <h2>Why it matters for your ballot</h2>
       <p>When you only hear the weakest version of the other side, every decision looks obvious. Ballot measures rarely are. Seeing both sides at their strongest lets you test your own view against the best objection, and keep it, change it, or hold it more wisely.</p>
       <h2>How we test every steelman</h2>
-      <ul class="tests">
-        <li><b>Would supporters sign it?</b> A reviewer plays a committed supporter of each side and scores the case from 1 (strawman) to 5 (“I'd sign it”). Below 4 means a rewrite.</li>
-        <li><b>The swap test.</b> Swap the labels. If one side suddenly sounds warmer, more certain, or more reasonable, the wording gets fixed.</li>
-        <li><b>On the merits.</b> Arguments must be about what the change would do, not about who supports it or why.</li>
-        <li><b>Equal weight.</b> Same structure, similar length, same number of points, and no red or blue: neither side is colored as the good guy. On every card, No is always on the left and Yes on the right, matching “Today → If it passes,” so you never have to wonder which column is which.</li>
-      </ul>
+      <p>A second AI plays a committed supporter of each side and asks, “Would I sign this as our best case?” Both sides must score 4 or 5 out of 5, and pass a swap test for one-sided wording, or the card is rewritten. <a href="#how">See the full process →</a></p>
       <p class="muted">Based on the principle of charity, Anatol Rapoport's rules for criticism (popularized by Daniel Dennett), and the Ideological Turing Test (Bryan Caplan).</p>
       </div>
       <div data-langblock="es" lang="es" hidden>
@@ -335,12 +312,7 @@
       <h2>Por qué importa para su boleta</h2>
       <p>Cuando solo escucha la versión más débil del otro lado, toda decisión parece obvia. Las medidas en la boleta rara vez lo son. Ver ambos lados en su mejor versión le permite poner a prueba su opinión frente a la mejor objeción, y mantenerla, cambiarla o sostenerla con más sabiduría.</p>
       <h2>Cómo ponemos a prueba cada argumento</h2>
-      <ul class="tests">
-        <li><b>¿Lo firmarían sus partidarios?</b> Un revisor hace el papel de partidario convencido de cada lado y califica de 1 (argumento de paja) a 5 (“lo firmaría”). Menos de 4 significa reescribir.</li>
-        <li><b>La prueba del intercambio.</b> Se intercambian las etiquetas. Si un lado de pronto suena más cálido, más seguro o más razonable, se corrige la redacción.</li>
-        <li><b>Sobre el fondo.</b> Los argumentos deben tratar de lo que haría el cambio, no de quién lo apoya ni por qué.</li>
-        <li><b>El mismo peso.</b> La misma estructura, extensión similar, el mismo número de puntos y nada de rojo ni azul. En cada ficha, el No va siempre a la izquierda y el Sí a la derecha, igual que “Hoy → Si se aprueba”.</li>
-      </ul>
+      <p>Una segunda IA hace el papel de partidario convencido de cada lado y pregunta: “¿Firmaría esto como nuestro mejor argumento?”. Ambos lados deben obtener 4 o 5 sobre 5 y superar una prueba de intercambio que detecta lenguaje parcial; si no, la ficha se reescribe. <a href="#how">Vea el proceso completo →</a></p>
       <p class="muted">Basado en el principio de caridad, las reglas de crítica de Anatol Rapoport (popularizadas por Daniel Dennett) y la Prueba de Turing Ideológica (Bryan Caplan).</p>
       </div>
       <div data-langblock="zh" lang="zh-Hans" hidden>
@@ -364,12 +336,7 @@
       <h2>为什么这对您的选票很重要</h2>
       <p>如果只听到对方最弱的说法，每个决定都显得理所当然。但投票提案很少如此。看到双方最有力的论点，您才能用最好的反对意见检验自己的看法，然后坚持、改变，或更明智地持有它。</p>
       <h2>我们如何检验每一个钢人论证</h2>
-      <ul class="tests">
-        <li><b>支持者会签名认可吗？</b>审核者分别扮演双方的坚定支持者，从1分（稻草人）到5分（“我愿意签名”）打分。低于4分就要重写。</li>
-        <li><b>对调测试。</b>把标签对调。如果某一方突然显得更亲切、更确定或更合理，就修改措辞。</li>
-        <li><b>就事论事。</b>论点必须关于这项改变会带来什么，而不是谁支持它或为什么支持。</li>
-        <li><b>同等分量。</b>结构相同、篇幅相近、论点数量相同，不用红色或蓝色。每张卡片上，反对方始终在左、赞成方始终在右，与“现状 → 若通过”一致。</li>
-      </ul>
+      <p>另一个人工智能分别扮演双方的坚定支持者，问：“我愿意把这签成我们最好的论点吗？”双方都必须得到5分中的4分或5分，并通过检查偏向性措辞的对调测试，否则卡片就要重写。<a href="#how">查看完整流程 →</a></p>
       <p class="muted">依据宽容原则、阿纳托尔·拉波波特的批评规则（经丹尼尔·丹尼特推广）以及意识形态图灵测试（布莱恩·卡普兰）。</p>
       </div>
     </section>
@@ -385,10 +352,15 @@
       <ul class="beliefs-grid">
         <li><svg class="bicon" aria-hidden="true"><use href="#i-scale"/></svg><div><p class="bt">The strongest argument isn't always your own.</p><p class="bd">Knowing the best case against your view is how you hold it wisely, or change it.</p></div></li>
         <li><svg class="bicon" aria-hidden="true"><use href="#i-ballot"/></svg><div><p class="bt">All the facts. All the sides. Your decision.</p><p class="bd">We inform. We never recommend.</p></div></li>
-        <li><svg class="bicon" aria-hidden="true"><use href="#i-compass"/></svg><div><p class="bt">On the merits, not the messengers.</p><p class="bd">What a change would do, not who funds it or why.</p></div></li>
         <li><svg class="bicon" aria-hidden="true"><use href="#i-seal"/></svg><div><p class="bt">Official sources first, always cited.</p><p class="bd">If anything here disagrees with your official ballot, the ballot is right.</p></div></li>
-        <li><svg class="bicon" aria-hidden="true"><use href="#i-columns"/></svg><div><p class="bt">Equal treatment, by design.</p><p class="bd">Same structure, space, tone and colors for every side.</p></div></li>
-        <li><svg class="bicon" aria-hidden="true"><use href="#i-lock"/></svg><div><p class="bt">Your privacy.</p><p class="bd">No account, no tracking, no ads. Your address is never stored; we count only anonymous totals (<a href="/stats">see them</a>).</p></div></li>
+        <li><svg class="bicon" aria-hidden="true"><use href="#i-columns"/></svg><div><p class="bt">Equal treatment, by design.</p><p class="bd">Same structure, space and tone for every side, and no red or blue. No is always on the left, Yes on the right.</p></div></li>
+      </ul>
+      <h2>What we never do</h2>
+      <ul class="nevers">
+        <li>Tell you how to vote, or predict a result</li>
+        <li>Show polls or who's “winning”</li>
+        <li>Argue about motives, donors or party labels: we stay on the merits</li>
+        <li>Store your address, track you, or show ads. We count only anonymous totals (<a href="/stats">see them</a>)</li>
       </ul>
       <h2>Who we are</h2>
       <p>An independent, nonpartisan student project, not affiliated with any campaign, party or government. Our code is public on <a href="https://github.com/sophiaruilin/steelman-ballot" rel="noopener noreferrer" target="_blank">GitHub</a>.</p>
@@ -402,10 +374,15 @@
       <ul class="beliefs-grid">
         <li><svg class="bicon" aria-hidden="true"><use href="#i-scale"/></svg><div><p class="bt">El argumento más sólido no siempre es el suyo.</p><p class="bd">Conocer el mejor argumento en contra es como se sostiene una opinión con sabiduría, o se cambia.</p></div></li>
         <li><svg class="bicon" aria-hidden="true"><use href="#i-ballot"/></svg><div><p class="bt">Todos los hechos. Todos los lados. Su decisión.</p><p class="bd">Informamos. Nunca recomendamos.</p></div></li>
-        <li><svg class="bicon" aria-hidden="true"><use href="#i-compass"/></svg><div><p class="bt">Sobre el fondo, no sobre los mensajeros.</p><p class="bd">Lo que haría un cambio, no quién lo financia ni por qué.</p></div></li>
         <li><svg class="bicon" aria-hidden="true"><use href="#i-seal"/></svg><div><p class="bt">Fuentes oficiales primero, siempre citadas.</p><p class="bd">Si algo aquí no coincide con su boleta oficial, la boleta tiene la razón.</p></div></li>
-        <li><svg class="bicon" aria-hidden="true"><use href="#i-columns"/></svg><div><p class="bt">Trato igualitario, por diseño.</p><p class="bd">La misma estructura, espacio, tono y colores para cada lado.</p></div></li>
-        <li><svg class="bicon" aria-hidden="true"><use href="#i-lock"/></svg><div><p class="bt">Su privacidad.</p><p class="bd">Sin cuenta, sin rastreo, sin anuncios. Nunca guardamos su dirección; solo contamos totales anónimos (<a href="/stats">verlos</a>).</p></div></li>
+        <li><svg class="bicon" aria-hidden="true"><use href="#i-columns"/></svg><div><p class="bt">Trato igualitario, por diseño.</p><p class="bd">La misma estructura, espacio y tono para cada lado, y nada de rojo ni azul. El No siempre a la izquierda, el Sí a la derecha.</p></div></li>
+      </ul>
+      <h2>Lo que nunca hacemos</h2>
+      <ul class="nevers">
+        <li>Decirle cómo votar o predecir un resultado</li>
+        <li>Mostrar encuestas o quién “va ganando”</li>
+        <li>Discutir motivos, donantes o partidos: nos quedamos en el fondo</li>
+        <li>Guardar su dirección, rastrearle o mostrar anuncios. Solo contamos totales anónimos (<a href="/stats">verlos</a>)</li>
       </ul>
       <h2>Quiénes somos</h2>
       <p>Un proyecto estudiantil independiente e imparcial, sin afiliación con ninguna campaña, partido ni gobierno. Nuestro código es público en <a href="https://github.com/sophiaruilin/steelman-ballot" rel="noopener noreferrer" target="_blank">GitHub</a>.</p>
@@ -419,10 +396,15 @@
       <ul class="beliefs-grid">
         <li><svg class="bicon" aria-hidden="true"><use href="#i-scale"/></svg><div><p class="bt">最有力的论点，未必是你自己的。</p><p class="bd">了解反对你的最佳论证，才能明智地坚持或改变看法。</p></div></li>
         <li><svg class="bicon" aria-hidden="true"><use href="#i-ballot"/></svg><div><p class="bt">所有事实，所有观点，由你决定。</p><p class="bd">我们提供信息，从不推荐。</p></div></li>
-        <li><svg class="bicon" aria-hidden="true"><use href="#i-compass"/></svg><div><p class="bt">就事论事，不论传话者。</p><p class="bd">关注改变会带来什么，而不是谁资助它或为什么。</p></div></li>
         <li><svg class="bicon" aria-hidden="true"><use href="#i-seal"/></svg><div><p class="bt">官方来源优先，始终注明出处。</p><p class="bd">如与官方选票不一致，以官方选票为准。</p></div></li>
-        <li><svg class="bicon" aria-hidden="true"><use href="#i-columns"/></svg><div><p class="bt">平等对待，从设计做起。</p><p class="bd">每一方的结构、篇幅、语气和颜色都相同。</p></div></li>
-        <li><svg class="bicon" aria-hidden="true"><use href="#i-lock"/></svg><div><p class="bt">您的隐私。</p><p class="bd">无需账户，不追踪，无广告。绝不保存您的地址；我们只统计匿名总数（<a href="/stats">查看</a>）。</p></div></li>
+        <li><svg class="bicon" aria-hidden="true"><use href="#i-columns"/></svg><div><p class="bt">平等对待，从设计做起。</p><p class="bd">每一方的结构、篇幅和语气都相同，不用红色或蓝色。反对方始终在左，赞成方始终在右。</p></div></li>
+      </ul>
+      <h2>我们绝不做的事</h2>
+      <ul class="nevers">
+        <li>告诉您如何投票或预测结果</li>
+        <li>展示民调或谁“领先”</li>
+        <li>争论动机、捐款人或党派：我们只就事论事</li>
+        <li>保存您的地址、追踪您或展示广告。我们只统计匿名总数（<a href="/stats">查看</a>）</li>
       </ul>
       <h2>我们是谁</h2>
       <p>一个独立、无党派的学生项目，不隶属于任何竞选团队、政党或政府。代码在 <a href="https://github.com/sophiaruilin/steelman-ballot" rel="noopener noreferrer" target="_blank">GitHub</a> 上公开。</p>
@@ -434,7 +416,7 @@
     <div class="wrap">
       <p class="foot-motto"><span data-i18n="hero.h1a">Think more deeply.</span> <span data-i18n="hero.h1b">Vote more thoughtfully.</span></p>
       <p><b data-i18n="foot.never">We never tell you how to vote.</b> <span data-i18n="foot.rest">Not affiliated with any campaign, party or government. Official election offices always win when sources disagree.</span></p>
-      <p class="muted"><a href="#how" data-i18n="nav.how">How we work</a> · <a href="#philosophy" data-i18n="nav.philosophy">Our philosophy</a> · <a href="https://docs.google.com/forms/d/e/1FAIpQLSdEMz4oFJH_zGy1xtdHiAsf12pKQJD1jVn4ktJWbIQTBfQvKw/viewform" rel="noopener noreferrer" target="_blank" data-i18n="foot.report">Report an issue</a> · <a href="https://github.com/sophiaruilin/steelman-ballot/issues" rel="noopener noreferrer" target="_blank" data-i18n="foot.github">Technical issue? GitHub</a></p>
+      <p class="muted"><a href="#steelman" data-i18n="nav.steelman">Steelman vs. strawman</a> · <a href="#how" data-i18n="nav.how">How we work</a> · <a href="#philosophy" data-i18n="nav.philosophy">Our philosophy</a> · <a href="https://docs.google.com/forms/d/e/1FAIpQLSdEMz4oFJH_zGy1xtdHiAsf12pKQJD1jVn4ktJWbIQTBfQvKw/viewform" rel="noopener noreferrer" target="_blank" data-i18n="foot.report">Report an issue</a> · <a href="https://github.com/sophiaruilin/steelman-ballot/issues" rel="noopener noreferrer" target="_blank" data-i18n="foot.github">Technical issue? GitHub</a></p>
     </div>
   </footer>
   <script src="/i18n.js" defer></script>

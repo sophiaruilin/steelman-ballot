@@ -381,3 +381,6 @@ table.srcs td:first-child { font-weight: 500; color: var(--verdigris); white-spa
 /* hero: the steelman is the point; say plainly this is not a poll */
 .sub.purpose .hero-key { color: var(--verdigris); font-weight: 600; }
 .not-poll { margin: 6px 0 0; font: 400 .95rem var(--sans); color: var(--muted); }
+
+/* home band: each preview links to the page that covers it in full */
+.band-link { display: inline-block; margin-top: 8px; font: 500 .92rem var(--sans); color: var(--verdigris); }
