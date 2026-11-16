@@ -342,3 +342,7 @@ table.srcs td:first-child { font-weight: 500; color: var(--verdigris); white-spa
 @media (max-width: 560px) { table.srcs th:nth-child(3), table.srcs td:nth-child(3) { display: none; } }
 .steps .tests { list-style: disc; padding-left: 1.2em; margin: 4px 0 8px; }
 .steps .tests li { margin: 5px 0; }
+
+/* How we work, step III: writer / challenger */
+.steps h4.part { font: 500 .78rem var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--copper-ink); margin: 16px 0 4px; }
+.scale5 { display: block; margin: 4px 0; padding: 6px 10px; background: var(--verdigris-10); border-radius: var(--radius); font-size: .92rem; }
