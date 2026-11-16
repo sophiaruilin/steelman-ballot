@@ -306,10 +306,11 @@ const backButton = () => el("p", { class: "back" }, el("button", { class: "btn g
 
 // ---- measure card ---------------------------------------------------------------------------------
 function claimLi(c) {
-  return el("li", {}, el("span", { class: "tag" }, c.label), c.text,
-    c.whose ? el("span", { class: "muted" }, ` (${c.whose})`) : null, " ",
+  const tag = t(`tag.${c.label}`) + (c.whose && c.label !== "fact" ? ` · ${c.whose}` : "");
+  return el("li", {}, el("span", { class: `tag ${c.label}` }, tag), c.text, " ",
     el("span", { class: "src" }, "[", extLink(c.source_url, t("card.source")), "]"));
 }
+const notGiven = (s) => !s || /^(not (specified|identified|stated)|unknown)/i.test(s.trim());
 
 function reasoningPanel(kind, s) {
   return el("section", { class: "reasoning", hidden: true, "aria-label": `Reasoning: the case ${kind}` },
@@ -360,10 +361,15 @@ function measureCard(rec) {
     el("h2", { class: "sr-heading" }, t("three.2h")),
     el("div", { class: "balance" }, left, el("div", { class: "fulcrum" }, scaleIcon()), right),
     [pAgainst, pFor],
+
+    // 2. Where they really disagree, and what the evidence says about it
+    el("div", { class: "crux" }, el("b", {}, t("card.crux")), c.crux.text),
+    el("h2", {}, t("card.whatevidence")),
+    el("ul", { class: "evidence" }, [c.fiscal_impact, ...c.evidence].filter(Boolean).map(claimLi)),
     el("p", { class: "more-below" }, el("a", { href: "#details", onclick: (e) => { e.preventDefault(); $("#details").scrollIntoView({ behavior: "smooth" }); } },
       t("card.below"))),
 
-    // 2. Details, for anyone who wants to go deeper
+    // 3. The mechanics, for anyone who wants them
     el("div", { id: "details" },
       el("div", { class: "votes" }, vLeft, el("div", { class: "fulcrum thin" }, scaleIcon("mini")), vRight),
       el("h2", {}, t("card.changes")),
@@ -375,15 +381,12 @@ function measureCard(rec) {
             el("div", { class: "now" }, el("span", { class: "lbl" }, t("card.today")), r.today),
             el("div", { class: "arrow", "aria-hidden": "true" }, "→"),
             el("div", { class: "then" }, el("span", { class: "lbl" }, t("card.ifpasses")), r.if_passes,
-              r.label === "prediction" ? el("span", { class: "muted" }, ` (${t("card.estimate")}: ${r.whose || "?"})`) : null, " ",
+              r.label === "prediction" ? el("span", { class: "muted" }, ` (${t("tag.prediction")} · ${r.whose || "?"})`) : null, " ",
               el("span", { class: "src" }, "[", extLink(r.source_url, t("card.source")), "]")))))),
-      el("div", { class: "crux" }, el("b", {}, t("card.crux")), c.crux.text),
-      el("h2", {}, t("card.whatevidence")),
-      el("ul", { class: "evidence" }, [c.fiscal_impact, ...c.evidence].filter(Boolean).map(claimLi)),
       el("h3", {}, t("card.affected")),
       el("ul", { class: "affected" }, c.who_is_affected.map((w) => el("li", {}, w))),
       el("p", { class: "official" }, `${t("card.official")}: `, c.official_title, c.title_disputed ? " · ⚖" : "",
-        ` · ${t("card.placed")}: ${c.put_on_ballot_by}`),
+        notGiven(c.put_on_ballot_by) ? "" : ` · ${t("card.placed")}: ${c.put_on_ballot_by}`),
       shareBar(c.measure_id),
       el("h3", {}, t("card.sources")),
       el("ul", { class: "sources" }, (rec.sources || []).map((u) => el("li", {}, extLink(u, u)))),

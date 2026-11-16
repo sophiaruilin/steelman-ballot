@@ -328,3 +328,8 @@ svg.mini { width: 18px; height: 18px; flex: none; }
 .item .cta { color: var(--verdigris); font-weight: 500; border-bottom: 1px solid var(--copper); }
 .item:hover .cta { color: var(--copper-ink); }
 .privacy .picon { flex: none; width: 22px; height: 22px; }
+
+/* evidence tags: plain words, estimates set slightly apart from facts */
+.tag.prediction { border-color: var(--copper); color: var(--copper-ink); }
+.tag.value { border-style: dashed; }
+.crux { margin-top: 18px; }

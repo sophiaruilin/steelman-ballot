@@ -3,6 +3,9 @@
 "use strict";
 window.I18N = {
   en: {
+    "tag.value": "View",
+    "tag.prediction": "Estimate",
+    "tag.fact": "Fact",
     "item.cta": "See both sides at their strongest →",
     "help.short": "Street and city, or just a ZIP code for statewide measures. Try:",
     "foot.github": "Technical issue? GitHub",
@@ -47,7 +50,7 @@ window.I18N = {
     "card.explore": "Explore reasoning →", "card.close": "Close reasoning ↑", "card.reasoning": "The reasoning",
     "card.more": "More reasons", "card.evidence": "Evidence they point to", "card.helps": "Who it helps, in their view", "card.answer": "Their answer to the other side",
     "card.nobasis": "No official argument was submitted for this side; this case comes from the official analysis.",
-    "card.below": "What a yes or no vote does, what would change, and the evidence ↓",
+    "card.below": "What a yes or no vote does, and what would change ↓",
     "card.yes": "A yes vote means", "card.no": "A no vote means", "card.changes": "What would change",
     "card.today": "Today · if No wins", "card.ifpasses": "If it passes · if Yes wins", "card.estimate": "estimate",
     "card.crux": "Where they really disagree", "card.whatevidence": "What the evidence says", "card.affected": "Who is affected",
@@ -62,6 +65,9 @@ window.I18N = {
     "race.differ": "Where they differ", "race.note": "Statements were written by the candidates and not checked by any official agency. We never tell you how to vote.",
   },
   es: {
+    "tag.value": "Opinión",
+    "tag.prediction": "Estimación",
+    "tag.fact": "Hecho",
     "item.cta": "Ver ambos lados en su mejor versión →",
     "help.short": "Calle y ciudad, o solo un código postal para las medidas estatales. Pruebe:",
     "foot.github": "¿Problema técnico? GitHub",
@@ -106,7 +112,7 @@ window.I18N = {
     "card.explore": "Ver el razonamiento →", "card.close": "Cerrar razonamiento ↑", "card.reasoning": "El razonamiento",
     "card.more": "Más razones", "card.evidence": "Evidencia que señalan", "card.helps": "A quién beneficia, según ellos", "card.answer": "Su respuesta al otro lado",
     "card.nobasis": "No se presentó un argumento oficial para este lado; este caso se basa en el análisis oficial.",
-    "card.below": "Qué significa votar sí o no, qué cambiaría y la evidencia ↓",
+    "card.below": "Qué significa votar sí o no, y qué cambiaría ↓",
     "card.yes": "Votar sí significa", "card.no": "Votar no significa", "card.changes": "Qué cambiaría",
     "card.today": "Hoy · si gana el No", "card.ifpasses": "Si se aprueba · si gana el Sí", "card.estimate": "estimación",
     "card.crux": "Dónde está el verdadero desacuerdo", "card.whatevidence": "Qué dice la evidencia", "card.affected": "A quién afecta",
@@ -121,6 +127,9 @@ window.I18N = {
     "race.differ": "En qué se diferencian", "race.note": "Las declaraciones fueron escritas por los candidatos y ninguna agencia oficial las verificó. Nunca le decimos cómo votar.",
   },
   zh: {
+    "tag.value": "观点",
+    "tag.prediction": "估计",
+    "tag.fact": "事实",
     "item.cta": "查看双方最有力的论点 →",
     "help.short": "街道和城市，或只输入邮编查看全州提案。试试：",
     "foot.github": "技术问题？GitHub",
@@ -165,7 +174,7 @@ window.I18N = {
     "card.explore": "查看推理 →", "card.close": "收起推理 ↑", "card.reasoning": "推理",
     "card.more": "更多理由", "card.evidence": "他们引用的证据", "card.helps": "他们认为受益的人", "card.answer": "他们对另一方的回应",
     "card.nobasis": "这一方没有提交官方论点；此论述依据官方分析。",
-    "card.below": "投赞成票或反对票的含义、会有什么变化以及证据 ↓",
+    "card.below": "投赞成票或反对票的含义，以及会有什么变化 ↓",
     "card.yes": "投赞成票意味着", "card.no": "投反对票意味着", "card.changes": "会有什么变化",
     "card.today": "现状 · 若反对方胜出", "card.ifpasses": "若通过 · 若赞成方胜出", "card.estimate": "估计",
     "card.crux": "真正的分歧所在", "card.whatevidence": "证据怎么说", "card.affected": "受影响的人群",
