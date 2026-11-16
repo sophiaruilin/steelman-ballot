@@ -148,3 +148,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 33: Home page: covered states under the address box; shorter lines
 **Prompt (my own words):** "On homepage, can you remove the "try" line? intead create new line underneath the address line, with the states this is eligible for" then "FOr this section - can you make even more concise? The strongest argument isn't always your own. Enter your address to see what's on your ballot, and the strongest case for each side." and "does this section best convey the mission/philosophy or would you reword at all? Think more deeply. Vote more thoughtfully."
 **What was lacking before:** The example-address line added clutter without saying where the app works, the purpose line repeated what the address box already implies, and the placeholder was cut off on phones.
+
+## Step 34: "How a card works" above the map, matching the card
+**Prompt (my own words):** "is this section on front page in the best section or where would it make most logical and user friendly sense? I Both sides, at their strongest ... II What would change ... III Your decision ..."
+**What was lacking before:** The three-step explainer sat below the coverage map, so first-time visitors saw coverage before learning what a card shows, and step II still described the old card order.
