@@ -3,6 +3,7 @@
 "use strict";
 window.I18N = {
   en: {
+    "ballot.start": "Start with any measure below",
     "last.forget": "Forget it",
     "last.show": "Show my last ballot ({where})",
     "help.states": "Available for addresses in California, Massachusetts, New York and Connecticut.",
@@ -29,7 +30,8 @@ window.I18N = {
     "hero.eyebrow": "Nonpartisan ballot guide · Look-back demo: Nov 3, 2026 ballot",
     "hero.h1a": "Think more deeply.", "hero.h1b": "Vote more thoughtfully.",
     "hero.lede": "The strongest argument isn't always your own.",
-    "hero.sub": "See your ballot, with the strongest case for each side.",
+    "hero.sub1": "Understand what's on your ballot:", "hero.sub2": "the strongest case for each side, side by side.",
+    "hero.notpoll": "A guide to read before you vote. This is not a poll, and you can't vote here.",
     "form.label": "Your address or ZIP code", "form.placeholder": "Street address or ZIP code", "form.button": "See my ballot",
     "form.hint": "Used only to find your districts. Never stored. Try an example:",
     "map.eyebrow": "Where we cover", "map.title": "Starting with four states",
@@ -68,6 +70,7 @@ window.I18N = {
     "race.differ": "Where they differ", "race.note": "Statements were written by the candidates and not checked by any official agency. We never tell you how to vote.",
   },
   es: {
+    "ballot.start": "Empiece con cualquier medida de abajo",
     "last.forget": "Olvidarla",
     "last.show": "Ver mi última boleta ({where})",
     "help.states": "Disponible para direcciones en California, Massachusetts, Nueva York y Connecticut.",
@@ -94,7 +97,8 @@ window.I18N = {
     "hero.eyebrow": "Guía electoral imparcial · Demostración retrospectiva: boleta del 3 nov. 2026",
     "hero.h1a": "Piense con más profundidad.", "hero.h1b": "Vote con más reflexión.",
     "hero.lede": "El argumento más sólido no siempre es el suyo.",
-    "hero.sub": "Vea su boleta, con el argumento más sólido de cada lado.",
+    "hero.sub1": "Entienda lo que hay en su boleta:", "hero.sub2": "el argumento más sólido de cada lado, uno junto al otro.",
+    "hero.notpoll": "Una guía para leer antes de votar. No es una encuesta y aquí no se vota.",
     "form.label": "Su dirección o código postal", "form.placeholder": "Dirección o código postal", "form.button": "Ver mi boleta",
     "form.hint": "Solo se usa para encontrar sus distritos. Nunca se guarda. Pruebe un ejemplo:",
     "map.eyebrow": "Dónde estamos", "map.title": "Empezamos con cuatro estados",
@@ -133,6 +137,7 @@ window.I18N = {
     "race.differ": "En qué se diferencian", "race.note": "Las declaraciones fueron escritas por los candidatos y ninguna agencia oficial las verificó. Nunca le decimos cómo votar.",
   },
   zh: {
+    "ballot.start": "从下方任一提案开始",
     "last.forget": "清除",
     "last.show": "显示我上次的选票（{where}）",
     "help.states": "适用于加利福尼亚州、马萨诸塞州、纽约州和康涅狄格州的地址。",
@@ -159,7 +164,8 @@ window.I18N = {
     "hero.eyebrow": "无党派选票指南 · 回顾演示：2026年11月3日选票",
     "hero.h1a": "思考更深入。", "hero.h1b": "投票更审慎。",
     "hero.lede": "最有力的论点，未必是你自己的。",
-    "hero.sub": "查看您的选票，以及每一方最有力的论点。",
+    "hero.sub1": "了解您选票上的内容：", "hero.sub2": "每一方最有力的论点，并排呈现。",
+    "hero.notpoll": "这是投票前阅读的指南。这里不是民意调查，也不能在这里投票。",
     "form.label": "您的地址或邮编", "form.placeholder": "街道地址或邮编", "form.button": "查看我的选票",
     "form.hint": "仅用于查找您的选区，绝不保存。试试示例：",
     "map.eyebrow": "覆盖范围", "map.title": "从四个州开始",

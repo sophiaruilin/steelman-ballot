@@ -254,6 +254,9 @@ function renderBallot() {
       el("span", {}, el("b", {}, b.races.length), t("ballot.races"))),
     b.zip_only ? el("p", { class: "notice" }, t("ballot.ziponly")) : el("p", { class: "districts-line" }, districtLine),
     el("p", { class: "notice" }, t("ballot.notice"), " ", b.official_links.map((l) => [extLink(l.url, l.label), " "])),
+    b.measures.some((m) => m.status === "ready")
+      ? el("p", { class: "start-here" }, t("ballot.start"), el("span", { class: "arrow-down", "aria-hidden": "true" }, "↓"))
+      : null,
     el("details", {},
       el("summary", {}, t("ballot.details")),
       el("p", { class: "muted" }, b.coverage_note || ""),

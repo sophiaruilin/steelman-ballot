@@ -156,3 +156,11 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 35: A new visit starts blank
 **Prompt (my own words):** "if opening new page should front pgae be blank with any ballots or last search / claifornia results? the how we work section is back to 6 steps not sure if you reocmmend that or if some recent changes got lots"
 **What was lacking before:** Every visit re-showed the last lookup's ballot (confusing for first-timers and testers, and visible to the next person on a shared device), and an old cached stylesheet could still show How we work's nested bullets as extra numbered steps.
+
+## Step 36: The address box and the result stand out
+**Prompt (my own words):** "i feel like the privacy bar is almost more higlighted than the search bar itself. shodl the search bar have a thicker dark gold or whatever reocmmened accent color or ismply as bolded or more bolded as the privacy bar around it so it's the clear call to action? i don't mind the privacy bar being as apparent as it is given user concerns / when it does generate should the your ballot in 60 seconds be even more apparent as the main output deliverable and to know to scroll down and view more in that area, perhaps also bolder or with some accent or somtehing else to draw more attention"
+**What was lacking before:** The address box had a thin border and looked weaker than the privacy note beside it, and the "Your ballot in 60 seconds" summary did not read as the main result or point people to the measures below it.
+
+## Step 37: Say plainly what the site is (and is not)
+**Prompt (my own words):** "for the 'see your balot, with strongest case...' shold i emphase strongest case for each side as that main value of the site? one user who enlgihs wasnt so easy for them was confused and thought this was a voting polling site, i want to make it clear that this is steelman concept arguments to better understand what's on the ballot, to get informed..."
+**What was lacking before:** The purpose line did not stress the steelman idea, and nothing told visitors that this is a guide to read, not a poll or a place to vote. That confused a tester whose first language is not English.
