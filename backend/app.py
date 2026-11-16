@@ -29,7 +29,7 @@ from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, Response
 from starlette.concurrency import run_in_threadpool
 from fastapi.staticfiles import StaticFiles
 
-from backend import config
+from backend import config, stats
 from backend.agents.ballot_mapper import COVERED_STATES, MAP_KIND, measures_for, races_for
 from backend.share import open_graph, share_text, whatsapp_link
 from backend.sources.geocoder import AddressNotFound, Area, Jurisdiction, geocode
@@ -266,6 +266,7 @@ def ballot(request: Request, body: Lookup):
         measures, mstatus = ballot_measures(j)
     except SourceError:
         measures, mstatus = [], "unavailable"
+    stats.count("lookup:all", f"lookup:{j.state_abbr}", *(["lookup:zip_only"] if zip_only else []))
     return with_zip_note(assemble_ballot(j, measures, mstatus), zip_only)
 
 
@@ -304,10 +305,46 @@ async def ballot_stream(request: Request, body: Lookup):
         data = with_zip_note(await run_in_threadpool(assemble_ballot, j, measures, mstatus), zip_only)
         ready = sum(m["status"] == "ready" for m in data["measures"])
         yield ev("step", id="cards", state="done", seconds=round(time.monotonic() - t2, 1), count=ready)
+        stats.count("lookup:all", f"lookup:{j.state_abbr}", *(["lookup:zip_only"] if zip_only else []))
         yield ev("ballot", **data)
 
     return StreamingResponse(steps(), media_type="text/event-stream",
                              headers={"Cache-Control": "no-store", "X-Accel-Buffering": "no"})
+
+
+@app.get("/api/stats")
+def stats_json():
+    """Public, anonymous usage totals (counts only)."""
+    return stats.report()
+
+
+@app.get("/stats", response_class=HTMLResponse)
+def stats_page():
+    r, e = stats.report(), html.escape
+
+    def table(title: str, d: dict) -> str:
+        if not d:
+            return ""
+        rows = "".join(f"<tr><td>{e(str(k))}</td><td>{v}</td></tr>" for k, v in d.items())
+        return f"<h3>{e(title)}</h3><table><tr><th>Item</th><th>Count</th></tr>{rows}</table>"
+
+    t = r["total"]
+    days = "".join(f"<tr><td>{e(d)}</td><td>{(v.get('lookup') or {}).get('all', 0)}</td>"
+                   f"<td>{sum((v.get('card') or {}).values())}</td><td>{sum((v.get('share') or {}).values())}</td>"
+                   f"<td>{v.get('visit', 0)}</td></tr>" for d, v in r["by_day"].items())
+    body = (f"<p class='muted'>{e(r['note'])} Storage: {e(r['storage'])}"
+            f"{' (resets when the server restarts)' if r['storage'] == 'memory' else ''}.</p>"
+            f"<h2>Last 14 days</h2><table><tr><th>Day</th><th>Lookups</th><th>Cards opened</th><th>Shares</th>"
+            f"<th>Home page loads</th></tr>{days}</table>"
+            f"<h2>All time</h2>"
+            + table("Lookups by state", t.get("lookup") or {}) + table("Cards opened", t.get("card") or {})
+            + table("Card language", t.get("lang") or {}) + table("Shares by channel", t.get("share") or {})
+            + f"<p>Home page loads: {t.get('visit', 0)}</p>")
+    return HTMLResponse(f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>Usage · Steelman Ballot</title>
+<meta name="robots" content="noindex"><link rel="stylesheet" href="/app.css"></head>
+<body class="share-page"><main class="wrap prose stats"><p class="brand">Steelman Ballot</p><h1>Anonymous usage</h1>
+{body}<p><a href="/">← Back to the app</a></p></main></body></html>""")
 
 
 @app.get("/api/coverage")
@@ -322,6 +359,7 @@ def card(card_id: str, lang: str = Query("en", pattern="^(en|es|zh)$")):
     if not rec:
         raise HTTPException(404, "This card hasn't been researched yet.")
     rec["lang"] = "en"
+    stats.count(f"card:{card_id}", f"lang:{lang}")
     if lang != "en" and "steelman_yes" in rec["card"]:
         from backend.agents.translator import I18N, apply
         tpath = I18N / f"{card_id}.{lang}.json"
@@ -337,10 +375,12 @@ def public_base(request: Request) -> str:
 
 
 @app.get("/api/share/{card_id}")
-def share(card_id: str, request: Request):
+def share(card_id: str, request: Request, ch: str = Query("", pattern="^(|whatsapp|wechat|more|copy)$")):
     rec = load_card(card_id)
     if not rec or "steelman_yes" not in rec["card"]:
         raise HTTPException(404, "Only measure cards can be shared.")
+    if ch:
+        stats.count(f"share:{ch}")
     url = f"{public_base(request)}/c/{card_id}"
     c = rec["card"]
     return {"url": url, "whatsapp_link": whatsapp_link(c, url),
@@ -389,6 +429,7 @@ def share_page(card_id: str, request: Request):
 
 @app.get("/")
 def index():
+    stats.count("visit")
     return FileResponse(FRONTEND / "index.html", headers={"Cache-Control": "no-cache"})
 
 

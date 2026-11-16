@@ -23,3 +23,8 @@ services:
       # (used in share links, QR codes and link previews).
       - key: PUBLIC_BASE_URL
         sync: false
+      # Optional: anonymous usage totals that survive restarts (free Upstash Redis database)
+      - key: UPSTASH_REDIS_REST_URL
+        sync: false
+      - key: UPSTASH_REDIS_REST_TOKEN
+        sync: false

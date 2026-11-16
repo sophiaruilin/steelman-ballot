@@ -316,3 +316,8 @@ svg.mini { width: 18px; height: 18px; flex: none; }
 .cmp-col { display: grid; gap: 10px; align-content: start; }
 .cmp-side { font: 500 .78rem var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0; }
 .compare2 .cmp .q { font-size: 1.12rem; }
+
+/* /stats page */
+.stats table { border-collapse: collapse; width: 100%; margin: 8px 0 18px; font-size: .92rem; }
+.stats th, .stats td { text-align: left; padding: 6px 8px; border-bottom: var(--rule); }
+.stats th { font-weight: 500; color: var(--muted); }

@@ -183,3 +183,47 @@ def test_zip_outside_covered_states_is_explained():
 def test_render_runs_without_access_logs():
     from pathlib import Path
     assert "--no-access-log" in (Path(__file__).parent.parent / "render.yaml").read_text(encoding="utf-8")
+
+
+# ---- Anonymous usage totals ----------------------------------------------------------------
+
+def test_lookup_counts_state_only_never_the_address(monkeypatch):
+    import json
+    from pathlib import Path
+    from backend import stats
+    from backend.sources.geocoder import parse
+    stats._mem.clear()
+    j = parse(json.loads((Path(__file__).parent / "fixtures" / "census_new_haven.json").read_text(encoding="utf-8")))
+    monkeypatch.setattr(app_module, "geocode", lambda a: j)
+    monkeypatch.setattr(app_module, "ballot_measures", lambda jj: ([], "none_on_ballot"))
+    app_module._hits.clear()
+    secret = "165 Church St, New Haven, CT 06510"
+    assert client.post("/api/ballot", json={"address": secret}).status_code == 200
+    totals = stats.report()["total"]
+    assert totals["lookup"] == {"all": 1, "CT": 1}
+    dumped = json.dumps({k: dict(v) for k, v in stats._mem.items()})
+    assert "Church" not in dumped and "06510" not in dumped and "165" not in dumped
+
+
+def test_card_views_languages_and_shares_are_counted():
+    from backend import stats
+    stats._mem.clear()
+    client.get(f"/api/card/{CARD}", params={"lang": "es"})
+    client.get(f"/api/share/{CARD}", params={"ch": "wechat"})
+    t = stats.report()["total"]
+    assert t["card"][CARD] == 1 and t["lang"]["es"] == 1 and t["share"]["wechat"] == 1
+    assert client.get(f"/api/share/{CARD}", params={"ch": "evil<script>"}).status_code == 422
+
+
+def test_counter_refuses_anything_but_plain_labels():
+    from backend import stats
+    stats._mem.clear()
+    stats.count("lookup:CA", "lookup:123 Main St, Springfield", "note:<b>x</b>", "visit")
+    assert dict(stats._mem["total"]) == {"lookup:CA": 1, "visit": 1}
+
+
+def test_stats_page_is_public_and_anonymous():
+    r = client.get("/stats")
+    assert r.status_code == 200 and "Anonymous usage" in r.text and "noindex" in r.text
+    j = client.get("/api/stats").json()
+    assert j["storage"] in ("memory", "upstash") and "no addresses" in j["note"]

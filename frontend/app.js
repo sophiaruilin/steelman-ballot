@@ -409,19 +409,19 @@ function shareBar(id) {
     try { await navigator.clipboard.writeText(text); out.textContent = msg; }
     catch { out.textContent = t("share.copyfail"); }
   };
-  const getShare = () => api(`/api/share/${encodeURIComponent(id)}`);
+  const getShare = (ch = "") => api(`/api/share/${encodeURIComponent(id)}${ch ? `?ch=${ch}` : ""}`);
   return el("section", {}, el("h3", {}, t("share.title")),
     el("div", { class: "share" },
-      el("button", { class: "btn", onclick: async () => { const s = await getShare(); location.href = s.whatsapp_link; } }, "WhatsApp"),
+      el("button", { class: "btn", onclick: async () => { const s = await getShare("whatsapp"); location.href = s.whatsapp_link; } }, "WhatsApp"),
       el("button", { class: "btn", onclick: async () => {
-        const s = await getShare(); await copy(s.wechat, t("share.wechat_copied"));
+        const s = await getShare("wechat"); await copy(s.wechat, t("share.wechat_copied"));
         qrBox.replaceChildren(el("img", { src: `/api/qr/${encodeURIComponent(id)}.svg`, alt: "QR code linking to this card" }));
         qrBox.hidden = false;
       } }, "WeChat"),
       navigator.share ? el("button", { class: "btn ghost", onclick: async () => {
-        const s = await getShare(); try { await navigator.share({ title: "Steelman Ballot", text: s.plain }); } catch { /* cancelled */ }
+        const s = await getShare("more"); try { await navigator.share({ title: "Steelman Ballot", text: s.plain }); } catch { /* cancelled */ }
       } }, t("share.more")) : null,
-      el("button", { class: "btn ghost", onclick: async () => { const s = await getShare(); copy(s.url, t("share.copied")); } }, t("share.copy"))),
+      el("button", { class: "btn ghost", onclick: async () => { const s = await getShare("copy"); copy(s.url, t("share.copied")); } }, t("share.copy"))),
     qrBox, out);
 }
 

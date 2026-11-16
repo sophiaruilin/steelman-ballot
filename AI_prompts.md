@@ -116,3 +116,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 25: Privacy-first search bar, ZIP-only option, a real steelman example
 **Prompt (my own words):** "steelman vs strawman example - more compelling option (can use one of the actual past ballot responses already tested and cleared)? got to make a great first impression on the concept / for home address, what is 'minimum' info address needed? do you need the zip code, state, etc. for example? / under the home address bar, make the note of 'never stored' even more prominent and first thing, communicate the privacy factor here more. several users didn't want to use actual home address. come up with transparent concise messaging around this search bar, and within the search bar or also added clear insturctions, on whta is minium address info needed"
 **What was lacking before:** The privacy promise was a small hint, addresses were sent in the URL (so server logs could keep them), there was no option for people unwilling to share a street address, and the steelman example was a made-up bus-lane line instead of the app's own tested cards.
+
+## Step 26: Anonymous usage totals
+**Prompt (my own words):** "can i see how many users have tested it / how many unique addresses have been entered?" then "yes" (to anonymous counters) and "for 'never stored', change to 'we never store addresses' and don't need to mention we count totals"
+**What was lacking before:** Because addresses and access logs are never kept, there was no way to see whether anyone used the app at all.
