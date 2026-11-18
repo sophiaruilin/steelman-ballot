@@ -87,10 +87,15 @@ const safeUrl = (u) => (/^https:\/\//i.test(u || "") ? u : null);
 const extLink = (url, text) => safeUrl(url)
   ? el("a", { href: url, target: "_blank", rel: "noopener noreferrer" }, text || new URL(url).hostname) : (text || "");
 const status = (msg) => { $("#status").textContent = msg || ""; };
+// Join a short list the way each language does: "A, B, and C." / "A, B y C." / "A、B和C。"
 const sentence = (xs) => {
-  const v = (xs || []).map((x, i) => (i ? x.charAt(0).toLowerCase() + x.slice(1) : x));
-  const s = v.length > 2 ? `${v.slice(0, -1).join(", ")}, and ${v.at(-1)}` : v.join(" and ");
-  return s ? s.replace(/\.$/, "") + "." : "";
+  const lang = state.lang;
+  const v = (xs || []).map((x, i) => (i && lang !== "zh" ? x.charAt(0).toLowerCase() + x.slice(1) : x).replace(/[.。]$/, ""));
+  if (!v.length) return "";
+  let s;
+  try { s = new Intl.ListFormat({ en: "en-US", es: "es", zh: "zh-CN" }[lang] || "en-US", { style: "long", type: "conjunction" }).format(v); }
+  catch { s = v.length > 2 ? `${v.slice(0, -1).join(", ")}, and ${v.at(-1)}` : v.join(" and "); }
+  return s + (lang === "zh" ? "。" : ".");
 };
 
 async function api(path) {
@@ -477,7 +482,8 @@ function measureCard(rec) {
       el("ul", { class: "pills" },
         el("li", { class: `pill ${rec.steelman_verified ? "ok" : "warn"}` }, rec.steelman_verified ? t("card.checked") : t("card.unverified")),
         el("li", { class: "pill" }, `${c.reading_minutes} ${t("card.min")}`)),
-      state.lang !== "en" ? el("p", { class: "notice" }, rec.lang === state.lang ? t("card.translated") : t("card.notyet")) : null),
+      state.lang !== "en" ? el("p", { class: "notice" }, rec.lang === state.lang ? t("card.translated") : t("card.notyet")) : null,
+      IN_WECHAT ? el("p", { class: "wx-tip" }, t("share.wx_tip")) : null),
 
     // 1. The headline takeaway: each side at its strongest, side by side
     el("h2", { class: "sr-heading" }, t("three.2h")),
@@ -509,7 +515,7 @@ function measureCard(rec) {
       el("ul", { class: "affected" }, c.who_is_affected.map((w) => el("li", {}, w))),
       el("p", { class: "official" }, `${t("card.official")}: `, c.official_title, c.title_disputed ? " · ⚖" : "",
         notGiven(c.put_on_ballot_by) ? "" : ` · ${t("card.placed")}: ${tx(c.put_on_ballot_by)}`),
-      shareBar(c.measure_id),
+      shareBar(c.measure_id, c),
       el("h3", {}, t("card.sources")),
       el("ul", { class: "sources" }, (rec.sources || []).map((u) => el("li", {}, extLink(u, u)))),
       reportLink(`${c.number}: ${c.plain_title} (${c.measure_id})`),
@@ -552,7 +558,60 @@ function raceCard(rec) {
 }
 
 // ---- sharing (always both sides) --------------------------------------------------------------
-function shareBar(id) {
+// ---- WeChat: a ready-to-send image (title + QR with our logo + how to open it) -----------------------
+const IN_WECHAT = /MicroMessenger/i.test(navigator.userAgent);
+const loadImg = (src) => new Promise((ok, bad) => { const i = new Image(); i.onload = () => ok(i); i.onerror = bad; i.src = src; });
+// Wrap text to a width: Chinese can break between any two characters, other languages between words.
+function wrapLines(ctx, text, maxW, maxLines) {
+  const tokens = text.match(/[\u3000-\u9fff\uff00-\uffef]|[^\s\u3000-\u9fff\uff00-\uffef]+|\s+/g) || [];
+  const lines = []; let line = "";
+  for (const tok of tokens) {
+    const next = line + tok;
+    if (ctx.measureText(next.trimEnd()).width > maxW && line.trim()) { lines.push(line.trim()); line = tok.trimStart(); }
+    else line = next;
+  }
+  if (line.trim()) lines.push(line.trim());
+  if (lines.length > maxLines) { lines.length = maxLines; lines[maxLines - 1] = lines[maxLines - 1].replace(/.$/, "…"); }
+  return lines;
+}
+async function wechatPoster(id, c, url) {
+  const W = 720, H = 1060, cv = document.createElement("canvas");
+  cv.width = W; cv.height = H;
+  const x = cv.getContext("2d");
+  await document.fonts.ready;
+  const [qr, logo] = await Promise.all([loadImg(`/api/qr/${encodeURIComponent(id)}.svg`), loadImg("/icon.svg")]);
+  const serif = '"EB Garamond", "Noto Serif SC", "Songti SC", "SimSun", serif';
+  const sans = '"IBM Plex Sans", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif';
+  x.fillStyle = "#F4F0E7"; x.fillRect(0, 0, W, H);
+  // header band with the logo and name
+  x.fillStyle = "#234742"; x.fillRect(0, 0, W, 112);
+  x.drawImage(logo, 40, 26, 60, 60);
+  x.fillStyle = "#F4F0E7"; x.font = `600 40px ${serif}`; x.textBaseline = "middle"; x.fillText("Steelman Ballot", 118, 58);
+  // which measure, in the reader's language
+  x.textBaseline = "alphabetic";
+  x.fillStyle = "#885E44"; x.font = `600 26px ${sans}`; x.fillText(numLabel(c.number), 48, 172);
+  x.fillStyle = "#2B3031"; x.font = `600 38px ${serif}`;
+  let y = 222;
+  for (const ln of wrapLines(x, c.plain_title, W - 96, 3)) { x.fillText(ln, 48, y); y += 50; }
+  // the QR, with our logo in the middle (the code uses high error correction, so it still scans)
+  const Q = 420, qx = (W - Q) / 2, qy = Math.max(y + 24, 330);
+  x.fillStyle = "#FFFFFF"; x.fillRect(qx - 18, qy - 18, Q + 36, Q + 36);
+  x.strokeStyle = "#A9B0AB"; x.lineWidth = 2; x.strokeRect(qx - 18, qy - 18, Q + 36, Q + 36);
+  x.imageSmoothingEnabled = false; x.drawImage(qr, qx, qy, Q, Q); x.imageSmoothingEnabled = true;
+  const L = 84; x.fillStyle = "#FFFFFF"; x.fillRect(W / 2 - L / 2 - 8, qy + Q / 2 - L / 2 - 8, L + 16, L + 16);
+  x.drawImage(logo, W / 2 - L / 2, qy + Q / 2 - L / 2, L, L);
+  // how to open it
+  y = qy + Q + 76;
+  x.fillStyle = "#234742"; x.font = `600 32px ${sans}`; x.textAlign = "center";
+  for (const ln of wrapLines(x, t("share.poster_caption"), W - 96, 2)) { x.fillText(ln, W / 2, y); y += 44; }
+  x.fillStyle = "#5F6663"; x.font = `400 22px ${sans}`;
+  x.fillText(t("share.poster_note"), W / 2, y + 10);
+  x.fillText(url.replace(/^https?:\/\//, ""), W / 2, H - 36);
+  x.textAlign = "start";
+  return cv.toDataURL("image/png");
+}
+
+function shareBar(id, c) {
   const out = el("p", { class: "status", role: "status" });
   const qrBox = el("div", { class: "qr", hidden: true });
   const copy = async (text, msg) => {
@@ -561,13 +620,22 @@ function shareBar(id) {
   };
   const getShare = (ch = "") => api(`/api/share/${encodeURIComponent(id)}${ch ? `?ch=${ch}` : ""}`);
   return el("section", {}, el("h3", {}, t("share.title")),
+    IN_WECHAT ? el("p", { class: "wx-tip" }, t("share.wx_tip")) : null,
     el("div", { class: "share" },
       el("button", { class: "btn", onclick: async () => { const s = await getShare("whatsapp"); location.href = s.whatsapp_link; } }, "WhatsApp"),
       el("button", { class: "btn", onclick: async () => {
         const s = await getShare("wechat"); await copy(s.wechat, t("share.wechat_copied"));
-        fill(qrBox, el("img", { src: `/api/qr/${encodeURIComponent(id)}.svg`, alt: t("share.qr_alt"), width: "180", height: "180" }),
-          el("div", {}, el("p", {}, t("share.qr_help")), el("p", { class: "muted qr-link" }, `${t("share.link")} `, s.url || "")));
-        qrBox.hidden = false;
+        fill(qrBox, el("p", { class: "muted" }, t("status.loading"))); qrBox.hidden = false;
+        try {
+          const png = await wechatPoster(id, c, s.url || "");
+          fill(qrBox, el("img", { class: "poster", src: png, alt: t("share.poster_alt") }),
+            el("div", {}, el("p", {}, t("share.poster_help")),
+              el("a", { class: "btn ghost", href: png, download: `steelman-ballot-${id}.png` }, t("share.save")),
+              el("p", { class: "muted qr-link" }, `${t("share.link")} `, s.url || "")));
+        } catch {                                  // very old browsers: fall back to the plain QR code
+          fill(qrBox, el("img", { src: `/api/qr/${encodeURIComponent(id)}.svg`, alt: t("share.qr_alt"), width: "180", height: "180" }),
+            el("div", {}, el("p", {}, t("share.qr_help")), el("p", { class: "muted qr-link" }, `${t("share.link")} `, s.url || "")));
+        }
       } }, "WeChat"),
       navigator.share ? el("button", { class: "btn ghost", onclick: async () => {
         const s = await getShare("more"); try { await navigator.share({ title: "Steelman Ballot", text: s.plain }); } catch { /* cancelled */ }

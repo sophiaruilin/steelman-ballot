@@ -435,7 +435,7 @@ def qr(card_id: str, request: Request):
     if not load_card(card_id):
         raise HTTPException(404)
     buf = io.BytesIO()
-    segno.make(f"{public_base(request)}/c/{card_id}", error="m").save(buf, kind="svg", scale=6, border=2,
+    segno.make(f"{public_base(request)}/c/{card_id}", error="h").save(buf, kind="svg", scale=6, border=2,
                                                                      xmldecl=False, svgns=True)
     return Response(buf.getvalue(), media_type="image/svg+xml", headers={"Cache-Control": "public, max-age=86400"})
 

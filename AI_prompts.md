@@ -200,3 +200,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 46: A calmer hero
 **Prompt (my own words):** "for this section, is this too busy on front page above address entry box? [The strongest argument isn't always your own. / Understand what's on your ballot: the strongest case for each side (a "steelman"), side by side. / A guide to read before you vote. This is not a poll, and you can't vote here.]" then "Yes, trim it"
 **What was lacking before:** Three lines of text sat between the headline and the address box, and "(a 'steelman')" interrupted the main sentence, even though the steelman section right under the box now explains the word.
+
+## Step 47: A WeChat share image and in-WeChat tip
+**Prompt (my own words):** "for the we chat qr code i notice it's just to open the link. can you add this functionality to make unique wechat scanner? [Open directly in WeChat (if the link supports deep-linking) / Trigger a Mini Program instead of a browser / Be wrapped in a QR code for one-tap scanning]" then "Yes, build both"
+**What was lacking before:** WeChat users got only a bare QR code, with nothing to save or forward in a chat, and no hint about WeChat's own share menu when the site was opened inside WeChat. Direct deep links and a Mini Program aren't possible without a registered WeChat developer account and review, so they're noted as future work. While testing, we found the page joined each side's values with an English "and" on Spanish and Chinese cards; it now uses each language's own list format.

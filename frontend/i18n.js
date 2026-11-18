@@ -3,6 +3,12 @@
 "use strict";
 window.I18N = {
   en: {
+    "share.wx_tip": "You're in WeChat: tap ··· at the top right to send this page to a friend or share it to Moments.",
+    "share.save": "Save image",
+    "share.poster_help": "Press and hold the image to save it or send it to a WeChat friend. They press and hold it, then tap “Scan QR code in image” to open the card.",
+    "share.poster_alt": "Share image: this measure's title and a QR code that opens the card",
+    "share.poster_note": "Nonpartisan · never tells you how to vote",
+    "share.poster_caption": "Scan with WeChat to see the strongest case for each side",
     "share.link": "Link:",
     "share.qr_help": "Scan with WeChat to open this card. Or paste the copied link into any WeChat chat.",
     "share.qr_alt": "QR code that opens this card",
@@ -111,6 +117,12 @@ window.I18N = {
     "race.differ": "Where they differ", "race.note": "Statements were written by the candidates and not checked by any official agency. We never tell you how to vote.",
   },
   es: {
+    "share.wx_tip": "Está en WeChat: toque ··· arriba a la derecha para enviar esta página a un contacto o compartirla en Momentos.",
+    "share.save": "Guardar imagen",
+    "share.poster_help": "Mantenga presionada la imagen para guardarla o enviarla a un contacto de WeChat. Para abrir la ficha, la otra persona mantiene presionada la imagen y toca “Escanear código QR en la imagen”.",
+    "share.poster_alt": "Imagen para compartir: el título de esta medida y un código QR que abre la ficha",
+    "share.poster_note": "Imparcial · nunca le dice cómo votar",
+    "share.poster_caption": "Escanee con WeChat para ver el argumento más sólido de cada lado",
     "srv:Citizen initiative petition": "Petición de iniciativa ciudadana",
     "srv:Citizen initiative": "Iniciativa ciudadana",
     "srv:Legislature": "Legislatura",
@@ -243,6 +255,12 @@ window.I18N = {
     "race.differ": "En qué se diferencian", "race.note": "Las declaraciones fueron escritas por los candidatos y ninguna agencia oficial las verificó. Nunca le decimos cómo votar.",
   },
   zh: {
+    "share.wx_tip": "您正在微信中浏览：点击右上角 ··· 即可发送给朋友或分享到朋友圈。",
+    "share.save": "保存图片",
+    "share.poster_help": "长按图片即可保存或发送给微信好友。好友长按图片，选择“识别图中二维码”即可打开卡片。",
+    "share.poster_alt": "分享图片：本提案标题及打开卡片的二维码",
+    "share.poster_note": "无党派 · 从不告诉您如何投票",
+    "share.poster_caption": "微信扫一扫，查看双方最有力的论点",
     "srv:Citizen initiative petition": "公民动议请愿",
     "srv:Citizen initiative": "公民动议",
     "srv:Legislature": "州议会",

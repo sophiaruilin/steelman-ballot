@@ -454,3 +454,9 @@ table.srcs td:first-child { font-weight: 500; color: var(--verdigris); white-spa
 .srcs-more > summary { cursor: pointer; color: var(--verdigris); font: 500 .95rem var(--sans); padding: 4px 0; }
 .srcs-more[open] > summary { margin-bottom: 6px; }
 .edit-address .ready-hint { flex-basis: 100%; }
+
+/* ---- WeChat share image and in-WeChat tip ---- */
+.qr img.poster { width: 100%; max-width: 300px; height: auto; background: none; border: 1px solid var(--steel); border-radius: var(--radius); }
+.qr .btn { margin: 4px 0 8px; display: inline-block; text-decoration: none; }
+.wx-tip { margin: 8px 0; padding: 8px 12px; border-radius: var(--radius); background: var(--verdigris-10);
+          color: var(--verdigris); font: 500 .92rem var(--sans); }
