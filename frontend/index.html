@@ -191,13 +191,16 @@
       <ol class="steps">
         <li><h3>We find your ballot</h3><p>The U.S. Census Bureau matches your address to your districts (a ZIP code alone gives statewide measures). Then we read the list of measures from your state's or city's <b>official voter guide</b>. Your address is used once and never stored.</p></li>
         <li><h3>We read only official and nonpartisan sources</h3>
+          <p>Every card is built from your state's or city's <b>official voter guide</b>, and nothing else. If sources disagree, the official ballot wins.</p>
+          <details class="srcs-more"><summary>See the official source for each state</summary>
           <table class="srcs">
             <tr><th>Where</th><th>Official source we read</th><th>What it gives us</th></tr>
             <tr><td>California</td><td>Official Voter Information Guide (Secretary of State)</td><td>Title and summary, the nonpartisan Legislative Analyst's analysis, official arguments for and against</td></tr>
             <tr><td>Massachusetts</td><td><i>Information for Voters</i> (Secretary of the Commonwealth)</td><td>Summary, what a yes or no vote does, fiscal statement, official arguments for and against</td></tr>
             <tr><td>New York City</td><td>NYC Votes (Campaign Finance Board)</td><td>Summary of each proposal and of public statements for and against</td></tr>
           </table>
-          <p>Candidate records come from Congress.gov, Open States and the Federal Election Commission. If sources disagree, the official ballot wins.</p></li>
+          <p>Candidate records come from Congress.gov, Open States and the Federal Election Commission.</p>
+          </details></li>
         <li><h3>An AI writes each card. A second AI challenges it.</h3>
           <h4 class="part">1 · The AI writer</h4>
           <p>Working only from the official pages, it writes:</p>
@@ -219,12 +222,20 @@
                 <li><b>1</b> A strawman</li>
               </ul>
               <span class="pass-note">Both sides must score <b>4 or 5</b>. Anything lower goes back for a rewrite.</span></li>
-            <li><b>Swap test.</b> It swaps the Yes and No labels. If one side suddenly reads warmer or more certain, the wording gets fixed.</li>
+            <li><b>Swap test.</b> It checks tone, not facts: it imagines the two sides traded places, so the supporters' case sits under “No” and the opponents' under “Yes”, and asks whether either case is written more warmly, more confidently or with stronger words than the other. If so, the wording is evened out.</li>
             <li><b>Source check.</b> Every claim is checked against the page it came from, and every number against the official analysis.</li>
           </ul>
           <p>Anything that fails goes back to the writer with specific fixes, for up to three rewrites. If problems remain, the card is marked <b>“steelman unverified.”</b></p></li>
-        <li><h3>We measure accuracy</h3><p><b>In every state:</b> all 28 measure cards passed the fairness review. <b>Accuracy test:</b> we graded a sample against California's nonpartisan Legislative Analyst, the one independent answer key we have: <b>100%</b> of claims backed by the official guide, <b>18 of 18</b> yes/no/cost descriptions correct, and <b>99%</b> of each side's top points covered.</p></li>
-        <li><h3>We keep it fresh and safe</h3><p>Cards refresh daily as an election nears. We read only an allowlist of official sites, strip hidden text that could trick an AI, respect sites that ask not to be read automatically, and cap how much the system can spend.</p></li>
+        <li><h3>We test the cards' accuracy</h3>
+          <p><b>Fairness, in every state:</b> all 28 measure cards passed the AI challenger's review.</p>
+          <p><b>Accuracy:</b> to check the work, we (the people who built this site) ran a separate AI grader, used only for testing, on 6 California cards (Props 1, 3, 5, 39, 41 and 45). California's official guide includes the nonpartisan Legislative Analyst's analysis, an independent answer key. Results:</p>
+          <ul class="tests">
+            <li><b>100%</b> of claims backed by the official guide.</li>
+            <li><b>18 of 18</b> descriptions of what a yes vote, a no vote and the cost would mean were correct.</li>
+            <li><b>99%</b> of each side's top points covered. <i>Who decides the top points?</i> Each side does. Before seeing the card, the grader read that side's own official argument and rebuttal and ranked its points by how much the side itself stresses them: its headline, its opening, what its rebuttal repeats.</li>
+          </ul>
+          <p class="muted">Each card was graded twice and the scores averaged.</p></li>
+        <li><h3>We keep it fresh and safe</h3><p>Cards refresh daily as an election nears. We read only an allowlist of official sites, strip hidden text that could trick an AI, respect sites that ask not to be read automatically, and cap how much the system can spend. Your address is used once to find your districts, then discarded: never stored or logged.</p></li>
       </ol>
       <h2>Honest limits</h2>
       <p>Full ballot cards cover three states for now (<a href="#map">see the map</a>). AI can make mistakes: every claim links to its source so you can check, and you can report an issue on any card.</p>
@@ -237,13 +248,16 @@
       <ol class="steps">
         <li><h3>Encontramos su boleta</h3><p>La Oficina del Censo de EE. UU. asocia su dirección con sus distritos (un código postal basta para las medidas estatales). Luego leemos la lista de medidas en la <b>guía oficial para votantes</b> de su estado o ciudad. Su dirección se usa una vez y nunca se guarda.</p></li>
         <li><h3>Solo leemos fuentes oficiales e imparciales</h3>
+          <p>Cada ficha se basa en la <b>guía oficial para votantes</b> de su estado o ciudad, y en nada más. Si las fuentes no coinciden, prevalece la boleta oficial.</p>
+          <details class="srcs-more"><summary>Ver la fuente oficial de cada estado</summary>
           <table class="srcs">
             <tr><th>Dónde</th><th>Fuente oficial que leemos</th><th>Qué nos da</th></tr>
             <tr><td>California</td><td>Guía Oficial de Información para Votantes (Secretaría de Estado)</td><td>Título y resumen, el análisis imparcial del Analista Legislativo, argumentos oficiales a favor y en contra</td></tr>
             <tr><td>Massachusetts</td><td><i>Information for Voters</i> (Secretaría del Estado Libre Asociado)</td><td>Resumen, qué significa votar sí o no, declaración fiscal, argumentos oficiales a favor y en contra</td></tr>
             <tr><td>Ciudad de Nueva York</td><td>NYC Votes (Junta de Financiamiento de Campañas)</td><td>Resumen de cada propuesta y de las declaraciones públicas a favor y en contra</td></tr>
           </table>
-          <p>Los historiales de los candidatos provienen de Congress.gov, Open States y la Comisión Federal de Elecciones. Si las fuentes no coinciden, prevalece la boleta oficial.</p></li>
+          <p>Los historiales de los candidatos provienen de Congress.gov, Open States y la Comisión Federal de Elecciones.</p>
+          </details></li>
         <li><h3>Una IA escribe cada ficha. Una segunda IA la desafía.</h3>
           <h4 class="part">1 · La IA redactora</h4>
           <p>Trabajando solo con las páginas oficiales, escribe:</p>
@@ -265,12 +279,20 @@
                 <li><b>1</b> Un argumento de paja</li>
               </ul>
               <span class="pass-note">Ambos lados deben obtener <b>4 o 5</b>. Con menos, la ficha se reescribe.</span></li>
-            <li><b>Prueba del intercambio.</b> Intercambia las etiquetas Sí y No. Si un lado de pronto suena más cálido o más seguro, se corrige la redacción.</li>
+            <li><b>Prueba del intercambio.</b> Revisa el tono, no los hechos: imagina que los dos lados cambian de lugar, con el argumento de los partidarios bajo “No” y el de los opositores bajo “Sí”, y pregunta si alguno está escrito con más calidez, más seguridad o palabras más fuertes que el otro. Si es así, se equilibra la redacción.</li>
             <li><b>Verificación de fuentes.</b> Cada afirmación se compara con la página de donde salió, y cada número con el análisis oficial.</li>
           </ul>
           <p>Lo que no aprueba vuelve a la redactora con correcciones concretas, hasta tres reescrituras. Si quedan problemas, la ficha se marca como <b>“argumento sin verificar”</b>.</p></li>
-        <li><h3>Medimos la exactitud</h3><p><b>En todos los estados:</b> las 28 fichas de medidas aprobaron la revisión de imparcialidad. <b>Prueba de exactitud:</b> calificamos una muestra frente al Analista Legislativo imparcial de California, la única clave de respuestas independiente que tenemos: <b>100 %</b> de las afirmaciones respaldadas por la guía oficial, <b>18 de 18</b> descripciones de sí/no/costo correctas y <b>99 %</b> de los puntos principales de cada lado cubiertos.</p></li>
-        <li><h3>La mantenemos actualizada y segura</h3><p>Las fichas se actualizan a diario cuando se acerca una elección. Solo leemos una lista aprobada de sitios oficiales, quitamos texto oculto que podría engañar a una IA, respetamos los sitios que piden no ser leídos automáticamente y limitamos cuánto puede gastar el sistema.</p></li>
+        <li><h3>Ponemos a prueba la exactitud de las fichas</h3>
+          <p><b>Imparcialidad, en todos los estados:</b> las 28 fichas de medidas aprobaron la revisión de la IA retadora.</p>
+          <p><b>Exactitud:</b> para verificar el trabajo, nosotros (quienes creamos este sitio) usamos una IA calificadora aparte, solo para pruebas, en 6 fichas de California (Props. 1, 3, 5, 39, 41 y 45). La guía oficial de California incluye el análisis imparcial del Analista Legislativo, una clave de respuestas independiente. Resultados:</p>
+          <ul class="tests">
+            <li><b>100 %</b> de las afirmaciones respaldadas por la guía oficial.</li>
+            <li><b>18 de 18</b> descripciones correctas de lo que significa votar sí, votar no y el costo.</li>
+            <li><b>99 %</b> de los puntos principales de cada lado cubiertos. <i>¿Quién decide cuáles son los principales?</i> Cada lado. Antes de ver la ficha, la calificadora leyó el argumento oficial y la refutación de ese lado y ordenó sus puntos según cuánto los destaca el propio lado: su titular, su inicio y lo que repite su refutación.</li>
+          </ul>
+          <p class="muted">Cada ficha se calificó dos veces y se promediaron los resultados.</p></li>
+        <li><h3>La mantenemos actualizada y segura</h3><p>Las fichas se actualizan a diario cuando se acerca una elección. Solo leemos una lista aprobada de sitios oficiales, quitamos texto oculto que podría engañar a una IA, respetamos los sitios que piden no ser leídos automáticamente y limitamos cuánto puede gastar el sistema. Su dirección se usa una vez para encontrar sus distritos y luego se descarta: nunca se guarda ni se registra.</p></li>
       </ol>
       <h2>Límites, con honestidad</h2>
       <p>Por ahora, las fichas completas cubren tres estados (<a href="#map">vea el mapa</a>). La IA puede equivocarse: cada afirmación enlaza a su fuente para que usted la verifique, y puede reportar un problema en cualquier ficha.</p>
@@ -283,6 +305,8 @@
       <ol class="steps">
         <li><h3>找到您的选票</h3><p>由美国人口普查局将您的地址对应到所属选区（只填邮编即可查看全州提案）。然后我们从您所在州或城市的<b>官方选民指南</b>读取投票提案清单。您的地址只使用一次，绝不保存。</p></li>
         <li><h3>只读取官方和无党派来源</h3>
+          <p>每张卡片只依据您所在州或城市的<b>官方选民指南</b>编写。来源不一致时，以官方选票为准。</p>
+          <details class="srcs-more"><summary>查看各州的官方来源</summary>
           <table class="srcs">
             <tr><th>地区</th><th>我们读取的官方来源</th><th>提供的内容</th></tr>
             <tr><td>加利福尼亚州</td><td>官方选民信息指南（州务卿）</td><td>标题与摘要、无党派立法分析师的分析、官方支持与反对论点</td></tr>
@@ -290,7 +314,8 @@
             <tr><td>纽约市</td><td>NYC Votes（竞选财务委员会）</td><td>每项提案的摘要，以及支持与反对的公众意见摘要</td></tr>
             <tr><td>康涅狄格州</td><td>州务卿</td><td>2026年无全州提案；镇级提案尚未覆盖</td></tr>
           </table>
-          <p>候选人记录来自 Congress.gov、Open States 和联邦选举委员会。来源不一致时，以官方选票为准。</p></li>
+          <p>候选人记录来自 Congress.gov、Open States 和联邦选举委员会。</p>
+          </details></li>
         <li><h3>一个人工智能撰写每张卡片，另一个人工智能对其提出挑战。</h3>
           <h4 class="part">1 · 人工智能撰稿者</h4>
           <p>它只依据官方页面撰写：</p>
@@ -312,12 +337,20 @@
                 <li><b>1</b> 稻草人论证</li>
               </ul>
               <span class="pass-note">双方都必须得到<b>4分或5分</b>，低于4分就要重写。</span></li>
-            <li><b>对调测试。</b>对调“赞成”和“反对”标签。如果某一方突然显得更亲切或更确定，就修改措辞。</li>
+            <li><b>对调测试。</b>检查语气，而非事实：设想双方互换位置，把支持者的论点放在“反对”下、反对者的论点放在“赞成”下，再看哪一方的论点写得更亲切、更确定或用词更强。如果有，就把措辞调整到对等。</li>
             <li><b>来源核查。</b>每项陈述都对照其来源页面核查，每个数字都对照官方分析核查。</li>
           </ul>
           <p>未通过的内容会连同具体修改意见退回撰稿者，最多重写三次。若仍有问题，卡片会标注<b>“钢人论证未经核实”</b>。</p></li>
-        <li><h3>我们衡量准确性</h3><p><b>所有州：</b>全部28张提案卡片均通过公正性审核。<b>准确性测试：</b>我们以加州无党派立法分析师（我们唯一的独立标准答案）为准对样本评分：<b>100%</b>的陈述有官方指南支持，赞成/反对/成本描述<b>18项全部</b>正确，各方主要论点覆盖率<b>99%</b>。</p></li>
-        <li><h3>保持及时与安全</h3><p>临近选举时卡片每日更新。我们只读取经批准的官方网站清单，去除可能误导人工智能的隐藏文字，尊重要求不被自动读取的网站，并限制系统的花费上限。</p></li>
+        <li><h3>我们检验卡片的准确性</h3>
+          <p><b>公正性（所有州）：</b>全部28张提案卡片均通过人工智能挑战者的审核。</p>
+          <p><b>准确性：</b>为核查成果，我们（本网站的建设者）另外使用一个仅用于测试的人工智能评分者，对6张加州卡片（第1、3、5、39、41、45号提案）评分。加州官方指南包含无党派立法分析师的分析，可作为独立的标准答案。结果：</p>
+          <ul class="tests">
+            <li><b>100%</b>的陈述有官方指南支持。</li>
+            <li>关于投赞成票、投反对票的含义及成本的描述<b>18项全部</b>正确。</li>
+            <li>各方主要论点覆盖率<b>99%</b>。<i>谁来决定哪些是主要论点？</i>由各方自己决定：评分者在看到卡片之前，先阅读该方的官方论点和反驳，并按该方自身强调的程度（标题、开头、反驳中反复提到的内容）为论点排序。</li>
+          </ul>
+          <p class="muted">每张卡片评分两次，取平均值。</p></li>
+        <li><h3>保持及时与安全</h3><p>临近选举时卡片每日更新。我们只读取经批准的官方网站清单，去除可能误导人工智能的隐藏文字，尊重要求不被自动读取的网站，并限制系统的花费上限。您的地址只用于一次查找选区，随即丢弃，绝不保存或记录。</p></li>
       </ol>
       <h2>坦诚说明局限</h2>
       <p>目前完整的选票卡片覆盖三个州（<a href="#map">查看地图</a>）。人工智能可能出错：每项陈述都链接到来源供您核查，您也可以在任何卡片上报告问题。</p>
@@ -339,7 +372,7 @@
       <h2>Why it matters for your ballot</h2>
       <p>When you only hear the weakest version of the other side, every decision looks obvious. Ballot measures rarely are. Seeing both sides at their strongest lets you test your own view against the best objection, and keep it, change it, or hold it more wisely.</p>
       <h2>How we test every steelman</h2>
-      <p>A second AI plays a committed supporter of each side and asks, “Would I sign this as our best case?” Both sides must score 4 or 5 out of 5, and pass a swap test for one-sided wording, or the card is rewritten. <a href="#how">See the full process →</a></p>
+      <p>One AI writes each card from the official guide: each side's strongest case, on the merits. A second AI then plays a committed supporter of each side and asks, “Would I sign this as our best case?” Both sides must score 4 or 5 out of 5, and pass a swap test for one-sided wording, or the card is rewritten. <a href="#how">See the full process →</a></p>
       <h2>What we believe</h2>
       <ul class="beliefs-grid">
         <li><svg class="bicon" aria-hidden="true"><use href="#i-scale"/></svg><div><p class="bt">The strongest argument isn't always your own.</p><p class="bd">Knowing the best case against your view is how you hold it wisely, or change it.</p></div></li>
@@ -368,7 +401,7 @@
       <h2>Por qué importa para su boleta</h2>
       <p>Cuando solo escucha la versión más débil del otro lado, toda decisión parece obvia. Las medidas en la boleta rara vez lo son. Ver ambos lados en su mejor versión le permite poner a prueba su opinión frente a la mejor objeción, y mantenerla, cambiarla o sostenerla con más sabiduría.</p>
       <h2>Cómo ponemos a prueba cada argumento</h2>
-      <p>Una segunda IA hace el papel de partidario convencido de cada lado y pregunta: “¿Firmaría esto como nuestro mejor argumento?”. Ambos lados deben obtener 4 o 5 sobre 5 y superar una prueba de intercambio que detecta lenguaje parcial; si no, la ficha se reescribe. <a href="#how">Vea el proceso completo →</a></p>
+      <p>Una IA escribe cada ficha a partir de la guía oficial: el argumento más sólido de cada lado, sobre el fondo. Luego, una segunda IA hace el papel de partidario convencido de cada lado y pregunta: “¿Firmaría esto como nuestro mejor argumento?”. Ambos lados deben obtener 4 o 5 sobre 5 y superar una prueba de intercambio que detecta lenguaje parcial; si no, la ficha se reescribe. <a href="#how">Vea el proceso completo →</a></p>
       <h2>En qué creemos</h2>
       <ul class="beliefs-grid">
         <li><svg class="bicon" aria-hidden="true"><use href="#i-scale"/></svg><div><p class="bt">El argumento más sólido no siempre es el suyo.</p><p class="bd">Conocer el mejor argumento en contra es como se sostiene una opinión con sabiduría, o se cambia.</p></div></li>
@@ -397,7 +430,7 @@
       <h2>为什么这对您的选票很重要</h2>
       <p>如果只听到对方最弱的说法，每个决定都显得理所当然。但投票提案很少如此。看到双方最有力的论点，您才能用最好的反对意见检验自己的看法，然后坚持、改变，或更明智地持有它。</p>
       <h2>我们如何检验每一个钢人论证</h2>
-      <p>另一个人工智能分别扮演双方的坚定支持者，问：“我愿意把这签成我们最好的论点吗？”双方都必须得到5分中的4分或5分，并通过检查偏向性措辞的对调测试，否则卡片就要重写。<a href="#how">查看完整流程 →</a></p>
+      <p>一个人工智能依据官方指南撰写每张卡片：就事论事，写出每一方最有力的论点。随后，另一个人工智能分别扮演双方的坚定支持者，问：“我愿意把这签成我们最好的论点吗？”双方都必须得到5分中的4分或5分，并通过检查偏向性措辞的对调测试，否则卡片就要重写。<a href="#how">查看完整流程 →</a></p>
       <h2>我们的信念</h2>
       <ul class="beliefs-grid">
         <li><svg class="bicon" aria-hidden="true"><use href="#i-scale"/></svg><div><p class="bt">最有力的论点，未必是你自己的。</p><p class="bd">了解反对你的最佳论证，才能明智地坚持或改变看法。</p></div></li>

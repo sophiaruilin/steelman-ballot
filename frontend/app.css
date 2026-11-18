@@ -448,3 +448,9 @@ table.srcs td:first-child { font-weight: 500; color: var(--verdigris); white-spa
 .status:empty { min-height: 0; margin: 0; }
 .band.idea { margin-top: 8px; border-top: 0; padding-top: 28px; }
 .band.idea h2 { font-size: clamp(1.8rem, 5vw, 2.4rem); line-height: 1.15; }
+
+/* How we work II: sources by state, one tap away */
+.srcs-more { margin: 6px 0 4px; }
+.srcs-more > summary { cursor: pointer; color: var(--verdigris); font: 500 .95rem var(--sans); padding: 4px 0; }
+.srcs-more[open] > summary { margin-bottom: 6px; }
+.edit-address .ready-hint { flex-basis: 100%; }

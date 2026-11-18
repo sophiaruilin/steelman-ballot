@@ -332,6 +332,7 @@ function renderBallot() {
 function editButton(label) {
   return el("button", { type: "button", class: "linkish", onclick: (e) => {
     const host = e.currentTarget.closest(".matched, .notice");
+    const hint = el("span", { class: "ready-hint", "aria-live": "polite" });
     const input = el("input", { type: "text", value: $("#address").value, "aria-label": t("form.label"), autocomplete: "off",
       spellcheck: "false", minlength: "5", maxlength: "200", required: true, placeholder: t("form.placeholder") });
     const form = el("form", { class: "edit-address", onsubmit: (ev) => {
@@ -340,9 +341,11 @@ function editButton(label) {
       if (v.length < 5) return;
       $("#address").value = v; updateHint(); lookup(v);
     } }, input, el("button", { type: "submit", class: "btn" }, t("ballot.update")),
-      el("button", { type: "button", class: "btn ghost", onclick: () => renderBallot() }, t("ballot.cancel")));
+      el("button", { type: "button", class: "btn ghost", onclick: () => renderBallot() }, t("ballot.cancel")), hint);
+    const check = () => showHint(addressHint(input.value), hint);
+    input.addEventListener("input", check);
     host.after(form); host.hidden = true;
-    input.focus(); input.select();
+    check(); input.focus(); input.select();
   } }, label);
 }
 
@@ -585,11 +588,11 @@ function addressHint(v) {
   const complete = words.length >= 4 && (/^\d{5}(-\d{4})?$/.test(last) || STATE_CODES.has(last.toUpperCase()) || STATE_NAME_END.test(v.replace(/[.,]+$/, "")));
   return complete ? { ok: true, key: "form.ready" } : { ok: false, key: "form.addcity" };
 }
-function updateHint() {
-  const h = addressHint($("#address").value), box = $("#ready-hint");
+function showHint(h, box) {
   box.className = `ready-hint${h ? (h.ok ? " ok" : " todo") : ""}`;
   box.textContent = h ? `${h.ok ? "✓ " : ""}${t(h.key)}` : "";
 }
+function updateHint() { showHint(addressHint($("#address").value), $("#ready-hint")); }
 $("#address").addEventListener("input", updateHint);
 
 // ---- start -----------------------------------------------------------------------------------------
