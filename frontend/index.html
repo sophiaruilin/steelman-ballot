@@ -33,9 +33,8 @@
       </a>
       <nav class="nav" aria-label="Main">
         <a href="#" data-route="home" data-i18n="nav.ballot">My ballot</a>
-        <a href="#steelman" data-route="steelman"><span class="nl" data-i18n="nav.steelman">Steelman vs. strawman</span><span class="ns" data-i18n="nav.steelman_s">Steelman</span></a>
         <a href="#how" data-route="how"><span class="nl" data-i18n="nav.how">How we work</span><span class="ns" data-i18n="nav.how_s">How it works</span></a>
-        <a href="#philosophy" data-route="philosophy"><span class="nl" data-i18n="nav.philosophy">Our philosophy</span><span class="ns" data-i18n="nav.philosophy_s">Philosophy</span></a>
+        <a href="#about" data-route="about" data-i18n="nav.about">About</a>
       </nav>
       <div class="langs" role="group" aria-label="Language / Idioma / 语言">
         <button type="button" data-setlang="en" lang="en">EN</button>
@@ -53,7 +52,7 @@
           <p class="eyebrow" data-i18n="hero.eyebrow">Nonpartisan ballot guide · Demo: the November 3, 2026 ballot (election already held)</p>
           <h1><span data-i18n="hero.h1a">Think more deeply.</span><br><span data-i18n="hero.h1b">Vote more thoughtfully.</span></h1>
           <p class="lede" data-i18n="hero.lede">The strongest argument isn't always your own.</p>
-          <p class="sub purpose"><span data-i18n="hero.sub1">Understand what's on your ballot:</span> <b class="hero-key" data-i18n="hero.sub2">the strongest case for each side, side by side.</b></p>
+          <p class="sub purpose"><span data-i18n="hero.sub1">Understand what's on your ballot:</span> <b class="hero-key" data-i18n="hero.sub2">the strongest case for each side (a “steelman”), side by side.</b></p>
           <p class="not-poll" data-i18n="hero.notpoll">A guide to read before you vote. This is not a poll, and you can't vote here.</p>
 
           <form id="address-form" class="lookup" autocomplete="off">
@@ -65,7 +64,7 @@
               <button type="submit" class="btn" data-i18n="form.button">See my ballot</button>
               <span id="ready-hint" class="ready-hint" aria-live="polite"></span>
             </div>
-            <p class="coverage-line" id="address-help" data-i18n="help.states">Full ballot cards in California, Massachusetts, New York and Connecticut. Other states: enter a street address to see your districts and races.</p>
+            <p class="coverage-line" id="address-help" data-i18n="help.states">Full ballot cards in California, Massachusetts and New York. Other states: enter a street address to see your districts and races.</p>
             <p class="privacy" id="privacy-note">
               <svg class="picon" aria-hidden="true"><use href="#i-lock"/></svg>
               <span><b data-i18n="privacy.head">We never store addresses.</b> <span data-i18n="privacy.body">Used once to find your districts, then discarded.</span></span>
@@ -92,21 +91,83 @@
           <ul id="races" class="list"></ul>
         </section>
 
+        <section class="band idea" id="idea" aria-labelledby="idea-title">
+          <div data-langblock="en">
+          <p class="eyebrow">The idea behind the name</p>
+          <h2 id="idea-title">Steelman vs. strawman</h2>
+          <p class="idea-lede">A <b>strawman</b> is the weakest version of a view, built to be knocked down. A <b>steelman</b> is the strongest version, stated so well that its own supporters would say, “I wish I'd put it that way.”</p>
+          <p class="muted">Example from our cards: California Prop 39, voter ID checks.</p>
+          <div class="compare2">
+            <div class="cmp-col">
+              <p class="cmp-side">Opponents · No</p>
+              <div class="cmp straw"><p class="tag-l">Strawman</p><p class="q">“Opponents just don't care about election fraud.”</p><p class="muted">Easy to dismiss. Teaches you nothing.</p></div>
+              <div class="cmp steel"><p class="tag-l">Steelman</p><p class="q">“Opponents argue added ID requirements would keep some eligible citizens' mail ballots from counting because of mistakes or missing information.”</p><p class="muted">A real reason that thoughtful people on this side hold.</p></div>
+            </div>
+            <div class="cmp-col">
+              <p class="cmp-side">Supporters · Yes</p>
+              <div class="cmp straw"><p class="tag-l">Strawman</p><p class="q">“Supporters just want to make it harder for certain people to vote.”</p><p class="muted">Easy to dismiss. Teaches you nothing.</p></div>
+              <div class="cmp steel"><p class="tag-l">Steelman</p><p class="q">“Supporters argue government ID checks would build trust in elections and encourage more people to participate.”</p><p class="muted">A real reason that thoughtful people on this side hold.</p></div>
+            </div>
+          </div>
+          <p class="idea-why">When you only hear the weakest version of the other side, every decision looks obvious. Ballot measures rarely are. Seeing both sides at their strongest lets you test your own view against the best objection, and keep it, change it, or hold it more wisely.</p>
+          <p><a href="#card=CA-2026-11-03-prop-39">See the full Prop 39 card →</a></p>
+          </div>
+          <div data-langblock="es" lang="es" hidden>
+          <p class="eyebrow">La idea detrás del nombre</p>
+          <h2>Argumento de acero vs. argumento de paja</h2>
+          <p class="idea-lede">Un <b>argumento de paja</b> es la versión más débil de una opinión, hecha para derribarla. Un <b>argumento de acero</b> es la versión más sólida, expresada tan bien que sus propios defensores dirían: “Ojalá lo hubiera dicho así”.</p>
+          <p class="muted">Ejemplo de nuestras fichas: Proposición 39 de California, verificación de identidad para votar.</p>
+          <div class="compare2">
+            <div class="cmp-col">
+              <p class="cmp-side">Quienes se oponen · No</p>
+              <div class="cmp straw"><p class="tag-l">De paja</p><p class="q">“A quienes se oponen simplemente no les importa el fraude electoral”.</p><p class="muted">Fácil de descartar. No enseña nada.</p></div>
+              <div class="cmp steel"><p class="tag-l">De acero</p><p class="q">“Quienes se oponen a la medida sostienen que los requisitos adicionales de identificación impedirían que se contaran las boletas por correo de algunos ciudadanos que reúnen los requisitos, debido a errores o información faltante.”</p><p class="muted">Una razón real que sostienen personas reflexivas de este lado.</p></div>
+            </div>
+            <div class="cmp-col">
+              <p class="cmp-side">Quienes la apoyan · Yes</p>
+              <div class="cmp straw"><p class="tag-l">De paja</p><p class="q">“Quienes la apoyan solo quieren dificultarle el voto a cierta gente”.</p><p class="muted">Fácil de descartar. No enseña nada.</p></div>
+              <div class="cmp steel"><p class="tag-l">De acero</p><p class="q">“Quienes apoyan la medida sostienen que las verificaciones de identidad con documentos oficiales del gobierno aumentarían la confianza en las elecciones y animarían a más personas a participar.”</p><p class="muted">Una razón real que sostienen personas reflexivas de este lado.</p></div>
+            </div>
+          </div>
+          <p class="idea-why">Cuando solo escucha la versión más débil del otro lado, toda decisión parece obvia. Las medidas en la boleta rara vez lo son. Ver ambos lados en su mejor versión le permite poner a prueba su opinión frente a la mejor objeción, y mantenerla, cambiarla o sostenerla con más sabiduría.</p>
+          <p><a href="#card=CA-2026-11-03-prop-39">Ver la ficha completa de la Proposición 39 →</a></p>
+          </div>
+          <div data-langblock="zh" lang="zh-Hans" hidden>
+          <p class="eyebrow">名称背后的理念</p>
+          <h2>钢人论证与稻草人论证</h2>
+          <p class="idea-lede"><b>稻草人论证</b>是某种观点最弱的版本，专为被驳倒而设。<b>钢人论证</b>则是最有力的版本，表述得好到连其支持者都会说：“我真希望自己能这么说。”</p>
+          <p class="muted">示例：加州第39号提案（投票身份核查）。</p>
+          <div class="compare2">
+            <div class="cmp-col">
+              <p class="cmp-side">反对者 · No</p>
+              <div class="cmp straw"><p class="tag-l">稻草人</p><p class="q">“反对者根本不在乎选举舞弊。”</p><p class="muted">很容易驳斥，却让人一无所获。</p></div>
+              <div class="cmp steel"><p class="tag-l">钢人</p><p class="q">“反对者认为，增加身份证件要求可能会因错误或资料缺失，导致部分符合资格公民的邮寄选票无法计入。”</p><p class="muted">这一方深思熟虑者真正持有的理由。</p></div>
+            </div>
+            <div class="cmp-col">
+              <p class="cmp-side">支持者 · Yes</p>
+              <div class="cmp straw"><p class="tag-l">稻草人</p><p class="q">“支持者就是想让某些人更难投票。”</p><p class="muted">很容易驳斥，却让人一无所获。</p></div>
+              <div class="cmp steel"><p class="tag-l">钢人</p><p class="q">“支持者认为，核验政府身份证件可以增强公众对选举的信任，并鼓励更多人参与投票。”</p><p class="muted">这一方深思熟虑者真正持有的理由。</p></div>
+            </div>
+          </div>
+          <p class="idea-why">如果只听到对方最弱的说法，每个决定都显得理所当然。但投票提案很少如此。看到双方最有力的论点，您才能用最好的反对意见检验自己的看法，然后坚持、改变，或更明智地持有它。</p>
+          <p><a href="#card=CA-2026-11-03-prop-39">查看第39号提案完整卡片 →</a></p>
+          </div>
+        </section>
+
         <section class="band three" aria-label="How a card works">
-          <div><span class="step">I</span><h3 data-i18n="three.2h">Both sides, at their strongest</h3><p data-i18n="three.2p">Each side's best case on the merits, in the words its most thoughtful supporters would use.</p><a class="band-link" href="#steelman" data-i18n="three.2link">What's a steelman? →</a></div>
+          <div><span class="step">I</span><h3 data-i18n="three.2h">Both sides, at their strongest</h3><p data-i18n="three.2p">Each side's best case on the merits, in the words its most thoughtful supporters would use.</p><a class="band-link" href="#about" data-i18n="three.2link">Why we call it a steelman →</a></div>
           <div><span class="step">II</span><h3 data-i18n="three.1h">The facts that matter</h3><p data-i18n="three.1p">Where they really disagree, what the evidence says, and what would change, from the official guide.</p><a class="band-link" href="#how" data-i18n="three.1link">Where it comes from →</a></div>
-          <div><span class="step">III</span><h3 data-i18n="three.3h">Your decision</h3><p data-i18n="three.3p">Every claim is sourced. We never tell you how to vote.</p><a class="band-link" href="#philosophy" data-i18n="three.3link">What we never do →</a></div>
+          <div><span class="step">III</span><h3 data-i18n="three.3h">Your decision</h3><p data-i18n="three.3p">Every claim is sourced. We never tell you how to vote.</p><a class="band-link" href="#about" data-i18n="three.3link">What we never do →</a></div>
         </section>
 
         <section class="band" aria-labelledby="map-title">
           <div class="band-text">
             <p class="eyebrow" data-i18n="map.eyebrow">Where we cover</p>
-            <h2 id="map-title" data-i18n="map.title">Starting with four states</h2>
+            <h2 id="map-title" data-i18n="map.title">Starting with three states</h2>
             <p data-i18n="map.body">Any U.S. street address shows your districts and races. Full ballot-measure cards are available where we read the official voter guide directly.</p>
             <ul class="legend">
               <li><span class="key full"></span> <span data-i18n="map.full">Statewide measures</span></li>
               <li><span class="key part"></span> <span data-i18n="map.part">Local measures (New York City)</span></li>
-              <li><span class="key checked"></span> <span data-i18n="map.checked">Checked: no statewide measures in 2026 (Connecticut)</span></li>
               <li><span class="key none"></span> <span data-i18n="map.none">Coming later</span></li>
             </ul>
           </div>
@@ -135,7 +196,6 @@
             <tr><td>California</td><td>Official Voter Information Guide (Secretary of State)</td><td>Title and summary, the nonpartisan Legislative Analyst's analysis, official arguments for and against</td></tr>
             <tr><td>Massachusetts</td><td><i>Information for Voters</i> (Secretary of the Commonwealth)</td><td>Summary, what a yes or no vote does, fiscal statement, official arguments for and against</td></tr>
             <tr><td>New York City</td><td>NYC Votes (Campaign Finance Board)</td><td>Summary of each proposal and of public statements for and against</td></tr>
-            <tr><td>Connecticut</td><td>Secretary of the State</td><td>No statewide questions in 2026; town questions not covered yet</td></tr>
           </table>
           <p>Candidate records come from Congress.gov, Open States and the Federal Election Commission. If sources disagree, the official ballot wins.</p></li>
         <li><h3>An AI writes each card. A second AI challenges it.</h3>
@@ -167,8 +227,8 @@
         <li><h3>We keep it fresh and safe</h3><p>Cards refresh daily as an election nears. We read only an allowlist of official sites, strip hidden text that could trick an AI, respect sites that ask not to be read automatically, and cap how much the system can spend.</p></li>
       </ol>
       <h2>Honest limits</h2>
-      <p>Full ballot cards cover four states for now (<a href="#map">see the map</a>). AI can make mistakes: every claim links to its source so you can check, and you can report an issue on any card.</p>
-      <p class="muted">Why we hold these rules: <a href="#philosophy">Our philosophy</a>, including what we never do.</p>
+      <p>Full ballot cards cover three states for now (<a href="#map">see the map</a>). AI can make mistakes: every claim links to its source so you can check, and you can report an issue on any card.</p>
+      <p class="muted">Why we hold these rules: <a href="#about">About</a>, including what we never do.</p>
       </div>
       <div data-langblock="es" lang="es" hidden>
       <p class="eyebrow">Metodología</p>
@@ -182,7 +242,6 @@
             <tr><td>California</td><td>Guía Oficial de Información para Votantes (Secretaría de Estado)</td><td>Título y resumen, el análisis imparcial del Analista Legislativo, argumentos oficiales a favor y en contra</td></tr>
             <tr><td>Massachusetts</td><td><i>Information for Voters</i> (Secretaría del Estado Libre Asociado)</td><td>Resumen, qué significa votar sí o no, declaración fiscal, argumentos oficiales a favor y en contra</td></tr>
             <tr><td>Ciudad de Nueva York</td><td>NYC Votes (Junta de Financiamiento de Campañas)</td><td>Resumen de cada propuesta y de las declaraciones públicas a favor y en contra</td></tr>
-            <tr><td>Connecticut</td><td>Secretaría del Estado</td><td>Sin preguntas estatales en 2026; las preguntas municipales aún no están cubiertas</td></tr>
           </table>
           <p>Los historiales de los candidatos provienen de Congress.gov, Open States y la Comisión Federal de Elecciones. Si las fuentes no coinciden, prevalece la boleta oficial.</p></li>
         <li><h3>Una IA escribe cada ficha. Una segunda IA la desafía.</h3>
@@ -214,8 +273,8 @@
         <li><h3>La mantenemos actualizada y segura</h3><p>Las fichas se actualizan a diario cuando se acerca una elección. Solo leemos una lista aprobada de sitios oficiales, quitamos texto oculto que podría engañar a una IA, respetamos los sitios que piden no ser leídos automáticamente y limitamos cuánto puede gastar el sistema.</p></li>
       </ol>
       <h2>Límites, con honestidad</h2>
-      <p>Por ahora, las fichas completas cubren cuatro estados (<a href="#map">vea el mapa</a>). La IA puede equivocarse: cada afirmación enlaza a su fuente para que usted la verifique, y puede reportar un problema en cualquier ficha.</p>
-      <p class="muted">Por qué seguimos estas reglas: <a href="#philosophy">Nuestra filosofía</a>, incluido lo que nunca hacemos.</p>
+      <p>Por ahora, las fichas completas cubren tres estados (<a href="#map">vea el mapa</a>). La IA puede equivocarse: cada afirmación enlaza a su fuente para que usted la verifique, y puede reportar un problema en cualquier ficha.</p>
+      <p class="muted">Por qué seguimos estas reglas: <a href="#about">Acerca de</a>, incluido lo que nunca hacemos.</p>
       </div>
       <div data-langblock="zh" lang="zh-Hans" hidden>
       <p class="eyebrow">方法</p>
@@ -261,94 +320,26 @@
         <li><h3>保持及时与安全</h3><p>临近选举时卡片每日更新。我们只读取经批准的官方网站清单，去除可能误导人工智能的隐藏文字，尊重要求不被自动读取的网站，并限制系统的花费上限。</p></li>
       </ol>
       <h2>坦诚说明局限</h2>
-      <p>目前完整的选票卡片覆盖四个州（<a href="#map">查看地图</a>）。人工智能可能出错：每项陈述都链接到来源供您核查，您也可以在任何卡片上报告问题。</p>
-      <p class="muted">我们为何坚持这些原则：请见<a href="#philosophy">我们的理念</a>，包括我们绝不做的事。</p>
+      <p>目前完整的选票卡片覆盖三个州（<a href="#map">查看地图</a>）。人工智能可能出错：每项陈述都链接到来源供您核查，您也可以在任何卡片上报告问题。</p>
+      <p class="muted">我们为何坚持这些原则：请见<a href="#about">关于</a>，包括我们绝不做的事。</p>
       </div>
     </section>
 
     <!-- STEELMAN VS STRAWMAN -->
-    <section id="view-steelman" class="view wrap prose" hidden>
+
+    <!-- PHILOSOPHY / ABOUT -->
+    <section id="view-about" class="view wrap prose" hidden>
       <div data-langblock="en">
-      <p class="eyebrow">The idea behind the name</p>
-      <h1>Steelman vs. strawman</h1>
-      <p class="lede">A <b>strawman</b> is the weakest version of a view, built to be knocked down. A <b>steelman</b> is the strongest version, stated so well that its own supporters would say, “I wish I'd put it that way.”</p>
-      <p>A real example from our cards: <b>California Prop 39</b>, “Require government ID checks for voting and citizenship checks of voter rolls.” Strawmen are what you often hear. Steelmen are what our cards say, checked by our fairness review.</p>
-      <div class="compare2">
-        <div class="cmp-col">
-          <p class="cmp-side">Opponents · No</p>
-          <div class="cmp straw"><p class="tag-l">Strawman</p><p class="q">“Opponents just don't care about election fraud.”</p><p class="muted">Easy to dismiss. Teaches you nothing.</p></div>
-          <div class="cmp steel"><p class="tag-l">Steelman</p><p class="q">“Opponents argue added ID requirements would keep some eligible citizens' mail ballots from counting because of mistakes or missing information.”</p><p class="muted">A real reason that thoughtful people on this side hold.</p></div>
-        </div>
-        <div class="cmp-col">
-          <p class="cmp-side">Supporters · Yes</p>
-          <div class="cmp straw"><p class="tag-l">Strawman</p><p class="q">“Supporters just want to make it harder for certain people to vote.”</p><p class="muted">Easy to dismiss. Teaches you nothing.</p></div>
-          <div class="cmp steel"><p class="tag-l">Steelman</p><p class="q">“Supporters argue government ID checks would build trust in elections and encourage more people to participate.”</p><p class="muted">A real reason that thoughtful people on this side hold.</p></div>
-        </div>
-      </div>
-      <p><a href="#card=CA-2026-11-03-prop-39">See the full Prop 39 card →</a></p>
+      <p class="eyebrow">About</p>
+      <h1>About Steelman Ballot</h1>
+      <p class="lede">Democracy works better when people disagree well.</p>
+      <p>Ballots ask us to settle questions experts spend months on. Most of what reaches us is written to persuade. We put what would actually change next to the strongest case for every side, in plain English, so you can decide for yourself.</p>
+      <h2>Why “Steelman”?</h2>
+      <p>A <b>strawman</b> is the weakest version of a view, built to be knocked down. A <b>steelman</b> is the strongest version, stated so well that its own supporters would say, “I wish I'd put it that way.” <a href="#idea">See the side-by-side example →</a></p>
       <h2>Why it matters for your ballot</h2>
       <p>When you only hear the weakest version of the other side, every decision looks obvious. Ballot measures rarely are. Seeing both sides at their strongest lets you test your own view against the best objection, and keep it, change it, or hold it more wisely.</p>
       <h2>How we test every steelman</h2>
       <p>A second AI plays a committed supporter of each side and asks, “Would I sign this as our best case?” Both sides must score 4 or 5 out of 5, and pass a swap test for one-sided wording, or the card is rewritten. <a href="#how">See the full process →</a></p>
-      <p class="muted">Based on the principle of charity, Anatol Rapoport's rules for criticism (popularized by Daniel Dennett), and the Ideological Turing Test (Bryan Caplan).</p>
-      </div>
-      <div data-langblock="es" lang="es" hidden>
-      <p class="eyebrow">La idea detrás del nombre</p>
-      <h1>Argumento de acero vs. argumento de paja</h1>
-      <p class="lede">Un <b>argumento de paja</b> es la versión más débil de una opinión, hecha para derribarla. Un <b>argumento de acero</b> es la versión más sólida, expresada tan bien que sus propios defensores dirían: “Ojalá lo hubiera dicho así”.</p>
-      <p>Un ejemplo real de nuestras fichas: <b>Proposición 39 de California</b> (exigir verificaciones de identidad con documentos oficiales para votar y verificaciones de ciudadanía en los padrones electorales). Los argumentos de paja son lo que se oye a menudo. Los de acero son lo que dicen nuestras fichas, revisadas por nuestra revisión de imparcialidad.</p>
-      <div class="compare2">
-        <div class="cmp-col">
-          <p class="cmp-side">Quienes se oponen · No</p>
-          <div class="cmp straw"><p class="tag-l">De paja</p><p class="q">“A quienes se oponen simplemente no les importa el fraude electoral”.</p><p class="muted">Fácil de descartar. No enseña nada.</p></div>
-          <div class="cmp steel"><p class="tag-l">De acero</p><p class="q">“Quienes se oponen a la medida sostienen que los requisitos adicionales de identificación impedirían que se contaran las boletas por correo de algunos ciudadanos que reúnen los requisitos, debido a errores o información faltante.”</p><p class="muted">Una razón real que sostienen personas reflexivas de este lado.</p></div>
-        </div>
-        <div class="cmp-col">
-          <p class="cmp-side">Quienes la apoyan · Yes</p>
-          <div class="cmp straw"><p class="tag-l">De paja</p><p class="q">“Quienes la apoyan solo quieren dificultarle el voto a cierta gente”.</p><p class="muted">Fácil de descartar. No enseña nada.</p></div>
-          <div class="cmp steel"><p class="tag-l">De acero</p><p class="q">“Quienes apoyan la medida sostienen que las verificaciones de identidad con documentos oficiales del gobierno aumentarían la confianza en las elecciones y animarían a más personas a participar.”</p><p class="muted">Una razón real que sostienen personas reflexivas de este lado.</p></div>
-        </div>
-      </div>
-      <p><a href="#card=CA-2026-11-03-prop-39">Ver la ficha completa de la Proposición 39 →</a></p>
-      <h2>Por qué importa para su boleta</h2>
-      <p>Cuando solo escucha la versión más débil del otro lado, toda decisión parece obvia. Las medidas en la boleta rara vez lo son. Ver ambos lados en su mejor versión le permite poner a prueba su opinión frente a la mejor objeción, y mantenerla, cambiarla o sostenerla con más sabiduría.</p>
-      <h2>Cómo ponemos a prueba cada argumento</h2>
-      <p>Una segunda IA hace el papel de partidario convencido de cada lado y pregunta: “¿Firmaría esto como nuestro mejor argumento?”. Ambos lados deben obtener 4 o 5 sobre 5 y superar una prueba de intercambio que detecta lenguaje parcial; si no, la ficha se reescribe. <a href="#how">Vea el proceso completo →</a></p>
-      <p class="muted">Basado en el principio de caridad, las reglas de crítica de Anatol Rapoport (popularizadas por Daniel Dennett) y la Prueba de Turing Ideológica (Bryan Caplan).</p>
-      </div>
-      <div data-langblock="zh" lang="zh-Hans" hidden>
-      <p class="eyebrow">名称背后的理念</p>
-      <h1>钢人论证与稻草人论证</h1>
-      <p class="lede"><b>稻草人论证</b>是某种观点最弱的版本，专为被驳倒而设。<b>钢人论证</b>则是最有力的版本，表述得好到连其支持者都会说：“我真希望自己能这么说。”</p>
-      <p>来自我们卡片的真实例子：<b>加州第39号提案</b>（要求核验政府身份证件并核查选民名册上的公民身份）。稻草人论证是你常听到的说法；钢人论证是我们卡片中的表述，并经过公正性审核。</p>
-      <div class="compare2">
-        <div class="cmp-col">
-          <p class="cmp-side">反对者 · No</p>
-          <div class="cmp straw"><p class="tag-l">稻草人</p><p class="q">“反对者根本不在乎选举舞弊。”</p><p class="muted">很容易驳斥，却让人一无所获。</p></div>
-          <div class="cmp steel"><p class="tag-l">钢人</p><p class="q">“反对者认为，增加身份证件要求可能会因错误或资料缺失，导致部分符合资格公民的邮寄选票无法计入。”</p><p class="muted">这一方深思熟虑者真正持有的理由。</p></div>
-        </div>
-        <div class="cmp-col">
-          <p class="cmp-side">支持者 · Yes</p>
-          <div class="cmp straw"><p class="tag-l">稻草人</p><p class="q">“支持者就是想让某些人更难投票。”</p><p class="muted">很容易驳斥，却让人一无所获。</p></div>
-          <div class="cmp steel"><p class="tag-l">钢人</p><p class="q">“支持者认为，核验政府身份证件可以增强公众对选举的信任，并鼓励更多人参与投票。”</p><p class="muted">这一方深思熟虑者真正持有的理由。</p></div>
-        </div>
-      </div>
-      <p><a href="#card=CA-2026-11-03-prop-39">查看第39号提案完整卡片 →</a></p>
-      <h2>为什么这对您的选票很重要</h2>
-      <p>如果只听到对方最弱的说法，每个决定都显得理所当然。但投票提案很少如此。看到双方最有力的论点，您才能用最好的反对意见检验自己的看法，然后坚持、改变，或更明智地持有它。</p>
-      <h2>我们如何检验每一个钢人论证</h2>
-      <p>另一个人工智能分别扮演双方的坚定支持者，问：“我愿意把这签成我们最好的论点吗？”双方都必须得到5分中的4分或5分，并通过检查偏向性措辞的对调测试，否则卡片就要重写。<a href="#how">查看完整流程 →</a></p>
-      <p class="muted">依据宽容原则、阿纳托尔·拉波波特的批评规则（经丹尼尔·丹尼特推广）以及意识形态图灵测试（布莱恩·卡普兰）。</p>
-      </div>
-    </section>
-
-    <!-- PHILOSOPHY / ABOUT -->
-    <section id="view-philosophy" class="view wrap prose" hidden>
-      <div data-langblock="en">
-      <p class="eyebrow">About us</p>
-      <h1>Our philosophy</h1>
-      <p class="lede">Democracy works better when people disagree well.</p>
-      <p>Ballots ask us to settle questions experts spend months on. Most of what reaches us is written to persuade. We put what would actually change next to the strongest case for every side, in plain English, so you can decide for yourself.</p>
       <h2>What we believe</h2>
       <ul class="beliefs-grid">
         <li><svg class="bicon" aria-hidden="true"><use href="#i-scale"/></svg><div><p class="bt">The strongest argument isn't always your own.</p><p class="bd">Knowing the best case against your view is how you hold it wisely, or change it.</p></div></li>
@@ -365,12 +356,19 @@
       </ul>
       <h2>Who we are</h2>
       <p>An independent, nonpartisan student project, not affiliated with any campaign, party or government. Our code is public on <a href="https://github.com/sophiaruilin/steelman-ballot" rel="noopener noreferrer" target="_blank">GitHub</a>.</p>
+      <p class="muted">Based on the principle of charity, Anatol Rapoport's rules for criticism (popularized by Daniel Dennett), and the Ideological Turing Test (Bryan Caplan).</p>
       </div>
       <div data-langblock="es" lang="es" hidden>
-      <p class="eyebrow">Quiénes somos</p>
-      <h1>Nuestra filosofía</h1>
+      <p class="eyebrow">Acerca de</p>
+      <h1>Acerca de Steelman Ballot</h1>
       <p class="lede">La democracia funciona mejor cuando la gente sabe discrepar.</p>
       <p>Las boletas nos piden resolver preguntas que a los expertos les toma meses estudiar, y casi todo lo que nos llega está escrito para persuadir. Ponemos lo que realmente cambiaría junto al argumento más sólido de cada lado, en lenguaje sencillo, para que usted decida.</p>
+      <h2>¿Por qué “Steelman”?</h2>
+      <p>Un <b>argumento de paja</b> es la versión más débil de una opinión, hecha para derribarla. Un <b>argumento de acero</b> es la versión más sólida, expresada tan bien que sus propios defensores dirían: “Ojalá lo hubiera dicho así”. <a href="#idea">Vea el ejemplo lado a lado →</a></p>
+      <h2>Por qué importa para su boleta</h2>
+      <p>Cuando solo escucha la versión más débil del otro lado, toda decisión parece obvia. Las medidas en la boleta rara vez lo son. Ver ambos lados en su mejor versión le permite poner a prueba su opinión frente a la mejor objeción, y mantenerla, cambiarla o sostenerla con más sabiduría.</p>
+      <h2>Cómo ponemos a prueba cada argumento</h2>
+      <p>Una segunda IA hace el papel de partidario convencido de cada lado y pregunta: “¿Firmaría esto como nuestro mejor argumento?”. Ambos lados deben obtener 4 o 5 sobre 5 y superar una prueba de intercambio que detecta lenguaje parcial; si no, la ficha se reescribe. <a href="#how">Vea el proceso completo →</a></p>
       <h2>En qué creemos</h2>
       <ul class="beliefs-grid">
         <li><svg class="bicon" aria-hidden="true"><use href="#i-scale"/></svg><div><p class="bt">El argumento más sólido no siempre es el suyo.</p><p class="bd">Conocer el mejor argumento en contra es como se sostiene una opinión con sabiduría, o se cambia.</p></div></li>
@@ -387,12 +385,19 @@
       </ul>
       <h2>Quiénes somos</h2>
       <p>Un proyecto estudiantil independiente e imparcial, sin afiliación con ninguna campaña, partido ni gobierno. Nuestro código es público en <a href="https://github.com/sophiaruilin/steelman-ballot" rel="noopener noreferrer" target="_blank">GitHub</a>.</p>
+      <p class="muted">Basado en el principio de caridad, las reglas de crítica de Anatol Rapoport (popularizadas por Daniel Dennett) y la Prueba de Turing Ideológica (Bryan Caplan).</p>
       </div>
       <div data-langblock="zh" lang="zh-Hans" hidden>
-      <p class="eyebrow">关于我们</p>
-      <h1>我们的理念</h1>
+      <p class="eyebrow">关于</p>
+      <h1>关于 Steelman Ballot</h1>
       <p class="lede">当人们善于表达分歧时，民主运作得更好。</p>
       <p>选票要求我们裁决专家需要研究数月的问题，而我们接触到的内容大多是为了说服。我们用通俗的语言，把实际会发生的变化与双方最有力的论点并列呈现，让您自己做决定。</p>
+      <h2>为什么叫“Steelman”？</h2>
+      <p><b>稻草人论证</b>是某种观点最弱的版本，专为被驳倒而设。<b>钢人论证</b>则是最有力的版本，表述得好到连其支持者都会说：“我真希望自己能这么说。” <a href="#idea">查看并排示例 →</a></p>
+      <h2>为什么这对您的选票很重要</h2>
+      <p>如果只听到对方最弱的说法，每个决定都显得理所当然。但投票提案很少如此。看到双方最有力的论点，您才能用最好的反对意见检验自己的看法，然后坚持、改变，或更明智地持有它。</p>
+      <h2>我们如何检验每一个钢人论证</h2>
+      <p>另一个人工智能分别扮演双方的坚定支持者，问：“我愿意把这签成我们最好的论点吗？”双方都必须得到5分中的4分或5分，并通过检查偏向性措辞的对调测试，否则卡片就要重写。<a href="#how">查看完整流程 →</a></p>
       <h2>我们的信念</h2>
       <ul class="beliefs-grid">
         <li><svg class="bicon" aria-hidden="true"><use href="#i-scale"/></svg><div><p class="bt">最有力的论点，未必是你自己的。</p><p class="bd">了解反对你的最佳论证，才能明智地坚持或改变看法。</p></div></li>
@@ -409,6 +414,7 @@
       </ul>
       <h2>我们是谁</h2>
       <p>一个独立、无党派的学生项目，不隶属于任何竞选团队、政党或政府。代码在 <a href="https://github.com/sophiaruilin/steelman-ballot" rel="noopener noreferrer" target="_blank">GitHub</a> 上公开。</p>
+      <p class="muted">依据宽容原则、阿纳托尔·拉波波特的批评规则（经丹尼尔·丹尼特推广）以及意识形态图灵测试（布莱恩·卡普兰）。</p>
       </div>
     </section>
   </main>
@@ -417,7 +423,7 @@
     <div class="wrap">
       <p class="foot-motto"><span data-i18n="hero.h1a">Think more deeply.</span> <span data-i18n="hero.h1b">Vote more thoughtfully.</span></p>
       <p><b data-i18n="foot.never">We never tell you how to vote.</b> <span data-i18n="foot.rest">Not affiliated with any campaign, party or government. Official election offices always win when sources disagree.</span></p>
-      <p class="muted"><a href="#steelman" data-i18n="nav.steelman">Steelman vs. strawman</a> · <a href="#how" data-i18n="nav.how">How we work</a> · <a href="#philosophy" data-i18n="nav.philosophy">Our philosophy</a> · <a href="https://docs.google.com/forms/d/e/1FAIpQLSdEMz4oFJH_zGy1xtdHiAsf12pKQJD1jVn4ktJWbIQTBfQvKw/viewform" rel="noopener noreferrer" target="_blank" data-i18n="foot.report">Report an issue</a> · <a href="https://github.com/sophiaruilin/steelman-ballot/issues" rel="noopener noreferrer" target="_blank" data-i18n="foot.github">Technical issue? GitHub</a></p>
+      <p class="muted"><a href="#how" data-i18n="nav.how">How we work</a> · <a href="#about" data-i18n="nav.about">About</a> · <a href="https://docs.google.com/forms/d/e/1FAIpQLSdEMz4oFJH_zGy1xtdHiAsf12pKQJD1jVn4ktJWbIQTBfQvKw/viewform" rel="noopener noreferrer" target="_blank" data-i18n="foot.report">Report an issue</a> · <a href="https://github.com/sophiaruilin/steelman-ballot/issues" rel="noopener noreferrer" target="_blank" data-i18n="foot.github">Technical issue? GitHub</a></p>
     </div>
   </footer>
   <script src="/i18n.js" defer></script>

@@ -419,3 +419,32 @@ table.srcs td:first-child { font-weight: 500; color: var(--verdigris); white-spa
 .summary .matched { margin: 0 0 10px; font: 400 .95rem var(--sans); color: var(--graphite); }
 .summary .matched .ok { color: var(--verdigris); font-weight: 600; }
 .summary .matched .linkish { font-size: .92rem; }
+
+/* ---- home: the steelman idea, front and center ---- */
+.band.idea { display: block; }
+.band.idea h2 { margin: 2px 0 8px; }
+.idea-lede { font: 400 1.12rem/1.55 var(--sans); max-width: 46em; color: var(--graphite); }
+.idea-why { max-width: 46em; }
+/* ---- edit the address in place ---- */
+.edit-address { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 12px; }
+.edit-address input { flex: 1 1 220px; min-height: 46px; font: 16px var(--sans); padding: 8px 12px; border: 2px solid var(--verdigris);
+                      border-radius: var(--radius); background: var(--card); color: var(--graphite); }
+.edit-address .btn { min-height: 46px; padding: 8px 18px; }
+.summary .no-races { font: 400 .95rem var(--sans); color: var(--muted); align-self: center; }
+/* ---- how to vote on this ---- */
+.how-to-vote { margin-top: 24px; padding: 16px 18px; border: 1px solid var(--steel); border-left: 4px solid var(--verdigris);
+               border-radius: var(--radius); background: var(--card); }
+.how-to-vote h2 { margin-top: 0; font-size: 1.25rem; }
+.how-to-vote ul { margin: 0 0 6px; padding-left: 1.1em; }
+.how-to-vote li { margin: 4px 0; }
+/* ---- WeChat QR panel ---- */
+.qr { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-top: 12px; padding: 12px; border: 1px solid var(--steel);
+      border-radius: var(--radius); background: var(--card); }
+.qr img { width: 180px; height: 180px; background: #fff; }
+.qr > div { flex: 1 1 200px; }
+.qr p { margin: 0 0 6px; }
+.qr-link { word-break: break-all; font-size: .85rem; }
+/* the idea section sits right under the address box: no extra rule or gap, and a heading with weight */
+.status:empty { min-height: 0; margin: 0; }
+.band.idea { margin-top: 8px; border-top: 0; padding-top: 28px; }
+.band.idea h2 { font-size: clamp(1.8rem, 5vw, 2.4rem); line-height: 1.15; }

@@ -50,6 +50,28 @@ function el(tag, attrs = {}, ...kids) {
     n.append(kid instanceof Node ? kid : document.createTextNode(String(kid)));
   return n;
 }
+// replaceChildren() turns null into the text "null"; fill() skips empty slots.
+const fill = (node, ...kids) => node.replaceChildren(...kids.flat(2).filter((k) => k !== null && k !== undefined && k !== false));
+// Text the server sends in English (labels, office names): translated when we have it, otherwise left as is.
+const tx = (en) => { if (!en || state.lang === "en") return en; const v = t(`srv:${en}`); return v === `srv:${en}` ? en : v; };
+// "Prop 1" / "Question 2" / "Proposal 3" in the voter's language
+function numLabel(n) {
+  const m = /^(Prop|Question|Proposal)\s+(\d+)$/i.exec(n || "");
+  return m ? t(`num.${m[1].toLowerCase()}`, { n: m[2] }) : n;
+}
+const mTitle = (m) => (m.titles && m.titles[state.lang]) || m.plain_title;
+// District names from the Census, e.g. "Congressional District 12", "State Senate District 8", "Sacramento city"
+function txDistrict(d) {
+  if (!d || state.lang === "en") return d;
+  const zh = state.lang === "zh";
+  const rules = [[/^Congressional District (\d+)$/, zh ? "第$1国会选区" : "Distrito del Congreso $1"],
+    [/^State Senate District (\d+)$/, zh ? "州参议院第$1选区" : "Distrito $1 del Senado estatal"],
+    [/^(?:State House|State Assembly|Assembly) District (\d+)$/, zh ? "州众议院第$1选区" : "Distrito $1 de la Cámara estatal"],
+    [/^U\.S\. House ([A-Z]{2})-(\d+)$/, zh ? "美国众议院 $1-$2" : "Cámara de EE. UU. $1-$2"],
+    [/^(.*) city$/, zh ? "$1市" : "Ciudad de $1"], [/^(.*) County$/, zh ? "$1县" : "Condado de $1"]];
+  for (const [re, out] of rules) if (re.test(d)) return d.replace(re, out);
+  return tx(d);
+}
 function svg(tag, attrs = {}, ...kids) {
   const n = document.createElementNS(SVGNS, tag);
   for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
@@ -98,7 +120,7 @@ const TILES = {
   OK: [6, 4], LA: [6, 5], MS: [6, 6], AL: [6, 7], GA: [6, 8],
   HI: [7, 0], TX: [7, 4], FL: [7, 9],
 };
-const STATE_NAMES = { CA: "California", MA: "Massachusetts", NY: "New York", CT: "Connecticut" };
+const STATE_NAMES = { CA: "California", MA: "Massachusetts", NY: "New York" };
 
 async function renderMap() {
   let covered = {}, kinds = {};
@@ -116,7 +138,7 @@ async function renderMap() {
     g.append(svg("text", { x: c * (S + G) + S / 2, y: r * (S + G) + S / 2, class: kind ? `lbl-${kind}` : "" }, st));
     root.append(g);
   }
-  $("#usmap").replaceChildren(root);
+  fill($("#usmap"), root);
   $("#map-caption").textContent = Object.entries(covered).map(([k, v]) => `${STATE_NAMES[k] || k}: ${v}`).join(" · ");
 }
 
@@ -133,7 +155,7 @@ function progress(open) {
   $("#prog-title").textContent = t("prog.title");
   $("#prog-hint").hidden = true;
   setBar(2);
-  $("#prog-steps").replaceChildren(...STEPS.map((id) => el("li", { id: `ps-${id}`, class: "pstep" },
+  fill($("#prog-steps"), ...STEPS.map((id) => el("li", { id: `ps-${id}`, class: "pstep" },
     el("span", { class: "mark", "aria-hidden": "true" }, "○"), el("span", { class: "plabel" }, t(`prog.${id}`)),
     el("span", { class: "pmeta muted" }, ""))));
 }
@@ -167,7 +189,7 @@ function renderLastBallotLink() {
   if (!show) return;
   const city = (state.saved.districts?.City || "").replace(/ (city|town|village|borough|CDP)$/i, "");
   const where = [city, state.saved.state].filter(Boolean).join(", ");
-  box.replaceChildren(el("button", { type: "button", class: "linkish", onclick: () => {
+  fill(box, el("button", { type: "button", class: "linkish", onclick: () => {
     state.ballot = state.saved;
     renderBallot(); $("#ballot").hidden = false; box.hidden = true;
     compactHero(true);
@@ -249,7 +271,7 @@ async function lookup(address) {
 function coveragePill(name, v) {
   const cls = { official: "ok", none_on_ballot: "ok", not_mapped: "warn", unavailable: "warn", needs_address: "" }[v] || "";
   const txt = t(`cov.${v}`);
-  return el("li", { class: `pill ${cls}` }, `${name}: ${txt}`);
+  return el("li", { class: `pill ${cls}` }, `${tx(name)}: ${txt}`);
 }
 
 const LOCALE = { en: "en-US", es: "es-US", zh: "zh-CN" };
@@ -271,46 +293,66 @@ function prettyAddress(a) {
 function renderBallot() {
   const b = state.ballot;
   const d = b.districts;
-  const districtLine = [d["Congress"], d["State Senate"], d["State House / Assembly"], d["City"]].filter(Boolean).join(" · ");
+  const districtLine = [d["Congress"], d["State Senate"], d["State House / Assembly"], d["City"]].filter(Boolean).map(txDistrict).join(" · ");
   const ready = b.races.filter((r) => r.status === "ready" && r.id);
   const rest = b.races.filter((r) => !(r.status === "ready" && r.id));
-  $("#summary").replaceChildren(
+  fill($("#summary"), 
     el("p", { class: "eyebrow" }, `${b.state} · ${t("ballot.election")} ${fmtDate(b.election)}`),
     el("h2", {}, t("ballot.title")),
-    b.matched_address ? el("p", { class: "matched" },
+    b.matched_address ? el("div", { class: "matched" },
       el("span", { class: "ok", "aria-hidden": "true" }, "✓ "), `${t("ballot.matched")}: `, el("b", {}, prettyAddress(b.matched_address)), " · ",
-      el("button", { type: "button", class: "linkish", onclick: () => { window.scrollTo({ top: 0 }); $("#address").focus(); $("#address").select(); } },
-        t("ballot.edit"))) : null,
+      editButton(t("ballot.edit"))) : null,
     el("div", { class: "stats" },
       el("span", {}, el("b", {}, b.measures.length), t(b.measures.length === 1 ? "ballot.measure" : "ballot.measures")),
-      el("span", {}, el("b", {}, ready.length), t(ready.length === 1 ? "ballot.race" : "ballot.races"),
-        rest.length ? el("small", { class: "more-races" }, t("ballot.morerace", { n: rest.length })) : null)),
-    b.zip_only ? el("p", { class: "notice" }, t("ballot.ziponly")) : el("p", { class: "districts-line" }, districtLine),
-    el("p", { class: "notice" }, t("ballot.notice"), " ", b.official_links.map((l) => [extLink(l.url, l.label), " "])),
+      ready.length
+        ? el("span", {}, el("b", {}, ready.length), t(ready.length === 1 ? "ballot.race" : "ballot.races"),
+          rest.length ? el("small", { class: "more-races" }, t("ballot.morerace", { n: rest.length })) : null)
+        : el("span", { class: "no-races" }, t("ballot.racesnot"))),
+    b.zip_only ? el("div", { class: "notice" }, t("ballot.ziponly"), " ", editButton(t("ballot.change")))
+      : el("p", { class: "districts-line" }, districtLine),
+    el("p", { class: "notice" }, t("ballot.notice"), " ", b.official_links.map((l) => [extLink(l.url, tx(l.label)), " "])),
     b.measures.some((m) => m.status === "ready")
       ? el("p", { class: "start-here" }, t("ballot.start"), el("span", { class: "arrow-down", "aria-hidden": "true" }, "↓"))
       : null,
     el("details", {},
       el("summary", {}, t("ballot.details")),
-      el("p", { class: "muted" }, b.coverage_note || ""),
+      el("p", { class: "muted" }, tx(b.coverage_note || "")),
       el("ul", { class: "pills", "aria-label": t("ballot.coverage") }, Object.entries(b.coverage).map(([k, v]) => coveragePill(k, v))),
       b.election_passed ? el("p", { class: "muted" }, t("ballot.lookback", { d: fmtDate(b.election) })) : null));
   const measures = b.measures;   // official ballot order
-  $("#measures").replaceChildren(...(measures.length ? measures.map((m) => el("li", {}, listItem(m)))
+  fill($("#measures"), ...(measures.length ? measures.map((m) => el("li", {}, listItem(m)))
     : [el("li", { class: "muted item disabled" }, el("span", {}), el("span", {}, t("ballot.none")))]));
-  $("#races").replaceChildren(
-    ...ready.map((r) => el("li", {}, raceItem(r))),
-    rest.length ? el("li", { class: "uncovered" }, el("b", {}, t("ballot.notcovered", { n: rest.length })), " ",
-      rest.map((r) => r.office).join(" · ")) : null);
+  fill($("#races"), 
+    ready.length ? ready.map((r) => el("li", {}, raceItem(r))) : el("li", { class: "uncovered" }, t("ballot.noraces")),
+    rest.length ? el("li", { class: "uncovered" }, el("b", {}, ready.length ? t("ballot.notcovered", { n: rest.length }) : t("ballot.alsoon")), " ",
+      rest.map((r) => txDistrict(r.office)).join(" · ")) : null);
+}
+
+// "Not right? Edit": open a small address box right here, instead of sending the voter back to the top.
+function editButton(label) {
+  return el("button", { type: "button", class: "linkish", onclick: (e) => {
+    const host = e.currentTarget.closest(".matched, .notice");
+    const input = el("input", { type: "text", value: $("#address").value, "aria-label": t("form.label"), autocomplete: "off",
+      spellcheck: "false", minlength: "5", maxlength: "200", required: true, placeholder: t("form.placeholder") });
+    const form = el("form", { class: "edit-address", onsubmit: (ev) => {
+      ev.preventDefault();
+      const v = input.value.trim();
+      if (v.length < 5) return;
+      $("#address").value = v; updateHint(); lookup(v);
+    } }, input, el("button", { type: "submit", class: "btn" }, t("ballot.update")),
+      el("button", { type: "button", class: "btn ghost", onclick: () => renderBallot() }, t("ballot.cancel")));
+    host.after(form); host.hidden = true;
+    input.focus(); input.select();
+  } }, label);
 }
 
 function listItem(m) {
   if (m.status !== "ready") {
-    return el("div", { class: "item disabled" }, el("span", { class: "num" }, m.number),
+    return el("div", { class: "item disabled" }, el("span", { class: "num" }, numLabel(m.number)),
       el("span", { class: "ttl" }, m.official_title), el("span", { class: "meta" }, t("item.pending"), m.scope && m.scope !== "statewide" ? el("span", { class: "pill" }, m.scope) : null));
   }
   return el("button", { class: "item", onclick: () => go(`card=${m.id}`) },
-    el("span", { class: "num" }, m.number), el("span", { class: "ttl" }, m.plain_title),
+    el("span", { class: "num" }, numLabel(m.number)), el("span", { class: "ttl" }, mTitle(m)),
     el("span", { class: "meta" },
       el("span", { class: "cta" }, t("item.cta")),
       m.verified ? null : el("span", { class: "pill warn" }, t("item.unverified")),
@@ -322,14 +364,14 @@ function listItem(m) {
 function raceItem(r) {
   const label = { not_researched: t("item.pending"), check_official_ballot: t("item.maybe") }[r.status];
   if (r.status !== "ready" || !r.id) {
-    return el("div", { class: "item disabled" }, el("span", { class: "num" }, r.level), el("span", { class: "ttl" }, r.office), el("span", { class: "meta" }, label));
+    return el("div", { class: "item disabled" }, el("span", { class: "num" }, tx(r.level)), el("span", { class: "ttl" }, txDistrict(r.office)), el("span", { class: "meta" }, label));
   }
   return el("button", { class: "item", onclick: () => go(`card=${r.id}`) },
-    el("span", { class: "num" }, r.level), el("span", { class: "ttl" }, r.office), el("span", { class: "meta" }, r.candidates.join(" · ")));
+    el("span", { class: "num" }, tx(r.level)), el("span", { class: "ttl" }, tx(r.office)), el("span", { class: "meta" }, r.candidates.join(" · ")));
 }
 
 // ---- routing -------------------------------------------------------------------------------------
-const VIEWS = ["home", "card", "how", "steelman", "philosophy"];
+const VIEWS = ["home", "card", "how", "about"];
 function go(hash) { location.hash = hash || ""; }
 window.addEventListener("hashchange", route);
 
@@ -342,7 +384,9 @@ function show(view) {
 async function route() {
   const h = location.hash.slice(1);
   const id = (h.match(/^card=([A-Za-z0-9-]+)$/) || [])[1];
-  if (["how", "steelman", "philosophy"].includes(h)) { show(h); window.scrollTo(0, 0); return; }
+  if (h === "steelman" || h === "philosophy") { history.replaceState(null, "", "#about"); return route(); }
+  if (["how", "about"].includes(h)) { show(h); window.scrollTo(0, 0); return; }
+  if (h === "idea") { show("home"); renderLastBallotLink(); setTimeout(() => $("#idea").scrollIntoView(), 0); return; }
   if (h === "map") { show("home"); renderLastBallotLink(); setTimeout(() => $("#map-title").scrollIntoView(), 0); return; }
   if (!id) {
     show("home");
@@ -353,14 +397,14 @@ async function route() {
   }
   show("card");
   const box = $("#view-card");
-  box.replaceChildren(el("p", { class: "status" }, t("status.loading")));
+  fill(box, el("p", { class: "status" }, t("status.loading")));
   try {
     const rec = await api(`/api/card/${encodeURIComponent(id)}?lang=${state.lang}`);
     const isMeasure = "steelman_yes" in rec.card;
     box.replaceChildren(...[backButton(), isMeasure ? measureCard(rec) : raceCard(rec), isMeasure ? cardNav(id) : null].filter(Boolean));
     if (isMeasure) markRead(id);
   } catch (e) {
-    box.replaceChildren(backButton(), el("p", { class: "status" }, e.message));
+    fill(box, backButton(), el("p", { class: "status" }, e.message));
   }
   window.scrollTo(0, 0);
 }
@@ -372,7 +416,7 @@ function cardNav(id) {
   const prev = list[i - 1], next = list[i + 1];
   const link = (m, dir) => el("button", { class: `navcard ${dir}`, onclick: () => go(`card=${m.id}`) },
     el("span", { class: "dir" }, dir === "prev" ? `← ${t("nav.prev")}` : `${t("nav.next")} →`),
-    el("span", { class: "nt" }, `${m.number}: ${m.plain_title}`));
+    el("span", { class: "nt" }, `${numLabel(m.number)}: ${mTitle(m)}`));
   return el("nav", { class: "card-nav", "aria-label": t("nav.cards") },
     prev ? link(prev, "prev") : el("span", {}), next ? link(next, "next") : el("span", {}),
     el("p", { class: "muted pos" }, t("nav.pos", { i: i + 1, n: list.length })));
@@ -425,7 +469,7 @@ function measureCard(rec) {
 
   return el("article", {},
     el("header", { class: "card-head" },
-      el("p", { class: "eyebrow" }, c.number),
+      el("p", { class: "eyebrow" }, numLabel(c.number)),
       el("h1", {}, c.plain_title),
       el("ul", { class: "pills" },
         el("li", { class: `pill ${rec.steelman_verified ? "ok" : "warn"}` }, rec.steelman_verified ? t("card.checked") : t("card.unverified")),
@@ -461,24 +505,35 @@ function measureCard(rec) {
       el("h3", {}, t("card.affected")),
       el("ul", { class: "affected" }, c.who_is_affected.map((w) => el("li", {}, w))),
       el("p", { class: "official" }, `${t("card.official")}: `, c.official_title, c.title_disputed ? " · ⚖" : "",
-        notGiven(c.put_on_ballot_by) ? "" : ` · ${t("card.placed")}: ${c.put_on_ballot_by}`),
+        notGiven(c.put_on_ballot_by) ? "" : ` · ${t("card.placed")}: ${tx(c.put_on_ballot_by)}`),
       shareBar(c.measure_id),
       el("h3", {}, t("card.sources")),
       el("ul", { class: "sources" }, (rec.sources || []).map((u) => el("li", {}, extLink(u, u)))),
       reportLink(`${c.number}: ${c.plain_title} (${c.measure_id})`),
-      el("p", { class: "muted" }, t("card.rule"))));
+      el("p", { class: "muted" }, t("card.rule")),
+      howToVote(c)));
+}
+
+// The practical next step, the same for every Yes/No measure. Never which way to vote.
+function howToVote(c) {
+  const day = (/(\d{4}-\d{2}-\d{2})/.exec(c.measure_id || "") || [])[1];
+  const past = day && new Date(`${day}T23:59:59`) < new Date();
+  return el("section", { class: "how-to-vote" }, el("h2", {}, t("vote.h")),
+    el("ul", {}, el("li", {}, t("vote.1")), el("li", {}, t("vote.2")),
+      el("li", {}, t("vote.3"), " ", extLink("https://vote.gov/", "vote.gov"))),
+    past ? el("p", { class: "muted" }, t("vote.past")) : null);
 }
 
 // ---- race card ------------------------------------------------------------------------------------
 function raceCard(rec) {
   const c = rec.card;
   return el("article", {},
-    el("header", { class: "card-head" }, el("p", { class: "eyebrow" }, t("race.label")), el("h1", {}, c.office),
+    el("header", { class: "card-head" }, el("p", { class: "eyebrow" }, t("race.label")), el("h1", {}, tx(c.office)),
       el("p", {}, el("b", {}, `${t("race.does")}: `), c.what_office_does.text, " ",
         el("span", { class: "src" }, "[", extLink(c.what_office_does.source_url, t("card.source")), "]")),
       el("p", { class: "muted" }, rec.ballot_order_note || "Candidates in official ballot order.")),
     el("div", { class: "cands" }, c.candidates.map((p) => el("section", { class: "cand" },
-      el("h3", {}, p.name), el("p", { class: "party" }, p.party),
+      el("h3", {}, p.name), el("p", { class: "party" }, tx(p.party)),
       p.says_basis === "none_found"
         ? el("p", {}, t("race.nostatement"))
         : [el("p", { class: "values" }, p.headline || ""), el("p", {}, p.core_case), el("ul", {}, p.says.map(claimLi))],
@@ -507,7 +562,8 @@ function shareBar(id) {
       el("button", { class: "btn", onclick: async () => { const s = await getShare("whatsapp"); location.href = s.whatsapp_link; } }, "WhatsApp"),
       el("button", { class: "btn", onclick: async () => {
         const s = await getShare("wechat"); await copy(s.wechat, t("share.wechat_copied"));
-        qrBox.replaceChildren(el("img", { src: `/api/qr/${encodeURIComponent(id)}.svg`, alt: "QR code linking to this card" }));
+        fill(qrBox, el("img", { src: `/api/qr/${encodeURIComponent(id)}.svg`, alt: t("share.qr_alt"), width: "180", height: "180" }),
+          el("div", {}, el("p", {}, t("share.qr_help")), el("p", { class: "muted qr-link" }, `${t("share.link")} `, s.url || "")));
         qrBox.hidden = false;
       } }, "WeChat"),
       navigator.share ? el("button", { class: "btn ghost", onclick: async () => {

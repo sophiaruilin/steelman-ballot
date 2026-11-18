@@ -15,6 +15,7 @@ A ZIP code alone also works: it gives the statewide measures for the covered sta
 from __future__ import annotations
 
 import html
+import io
 import json
 import os
 import re
@@ -113,6 +114,44 @@ def load_card(card_id: str) -> dict | None:
     return rec
 
 
+_MONEY = re.compile(r"\$(\d[\d,]*(?:\.\d+)?)\s?(billion|million)\b")
+
+
+def zh_money(text: str) -> str:
+    """Chinese display: '$11.25 billion' -> '112.5亿美元', '$500 million' -> '5亿美元', '$40 million' -> '4000万美元'.
+    Same value, Chinese units (the translator keeps English number words so its number check can verify them)."""
+    from decimal import Decimal
+
+    def conv(m):
+        amount = Decimal(m.group(1).replace(",", "")) * (10 ** 9 if m.group(2) == "billion" else 10 ** 6)
+        unit, div = ("亿", Decimal(10 ** 8)) if amount >= 10 ** 8 else ("万", Decimal(10 ** 4))
+        v = (amount / div).normalize()
+        return f"{v:f}{unit}美元"
+    return _MONEY.sub(conv, text)
+
+
+def zh_money_all(obj):
+    if isinstance(obj, str):
+        return zh_money(obj)
+    if isinstance(obj, list):
+        return [zh_money_all(x) for x in obj]
+    if isinstance(obj, dict):
+        return {k: zh_money_all(v) for k, v in obj.items()}
+    return obj
+
+
+def translated_titles(card_id: str) -> dict:
+    from backend.agents.translator import I18N
+    out = {}
+    for lang in ("es", "zh"):
+        tp = I18N / f"{card_id}.{lang}.json"
+        if tp.exists():
+            title = json.loads(tp.read_text(encoding="utf-8")).get("translated", {}).get("plain_title")
+            if title:
+                out[lang] = zh_money(title) if lang == "zh" else title
+    return out
+
+
 def measure_summary(card_id: str, number: str, official_title: str) -> dict:
     rec = load_card(card_id)
     if not rec:
@@ -120,7 +159,8 @@ def measure_summary(card_id: str, number: str, official_title: str) -> dict:
                 "status": "not_researched"}
     c = rec["card"]
     return {"id": card_id, "kind": "measure", "number": c["number"], "official_title": c["official_title"],
-            "plain_title": c["plain_title"], "reading_minutes": c.get("reading_minutes", 2),
+            "plain_title": c["plain_title"], "titles": translated_titles(card_id),
+            "reading_minutes": c.get("reading_minutes", 2),
             "verified": rec.get("steelman_verified", False), "topics": topics_for(c), "status": "ready"}
 
 
@@ -210,8 +250,6 @@ def guide_source(j) -> str:
         return "Massachusetts Secretary of the Commonwealth: Information for Voters (PDF)"
     if j.state_abbr == "NY":
         return "NYC Votes (New York City)" if (j.place and j.place.geoid == "3651000") else "New York: statewide proposals"
-    if j.state_abbr == "CT":
-        return "Connecticut: statewide questions"
     return ""
 
 
@@ -221,8 +259,8 @@ class Lookup(BaseModel):
 
 # ZIP-only lookups: the first three digits of a ZIP code tell us the state (and New York City),
 # which is all statewide measures depend on. Only the covered states are mapped.
-ZIP3 = {"CA": [(900, 961)], "MA": [(10, 27), (55, 55)], "NY": [(5, 5), (100, 149)], "CT": [(60, 69)]}
-STATE_INFO = {"CA": ("California", "06"), "MA": ("Massachusetts", "25"), "NY": ("New York", "36"), "CT": ("Connecticut", "09")}
+ZIP3 = {"CA": [(900, 961)], "MA": [(10, 27), (55, 55)], "NY": [(5, 5), (100, 149)]}
+STATE_INFO = {"CA": ("California", "06"), "MA": ("Massachusetts", "25"), "NY": ("New York", "36")}
 NYC_ZIP3 = {100, 101, 102, 103, 104, 111, 112, 113, 114, 116}
 ZIP_RE = re.compile(r"^\s*(\d{5})(?:-\d{4})?\s*$")
 
@@ -232,7 +270,7 @@ def zip_jurisdiction(zip5: str) -> Jurisdiction:
     state = next((st for st, ranges in ZIP3.items() if any(lo <= z3 <= hi for lo, hi in ranges)), None)
     if not state:
         raise AddressNotFound("A ZIP code alone works for the states we cover (California, Massachusetts, "
-                              "New York, Connecticut). Elsewhere, enter a street address to see your districts.")
+                              "New York). Elsewhere, enter a street address to see your districts.")
     name, fips = STATE_INFO[state]
     place = Area("New York city", "3651000") if state == "NY" and z3 in NYC_ZIP3 else None
     return Jurisdiction(matched_address="", state_name=name, state_abbr=state, state_fips=fips, county=None,
@@ -367,6 +405,8 @@ def card(card_id: str, lang: str = Query("en", pattern="^(en|es|zh)$")):
         tpath = I18N / f"{card_id}.{lang}.json"
         if tpath.exists():
             rec["card"] = apply(rec["card"], json.loads(tpath.read_text(encoding="utf-8")))
+            if lang == "zh":
+                rec["card"] = zh_money_all(rec["card"])
             rec["lang"] = lang
             rec["translation_scope"] = "key_points"   # evidence details and sources stay in English
     return rec
@@ -394,8 +434,10 @@ def share(card_id: str, request: Request, ch: str = Query("", pattern="^(|whatsa
 def qr(card_id: str, request: Request):
     if not load_card(card_id):
         raise HTTPException(404)
-    svg = segno.make(f"{public_base(request)}/c/{card_id}", error="m").svg_inline(scale=6, border=2)
-    return Response(svg, media_type="image/svg+xml", headers={"Cache-Control": "public, max-age=86400"})
+    buf = io.BytesIO()
+    segno.make(f"{public_base(request)}/c/{card_id}", error="m").save(buf, kind="svg", scale=6, border=2,
+                                                                     xmldecl=False, svgns=True)
+    return Response(buf.getvalue(), media_type="image/svg+xml", headers={"Cache-Control": "public, max-age=86400"})
 
 
 @app.get("/c/{card_id}", response_class=HTMLResponse)

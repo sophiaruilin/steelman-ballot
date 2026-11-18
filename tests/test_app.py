@@ -81,13 +81,13 @@ def test_service_worker_never_caches_ballot_lookups():
 
 def test_coverage_endpoint_lists_three_states():
     states = client.get("/api/coverage").json()["states"]
-    assert set(states) == {"CA", "MA", "NY", "CT"} and "New York City" in states["NY"]
-    assert client.get("/api/coverage").json()["kinds"]["CT"] == "checked"
+    assert set(states) == {"CA", "MA", "NY"} and "New York City" in states["NY"]
+    assert "CT" not in client.get("/api/coverage").json()["kinds"]   # Connecticut paused for now
 
 
 def test_site_pages_and_fonts_are_self_hosted():
     html = client.get("/").text
-    for section in ('id="view-how"', 'id="view-steelman"', 'id="view-philosophy"', "Think more deeply."):
+    for section in ('id="view-how"', 'id="view-about"', 'id="idea"', "Think more deeply."):
         assert section in html
     assert "fonts.googleapis" not in html and "cdn." not in html
     assert client.get("/fonts/eb-garamond-latin-500-normal.woff2").status_code == 200
@@ -109,7 +109,9 @@ def test_every_interface_string_exists_in_all_three_languages():
     body = re.sub(r"\b(en|es|zh):", r'"\1":', body)
     body = re.sub(r",(\s*[}\]])", r"\1", body)
     d = json.loads(body)
-    assert set(d["en"]) == set(d["es"]) == set(d["zh"])
+    ui = lambda lang: {k for k in d[lang] if not k.startswith("srv:")}   # srv: = optional translations of server text
+    assert ui("en") == ui("es") == ui("zh")
+    assert {k for k in d["es"] if k.startswith("srv:")} == {k for k in d["zh"] if k.startswith("srv:")}
     html = client.get("/").text
     for key in re.findall(r'data-i18n(?:-placeholder)?="([^"]+)"', html):
         assert key in d["en"], key
@@ -148,8 +150,7 @@ def test_ballot_stream_reports_real_steps_in_order(monkeypatch):
     assert kinds == [("step", "districts", "start"), ("step", "districts", "done"),
                      ("step", "guide", "start"), ("step", "guide", "done"),
                      ("step", "cards", "start"), ("step", "cards", "done"), ("ballot", None, None)]
-    assert events[2][1]["source"] == "Connecticut: statewide questions"
-    assert events[-1][1]["state"] == "CT" and "measures" in events[-1][1]
+    assert events[-1][1]["state"] == "CT" and events[-1][1]["covered_state"] is False   # paused: districts only
 
 
 def test_ballot_stream_bad_address_fails_cleanly(monkeypatch):
@@ -167,8 +168,13 @@ def test_addresses_never_go_in_a_url():
     assert "/api/ballot?address" not in js and "ballot/stream?address" not in js
 
 
+def test_connecticut_zip_alone_is_not_covered():
+    with pytest.raises(app_module.AddressNotFound):
+        app_module.resolve("06510")
+
+
 @pytest.mark.parametrize("zip5,state,nyc", [("95814", "CA", False), ("02139", "MA", False), ("10007", "NY", True),
-                                            ("12207", "NY", False), ("06510", "CT", False)])
+                                            ("12207", "NY", False)])
 def test_zip_only_lookup(zip5, state, nyc):
     j, zip_only = app_module.resolve(zip5)
     assert zip_only and j.state_abbr == state and (j.place is not None and j.place.geoid == "3651000") == nyc
@@ -239,3 +245,14 @@ def test_stats_page_survives_a_bad_upstash_setting(monkeypatch):
     r = client.get("/stats")
     assert r.status_code == 200 and "Totals unavailable" in r.text and "bad-token" not in r.text
     assert client.get("/api/stats").json()["error"].startswith("Totals unavailable")
+
+
+def test_qr_is_a_standalone_svg_and_titles_are_translated():
+    import json
+    svg = client.get("/api/qr/CA-2026-11-03-prop-1.svg").text
+    assert 'xmlns="http://www.w3.org/2000/svg"' in svg        # without it, browsers show a broken image
+    r = client.post("/api/ballot", json={"address": "95814"}).json()
+    m = next(x for x in r["measures"] if x["id"] == "CA-2026-11-03-prop-1")
+    assert m["titles"]["es"] and "亿美元" in m["titles"]["zh"] and "billion" not in m["titles"]["zh"]
+    zh = client.get("/api/card/CA-2026-11-03-prop-1?lang=zh").json()
+    assert "billion" not in json.dumps(zh["card"]["steelman_yes"], ensure_ascii=False)
