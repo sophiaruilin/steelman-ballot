@@ -292,3 +292,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 69: Label and demo note on one line
 **Prompt (my own words):** "would you recomend the way it was or this new way" then "make on same line then?"
 **What was lacking before:** The label and the demo note sat on separate lines. Now "NONPARTISAN BALLOT GUIDE" and the italic "(Demo: Nov 3, 2026 ballot, a past election)" share one line on a laptop and wrap onto two short lines on a phone, in all three languages.
+
+## Step 70: Current home-page screenshot in the report and slides
+**Prompt (my own words):** "can you update the repot and slides screenshots since latest changes if relevant to update"
+**What was lacking before:** The address-entry screenshot (report figure 1, slide 4) showed the old all-caps demo line. It was retaken with the new label and note. The other screenshots show the ballot and cards, which didn't change.
