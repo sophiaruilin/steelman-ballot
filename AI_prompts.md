@@ -204,3 +204,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 47: A WeChat share image and in-WeChat tip
 **Prompt (my own words):** "for the we chat qr code i notice it's just to open the link. can you add this functionality to make unique wechat scanner? [Open directly in WeChat (if the link supports deep-linking) / Trigger a Mini Program instead of a browser / Be wrapped in a QR code for one-tap scanning]" then "Yes, build both"
 **What was lacking before:** WeChat users got only a bare QR code, with nothing to save or forward in a chat, and no hint about WeChat's own share menu when the site was opened inside WeChat. Direct deep links and a Mini Program aren't possible without a registered WeChat developer account and review, so they're noted as future work. While testing, we found the page joined each side's values with an English "and" on Spanish and Chinese cards; it now uses each language's own list format.
+
+## Step 48: Keep "steelman" and "strawman" in English
+**Prompt (my own words):** "For Spanish and Mandarin language versions, use original English Steelman and Strawman since those concepts may not translate directly to those languages, as one Spanish-native user told me for the Spanish version at least"
+**What was lacking before:** The Spanish pages said "argumento de acero / de paja" and the Chinese pages "钢人论证 / 稻草人论证". These are literal translations that a native Spanish speaker found unnatural, and they hid the link to the site's name.
