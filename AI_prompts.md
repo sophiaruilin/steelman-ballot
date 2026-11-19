@@ -252,3 +252,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 59: One "How it works" page
 **Prompt (my own words):** "for the website, should i move how we work and/or about pages from top tabs to bottom of the page? or keep there? or merge into one?" then "Yes, merge them"
 **What was lacking before:** Two top tabs (How we work, About) overlapped and pulled attention from the ballot tool, but moving them to the footer would hide the trust explanation ("can I trust an AI on my ballot?"). Now there is one "How it works" tab: how a card is made, then "Why we built it", what we believe, what we never do, and who we are. The menu is My ballot · How it works. Old About, Steelman and Philosophy links redirect, and "What we never do →" jumps to that section (it uses an instant scroll, because the page's smooth scrolling was cancelling the jump). In English, Spanish and Chinese.
+
+## Step 60: How it works opens with the why
+**Prompt (my own words):** "for the "how it works" page, you can mention steelman and why it matters / about section langugae, then the other pargts, in ordre you reocmmend / can push that!!"
+**What was lacking before:** The page opened with the process steps, and the reasons (why we built it, why "steelman", why it matters) came after. Now it runs why → how a card is made → honest limits → what we believe, what we never do and who we are, in all three languages.
