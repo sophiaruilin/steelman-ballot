@@ -472,3 +472,8 @@ table.srcs td:first-child { font-weight: 500; color: var(--verdigris); white-spa
 /* the demo note sits quietly under the "Nonpartisan ballot guide" label */
 .hero .demo-note { border-left: 0; padding-left: 0; margin: 2px 0 10px; font: italic 400 .95rem var(--sans); color: var(--muted); }
 .hero.compact .demo-note { display: none; }
+
+/* label and demo note share one line (wrapping on narrow screens) */
+.hero .eyebrow-row { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 10px; row-gap: 2px; margin-bottom: 10px; }
+.hero .eyebrow-row .eyebrow, .hero .eyebrow-row .demo-note { margin: 0; }
+.hero.compact .eyebrow-row { display: none; }

@@ -288,3 +288,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 68: The demo note on its own line
 **Prompt (my own words):** "should demo line go under the guide part - and all be in parentheses?"
 **What was lacking before:** The demo note shared the all-caps label line. Now "Nonpartisan ballot guide" stands alone as the label, and "(Demo: the November 3, 2026 ballot, a past election)" sits beneath it in smaller italic, in all three languages (hidden in the compact view after a lookup).
+
+## Step 69: Label and demo note on one line
+**Prompt (my own words):** "would you recomend the way it was or this new way" then "make on same line then?"
+**What was lacking before:** The label and the demo note sat on separate lines. Now "NONPARTISAN BALLOT GUIDE" and the italic "(Demo: Nov 3, 2026 ballot, a past election)" share one line on a laptop and wrap onto two short lines on a phone, in all three languages.
