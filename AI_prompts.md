@@ -296,3 +296,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 70: Current home-page screenshot in the report and slides
 **Prompt (my own words):** "can you update the repot and slides screenshots since latest changes if relevant to update"
 **What was lacking before:** The address-entry screenshot (report figure 1, slide 4) showed the old all-caps demo line. It was retaken with the new label and note. The other screenshots show the ballot and cards, which didn't change.
+
+## Step 71: Ready to submit
+**Prompt (my own words):** "great!ready to submit how to follow this: [Please submit 1) HTML of report - put your github repo url in the report so we can clone it 2) HTML of slides - put your github repo url in the report so we can clone it]"
+**What was lacking before:** The redesigned slides no longer showed the GitHub address, and neither file gave a clone command. The report's title box and the slides' first and last slides now show https://github.com/sophiaruilin/steelman-ballot and "git clone https://github.com/sophiaruilin/steelman-ballot.git". Confirmed the repo is public and clones without a login.
