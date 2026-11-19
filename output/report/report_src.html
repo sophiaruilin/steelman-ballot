@@ -71,6 +71,8 @@
   .quote-box .small { color: #E5ECE9; font-family: "IBM Plex Sans", system-ui, sans-serif; }
   .ba { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; margin: 8px 0; align-items: start; break-inside: avoid; }
   .ba img { width: 100%; border: 1px solid var(--steel); border-radius: 4px; display: block; }
+  ul.liked { list-style: none; padding-left: 0; }
+  ul.liked li { margin: 4px 0; padding: 6px 10px; background: var(--card); border-left: 3px solid var(--copper); border-radius: 3px; }
   .toc { columns: 2; font-size: .92rem; margin: 6px 0 0; padding-left: 1.2em; }
   @media (max-width: 640px) { .figs, .kpis { grid-template-columns: 1fr 1fr; } .toc { columns: 1; } body { padding: 24px 16px; } }
   @media print {
@@ -351,53 +353,46 @@ error_message_never_contains_key .............. PASSED
 </div>
 
 <h3>Real users</h3>
-<p><b>Who tested it.</b> Four people tested the live site in depth, on their own devices with their own addresses, plus quick reactions from a few others.</p>
+<p><b>Who tested it.</b> Four people tested the live site in depth, on their own devices with their own addresses, chosen to cover a domain expert, a target voter, both non-English languages, and phone plus laptop.</p>
 <table>
-  <tr><th style="width:9%">Tester</th><th style="width:44%">Profile</th><th>What they tested</th></tr>
-  <tr><td><b>A</b></td><td>Professional who works in politics and has written voter guides</td><td>Reviewed the app as a domain expert (interview)</td></tr>
-  <tr><td><b>B</b></td><td>Civically engaged professional who lives in Connecticut and works in New York City</td><td>The core voter flow: a Connecticut ZIP and an NYC ZIP</td></tr>
-  <tr><td><b>C</b></td><td>Native Spanish speaker</td><td>The Spanish version</td></tr>
-  <tr><td><b>D</b></td><td>Native Mandarin speaker</td><td>The Chinese version, on an iPhone and a Windows laptop</td></tr>
+  <tr><th style="width:8%">Tester</th><th style="width:52%">Profile</th><th>Focus</th></tr>
+  <tr><td><b>A</b></td><td>Works in politics; has written voter guides</td><td>Expert review (interview)</td></tr>
+  <tr><td><b>B</b></td><td>Civically engaged professional; lives in Connecticut, works in NYC</td><td>The voter flow, with two ZIP codes</td></tr>
+  <tr><td><b>C</b></td><td>Native Spanish speaker</td><td>Spanish version</td></tr>
+  <tr><td><b>D</b></td><td>Native Mandarin speaker</td><td>Chinese version, iPhone and laptop</td></tr>
 </table>
-<p class="small">The mix covers a domain expert, a target voter, both non-English languages, and phone plus laptop.</p>
 
-<h3>Headline evidence</h3>
 <div class="quote-box">
   <p class="qh">In their words: an endorsement from the field</p>
   <p>"We struggle with civic engagement at all levels of government, especially local government. Democratizing access to information that's unbiased, and letting voters understand their issues and meet them where they are, is something we really need. Steelman Ballot does just that. More people should be using Steelman Ballot. … I wish I had this for the recent election."</p>
   <p class="who">Tester A, who works in politics</p>
 </div>
 <div class="case">
-  <div><p class="ch">The situation</p><p>Before a recent local election, voters faced ballot questions that few people could explain. Tester A ended up writing a voter guide himself.</p></div>
-  <div><p class="ch">The problem</p><p>Local good-government groups were seen as having a stake in the outcome, so they held back from publishing a guide. Nobody else had the resources or the technical skill to put one together.</p></div>
-  <div class="win"><p class="ch">With Steelman Ballot</p><p>The town or any civic group could point residents to one transparent, cited briefing, with each side argued at its best, so no one has to take sides or build anything. "I genuinely think there is a demand for that." <span class="muted">(Requires local coverage, next step 1.)</span></p></div>
+  <div><p class="ch">The situation</p><p>Before a recent local election, voters faced ballot questions few people could explain. Tester A ended up writing a voter guide himself.</p></div>
+  <div><p class="ch">The problem</p><p>Good-government groups were seen as having a stake, so they held back. Nobody else had the resources or technical skill to write a guide.</p></div>
+  <div class="win"><p class="ch">With Steelman Ballot</p><p>The town or any civic group could point residents to one transparent, cited briefing, with each side argued at its best. "I genuinely think there is a demand for that." <span class="muted">(Needs local coverage, next step 1.)</span></p></div>
 </div>
-<ul>
-  <li><b>A practitioner sees real demand</b>, and described the before-state from experience (above).</li>
-  <li><b>9 of 12 tester suggestions shipped</b>; the other 3 are next steps.</li>
-  <li><b>Translations confirmed by native speakers</b> in both non-English languages: "The Spanish translation holds up!"</li>
+
+<h3>What testers liked</h3>
+<ul class="liked">
+  <li><b>The concept and name:</b> "Love calling it Steelman Ballot… Really smart way of thinking about this subject matter!"</li>
+  <li><b>Learning what's on the ballot:</b> "Love that it shows the proposals (I would not have known what was up otherwise)."</li>
+  <li><b>Both sides, side by side:</b> "Love the page that shows both sides when you click into each proposal."</li>
+  <li><b>The two-AI check:</b> a tester was "pleasantly surprised and even impressed" that a second AI challenges the first.</li>
+  <li><b>Translations that hold up:</b> "The Spanish translation holds up!" The Chinese version also "looks great overall," on both phone and laptop.</li>
 </ul>
 
-<h3>Themes, and what changed</h3>
+<h3>What testers flagged, and what changed</h3>
+<p class="small"><b>9 of 12 suggestions shipped</b>; the other 3 are next steps.</p>
 <table>
-  <tr><th style="width:18%">Theme</th><th style="width:9%">Raised by</th><th style="width:38%">Representative feedback</th><th>What changed (live now)</th></tr>
-  <tr><td><b>Real demand from practitioners</b></td><td>A</td><td>"More people should be using Steelman Ballot."</td><td>Evidence for Impact; no change needed</td></tr>
-  <tr><td><b>Make the concept clear from the start</b></td><td>B, C, others</td><td>"The Steelman vs. Strawman comparison could likely be made right when you enter the site." "Steelman" and "strawman" are hard to translate. One tester thought it was a polling site.</td><td>Steelman explainer moved to the home page; English terms kept in Spanish and Chinese; "A guide to read before you vote, not a poll"</td></tr>
-  <tr><td><b>Friction in the flow</b></td><td>B, D</td><td>"Edit" didn't open anything; "null" showed when no races came up; a Connecticut ZIP failed; the WeChat QR code was missing</td><td>Address editable in place with a "✓ Ready" check; plain-English empty results; Connecticut removed; QR fixed and a WeChat share image added</td></tr>
-  <tr><td><b>Turn insight into action</b></td><td>B</td><td>"I don't see anywhere that tells you how to actually vote on the proposal."</td><td>"How to vote on this" at the end of every measure card</td></tr>
-  <tr><td><b>Focus on the core tool</b></td><td>B</td><td>Three About-style pages "take the focus away from the main point of the app, which is the ballot tool."</td><td>Merged into one About page</td></tr>
-  <tr><td><b>Expansion</b></td><td>A</td><td>Show the size of a measure's impact (for example Prop 40); deeper learning questions; major issues beyond ballots</td><td>Deferred to next steps. Partly there: each card's "What would change" and fiscal estimate show the size (Prop 40: "tens of billions of dollars over several years")</td></tr>
+  <tr><th style="width:24%">Theme (raised by)</th><th style="width:34%">What testers ran into</th><th>What changed (live now)</th></tr>
+  <tr><td><b>Make the idea clear up front</b> (B, C, others)</td><td>"Steelman" was explained on a separate page; the word is hard to translate; one tester thought the site was a poll</td><td>The steelman explainer now sits on the home page, under the address box. Spanish and Chinese keep the English words. The home page says "A guide to read before you vote, not a poll."</td></tr>
+  <tr><td><b>Smooth the flow</b> (B, D)</td><td>"Edit" didn't open anything; "null" appeared when no races came up; a Connecticut ZIP failed; the WeChat QR code didn't show</td><td>"Edit" opens an address box in place, with a "✓ Ready" check. Empty results are explained in plain English. Connecticut was removed. The QR code works, plus a WeChat share image.</td></tr>
+  <tr><td><b>Help voters act</b> (B)</td><td>Nothing said how to actually vote on a measure</td><td>Every measure card ends with "How to vote on this."</td></tr>
+  <tr><td><b>Keep the focus on the ballot</b> (B)</td><td>Three About-style pages pulled attention from the ballot tool</td><td>They're now one About page.</td></tr>
+  <tr><td><b>Go further</b> (A)</td><td>Show how big each change is (for example Prop 40); add deeper questions; cover major issues beyond ballots</td><td>Next steps. Partly there: cards already show the size of the change (Prop 40: "tens of billions of dollars over several years").</td></tr>
 </table>
-<p class="small">What testers liked: <i>"Love calling it Steelman Ballot… Really smart way of thinking about this subject matter!"</i> · <i>"Love that it shows the proposals (I would not have known what was up otherwise)."</i> · <i>"Love the page that shows both sides when you click into each proposal."</i> · Another tester was "pleasantly surprised and even impressed" that a second AI challenges the first.</p>
-
-<h3>Before and after</h3>
-<div class="ba">
-  <figure><img src="img/10_home_before.jpg" alt=""><figcaption><b>Before:</b> the home page went straight from the address box to generic steps; "steelman" was explained on a separate page.</figcaption></figure>
-  <figure><img src="img/10_home_after.jpg" alt=""><figcaption><b>After:</b> the steelman idea sits right under the address box, with a real example.</figcaption></figure>
-  <figure><img src="img/11_qr_before.jpg" alt=""><figcaption><b>Before:</b> the WeChat QR code showed as a broken image.</figcaption></figure>
-  <figure><img src="img/08_wechat_poster.jpg" alt=""><figcaption><b>After:</b> a scannable share image with the measure's title in Chinese.</figcaption></figure>
-</div>
-<p class="small muted"><b>Limits of this evidence:</b> a small sample (four in-depth testers) of people I know, including a family member, and the feedback is qualitative. The randomized study in next step 2 would test the same questions at scale.</p>
+<p class="small muted"><b>Limits of this evidence:</b> a small, qualitative sample of people I know, including a family member. The randomized study in next step 2 would test the same questions at scale.</p>
 
 <!-- =========================================================== 7 -->
 <h2 id="limits">7. Limits and next steps</h2>
