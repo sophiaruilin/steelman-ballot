@@ -69,6 +69,8 @@
   .quote-box .qh { font: 600 1.15rem "EB Garamond", Georgia, serif; font-style: normal; color: #F4F0E7; margin: 0 0 8px; padding-bottom: 6px; border-bottom: 1px solid rgba(244,240,231,.3); }
   .quote-box .who { font: 600 .8rem "IBM Plex Sans", system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: #D9B597; font-style: normal; }
   .quote-box .small { color: #E5ECE9; font-family: "IBM Plex Sans", system-ui, sans-serif; }
+  .ba { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; margin: 8px 0; align-items: start; break-inside: avoid; }
+  .ba img { width: 100%; border: 1px solid var(--steel); border-radius: 4px; display: block; }
   .toc { columns: 2; font-size: .92rem; margin: 6px 0 0; padding-left: 1.2em; }
   @media (max-width: 640px) { .figs, .kpis { grid-template-columns: 1fr 1fr; } .toc { columns: 1; } body { padding: 24px 16px; } }
   @media print {
@@ -311,7 +313,7 @@ error_message_never_contains_key .............. PASSED
 <!-- =========================================================== 6 -->
 <h2 id="impact">6. Impact</h2>
 <h3>Clarity: a place to start</h3>
-<p>For me, the hardest part of getting informed was not reading time. It was <b>"Where do I even begin?"</b> With a dozen measures, scattered news coverage, ads and group-chat opinions, just starting the search was the roadblock, so the realistic alternative to this app isn't reading the official guide cover to cover. It's piecing things together from sources that each tell one side, or not doing it at all. Steelman Ballot removes that first step: one address gives one organized place that lists every measure on <i>your</i> ballot, with each side argued at its best, the facts kept apart from the arguments, and a clear note on what a yes or a no would change. That turns "I haven't looked into it" into an informed choice, made with the other side's best case in view. Testers said the same: one who works in politics said, "I wish I had this for the recent election" (below).</p>
+<p>For me, the hardest part of getting informed was not reading time. It was <b>"Where do I even begin?"</b> With a dozen measures, scattered news coverage, ads and group-chat opinions, just starting the search was the roadblock, so the realistic alternative to this app isn't reading the official guide cover to cover. It's piecing things together from sources that each tell one side, or not doing it at all. Steelman Ballot removes that first step: one address gives one organized place that lists every measure on <i>your</i> ballot, with each side argued at its best, the facts kept apart from the arguments, and a clear note on what a yes or a no would change. That turns "I haven't looked into it" into an informed choice, made with the other side's best case in view. Testers said the same: Tester A, who works in politics, said: "I wish I had this for the recent election" (below).</p>
 
 <h3>Time: without the app vs. with it</h3>
 <p class="small">A conservative comparison: it assumes a voter goes straight to the official guide, the best single source, and reads it.</p>
@@ -349,43 +351,53 @@ error_message_never_contains_key .............. PASSED
 </div>
 
 <h3>Real users</h3>
-<p>Testers used the live site on their own phones (iPhone) and laptops (Windows 11), with their own addresses and ZIP codes. They included a professional who works in politics, a civically engaged professional who lives in Connecticut and works in New York City, a native Spanish speaker and a native Mandarin speaker, among others. This was informal feedback rather than the timed study (that's next step 2), but every piece of it changed the product.</p>
+<p><b>Who tested it.</b> Four people tested the live site in depth, on their own devices with their own addresses, plus quick reactions from a few others.</p>
+<table>
+  <tr><th style="width:9%">Tester</th><th style="width:44%">Profile</th><th>What they tested</th></tr>
+  <tr><td><b>A</b></td><td>Professional who works in politics and has written voter guides</td><td>Reviewed the app as a domain expert (interview)</td></tr>
+  <tr><td><b>B</b></td><td>Civically engaged professional who lives in Connecticut and works in New York City</td><td>The core voter flow: a Connecticut ZIP and an NYC ZIP</td></tr>
+  <tr><td><b>C</b></td><td>Native Spanish speaker</td><td>The Spanish version</td></tr>
+  <tr><td><b>D</b></td><td>Native Mandarin speaker</td><td>The Chinese version, on an iPhone and a Windows laptop</td></tr>
+</table>
+<p class="small">The mix covers a domain expert, a target voter, both non-English languages, and phone plus laptop.</p>
 
+<h3>Headline evidence</h3>
 <div class="quote-box">
   <p class="qh">In their words: an endorsement from the field</p>
   <p>"We struggle with civic engagement at all levels of government, especially local government. Democratizing access to information that's unbiased, and letting voters understand their issues and meet them where they are, is something we really need. Steelman Ballot does just that. More people should be using Steelman Ballot. … I wish I had this for the recent election."</p>
-  <p class="who">Tester who works in politics</p>
+  <p class="who">Tester A, who works in politics</p>
 </div>
-
-<h3>A real-world case: the local voter guide no one could write</h3>
 <div class="case">
-  <div><p class="ch">The situation</p><p>Before a recent local election, voters faced ballot questions that few people could explain. The tester, who works in politics, ended up writing a voter guide himself.</p></div>
-  <div><p class="ch">The problem</p><p>Local good-government groups were seen as having a stake in the outcome, so they held back from publishing a guide. Nobody else had the resources or the technical skill to put one together. Voters were left without a fair explanation.</p></div>
-  <div class="win"><p class="ch">With Steelman Ballot</p><p>The town or any civic group could simply point residents to one transparent, cited briefing, with each side argued at its best, so no one has to take sides or build anything. "If you said to them we have this tool that will identify the initiative in your city or state and educate people… I genuinely think there is a demand for that." <span class="muted">(Requires local coverage, next step 1.)</span></p></div>
+  <div><p class="ch">The situation</p><p>Before a recent local election, voters faced ballot questions that few people could explain. Tester A ended up writing a voter guide himself.</p></div>
+  <div><p class="ch">The problem</p><p>Local good-government groups were seen as having a stake in the outcome, so they held back from publishing a guide. Nobody else had the resources or the technical skill to put one together.</p></div>
+  <div class="win"><p class="ch">With Steelman Ballot</p><p>The town or any civic group could point residents to one transparent, cited briefing, with each side argued at its best, so no one has to take sides or build anything. "I genuinely think there is a demand for that." <span class="muted">(Requires local coverage, next step 1.)</span></p></div>
 </div>
-
-<h3>What testers said, and what we changed</h3>
-<table>
-  <tr><th style="width:52%">Feedback</th><th>What changed (live now)</th></tr>
-  <tr><td>"The Steelman vs. Strawman comparison could likely be made right when you enter the site… to introduce the app."</td><td>The steelman idea moved to the home page, right under the address box</td></tr>
-  <tr><td>"The Steelman page, How it Works, and Our Philosophy could all just be an About Us page… right now it takes the focus away from the main point of the app, which is the ballot tool."</td><td>Three pages merged into one About page; the menu is now My ballot · How it works · About</td></tr>
-  <tr><td>"I don't see anywhere that tells you how to actually vote on the proposal."</td><td>A "How to vote on this" note at the end of every measure card</td></tr>
-  <tr><td>"I tried my zipcode in CT and it didn't work."</td><td>Connecticut removed until its town questions can be covered</td></tr>
-  <tr><td>No races came up "and so it says 'null'."</td><td>Plain-English messages for empty results</td></tr>
-  <tr><td>"When clicking the 'Not right?' or 'Edit', it did not pop up a box… to modify or edit the address."</td><td>An address box opens right there, with the same "✓ Ready" check as the main box</td></tr>
-  <tr><td>Under the WeChat button, "it may either need a QR code to allow users to scan or a link."</td><td>Fixed a broken QR image; added a shareable WeChat image with the measure's title and a scannable code</td></tr>
-  <tr><td>"The Spanish translation holds up! The only thing that is tricky to translate is 'Steelman' and 'Strawman'."</td><td>Spanish and Chinese keep the English words <i>steelman</i> and <i>strawman</i>, with the definition translated</td></tr>
-  <tr><td>A tester whose first language isn't English thought it was a polling site.</td><td>The home page now says "A guide to read before you vote, not a poll"</td></tr>
-</table>
-<p class="small">What testers liked: <i>"Love calling it Steelman Ballot… Really smart way of thinking about this subject matter!"</i> · <i>"I did run my office zip in NYC and that worked! Love that it shows the proposals (I would not have known what was up otherwise)."</i> · <i>"Love the page that shows both sides when you click into each proposal."</i> · <i>"It looks great overall. The address field looks secure."</i> Another tester was "pleasantly surprised and even impressed" that a second AI challenges the first.</p>
-
-<h3>Ideas from testers, for next</h3>
 <ul>
-  <li><b>How big is the change?</b> <i>"Is it possible to measure the 'scale' or magnitude of the change with the vote vs not? For example Proposition 40… on billionaire[s]."</i> Partly there: each card's "What would change" table and fiscal estimate give the size (for Prop 40, the Legislative Analyst's "tens of billions of dollars over several years"). A next version would add a plain one-line "how big is this change" summary to every card.</li>
-  <li><b>Deeper learning:</b> a few follow-up questions on each card, for voters who want to keep exploring an issue on their own.</li>
-  <li><b>Issues of the day:</b> the same steelman briefings for major issues beyond the ballot (next step 3).</li>
-  <li><b>Local governments and civic groups as partners:</b> towns that want to inform residents could simply point them to the site, which is also the answer to the timeliness limit.</li>
+  <li><b>A practitioner sees real demand</b>, and described the before-state from experience (above).</li>
+  <li><b>9 of 12 tester suggestions shipped</b>; the other 3 are next steps.</li>
+  <li><b>Translations confirmed by native speakers</b> in both non-English languages: "The Spanish translation holds up!"</li>
 </ul>
+
+<h3>Themes, and what changed</h3>
+<table>
+  <tr><th style="width:18%">Theme</th><th style="width:9%">Raised by</th><th style="width:38%">Representative feedback</th><th>What changed (live now)</th></tr>
+  <tr><td><b>Real demand from practitioners</b></td><td>A</td><td>"More people should be using Steelman Ballot."</td><td>Evidence for Impact; no change needed</td></tr>
+  <tr><td><b>Make the concept clear from the start</b></td><td>B, C, others</td><td>"The Steelman vs. Strawman comparison could likely be made right when you enter the site." "Steelman" and "strawman" are hard to translate. One tester thought it was a polling site.</td><td>Steelman explainer moved to the home page; English terms kept in Spanish and Chinese; "A guide to read before you vote, not a poll"</td></tr>
+  <tr><td><b>Friction in the flow</b></td><td>B, D</td><td>"Edit" didn't open anything; "null" showed when no races came up; a Connecticut ZIP failed; the WeChat QR code was missing</td><td>Address editable in place with a "✓ Ready" check; plain-English empty results; Connecticut removed; QR fixed and a WeChat share image added</td></tr>
+  <tr><td><b>Turn insight into action</b></td><td>B</td><td>"I don't see anywhere that tells you how to actually vote on the proposal."</td><td>"How to vote on this" at the end of every measure card</td></tr>
+  <tr><td><b>Focus on the core tool</b></td><td>B</td><td>Three About-style pages "take the focus away from the main point of the app, which is the ballot tool."</td><td>Merged into one About page</td></tr>
+  <tr><td><b>Expansion</b></td><td>A</td><td>Show the size of a measure's impact (for example Prop 40); deeper learning questions; major issues beyond ballots</td><td>Deferred to next steps. Partly there: each card's "What would change" and fiscal estimate show the size (Prop 40: "tens of billions of dollars over several years")</td></tr>
+</table>
+<p class="small">What testers liked: <i>"Love calling it Steelman Ballot… Really smart way of thinking about this subject matter!"</i> · <i>"Love that it shows the proposals (I would not have known what was up otherwise)."</i> · <i>"Love the page that shows both sides when you click into each proposal."</i> · Another tester was "pleasantly surprised and even impressed" that a second AI challenges the first.</p>
+
+<h3>Before and after</h3>
+<div class="ba">
+  <figure><img src="img/10_home_before.jpg" alt=""><figcaption><b>Before:</b> the home page went straight from the address box to generic steps; "steelman" was explained on a separate page.</figcaption></figure>
+  <figure><img src="img/10_home_after.jpg" alt=""><figcaption><b>After:</b> the steelman idea sits right under the address box, with a real example.</figcaption></figure>
+  <figure><img src="img/11_qr_before.jpg" alt=""><figcaption><b>Before:</b> the WeChat QR code showed as a broken image.</figcaption></figure>
+  <figure><img src="img/08_wechat_poster.jpg" alt=""><figcaption><b>After:</b> a scannable share image with the measure's title in Chinese.</figcaption></figure>
+</div>
+<p class="small muted"><b>Limits of this evidence:</b> a small sample (four in-depth testers) of people I know, including a family member, and the feedback is qualitative. The randomized study in next step 2 would test the same questions at scale.</p>
 
 <!-- =========================================================== 7 -->
 <h2 id="limits">7. Limits and next steps</h2>
