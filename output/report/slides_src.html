@@ -56,6 +56,38 @@
   .title-slide h1 { color: var(--paper); }
   .title-slide .eyebrow { color: #D9B597; }
   .title-slide p { color: #E5ECE9; }
+  /* why it matters: a three-link chain */
+  .chain { display: flex; align-items: stretch; gap: 22px; margin: 10px 0 24px; }
+  .chain .arrow { align-self: center; }
+  .chain .link { display: flex; flex-direction: column; justify-content: center; }
+  .chain .link { flex: 1; text-align: center; background: var(--card); border: 2px solid var(--verdigris); border-radius: 14px; padding: 30px 20px; }
+  .chain .link.dark { background: var(--verdigris); }
+  .chain .link svg { width: 84px; height: 84px; display: block; margin: 0 auto 14px; }
+  .chain .link b { display: block; font: 600 34px Georgia, serif; color: var(--verdigris); }
+  .chain .link span { display: block; font-size: 22px; color: var(--muted); margin-top: 8px; }
+  .chain .link.dark b { color: var(--paper); } .chain .link.dark span { color: #E5ECE9; }
+  .chain .arrow { font-size: 48px; color: var(--copper); }
+  /* the idea: a 2x2 grid */
+  .grid2 { display: grid; grid-template-columns: 210px 1fr 1fr; grid-template-rows: auto 1fr 1fr; gap: 14px; }
+  .grid2 .colh { font: 600 18px "IBM Plex Sans", system-ui, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--copper-ink); align-self: end; }
+  .grid2 .rowh { font: 600 34px Georgia, serif; align-self: center; }
+  .grid2 .rowh small { display: block; font: 400 17px "IBM Plex Sans", system-ui, sans-serif; color: var(--muted); margin-top: 4px; }
+  .grid2 .straw-h { color: var(--muted); } .grid2 .steel-h { color: var(--verdigris); }
+  .grid2 .cell { background: var(--card); border: 1.5px solid var(--steel); border-radius: 10px; padding: 18px 22px; display: flex; align-items: center; }
+  .grid2 .cell.dark { background: var(--verdigris); border-color: var(--verdigris); }
+  .grid2 .cell p { font-size: 25px; line-height: 1.35; }
+  .grid2 .cell.dark p { color: var(--paper); }
+  /* the future: a road */
+  .future { background: var(--verdigris); }
+  .future h2 { color: var(--paper); } .future .eyebrow { color: #D9B597; } .future .num { color: #CFD8D5; }
+  .road { display: flex; align-items: flex-start; position: relative; margin: 20px 0; }
+  .road::before { content: ""; position: absolute; left: 6%; right: 6%; top: 15px; height: 3px; background: rgba(244,240,231,.4); }
+  .road .stop { flex: 1; text-align: center; position: relative; padding: 0 12px; }
+  .road .dot { display: block; width: 32px; height: 32px; border-radius: 50%; background: var(--paper); margin: 0 auto 18px; border: 4px solid var(--verdigris); box-shadow: 0 0 0 3px rgba(244,240,231,.5); }
+  .road .goal .dot { background: var(--copper); }
+  .road b { display: block; font: 600 32px Georgia, serif; color: var(--paper); }
+  .road .goal b { color: #E8C4A6; }
+  .road span:not(.dot) { display: block; font-size: 22px; color: #E5ECE9; margin-top: 8px; line-height: 1.35; }
   .hint { position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%); color: #cfd8d5; font-size: 13px; opacity: .8; }
   @media print {
     @page { size: 13.333in 7.5in; margin: 0; }
@@ -80,41 +112,62 @@
 
 <!-- 2 -->
 <section class="slide">
-  <p class="eyebrow">The problem</p>
-  <h2>"Where do I even begin?"</h2>
-  <div class="row grow" style="align-items:center">
-    <div class="stat"><b>#1</b><span>reason registered voters skipped the 2022 midterms: too busy</span><small>U.S. Census Bureau</small></div>
-    <div class="stat"><b>2×</b><span>as likely: nonvoters say they lack enough information to decide</span><small>Knight Foundation, 2020</small></div>
-    <div class="stat"><b>2½ h</b><span>to read California's official guide for its 14 measures</span><small>my word count</small></div>
+  <p class="eyebrow">Why it matters</p>
+  <h2>Democracy works best when we decide after a fair hearing</h2>
+  <div class="chain grow">
+    <div class="link"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="8" width="40" height="48" rx="4" fill="none" stroke="#234742" stroke-width="3"/><path d="M20 22h24M20 31h24M20 40h14" stroke="#234742" stroke-width="3" stroke-linecap="round"/></svg><b>Informed voters</b><span>who know what's on their ballot</span></div>
+    <div class="arrow">→</div>
+    <div class="link"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 14h30v20H20l-8 7v-7H8z" fill="none" stroke="#234742" stroke-width="3" stroke-linejoin="round"/><path d="M56 26H34v18h12l7 6v-6h3z" fill="none" stroke="#AD7857" stroke-width="3" stroke-linejoin="round"/></svg><b>Better debate</b><span>each side heard at its best</span></div>
+    <div class="arrow">→</div>
+    <div class="link dark"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 30L32 12l22 18" fill="none" stroke="#F4F0E7" stroke-width="3" stroke-linejoin="round"/><path d="M16 27v25h32V27" fill="none" stroke="#F4F0E7" stroke-width="3"/><rect x="27" y="38" width="10" height="14" fill="none" stroke="#D9B597" stroke-width="3"/></svg><b>Better decisions</b><span>for our communities</span></div>
   </div>
+  <p class="muted" style="font-size:24px;text-align:center">Not rushed, one-sided or uninformed votes deciding real outcomes.</p>
   <span class="num">2</span>
 </section>
 
 <!-- 3 -->
 <section class="slide">
-  <p class="eyebrow">The idea</p>
-  <h2>A steelman, not a strawman</h2>
-  <div class="row grow cards" style="align-items:center">
-    <div class="card"><span class="tag">Strawman · what you often hear</span><p class="straw">"Opponents just don't care about election fraud."</p></div>
-    <div class="card dark"><span class="tag" style="color:#D9B597">Steelman · what the app says</span><p class="steel">"Opponents argue added ID requirements would keep some eligible citizens' mail ballots from counting."</p></div>
+  <p class="eyebrow">The problem</p>
+  <h2>"Where do I even begin?"</h2>
+  <div class="row grow" style="align-items:center">
+    <div class="stat"><b>#1</b><span>reason registered voters skipped the 2022 midterms: too busy</span><small>U.S. Census Bureau</small></div>
+    <div class="stat"><b>2×</b><span>as likely as voters to say "I don't know enough about the candidates and issues to decide"</span><small>Nonvoters, Knight Foundation survey of 12,000, 2020</small></div>
+    <div class="stat"><b>2½ h</b><span>to read California's official guide for its 14 measures</span><small>35,078 words at average reading speed</small></div>
   </div>
-  <p class="muted" style="font-size:24px;margin-top:22px">Each side stated so well its own supporters would sign it. Example: California Prop 39, voter ID.</p>
   <span class="num">3</span>
 </section>
 
 <!-- 4 -->
 <section class="slide">
   <p class="eyebrow">The app</p>
-  <h2 style="margin-bottom:24px">Address in. Every measure, both sides.</h2>
+  <h2 style="margin-bottom:10px">A ballot briefing, on demand</h2>
+  <p style="font-size:26px;margin-bottom:22px">Enter your address. See every measure on your ballot with each side at its best, then make a more informed choice.</p>
   <div class="row grow">
-    <div class="shot"><img src="img/03_summary.jpg" alt=""><span>Your ballot</span></div>
-    <div class="shot"><img src="img/04_card_sides.jpg" alt=""><span>Both sides at their best</span></div>
-    <div class="shot"><img src="img/06_what_changes.jpg" alt=""><span>What would change</span></div>
+    <div class="shot"><img src="img/01_address.jpg" alt=""><span>1 · Enter your address</span></div>
+    <div class="shot"><img src="img/03_summary.jpg" alt=""><span>2 · See your ballot</span></div>
+    <div class="shot"><img src="img/04_card_sides.jpg" alt=""><span>3 · Read both sides</span></div>
   </div>
   <span class="num">4</span>
 </section>
 
 <!-- 5 -->
+<section class="slide">
+  <p class="eyebrow">The idea</p>
+  <h2 style="margin-bottom:12px">Argue the merits: a steelman, not a strawman</h2>
+  <p style="font-size:24px;margin-bottom:20px"><b>The core issue</b> (California Prop 39): should voting require a government ID check?</p>
+  <div class="grid2 grow">
+    <div></div><div class="colh">Opponents</div><div class="colh">Supporters</div>
+    <div class="rowh straw-h">Strawman<small>biased, easy to dismiss</small></div>
+    <div class="cell"><p class="straw">"They just don't care about election fraud."</p></div>
+    <div class="cell"><p class="straw">"They just want to make it harder for certain people to vote."</p></div>
+    <div class="rowh steel-h">Steelman<small>the side's real best case</small></div>
+    <div class="cell dark"><p class="steel">"Added ID rules would keep some eligible citizens' mail ballots from counting."</p></div>
+    <div class="cell dark"><p class="steel">"ID checks would build trust in elections and encourage more people to participate."</p></div>
+  </div>
+  <span class="num">5</span>
+</section>
+
+<!-- 6 -->
 <section class="slide">
   <p class="eyebrow">How it works · what's new</p>
   <h2>One AI writes. A second AI tries to break it.</h2>
@@ -130,10 +183,10 @@
     </div>
     <p class="loop">↺ Below 4 out of 5 for either side? Rewrite, up to 3 times.</p>
   </div>
-  <span class="num">5</span>
+  <span class="num">6</span>
 </section>
 
-<!-- 6 -->
+<!-- 7 -->
 <section class="slide">
   <p class="eyebrow">One real run · California Prop 39</p>
   <h2>The AI Challenger caught a missing argument</h2>
@@ -143,31 +196,24 @@
     <div class="card pass"><div class="score">4/5</div><p>Both sides pass. Published.</p></div>
   </div>
   <p class="muted" style="font-size:24px;margin-top:18px;text-align:center">5 model calls · $0.25 · 96 seconds, then free for every voter</p>
-  <span class="num">6</span>
-</section>
-
-<!-- 7 -->
-<section class="slide">
-  <p class="eyebrow">Tokenomics</p>
-  <h2>Research once. Serve every voter.</h2>
-  <div class="row grow" style="align-items:center">
-    <div class="stat"><b>$0.30</b><span>to research one measure</span></div>
-    <div class="stat"><b>$0</b><span>AI cost when a voter looks up a ballot</span></div>
-    <div class="stat"><b>1,600×</b><span>less AI spend than generating cards per voter (10,000 users)</span></div>
-  </div>
   <span class="num">7</span>
 </section>
 
 <!-- 8 -->
 <section class="slide">
-  <p class="eyebrow">Safety</p>
-  <h2>Trust, privacy and budget, protected</h2>
-  <div class="row grow cards" style="align-items:center">
-    <div class="card"><span class="tag">Attacks</span><p style="font-size:26px">Official sites only. Hidden instructions stripped.</p></div>
-    <div class="card"><span class="tag">Mistakes</span><p style="font-size:26px">Every claim cited and checked. Unfair cards flagged.</p></div>
-    <div class="card"><span class="tag">Spending</span><p style="font-size:26px">Voters can't trigger AI. Hard caps per card.</p></div>
+  <p class="eyebrow">Tokenomics and safety</p>
+  <h2>Cheap to run. Built to be trusted.</h2>
+  <div class="row grow" style="align-items:center;gap:48px">
+    <div style="display:flex;flex-direction:column;gap:26px">
+      <div class="stat"><b style="font-size:72px">$0.30</b><span>to research one measure, once</span></div>
+      <div class="stat"><b style="font-size:72px">$0</b><span>AI cost when a voter looks up a ballot</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div class="card" style="padding:20px 26px"><span class="tag" style="margin-bottom:6px">Attacks</span><p style="font-size:24px">Official sites only; hidden instructions stripped</p></div>
+      <div class="card" style="padding:20px 26px"><span class="tag" style="margin-bottom:6px">Mistakes</span><p style="font-size:24px">Every claim cited and checked; unfair cards flagged</p></div>
+      <div class="card" style="padding:20px 26px"><span class="tag" style="margin-bottom:6px">Spending</span><p style="font-size:24px">Voters can't trigger AI; hard caps per card</p></div>
+    </div>
   </div>
-  <p class="muted" style="font-size:24px;margin-top:18px;text-align:center">10 of 10 safety tests pass · addresses never stored</p>
   <span class="num">8</span>
 </section>
 
@@ -188,15 +234,16 @@
 </section>
 
 <!-- 10 -->
-<section class="slide">
-  <p class="eyebrow">What's next</p>
-  <h2>From 3 states to every ballot</h2>
-  <div class="row grow cards" style="align-items:center">
-    <div class="card"><span class="tag">1 · Coverage</span><p style="font-size:26px">All 50 states, then local measures with election offices</p></div>
-    <div class="card"><span class="tag">2 · Proof</span><p style="font-size:26px">A real-world voter study</p></div>
-    <div class="card"><span class="tag">3 · Year-round</span><p style="font-size:26px">Steelman briefings on issues of the day</p></div>
-  </div>
-  <p style="font:italic 34px Georgia,serif;color:var(--verdigris);text-align:center;margin-top:26px">Think more deeply. Vote more thoughtfully.</p>
+<section class="slide future">
+  <p class="eyebrow">The future</p>
+  <h2>More engaged, better-informed voters</h2>
+  <div class="grow" style="display:flex;flex-direction:column;justify-content:center"><div class="road">
+    <div class="stop"><span class="dot"></span><b>Today</b><span>3 states, every measure, both sides</span></div>
+    <div class="stop"><span class="dot"></span><b>Next</b><span>All 50 states, then local measures with election offices</span></div>
+    <div class="stop"><span class="dot"></span><b>Year-round</b><span>Steelman briefings on the issues of the day</span></div>
+    <div class="stop goal"><span class="dot"></span><b>The goal</b><span>Voters who hear every side at its best, and a healthier democracy</span></div>
+  </div></div>
+  <p style="font:italic 36px Georgia,serif;color:var(--paper);text-align:center">Think more deeply. Vote more thoughtfully.</p>
   <span class="num">10</span>
 </section>
 
