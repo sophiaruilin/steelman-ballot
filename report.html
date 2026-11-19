@@ -59,6 +59,7 @@
   .key-wo { background: #C9CFCB; } .key-wi { background: var(--verdigris); }
   .quote-box { background: var(--verdigris); color: var(--paper); border-radius: 6px; padding: 16px 20px; margin: 12px 0; break-inside: avoid; }
   .quote-box p { font: italic 1.08rem/1.5 "EB Garamond", Georgia, serif; margin: 6px 0; color: var(--paper); }
+  .quote-box .qh { font: 600 1.15rem "EB Garamond", Georgia, serif; font-style: normal; color: #F4F0E7; margin: 0 0 8px; padding-bottom: 6px; border-bottom: 1px solid rgba(244,240,231,.3); }
   .quote-box .who { font: 600 .8rem "IBM Plex Sans", system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: #D9B597; font-style: normal; }
   .quote-box .small { color: #E5ECE9; font-family: "IBM Plex Sans", system-ui, sans-serif; }
   .toc { columns: 2; font-size: .92rem; margin: 6px 0 0; padding-left: 1.2em; }
@@ -341,23 +342,23 @@ error_message_never_contains_key .............. PASSED
 </div>
 
 <h3>Real users</h3>
-<p>Testers used the live site on their own phones (iPhone) and laptops (Windows 11), with their own addresses and ZIP codes. They included a Connecticut professional who works in local politics, a civically engaged New York City professional from a political family, a native Spanish speaker and a native Mandarin speaker, among others. This was informal feedback rather than the timed study (that's next step 2), but every piece of it changed the product.</p>
+<p>Testers used the live site on their own phones (iPhone) and laptops (Windows 11), with their own addresses and ZIP codes. They included a Connecticut professional who works in local politics, a civically engaged professional who lives in Connecticut and works in New York City, a native Spanish speaker and a native Mandarin speaker, among others. This was informal feedback rather than the timed study (that's next step 2), but every piece of it changed the product.</p>
 
 <div class="quote-box">
-  <p>"We struggle with civic engagement at all levels of government, especially local government. Democratizing access to information that's unbiased, and letting voters understand their issues and meet them where they are, is something we really need. Steelman Ballot does just that. More people should be using Steelman Ballot."</p>
+  <p class="qh">In their words: an endorsement from the field</p>
+  <p>"We struggle with civic engagement at all levels of government, especially local government. Democratizing access to information that's unbiased, and letting voters understand their issues and meet them where they are, is something we really need. Steelman Ballot does just that. More people should be using Steelman Ballot. … I wish I had this for the recent election."</p>
   <p class="who">Tester who works in local politics, Connecticut</p>
-  <p>"I wish I had this for the recent election."</p>
   <p class="small" style="font-style:normal;margin-top:8px">He described writing a voter guide himself because local good-government groups, seen as having a stake in the outcome, held back, and no one else had the resources to explain the issues. In his view, cities and towns across the country want to educate residents but lack the technical capacity, and would gladly point people to a transparent, cited tool like this one: "I genuinely think there is a demand for that."</p>
 </div>
 
 <h3>What testers said, and what we changed</h3>
 <table>
   <tr><th style="width:52%">Feedback</th><th>What changed (live now)</th></tr>
-  <tr><td>"The Steelman vs. Strawman comparison could likely be made right when you enter the site… to introduce the app." <span class="muted">(NYC professional)</span></td><td>The steelman idea moved to the home page, right under the address box</td></tr>
-  <tr><td>"The Steelman page, How it Works, and Our Philosophy could all just be an About Us page… right now it takes the focus away from the main point of the app, which is the ballot tool." <span class="muted">(NYC professional)</span></td><td>Three pages merged into one About page; the menu is now My ballot · How it works · About</td></tr>
-  <tr><td>"I don't see anywhere that tells you how to actually vote on the proposal." <span class="muted">(NYC professional)</span></td><td>A "How to vote on this" note at the end of every measure card</td></tr>
-  <tr><td>"I tried my zipcode in CT and it didn't work." <span class="muted">(NYC professional)</span></td><td>Connecticut removed until its town questions can be covered</td></tr>
-  <tr><td>No races came up "and so it says 'null'." <span class="muted">(NYC professional)</span></td><td>Plain-English messages for empty results</td></tr>
+  <tr><td>"The Steelman vs. Strawman comparison could likely be made right when you enter the site… to introduce the app." <span class="muted">(Connecticut resident who works in NYC)</span></td><td>The steelman idea moved to the home page, right under the address box</td></tr>
+  <tr><td>"The Steelman page, How it Works, and Our Philosophy could all just be an About Us page… right now it takes the focus away from the main point of the app, which is the ballot tool." <span class="muted">(Connecticut resident who works in NYC)</span></td><td>Three pages merged into one About page; the menu is now My ballot · How it works · About</td></tr>
+  <tr><td>"I don't see anywhere that tells you how to actually vote on the proposal." <span class="muted">(Connecticut resident who works in NYC)</span></td><td>A "How to vote on this" note at the end of every measure card</td></tr>
+  <tr><td>"I tried my zipcode in CT and it didn't work." <span class="muted">(Connecticut resident who works in NYC)</span></td><td>Connecticut removed until its town questions can be covered</td></tr>
+  <tr><td>No races came up "and so it says 'null'." <span class="muted">(Connecticut resident who works in NYC)</span></td><td>Plain-English messages for empty results</td></tr>
   <tr><td>"When clicking the 'Not right?' or 'Edit', it did not pop up a box… to modify or edit the address." <span class="muted">(Mandarin speaker)</span></td><td>An address box opens right there, with the same "✓ Ready" check as the main box</td></tr>
   <tr><td>Under the WeChat button, "it may either need a QR code to allow users to scan or a link." <span class="muted">(Mandarin speaker)</span></td><td>Fixed a broken QR image; added a shareable WeChat image with the measure's title and a scannable code</td></tr>
   <tr><td>"The Spanish translation holds up! The only thing that is tricky to translate is 'Steelman' and 'Strawman'." <span class="muted">(Spanish speaker)</span></td><td>Spanish and Chinese keep the English words <i>steelman</i> and <i>strawman</i>, with the definition translated</td></tr>
