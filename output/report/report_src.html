@@ -92,14 +92,14 @@
     <dt>Author</dt><dd>Sophia Lin</dd>
     <dt>Live app</dt><dd><a href="https://steelman-ballot.onrender.com">steelman-ballot.onrender.com</a></dd>
     <dt>GitHub</dt><dd><a href="https://github.com/sophiaruilin/steelman-ballot">github.com/sophiaruilin/steelman-ballot</a></dd>
-    <dt>In one line</dt><dd>A ballot briefing on demand. Enter your address, and in about a minute see every measure on your ballot with each side's <b>steelman argument</b>: its strongest, most honest case.</dd>
+    <dt>In one line</dt><dd>A ballot briefing, on demand: see every measure on your ballot with each side's <b>steelman</b> (its strongest case).</dd>
   </dl>
 </div>
 
 <ol class="toc">
   <li><a href="#motivation">Motivation</a></li>
   <li><a href="#new">What is new here</a></li>
-  <li><a href="#agents">The agents</a></li>
+  <li><a href="#agents">The AI agents</a></li>
   <li><a href="#tokenomics">Tokenomics</a></li>
   <li><a href="#safety">Safety</a></li>
   <li><a href="#impact">Impact</a></li>
@@ -109,7 +109,7 @@
 <!-- =========================================================== 1 -->
 <h2 id="motivation">1. Motivation</h2>
 <p><b>The problem, from a voter's seat.</b> Most of what I learn about ballot issues comes from the news, TV, social media, friends and group chats, plus the official guide mailed to my home. Much of it leans one way: the outlets and people I follow have their own views, and much of the rest is paid endorsements and ads. Few sources give an honest, complete view of each side on the merits. And ballot issues rarely come up in my day-to-day life. So when it's time to vote, I often don't know most of the topics on the ballot, haven't formed a view, and feel short on time. I suspect I'm typical.</p>
-<p><b>What it costs today.</b> The authoritative source, the official guide, is long. We counted the words in the official summaries, analyses and arguments behind each ballot we cover. At an average adult reading pace, that's <b>2 hours 27 minutes</b> for California's 14 propositions, <b>51 minutes</b> for Massachusetts's 9 questions and <b>46 minutes</b> for New York City's 5 proposals (section 6). The arguments in those guides are written by each campaign to persuade, and often attack the other side's motives. So voters skip measures, follow an endorsement, or vote on a headline.</p>
+<p><b>What it costs today.</b> The authoritative source, the official guide, is long. We counted the words in the official summaries, analyses and arguments behind each ballot we cover. At an average adult reading pace, that's <b>2 hours 27 minutes</b> for California's 14 propositions, <b>51 minutes</b> for Massachusetts's 9 questions and <b>46 minutes</b> for New York's 5 (New York City's charter proposals; the state had no statewide proposals in 2026) (section 6). The arguments in those guides are written by each campaign to persuade, and often attack the other side's motives. So voters skip measures, follow an endorsement, or vote on a headline.</p>
 <p><b>Who should care.</b> Anyone who wants democracy to work well. Democracy works best when people make informed choices after a fair hearing of each side, not when real outcomes in our communities are decided by rushed, one-sided or uninformed votes. Good discussion helps us learn, find common ground where it exists, and reach better decisions together. That matters to voters first, and also to election officials, civic groups, educators and community leaders. Today much political discussion runs on party identity and the other side's weakest arguments, rather than an open-minded hearing of every side.</p>
 
 <div class="pair"><div>
@@ -135,13 +135,13 @@
 <p><b>What Steelman Ballot is.</b> A ballot briefing on demand, at the moment you need it.</p>
 <p><b>What it does that the others don't:</b></p>
 <ol>
-  <li><b>The steelman test, which the app is named after.</b> Each side is argued so well that its own supporters would sign off on it as their best case. One AI writes the card; a second AI plays a committed supporter of each side and scores it 1 to 5 ("Would I sign this as our best case?"). Both sides must score 4 or 5, and a <i>swap test</i> checks that neither side reads warmer or more certain. Cards that fail are rewritten, or carry a visible "steelman unverified" badge. Every measure card in our current coverage passed (all 28, across California, Massachusetts and New York City).</li>
+  <li><b>The steelman test, which the app is named after.</b> Each side is argued so well that its own supporters would sign off on it as their best case. One AI writes the card; a second AI plays a committed supporter of each side and scores it 1 to 5 ("Would I sign this as our best case?"). Both sides must score 4 or 5, and a <i>swap test</i> checks that neither side reads warmer or more certain. Cards that fail are rewritten, or carry a visible "steelman unverified" badge. Every measure card in our current coverage passed (all 28, across California, Massachusetts and New York).</li>
   <li><b>Fair by construction.</b> Arguments stay <i>on the merits</i> (what a change would do, never the other side's motives, donors or party); facts are kept apart from arguments (each claim labeled Fact, Estimate or Perspective and linked to its source); and both sides get the same structure, space and tone, with No always on the left and Yes on the right.</li>
 </ol>
 <p class="muted small">Everything else (three languages, mobile-first design, WhatsApp and WeChat sharing, privacy) supports these two ideas. Other tools have similar features; they're not the point of this app.</p>
 
 <!-- =========================================================== 3 -->
-<h2 id="agents">3. The agents</h2>
+<h2 id="agents">3. The AI agents</h2>
 <table>
   <tr><th>Agent</th><th>Job</th><th>Tools</th><th>Model</th></tr>
   <tr><td><b>Ballot Mapper</b> (code, no AI)</td><td>Turns an address or ZIP into districts and the list of measures; keeps one finished card per measure in a shared cache</td><td>U.S. Census geocoder; official-guide parsers for California (web pages), Massachusetts (official PDF, by page) and NYC Votes</td><td>None</td></tr>
@@ -172,8 +172,8 @@
   <text class="lane" x="14" y="22">WHAT THE VOTER SEES (WEBSITE)</text>
   <rect class="b" x="10" y="36" width="148" height="96" rx="6"/><text class="t" x="22" y="58">1 · Address or ZIP</text><text class="s" x="22" y="78">"✓ Ready" check</text><text class="s" x="22" y="95">used once, never</text><text class="s" x="22" y="111">stored</text>
   <rect class="b" x="172" y="36" width="148" height="96" rx="6"/><text class="t" x="184" y="58">2 · Progress</text><text class="s" x="184" y="78">districts found,</text><text class="s" x="184" y="95">official guide read,</text><text class="s" x="184" y="111">cards matched</text>
-  <rect class="d" x="334" y="36" width="148" height="96" rx="6"/><text class="tw" x="346" y="58">3 · Your ballot</text><text class="sw" x="346" y="78">in 60 seconds:</text><text class="sw" x="346" y="95">matched address,</text><text class="sw" x="346" y="111">measures, races</text>
-  <rect class="d" x="496" y="36" width="160" height="96" rx="6"/><text class="tw" x="508" y="58">4 · Measure card</text><text class="sw" x="508" y="78">both sides' steelman,</text><text class="sw" x="508" y="95">crux, evidence,</text><text class="sw" x="508" y="111">what would change</text>
+  <rect class="d" x="334" y="36" width="148" height="96" rx="6"/><text class="tw" x="346" y="58">3 · Your ballot</text><text class="sw" x="346" y="78">overview: every</text><text class="sw" x="346" y="95">measure on your</text><text class="sw" x="346" y="111">ballot, at a glance</text>
+  <rect class="d" x="496" y="36" width="160" height="96" rx="6"/><text class="tw" x="508" y="58">4 · Measure card</text><text class="sw" x="508" y="78">tap a measure for detail:</text><text class="sw" x="508" y="95">both sides' steelman,</text><text class="sw" x="508" y="111">evidence, what changes</text>
   <rect class="b" x="670" y="36" width="140" height="96" rx="6" style="stroke-dasharray:5 4;opacity:.85"/><text class="t" x="682" y="58">5 · Next steps</text><text class="cs" x="682" y="74">(optional)</text><text class="s" x="682" y="93">how to vote on it,</text><text class="s" x="682" y="110">share both sides</text>
   <path class="l" d="M158 84 H168" marker-end="url(#ar)"/><path class="l" d="M320 84 H330" marker-end="url(#ar)"/><path class="l" d="M482 84 H492" marker-end="url(#ar)"/><path class="c" d="M656 84 H666" marker-end="url(#arc)"/>
   <text class="cs" x="808" y="22" text-anchor="end">dark boxes = the main output: your ballot and its measure cards</text>
@@ -298,26 +298,30 @@ error_message_never_contains_key .............. PASSED
 
 <!-- =========================================================== 6 -->
 <h2 id="impact">6. Impact</h2>
+<h3>Clarity: a place to start</h3>
+<p>For me, the hardest part of getting informed was not reading time. It was <b>"Where do I even begin?"</b> With a dozen measures, scattered news coverage, ads and group-chat opinions, just starting the search was the roadblock, so the realistic alternative to this app isn't reading the official guide cover to cover. It's piecing things together from sources that each tell one side, or not doing it at all. Steelman Ballot removes that first step: one address gives one organized place that lists every measure on <i>your</i> ballot, with each side argued at its best, the facts kept apart from the arguments, and a clear note on what a yes or a no would change. That turns "I haven't looked into it" into an informed choice, made with the other side's best case in view. This is the value our user testing measures directly (comprehension, confidence and perceived fairness, below).</p>
+
 <h3>Time: without the app vs. with it</h3>
+<p class="small">A conservative comparison: it assumes a voter goes straight to the official guide, the best single source, and reads it.</p>
 <table>
   <tr><th>Ballot (Nov 3, 2026)</th><th class="n">Measures</th><th class="n">Without the app<br><span class="muted" style="font-weight:400">official guide text*</span></th><th class="n">With Steelman Ballot<br><span class="muted" style="font-weight:400">full briefings</span></th><th class="n">Time saved</th><th class="n">% saved</th></tr>
   <tr><td>California</td><td class="n">14</td><td class="n">2 h 27 min</td><td class="n">56 min</td><td class="n">1 h 31 min</td><td class="n"><b>62%</b></td></tr>
   <tr><td>Massachusetts</td><td class="n">9</td><td class="n">51 min</td><td class="n">35 min</td><td class="n">16 min</td><td class="n"><b>31%</b></td></tr>
-  <tr><td>New York City</td><td class="n">5</td><td class="n">46 min</td><td class="n">18 min</td><td class="n">28 min</td><td class="n"><b>61%</b></td></tr>
+  <tr><td>New York (NYC)</td><td class="n">5</td><td class="n">46 min</td><td class="n">18 min</td><td class="n">28 min</td><td class="n"><b>61%</b></td></tr>
   <tr><td><b>Average per ballot</b></td><td class="n">9</td><td class="n"><b>1 h 21 min</b></td><td class="n"><b>36 min</b></td><td class="n"><b>45 min</b></td><td class="n"><b>55%</b></td></tr>
 </table>
 <div class="bars" aria-label="Reading time without and with the app">
   <div class="bar-row"><span class="bl">California<br><b class="pct">62% saved</b></span><span class="track"><span class="line"><i class="wo" style="width:70.0%"></i><em>2 h 27 min without</em></span><span class="line"><i class="wi" style="width:26.7%"></i><em>56 min with the app</em></span></span></div>
   <div class="bar-row"><span class="bl">Massachusetts<br><b class="pct">31% saved</b></span><span class="track"><span class="line"><i class="wo" style="width:24.3%"></i><em>51 min without</em></span><span class="line"><i class="wi" style="width:16.7%"></i><em>35 min with the app</em></span></span></div>
-  <div class="bar-row"><span class="bl">New York City<br><b class="pct">61% saved</b></span><span class="track"><span class="line"><i class="wo" style="width:21.9%"></i><em>46 min without</em></span><span class="line"><i class="wi" style="width:8.6%"></i><em>18 min with the app</em></span></span></div>
+  <div class="bar-row"><span class="bl">New York (NYC)<br><b class="pct">61% saved</b></span><span class="track"><span class="line"><i class="wo" style="width:21.9%"></i><em>46 min without</em></span><span class="line"><i class="wi" style="width:8.6%"></i><em>18 min with the app</em></span></span></div>
   <div class="bar-row"><span class="bl">Average<br><b class="pct">55% saved</b></span><span class="track"><span class="line"><i class="wo" style="width:38.6%"></i><em>1 h 21 min without</em></span><span class="line"><i class="wi" style="width:17.1%"></i><em>36 min with the app</em></span></span></div>
   <p class="small muted" style="margin:4px 0 0"><span class="key-wo"></span> without the app (official guide text) &nbsp; <span class="key-wi"></span> with Steelman Ballot (full briefings)</p>
 </div>
-<p class="small muted">*Words in the official pages each briefing is built from (summaries, nonpartisan analysis, and arguments and rebuttals, not the full legal text), counted by the app's own page reader, at 238 words per minute, the average adult silent reading speed (Brysbaert, 2019). California: 35,078 words; Massachusetts: 12,255; NYC: 11,042. Savings are largest where the official guide is longest. A voter who only wants each measure's top layer (both sides, the crux, the key evidence) needs about a minute per measure.</p>
-<p><b>Fairness:</b> every measure card in our coverage passed the steelman test: 14 of 14 in California, 9 of 9 in Massachusetts, 5 of 5 in NYC.</p>
+<p class="small muted">*Words in the official pages each briefing is built from (summaries, nonpartisan analysis, and arguments and rebuttals, not the full legal text), counted by the app's own page reader, at 238 words per minute, the average adult silent reading speed (Brysbaert, 2019). California: 35,078 words; Massachusetts: 12,255; New York: 11,042. Savings are largest where the official guide is longest. A voter who only wants each measure's top layer (both sides, the crux, the key evidence) needs about a minute per measure.</p>
+<p><b>Fairness:</b> every measure card in our coverage passed the steelman test: 14 of 14 in California, 9 of 9 in Massachusetts, 5 of 5 in New York.</p>
 
 <h3>Accuracy: California, where an independent answer key exists</h3>
-<p>California's guide includes a nonpartisan Legislative Analyst's analysis, an independent answer key that Massachusetts and NYC don't publish in the same form. A separate, testing-only AI Grader scored 6 California cards (Props 1, 3, 5, 39, 41, 45) against it, grading each twice and averaging:</p>
+<p>California's guide includes a nonpartisan Legislative Analyst's analysis, an independent answer key that Massachusetts and New York don't publish in the same form. A separate, testing-only AI Grader scored 6 California cards (Props 1, 3, 5, 39, 41, 45) against it, grading each twice and averaging:</p>
 <ul>
   <li><b>100%</b> of claims supported by the official guide, <b>0</b> contradicted.</li>
   <li><b>18 of 18</b> descriptions of what a yes vote, a no vote and the cost would mean were correct.</li>
@@ -350,20 +354,17 @@ error_message_never_contains_key .............. PASSED
 <!-- =========================================================== 7 -->
 <h2 id="limits">7. Limits and next steps</h2>
 <h3>What doesn't work yet</h3>
-<ul>
-  <li><b>Coverage, the biggest limit.</b> Three places: California and Massachusetts statewide measures and New York City's proposals. Other states show districts and races only; local measures aren't covered; candidate races are thin (California statewide only). It's also a look-back demo of the November 3, 2026 ballot.</li>
-  <li><b>Timeliness.</b> A ballot guide is most useful in the few weeks before an election, then forgotten. To be there when it's needed, it should reach voters through places they already trust at election time: shared cards in group chats; libraries, campuses, civic groups and newsrooms linking or embedding it; and an optional "add Election Day to my calendar" reminder that needs no account.</li>
-  <li><b>Other languages and cultures.</b> Spanish and Chinese cover what a voter sees first; the detailed evidence stays in the official English. WeChat sharing works by QR image and link; opening the app inside WeChat or as a Mini Program would need a registered WeChat developer account, and WeChat may warn about the free hosting address.</li>
-  <li><b>AI limits.</b> AI can still make mistakes: every claim links to its source and every card has a "Report an issue" link, but an error could slip through. The accuracy test is small (6 cards), California-only, and graded by an AI from the same model family as the AI Writer. The AI Challenger is also an OpenAI model, so it's not fully independent.</li>
-</ul>
+<ol>
+  <li><b>Coverage, the biggest limit.</b> Three states: California and Massachusetts statewide measures, and New York (no statewide proposals in 2026; New York City's 5 charter proposals). Elsewhere it shows districts and races only. Local measures aren't covered, candidate races are thin (California statewide only), Spanish and Chinese cover what a voter sees first (the evidence stays in the official English), and this is a look-back demo of the November 3, 2026 ballot.</li>
+  <li><b>AI can still make mistakes.</b> Every claim links to its source and every card has a "Report an issue" link, but an error could slip through. The accuracy test is small (6 cards), California-only, and graded by an AI from the same model family as the AI Writer; the AI Challenger is also an OpenAI model, so it isn't fully independent.</li>
+  <li><b>Timeliness.</b> A ballot guide is most useful in the weeks before an election, then forgotten. It needs to reach voters where they already are at election time (shared cards in group chats; libraries, campuses, civic groups and newsrooms linking to it) and to offer a reason to come back between elections (next steps, item 3).</li>
+</ol>
 
 <h3>With another month</h3>
 <ol>
-  <li><b>All 50 states' statewide measures</b> (about $45 per full research run), then <b>local measures</b>. Many county sites ask automated readers not to visit, and the app respects that. The way around it is to ask, not to scrape: data partnerships with election offices (many already publish sample ballots as files), a licensed civic data provider, and sample-ballot PDFs volunteered by voters.</li>
-  <li><b>A real-world user study.</b> Randomly split voters: one group prepares the way they normally would (news, friends, social media), the other uses the app. Compare comprehension, time, confidence and perceived fairness, plus a "steelman test for voters": can each person state the <i>other</i> side's best argument? Ask how they'd vote before and after, measuring movement in either direction rather than aiming for an outcome. Use past ballots so the study can't sway a live election.</li>
-  <li><b>More languages, chosen the way election offices choose:</b> the languages counties must already provide under Section 203 of the Voting Rights Act (for example Vietnamese, Korean and Tagalog in parts of California), with full translation of the evidence.</li>
-  <li><b>Issues of the day, between elections</b> (a tester's suggestion). An evergreen resource for staying informed on all sides of major issues year-round, not only before a vote. Steelman briefings on the big recurring questions (for example housing, taxes, public safety, immigration), each tied to a specific pending decision such as a bill or a likely future measure, so every briefing stays concrete and useful. It would use the same AI Writer and AI Challenger, with sources from nonpartisan analysts (for example the Congressional Budget Office or a state's legislative analyst).</li>
-  <li><b>Stronger and more independent models:</b> high reasoning effort only for cards that fail the first challenge, and an AI Challenger from a different company. Plus a human review panel from both sides that signs off on a random sample of cards each week.</li>
+  <li><b>More coverage.</b> All 50 states' statewide measures (about $45 per full research run), then local measures. Many county sites ask automated readers not to visit, and the app respects that, so the way in is partnership, not scraping: data from election offices (many already publish sample ballots as files), a licensed civic data provider, and sample-ballot PDFs volunteered by voters. Add languages the way election offices choose them, under Section 203 of the Voting Rights Act (for example Vietnamese, Korean and Tagalog in parts of California).</li>
+  <li><b>A real-world user study.</b> Randomly split voters: one group prepares as they normally would (news, friends, social media), the other uses the app. Compare comprehension, time, confidence and perceived fairness, plus a "steelman test for voters": can each person state the <i>other</i> side's best argument? Ask how they'd vote before and after, measuring movement in either direction rather than aiming for an outcome. Use past ballots so the study can't sway a live election.</li>
+  <li><b>Issues of the day, between elections</b> (a tester's suggestion). An evergreen resource for staying informed on all sides of major issues year-round, not only before a vote. Steelman briefings on big recurring questions (for example housing, taxes, public safety, immigration), each tied to a specific pending decision such as a bill or a likely future measure, using the same AI Writer and AI Challenger and nonpartisan sources such as the Congressional Budget Office or a state's legislative analyst.</li>
 </ol>
 
 <p class="muted small" style="margin-top:28px">Sources: official voter guides of the California Secretary of State (with the Legislative Analyst's analysis), the Massachusetts Secretary of the Commonwealth (<i>Information for Voters</i>) and NYC Votes; U.S. Census Bureau geocoder. Reading speed: Brysbaert, M. (2019), "How many words do we read per minute? A review and meta-analysis of reading rate," <i>Journal of Memory and Language</i> 109. Ideological Turing Test: Bryan Caplan; steelmanning and charity: Anatol Rapoport's rules, popularized by Daniel Dennett. Model prices: published OpenAI API rates listed by price trackers, November 2026. All other numbers come from this project's own runs (<code>output/eval/summary.md</code>, <code>output/eval/tokenomics.json</code>) and can be reproduced with the commands in the README.</p>
