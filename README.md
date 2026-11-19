@@ -4,26 +4,28 @@
 
 **Live app:** https://steelman-ballot.onrender.com (free hosting: the first visit after a quiet spell can take ~30-60 seconds to wake up)
 
-Enter any U.S. address and get a plain-language, nonpartisan briefing on everything on your ballot. For each measure: **what would change** (today vs. if it passes), and each side's strongest case **on the merits**, with one headline per side and more reasons a tap away. For each candidate: what they **say**, what they've **done**, and who **funds** them. Every claim links to its source, and the app never tells you how to vote.
+Enter an address or ZIP code and get a plain-language, nonpartisan briefing on what's on your ballot. For each measure: each side's **steelman** (its strongest case, **on the merits**, side by side), where they really disagree, what the evidence says, **what would change** (today vs. if it passes), and how voting on it works. For California's statewide races: what each office does, each candidate's official statement, and links to official campaign-finance records. Every claim links to its source, and the app never tells you how to vote. In English, Spanish and Chinese.
 
-**Coverage (Nov 3, 2026):** California (14 statewide propositions + statewide offices), Massachusetts (9 statewide ballot questions), New York (New York City's 5 charter proposals; no statewide proposals in 2026). Any U.S. address shows its districts and races.
+**Coverage (Nov 3, 2026 look-back demo):** California (14 statewide propositions + 8 statewide offices), Massachusetts (9 statewide ballot questions), New York (New York City's 5 charter proposals; no statewide proposals in 2026). Any other U.S. street address shows its districts and races.
 
 *Think more deeply. Vote more thoughtfully.* The strongest argument isn't always your own.
 
 ## How it works
-A team of AI agents researches each ballot from public sources. One research run per jurisdiction per day is shared by every voter there.
+A team of AI agents researches each ballot from official sources. Each card is researched once and shared by every voter it applies to (cached per contest, refreshed as an election nears).
 
 ```
-Address ─► [Ballot Mapper] ─► races and measures
-                 │
-       ┌─────────┴──────────┐
-       ▼                    ▼
-[Measure Analyst]×N   [Candidate Profiler]×N
-       └─────────┬──────────┘
-                 ▼
-     [Fact-Check & Neutrality Critic] ──(fails)──► rewrite
-                 ▼ (passes)
-         [Dashboard Writer] ─► [Translator] ─► EN · ES · 中文 · VI
+Address or ZIP ─► [Ballot Mapper] ─► districts, races and measures (official voter guides)
+                        │
+          ┌─────────────┴───────────────┐
+          ▼                             ▼
+ [Measure Analyst] (AI writer)   [Candidate Profiler] (CA statewide races)
+          │  draft card
+          ▼
+ [Critic] (AI challenger, a different model): "Would this side sign it?" 1-5,
+          swap test, source check ──(fails)──► specific fixes ─► rewrite (up to 3)
+          │ (passes: "steelman verified")
+          ▼
+ [Translator] ─► EN · Español · 中文 (numbers checked unchanged)
 ```
 
 **Sources:** official voter guides (California Secretary of State and Legislative Analyst; Massachusetts *Information for Voters*, read from the official PDF; NYC Votes) · U.S. Census Geocoder and ACS · OpenFEC · Congress.gov · Open States. The official ballot always wins when sources disagree.
@@ -43,7 +45,8 @@ copy .env.example .env            # macOS/Linux: cp .env.example .env
 
 | Key | Used for | Cost |
 |---|---|---|
-| `PORTKEY_API_KEY` | AI model (gpt-6-astra) | Class key |
+| `OPENAI_API_KEY` | AI models (gpt-6-astra writer, gpt-6-luna challenger and translator); used first if set | Pay as you go |
+| `PORTKEY_API_KEY` | Same models through the class gateway (used if no OpenAI key) | Class key |
 | `DATA_GOV_API_KEY` | OpenFEC + Congress.gov | Free |
 | `OPENSTATES_API_KEY` | State legislators and votes | Free |
 | `CENSUS_API_KEY` | ACS local demographics | Free |
@@ -94,7 +97,7 @@ steelman-ballot/
 │   ├── models.py          card formats (MeasureCard, Steelman, Claim)
 │   ├── agents/            ballot_mapper, measure_analyst, candidate_profiler, critic,
 │   │                      common (safe fetch tool, citation + quote checks)
-│   ├── pipeline.py        Analyst -> Critic -> rewrite loop (max 2); per-contest cache
+│   ├── pipeline.py        Analyst -> Critic -> rewrite loop (max 3); per-contest cache
 │   ├── eval/              CA look-back grader + summary (output/eval/summary.md)
 │   ├── share.py           WhatsApp / WeChat / share-sheet text (always both sides)
 │   ├── sources/           one adapter per data source: geocoder, fec (Funded by),
@@ -114,7 +117,7 @@ steelman-ballot/
 - **On the merits.** Cards argue about what the change would do, never about the other side's motives, funders or party labels.
 - **Facts are separate from arguments.** "What the evidence says" is kept apart from the steelmen, so there's no false balance.
 - **Official sources win** on voting instructions, dates and ballot contents.
-- **No persuasion.** Your priorities change the order of the cards, never their content.
+- **No persuasion.** No vote recommendations, no polls, no predictions.
 - **Addresses are not stored**, only the district key.
 
 ## License
