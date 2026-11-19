@@ -72,7 +72,7 @@
   <p class="eyebrow">Final project · MGT 409 · Yale SOM · Sophia Lin</p>
   <h1>Steelman Ballot</h1>
   <p style="font-size:38px;margin-top:14px;font-family:Georgia,serif;font-style:italic">Know your ballot in minutes, and hear each side at its best, not its worst.</p>
-  <p style="font-size:24px;margin-top:26px">Type your address and see every measure on your ballot with each side's <b>steelman argument</b>, its strongest, most honest case, checked by a second AI. Never a recommendation.<br>English · Español · 中文</p>
+  <p style="font-size:26px;margin-top:26px">A ballot briefing on demand. Enter your address, and in about a minute see every measure on your ballot with each side's <b>steelman argument</b>: its strongest, most honest case.<br><span style="font-size:22px">English · Español · 中文</span></p>
   <p style="font-size:20px;margin-top:34px">steelman-ballot.onrender.com &nbsp;·&nbsp; github.com/sophiaruilin/steelman-ballot</p>
   <span class="num">1</span>
 </section>
@@ -86,8 +86,8 @@
       <ul>
         <li>Ballot info comes from news, social media, friends, group chats and ads, often leaning one way or paid for</li>
         <li>Ballot issues rarely come up day to day, so at voting time many measures are unfamiliar</li>
-        <li>The official guides behind our 28 measures: <b>58,375 words, about 4 hours</b> (California alone: 2½ hours)</li>
-        <li>Healthy debate needs each side to hear the other <b>at its best</b>, not its weakest</li>
+        <li>Reading the official guide: <b>2 h 27 min</b> in California, <b>51 min</b> in Massachusetts, <b>46 min</b> in New York City</li>
+        <li>Democracy works best when we decide after a fair hearing of each side <b>at its best</b>, not its weakest</li>
       </ul>
       <p class="quote" style="margin-top:22px">"The strongest argument isn't always your own."</p>
     </div>
@@ -144,10 +144,10 @@
     <text class="lane" x="12" y="18">WHAT THE VOTER SEES</text>
     <rect class="b" x="10" y="28" width="148" height="64" rx="6"/><text class="t" x="20" y="48">Address or ZIP</text><text class="s" x="20" y="66">"✓ Ready" · never stored</text>
     <rect class="b" x="172" y="28" width="148" height="64" rx="6"/><text class="t" x="182" y="48">Progress</text><text class="s" x="182" y="66">districts · guide · cards</text>
-    <rect class="b" x="334" y="28" width="148" height="64" rx="6"/><text class="t" x="344" y="48">Your ballot</text><text class="s" x="344" y="66">in 60 seconds</text>
+    <rect class="d" x="334" y="28" width="148" height="64" rx="6"/><text class="tw" x="344" y="48">Your ballot</text><text class="sw" x="344" y="66">in 60 seconds</text>
     <rect class="d" x="496" y="28" width="160" height="64" rx="6"/><text class="tw" x="506" y="48">Measure card</text><text class="sw" x="506" y="66">both sides' steelman</text><text class="sw" x="506" y="82">crux · evidence · changes</text>
-    <rect class="b" x="670" y="28" width="140" height="64" rx="6"/><text class="t" x="680" y="48">Next steps</text><text class="s" x="680" y="66">how to vote · share</text>
-    <path class="l" d="M158 60 H168" marker-end="url(#ar)"/><path class="l" d="M320 60 H330" marker-end="url(#ar)"/><path class="l" d="M482 60 H492" marker-end="url(#ar)"/><path class="l" d="M656 60 H666" marker-end="url(#ar)"/>
+    <rect class="b" x="670" y="28" width="140" height="64" rx="6" style="stroke-dasharray:5 4"/><text class="t" x="680" y="48">Next steps</text><text class="cs" x="680" y="64">(optional)</text><text class="s" x="680" y="80">how to vote · share</text>
+    <path class="l" d="M158 60 H168" marker-end="url(#ar)"/><path class="l" d="M320 60 H330" marker-end="url(#ar)"/><path class="l" d="M482 60 H492" marker-end="url(#ar)"/><path class="c" d="M656 60 H666" marker-end="url(#arc)"/>
     <rect x="0" y="118" width="820" height="182" rx="8" fill="#FBF9F4" stroke="#A9B0AB"/>
     <text class="lane" x="12" y="136">BEHIND THE SCENES</text><text class="lane" x="808" y="136" text-anchor="end">ONCE PER MEASURE, NOT PER VOTER</text>
     <rect class="b" x="10" y="146" width="250" height="64" rx="6"/><text class="t" x="20" y="166">Ballot Mapper + card cache</text><text class="s" x="20" y="184">Census + official list · code, no AI</text><text class="s" x="20" y="200">one shared card per measure</text>
@@ -161,7 +161,7 @@
     <path class="l" d="M760 210 V242" marker-end="url(#ar)"/>
     <path class="l" d="M580 272 H135 V214" marker-end="url(#ar)"/><text class="cs" x="250" y="266">verified card saved, then served to every voter</text>
   </svg>
-  <p style="font-size:19px;margin-top:8px">AI Writer on <b>gpt-6-astra</b>, because writing a fair case from legal text is the hard step (a cheaper AI Writer passed 1 of 3 vs 2 of 3). AI Challenger on <b>gpt-6-luna</b>: a different model, about 100× cheaper, no measurable loss.</p>
+  <p style="font-size:19px;margin-top:8px">AI Writer on <b>gpt-6-astra</b>, because writing a fair case from legal text is the hard step (in an early test, a cheaper AI Writer's cards passed 1 in 3 even after rewrites; astra's now pass 28 of 28). AI Challenger on <b>gpt-6-luna</b>: a different model, about 100× cheaper, no measurable loss.</p>
   <span class="brand">Steelman Ballot</span><span class="num">5</span>
 </section>
 
@@ -231,14 +231,15 @@
 <!-- 9 ------------------------------------------------------------------ -->
 <section class="slide">
   <p class="eyebrow">Impact</p>
-  <h2>4 hours of official text → under 30 minutes, every side at its best</h2>
+  <h2>55% less reading time on average, with every side at its best</h2>
   <table>
-    <tr><th>Nov 3, 2026 ballot</th><th class="n">Measures</th><th class="n">Official text</th><th class="n">Full cards</th><th class="n">Top layers</th><th class="n">Steelman test</th></tr>
-    <tr><td>California</td><td class="n">14</td><td class="n">2 h 27 min</td><td class="n">56 min</td><td class="n">~14 min</td><td class="n">14 / 14</td></tr>
-    <tr><td>Massachusetts</td><td class="n">9</td><td class="n">51 min</td><td class="n">35 min</td><td class="n">~9 min</td><td class="n">9 / 9</td></tr>
-    <tr><td>New York City</td><td class="n">5</td><td class="n">46 min</td><td class="n">18 min</td><td class="n">~5 min</td><td class="n">5 / 5</td></tr>
+    <tr><th>Nov 3, 2026 ballot</th><th class="n">Measures</th><th class="n">Without the app<br><span style="font-weight:400;font-size:15px">official guide text</span></th><th class="n">With Steelman Ballot<br><span style="font-weight:400;font-size:15px">full briefings</span></th><th class="n">Time saved</th><th class="n">% saved</th></tr>
+    <tr><td>California</td><td class="n">14</td><td class="n">2 h 27 min</td><td class="n">56 min</td><td class="n">1 h 31 min</td><td class="n"><b>62%</b></td></tr>
+    <tr><td>Massachusetts</td><td class="n">9</td><td class="n">51 min</td><td class="n">35 min</td><td class="n">16 min</td><td class="n"><b>31%</b></td></tr>
+    <tr><td>New York City</td><td class="n">5</td><td class="n">46 min</td><td class="n">18 min</td><td class="n">28 min</td><td class="n"><b>61%</b></td></tr>
+    <tr><td><b>Average per ballot</b></td><td class="n">~9</td><td class="n"><b>1 h 21 min</b></td><td class="n"><b>36 min</b></td><td class="n"><b>45 min</b></td><td class="n"><b>55%</b></td></tr>
   </table>
-  <p style="font-size:19px;margin:6px 0 12px"><b>Accuracy (California, vs. the nonpartisan Legislative Analyst):</b> 100% of claims supported, 0 contradicted, 18/18 yes/no/cost correct, 99% of each side's top points covered.</p>
+  <p style="font-size:19px;margin:6px 0 12px"><b>Fair and accurate:</b> every measure card in coverage passed the steelman test (14/14, 9/9, 5/5). California accuracy vs. the nonpartisan Legislative Analyst: 100% of claims supported, 18/18 yes/no/cost correct.</p>
   <div class="pending">
     <p><b>[To be added: user testing]</b> n = __ voters · minutes to feel ready: usual way __ vs app __ · comprehension __ vs __ · confidence __ vs __ · fairness __ / 5 · ease of use __ / 100</p>
   </div>
@@ -259,7 +260,7 @@
       <li>All 50 states' statewide measures (~$45 per run); local via election-office data partnerships</li>
       <li>Randomized study: usual research vs. the app, plus "can you state the other side's best case?"</li>
       <li>More languages, following Voting Rights Act Section 203</li>
-      <li><b>Issues of the day</b> between elections, each tied to a real pending decision</li>
+      <li><b>Issues of the day:</b> an evergreen resource on all sides of major issues, between elections</li>
       <li>A cross-company AI Challenger; human review panel</li></ul></div>
   </div>
   <p class="quote" style="margin-top:18px;text-align:center">Think more deeply. Vote more thoughtfully.</p>
