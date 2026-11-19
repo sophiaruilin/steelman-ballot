@@ -10,52 +10,53 @@
   html, body { margin: 0; background: #1c2422; }
   body { font-family: "IBM Plex Sans", "Segoe UI", system-ui, Arial, sans-serif; color: var(--graphite); }
   .deck { display: flex; flex-direction: column; align-items: center; gap: 28px; padding: 28px 0; }
-  .slide { width: 1280px; height: 720px; background: var(--paper); position: relative; overflow: hidden; padding: 56px 72px;
-           box-shadow: 0 10px 40px rgba(0,0,0,.35); display: flex; flex-direction: column;
-           background-image: repeating-linear-gradient(90deg, transparent 0 159px, rgba(169,176,171,.18) 159px 160px); }
-  .slide h1, .slide h2 { font-family: "EB Garamond", Garamond, Georgia, serif; color: var(--verdigris); margin: 0; line-height: 1.08; }
-  .slide h1 { font-size: 88px; }
-  .slide h2 { font-size: 50px; margin-bottom: 18px; }
-  .eyebrow { font: 600 15px/1.3 "IBM Plex Sans", system-ui, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--copper-ink); margin: 0 0 10px; }
-  .slide p, .slide li { font-size: 24px; line-height: 1.4; margin: 6px 0; }
-  .slide ul { margin: 6px 0; padding-left: 1.1em; }
-  .num { position: absolute; right: 36px; bottom: 24px; font-size: 14px; color: var(--muted); }
-  .brand { position: absolute; left: 72px; bottom: 24px; font: 600 15px Georgia, serif; color: var(--verdigris); opacity: .8; }
-  .cols { display: grid; gap: 28px; flex: 1; min-height: 0; }
-  .c2 { grid-template-columns: 1fr 1fr; } .c3 { grid-template-columns: 1fr 1fr 1fr; } .c21 { grid-template-columns: 1.35fr 1fr; } .c12 { grid-template-columns: 1fr 1.4fr; }
-  .shot { height: 100%; max-height: 520px; display: flex; flex-direction: column; min-height: 0; }
-  .shot img { flex: 1; min-height: 0; width: 100%; object-fit: cover; object-position: top; border: 1px solid var(--steel); border-radius: 6px; background: #fff; }
-  .shot span { font-size: 15px; color: var(--muted); margin-top: 6px; }
-  .big { font: 600 64px/1 "EB Garamond", Georgia, serif; color: var(--verdigris); }
-  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 6px 0 18px; }
-  .kpi { background: var(--card); border: 1px solid var(--steel); border-top: 5px solid var(--verdigris); border-radius: 6px; padding: 14px 16px; }
-  .kpi b { display: block; font: 600 46px/1.05 "EB Garamond", Georgia, serif; color: var(--verdigris); }
-  .kpi span { font-size: 17px; color: var(--muted); }
-  .box { background: var(--card); border: 1px solid var(--steel); border-radius: 6px; padding: 16px 20px; }
-  .box h3 { margin: 0 0 6px; font: 600 26px Georgia, serif; color: var(--verdigris); }
-  .box p, .box li { font-size: 19px; }
-  .straw { text-decoration: line-through; color: var(--muted); }
-  table { border-collapse: collapse; width: 100%; font-size: 19px; }
-  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--steel); }
-  th { background: var(--tint); color: var(--verdigris); }
-  td.n, th.n { text-align: right; }
-  .step { display: grid; grid-template-columns: 54px 1fr; gap: 12px; align-items: start; margin: 8px 0; }
-  .step b.k { display: inline-flex; width: 44px; height: 44px; border-radius: 50%; align-items: center; justify-content: center;
-              background: var(--verdigris); color: var(--paper); font: 600 20px Georgia, serif; }
-  .step.fail b.k { background: var(--copper); }
-  .step p { margin: 0; font-size: 21px; }
-  .pending { background: #FFF7E0; border: 2px dashed var(--copper); border-radius: 6px; padding: 14px 18px; }
-  .pending p, .pending li { font-size: 18px; }
-  .title-slide { justify-content: center; background-color: var(--verdigris); background-image: repeating-linear-gradient(90deg, transparent 0 159px, rgba(244,240,231,.07) 159px 160px); }
+  .slide { width: 1280px; height: 720px; background: var(--paper); position: relative; overflow: hidden; padding: 64px 84px;
+           box-shadow: 0 10px 40px rgba(0,0,0,.35); display: flex; flex-direction: column; }
+  h1, h2 { font-family: "EB Garamond", Garamond, Georgia, serif; color: var(--verdigris); margin: 0; line-height: 1.08; font-weight: 600; }
+  h1 { font-size: 104px; }
+  h2 { font-size: 60px; margin-bottom: 34px; }
+  .eyebrow { font: 600 17px/1.3 "IBM Plex Sans", system-ui, sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--copper-ink); margin: 0 0 14px; }
+  p { font-size: 30px; line-height: 1.4; margin: 0; }
+  .muted { color: var(--muted); }
+  .num { position: absolute; right: 40px; bottom: 26px; font-size: 15px; color: var(--muted); }
+  .grow { flex: 1; min-height: 0; }
+  .row { display: flex; gap: 36px; align-items: stretch; }
+  .row > * { flex: 1; }
+  .stat b { display: block; font: 600 96px/1 "EB Garamond", Georgia, serif; color: var(--verdigris); }
+  .stat span { display: block; font-size: 25px; line-height: 1.3; margin-top: 10px; color: var(--graphite); }
+  .stat small { display: block; font-size: 17px; color: var(--muted); margin-top: 8px; }
+  .card { background: var(--card); border: 1.5px solid var(--steel); border-radius: 10px; padding: 30px 32px; }
+  .card.dark { background: var(--verdigris); border-color: var(--verdigris); }
+  .card.dark p { color: var(--paper); }
+  .tag { font: 600 17px "IBM Plex Sans", system-ui, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--copper-ink); margin-bottom: 14px; display: block; }
+  .straw { text-decoration: line-through; color: var(--muted); font-family: Georgia, serif; font-style: italic; }
+  .steel { font-family: Georgia, serif; font-style: italic; }
+  .shot { display: flex; flex-direction: column; min-height: 0; }
+  .shot img { flex: 1; min-height: 0; width: 100%; object-fit: cover; object-position: top; border: 1.5px solid var(--steel); border-radius: 10px; }
+  .shot span { font: 600 24px Georgia, serif; color: var(--verdigris); margin-top: 12px; text-align: center; }
+  .flow { display: flex; align-items: stretch; gap: 18px; }
+  .flow .arrow { align-self: center; }
+  .flow .box { display: flex; flex-direction: column; justify-content: center; }
+  .cards > .card { height: 230px; display: flex; flex-direction: column; justify-content: center; }
+  .flow .box { flex: 1; text-align: center; padding: 30px 18px; border-radius: 12px; background: var(--card); border: 2px solid var(--verdigris); }
+  .flow .box.dark { background: var(--verdigris); }
+  .flow .box b { display: block; font: 600 32px Georgia, serif; color: var(--verdigris); }
+  .flow .box.dark b, .flow .box.dark span { color: var(--paper); }
+  .flow .box span { display: block; font-size: 20px; margin-top: 8px; color: var(--muted); }
+  .flow .arrow { font-size: 44px; color: var(--copper); flex: none; }
+  .loop { margin-top: 22px; font-size: 24px; color: var(--copper-ink); text-align: center; }
+  .steps3 { display: flex; gap: 22px; align-items: stretch; }
+  .steps3 .card { flex: 1; text-align: center; display: flex; flex-direction: column; justify-content: center; }
+  .steps3 .score { font: 600 92px/1 Georgia, serif; color: var(--copper); }
+  .steps3 .card.pass .score { color: var(--verdigris); }
+  .steps3 p { font-size: 25px; margin-top: 12px; }
+  .quote { font: italic 38px/1.35 "EB Garamond", Georgia, serif; color: var(--paper); }
+  .who { font: 600 17px "IBM Plex Sans", system-ui, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #D9B597; margin-top: 16px; }
+  .title-slide { background: var(--verdigris); justify-content: center; }
   .title-slide h1 { color: var(--paper); }
   .title-slide .eyebrow { color: #D9B597; }
   .title-slide p { color: #E5ECE9; }
-  .title-slide .brand, .title-slide .num { color: #E5ECE9; }
-  .quote { font: italic 30px/1.35 "EB Garamond", Georgia, serif; color: var(--verdigris); }
-  .diagram { width: 100%; height: auto; }
   .hint { position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%); color: #cfd8d5; font-size: 13px; opacity: .8; }
-  /* fit the 1280x720 slide to any screen */
-  @media screen { .slide { transform-origin: top center; } }
   @media print {
     @page { size: 13.333in 7.5in; margin: 0; }
     html, body { background: #fff; }
@@ -67,203 +68,136 @@
 </head>
 <body>
 <div class="deck">
-<!-- 1 ------------------------------------------------------------------ -->
+
+<!-- 1 -->
 <section class="slide title-slide">
   <p class="eyebrow">Final project · MGT 409 · Yale SOM · Sophia Lin</p>
   <h1>Steelman Ballot</h1>
-  <p style="font-size:38px;margin-top:14px;font-family:Georgia,serif;font-style:italic">Know your ballot in minutes, and hear each side at its best, not its worst.</p>
-  <p style="font-size:28px;margin-top:26px">A ballot briefing, on demand: see every measure on your ballot with each side's <b>steelman</b> (its strongest case).<br><span style="font-size:22px">English · Español · 中文</span></p>
-  <p style="font-size:20px;margin-top:34px">steelman-ballot.onrender.com &nbsp;·&nbsp; github.com/sophiaruilin/steelman-ballot</p>
+  <p style="font:italic 44px/1.3 Georgia,serif;margin-top:22px">Know your ballot in minutes, and hear each side at its best, not its worst.</p>
+  <p style="font-size:24px;margin-top:56px">steelman-ballot.onrender.com &nbsp;·&nbsp; English · Español · 中文</p>
   <span class="num">1</span>
 </section>
 
-<!-- 2 ------------------------------------------------------------------ -->
+<!-- 2 -->
 <section class="slide">
-  <p class="eyebrow">Motivation</p>
-  <h2>At the ballot box, most of us are short on time and hear only one side</h2>
-  <div class="cols c21">
-    <div>
-      <ul>
-        <li>Ballot info comes from news, social media, friends, group chats and ads, often leaning one way or paid for</li>
-        <li>Ballot issues rarely come up day to day, so at voting time many measures are unfamiliar</li>
-        <li>"Where do I even begin?" Then the official guide alone: <b>2 h 27 min</b> in California, <b>51 min</b> in Massachusetts, <b>46 min</b> in New York</li>
-        <li>Democracy works best when we decide after a fair hearing of each side <b>at its best</b>, not its weakest</li>
-      </ul>
-      <p class="quote" style="margin-top:22px">"The strongest argument isn't always your own."</p>
-    </div>
-    <div class="box" style="align-self:start">
-      <h3>Strawman vs. steelman</h3>
-      <p><b>Strawman</b> (what you often hear):</p>
-      <p class="straw">"Opponents just don't care about election fraud."</p>
-      <p style="margin-top:10px"><b>Steelman</b> (what our card says):</p>
-      <p>"Opponents argue added ID requirements would keep some eligible citizens' mail ballots from counting because of mistakes or missing information."</p>
-      <p style="font-size:16px;color:var(--muted);margin-top:10px">California Prop 39 · the same for the Yes side</p>
-    </div>
+  <p class="eyebrow">The problem</p>
+  <h2>"Where do I even begin?"</h2>
+  <div class="row grow" style="align-items:center">
+    <div class="stat"><b>#1</b><span>reason registered voters skipped the 2022 midterms: too busy</span><small>U.S. Census Bureau</small></div>
+    <div class="stat"><b>2×</b><span>as likely: nonvoters say they lack enough information to decide</span><small>Knight Foundation, 2020</small></div>
+    <div class="stat"><b>2½ h</b><span>to read California's official guide for its 14 measures</span><small>my word count</small></div>
   </div>
-  <span class="brand">Steelman Ballot</span><span class="num">2</span>
+  <span class="num">2</span>
 </section>
 
-<!-- 3 ------------------------------------------------------------------ -->
+<!-- 3 -->
+<section class="slide">
+  <p class="eyebrow">The idea</p>
+  <h2>A steelman, not a strawman</h2>
+  <div class="row grow cards" style="align-items:center">
+    <div class="card"><span class="tag">Strawman · what you often hear</span><p class="straw">"Opponents just don't care about election fraud."</p></div>
+    <div class="card dark"><span class="tag" style="color:#D9B597">Steelman · what the app says</span><p class="steel">"Opponents argue added ID requirements would keep some eligible citizens' mail ballots from counting."</p></div>
+  </div>
+  <p class="muted" style="font-size:24px;margin-top:22px">Each side stated so well its own supporters would sign it. Example: California Prop 39, voter ID.</p>
+  <span class="num">3</span>
+</section>
+
+<!-- 4 -->
 <section class="slide">
   <p class="eyebrow">The app</p>
-  <h2>Address in, ballot out, about a minute per measure</h2>
-  <div class="cols c3">
-    <div class="shot"><img src="img/03_summary.jpg" alt=""><span>"Your ballot in 60 seconds": the matched address, districts and counts</span></div>
-    <div class="shot"><img src="img/04_card_sides.jpg" alt=""><span>Each side's steelman, No left and Yes right, with a verified badge</span></div>
-    <div class="shot"><img src="img/06_what_changes.jpg" alt=""><span>What would change: today vs. if it passes, every claim sourced</span></div>
+  <h2 style="margin-bottom:24px">Address in. Every measure, both sides.</h2>
+  <div class="row grow">
+    <div class="shot"><img src="img/03_summary.jpg" alt=""><span>Your ballot</span></div>
+    <div class="shot"><img src="img/04_card_sides.jpg" alt=""><span>Both sides at their best</span></div>
+    <div class="shot"><img src="img/06_what_changes.jpg" alt=""><span>What would change</span></div>
   </div>
-  <span class="brand">Steelman Ballot</span><span class="num">3</span>
+  <span class="num">4</span>
 </section>
 
-<!-- 4 ------------------------------------------------------------------ -->
+<!-- 5 -->
 <section class="slide">
-  <p class="eyebrow">What is new</p>
-  <h2>A tested steelman for both sides, on demand</h2>
-  <p style="color:var(--muted)">Official guides, Ballotpedia, VOTE411, news guides and chatbots summarize or endorse. None <b>tests</b> whether each side's case is its strongest, fairest version.</p>
-  <div class="cols c2" style="margin-top:10px">
-    <div class="box"><h3>1 · The steelman test</h3>
-      <p>Each side argued so well <b>its own supporters would sign it</b> as their best case. The AI Challenger plays a committed supporter and scores 1-5; both sides must score 4+, and a swap test checks that neither reads warmer.</p>
-      <p style="color:var(--muted)">This is the idea the app is named after.</p></div>
-    <div class="box"><h3>2 · Fair by construction</h3>
-      <p><b>On the merits only:</b> what a change would do, never the other side's motives, donors or party.</p>
-      <p><b>Facts apart from arguments:</b> Fact, Estimate or Perspective, each sourced.</p>
-      <p><b>Equal treatment:</b> same space and tone; No left, Yes right; no red or blue.</p></div>
-  </div>
-  <span class="brand">Steelman Ballot</span><span class="num">4</span>
-</section>
-
-<!-- 5 ------------------------------------------------------------------ -->
-<section class="slide">
-  <p class="eyebrow">The AI agents</p>
-  <h2>The AI Writer drafts. The AI Challenger tries to break it.</h2>
-  <svg class="diagram" viewBox="0 0 820 300" role="img" aria-label="What the voter sees and the agents behind it" xmlns="http://www.w3.org/2000/svg">
-    <defs><marker id="ar" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#234742"/></marker>
-          <marker id="arc" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#AD7857"/></marker></defs>
-    <style>text{font-family:"IBM Plex Sans","Segoe UI",Arial,sans-serif}.lane{font-size:10px;font-weight:700;letter-spacing:.12em;fill:#885E44}.t{font-size:12.5px;font-weight:700;fill:#234742}.tw{font-size:12.5px;font-weight:700;fill:#F4F0E7}.s{font-size:11px;fill:#2B3031}.sw{font-size:11px;fill:#E5ECE9}.cs{font-size:10.5px;font-weight:600;fill:#885E44}.b{fill:#FBF9F4;stroke:#234742;stroke-width:1.4}.d{fill:#234742}.l{stroke:#234742;stroke-width:1.4;fill:none}.c{stroke:#AD7857;stroke-width:1.4;fill:none;stroke-dasharray:5 4}</style>
-    <rect x="0" y="0" width="820" height="104" rx="8" fill="#E5ECE9"/>
-    <text class="lane" x="12" y="18">WHAT THE VOTER SEES</text>
-    <rect class="b" x="10" y="28" width="148" height="64" rx="6"/><text class="t" x="20" y="48">Address or ZIP</text><text class="s" x="20" y="66">"✓ Ready" · never stored</text>
-    <rect class="b" x="172" y="28" width="148" height="64" rx="6"/><text class="t" x="182" y="48">Progress</text><text class="s" x="182" y="66">districts · guide · cards</text>
-    <rect class="d" x="334" y="28" width="148" height="64" rx="6"/><text class="tw" x="344" y="48">Your ballot</text><text class="sw" x="344" y="66">overview of every</text><text class="sw" x="344" y="82">measure, at a glance</text>
-    <rect class="d" x="496" y="28" width="160" height="64" rx="6"/><text class="tw" x="506" y="48">Measure card</text><text class="sw" x="506" y="66">tap one for detail:</text><text class="sw" x="506" y="82">both sides' steelman</text>
-    <rect class="b" x="670" y="28" width="140" height="64" rx="6" style="stroke-dasharray:5 4"/><text class="t" x="680" y="48">Next steps</text><text class="cs" x="680" y="64">(optional)</text><text class="s" x="680" y="80">how to vote · share</text>
-    <path class="l" d="M158 60 H168" marker-end="url(#ar)"/><path class="l" d="M320 60 H330" marker-end="url(#ar)"/><path class="l" d="M482 60 H492" marker-end="url(#ar)"/><path class="c" d="M656 60 H666" marker-end="url(#arc)"/>
-    <rect x="0" y="118" width="820" height="182" rx="8" fill="#FBF9F4" stroke="#A9B0AB"/>
-    <text class="lane" x="12" y="136">BEHIND THE SCENES</text><text class="lane" x="808" y="136" text-anchor="end">ONCE PER MEASURE, NOT PER VOTER</text>
-    <rect class="b" x="10" y="146" width="250" height="64" rx="6"/><text class="t" x="20" y="166">Ballot Mapper + card cache</text><text class="s" x="20" y="184">Census + official list · code, no AI</text><text class="s" x="20" y="200">one shared card per measure</text>
-    <path class="l" d="M200 146 V120 H246 V96" marker-end="url(#ar)"/><path class="l" d="M230 146 V112 H576 V96" marker-end="url(#ar)"/>
-    <path class="l" d="M260 186 H300" marker-end="url(#ar)"/>
-    <rect class="b" x="304" y="146" width="230" height="64" rx="6"/><text class="t" x="314" y="166">AI Writer · gpt-6-astra</text><text class="s" x="314" y="184">reads official pages only</text><text class="s" x="314" y="200">drafts both sides' steelman</text>
-    <rect class="b" x="580" y="146" width="230" height="64" rx="6"/><text class="t" x="590" y="166">AI Challenger · gpt-6-luna</text><text class="s" x="590" y="184">"Would I sign it?" 1-5 · swap test</text><text class="s" x="590" y="200">source check · both sides 4+</text>
-    <path class="l" d="M534 170 H576" marker-end="url(#ar)"/>
-    <path class="c" d="M640 210 V226 H420 V214" marker-end="url(#arc)"/><text class="cs" x="430" y="240">fails: numbered fixes → rewrite (max 3)</text>
-    <rect class="b" x="580" y="246" width="230" height="46" rx="6"/><text class="t" x="590" y="265">Translator · gpt-6-luna</text><text class="s" x="590" y="282">Español · 中文 · numbers checked</text>
-    <path class="l" d="M760 210 V242" marker-end="url(#ar)"/>
-    <path class="l" d="M580 272 H135 V214" marker-end="url(#ar)"/><text class="cs" x="250" y="266">verified card saved, then served to every voter</text>
-  </svg>
-  <p style="font-size:19px;margin-top:8px">AI Writer on <b>gpt-6-astra</b>, because writing a fair case from legal text is the hard step (in an early test, a cheaper AI Writer's cards passed 1 in 3 even after rewrites; astra's now pass 28 of 28). AI Challenger on <b>gpt-6-luna</b>: a different model, about 100× cheaper, no measurable loss.</p>
-  <span class="brand">Steelman Ballot</span><span class="num">5</span>
-</section>
-
-<!-- 6 ------------------------------------------------------------------ -->
-<section class="slide">
-  <p class="eyebrow">One real run · California Prop 39 (voter ID)</p>
-  <h2>The AI Challenger caught a missing argument and a too-broad claim</h2>
-  <div class="cols c21">
-    <div>
-      <div class="step"><b class="k">1</b><p><b>Map</b>: 1315 10th St, Sacramento → CD 7, SD 8, AD 6 in 0.7 s; the official guide lists 14 propositions</p></div>
-      <div class="step"><b class="k">2</b><p><b>AI Writer</b> reads 3 official pages (summary, Legislative Analyst, arguments) and drafts the card</p></div>
-      <div class="step fail"><b class="k">3</b><p><b>AI Challenger: fail.</b> Yes side <b>3/5</b>: "omits a prominent merits argument… mail-ballot signature process can delay results." No side's "officials already verify voters" is too broad</p></div>
-      <div class="step"><b class="k">4</b><p><b>AI Writer rewrites</b> with the numbered fixes</p></div>
-      <div class="step"><b class="k">5</b><p><b>AI Challenger: pass.</b> Both sides <b>4/5</b>, swap test passed, no fidelity problems</p></div>
-      <p style="font-size:21px;margin-top:10px"><b>5 model calls · 41,166 tokens · $0.25 · 96 seconds</b>, then reused by every voter at no AI cost.</p>
+  <p class="eyebrow">How it works · what's new</p>
+  <h2>One AI writes. A second AI tries to break it.</h2>
+  <div class="grow" style="display:flex;flex-direction:column;justify-content:center">
+    <div class="flow">
+      <div class="box"><b>Official guide</b><span>the only source</span></div>
+      <div class="arrow">→</div>
+      <div class="box"><b>AI Writer</b><span>both sides' steelman</span></div>
+      <div class="arrow">→</div>
+      <div class="box"><b>AI Challenger</b><span>"Would I sign this?" 1–5</span></div>
+      <div class="arrow">→</div>
+      <div class="box dark"><b>Your card</b><span>EN · ES · 中文</span></div>
     </div>
-    <div class="shot"><img src="img/05_crux_evidence.jpg" alt="" style="object-position:center 75%"><span>The corrected fact is now evidence line 2: mail signatures are checked, in-person generally not</span></div>
+    <p class="loop">↺ Below 4 out of 5 for either side? Rewrite, up to 3 times.</p>
   </div>
-  <span class="brand">Steelman Ballot</span><span class="num">6</span>
+  <span class="num">5</span>
 </section>
 
-<!-- 7 ------------------------------------------------------------------ -->
+<!-- 6 -->
 <section class="slide">
-  <p class="eyebrow">Tokenomics · measured from all 36 published cards</p>
-  <h2>Research once, serve everyone</h2>
-  <div class="kpis">
-    <div class="kpi"><b>$0.30</b><span>per measure card (44.5k input, 57% cached; 7.6k output)</span></div>
-    <div class="kpi"><b>$8.78</b><span>all 36 cards (28 measures + 8 races)</span></div>
-    <div class="kpi"><b>$0</b><span>AI cost of a voter's lookup</span></div>
-    <div class="kpi"><b>$0.09</b><span>all 54 AI Challenger reviews</span></div>
+  <p class="eyebrow">One real run · California Prop 39</p>
+  <h2>The AI Challenger caught a missing argument</h2>
+  <div class="steps3 grow">
+    <div class="card"><div class="score">3/5</div><p>Yes side: missing supporters' point on mail-ballot signature delays</p></div>
+    <div class="card"><div class="score" style="color:var(--copper-ink)">↻</div><p>The AI Writer rewrites with the specific fixes</p></div>
+    <div class="card pass"><div class="score">4/5</div><p>Both sides pass. Published.</p></div>
   </div>
-  <table>
-    <tr><th>Election month</th><th class="n">This design</th><th class="n">Per user</th><th class="n">Per-voter generation</th></tr>
-    <tr><td>100 users, 3 states</td><td class="n">$26</td><td class="n">$0.26</td><td class="n">$416</td></tr>
-    <tr><td>10,000 users, 3 states</td><td class="n">~$33</td><td class="n">$0.003</td><td class="n">~$41,600</td></tr>
-    <tr><td>10,000 users, all 50 states (~150 measures)</td><td class="n">~$142</td><td class="n">$0.014</td><td class="n">n/a</td></tr>
-  </table>
-  <p style="font-size:19px;margin-top:12px"><b>Cost cutting that helped:</b> card v3.1 used 32% fewer tokens <i>and</i> covered more top points (92% → 99%). <b>That hurt:</b> a cheaper AI Writer was 98% cheaper but less accurate (96% vs 100% of claims supported), so it was rejected.</p>
-  <span class="brand">Steelman Ballot</span><span class="num">7</span>
+  <p class="muted" style="font-size:24px;margin-top:18px;text-align:center">5 model calls · $0.25 · 96 seconds, then free for every voter</p>
+  <span class="num">6</span>
 </section>
 
-<!-- 8 ------------------------------------------------------------------ -->
+<!-- 7 -->
+<section class="slide">
+  <p class="eyebrow">Tokenomics</p>
+  <h2>Research once. Serve every voter.</h2>
+  <div class="row grow" style="align-items:center">
+    <div class="stat"><b>$0.30</b><span>to research one measure</span></div>
+    <div class="stat"><b>$0</b><span>AI cost when a voter looks up a ballot</span></div>
+    <div class="stat"><b>1,600×</b><span>less AI spend than generating cards per voter (10,000 users)</span></div>
+  </div>
+  <span class="num">7</span>
+</section>
+
+<!-- 8 -->
 <section class="slide">
   <p class="eyebrow">Safety</p>
-  <h2>Protect trust, privacy and the budget</h2>
-  <div class="cols c3" style="grid-template-columns:1fr 1fr 1fr 0.8fr">
-    <div class="box"><h3>Attacks</h3><ul>
-      <li>Official-site allowlist; robots.txt respected</li>
-      <li>Hidden text stripped; pages marked untrusted</li>
-      <li>Injection words flagged: fired on 10 real cards, never leaked</li>
-      <li>No address in URLs or logs</li></ul></div>
-    <div class="box"><h3>Malfunction</h3><ul>
-      <li>Claims must cite a page actually read; quotes verbatim</li>
-      <li>0 contradicted claims in graded sample</li>
-      <li>Max 3 rewrites, else "unverified" badge</li>
-      <li>Wrong address match flagged</li></ul></div>
-    <div class="box"><h3>Overspending</h3><ul>
-      <li>Public site is snapshot-only: visitors can't trigger AI</li>
-      <li>Per card ≤20 calls, ≤150k tokens</li>
-      <li>Batch budget; clean stop on quota (it happened: the Portkey cap)</li></ul></div>
-    <div class="shot"><img src="img/09_zip_warning.jpg" alt=""><span>Wrong-ZIP match flagged</span></div>
+  <h2>Trust, privacy and budget, protected</h2>
+  <div class="row grow cards" style="align-items:center">
+    <div class="card"><span class="tag">Attacks</span><p style="font-size:26px">Official sites only. Hidden instructions stripped.</p></div>
+    <div class="card"><span class="tag">Mistakes</span><p style="font-size:26px">Every claim cited and checked. Unfair cards flagged.</p></div>
+    <div class="card"><span class="tag">Spending</span><p style="font-size:26px">Voters can't trigger AI. Hard caps per card.</p></div>
   </div>
-  <p style="font-size:19px;margin-top:12px"><b>10 of 10 safety tests pass</b> (128 of 128 overall), offline, with no model calls.</p>
-  <span class="brand">Steelman Ballot</span><span class="num">8</span>
+  <p class="muted" style="font-size:24px;margin-top:18px;text-align:center">10 of 10 safety tests pass · addresses never stored</p>
+  <span class="num">8</span>
 </section>
 
-<!-- 9 ------------------------------------------------------------------ -->
+<!-- 9 -->
 <section class="slide">
   <p class="eyebrow">Impact</p>
-  <h2>A clear place to start, and 68% less reading time</h2>
-  <table>
-    <tr><th>Nov 3, 2026 ballot</th><th class="n">Measures</th><th class="n">Without the app<br><span style="font-weight:400;font-size:15px">official guide text</span></th><th class="n">With Steelman Ballot<br><span style="font-weight:400;font-size:15px">full briefings</span></th><th class="n">Time saved</th><th class="n">% saved</th></tr>
-    <tr><td>California</td><td class="n">14</td><td class="n">2 h 27 min</td><td class="n">40 min</td><td class="n">1 h 47 min</td><td class="n"><b>73%</b></td></tr>
-    <tr><td>Massachusetts</td><td class="n">9</td><td class="n">51 min</td><td class="n">25 min</td><td class="n">26 min</td><td class="n"><b>51%</b></td></tr>
-    <tr><td>New York (NYC)</td><td class="n">5</td><td class="n">46 min</td><td class="n">13 min</td><td class="n">33 min</td><td class="n"><b>72%</b></td></tr>
-    <tr><td><b>Average per ballot</b></td><td class="n">~9</td><td class="n"><b>1 h 21 min</b></td><td class="n"><b>26 min</b></td><td class="n"><b>55 min</b></td><td class="n"><b>68%</b></td></tr>
-  </table>
-  <p style="font-size:19px;margin:6px 0 4px"><b>Beyond time:</b> one address gives one organized place for every measure on <i>your</i> ballot, each side argued at its best: from "where do I even begin?" to an informed choice. (Like-for-like: words on the official pages vs. words on the cards, at the same reading speed.)</p>
-  <p style="font-size:19px;margin:4px 0 12px"><b>Fair (AI-checked) and accurate:</b> every measure card passed the AI Challenger's steelman test (14/14, 9/9, 5/5). California accuracy vs. the nonpartisan Legislative Analyst: 100% of claims supported, 18/18 yes/no/cost correct.</p>
-  <div class="box" style="background:var(--verdigris);border:0;padding:14px 20px">
-    <p style="font:italic 23px/1.35 Georgia,serif;color:var(--paper);margin:0">"Democratizing access to information that's unbiased, and letting voters understand their issues and meet them where they are, is something we really need. Steelman Ballot does just that. … <b style="font-style:italic">I wish I had this for the recent election.</b>"</p>
-    <p style="font-size:15px;color:#D9B597;margin:6px 0 0;letter-spacing:.06em;text-transform:uppercase">Tester who works in politics · 9 of 12 tester suggestions shipped · Spanish and Chinese confirmed by native speakers</p>
+  <div class="row grow" style="align-items:center;gap:56px">
+    <div style="flex:.8">
+      <div class="stat"><b style="font-size:150px">68%</b><span>less reading time than the official guide, on average</span></div>
+      <div class="stat" style="margin-top:30px"><b style="font-size:64px">9 of 12</b><span>tester suggestions shipped</span></div>
+    </div>
+    <div class="card dark" style="flex:1.2;padding:40px 44px">
+      <p class="quote">"Democratizing access to information that's unbiased… is something we really need. Steelman Ballot does just that. … <b>I wish I had this for the recent election.</b>"</p>
+      <p class="who">Tester who works in politics</p>
+    </div>
   </div>
-  <span class="brand">Steelman Ballot</span><span class="num">9</span>
+  <span class="num">9</span>
 </section>
 
-<!-- 10 ----------------------------------------------------------------- -->
+<!-- 10 -->
 <section class="slide">
-  <p class="eyebrow">Limits and next steps</p>
-  <h2>Honest limits, and the next month</h2>
-  <div class="cols c2">
-    <div class="box"><h3>Doesn't work yet</h3><ol>
-      <li><b>Coverage:</b> 3 states; a look-back demo; no local measures; races thin; evidence details in English</li>
-      <li><b>AI can err:</b> sources linked and issues reportable, but the accuracy test is small and California-only</li>
-      <li><b>Timeliness:</b> most useful in the weeks before an election</li></ol></div>
-    <div class="box"><h3>Next month</h3><ol>
-      <li><b>More coverage:</b> all 50 states, then local via election-office data partnerships; more languages</li>
-      <li><b>Real-world study:</b> usual research vs. the app, plus "can you state the other side's best case?"</li>
-      <li><b>Issues of the day:</b> an evergreen resource on all sides of major issues, between elections</li></ol></div>
+  <p class="eyebrow">What's next</p>
+  <h2>From 3 states to every ballot</h2>
+  <div class="row grow cards" style="align-items:center">
+    <div class="card"><span class="tag">1 · Coverage</span><p style="font-size:26px">All 50 states, then local measures with election offices</p></div>
+    <div class="card"><span class="tag">2 · Proof</span><p style="font-size:26px">A real-world voter study</p></div>
+    <div class="card"><span class="tag">3 · Year-round</span><p style="font-size:26px">Steelman briefings on issues of the day</p></div>
   </div>
-  <p class="quote" style="margin-top:18px;text-align:center">Think more deeply. Vote more thoughtfully.</p>
-  <span class="brand">Steelman Ballot</span><span class="num">10</span>
+  <p style="font:italic 34px Georgia,serif;color:var(--verdigris);text-align:center;margin-top:26px">Think more deeply. Vote more thoughtfully.</p>
+  <span class="num">10</span>
 </section>
 
 </div>
