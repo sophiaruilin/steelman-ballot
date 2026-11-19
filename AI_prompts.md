@@ -208,3 +208,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 48: Keep "steelman" and "strawman" in English
 **Prompt (my own words):** "For Spanish and Mandarin language versions, use original English Steelman and Strawman since those concepts may not translate directly to those languages, as one Spanish-native user told me for the Spanish version at least"
 **What was lacking before:** The Spanish pages said "argumento de acero / de paja" and the Chinese pages "钢人论证 / 稻草人论证". These are literal translations that a native Spanish speaker found unnatural, and they hid the link to the site's name.
+
+## Step 49: Whole-site check as a discerning (or rushed) voter
+**Prompt (my own words):** "check whole site and see if any inconsitencies or errors or things to edit and improve materially if discerning or clumsy in a rush voter"
+**What was lacking before:** A wrong address match (the Census matched "250 Broadway, NY 10007" to 250 E Broadway in ZIP 10002) was shown but not flagged, so a rushed voter could read the wrong districts. A Texas address said "0 ballot measures" and "No ballot measures on your ballot", which read as "none" rather than "not covered". The too-short-input error started mid-sentence. The map caption and the "New York City" tag stayed in English on the Spanish and Chinese pages. One link on How we work read "Why we hold these rules: About".

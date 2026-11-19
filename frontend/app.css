@@ -460,3 +460,8 @@ table.srcs td:first-child { font-weight: 500; color: var(--verdigris); white-spa
 .qr .btn { margin: 4px 0 8px; display: inline-block; text-decoration: none; }
 .wx-tip { margin: 8px 0; padding: 8px 12px; border-radius: var(--radius); background: var(--verdigris-10);
           color: var(--verdigris); font: 500 .92rem var(--sans); }
+
+/* a match that may be the wrong place */
+.summary .matched.off .ok { color: var(--copper-ink); }
+.summary .zip-off { margin: 6px 0 0; padding: 8px 12px; border-left: 3px solid var(--copper); background: rgba(173,120,87,.10);
+                    border-radius: var(--radius); font-size: .92rem; }

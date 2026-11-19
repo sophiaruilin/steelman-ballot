@@ -34,6 +34,7 @@ function setLang(lang) {
   state.lang = lang;
   store.set("sb.lang", lang);
   applyLang();
+  captionMap();
   if ($("#ready-hint")) updateHint();
   route();
 }
@@ -127,6 +128,11 @@ const TILES = {
 };
 const STATE_NAMES = { CA: "California", MA: "Massachusetts", NY: "New York" };
 
+let mapCovered = {};
+function captionMap() {
+  const c = $("#map-caption");
+  if (c) c.textContent = Object.entries(mapCovered).map(([k, v]) => `${tx(STATE_NAMES[k] || k)}: ${tx(v)}`).join(" · ");
+}
 async function renderMap() {
   let covered = {}, kinds = {};
   try { const cov = await api("/api/coverage"); covered = cov.states; kinds = cov.kinds || {}; }
@@ -144,7 +150,8 @@ async function renderMap() {
     root.append(g);
   }
   fill($("#usmap"), root);
-  $("#map-caption").textContent = Object.entries(covered).map(([k, v]) => `${STATE_NAMES[k] || k}: ${v}`).join(" · ");
+  mapCovered = covered;
+  captionMap();
 }
 
 // ---- ballot ------------------------------------------------------------------------------------
@@ -301,14 +308,21 @@ function renderBallot() {
   const districtLine = [d["Congress"], d["State Senate"], d["State House / Assembly"], d["City"]].filter(Boolean).map(txDistrict).join(" · ");
   const ready = b.races.filter((r) => r.status === "ready" && r.id);
   const rest = b.races.filter((r) => !(r.status === "ready" && r.id));
+  // If the voter typed a ZIP and the Census matched a different one, say so: it may be the wrong place.
+  const typedZip = (/\b(\d{5})(?:-\d{4})?\s*$/.exec($("#address").value.trim()) || [])[1];
+  const matchedZip = (/(\d{5})(?:-\d{4})?\s*$/.exec(b.matched_address || "") || [])[1];
+  const zipOff = typedZip && matchedZip && typedZip !== matchedZip ? [typedZip, matchedZip] : null;
   fill($("#summary"), 
     el("p", { class: "eyebrow" }, `${b.state} · ${t("ballot.election")} ${fmtDate(b.election)}`),
     el("h2", {}, t("ballot.title")),
-    b.matched_address ? el("div", { class: "matched" },
-      el("span", { class: "ok", "aria-hidden": "true" }, "✓ "), `${t("ballot.matched")}: `, el("b", {}, prettyAddress(b.matched_address)), " · ",
-      editButton(t("ballot.edit"))) : null,
+    b.matched_address ? el("div", { class: `matched${zipOff ? " off" : ""}` },
+      el("span", { class: "ok", "aria-hidden": "true" }, zipOff ? "⚠ " : "✓ "), `${t("ballot.matched")}: `, el("b", {}, prettyAddress(b.matched_address)), " · ",
+      editButton(t("ballot.edit")),
+      zipOff ? el("p", { class: "zip-off" }, t("ballot.zipdiff", { a: zipOff[0], b: zipOff[1] })) : null) : null,
     el("div", { class: "stats" },
-      el("span", {}, el("b", {}, b.measures.length), t(b.measures.length === 1 ? "ballot.measure" : "ballot.measures")),
+      b.covered_state === false
+        ? el("span", { class: "no-races" }, t("ballot.measuresnot"))
+        : el("span", {}, el("b", {}, b.measures.length), t(b.measures.length === 1 ? "ballot.measure" : "ballot.measures")),
       ready.length
         ? el("span", {}, el("b", {}, ready.length), t(ready.length === 1 ? "ballot.race" : "ballot.races"),
           rest.length ? el("small", { class: "more-races" }, t("ballot.morerace", { n: rest.length })) : null)
@@ -326,7 +340,7 @@ function renderBallot() {
       b.election_passed ? el("p", { class: "muted" }, t("ballot.lookback", { d: fmtDate(b.election) })) : null));
   const measures = b.measures;   // official ballot order
   fill($("#measures"), ...(measures.length ? measures.map((m) => el("li", {}, listItem(m)))
-    : [el("li", { class: "muted item disabled" }, el("span", {}), el("span", {}, t("ballot.none")))]));
+    : [el("li", { class: "uncovered" }, t(b.covered_state === false ? "ballot.notstate" : "ballot.none"))]));
   fill($("#races"), 
     ready.length ? ready.map((r) => el("li", {}, raceItem(r))) : el("li", { class: "uncovered" }, t("ballot.noraces")),
     rest.length ? el("li", { class: "uncovered" }, el("b", {}, ready.length ? t("ballot.notcovered", { n: rest.length }) : t("ballot.alsoon")), " ",
@@ -357,7 +371,7 @@ function editButton(label) {
 function listItem(m) {
   if (m.status !== "ready") {
     return el("div", { class: "item disabled" }, el("span", { class: "num" }, numLabel(m.number)),
-      el("span", { class: "ttl" }, m.official_title), el("span", { class: "meta" }, t("item.pending"), m.scope && m.scope !== "statewide" ? el("span", { class: "pill" }, m.scope) : null));
+      el("span", { class: "ttl" }, m.official_title), el("span", { class: "meta" }, t("item.pending"), m.scope && m.scope !== "statewide" ? el("span", { class: "pill" }, tx(m.scope)) : null));
   }
   return el("button", { class: "item", onclick: () => go(`card=${m.id}`) },
     el("span", { class: "num" }, numLabel(m.number)), el("span", { class: "ttl" }, mTitle(m)),
@@ -366,7 +380,7 @@ function listItem(m) {
       m.verified ? null : el("span", { class: "pill warn" }, t("item.unverified")),
       `· ${m.reading_minutes} ${t("item.read")}`,
       readIds().has(m.id) ? el("span", { class: "pill done" }, `✓ ${t("item.done")}`) : null,
-      m.scope && m.scope !== "statewide" ? el("span", { class: "pill" }, m.scope) : null));
+      m.scope && m.scope !== "statewide" ? el("span", { class: "pill" }, tx(m.scope)) : null));
 }
 
 function raceItem(r) {
