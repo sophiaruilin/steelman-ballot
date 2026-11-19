@@ -393,7 +393,7 @@ function raceItem(r) {
 }
 
 // ---- routing -------------------------------------------------------------------------------------
-const VIEWS = ["home", "card", "how", "about"];
+const VIEWS = ["home", "card", "how"];
 function go(hash) { location.hash = hash || ""; }
 window.addEventListener("hashchange", route);
 
@@ -406,8 +406,14 @@ function show(view) {
 async function route() {
   const h = location.hash.slice(1);
   const id = (h.match(/^card=([A-Za-z0-9-]+)$/) || [])[1];
-  if (h === "steelman" || h === "philosophy") { history.replaceState(null, "", "#about"); return route(); }
-  if (["how", "about"].includes(h)) { show(h); window.scrollTo(0, 0); return; }
+  // About, Steelman and Philosophy now live on the How it works page; old links still land there.
+  if (["about", "steelman", "philosophy"].includes(h)) { history.replaceState(null, "", "#how"); return route(); }
+  if (h === "how") { show("how"); window.scrollTo(0, 0); return; }
+  if (h === "never") {
+    show("how");
+    setTimeout(() => { const u = [...document.querySelectorAll("#view-how .nevers")].find((x) => x.offsetParent); (u?.previousElementSibling || u)?.scrollIntoView({ behavior: "instant", block: "start" }); }, 50);
+    return;
+  }
   if (h === "idea") { show("home"); renderLastBallotLink(); setTimeout(() => $("#idea").scrollIntoView(), 0); return; }
   if (h === "map") { show("home"); renderLastBallotLink(); setTimeout(() => $("#map-title").scrollIntoView(), 0); return; }
   if (!id) {

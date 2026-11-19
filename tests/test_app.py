@@ -87,7 +87,7 @@ def test_coverage_endpoint_lists_three_states():
 
 def test_site_pages_and_fonts_are_self_hosted():
     html = client.get("/").text
-    for section in ('id="view-how"', 'id="view-about"', 'id="idea"', "Think more deeply."):
+    for section in ('id="view-how"', 'id="idea"', "Think more deeply."):
         assert section in html
     assert "fonts.googleapis" not in html and "cdn." not in html
     assert client.get("/fonts/eb-garamond-latin-500-normal.woff2").status_code == 200
@@ -115,7 +115,7 @@ def test_every_interface_string_exists_in_all_three_languages():
     html = client.get("/").text
     for key in re.findall(r'data-i18n(?:-placeholder)?="([^"]+)"', html):
         assert key in d["en"], key
-    assert html.count('data-langblock="es"') == 3 and html.count('data-langblock="zh"') == 3
+    assert html.count('data-langblock="es"') == 2 and html.count('data-langblock="zh"') == 2   # home steelman idea + How it works
 
 
 def test_card_api_serves_translation_when_available(tmp_path, monkeypatch):
