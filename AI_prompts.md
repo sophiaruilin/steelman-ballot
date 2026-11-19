@@ -284,3 +284,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 67: A shorter demo line
 **Prompt (my own words):** "would you reorder or reomve or edit anything on this fron tpage view?" then "Yes, shorten it"
 **What was lacking before:** The all-caps line at the top was the longest on the screen ("…Demo: the November 3, 2026 ballot (election already held)") and wrapped onto three lines on a phone. It's now "Demo: Nov 3, 2026 ballot (past election)", in all three languages. The rest of the home page stays, since each line is there because of tester feedback.
+
+## Step 68: The demo note on its own line
+**Prompt (my own words):** "should demo line go under the guide part - and all be in parentheses?"
+**What was lacking before:** The demo note shared the all-caps label line. Now "Nonpartisan ballot guide" stands alone as the label, and "(Demo: the November 3, 2026 ballot, a past election)" sits beneath it in smaller italic, in all three languages (hidden in the compact view after a lookup).

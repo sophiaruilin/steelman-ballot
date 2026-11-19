@@ -468,3 +468,7 @@ table.srcs td:first-child { font-weight: 500; color: var(--verdigris); white-spa
 
 /* How it works: the "Why we built it" half starts with a clear break */
 #view-how h2.part-break { margin-top: 48px; padding-top: 24px; border-top: 2px solid var(--verdigris); }
+
+/* the demo note sits quietly under the "Nonpartisan ballot guide" label */
+.hero .demo-note { border-left: 0; padding-left: 0; margin: 2px 0 10px; font: italic 400 .95rem var(--sans); color: var(--muted); }
+.hero.compact .demo-note { display: none; }
