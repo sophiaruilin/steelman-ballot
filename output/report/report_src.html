@@ -72,17 +72,16 @@
 </style>
 </head>
 <body>
-
 <p class="eyebrow">Final project · MGT 409 · Yale School of Management · November 2026</p>
 <h1>Steelman Ballot</h1>
-<p class="lede"><i>Get informed: the strongest case for every side.</i></p>
+<p class="lede"><i>Know your ballot in minutes, and hear each side at its best, not its worst.</i></p>
 
 <div class="meta-box">
   <dl>
     <dt>Author</dt><dd>Sophia Lin</dd>
     <dt>Live app</dt><dd><a href="https://steelman-ballot.onrender.com">steelman-ballot.onrender.com</a></dd>
     <dt>GitHub</dt><dd><a href="https://github.com/sophiaruilin/steelman-ballot">github.com/sophiaruilin/steelman-ballot</a></dd>
-    <dt>In one line</dt><dd>Enter an address or ZIP code and see what's on your ballot, with each side of every measure stated at its strongest (a <b>steelman</b>), checked by a second AI, in plain English, Spanish or Chinese, and never a recommendation on how to vote.</dd>
+    <dt>In one line</dt><dd>Type your address and get informed fast: every measure on your ballot with each side's <b>steelman argument</b>, its strongest, most honest case, written so well its own supporters would sign it, and checked by a second AI. It never tells you how to vote.</dd>
   </dl>
 </div>
 
@@ -98,236 +97,225 @@
 
 <!-- =========================================================== 1 -->
 <h2 id="motivation">1. Motivation</h2>
-<p><b>Who has this problem?</b> Every voter who faces ballot measures. In the November 3, 2026 election, a California voter decided <b>14 statewide propositions</b>, a Massachusetts voter <b>9 statewide questions</b>, and a New York City voter <b>5 charter proposals</b>, on top of candidate races. These are real laws and budgets: Prop 1 alone would authorize $11.25 billion in borrowing.</p>
-<p><b>How do they deal with it today?</b> Mostly three ways, each with a cost:</p>
-<ul>
-  <li><b>The official voter guide.</b> Complete and authoritative, but long. We counted the words a California voter would need to read for just the summary, the nonpartisan analysis, and the arguments and rebuttals of the 14 propositions: <b>35,078 words</b>, about <b>2 hours 27 minutes</b> at an average adult reading speed of 238 words per minute (Brysbaert, 2019), before any of the legal text. The arguments in it are written by the campaigns to persuade, and often attack the other side's motives.</li>
-  <li><b>Endorsements and ads.</b> Fast, but they tell you <i>what</i> to think rather than <i>why</i>, and ads cite the weakest version of the other side.</li>
-  <li><b>Skipping or guessing.</b> Voters who run out of time leave measures blank or vote on a headline alone.</li>
-</ul>
-<p><b>Why should anyone care?</b> When you only ever hear the weakest version of the other side, every decision looks obvious and every opponent looks foolish. Ballot measures rarely are obvious. A voter who has heard <b>both sides at their strongest</b> can test their own view against the best objection, and keep it, change it, or hold it more wisely. That is the idea behind the app's name and its motto: <i>The strongest argument isn't always your own.</i></p>
+<p><b>The problem, from a voter's seat.</b> Most of what I learn about ballot issues comes from the news, TV, social media, friends and group chats, plus the official guide mailed to my home. Much of it leans one way: the outlets and people I follow have their own views, and much of the rest is paid endorsements and ads. Few sources give an honest, complete view of each side on the merits. And ballot issues rarely come up in my day-to-day life. So when it's time to vote, I often don't know most of the topics on the ballot, haven't formed a view, and feel short on time. I suspect I'm typical.</p>
+<p><b>What it costs today.</b> The authoritative source, the official guide, is long. We counted the words in the official summaries, analyses and arguments behind every measure we cover (Impact, section 6): <b>58,375 words for 28 measures</b>, about <b>4 hours</b> of reading at an average adult pace, and California alone is 2½ hours. Its arguments are written by each campaign to persuade, and often attack the other side's motives. So voters skip measures, follow an endorsement, or vote on a headline.</p>
+<p><b>Who should care.</b> Voters, first. But so should election officials, civic groups, educators and leaders, because democracy depends on how informed voters are when they decide. Healthy debate leads to better outcomes only when each side hears the other at its best. Much of today's political discussion runs on party identity and the other side's weakest arguments, rather than an open-minded hearing of every side before reaching a conclusion.</p>
 
 <div class="pair"><div>
-<p>A <b>strawman</b> is the weakest version of a view, built to be knocked down: <i>"Opponents just don't care about election fraud."</i> A <b>steelman</b> is the strongest version, stated so well that its own supporters would say, "I wish I'd put it that way": <i>"Opponents argue added ID requirements would keep some eligible citizens' mail ballots from counting because of mistakes or missing information."</i></p>
-<p>Steelman Ballot gives every voter that second kind of briefing for every measure on their ballot, in about the time it takes to read a news article: each measure's top layer (both sides, the crux, the key evidence) reads in about a minute, and the full card in 3 to 4 minutes. All 14 California cards take <b>56 minutes</b> in full, versus 2½ hours for the official text.</p>
+<p><b>The idea: a steelman, not a strawman.</b> A <b>strawman</b> is the weakest version of a view, built to be knocked down: <i>"Opponents just don't care about election fraud."</i> A <b>steelman</b> is the strongest version, stated so well that its own supporters would say, "I wish I'd put it that way": <i>"Opponents argue added ID requirements would keep some eligible citizens' mail ballots from counting because of mistakes or missing information."</i></p>
+<p>Steelman Ballot gives every voter that kind of briefing for every measure on their ballot. Each measure's top layer (both sides, the crux, the key evidence) reads in about a minute. It's built around the app's motto: <i>The strongest argument isn't always your own.</i></p>
 </div>
 <figure>
   <img src="img/00_idea.jpg" alt="Steelman vs strawman section on the home page" style="max-height:4.2in;object-fit:cover;object-position:top">
-  <figcaption>The home page explains the idea with a real example (Prop 39), showing a strawman and a steelman for <i>both</i> sides.</figcaption>
+  <figcaption>The home page explains the idea with a strawman and a steelman for <i>both</i> sides of a real measure.</figcaption>
 </figure></div>
 
 <!-- =========================================================== 2 -->
 <h2 id="new">2. What is new here</h2>
-<p><b>What already exists.</b> Ballot information is not a new idea, and some excellent tools exist:</p>
+<p><b>What already exists.</b> Ballot information isn't new, and some excellent tools exist:</p>
 <table>
   <tr><th>Tool</th><th>What it does well</th><th>What it doesn't do</th></tr>
-  <tr><td>Official state and city voter guides</td><td>Authoritative text, nonpartisan fiscal analysis, both campaigns' arguments</td><td>Long; arguments are written by each campaign to persuade, not to be fair to the other side</td></tr>
-  <tr><td>Ballotpedia, League of Women Voters (VOTE411)</td><td>Broad coverage, neutral summaries, candidate questionnaires</td><td>Summaries and lists of pros and cons, but no test of whether each side's case is its strongest version</td></tr>
-  <tr><td>News outlet voter guides and endorsements</td><td>Readable explainers, local context</td><td>Endorsements tell you how to vote; coverage depends on the outlet</td></tr>
-  <tr><td>ChatGPT and other chatbots</td><td>Instant answers to any question</td><td>No guarantee of sources, no fairness check, can invent details, and every voter pays for a fresh answer</td></tr>
+  <tr><td>Official state and city voter guides</td><td>Authoritative text, nonpartisan fiscal analysis, both campaigns' arguments</td><td>Long; each argument is written by a campaign to persuade, not to be fair</td></tr>
+  <tr><td>Ballotpedia, League of Women Voters (VOTE411)</td><td>Broad coverage, neutral summaries, candidate questionnaires</td><td>Summaries and pro/con lists, with no test of whether each side's case is its strongest</td></tr>
+  <tr><td>News voter guides and endorsements</td><td>Readable explainers, local context</td><td>Endorsements tell you how to vote</td></tr>
+  <tr><td>ChatGPT and other chatbots</td><td>Instant answers to any question</td><td>No guaranteed sources, no fairness check, may invent details; every voter pays for a fresh answer</td></tr>
 </table>
-<p><b>What this does that those don't.</b></p>
+<p><b>What Steelman Ballot is.</b> A briefing on demand, at the moment you need it: enter an address, and in about a minute see every measure on your ballot with the best arguments on each side.</p>
+<p><b>What it does that the others don't:</b></p>
 <ol>
-  <li><b>A fairness test, not just a summary.</b> Every card is written by one AI and then attacked by a second, different AI that plays a committed supporter of each side and scores whether that side "would sign this as our best case" (an <i>Ideological Turing Test</i>, after Bryan Caplan). Both sides must score 4 or 5 out of 5. A <i>swap test</i> checks the tone: if the Yes and No sides traded places, would either read warmer or more certain? Cards that fail are rewritten with specific fixes, or published with a visible "steelman unverified" badge. All 28 published measure cards passed.</li>
-  <li><b>On the merits only.</b> The cards argue about what a change would do (benefits, costs, risks, who is affected) and never about the other side's motives, donors or party, which is exactly what campaign-written arguments tend to do. A code check rejects motive and funder attacks before a card is published.</li>
-  <li><b>Facts kept apart from arguments.</b> Every claim is labeled <i>Fact</i>, <i>Estimate</i> (and whose) or <i>Perspective</i> and linked to the page it came from, so there is no false balance between a fact and an opinion.</li>
-  <li><b>Equal treatment by design.</b> Same structure, space and tone for both sides; No always on the left and Yes on the right; no red or blue.</li>
-  <li><b>Built for real voters.</b> English, Spanish and Chinese; mobile-first; shareable cards for WhatsApp and WeChat (always both sides together); a "How to vote on this" note on every card; and an address that is used once and never stored.</li>
-  <li><b>An economics that scales.</b> Each card is researched once and shared by every voter it applies to, so a voter's lookup costs nothing in AI tokens (see Tokenomics).</li>
+  <li><b>The steelman test, which the app is named after.</b> Each side is argued so well that its own supporters would sign off on it as their best case. One AI writes the card; a second AI plays a committed supporter of each side and scores it 1 to 5 ("Would I sign this as our best case?"). Both sides must score 4 or 5, and a <i>swap test</i> checks that neither side reads warmer or more certain. Cards that fail are rewritten, or carry a visible "steelman unverified" badge. All 28 measure cards passed.</li>
+  <li><b>Fair by construction.</b> Arguments stay <i>on the merits</i> (what a change would do, never the other side's motives, donors or party); facts are kept apart from arguments (each claim labeled Fact, Estimate or Perspective and linked to its source); and both sides get the same structure, space and tone, with No always on the left and Yes on the right.</li>
 </ol>
-<p class="muted small">Honest note: the idea of presenting "both sides" is not new, and official guides already print each campaign's argument. What is new is <i>testing</i> each side's case for strength and fairness before a voter sees it, holding it to the merits, and doing so cheaply enough to cover every measure on a ballot.</p>
+<p class="muted small">Everything else (three languages, mobile-first design, WhatsApp and WeChat sharing, privacy) supports these two ideas. Other tools have similar features; they're not the point of this app.</p>
 
 <!-- =========================================================== 3 -->
 <h2 id="agents">3. The agents</h2>
-<h3>What each agent does, and its tools</h3>
 <table>
   <tr><th>Agent</th><th>Job</th><th>Tools</th><th>Model</th></tr>
-  <tr><td><b>Ballot Mapper</b> (code, no AI)</td><td>Turns an address or ZIP into districts, then reads the list of measures from the official guide</td><td>U.S. Census geocoder; official-guide parsers for California (HTML), Massachusetts (official PDF, by page) and NYC Votes</td><td>None</td></tr>
-  <tr><td><b>Measure Analyst</b> (the AI writer)</td><td>Writes the card: each side's steelman on the merits, the crux, the evidence, what would change, who is affected</td><td><code>fetch_page</code>: a safe reader limited to an allowlist of official sites, respecting robots.txt, stripping hidden text and fencing page text as untrusted. Output validators check that every claim cites a page it actually read and every quote matches word for word</td><td>gpt-6-astra</td></tr>
-  <tr><td><b>Critic</b> (the AI challenger)</td><td>Tries to break the card: scores each side 1-5 ("would this side sign it?"), runs the swap test, checks every claim against its source, and flags off-the-merits or loaded wording. Code checks run first (structure, equal length, reading level, motive language)</td><td>None: it receives the card and the same source text, so it judges only what the writer saw</td><td>gpt-6-luna (a different model from the writer)</td></tr>
-  <tr><td><b>Candidate Profiler</b></td><td>California statewide races: what the office does and each candidate's statement from the official guide, in official ballot order</td><td><code>fetch_page</code> (same safe reader)</td><td>gpt-6-astra</td></tr>
-  <tr><td><b>Translator</b></td><td>Translates the parts a voter sees first into Spanish and Chinese</td><td>None; a code check rejects any translation that changes a number</td><td>gpt-6-luna</td></tr>
-  <tr><td><b>Grader</b> (testing only, not in the app)</td><td>Scores finished cards against California's nonpartisan Legislative Analyst</td><td>None</td><td>gpt-6-astra</td></tr>
+  <tr><td><b>Ballot Mapper</b> (code, no AI)</td><td>Turns an address or ZIP into districts and the list of measures; keeps one finished card per measure in a shared cache</td><td>U.S. Census geocoder; official-guide parsers for California (web pages), Massachusetts (official PDF, by page) and NYC Votes</td><td>None</td></tr>
+  <tr><td><b>AI Writer</b> agent</td><td>Writes the card: each side's steelman on the merits, the crux, the evidence, what would change, who is affected</td><td><code>fetch_page</code>, a safe reader limited to an allowlist of official sites (respects robots.txt, strips hidden text, marks page text as untrusted). Code checks reject any claim citing a page it didn't read, and any quote that isn't word for word</td><td>gpt-6-astra</td></tr>
+  <tr><td><b>AI Challenger</b> agent</td><td>Tries to break the card: scores each side 1-5 as a committed supporter, runs the swap test, checks every claim against its source, flags off-the-merits or loaded wording. Code checks run first (structure, equal length, reading level, motive language)</td><td>None: it gets the card and the same source text, so it judges only what the AI Writer saw</td><td>gpt-6-luna, a different model from the AI Writer</td></tr>
+  <tr><td><b>Translator</b> agent</td><td>Translates what a voter sees first into Spanish and Chinese</td><td>None; a code check rejects any translation that changes a number</td><td>gpt-6-luna</td></tr>
 </table>
+<p class="small muted">Two helpers sit outside this core loop. A <b>Candidate Profiler</b> covers California's 8 statewide races only: what each office does, plus each candidate's statement from the official guide. It's a side feature and could be dropped. An <b>AI Grader</b> is a testing tool, not part of the app: it was run once to measure accuracy against California's nonpartisan Legislative Analyst (Impact, section 6).</p>
 
-<h3>How they are organized</h3>
-<p>A fixed pipeline with one feedback loop: the writer hands a draft to the challenger, which either passes it or sends back numbered fixes. The loop runs at most three rewrites. Results are cached per contest, so the agents run once per measure, not once per voter.</p>
+<h3>How they work together: what the voter sees, and what happens behind it</h3>
+<svg class="diagram" viewBox="0 0 820 430" role="img" aria-label="What the voter sees, and the agents behind it" xmlns="http://www.w3.org/2000/svg">
+  <defs><marker id="ar" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#234742"/></marker>
+        <marker id="arc" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#AD7857"/></marker></defs>
+  <style>
+    text { font-family: "IBM Plex Sans", "Segoe UI", Arial, sans-serif; }
+    .lane { font-size: 11px; font-weight: 700; letter-spacing: .12em; fill: #885E44; }
+    .t { font-size: 13px; font-weight: 700; fill: #234742; }
+    .tw { font-size: 13px; font-weight: 700; fill: #F4F0E7; }
+    .s { font-size: 11.5px; fill: #2B3031; }
+    .sw { font-size: 11.5px; fill: #E5ECE9; }
+    .cs { font-size: 11px; font-weight: 600; fill: #885E44; }
+    .b { fill: #FBF9F4; stroke: #234742; stroke-width: 1.5; }
+    .d { fill: #234742; }
+    .l { stroke: #234742; stroke-width: 1.5; fill: none; }
+    .c { stroke: #AD7857; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+  </style>
+  <rect x="0" y="0" width="820" height="150" rx="8" fill="#E5ECE9"/>
+  <text class="lane" x="14" y="22">WHAT THE VOTER SEES (WEBSITE)</text>
+  <rect class="b" x="10" y="36" width="148" height="96" rx="6"/><text class="t" x="22" y="58">1 · Address or ZIP</text><text class="s" x="22" y="78">"✓ Ready" check</text><text class="s" x="22" y="95">used once, never</text><text class="s" x="22" y="111">stored</text>
+  <rect class="b" x="172" y="36" width="148" height="96" rx="6"/><text class="t" x="184" y="58">2 · Progress</text><text class="s" x="184" y="78">districts found,</text><text class="s" x="184" y="95">official guide read,</text><text class="s" x="184" y="111">cards matched</text>
+  <rect class="b" x="334" y="36" width="148" height="96" rx="6"/><text class="t" x="346" y="58">3 · Your ballot</text><text class="s" x="346" y="78">in 60 seconds:</text><text class="s" x="346" y="95">matched address,</text><text class="s" x="346" y="111">measures, races</text>
+  <rect class="d" x="496" y="36" width="160" height="96" rx="6"/><text class="tw" x="508" y="58">4 · Measure card</text><text class="sw" x="508" y="78">both sides' steelman,</text><text class="sw" x="508" y="95">crux, evidence,</text><text class="sw" x="508" y="111">what would change</text>
+  <rect class="b" x="670" y="36" width="140" height="96" rx="6"/><text class="t" x="682" y="58">5 · Next steps</text><text class="s" x="682" y="78">how to vote on it,</text><text class="s" x="682" y="95">share both sides</text><text class="s" x="682" y="111">(WhatsApp, WeChat)</text>
+  <path class="l" d="M158 84 H168" marker-end="url(#ar)"/><path class="l" d="M320 84 H330" marker-end="url(#ar)"/><path class="l" d="M482 84 H492" marker-end="url(#ar)"/><path class="l" d="M656 84 H666" marker-end="url(#ar)"/>
 
-<svg class="diagram" viewBox="0 0 820 400" role="img" aria-label="Agent pipeline diagram" xmlns="http://www.w3.org/2000/svg">
-  <defs><marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#234742"/></marker>
-        <marker id="arc" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#AD7857"/></marker></defs>
-  <style>.b{fill:#FBF9F4;stroke:#234742;stroke-width:1.6}.d{fill:#234742}.t{font:600 14px Georgia,serif;fill:#234742}.tw{font:600 14px Georgia,serif;fill:#F4F0E7}.s{font:12px Arial,sans-serif;fill:#2B3031}.sw{font:12px Arial,sans-serif;fill:#E5ECE9}.l{stroke:#234742;stroke-width:1.6;fill:none}.c{stroke:#AD7857;stroke-width:1.6;fill:none;stroke-dasharray:5 4}.cs{font:600 12px Arial,sans-serif;fill:#885E44}</style>
-  <rect class="b" x="10" y="20" width="170" height="64" rx="6"/><text class="t" x="24" y="45">Voter</text><text class="s" x="24" y="66">address or ZIP (POST,</text><text class="s" x="24" y="80">never stored)</text>
-  <rect class="b" x="230" y="20" width="200" height="64" rx="6"/><text class="t" x="244" y="45">Ballot Mapper (code)</text><text class="s" x="244" y="66">Census districts + list of</text><text class="s" x="244" y="80">measures from official guide</text>
-  <rect class="b" x="480" y="20" width="160" height="64" rx="6"/><text class="t" x="494" y="45">Contest cache</text><text class="s" x="494" y="66">one card per measure,</text><text class="s" x="494" y="80">shared by all voters</text>
-  <rect class="d" x="680" y="20" width="130" height="64" rx="6"/><text class="tw" x="694" y="45">Ballot</text><text class="sw" x="694" y="66">EN · ES · 中文</text><text class="sw" x="694" y="80">"60 seconds"</text>
-  <path class="l" d="M180 52 H226" marker-end="url(#ar)"/><path class="l" d="M430 52 H476" marker-end="url(#ar)"/><path class="l" d="M640 52 H676" marker-end="url(#ar)"/>
-  <text class="cs" x="430" y="112">research only when a card is missing or its sources changed</text>
-  <path class="c" d="M560 84 V150" marker-end="url(#arc)"/>
-  <rect class="b" x="40" y="160" width="240" height="96" rx="6"/><text class="t" x="54" y="185">Measure Analyst (AI writer)</text><text class="s" x="54" y="206">gpt-6-astra · tool: fetch_page</text><text class="s" x="54" y="224">(allowlist, robots.txt, hidden text</text><text class="s" x="54" y="242">stripped, page fenced as untrusted)</text>
-  <rect class="b" x="340" y="160" width="250" height="96" rx="6"/><text class="t" x="354" y="185">Critic (AI challenger)</text><text class="s" x="354" y="206">gpt-6-luna · code checks first</text><text class="s" x="354" y="224">"Would this side sign it?" 1-5,</text><text class="s" x="354" y="242">swap test, source check</text>
-  <rect class="b" x="640" y="160" width="170" height="96" rx="6"/><text class="t" x="654" y="185">Translator</text><text class="s" x="654" y="206">gpt-6-luna</text><text class="s" x="654" y="224">ES + 中文, numbers</text><text class="s" x="654" y="242">checked unchanged</text>
-  <path class="l" d="M280 200 H336" marker-end="url(#ar)"/><text class="s" x="284" y="193">draft</text>
-  <path class="l" d="M590 200 H636" marker-end="url(#ar)"/><text class="s" x="594" y="193">pass</text>
-  <path class="c" d="M465 256 V300 H160 V260" marker-end="url(#arc)"/><text class="cs" x="190" y="322">fails: numbered fixes → rewrite (max 3), else "steelman unverified" badge</text>
-  <rect class="b" x="40" y="340" width="240" height="50" rx="6"/><text class="t" x="54" y="361">Candidate Profiler</text><text class="s" x="54" y="380">CA statewide races · gpt-6-astra</text>
-  <rect class="b" x="340" y="340" width="250" height="50" rx="6"/><text class="t" x="354" y="361">Spending limits</text><text class="s" x="354" y="380">per card ≤20 calls, ≤150k tokens</text>
-  <rect class="b" x="640" y="340" width="170" height="50" rx="6"/><text class="t" x="654" y="361">Public site</text><text class="s" x="654" y="380">snapshot only: no AI calls</text>
+  <rect x="0" y="168" width="820" height="262" rx="8" fill="#FBF9F4" stroke="#A9B0AB"/>
+  <text class="lane" x="14" y="190">BEHIND THE SCENES (AGENTS)</text>
+  <rect class="b" x="10" y="204" width="280" height="84" rx="6"/><text class="t" x="22" y="226">Ballot Mapper + card cache (code)</text><text class="s" x="22" y="246">Census districts · official list of measures</text><text class="s" x="22" y="263">one finished card per measure,</text><text class="s" x="22" y="279">shared by every voter (no AI per lookup)</text>
+  <path class="l" d="M200 204 V150 H246 V136" marker-end="url(#ar)"/>
+  <path class="l" d="M250 204 V160 H408 V136" marker-end="url(#ar)"/>
+  <path class="l" d="M280 204 V170 H576 V136" marker-end="url(#ar)"/><text class="cs" x="420" y="164">finished cards</text>
+
+  <path class="l" d="M290 262 H326" marker-end="url(#ar)"/><text class="cs" x="292" y="256" style="font-size:9.5px">new</text>
+  <rect class="b" x="330" y="204" width="220" height="84" rx="6"/><text class="t" x="342" y="226">AI Writer agent</text><text class="s" x="342" y="246">gpt-6-astra · reads official pages</text><text class="s" x="342" y="263">(allowlist, untrusted fences)</text><text class="s" x="342" y="279">drafts both sides' steelman</text>
+  <rect class="b" x="590" y="204" width="220" height="84" rx="6"/><text class="t" x="602" y="226">AI Challenger agent</text><text class="s" x="602" y="246">gpt-6-luna · "Would I sign it?" 1-5</text><text class="s" x="602" y="263">swap test · source check</text><text class="s" x="602" y="279">both sides must score 4+</text>
+  <path class="l" d="M550 232 H586" marker-end="url(#ar)"/><text class="cs" x="554" y="225">draft</text>
+  <path class="c" d="M640 288 V312 H460 V292" marker-end="url(#arc)"/><text class="cs" x="470" y="327">fails: numbered fixes → rewrite (max 3)</text>
+
+  <rect class="b" x="590" y="336" width="220" height="80" rx="6"/><text class="t" x="602" y="358">Translator agent</text><text class="s" x="602" y="378">gpt-6-luna · Español · 中文</text><text class="s" x="602" y="395">numbers checked unchanged</text>
+  <path class="l" d="M760 288 V332" marker-end="url(#ar)"/><text class="cs" x="766" y="316">pass</text>
+  <path class="l" d="M590 390 H150 V292" marker-end="url(#ar)"/><text class="cs" x="300" y="384">verified card saved to the cache</text>
+  <rect class="b" x="10" y="336" width="120" height="80" rx="6"/><text class="t" x="20" y="358">Guardrails</text><text class="s" x="20" y="377">token caps per card</text><text class="s" x="20" y="394">public site: no</text><text class="s" x="20" y="410">AI calls</text>
 </svg>
+<p class="small">Research runs <b>ahead of time, once per measure</b>, and again only if an official source page changes. A voter's visit reads finished cards from the cache, so nothing the voter does calls an AI model.</p>
 
 <h3>Which models, and why</h3>
 <ul>
-  <li><b>Writer: gpt-6-astra</b> (OpenAI's reasoning model, medium effort). Writing a fair steelman from 2,000-3,000 words of legal and fiscal text is the hardest step. We tested the cheaper gpt-6-luna as the writer on the same three propositions: it passed the fairness review on 1 of 3 cards (astra: 2 of 3), had 96% of claims supported by sources (astra: 100%) and needed twice the rewrites (table in Tokenomics).</li>
-  <li><b>Challenger: gpt-6-luna.</b> Deliberately a <i>different model</i> from the writer, so it doesn't share the writer's blind spots, and about 100 times cheaper per token. Judging is easier than writing, and the evidence shows it held up: an independent grader found 0 contradicted claims in the cards it passed.</li>
-  <li><b>Translator: gpt-6-luna.</b> Translating short, structured text is easy; a code check guards the one thing that must not change (numbers).</li>
-  <li><b>Provider.</b> The class Portkey gateway at first; when it hit the class's monthly limit mid-build, the app switched to a personal OpenAI key through one setting (<code>OPENAI_API_KEY</code> is used if present, otherwise Portkey).</li>
+  <li><b>AI Writer: gpt-6-astra</b> (OpenAI's reasoning model, medium effort). Writing a fair steelman from 2,000-3,000 words of legal and fiscal text is the hard step. In a test on the same three propositions, the cheaper gpt-6-luna as AI Writer passed the steelman test on 1 of 3 cards (astra: 2 of 3) and had 96% of claims supported (astra: 100%).</li>
+  <li><b>AI Challenger: gpt-6-luna</b>, deliberately a <i>different model</i> from the AI Writer so it doesn't share the same blind spots, and about 100 times cheaper per token. Judging is easier than writing, and the results held: an independent check found 0 contradicted claims in cards it passed.</li>
+  <li><b>Translator: gpt-6-luna.</b> Short, structured text; a code check guards the numbers.</li>
+  <li><b>Would a stronger model help?</b> Possibly, at the margin. Quality is already near the ceiling: all 28 cards passed, with 100% of graded claims supported. But 15 of 28 cards needed at least one rewrite. Two experiments are worth running next:
+    <ul>
+      <li>Give the AI Writer <b>high reasoning effort</b> (or a larger model) <i>only</i> on cards that fail the first challenge, so extra cost is spent only where it's needed.</li>
+      <li>Run the AI Challenger on a model from a <b>different company</b> (for example, Anthropic's Claude or Google's Gemini), which would be more independent than a second OpenAI model.</li>
+    </ul></li>
+  <li><b>Provider.</b> The class Portkey gateway at first. When it hit the class's monthly limit mid-build, the app switched to a personal OpenAI key through one setting.</li>
 </ul>
 
 <h3>One real run, step by step: California Prop 39 (voter ID)</h3>
-<p>This is the actual run that produced the published Prop 39 card, taken from its saved review notes.</p>
+<p>The actual run behind the published Prop 39 card, from its saved review notes:</p>
 <ol class="steps">
-  <li><b>Map the ballot.</b> A voter enters <i>1315 10th St, Sacramento, CA</i>. The app shows "✓ Ready" before they click. The Census matches the address to Congressional District 7, State Senate District 8 and Assembly District 6 in 0.7 seconds; the mapper reads the Secretary of State's guide and finds 14 propositions (figures 1-3).</li>
-  <li><b>Write (round 1).</b> The writer reads three official pages for Prop 39 (title and summary, the Legislative Analyst's analysis, and the arguments and rebuttals) with <code>fetch_page</code>, and drafts the card.</li>
-  <li><b>Challenge (round 1): fail.</b> The challenger, playing a committed supporter, scored the Yes side <b>3 out of 5</b>: <i>"it omits a prominent merits argument in the official Yes case: supporters say the existing mail-ballot signature process can delay results and put ballots at risk of rejection."</i> The No side scored 4. It also caught a fidelity problem: the No side's line that "officials already verify voters" was too broad, because the analysis says mail-ballot signatures are checked but in-person signatures generally are not.</li>
-  <li><b>Rewrite.</b> The writer received those numbered fixes and revised the card.</li>
-  <li><b>Challenge (round 2): pass.</b> Both sides scored <b>4 out of 5</b>, the swap test passed, and there were no fidelity problems. The challenger left one optional wording note (replace "falsely" with "making a false statement"). The card was published as "Both sides checked by our fairness review." The corrected fact is now the second evidence line (figure 5).</li>
-  <li><b>Translate.</b> The translator produced Spanish and Chinese versions of the parts a voter sees first.</li>
-  <li><b>Cost of this run:</b> 5 model calls (3 writer, 2 challenger), 32,881 input tokens (12,828 cached) and 8,285 output tokens, <b>$0.25</b>, in 96 seconds. Every later voter who opens Prop 39 reuses this card at no AI cost.</li>
+  <li><b>Map the ballot.</b> A voter enters <i>1315 10th St, Sacramento, CA</i> ("✓ Ready"). The Census matches it to Congressional District 7, State Senate District 8 and Assembly District 6 in 0.7 seconds, and the official guide lists 14 propositions (figures 1-3).</li>
+  <li><b>AI Writer, round 1.</b> It reads three official pages (title and summary, the Legislative Analyst's analysis, and the arguments and rebuttals) and drafts the card.</li>
+  <li><b>AI Challenger, round 1: fail.</b> Playing a committed supporter, it scored the Yes side <b>3 out of 5</b>: <i>"it omits a prominent merits argument in the official Yes case: supporters say the existing mail-ballot signature process can delay results and put ballots at risk of rejection."</i> The No side scored 4. It also caught a fidelity problem: "officials already verify voters" was too broad, because mail-ballot signatures are checked but in-person signatures generally are not.</li>
+  <li><b>AI Writer, rewrite</b> using those numbered fixes.</li>
+  <li><b>AI Challenger, round 2: pass.</b> Both sides scored <b>4 out of 5</b>, the swap test passed, and there were no fidelity problems. The corrected fact is now the second evidence line (figure 5).</li>
+  <li><b>Translator:</b> Spanish and Chinese versions.</li>
+  <li><b>Cost:</b> 5 model calls, 32,881 input tokens (12,828 cached), 8,285 output tokens: <b>$0.25</b>, 96 seconds. Every later voter reuses the card at no AI cost.</li>
 </ol>
 
 <div class="figs">
-  <figure><img src="img/01_address.jpg" alt=""><figcaption>1. Address entry with the local "Ready" check and the privacy note.</figcaption></figure>
+  <figure><img src="img/01_address.jpg" alt=""><figcaption>1. Address entry, the "Ready" check and the privacy note.</figcaption></figure>
   <figure><img src="img/02_progress.jpg" alt=""><figcaption>2. Real progress: districts (0.7 s), official guide (14 found), cards matched.</figcaption></figure>
-  <figure><img src="img/03_summary.jpg" alt=""><figcaption>3. "Your ballot in 60 seconds": the matched address, counts, districts.</figcaption></figure>
-  <figure><img src="img/04_card_sides.jpg" alt=""><figcaption>4. Prop 39: each side's strongest case, No left and Yes right, verified badge.</figcaption></figure>
-  <figure><img src="img/05_crux_evidence.jpg" alt=""><figcaption>5. The crux, then labeled evidence with sources. Line 2 is the challenger's correction.</figcaption></figure>
-  <figure><img src="img/06_what_changes.jpg" alt=""><figcaption>6. What would change: today vs. if it passes, row by row, each sourced.</figcaption></figure>
+  <figure><img src="img/03_summary.jpg" alt=""><figcaption>3. "Your ballot in 60 seconds" with the matched address.</figcaption></figure>
+  <figure><img src="img/04_card_sides.jpg" alt=""><figcaption>4. Prop 39: each side's steelman, No left and Yes right, verified.</figcaption></figure>
+  <figure><img src="img/05_crux_evidence.jpg" alt=""><figcaption>5. The crux and labeled evidence. Line 2 is the AI Challenger's correction.</figcaption></figure>
+  <figure><img src="img/06_what_changes.jpg" alt=""><figcaption>6. What would change, row by row, each sourced.</figcaption></figure>
+  <figure><img src="img/07_how_to_vote.jpg" alt=""><figcaption>7. How to vote on it (never which way), then the next measure.</figcaption></figure>
 </div>
 
 <!-- =========================================================== 4 -->
 <h2 id="tokenomics">4. Tokenomics</h2>
-<p>All figures are measured from the token counts the agents recorded for every published card (<code>python -m backend.eval.tokenomics</code>, which writes <code>output/eval/tokenomics.json</code>). Prices are the published OpenAI API rates per million tokens: gpt-6-astra $10 input, $1 cached input, $50 output; gpt-6-luna $0.10 input and $0.50 output (no separate cached rate, so luna is charged in full). <span class="muted">Prices are from third-party price trackers and should be checked against the OpenAI bill.</span></p>
-
+<p>Measured from the token counts recorded for every published card (<code>python -m backend.eval.tokenomics</code>). Prices per million tokens: gpt-6-astra $10 input, $1 cached, $50 output; gpt-6-luna $0.10 input, $0.50 output <span class="muted">(published rates from price trackers; check against the OpenAI bill).</span></p>
 <div class="kpis">
   <div class="kpi"><b>$0.30</b><span>average per measure card (median $0.27)</span></div>
   <div class="kpi"><b>$8.78</b><span>all 36 published cards, 3 states</span></div>
-  <div class="kpi"><b>$0.00</b><span>AI cost of one voter's ballot lookup</span></div>
-  <div class="kpi"><b>77%</b><span>of the writer's input served from cache</span></div>
+  <div class="kpi"><b>$0.00</b><span>AI cost of a voter's lookup</span></div>
+  <div class="kpi"><b>77%</b><span>of the AI Writer's input served from cache</span></div>
 </div>
-
-<h3>Tokens per typical run (measured)</h3>
 <table>
-  <tr><th>Run</th><th class="n">Model calls</th><th class="n">Input</th><th class="n">Cached input</th><th class="n">Output</th><th class="n">Cost</th></tr>
-  <tr><td>Measure card, average of 28</td><td class="n">7</td><td class="n">44,507</td><td class="n">25,407</td><td class="n">7,649</td><td class="n">$0.297</td></tr>
-  <tr><td>Prop 39 (the run above, 1 rewrite)</td><td class="n">5</td><td class="n">32,881</td><td class="n">12,828</td><td class="n">8,285</td><td class="n">$0.246</td></tr>
-  <tr><td>Most expensive card (NYC Proposal 4, 1 rewrite)</td><td class="n">18</td><td class="n">136,510</td><td class="n">100,612</td><td class="n">11,387</td><td class="n">$0.777</td></tr>
-  <tr><td>Race card, average of 8</td><td class="n">2</td><td class="n">4,005</td><td class="n">2,486</td><td class="n">799</td><td class="n">$0.058</td></tr>
-  <tr><td>Translation (per card and language, 56 total)</td><td class="n">1</td><td class="n">1,071</td><td class="n">0</td><td class="n">916</td><td class="n">$0.0006</td></tr>
-  <tr><td><b>A voter's lookup</b> (address → ballot → cards)</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n"><b>$0</b></td></tr>
+  <tr><th>Run (measured)</th><th class="n">Calls</th><th class="n">Input (cached)</th><th class="n">Output</th><th class="n">Cost</th></tr>
+  <tr><td>Measure card, average of 28</td><td class="n">7</td><td class="n">44,507 (25,407)</td><td class="n">7,649</td><td class="n">$0.297</td></tr>
+  <tr><td>Most expensive card (NYC Proposal 4)</td><td class="n">18</td><td class="n">136,510 (100,612)</td><td class="n">11,387</td><td class="n">$0.777</td></tr>
+  <tr><td>Translation, per card and language</td><td class="n">1</td><td class="n">1,071 (0)</td><td class="n">916</td><td class="n">$0.0006</td></tr>
+  <tr><td><b>A voter's lookup</b></td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n"><b>$0</b></td></tr>
 </table>
-<p>By model across all published cards: the writer (gpt-6-astra) used 137 calls, 920,738 input tokens (711,405 cached) and 108,532 output tokens, for <b>$8.23</b>; the challenger (gpt-6-luna) used 54 calls, 325,450 input and 105,635 output tokens, for <b>$0.09</b>. Output tokens are the writer's main cost: 66% of its bill.</p>
+<p class="small">Of the $8.78, the AI Writer is $8.23 (two-thirds of that is output tokens) and the AI Challenger is $0.09 for all 54 reviews.</p>
 
-<h3>Cost per run, per user, and at scale</h3>
-<p>Because cards are shared, cost depends on <b>how many measures</b> are covered and how often their sources change, not on how many voters use the app. In the month before an election, assume each card is re-researched up to twice when official sources change (the refresh policy only re-runs a card when a source page's fingerprint changes), so about three full builds: 3 × $8.78 ≈ <b>$26 of AI per month</b> for the three states. Hosting is free up to modest traffic; at 10,000 users, assume a small paid server of roughly $7 a month.</p>
+<h3>Per user and at scale (election month)</h3>
+<p class="small">Cost depends on how many measures are covered, not on how many voters use the app. Assume up to three full research runs a month while official sources change (≈ $26 of AI for the three states), plus a small paid server (≈ $7) at 10,000 users.</p>
 <table>
-  <tr><th>Scenario (election month)</th><th class="n">AI</th><th class="n">Hosting</th><th class="n">Total</th><th class="n">Per user per month</th></tr>
-  <tr><td>100 users, 3 states (this design)</td><td class="n">$26</td><td class="n">$0</td><td class="n">$26</td><td class="n">$0.26</td></tr>
-  <tr><td>10,000 users, 3 states (this design)</td><td class="n">$26</td><td class="n">~$7</td><td class="n">~$33</td><td class="n">$0.0033</td></tr>
-  <tr><td>10,000 users, all 50 states' statewide measures (~150 measures in a typical even year)</td><td class="n">~$135</td><td class="n">~$7</td><td class="n">~$142</td><td class="n">$0.014</td></tr>
-  <tr><td><i>Naive design: generate cards per voter</i> (14 CA cards × $0.30), 100 users</td><td class="n">$416</td><td class="n">$0</td><td class="n">$416</td><td class="n">$4.16</td></tr>
-  <tr><td><i>Naive design</i>, 10,000 users</td><td class="n">$41,600</td><td class="n">~$7</td><td class="n">~$41,607</td><td class="n">$4.16</td></tr>
+  <tr><th>Scenario</th><th class="n">This design</th><th class="n">Per user per month</th><th class="n">If cards were generated per voter</th></tr>
+  <tr><td>100 users, 3 states</td><td class="n">$26</td><td class="n">$0.26</td><td class="n">$416</td></tr>
+  <tr><td>10,000 users, 3 states</td><td class="n">~$33</td><td class="n">$0.003</td><td class="n">~$41,600</td></tr>
+  <tr><td>10,000 users, all 50 states' statewide measures (~150)</td><td class="n">~$142</td><td class="n">$0.014</td><td class="n">n/a</td></tr>
 </table>
 
-<h3>What was done to keep cost down</h3>
-<ul>
-  <li><b>Research once, serve many.</b> Cards are cached per contest and shared, and the public site runs in snapshot mode: voters never trigger an AI call. This is the largest saving by far: about 1,600 times cheaper than generating cards per voter at 10,000 users.</li>
-  <li><b>The cheap model where it's safe.</b> The challenger and translator use gpt-6-luna; together they cost $0.12 for all published cards.</li>
-  <li><b>Prompt caching.</b> The writer's instructions and source pages are reused across its calls, so 77% of its input is billed at the cached rate.</li>
-  <li><b>Tighter cards.</b> Version 3.1 of the card design cut input from 32,404 to 22,063 tokens per proposition (-32%) and output from 7,504 to 5,161 (-31%) compared with v3.</li>
-  <li><b>Hard limits.</b> Per card ≤20 writer calls and ≤150,000 tokens; ≤3 rewrites; a batch token budget (see Safety).</li>
-</ul>
-
-<h3>Did cost cutting make the app worse? The evidence</h3>
+<h3>Keeping cost down, and whether it hurt</h3>
 <table>
-  <tr><th>Change</th><th>Cost effect</th><th>Quality effect</th><th>Decision</th></tr>
-  <tr><td>Cheaper writer (gpt-6-luna instead of astra), props 1, 3, 39</td><td>About 98% cheaper per card in dollars, but 70% more input and 2× the output tokens</td><td><b>Worse:</b> 1/3 verified vs 2/3; 96% of claims supported vs 100%; 2 rewrites vs 1</td><td>Rejected: kept astra as the writer</td></tr>
-  <tr><td>Cheaper challenger (gpt-6-luna)</td><td>$0.09 for all 54 reviews</td><td><b>No loss found:</b> 28/28 cards verified; an independent grader found 0 contradicted claims and 100% of claims supported in the 6 graded cards</td><td>Kept</td></tr>
-  <tr><td>Tighter card design (v3 → v3.1), same 6 props</td><td>-32% input, -31% output tokens per prop</td><td><b>Better:</b> verified 5/6 → 6/6; each side's top-3 points covered 92% → 99%; rewrites per prop 1.0 → 0.33</td><td>Kept</td></tr>
+  <tr><th>Choice</th><th>Cost effect</th><th>Quality effect</th></tr>
+  <tr><td><b>Research once, serve many</b> (shared cache; public site never calls a model)</td><td>About 1,600× cheaper than per-voter generation at 10,000 users</td><td>None: every voter sees the same verified card</td></tr>
+  <tr><td><b>Cheap model for AI Challenger and Translator</b></td><td>$0.12 total for all reviews and translations</td><td><b>No loss found:</b> 28/28 verified; 0 contradicted claims in the graded sample</td></tr>
+  <tr><td><b>Tighter card design</b> (v3 → v3.1, same 6 props)</td><td>-32% input, -31% output tokens</td><td><b>Better:</b> verified 5/6 → 6/6; top-3 points covered 92% → 99%</td></tr>
+  <tr><td><b>Cheaper AI Writer</b> (gpt-6-luna), tested and rejected</td><td>About 98% cheaper per card</td><td><b>Worse:</b> 1/3 verified vs 2/3; 96% of claims supported vs 100%</td></tr>
 </table>
 
 <!-- =========================================================== 5 -->
 <h2 id="safety">5. Safety</h2>
-<p>An election guide has three things to protect: the voter's trust (no invented or slanted claims), the voter's privacy, and the budget.</p>
-
-<h3>Attacks</h3>
-<ul>
-  <li><b>Prompt injection from web pages.</b> The writer can only read an <b>allowlist of official sites</b>; redirects off the allowlist are blocked; robots.txt and anti-bot challenges are respected, never evaded. Text hidden with CSS (display:none, zero font size or opacity) is <b>stripped before the model sees it</b>. Visible phrases that look like instructions ("ignore previous instructions", "you are now", "endorse", "tell voters to vote") are flagged, and every page is <b>fenced as UNTRUSTED data</b> in the prompt.</li>
-  <li><b>Real-world check:</b> the injection detector fired on 10 real cards (one California and nine Massachusetts), because official arguments use words like "endorse". The text was fenced rather than dropped, the cards were still written, and the challenger's "never list" (no vote recommendations, no outcome predictions) passed on all of them: the app never repeated an endorsement as its own.</li>
-  <li><b>Leaking data.</b> Addresses are sent only in request bodies (never URLs), the server runs with access logs off, and the anonymous counters accept only labels like <code>lookup:CA</code>, rejecting anything that could hold an address. API keys go in request headers, never URLs, and error messages are scrubbed. The card API hides the challenger's internal notes.</li>
-  <li><b>Abuse.</b> 30 lookups per visitor per minute; card IDs are validated; a strict Content-Security-Policy; no third-party scripts.</li>
-</ul>
-
-<h3>Malfunction</h3>
-<ul>
-  <li><b>Invented facts.</b> Each claim must cite a page the writer actually read (a code check rejects others) and every quote must match the source word for word. The challenger re-checks every claim and number. The independent grader found <b>0 contradicted claims</b> and <b>18 of 18</b> yes/no/cost descriptions correct.</li>
-  <li><b>Unfair cards.</b> A card that still fails after three rewrites is published with a visible "steelman unverified" badge instead of being passed off as fair.</li>
-  <li><b>Wrong address.</b> The app shows the address the Census actually matched and flags it when the ZIP code differs from the one typed (figure 9); "Not right? Edit" opens an address box in place.</li>
-  <li><b>Infinite loops.</b> At most 3 rewrites per card; at most 20 writer calls, 3 challenger calls and 4 translator calls per card.</li>
-  <li><b>The official ballot always wins:</b> every ballot page says so and links to the voter's official election office.</li>
-</ul>
-
-<h3>Overspending</h3>
-<ul>
-  <li><b>The public site cannot spend.</b> It runs in snapshot mode (<code>SNAPSHOT_ONLY=1</code>): nothing a visitor does can trigger a model call.</li>
-  <li><b>Hard per-card limits:</b> 150,000 tokens for the writer, 60,000 for the challenger, 40,000 per translation.</li>
-  <li><b>Batch budget:</b> research runs stop before the next card once a token budget (default 1.5 million) is reached, and stop cleanly on a quota or billing error, keeping every finished card.</li>
-  <li><b>It worked in practice:</b> when the class Portkey key hit its monthly limit mid-build, the batch stopped cleanly with all finished cards saved; the remaining cards ran later on a personal key.</li>
-</ul>
-
-<h3>Defenses working (tests and screenshot)</h3>
-<pre>$ python -m pytest -q -k "hidden_text or visible_injection or fetch_tool_flags_planted or sabotaged
-                          or rate_limit or addresses_never or claim_citing_unread or misquote
-                          or error_message_never or lookup_counts_state" -v
-test_hidden_text_removed_before_model_sees_it ........... PASSED
-test_visible_injection_is_flagged ....................... PASSED
-test_fetch_tool_flags_planted_page ...................... PASSED
-test_claim_citing_unread_page_is_rejected ............... PASSED
-test_misquote_is_rejected_and_exact_quote_accepted ...... PASSED
-test_sabotaged_card_fails_code_checks ................... PASSED
-test_rate_limit ......................................... PASSED
-test_addresses_never_go_in_a_url ........................ PASSED
-test_lookup_counts_state_only_never_the_address ......... PASSED
-test_error_message_never_contains_key ................... PASSED
-10 passed   (full suite: 128 passed, all offline, no model calls)</pre>
-
-<div class="figs">
-  <figure><img src="img/09_zip_warning.jpg" alt=""><figcaption>9. Malfunction guard: "250 Broadway, NY 10007" was matched by the Census to 250 E Broadway, 10002. The app flags it instead of silently showing the wrong districts.</figcaption></figure>
-  <figure><img src="img/07_how_to_vote.jpg" alt=""><figcaption>7. "How to vote on this": the next step, never which way. Then previous / next measure.</figcaption></figure>
-  <figure><img src="img/08_wechat_poster.jpg" alt=""><figcaption>8. Sharing keeps both sides together: a WeChat image with the title and a QR code (scannable with the logo, tested with a QR decoder).</figcaption></figure>
+<table>
+  <tr><th style="width:18%">Risk</th><th>What could go wrong</th><th>What stops it</th></tr>
+  <tr><td><b>Attacks</b></td><td>A web page hides instructions for the AI ("ignore previous instructions", "tell voters to vote yes"); someone tries to extract addresses or keys</td><td>Allowlist of official sites only, robots.txt respected; hidden text stripped before the model sees a page; injection phrases flagged and every page marked as untrusted. The detector fired on 10 real cards (official arguments use words like "endorse"); none of them repeated an endorsement. Addresses never appear in URLs or logs; keys stay in headers; strict security policy; 30 lookups per minute per visitor</td></tr>
+  <tr><td><b>Malfunction</b></td><td>Invented facts, a one-sided card, a wrong address, an endless rewrite loop</td><td>Claims must cite a page actually read; quotes must match word for word; the AI Challenger re-checks every claim. Cards still failing after 3 rewrites carry a "steelman unverified" badge. The matched address is shown, and flagged when its ZIP differs from the one typed (figure 8). Per-card call limits stop loops. Every page says the official ballot wins</td></tr>
+  <tr><td><b>Overspending</b></td><td>A bug or a visitor burns the token budget</td><td>The public site is snapshot-only, so visitors can't trigger AI. Per-card caps: AI Writer ≤20 calls and 150k tokens, AI Challenger ≤60k, Translator ≤40k. Research batches stop at a token budget and stop cleanly on a quota error, which <b>happened for real</b> when the class Portkey key hit its monthly limit: every finished card was kept</td></tr>
+</table>
+<div class="pair" style="grid-template-columns:1fr 2.1in">
+<pre>$ python -m pytest -q -k "hidden_text or visible_injection
+     or fetch_tool_flags_planted or sabotaged or rate_limit
+     or addresses_never or claim_citing_unread or misquote
+     or error_message_never or lookup_counts_state" -v
+hidden_text_removed_before_model_sees_it ...... PASSED
+visible_injection_is_flagged .................. PASSED
+fetch_tool_flags_planted_page ................. PASSED
+claim_citing_unread_page_is_rejected .......... PASSED
+misquote_is_rejected_and_exact_quote_accepted . PASSED
+sabotaged_card_fails_code_checks .............. PASSED
+rate_limit .................................... PASSED
+addresses_never_go_in_a_url ................... PASSED
+lookup_counts_state_only_never_the_address .... PASSED
+error_message_never_contains_key .............. PASSED
+10 passed   (full suite: 128 passed, offline)</pre>
+<figure><img src="img/09_zip_warning.jpg" alt="" style="max-height:3.4in;object-fit:cover;object-position:top"><figcaption>8. A wrong match flagged: "250 Broadway, NY 10007" matched 250 E Broadway, 10002.</figcaption></figure>
 </div>
 
 <!-- =========================================================== 6 -->
 <h2 id="impact">6. Impact</h2>
-<h3>Measured on the system</h3>
-<div class="kpis">
-  <div class="kpi"><b>2½ h → 1 min</b><span>official text for 14 CA measures vs. one card's top layer</span></div>
-  <div class="kpi"><b>100%</b><span>claims backed by the official guide (graded sample)</span></div>
-  <div class="kpi"><b>99%</b><span>of each side's top points covered</span></div>
-  <div class="kpi"><b>3</b><span>languages: English, Spanish, Chinese</span></div>
-</div>
+<h3>Time: every state we cover</h3>
+<table>
+  <tr><th>Ballot (Nov 3, 2026)</th><th class="n">Measures</th><th class="n">Official text to read*</th><th class="n">Reading time</th><th class="n">Full cards</th><th class="n">Top layer (~1 min each)</th><th class="n">Steelman test passed</th></tr>
+  <tr><td>California</td><td class="n">14</td><td class="n">35,078 words</td><td class="n">2 h 27 min</td><td class="n">56 min</td><td class="n">~14 min</td><td class="n">14 / 14</td></tr>
+  <tr><td>Massachusetts</td><td class="n">9</td><td class="n">12,255 words</td><td class="n">51 min</td><td class="n">35 min</td><td class="n">~9 min</td><td class="n">9 / 9</td></tr>
+  <tr><td>New York City</td><td class="n">5</td><td class="n">11,042 words</td><td class="n">46 min</td><td class="n">18 min</td><td class="n">~5 min</td><td class="n">5 / 5</td></tr>
+  <tr><td><b>All three</b></td><td class="n"><b>28</b></td><td class="n"><b>58,375 words</b></td><td class="n"><b>4 h 4 min</b></td><td class="n"><b>1 h 49 min</b></td><td class="n"><b>~28 min</b></td><td class="n"><b>28 / 28</b></td></tr>
+</table>
+<p class="small muted">*Words in the official pages each card is built from (summaries, nonpartisan analysis, and arguments and rebuttals; not the full legal text), counted by the app's own page reader, at 238 words per minute, the average adult silent reading speed (Brysbaert, 2019). A voter can skim every measure's top layer in under half an hour and read the full card only where they want depth. The savings are largest where the official guide is longest (California).</p>
+
+<h3>Accuracy: California, where an independent answer key exists</h3>
+<p>California's guide includes a nonpartisan Legislative Analyst's analysis, an independent answer key that Massachusetts and NYC don't publish in the same form. A separate, testing-only AI Grader scored 6 California cards (Props 1, 3, 5, 39, 41, 45) against it, grading each twice and averaging:</p>
 <ul>
-  <li><b>Time.</b> Reading the official summary, analysis and arguments for California's 14 propositions takes about 2 hours 27 minutes (35,078 words). The full Steelman Ballot cards take 56 minutes, and the top layer of each card (both sides, the crux, the evidence) about a minute, so a voter can triage a whole ballot in about 15 minutes and read deeply where it matters.</li>
-  <li><b>Quality.</b> An independent AI grader scored 6 California cards against the Legislative Analyst's nonpartisan analysis: 100% of claims supported, 0 contradicted, 18 of 18 descriptions of what a yes vote, a no vote and the cost would mean correct, and 99% of each side's top three points (ranked from that side's own official argument, before the grader saw the card) covered. Average reading grade: 9.1.</li>
-  <li><b>Fairness.</b> All 28 measure cards scored 4 or 5 out of 5 for both sides from a supporter's point of view.</li>
-  <li><b>Reach.</b> Spanish and Chinese versions of every measure card; sharing built for WhatsApp and WeChat; mobile-first; no account and nothing stored.</li>
-  <li><b>Cost.</b> Under a cent per user per month at 10,000 users, so a civic group, a library or a newsroom could run it for an entire state.</li>
+  <li><b>100%</b> of claims supported by the official guide, <b>0</b> contradicted.</li>
+  <li><b>18 of 18</b> descriptions of what a yes vote, a no vote and the cost would mean were correct.</li>
+  <li><b>99%</b> of each side's top three points covered. The top points are ranked from that side's own official argument before the AI Grader sees the card. Average reading grade: 9.1.</li>
 </ul>
+
+<div class="pair" style="grid-template-columns:1fr 1.7in">
+<div>
+<h3>Reach: voters in other languages and cultures</h3>
+<p>Every measure card is in Spanish and Chinese, the two most-spoken languages in the U.S. after English, and the core idea stays intact: after a native Spanish speaker said a literal translation didn't carry it, both languages now keep the English words <i>steelman</i> and <i>strawman</i>, with the definition translated. Sharing always keeps both sides together and fits how people actually share: WhatsApp, and for Chinese speakers a WeChat image with the measure's title and a scannable QR code.</p>
+</div>
+<figure><img src="img/08_wechat_poster.jpg" alt=""><figcaption>9. A WeChat share image (Chinese), with both sides one scan away.</figcaption></figure>
+</div>
 
 <h3>Real users</h3>
 <div class="pending">
-  <p><b>[To be added: user-testing results.]</b> Sessions followed the script in <code>docs/user_testing</code>: each participant prepared for one measure by hand (any sources, up to 6 minutes) and one with the app, with the order rotated, then answered three comprehension questions per measure, rated confidence (1-5), rated fairness, and completed the UMUX-Lite ease-of-use questions.</p>
+  <p><b>[To be added: user-testing results.]</b> Sessions followed the script in <code>docs/user_testing</code>: each participant prepared for one measure their usual way (any sources, up to 6 minutes) and one with the app, in rotated order, then answered three comprehension questions, rated confidence and fairness (1-5) and completed the UMUX-Lite ease-of-use questions.</p>
   <table>
-    <tr><th>Measure</th><th class="n">By hand</th><th class="n">With the app</th></tr>
+    <tr><th>Measure</th><th class="n">Usual way</th><th class="n">With the app</th></tr>
     <tr><td>Participants</td><td class="n" colspan="2">n = __</td></tr>
     <tr><td>Minutes to feel ready (median)</td><td class="n">__</td><td class="n">__</td></tr>
     <tr><td>Comprehension (of 3 questions)</td><td class="n">__</td><td class="n">__</td></tr>
@@ -335,36 +323,28 @@ test_error_message_never_contains_key ................... PASSED
     <tr><td>"Both sides were treated fairly" (1-5)</td><td class="n">n/a</td><td class="n">__</td></tr>
     <tr><td>UMUX-Lite ease of use (0-100)</td><td class="n">n/a</td><td class="n">__</td></tr>
   </table>
-  <p>Quotes and what changed because of them (already shipped):</p>
-  <ul>
-    <li>A tester whose first language is not English thought the site was a <b>polling site</b>. The home page now says "A guide to read before you vote, not a poll."</li>
-    <li>A native Spanish speaker said "argumento de acero / de paja" doesn't carry the idea. The Spanish and Chinese pages now keep the English words <i>steelman</i> and <i>strawman</i>, with the definition translated.</li>
-    <li>A tester was "pleasantly surprised and even impressed" that a second AI challenges the first. The How it works page now leads with the two AI roles.</li>
-    <li>Testers didn't see where to edit a wrong address. "Not right? Edit" now opens an address box in place.</li>
-  </ul>
+  <p>Feedback already shipped: a tester whose first language isn't English thought it was a polling site (the home page now says "A guide to read before you vote, not a poll"); a native Spanish speaker said the literal translation of "steelman" didn't carry the idea (the English term is now kept); a tester was "pleasantly surprised and even impressed" that a second AI challenges the first (the How it works page now leads with the two AI roles); testers didn't see where to fix a wrong address ("Not right? Edit" now opens a box in place).</p>
 </div>
 
 <!-- =========================================================== 7 -->
 <h2 id="limits">7. Limits and next steps</h2>
 <h3>What doesn't work yet</h3>
 <ul>
-  <li><b>Coverage.</b> Three states: California and Massachusetts statewide measures and New York City's proposals. Connecticut (no statewide questions in 2026; town questions not covered) is paused. Other states show districts and races only.</li>
-  <li><b>A look-back demo.</b> It shows the November 3, 2026 ballot as it stood before the vote; the live research pipeline is built but the public site serves a snapshot.</li>
-  <li><b>Candidate races are thin.</b> Only California's eight statewide offices have cards, and most candidates submitted no statement to the official guide.</li>
-  <li><b>Translation is partial.</b> Spanish and Chinese cover what a voter sees first; the detailed evidence and sources stay in the official English.</li>
-  <li><b>The accuracy test is small and AI-graded.</b> Six California cards, graded by an AI from the same model family as the writer; Massachusetts and New York have no independent answer key like California's Legislative Analyst. A human expert review would be stronger.</li>
-  <li><b>AI can still make mistakes.</b> Every claim links to its source and every card has a "Report an issue" link, but a wrong claim could slip through.</li>
-  <li><b>WeChat.</b> Sharing works through a QR image and links; opening directly inside WeChat or a Mini Program would need a registered WeChat developer account, and WeChat may warn about the free hosting domain.</li>
+  <li><b>Coverage, the biggest limit.</b> Three places: California and Massachusetts statewide measures and New York City's proposals. Other states show districts and races only; local measures aren't covered; candidate races are thin (California statewide only). It's also a look-back demo of the November 3, 2026 ballot.</li>
+  <li><b>Timeliness.</b> A ballot guide is most useful in the few weeks before an election, then forgotten. To be there when it's needed, it should reach voters through places they already trust at election time: shared cards in group chats; libraries, campuses, civic groups and newsrooms linking or embedding it; and an optional "add Election Day to my calendar" reminder that needs no account.</li>
+  <li><b>Other languages and cultures.</b> Spanish and Chinese cover what a voter sees first; the detailed evidence stays in the official English. WeChat sharing works by QR image and link; opening the app inside WeChat or as a Mini Program would need a registered WeChat developer account, and WeChat may warn about the free hosting address.</li>
+  <li><b>AI limits.</b> AI can still make mistakes: every claim links to its source and every card has a "Report an issue" link, but an error could slip through. The accuracy test is small (6 cards), California-only, and graded by an AI from the same model family as the AI Writer. The AI Challenger is also an OpenAI model, so it's not fully independent.</li>
 </ul>
+
 <h3>With another month</h3>
 <ol>
-  <li><b>All 50 states' statewide measures</b> (about $45 per full build), then local measures from county guides, starting with the largest counties.</li>
-  <li><b>A human review panel:</b> two reviewers from opposite sides sign off on a random sample of cards each week, with their scores published.</li>
-  <li><b>A larger user study:</b> 30 or more voters, by hand vs. with the app, measuring comprehension, time and perceived fairness, with Spanish- and Chinese-speaking participants.</li>
-  <li><b>Full translation</b> including evidence, plus Vietnamese, Korean and Tagalog, with Zalo and KakaoTalk sharing.</li>
-  <li><b>Live mode for a real election:</b> daily refresh as election day nears, with a public changelog of what changed on each card and why.</li>
+  <li><b>All 50 states' statewide measures</b> (about $45 per full research run), then <b>local measures</b>. Many county sites ask automated readers not to visit, and the app respects that. The way around it is to ask, not to scrape: data partnerships with election offices (many already publish sample ballots as files), a licensed civic data provider, and sample-ballot PDFs volunteered by voters.</li>
+  <li><b>A real-world user study.</b> Randomly split voters: one group prepares the way they normally would (news, friends, social media), the other uses the app. Compare comprehension, time, confidence and perceived fairness, plus a "steelman test for voters": can each person state the <i>other</i> side's best argument? Ask how they'd vote before and after, measuring movement in either direction rather than aiming for an outcome. Use past ballots so the study can't sway a live election.</li>
+  <li><b>More languages, chosen the way election offices choose:</b> the languages counties must already provide under Section 203 of the Voting Rights Act (for example Vietnamese, Korean and Tagalog in parts of California), with full translation of the evidence.</li>
+  <li><b>Issues of the day, between elections</b> (a tester's suggestion). Steelman briefings on the big recurring questions (housing, taxes, public safety, immigration), each tied to a <i>concrete pending decision</i> such as a bill or a likely future measure, so it stays concrete rather than a culture-war debate. It would use the same AI Writer and AI Challenger, with sources from nonpartisan analysts (for example the Congressional Budget Office or a state's legislative analyst). It would keep the app useful year-round.</li>
+  <li><b>Stronger and more independent models:</b> high reasoning effort only for cards that fail the first challenge, and an AI Challenger from a different company. Plus a human review panel from both sides that signs off on a random sample of cards each week.</li>
 </ol>
 
-<p class="muted small" style="margin-top:36px">Sources: official voter guides of the California Secretary of State (including the Legislative Analyst's analysis), the Massachusetts Secretary of the Commonwealth (<i>Information for Voters</i>) and NYC Votes; U.S. Census Bureau geocoder. Reading speed: Brysbaert, M. (2019), "How many words do we read per minute? A review and meta-analysis of reading rate," <i>Journal of Memory and Language</i> 109. Ideological Turing Test: Bryan Caplan; steelmanning and charity: Anatol Rapoport's rules, popularized by Daniel Dennett. Model prices: published OpenAI API rates as listed by price trackers, November 2026. All other numbers are measured from this project's own runs (<code>output/eval/summary.md</code>, <code>output/eval/tokenomics.json</code>) and can be reproduced with the commands in the README.</p>
+<p class="muted small" style="margin-top:28px">Sources: official voter guides of the California Secretary of State (with the Legislative Analyst's analysis), the Massachusetts Secretary of the Commonwealth (<i>Information for Voters</i>) and NYC Votes; U.S. Census Bureau geocoder. Reading speed: Brysbaert, M. (2019), "How many words do we read per minute? A review and meta-analysis of reading rate," <i>Journal of Memory and Language</i> 109. Ideological Turing Test: Bryan Caplan; steelmanning and charity: Anatol Rapoport's rules, popularized by Daniel Dennett. Model prices: published OpenAI API rates listed by price trackers, November 2026. All other numbers come from this project's own runs (<code>output/eval/summary.md</code>, <code>output/eval/tokenomics.json</code>) and can be reproduced with the commands in the README.</p>
 </body>
 </html>
