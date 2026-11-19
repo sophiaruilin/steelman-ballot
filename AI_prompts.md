@@ -280,3 +280,7 @@ This log lists the prompts I gave the AI coding assistant while designing and bu
 ## Step 66: No "plain English" on How it works
 **Prompt (my own words):** "edits for site on how we work page, remove language of 'plain english' as that may not translate to others. for how we work you can remove that whole first line."
 **What was lacking before:** The page opened with "In plain English: where every card comes from…" and later said "in plain English". That phrasing doesn't carry over well for Spanish- and Chinese-speaking readers. The opening line is removed in all three languages, the phrase is dropped from "Why we built it", and the site's search description now says "easy to read".
+
+## Step 67: A shorter demo line
+**Prompt (my own words):** "would you reorder or reomve or edit anything on this fron tpage view?" then "Yes, shorten it"
+**What was lacking before:** The all-caps line at the top was the longest on the screen ("…Demo: the November 3, 2026 ballot (election already held)") and wrapped onto three lines on a phone. It's now "Demo: Nov 3, 2026 ballot (past election)", in all three languages. The rest of the home page stays, since each line is there because of tester feedback.
