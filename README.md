@@ -10,6 +10,9 @@ Enter an address or ZIP code and get a plain-language, nonpartisan briefing on w
 
 *Think more deeply. Vote more thoughtfully.* The strongest argument isn't always your own.
 
+**Project write-up:** [report.html](report.html) (the full report) · [slides.html](slides.html) (10 slides) · [demo video script](docs/demo_video_script.md).
+To view the report or slides, download the file and open it in a browser. Both are single self-contained HTML files.
+
 ## How it works
 A team of AI agents researches each ballot from official sources. Each card is researched once and shared by every voter it applies to (cached per contest, refreshed as an election nears).
 
@@ -76,6 +79,8 @@ python -m backend.agents.candidate_profiler CA lt-governor
 python -m backend.eval.grade                                   # 6-prop sample, gpt-6-astra writer
 python -m backend.eval.grade --writer gpt-6-luna --props 1 3 39
 python -m backend.eval.summary                                 # -> output/eval/summary.md
+python -m backend.eval.tokenomics                              # tokens and cost of every published card -> output/eval/tokenomics.json
+python output/report/build.py                                  # rebuild report.html and slides.html (images inlined)
 ```
 
 ## User testing

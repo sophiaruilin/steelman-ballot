@@ -1,0 +1,131 @@
+{
+  "prices_usd_per_1M": {
+    "gpt-6-astra": [
+      10.0,
+      1.0,
+      50.0
+    ],
+    "gpt-6-luna": [
+      0.1,
+      0.1,
+      0.5
+    ]
+  },
+  "kinds": {
+    "measure": {
+      "cards": 28,
+      "total": {
+        "requests": 191,
+        "input_tokens": 1246188,
+        "cache_read_tokens": 711405,
+        "output_tokens": 214167
+      },
+      "per_card": {
+        "requests": 7,
+        "input_tokens": 44507,
+        "cache_read_tokens": 25407,
+        "output_tokens": 7649
+      },
+      "cost_total": 8.32,
+      "cost_mean": 0.297,
+      "cost_median": 0.2728,
+      "cost_max": 0.7767,
+      "seconds_median": 91.45
+    },
+    "race": {
+      "cards": 8,
+      "total": {
+        "requests": 16,
+        "input_tokens": 32043,
+        "cache_read_tokens": 19886,
+        "output_tokens": 6392
+      },
+      "per_card": {
+        "requests": 2,
+        "input_tokens": 4005,
+        "cache_read_tokens": 2486,
+        "output_tokens": 799
+      },
+      "cost_total": 0.46,
+      "cost_mean": 0.0576,
+      "cost_median": 0.0613,
+      "cost_max": 0.0792,
+      "seconds_median": 14.5
+    }
+  },
+  "by_model": {
+    "gpt-6-astra": {
+      "requests": 16,
+      "input_tokens": 32043,
+      "cache_read_tokens": 19886,
+      "output_tokens": 6392,
+      "cost": 0.46
+    },
+    "writer:gpt-6-astra": {
+      "requests": 137,
+      "input_tokens": 920738,
+      "cache_read_tokens": 711405,
+      "output_tokens": 108532,
+      "cost": 8.23
+    },
+    "critic:gpt-6-luna": {
+      "requests": 54,
+      "input_tokens": 325450,
+      "cache_read_tokens": 0,
+      "output_tokens": 105635,
+      "cost": 0.09
+    }
+  },
+  "injection_flags": [
+    [
+      "CA-2026-11-03-prop-40",
+      0,
+      1
+    ],
+    [
+      "MA-2026-11-03-question-1",
+      0,
+      1
+    ],
+    [
+      "MA-2026-11-03-question-2",
+      0,
+      1
+    ],
+    [
+      "MA-2026-11-03-question-3",
+      0,
+      1
+    ],
+    [
+      "MA-2026-11-03-question-4",
+      0,
+      1
+    ],
+    [
+      "MA-2026-11-03-question-5",
+      0,
+      3
+    ],
+    [
+      "MA-2026-11-03-question-6",
+      0,
+      1
+    ],
+    [
+      "MA-2026-11-03-question-7",
+      0,
+      1
+    ],
+    [
+      "MA-2026-11-03-question-8",
+      0,
+      1
+    ],
+    [
+      "MA-2026-11-03-question-9",
+      0,
+      1
+    ]
+  ]
+}
