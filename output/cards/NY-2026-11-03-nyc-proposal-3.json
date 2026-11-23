@@ -68,7 +68,7 @@
     "steelman_yes": {
       "side": "Yes",
       "basis": "no_organized_side",
-      "headline": "Analysis-based case for: urgent, data-backed street safety work should not be stopped by technical errors or missed consultations.",
+      "headline": "Urgent, data-backed street safety work should not be stopped by technical errors or missed consultations.",
       "headline_topic": "Street project review",
       "more_reasons": [
         "For eligible property transactions, shorter review keeps Community Board and Borough President input while removing a final Council review.",
@@ -94,13 +94,13 @@
           "quote": null
         }
       ],
-      "who_it_helps": "This analysis-based case centers on people awaiting urgent street safety work and agencies handling property and office transactions.",
+      "who_it_helps": "People waiting on urgent street safety work, and agencies handling City property and office deals.",
       "answer_to_other_side": "The trade-off is fewer approval steps, not the removal of all local input: eligible property transactions retain local review, and office acquisitions retain advance notice."
     },
     "steelman_no": {
       "side": "No",
       "basis": "no_organized_side",
-      "headline": "Analysis-based case against: city property decisions should retain final Council review rather than end with the Planning Commission.",
+      "headline": "City property decisions should retain final Council review rather than end with the Planning Commission.",
       "headline_topic": "City property review",
       "more_reasons": [
         "Keeping office-space rules preserves a public hearing and the Council's power to reject an acquisition or lease.",
@@ -127,7 +127,7 @@
           "quote": null
         }
       ],
-      "who_it_helps": "This analysis-based case centers on residents who value hearings and elected officials' review of city property and office decisions.",
+      "who_it_helps": "Residents who value public hearings and a final review by elected officials of City property and office decisions.",
       "answer_to_other_side": "Urgent safety work is only one part of the proposal; keeping the current rules also preserves separate oversight of city property and office transactions."
     },
     "crux": {

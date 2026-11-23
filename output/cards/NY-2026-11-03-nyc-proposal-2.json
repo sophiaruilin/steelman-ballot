@@ -67,7 +67,7 @@
     "steelman_yes": {
       "side": "Yes",
       "basis": "no_organized_side",
-      "headline": "Trade-off case from the official summary: allow simpler paperwork for smaller contractors rather than require the same detailed questionnaire for every contract.",
+      "headline": "Allow simpler paperwork for smaller contractors rather than require the same detailed questionnaire for every contract.",
       "headline_topic": "Contractor questionnaires",
       "more_reasons": [
         "Another reason from the summary is allowing agency-level approval of more contracts while keeping commissioner approval.",
@@ -94,13 +94,13 @@
           "quote": null
         }
       ],
-      "who_it_helps": "The analysis-based case centers on contractors eligible for simpler questionnaires and agencies receiving more approval flexibility.",
+      "who_it_helps": "Contractors who could use the simpler questionnaire, and City agencies that would get more say in approving contracts.",
       "answer_to_other_side": "The summary shows that removing draft-plan hearings would not eliminate the duty to publish final plans; public comments on certain contracts would also remain."
     },
     "steelman_no": {
       "side": "No",
       "basis": "no_organized_side",
-      "headline": "Trade-off case from the official summary: keep required hearings on draft service plans rather than leave publication of final plans as the requirement.",
+      "headline": "Keep required hearings on draft service plans rather than leave publication of final plans as the requirement.",
       "headline_topic": "Service plan hearings",
       "more_reasons": [
         "Another reason from the summary is keeping a uniform questionnaire under the Mayor’s Office of Contract Services and Comptroller.",
@@ -127,12 +127,12 @@
           "quote": null
         }
       ],
-      "who_it_helps": "The analysis-based case centers on residents who want required draft-plan hearings and retention of existing review requirements.",
+      "who_it_helps": "Residents who want hearings on draft service plans, and anyone who values the current review rules.",
       "answer_to_other_side": "Simpler questionnaires are one part of a broader package; keeping current law would also preserve required draft-plan hearings and existing limits on delegated approvals."
     },
     "crux": {
       "kind": "values",
-      "text": "The central trade-off is greater contracting flexibility versus retaining existing review and participation requirements. The cases above are drawn from the official summary, not attributed to submitted supporting or opposing statements."
+      "text": "The central trade-off is greater contracting flexibility versus retaining existing review and participation requirements."
     },
     "evidence": [
       {

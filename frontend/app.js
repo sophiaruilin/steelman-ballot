@@ -497,6 +497,7 @@ function side(kind, s, panel) {
     el("p", { class: "label" }, t(kind === "for" ? "card.for" : "card.against")),
     el("p", { class: "values" }, sentence(s.values) || s.headline),
     el("p", { class: "headline" }, s.headline),
+    s.basis === "no_organized_side" ? el("p", { class: "basis" }, t("card.nobasis")) : null,
     btn);
 }
 

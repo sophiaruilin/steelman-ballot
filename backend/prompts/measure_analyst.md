@@ -52,8 +52,9 @@ estimate, say exactly that as a `fact` (e.g. "The official guide does not includ
   using the nonpartisan analysis. If a side's factual point conflicts with that analysis, don't repeat it as
   fact; put the analyst's finding in `evidence`.
 - **If one side has no official argument:** set `basis="no_organized_side"` and build a fair case ONLY from
-  the trade-offs in the nonpartisan analysis (costs, risks, what the status quo keeps). Start its headline
-  with "No official argument against (or for) was submitted;" and say only what the sources establish.
+  the trade-offs in the nonpartisan analysis (costs, risks, what the status quo keeps), and say only what
+  the sources establish. Do not label this in the headline, "who it helps" or crux (no "summary-based case",
+  "analysis-based case", "not attributed"): the app already shows voters a plain note for this side.
 
 ## Labels
 - `fact`: checkable now (what the measure does, current law, past numbers).

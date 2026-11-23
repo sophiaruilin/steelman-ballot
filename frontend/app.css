@@ -539,3 +539,6 @@ details.fold .fold-body { padding: 8px 14px 12px; }
 .hero .src-note::before { content: none; }
 .hero .src-note { display: flex; align-items: center; gap: 6px; }
 .hero .src-note .seal-ic { width: 20px; height: 20px; flex: none; stroke-width: 2; }
+
+/* plain note when no group sent in an official argument for a side */
+.side .basis { font-size: .88rem; font-style: italic; color: var(--muted); margin: 6px 0 10px; }

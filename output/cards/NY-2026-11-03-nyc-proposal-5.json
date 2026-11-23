@@ -58,7 +58,7 @@
     "steelman_yes": {
       "side": "Yes",
       "basis": "no_organized_side",
-      "headline": "Summary-based case, not an attributed supporter argument: a reserve target and published savings plan would formalize preparation for financial hardship.",
+      "headline": "A reserve target and published savings plan would formalize preparation for financial hardship.",
       "headline_topic": "Reserve balance target",
       "more_reasons": [
         "The proposal requires annual budget approval and allows deposits to be skipped during financial hardship.",
@@ -84,13 +84,13 @@
           "quote": null
         }
       ],
-      "who_it_helps": "This summary-based case concerns the City and residents who depend on its ability to respond to financial hardship; it is not attributed to submitted statements.",
+      "who_it_helps": "The City, and residents who rely on it to keep services going in hard times.",
       "answer_to_other_side": "The proposal does not require a fixed deposit every year: deposits would need Mayor and Council approval, and they could be skipped during hardship."
     },
     "steelman_no": {
       "side": "No",
       "basis": "no_organized_side",
-      "headline": "Summary-based case, not an attributed opponent argument: existing law already allows emergency savings without adding a reserve target and recurring planning requirements.",
+      "headline": "Existing law already allows emergency savings without adding a reserve target and recurring planning requirements.",
       "headline_topic": "Reserve balance target",
       "more_reasons": [
         "The proposed target would not guarantee deposits, which would depend on annual budget decisions.",
@@ -116,12 +116,12 @@
           "quote": null
         }
       ],
-      "who_it_helps": "This summary-based case concerns officials making annual budget choices; it is not attributed to submitted statements.",
+      "who_it_helps": "City officials making yearly budget choices.",
       "answer_to_other_side": "A target adds a planning rule, but the existing fund already permits saving for hardship, and the proposal leaves actual deposits to budget approval."
     },
     "crux": {
       "kind": "values",
-      "text": "The trade-off in the official summary is whether to add a formal savings target and recurring public plan while allowing annual budget flexibility. This is not a verified account of the submitted arguments on either side."
+      "text": "The trade-off: add a formal savings target and a public savings plan, or keep today's yearly budget flexibility."
     },
     "evidence": [
       {
