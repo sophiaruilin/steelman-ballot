@@ -529,3 +529,8 @@ details.fold .fold-body { padding: 8px 14px 12px; }
 #measures li > .preview { margin: 6px 0 6px; }
 @media (max-width: 420px) { #measures li > .peek { margin-left: 106px; } }
 .pair2.reasons li { font-size: .92rem; line-height: 1.45; }
+
+/* where the information comes from, said up front */
+.hero .src-note { margin-top: 2px; }
+.hero .src-note::before { content: "✓ "; color: var(--verdigris); font-weight: 600; }
+.card-head .src-line { margin: 8px 0 0; font-size: .9rem; color: var(--muted); }

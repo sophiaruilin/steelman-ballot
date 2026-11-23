@@ -527,7 +527,7 @@ function measureCard(rec) {
   const facts = [c.fiscal_impact, ...c.evidence].filter(Boolean);
   const jump = (id, label) => el("a", { href: `#${id}`, onclick: (e) => {
     e.preventDefault(); const d = document.getElementById(id); if (d && d.tagName === "DETAILS") d.open = true;
-    d?.scrollIntoView({ behavior: "smooth", block: "start" }); } }, label);
+    d?.scrollIntoView({ behavior: "instant", block: "start" }); } }, label);
   const art = el("article", { class: "measure" });
   // View menu: both sides, or one side at a time (the other column is hidden everywhere on the card)
   const view = el("select", { "aria-label": t("card.view"), onchange: (e) => {
@@ -543,6 +543,8 @@ function measureCard(rec) {
       el("ul", { class: "pills" },
         el("li", { class: `pill ${rec.steelman_verified ? "ok" : "warn"}` }, rec.steelman_verified ? t("card.checked") : t("card.unverified")),
         el("li", { class: "pill" }, `${c.reading_minutes} ${t("card.min")}`)),
+      el("p", { class: "src-line" }, t("card.from"), " · ", el("a", { href: "#c-sources", onclick: (e) => {
+        e.preventDefault(); document.getElementById("c-sources")?.scrollIntoView({ behavior: "instant", block: "start" }); } }, t("card.seesrc"))),
       state.lang !== "en" ? el("p", { class: "notice" }, rec.lang === state.lang ? t("card.translated") : t("card.notyet")) : null,
       IN_WECHAT ? el("p", { class: "wx-tip" }, t("share.wx_tip")) : null),
 

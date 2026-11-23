@@ -3,6 +3,9 @@
 "use strict";
 window.I18N = {
   en: {
+    "card.seesrc": "See sources ↓",
+    "card.from": "From the official voter guide",
+    "hero.sources": "Built only from official, nonpartisan voter guides.",
     "hero.notpoll2": "A guide to read before you vote, not a poll.",
     "hero.st3": " is the strongest version of an argument, stated so well its own side would sign it. Here's one for each side of every measure on your ballot.",
     "hero.st2": "steelman",
@@ -145,6 +148,9 @@ window.I18N = {
     "race.differ": "Where they differ", "race.note": "Statements were written by the candidates and not checked by any official agency. We never tell you how to vote.",
   },
   es: {
+    "card.seesrc": "Ver fuentes ↓",
+    "card.from": "Según la guía oficial para votantes",
+    "hero.sources": "Hecho solo con guías oficiales e imparciales para votantes.",
     "hero.notpoll2": "Una guía para leer antes de votar, no una encuesta.",
     "hero.st3": " es la versión más sólida de un argumento, expresada tan bien que su propio lado la firmaría. Aquí tiene uno para cada lado de cada medida de su boleta.",
     "hero.st2": "steelman",
@@ -315,6 +321,9 @@ window.I18N = {
     "race.differ": "En qué se diferencian", "race.note": "Las declaraciones fueron escritas por los candidatos y ninguna agencia oficial las verificó. Nunca le decimos cómo votar.",
   },
   zh: {
+    "card.seesrc": "查看来源 ↓",
+    "card.from": "内容来自官方选民指南",
+    "hero.sources": "内容仅来自官方、无党派的选民指南。",
     "hero.notpoll2": "这是投票前阅读的指南，不是民意调查。",
     "hero.st3": "，是一个论点最有力的版本，好到连该方自己都愿意签名认可。我们为您选票上每项内容的每一方都写好了。",
     "hero.st2": "Steelman",
