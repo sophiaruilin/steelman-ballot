@@ -21,10 +21,10 @@ Address or ZIP ─► [Ballot Mapper] ─► districts, races and measures (offi
                         │
           ┌─────────────┴───────────────┐
           ▼                             ▼
- [Measure Analyst] (AI writer)   [Candidate Profiler] (CA statewide races)
+ [Writer] (AI agent)            [Candidate Profiler] (CA statewide races)
           │  draft card
           ▼
- [Critic] (AI challenger, a different model): "Would this side sign it?" 1-5,
+ [Challenger] (AI agent, a different model): "Would this side sign it?" 1-5,
           swap test, source check ──(fails)──► specific fixes ─► rewrite (up to 3)
           │ (passes: "steelman verified")
           ▼
