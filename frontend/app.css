@@ -534,3 +534,8 @@ details.fold .fold-body { padding: 8px 14px 12px; }
 .hero .src-note { margin-top: 2px; }
 .hero .src-note::before { content: "✓ "; color: var(--verdigris); font-weight: 600; }
 .card-head .src-line { margin: 8px 0 0; font-size: .9rem; color: var(--muted); }
+
+/* sources line: the official-seal icon (the ✓ is kept for "Ready") */
+.hero .src-note::before { content: none; }
+.hero .src-note { display: flex; align-items: center; gap: 6px; }
+.hero .src-note .seal-ic { width: 20px; height: 20px; flex: none; stroke-width: 2; }
