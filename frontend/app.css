@@ -477,3 +477,55 @@ table.srcs td:first-child { font-weight: 500; color: var(--verdigris); white-spa
 .hero .eyebrow-row { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 10px; row-gap: 2px; margin-bottom: 10px; }
 .hero .eyebrow-row .eyebrow, .hero .eyebrow-row .demo-note { margin: 0; }
 .hero.compact .eyebrow-row { display: none; }
+
+/* ---- measure card v2: short version, view menu, two columns, folds ---- */
+.card-menu { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin: 14px 0 18px; padding: 10px 12px;
+             background: var(--card); border: 1px solid var(--steel); border-radius: var(--radius); font-size: .9rem; }
+.card-menu select { font: inherit; padding: 6px 8px; border: 1.5px solid var(--verdigris); border-radius: var(--radius); background: #fff; color: var(--graphite); }
+.card-menu .jumps a { white-space: nowrap; }
+.pair2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.pair2 .col { background: var(--card); border: 1px solid var(--steel); border-radius: var(--radius); padding: 12px 14px; }
+.pair2 .col p { margin: 0 0 6px; }
+.pair2 .vote-h { font: 600 .78rem var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--copper-ink); }
+.pair2 ul { margin: 0; padding-left: 1.1em; } .pair2 li { margin: 4px 0; }
+.short { margin-bottom: 18px; }
+.short h2 { margin: 0 0 8px; font-size: 1.3rem; }
+.short .col { border-top: 4px solid var(--verdigris); }
+.reasons { margin-top: 12px; }
+.measure .crux { margin: 18px 0; }
+details.fold { border: 1px solid var(--steel); border-radius: var(--radius); background: var(--card); margin: 10px 0; }
+details.fold > summary { cursor: pointer; padding: 12px 14px; font: 600 1rem var(--sans); color: var(--verdigris); list-style-position: inside; }
+details.fold[open] > summary { border-bottom: 1px solid var(--steel); }
+details.fold .fold-body { padding: 8px 14px 12px; }
+.dig { margin: 22px 0 6px; } .dig h2 { font-size: 1.25rem; margin-bottom: 6px; }
+.dig .sources { list-style: none; padding: 0; } .dig .sources li { margin: 6px 0; }
+.dig .sources a::before { content: "↗ "; color: var(--copper); }
+/* one side at a time */
+.measure.only-yes .col-no, .measure.only-no .col-yes { display: none; }
+.measure.only-yes .pair2, .measure.only-no .pair2 { grid-template-columns: 1fr; }
+.measure.only-yes .balance > .side:first-child, .measure.only-no .balance > .side:last-child, .measure.only-yes .balance .fulcrum, .measure.only-no .balance .fulcrum { display: none; }
+.measure.only-yes .balance, .measure.only-no .balance { grid-template-columns: 1fr; }
+/* ballot list preview */
+#measures li > .peek { margin: 2px 0 8px; font-size: .88rem; }
+#measures .preview { margin: 0 0 14px; }
+#measures .preview .col p:last-child { margin: 0; }
+#measures .preview > p { margin: 8px 0 0; font-size: .92rem; }
+@media (max-width: 420px) { .pair2 { gap: 8px; } .pair2 .col { padding: 10px; } }
+
+/* How it works: tap-to-open questions */
+#view-how details.faq { border-bottom: var(--rule); }
+#view-how details.faq > summary { cursor: pointer; padding: 14px 0; font: 600 1.15rem var(--serif, "EB Garamond", Georgia, serif); color: var(--verdigris); list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+#view-how details.faq > summary::-webkit-details-marker { display: none; }
+#view-how details.faq > summary::after { content: "+"; color: var(--copper); font-weight: 400; }
+#view-how details.faq[open] > summary::after { content: "–"; }
+#view-how .faq-body { padding: 0 0 16px; }
+#view-how h2.faq-group { margin: 28px 0 4px; font-size: 1rem; font-family: var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--copper-ink); }
+/* home: steelman line above the address box */
+.hero .steel-line { max-width: 36em; }
+/* the preview toggle belongs to its own measure: sit under the title, above the divider */
+#measures li:has(> .peek) > .item { border-bottom: 0; padding-bottom: 4px; }
+#measures li:has(> .peek) { border-bottom: var(--rule); padding-bottom: 8px; }
+#measures li > .peek { margin: 0 0 4px 106px; display: inline-block; }
+#measures li > .preview { margin: 6px 0 6px; }
+@media (max-width: 420px) { #measures li > .peek { margin-left: 106px; } }
+.pair2.reasons li { font-size: .92rem; line-height: 1.45; }

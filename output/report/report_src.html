@@ -242,19 +242,21 @@
   <li><b>AI Writer, round 1.</b> It reads three official pages (title and summary, the Legislative Analyst's analysis, and the arguments and rebuttals) and drafts the card: each side's steelman argument, where they disagree, the evidence, and what would change.</li>
   <li><b>AI Challenger, round 1: fail.</b> Playing a committed supporter, it scored the Yes side <b>3 out of 5</b>: <i>"it omits a prominent merits argument in the official Yes case: supporters say the existing mail-ballot signature process can delay results and put ballots at risk of rejection."</i> The No side scored 4. It also caught a fidelity problem: "officials already verify voters" was too broad, because mail-ballot signatures are checked but in-person signatures generally are not.</li>
   <li><b>AI Writer, rewrite</b> using those numbered fixes.</li>
-  <li><b>AI Challenger, round 2: pass.</b> Both sides scored <b>4 out of 5</b>, the swap test passed, and there were no fidelity problems. The corrected fact is now the second evidence line (figure 5).</li>
+  <li><b>AI Challenger, round 2: pass.</b> Both sides scored <b>4 out of 5</b>, the swap test passed, and there were no fidelity problems. The corrected fact is now the second evidence line (figure 7).</li>
   <li><b>Translator:</b> Spanish and Chinese versions.</li>
   <li><b>Cost: $0.25</b> in 96 seconds. AI Writer (gpt-6-astra): 3 calls, 19,071 input tokens (12,828 cached) and 3,345 output = $0.24. AI Challenger (gpt-6-luna): 2 calls, 13,810 input and 4,940 output = $0.004. Every later voter reuses the card at no AI cost.</li>
 </ol>
 
 <div class="figs">
-  <figure><img src="img/01_address.jpg" alt=""><figcaption>1. Address entry, the "Ready" check and the privacy note.</figcaption></figure>
+  <figure><img src="img/01_address.jpg" alt=""><figcaption>1. The steelman idea above the address box, with the "Ready" check.</figcaption></figure>
   <figure><img src="img/02_progress.jpg" alt=""><figcaption>2. Real progress: districts (0.7 s), official guide (14 found), cards matched.</figcaption></figure>
   <figure><img src="img/03_summary.jpg" alt=""><figcaption>3. "Your ballot in 60 seconds" with the matched address.</figcaption></figure>
-  <figure><img src="img/04_card_sides.jpg" alt=""><figcaption>4. Prop 39: each side's steelman, No left and Yes right, verified.</figcaption></figure>
-  <figure><img src="img/05_crux_evidence.jpg" alt=""><figcaption>5. The crux and labeled evidence. Line 2 is the AI Challenger's correction.</figcaption></figure>
-  <figure><img src="img/06_what_changes.jpg" alt=""><figcaption>6. What would change, row by row, each sourced.</figcaption></figure>
-  <figure><img src="img/07_how_to_vote.jpg" alt=""><figcaption>7. How to vote on it (never which way), then the next measure.</figcaption></figure>
+  <figure><img src="img/12_preview.jpg" alt=""><figcaption>4. Preview both sides of any measure right in the ballot list.</figcaption></figure>
+  <figure><img src="img/04_card_top.jpg" alt=""><figcaption>5. The card opens with a View menu (both sides, or one), jump links and "The short version."</figcaption></figure>
+  <figure><img src="img/04_card_sides.jpg" alt=""><figcaption>6. Each side's steelman, then its other reasons, in the same two columns.</figcaption></figure>
+  <figure><img src="img/05_crux_evidence.jpg" alt=""><figcaption>7. The crux, then detail one tap away. Key fact 2 is the AI Challenger's correction.</figcaption></figure>
+  <figure><img src="img/06_what_changes.jpg" alt=""><figcaption>8. What would change, opened: today vs. if it passes, each sourced.</figcaption></figure>
+  <figure><img src="img/07_how_to_vote.jpg" alt=""><figcaption>9. "Dig deeper" sources by name, then how to vote on it (never which way).</figcaption></figure>
 </div>
 
 <!-- =========================================================== 4 -->
@@ -298,7 +300,7 @@
 <table>
   <tr><th style="width:18%">Risk</th><th>What could go wrong</th><th>What stops it</th></tr>
   <tr><td><b>Attacks</b></td><td>A web page hides instructions for the AI ("ignore previous instructions", "tell voters to vote yes"); someone tries to extract addresses or keys</td><td>Allowlist of official sites only, robots.txt respected; hidden text stripped before the model sees a page; injection phrases flagged and every page marked as untrusted. The detector fired on 10 real cards (official arguments use words like "endorse"); none of them repeated an endorsement. Addresses never appear in URLs or logs; keys stay in headers; strict security policy; 30 lookups per minute per visitor</td></tr>
-  <tr><td><b>Malfunction</b></td><td>Invented facts, a one-sided card, a wrong address, an endless rewrite loop</td><td>Claims must cite a page actually read; quotes must match word for word; the AI Challenger re-checks every claim. Cards still failing after 3 rewrites carry a "steelman unverified" badge. The matched address is shown, and flagged when its ZIP differs from the one typed (figure 8). Per-card call limits stop loops. Every page says the official ballot wins</td></tr>
+  <tr><td><b>Malfunction</b></td><td>Invented facts, a one-sided card, a wrong address, an endless rewrite loop</td><td>Claims must cite a page actually read; quotes must match word for word; the AI Challenger re-checks every claim. Cards still failing after 3 rewrites carry a "steelman unverified" badge. The matched address is shown, and flagged when its ZIP differs from the one typed (figure 10). Per-card call limits stop loops. Every page says the official ballot wins</td></tr>
   <tr><td><b>Overspending</b></td><td>A bug or a visitor burns the token budget</td><td>The public site is snapshot-only, so visitors can't trigger AI. Per-card caps: AI Writer ≤20 calls and 150k tokens, AI Challenger ≤60k, Translator ≤40k. Research batches stop at a token budget and stop cleanly on a quota error, which <b>happened for real</b> when the class Portkey key hit its monthly limit: every finished card was kept</td></tr>
 </table>
 <div class="pair" style="grid-template-columns:1fr 2.1in">
@@ -317,7 +319,7 @@ addresses_never_go_in_a_url ................... PASSED
 lookup_counts_state_only_never_the_address .... PASSED
 error_message_never_contains_key .............. PASSED
 10 passed   (full suite: 128 passed, offline)</pre>
-<figure><img src="img/09_zip_warning.jpg" alt="" style="max-height:3.4in;object-fit:cover;object-position:top"><figcaption>8. A wrong match flagged: "250 Broadway, NY 10007" matched 250 E Broadway, 10002.</figcaption></figure>
+<figure><img src="img/09_zip_warning.jpg" alt="" style="max-height:3.4in;object-fit:cover;object-position:top"><figcaption>10. A wrong match flagged: "250 Broadway, NY 10007" matched 250 E Broadway, 10002.</figcaption></figure>
 </div>
 
 <!-- =========================================================== 6 -->
@@ -357,17 +359,19 @@ error_message_never_contains_key .............. PASSED
 <h3>Reach: voters in other languages and cultures</h3>
 <p>Every measure card is in Spanish and Chinese, the two most-spoken languages in the U.S. after English, and the core idea stays intact: after a native Spanish speaker said a literal translation didn't carry it, both languages now keep the English words <i>steelman</i> and <i>strawman</i>, with the definition translated. Sharing always keeps both sides together and fits how people actually share: WhatsApp, and for Chinese speakers a WeChat image with the measure's title and a scannable QR code.</p>
 </div>
-<figure><img src="img/08_wechat_poster.jpg" alt=""><figcaption>9. A WeChat share image (Chinese), with both sides one scan away.</figcaption></figure>
+<figure><img src="img/08_wechat_poster.jpg" alt=""><figcaption>11. A WeChat share image (Chinese), with both sides one scan away.</figcaption></figure>
 </div>
 
 <h3>Real users</h3>
-<p><b>Who tested it.</b> Four people tested the live site in depth, on their own devices with their own addresses, chosen to cover a domain expert, a target voter, both non-English languages, and phone plus laptop.</p>
+<p><b>Who tested it.</b> Six people tested the live site in depth, on their own devices with their own addresses, chosen to cover a domain expert, two target voters (including a tech professional), a highly analytical reader, both non-English languages, and phone plus laptop.</p>
 <table>
   <tr><th style="width:8%">Tester</th><th style="width:52%">Profile</th><th>Focus</th></tr>
   <tr><td><b>A</b></td><td>Works in politics; has written voter guides</td><td>Expert review (interview)</td></tr>
   <tr><td><b>B</b></td><td>Civically engaged professional; lives in Connecticut, works in NYC</td><td>The voter flow, with two ZIP codes</td></tr>
   <tr><td><b>C</b></td><td>Native Spanish speaker</td><td>Spanish version</td></tr>
   <tr><td><b>D</b></td><td>Native Mandarin speaker</td><td>Chinese version, iPhone and laptop</td></tr>
+  <tr><td><b>E</b></td><td>Politically active citizen who works in tech</td><td>Tone, trust in AI, sources</td></tr>
+  <tr><td><b>F</b></td><td>Highly analytical, careful reader</td><td>Finding the key points on a card</td></tr>
 </table>
 
 <div class="quote-box">
@@ -387,18 +391,22 @@ error_message_never_contains_key .............. PASSED
   <li><b>Learning what's on the ballot:</b> "Love that it shows the proposals (I would not have known what was up otherwise)."</li>
   <li><b>Both sides, side by side:</b> "Love the page that shows both sides when you click into each proposal."</li>
   <li><b>The two-AI check:</b> a tester was "pleasantly surprised and even impressed" that a second AI challenges the first.</li>
+  <li><b>The upfront best case for and against</b> (Tester F), and <b>the sources:</b> "I love having all the supporting evidence links! … I might find myself exploring those too." (Tester E)</li>
   <li><b>Translations that hold up:</b> "The Spanish translation holds up!" The Chinese version also "looks great overall," on both phone and laptop.</li>
 </ul>
 
 <h3>What testers flagged, and what changed</h3>
-<p class="small"><b>9 of 12 suggestions shipped</b>; the other 3 are next steps.</p>
+<p class="small"><b>15 of 20 suggestions shipped</b>; the other 5 are next steps.</p>
 <table>
   <tr><th style="width:24%">Theme (raised by)</th><th style="width:34%">What testers ran into</th><th>What changed (live now)</th></tr>
   <tr><td><b>Make the idea clear up front</b> (B, C, others)</td><td>"Steelman" was explained on a separate page; the word is hard to translate; one tester thought the site was a poll</td><td>The steelman explainer now sits on the home page, under the address box. Spanish and Chinese keep the English words. The home page says "A guide to read before you vote, not a poll."</td></tr>
   <tr><td><b>Smooth the flow</b> (B, D)</td><td>"Edit" didn't open anything; "null" appeared when no races came up; a Connecticut ZIP failed; the WeChat QR code didn't show</td><td>"Edit" opens an address box in place, with a "✓ Ready" check. Empty results are explained in plain English. Connecticut was removed. The QR code works, plus a WeChat share image.</td></tr>
   <tr><td><b>Help voters act</b> (B)</td><td>Nothing said how to actually vote on a measure</td><td>Every measure card ends with "How to vote on this."</td></tr>
   <tr><td><b>Keep the focus on the ballot</b> (B)</td><td>Three About-style pages pulled attention from the ballot tool</td><td>All of it now lives on one "How it works" page; the menu is just My ballot · How it works.</td></tr>
-  <tr><td><b>Go further</b> (A)</td><td>Show how big each change is (for example Prop 40); add deeper questions; cover major issues beyond ballots</td><td>Next steps. Partly there: cards already show the size of the change (Prop 40: "tens of billions of dollars over several years").</td></tr>
+  <tr><td><b>Get to the point, without a wall of text</b> (E, F)</td><td>"People are really distrustful of AI and really annoyed by AI content… get to the point / 'so what?'" (E). Key points were hard to find below the two headlines (F)</td><td>Every card now opens with "The short version": what a yes and a no would do, side by side. The details sit in labeled sections you open only if you want them.</td></tr>
+  <tr><td><b>Keep both sides in columns</b> (F)</td><td>Wanted the two sides in consistent columns all the way down, and a menu to view one side</td><td>Each side's other reasons now sit in the same two columns; a View menu shows both sides or one; jump links go to any section. The ballot list can preview both sides of every measure.</td></tr>
+  <tr><td><b>Shorter explainer pages</b> (F)</td><td>The How it works page was very long; the steelman idea belonged right above the address box</td><td>How it works is now a list of questions you tap to open; the steelman line sits above the address box</td></tr>
+  <tr><td><b>Go further</b> (A, E)</td><td>Show how big each change is (for example Prop 40); add deeper questions; cover major issues beyond ballots; write in a plainer, more human voice; compare with states that already have a similar law ("how is it working for them?")</td><td>Next steps. Partly there: cards already show the size of the change (Prop 40: "tens of billions of dollars over several years").</td></tr>
 </table>
 <p class="small muted"><b>Limits of this evidence:</b> a small, qualitative sample of people I know, including a family member. The randomized study in next step 2 would test the same questions at scale.</p>
 
@@ -412,6 +420,7 @@ error_message_never_contains_key .............. PASSED
 </ol>
 
 <h3>With another month</h3>
+<p class="small">Also from testers: a plainer, more human writing style for every card (re-checked by the AI Challenger), and comparisons with states that already have a similar law.</p>
 <ol>
   <li><b>More coverage.</b> All 50 states' statewide measures (about $45 per full research run), then local measures. Many county sites ask automated readers not to visit, and the app respects that, so the way in is partnership, not scraping: data from election offices (many already publish sample ballots as files), a licensed civic data provider, and sample-ballot PDFs volunteered by voters. Add languages the way election offices choose them, under Section 203 of the Voting Rights Act (for example Vietnamese, Korean and Tagalog in parts of California).</li>
   <li><b>A real-world user study.</b> Randomly split voters: one group prepares as they normally would (news, friends, social media), the other uses the app. Compare comprehension, time, confidence and perceived fairness, plus a "steelman test for voters": can each person state the <i>other</i> side's best argument? Ask how they'd vote before and after, measuring movement in either direction rather than aiming for an outcome. Use past ballots so the study can't sway a live election.</li>

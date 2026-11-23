@@ -51,8 +51,8 @@
           <div class="eyebrow-row"><p class="eyebrow" data-i18n="hero.eyebrow">Nonpartisan ballot guide</p>
           <p class="demo-note" data-i18n="hero.demonote">(Demo: Nov 3, 2026 ballot, a past election)</p></div>
           <h1><span data-i18n="hero.h1a">Think more deeply.</span><br><span data-i18n="hero.h1b">Vote more thoughtfully.</span></h1>
-          <p class="lede" data-i18n="hero.lede">The strongest argument isn't always your own.</p>
-          <p class="sub purpose"><span data-i18n="hero.sub1">See </span><b class="hero-key" data-i18n="hero.sub2">the strongest case for each side</b><span data-i18n="hero.sub3"> of what's on your ballot, side by side. A guide to read before you vote, not a poll.</span></p>
+          <p class="sub purpose steel-line"><span data-i18n="hero.st1">A </span><b class="hero-key" data-i18n="hero.st2">steelman</b><span data-i18n="hero.st3"> is the strongest version of an argument, stated so well its own side would sign it. Here's one for each side of every measure on your ballot.</span></p>
+          <p class="not-poll" data-i18n="hero.notpoll2">A guide to read before you vote, not a poll.</p>
 
           <form id="address-form" class="lookup" autocomplete="off">
             <label for="address" class="sr-heading" data-i18n="form.label">Your address or ZIP code</label>
@@ -94,7 +94,6 @@
           <div data-langblock="en">
           <p class="eyebrow">The idea behind the name</p>
           <h2 id="idea-title">Steelman vs. strawman</h2>
-          <p class="idea-lede">A <b>strawman</b> is the weakest version of a view, built to be knocked down. A <b>steelman</b> is the strongest version, stated so well that its own supporters would say, “I wish I'd put it that way.”</p>
           <p class="muted">Example from our cards: California Prop 39, voter ID checks.</p>
           <div class="compare2">
             <div class="cmp-col">
@@ -114,7 +113,6 @@
           <div data-langblock="es" lang="es" hidden>
           <p class="eyebrow">La idea detrás del nombre</p>
           <h2>Steelman vs. strawman</h2>
-          <p class="idea-lede">Un <b>strawman</b> es la versión más débil de una opinión, hecha para derribarla. Un <b>steelman</b> es la versión más sólida, expresada tan bien que sus propios defensores dirían: “Ojalá lo hubiera dicho así”.</p>
           <p class="muted">Ejemplo de nuestras fichas: Proposición 39 de California, verificación de identidad para votar.</p>
           <div class="compare2">
             <div class="cmp-col">
@@ -134,7 +132,6 @@
           <div data-langblock="zh" lang="zh-Hans" hidden>
           <p class="eyebrow">名称背后的理念</p>
           <h2>Steelman 与 strawman</h2>
-          <p class="idea-lede"><b>Strawman</b>是某种观点最弱的版本，专为被驳倒而设。<b>Steelman</b>则是最有力的版本，表述得好到连其支持者都会说：“我真希望自己能这么说。”</p>
           <p class="muted">示例：加州第39号提案（投票身份核查）。</p>
           <div class="compare2">
             <div class="cmp-col">
@@ -186,17 +183,22 @@
       <div data-langblock="en">
       <p class="eyebrow">Methodology</p>
       <h1>How it works</h1>
-      <h2>Why we built it</h2>
+      <details class="faq"><summary>Why did we build this?</summary><div class="faq-body">
       <p class="lede">Democracy works better when people disagree well.</p>
       <p>Ballots ask us to settle questions experts spend months on. Most of what reaches us is written to persuade. We put what would actually change next to the strongest case for every side, so you can decide for yourself.</p>
-      <h2>Why “Steelman”?</h2>
+      </div></details>
+      <details class="faq"><summary>What's a steelman?</summary><div class="faq-body">
       <p>A <b>strawman</b> is the weakest version of a view, built to be knocked down. A <b>steelman</b> is the strongest version, stated so well that its own supporters would say, “I wish I'd put it that way.” <a href="#idea">See the side-by-side example →</a></p>
-      <h2>Why it matters for your ballot</h2>
+      </div></details>
+      <details class="faq"><summary>Why does it matter for my ballot?</summary><div class="faq-body">
       <p>When you only hear the weakest version of the other side, every decision looks obvious. Ballot measures rarely are. Seeing both sides at their strongest lets you test your own view against the best objection, and keep it, change it, or hold it more wisely.</p>
-      <h2 class="part-break">How a card is made</h2>
-      <ol class="steps">
-        <li><h3>We find your ballot</h3><p>The U.S. Census Bureau matches your address to your districts (a ZIP code alone gives statewide measures). Then we read the list of measures from your state's or city's <b>official voter guide</b>. Your address is used once and never stored.</p></li>
-        <li><h3>We read only official and nonpartisan sources</h3>
+      </div></details>
+      <h2 class="faq-group">How a card is made</h2>
+      <details class="faq"><summary>How do you find my ballot?</summary><div class="faq-body">
+        <h3>We find your ballot</h3><p>The U.S. Census Bureau matches your address to your districts (a ZIP code alone gives statewide measures). Then we read the list of measures from your state's or city's <b>official voter guide</b>. Your address is used once and never stored.</p>
+      </div></details>
+      <details class="faq"><summary>Where does the information come from?</summary><div class="faq-body">
+        <h3>We read only official and nonpartisan sources</h3>
           <p>Every card is built from your state's or city's <b>official voter guide</b>, and nothing else. If sources disagree, the official ballot wins.</p>
           <details class="srcs-more"><summary>See the official source for each state</summary>
           <table class="srcs">
@@ -206,8 +208,10 @@
             <tr><td>New York City</td><td>NYC Votes (Campaign Finance Board)</td><td>Summary of each proposal and of public statements for and against</td></tr>
           </table>
           <p>Candidate records come from Congress.gov, Open States and the Federal Election Commission.</p>
-          </details></li>
-        <li><h3>The AI Writer drafts each card. The AI Challenger tries to break it.</h3>
+          </details>
+      </div></details>
+      <details class="faq"><summary>Who writes the cards, and how are they checked?</summary><div class="faq-body">
+        <h3>The AI Writer drafts each card. The AI Challenger tries to break it.</h3>
           <h4 class="part">1 · The AI Writer</h4>
           <p>Working only from the official pages, it writes:</p>
           <ul class="tests">
@@ -231,8 +235,10 @@
             <li><b>Swap test.</b> It checks tone, not facts: it imagines the two sides traded places, so the supporters' case sits under “No” and the opponents' under “Yes”, and asks whether either case is written more warmly, more confidently or with stronger words than the other. If so, the wording is evened out.</li>
             <li><b>Source check.</b> Every claim is checked against the page it came from, and every number against the official analysis.</li>
           </ul>
-          <p>Anything that fails goes back to the AI Writer with specific fixes, for up to three rewrites. If problems remain, the card is marked <b>“steelman unverified.”</b></p></li>
-        <li><h3>We test the cards' accuracy</h3>
+          <p>Anything that fails goes back to the AI Writer with specific fixes, for up to three rewrites. If problems remain, the card is marked <b>“steelman unverified.”</b></p>
+      </div></details>
+      <details class="faq"><summary>How accurate is it?</summary><div class="faq-body">
+        <h3>We test the cards' accuracy</h3>
           <p><b>Fairness, in every state:</b> all 28 measure cards passed the AI Challenger's review.</p>
           <p><b>Accuracy:</b> to check the work, we (the people who built this site) ran a separate AI grader, used only for testing, on 6 California cards (Props 1, 3, 5, 39, 41 and 45). California's official guide includes the nonpartisan Legislative Analyst's analysis, an independent answer key. Results:</p>
           <ul class="tests">
@@ -240,43 +246,54 @@
             <li><b>18 of 18</b> descriptions of what a yes vote, a no vote and the cost would mean were correct.</li>
             <li><b>99%</b> of each side's top points covered. <i>Who decides the top points?</i> Each side does. Before seeing the card, the grader read that side's own official argument and rebuttal and ranked its points by how much the side itself stresses them: its headline, its opening, what its rebuttal repeats.</li>
           </ul>
-          <p class="muted">Each card was graded twice and the scores averaged.</p></li>
-        <li><h3>We keep it fresh and safe</h3><p>Cards refresh daily as an election nears. We read only an allowlist of official sites, strip hidden text that could trick an AI, respect sites that ask not to be read automatically, and cap how much the system can spend. Your address is used once to find your districts, then discarded: never stored or logged.</p></li>
-      </ol>
-      <h2>Honest limits</h2>
+          <p class="muted">Each card was graded twice and the scores averaged.</p>
+      </div></details>
+      <details class="faq"><summary>Is it up to date and safe?</summary><div class="faq-body">
+        <h3>We keep it fresh and safe</h3><p>Cards refresh daily as an election nears. We read only an allowlist of official sites, strip hidden text that could trick an AI, respect sites that ask not to be read automatically, and cap how much the system can spend. Your address is used once to find your districts, then discarded: never stored or logged.</p>
+      </div></details>
+      <details class="faq"><summary>What are the limits?</summary><div class="faq-body">
       <p>Full ballot cards cover three states for now (<a href="#map">see the map</a>). AI can make mistakes: every claim links to its source so you can check, and you can report an issue on any card.</p>
-      <h2 class="part-break">What we believe</h2>
+      </div></details>
+      <details class="faq"><summary>What do you believe?</summary><div class="faq-body">
       <ul class="beliefs-grid">
         <li><svg class="bicon" aria-hidden="true"><use href="#i-scale"/></svg><div><p class="bt">The strongest argument isn't always your own.</p><p class="bd">Knowing the best case against your view is how you hold it wisely, or change it.</p></div></li>
         <li><svg class="bicon" aria-hidden="true"><use href="#i-ballot"/></svg><div><p class="bt">All the facts. All the sides. Your decision.</p><p class="bd">We inform. We never recommend.</p></div></li>
         <li><svg class="bicon" aria-hidden="true"><use href="#i-seal"/></svg><div><p class="bt">Official sources first, always cited.</p><p class="bd">If anything here disagrees with your official ballot, the ballot is right.</p></div></li>
         <li><svg class="bicon" aria-hidden="true"><use href="#i-columns"/></svg><div><p class="bt">Equal treatment, by design.</p><p class="bd">Same structure, space and tone for every side, and no red or blue. No is always on the left, Yes on the right.</p></div></li>
       </ul>
-      <h2>What we never do</h2>
+      </div></details>
+      <details class="faq"><summary>What will you never do?</summary><div class="faq-body">
       <ul class="nevers">
         <li>Tell you how to vote, or predict a result</li>
         <li>Show polls or who's “winning”</li>
         <li>Argue about motives, donors or party labels: we stay on the merits</li>
         <li>Store your address, track you, or show ads. We count only anonymous totals (<a href="/stats">see them</a>)</li>
       </ul>
-      <h2>Who we are</h2>
+      </div></details>
+      <details class="faq"><summary>Who made this?</summary><div class="faq-body">
       <p>An independent, nonpartisan student project, not affiliated with any campaign, party or government. Our code is public on <a href="https://github.com/sophiaruilin/steelman-ballot" rel="noopener noreferrer" target="_blank">GitHub</a>.</p>
       <p class="muted">Based on the principle of charity, Anatol Rapoport's rules for criticism (popularized by Daniel Dennett), and the Ideological Turing Test (Bryan Caplan).</p>
+      </div></details>
       </div>
       <div data-langblock="es" lang="es" hidden>
       <p class="eyebrow">Metodología</p>
       <h1>Cómo funciona</h1>
-      <h2>Por qué lo creamos</h2>
+      <details class="faq"><summary>¿Por qué lo creamos?</summary><div class="faq-body">
       <p class="lede">La democracia funciona mejor cuando la gente sabe discrepar.</p>
       <p>Las boletas nos piden resolver preguntas que a los expertos les toma meses estudiar, y casi todo lo que nos llega está escrito para persuadir. Ponemos lo que realmente cambiaría junto al argumento más sólido de cada lado, para que usted decida.</p>
-      <h2>¿Por qué “Steelman”?</h2>
+      </div></details>
+      <details class="faq"><summary>¿Qué es un steelman?</summary><div class="faq-body">
       <p>Un <b>strawman</b> es la versión más débil de una opinión, hecha para derribarla. Un <b>steelman</b> es la versión más sólida, expresada tan bien que sus propios defensores dirían: “Ojalá lo hubiera dicho así”. <a href="#idea">Vea el ejemplo lado a lado →</a></p>
-      <h2>Por qué importa para su boleta</h2>
+      </div></details>
+      <details class="faq"><summary>¿Por qué importa para mi boleta?</summary><div class="faq-body">
       <p>Cuando solo escucha la versión más débil del otro lado, toda decisión parece obvia. Las medidas en la boleta rara vez lo son. Ver ambos lados en su mejor versión le permite poner a prueba su opinión frente a la mejor objeción, y mantenerla, cambiarla o sostenerla con más sabiduría.</p>
-      <h2 class="part-break">Cómo se hace cada ficha</h2>
-      <ol class="steps">
-        <li><h3>Encontramos su boleta</h3><p>La Oficina del Censo de EE. UU. asocia su dirección con sus distritos (un código postal basta para las medidas estatales). Luego leemos la lista de medidas en la <b>guía oficial para votantes</b> de su estado o ciudad. Su dirección se usa una vez y nunca se guarda.</p></li>
-        <li><h3>Solo leemos fuentes oficiales e imparciales</h3>
+      </div></details>
+      <h2 class="faq-group">Cómo se hace cada ficha</h2>
+      <details class="faq"><summary>¿Cómo encuentran mi boleta?</summary><div class="faq-body">
+        <h3>Encontramos su boleta</h3><p>La Oficina del Censo de EE. UU. asocia su dirección con sus distritos (un código postal basta para las medidas estatales). Luego leemos la lista de medidas en la <b>guía oficial para votantes</b> de su estado o ciudad. Su dirección se usa una vez y nunca se guarda.</p>
+      </div></details>
+      <details class="faq"><summary>¿De dónde sale la información?</summary><div class="faq-body">
+        <h3>Solo leemos fuentes oficiales e imparciales</h3>
           <p>Cada ficha se basa en la <b>guía oficial para votantes</b> de su estado o ciudad, y en nada más. Si las fuentes no coinciden, prevalece la boleta oficial.</p>
           <details class="srcs-more"><summary>Ver la fuente oficial de cada estado</summary>
           <table class="srcs">
@@ -286,8 +303,10 @@
             <tr><td>Ciudad de Nueva York</td><td>NYC Votes (Junta de Financiamiento de Campañas)</td><td>Resumen de cada propuesta y de las declaraciones públicas a favor y en contra</td></tr>
           </table>
           <p>Los historiales de los candidatos provienen de Congress.gov, Open States y la Comisión Federal de Elecciones.</p>
-          </details></li>
-        <li><h3>La IA Redactora escribe cada ficha. La IA Retadora intenta desarmarla.</h3>
+          </details>
+      </div></details>
+      <details class="faq"><summary>¿Quién escribe las fichas y cómo se revisan?</summary><div class="faq-body">
+        <h3>La IA Redactora escribe cada ficha. La IA Retadora intenta desarmarla.</h3>
           <h4 class="part">1 · La IA Redactora</h4>
           <p>Trabajando solo con las páginas oficiales, escribe:</p>
           <ul class="tests">
@@ -311,8 +330,10 @@
             <li><b>Prueba del intercambio.</b> Revisa el tono, no los hechos: imagina que los dos lados cambian de lugar, con el argumento de los partidarios bajo “No” y el de los opositores bajo “Sí”, y pregunta si alguno está escrito con más calidez, más seguridad o palabras más fuertes que el otro. Si es así, se equilibra la redacción.</li>
             <li><b>Verificación de fuentes.</b> Cada afirmación se compara con la página de donde salió, y cada número con el análisis oficial.</li>
           </ul>
-          <p>Lo que no aprueba vuelve a la IA Redactora con correcciones concretas, hasta tres reescrituras. Si quedan problemas, la ficha se marca como <b>“steelman sin verificar”</b>.</p></li>
-        <li><h3>Ponemos a prueba la exactitud de las fichas</h3>
+          <p>Lo que no aprueba vuelve a la IA Redactora con correcciones concretas, hasta tres reescrituras. Si quedan problemas, la ficha se marca como <b>“steelman sin verificar”</b>.</p>
+      </div></details>
+      <details class="faq"><summary>¿Qué tan exacto es?</summary><div class="faq-body">
+        <h3>Ponemos a prueba la exactitud de las fichas</h3>
           <p><b>Imparcialidad, en todos los estados:</b> las 28 fichas de medidas aprobaron la revisión de la IA Retadora.</p>
           <p><b>Exactitud:</b> para verificar el trabajo, nosotros (quienes creamos este sitio) usamos una IA calificadora aparte, solo para pruebas, en 6 fichas de California (Props. 1, 3, 5, 39, 41 y 45). La guía oficial de California incluye el análisis imparcial del Analista Legislativo, una clave de respuestas independiente. Resultados:</p>
           <ul class="tests">
@@ -320,43 +341,54 @@
             <li><b>18 de 18</b> descripciones correctas de lo que significa votar sí, votar no y el costo.</li>
             <li><b>99 %</b> de los puntos principales de cada lado cubiertos. <i>¿Quién decide cuáles son los principales?</i> Cada lado. Antes de ver la ficha, la calificadora leyó el argumento oficial y la refutación de ese lado y ordenó sus puntos según cuánto los destaca el propio lado: su titular, su inicio y lo que repite su refutación.</li>
           </ul>
-          <p class="muted">Cada ficha se calificó dos veces y se promediaron los resultados.</p></li>
-        <li><h3>La mantenemos actualizada y segura</h3><p>Las fichas se actualizan a diario cuando se acerca una elección. Solo leemos una lista aprobada de sitios oficiales, quitamos texto oculto que podría engañar a una IA, respetamos los sitios que piden no ser leídos automáticamente y limitamos cuánto puede gastar el sistema. Su dirección se usa una vez para encontrar sus distritos y luego se descarta: nunca se guarda ni se registra.</p></li>
-      </ol>
-      <h2>Límites, con honestidad</h2>
+          <p class="muted">Cada ficha se calificó dos veces y se promediaron los resultados.</p>
+      </div></details>
+      <details class="faq"><summary>¿Está actualizado y es seguro?</summary><div class="faq-body">
+        <h3>La mantenemos actualizada y segura</h3><p>Las fichas se actualizan a diario cuando se acerca una elección. Solo leemos una lista aprobada de sitios oficiales, quitamos texto oculto que podría engañar a una IA, respetamos los sitios que piden no ser leídos automáticamente y limitamos cuánto puede gastar el sistema. Su dirección se usa una vez para encontrar sus distritos y luego se descarta: nunca se guarda ni se registra.</p>
+      </div></details>
+      <details class="faq"><summary>¿Cuáles son los límites?</summary><div class="faq-body">
       <p>Por ahora, las fichas completas cubren tres estados (<a href="#map">vea el mapa</a>). La IA puede equivocarse: cada afirmación enlaza a su fuente para que usted la verifique, y puede reportar un problema en cualquier ficha.</p>
-      <h2 class="part-break">En qué creemos</h2>
+      </div></details>
+      <details class="faq"><summary>¿En qué creen?</summary><div class="faq-body">
       <ul class="beliefs-grid">
         <li><svg class="bicon" aria-hidden="true"><use href="#i-scale"/></svg><div><p class="bt">El argumento más sólido no siempre es el suyo.</p><p class="bd">Conocer el mejor argumento en contra es como se sostiene una opinión con sabiduría, o se cambia.</p></div></li>
         <li><svg class="bicon" aria-hidden="true"><use href="#i-ballot"/></svg><div><p class="bt">Todos los hechos. Todos los lados. Su decisión.</p><p class="bd">Informamos. Nunca recomendamos.</p></div></li>
         <li><svg class="bicon" aria-hidden="true"><use href="#i-seal"/></svg><div><p class="bt">Fuentes oficiales primero, siempre citadas.</p><p class="bd">Si algo aquí no coincide con su boleta oficial, la boleta tiene la razón.</p></div></li>
         <li><svg class="bicon" aria-hidden="true"><use href="#i-columns"/></svg><div><p class="bt">Trato igualitario, por diseño.</p><p class="bd">La misma estructura, espacio y tono para cada lado, y nada de rojo ni azul. El No siempre a la izquierda, el Sí a la derecha.</p></div></li>
       </ul>
-      <h2>Lo que nunca hacemos</h2>
+      </div></details>
+      <details class="faq"><summary>¿Qué nunca harán?</summary><div class="faq-body">
       <ul class="nevers">
         <li>Decirle cómo votar o predecir un resultado</li>
         <li>Mostrar encuestas o quién “va ganando”</li>
         <li>Discutir motivos, donantes o partidos: nos quedamos en el fondo</li>
         <li>Guardar su dirección, rastrearle o mostrar anuncios. Solo contamos totales anónimos (<a href="/stats">verlos</a>)</li>
       </ul>
-      <h2>Quiénes somos</h2>
+      </div></details>
+      <details class="faq"><summary>¿Quién lo creó?</summary><div class="faq-body">
       <p>Un proyecto estudiantil independiente e imparcial, sin afiliación con ninguna campaña, partido ni gobierno. Nuestro código es público en <a href="https://github.com/sophiaruilin/steelman-ballot" rel="noopener noreferrer" target="_blank">GitHub</a>.</p>
       <p class="muted">Basado en el principio de caridad, las reglas de crítica de Anatol Rapoport (popularizadas por Daniel Dennett) y la Prueba de Turing Ideológica (Bryan Caplan).</p>
+      </div></details>
       </div>
       <div data-langblock="zh" lang="zh-Hans" hidden>
       <p class="eyebrow">方法</p>
       <h1>运作方式</h1>
-      <h2>我们为何创建它</h2>
+      <details class="faq"><summary>我们为什么做这个？</summary><div class="faq-body">
       <p class="lede">当人们善于表达分歧时，民主运作得更好。</p>
       <p>选票要求我们裁决专家需要研究数月的问题，而我们接触到的内容大多是为了说服。我们把实际会发生的变化与双方最有力的论点并列呈现，让您自己做决定。</p>
-      <h2>为什么叫“Steelman”？</h2>
+      </div></details>
+      <details class="faq"><summary>什么是 steelman？</summary><div class="faq-body">
       <p><b>Strawman</b>是某种观点最弱的版本，专为被驳倒而设。<b>Steelman</b>则是最有力的版本，表述得好到连其支持者都会说：“我真希望自己能这么说。” <a href="#idea">查看并排示例 →</a></p>
-      <h2>为什么这对您的选票很重要</h2>
+      </div></details>
+      <details class="faq"><summary>这对我的选票为什么重要？</summary><div class="faq-body">
       <p>如果只听到对方最弱的说法，每个决定都显得理所当然。但投票提案很少如此。看到双方最有力的论点，您才能用最好的反对意见检验自己的看法，然后坚持、改变，或更明智地持有它。</p>
-      <h2 class="part-break">每张卡片如何制作</h2>
-      <ol class="steps">
-        <li><h3>找到您的选票</h3><p>由美国人口普查局将您的地址对应到所属选区（只填邮编即可查看全州提案）。然后我们从您所在州或城市的<b>官方选民指南</b>读取投票提案清单。您的地址只使用一次，绝不保存。</p></li>
-        <li><h3>只读取官方和无党派来源</h3>
+      </div></details>
+      <h2 class="faq-group">每张卡片如何制作</h2>
+      <details class="faq"><summary>如何找到我的选票？</summary><div class="faq-body">
+        <h3>找到您的选票</h3><p>由美国人口普查局将您的地址对应到所属选区（只填邮编即可查看全州提案）。然后我们从您所在州或城市的<b>官方选民指南</b>读取投票提案清单。您的地址只使用一次，绝不保存。</p>
+      </div></details>
+      <details class="faq"><summary>信息从哪里来？</summary><div class="faq-body">
+        <h3>只读取官方和无党派来源</h3>
           <p>每张卡片只依据您所在州或城市的<b>官方选民指南</b>编写。来源不一致时，以官方选票为准。</p>
           <details class="srcs-more"><summary>查看各州的官方来源</summary>
           <table class="srcs">
@@ -367,8 +399,10 @@
             <tr><td>康涅狄格州</td><td>州务卿</td><td>2026年无全州提案；镇级提案尚未覆盖</td></tr>
           </table>
           <p>候选人记录来自 Congress.gov、Open States 和联邦选举委员会。</p>
-          </details></li>
-        <li><h3>AI撰稿者撰写每张卡片，AI挑战者尽力挑出毛病。</h3>
+          </details>
+      </div></details>
+      <details class="faq"><summary>谁撰写卡片？如何核查？</summary><div class="faq-body">
+        <h3>AI撰稿者撰写每张卡片，AI挑战者尽力挑出毛病。</h3>
           <h4 class="part">1 · AI撰稿者</h4>
           <p>它只依据官方页面撰写：</p>
           <ul class="tests">
@@ -392,8 +426,10 @@
             <li><b>对调测试。</b>检查语气，而非事实：设想双方互换位置，把支持者的论点放在“反对”下、反对者的论点放在“赞成”下，再看哪一方的论点写得更亲切、更确定或用词更强。如果有，就把措辞调整到对等。</li>
             <li><b>来源核查。</b>每项陈述都对照其来源页面核查，每个数字都对照官方分析核查。</li>
           </ul>
-          <p>未通过的内容会连同具体修改意见退回AI撰稿者，最多重写三次。若仍有问题，卡片会标注<b>“Steelman 未经核实”</b>。</p></li>
-        <li><h3>我们检验卡片的准确性</h3>
+          <p>未通过的内容会连同具体修改意见退回AI撰稿者，最多重写三次。若仍有问题，卡片会标注<b>“Steelman 未经核实”</b>。</p>
+      </div></details>
+      <details class="faq"><summary>准确性如何？</summary><div class="faq-body">
+        <h3>我们检验卡片的准确性</h3>
           <p><b>公正性（所有州）：</b>全部28张提案卡片均通过AI挑战者的审核。</p>
           <p><b>准确性：</b>为核查成果，我们（本网站的建设者）另外使用一个仅用于测试的人工智能评分者，对6张加州卡片（第1、3、5、39、41、45号提案）评分。加州官方指南包含无党派立法分析师的分析，可作为独立的标准答案。结果：</p>
           <ul class="tests">
@@ -401,28 +437,34 @@
             <li>关于投赞成票、投反对票的含义及成本的描述<b>18项全部</b>正确。</li>
             <li>各方主要论点覆盖率<b>99%</b>。<i>谁来决定哪些是主要论点？</i>由各方自己决定：评分者在看到卡片之前，先阅读该方的官方论点和反驳，并按该方自身强调的程度（标题、开头、反驳中反复提到的内容）为论点排序。</li>
           </ul>
-          <p class="muted">每张卡片评分两次，取平均值。</p></li>
-        <li><h3>保持及时与安全</h3><p>临近选举时卡片每日更新。我们只读取经批准的官方网站清单，去除可能误导人工智能的隐藏文字，尊重要求不被自动读取的网站，并限制系统的花费上限。您的地址只用于一次查找选区，随即丢弃，绝不保存或记录。</p></li>
-      </ol>
-      <h2>坦诚说明局限</h2>
+          <p class="muted">每张卡片评分两次，取平均值。</p>
+      </div></details>
+      <details class="faq"><summary>是否及时、安全？</summary><div class="faq-body">
+        <h3>保持及时与安全</h3><p>临近选举时卡片每日更新。我们只读取经批准的官方网站清单，去除可能误导人工智能的隐藏文字，尊重要求不被自动读取的网站，并限制系统的花费上限。您的地址只用于一次查找选区，随即丢弃，绝不保存或记录。</p>
+      </div></details>
+      <details class="faq"><summary>有哪些局限？</summary><div class="faq-body">
       <p>目前完整的选票卡片覆盖三个州（<a href="#map">查看地图</a>）。人工智能可能出错：每项陈述都链接到来源供您核查，您也可以在任何卡片上报告问题。</p>
-      <h2 class="part-break">我们的信念</h2>
+      </div></details>
+      <details class="faq"><summary>你们的信念是什么？</summary><div class="faq-body">
       <ul class="beliefs-grid">
         <li><svg class="bicon" aria-hidden="true"><use href="#i-scale"/></svg><div><p class="bt">最有力的论点，未必是你自己的。</p><p class="bd">了解反对你的最佳论证，才能明智地坚持或改变看法。</p></div></li>
         <li><svg class="bicon" aria-hidden="true"><use href="#i-ballot"/></svg><div><p class="bt">所有事实，所有观点，由你决定。</p><p class="bd">我们提供信息，从不推荐。</p></div></li>
         <li><svg class="bicon" aria-hidden="true"><use href="#i-seal"/></svg><div><p class="bt">官方来源优先，始终注明出处。</p><p class="bd">如与官方选票不一致，以官方选票为准。</p></div></li>
         <li><svg class="bicon" aria-hidden="true"><use href="#i-columns"/></svg><div><p class="bt">平等对待，从设计做起。</p><p class="bd">每一方的结构、篇幅和语气都相同，不用红色或蓝色。反对方始终在左，赞成方始终在右。</p></div></li>
       </ul>
-      <h2>我们绝不做的事</h2>
+      </div></details>
+      <details class="faq"><summary>你们绝不会做什么？</summary><div class="faq-body">
       <ul class="nevers">
         <li>告诉您如何投票或预测结果</li>
         <li>展示民调或谁“领先”</li>
         <li>争论动机、捐款人或党派：我们只就事论事</li>
         <li>保存您的地址、追踪您或展示广告。我们只统计匿名总数（<a href="/stats">查看</a>）</li>
       </ul>
-      <h2>我们是谁</h2>
+      </div></details>
+      <details class="faq"><summary>这是谁做的？</summary><div class="faq-body">
       <p>一个独立、无党派的学生项目，不隶属于任何竞选团队、政党或政府。代码在 <a href="https://github.com/sophiaruilin/steelman-ballot" rel="noopener noreferrer" target="_blank">GitHub</a> 上公开。</p>
       <p class="muted">依据宽容原则、阿纳托尔·拉波波特的批评规则（经丹尼尔·丹尼特推广）以及意识形态图灵测试（布莱恩·卡普兰）。</p>
+      </div></details>
       </div>
     </section>
 

@@ -339,7 +339,7 @@ function renderBallot() {
       el("ul", { class: "pills", "aria-label": t("ballot.coverage") }, Object.entries(b.coverage).map(([k, v]) => coveragePill(k, v))),
       b.election_passed ? el("p", { class: "muted" }, t("ballot.lookback", { d: fmtDate(b.election) })) : null));
   const measures = b.measures;   // official ballot order
-  fill($("#measures"), ...(measures.length ? measures.map((m) => el("li", {}, listItem(m)))
+  fill($("#measures"), ...(measures.length ? measures.map((m) => el("li", {}, listItem(m), m.status === "ready" ? previewToggle(m) : null))
     : [el("li", { class: "uncovered" }, t(b.covered_state === false ? "ballot.notstate" : "ballot.none"))]));
   fill($("#races"), 
     ready.length ? ready.map((r) => el("li", {}, raceItem(r))) : el("li", { class: "uncovered" }, t("ballot.noraces")),
@@ -366,6 +366,22 @@ function editButton(label) {
     host.after(form); host.hidden = true;
     check(); input.focus(); input.select();
   } }, label);
+}
+
+// "Preview both sides": the two one-line steelmen, right in the ballot list
+function previewToggle(m) {
+  const sides = (m.sides && (m.sides[state.lang] || m.sides.en)) || null;
+  if (!sides) return null;
+  const box = el("div", { class: "preview", hidden: true },
+    el("div", { class: "pair2" },
+      el("div", { class: "col col-no" }, el("p", { class: "vote-h" }, t("card.against")), el("p", {}, sides.no)),
+      el("div", { class: "col col-yes" }, el("p", { class: "vote-h" }, t("card.for")), el("p", {}, sides.yes))),
+    el("p", {}, el("a", { href: `#card=${m.id}` }, t("item.open"))));
+  const btn = el("button", { type: "button", class: "linkish peek", "aria-expanded": "false", onclick: () => {
+    box.hidden = !box.hidden; btn.setAttribute("aria-expanded", String(!box.hidden));
+    btn.textContent = box.hidden ? t("item.peek") : t("item.peek_close");
+  } }, t("item.peek"));
+  return [btn, box];
 }
 
 function listItem(m) {
@@ -411,7 +427,7 @@ async function route() {
   if (h === "how") { show("how"); window.scrollTo(0, 0); return; }
   if (h === "never") {
     show("how");
-    setTimeout(() => { const u = [...document.querySelectorAll("#view-how .nevers")].find((x) => x.offsetParent); (u?.previousElementSibling || u)?.scrollIntoView({ behavior: "instant", block: "start" }); }, 50);
+    setTimeout(() => { const u = [...document.querySelectorAll("#view-how .nevers")].find((x) => x.offsetParent); const d = u?.closest("details"); if (d) d.open = true; (d || u)?.scrollIntoView({ behavior: "instant", block: "start" }); }, 50);
     return;
   }
   if (h === "idea") { show("home"); renderLastBallotLink(); setTimeout(() => $("#idea").scrollIntoView(), 0); return; }
@@ -484,6 +500,22 @@ function side(kind, s, panel) {
     btn);
 }
 
+// Readable names for official source pages ("Nonpartisan analysis" instead of a long web address)
+function srcLabel(u) {
+  const pdf = /\.pdf.*pages=(\d+)-(\d+)/i.exec(u);
+  if (pdf) return t("src.pdf", { a: pdf[1], b: pdf[2] });
+  if (/\.pdf/i.test(u)) return t("src.pdfall");
+  if (/title-summary/.test(u)) return t("src.summary");
+  if (/analysis/.test(u)) return t("src.analysis");
+  if (/arguments/.test(u)) return t("src.args");
+  if (/nycvotes\.org/.test(u)) return /ballot-proposal-\d/.test(u) ? t("src.nycone") : t("src.nycall");
+  try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u; }
+}
+
+// A collapsible section: a one-line label you can open for the detail
+const fold = (id, label, ...kids) => el("details", { class: "fold", id },
+  el("summary", {}, label), el("div", { class: "fold-body" }, ...kids));
+
 function measureCard(rec) {
   const c = rec.card;
   // One fixed rule for the whole card, tied to the vote: LEFT = No (against, today),
@@ -491,11 +523,20 @@ function measureCard(rec) {
   // even for referendums where a Yes vote keeps an existing law.
   const pFor = reasoningPanel("for", c.steelman_yes), pAgainst = reasoningPanel("against", c.steelman_no);
   const left = side("against", c.steelman_no, pAgainst), right = side("for", c.steelman_yes, pFor);
-  const vote = (word, text) => el("div", { class: "vote" },
-    el("p", { class: "vote-h" }, scaleIcon("mini"), t(word === "yes" ? "card.yes" : "card.no")), el("p", {}, text));
-  const vLeft = vote("no", c.no_means), vRight = vote("yes", c.yes_means);
+  const col = (kind, ...kids) => el("div", { class: `col col-${kind}` }, ...kids);
+  const facts = [c.fiscal_impact, ...c.evidence].filter(Boolean);
+  const jump = (id, label) => el("a", { href: `#${id}`, onclick: (e) => {
+    e.preventDefault(); const d = document.getElementById(id); if (d && d.tagName === "DETAILS") d.open = true;
+    d?.scrollIntoView({ behavior: "smooth", block: "start" }); } }, label);
+  const art = el("article", { class: "measure" });
+  // View menu: both sides, or one side at a time (the other column is hidden everywhere on the card)
+  const view = el("select", { "aria-label": t("card.view"), onchange: (e) => {
+    art.classList.toggle("only-yes", e.target.value === "yes");
+    art.classList.toggle("only-no", e.target.value === "no");
+  } }, el("option", { value: "both" }, t("card.view_both")), el("option", { value: "no" }, t("card.view_no")),
+    el("option", { value: "yes" }, t("card.view_yes")));
 
-  return el("article", {},
+  fill(art,
     el("header", { class: "card-head" },
       el("p", { class: "eyebrow" }, numLabel(c.number)),
       el("h1", {}, c.plain_title),
@@ -505,22 +546,34 @@ function measureCard(rec) {
       state.lang !== "en" ? el("p", { class: "notice" }, rec.lang === state.lang ? t("card.translated") : t("card.notyet")) : null,
       IN_WECHAT ? el("p", { class: "wx-tip" }, t("share.wx_tip")) : null),
 
-    // 1. The headline takeaway: each side at its strongest, side by side
-    el("h2", { class: "sr-heading" }, t("three.2h")),
-    el("div", { class: "balance" }, left, el("div", { class: "fulcrum" }, scaleIcon()), right),
-    [pAgainst, pFor],
+    el("nav", { class: "card-menu", "aria-label": t("card.jump") },
+      el("label", {}, `${t("card.view")} `, view),
+      el("span", { class: "jumps" }, `${t("card.jump")}${state.lang === "zh" ? "：" : ": "}`,
+        jump("c-short", t("card.short")), " · ", jump("c-sides", t("card.sides_s")), " · ",
+        jump("c-changes", t("card.changes")), " · ", jump("c-facts", t("card.facts_s")), " · ",
+        jump("c-sources", t("card.dig_s")), " · ", jump("c-vote", t("vote.h")))),
 
-    // 2. Where they really disagree, and what the evidence says about it
+    // 1. The short version: what a yes and a no would actually do
+    el("section", { class: "short", id: "c-short" },
+      el("h2", {}, t("card.short")),
+      el("div", { class: "pair2" },
+        col("no", el("p", { class: "vote-h" }, t("card.no")), el("p", {}, c.no_means)),
+        col("yes", el("p", { class: "vote-h" }, t("card.yes")), el("p", {}, c.yes_means)))),
+
+    // 2. Each side at its strongest, then their other reasons, in the same two columns
+    el("section", { id: "c-sides" },
+      el("h2", { class: "sr-heading" }, t("three.2h")),
+      el("div", { class: "balance" }, left, el("div", { class: "fulcrum" }, scaleIcon()), right),
+      [pAgainst, pFor],
+      (c.steelman_no.more_reasons.length || c.steelman_yes.more_reasons.length) ? el("div", { class: "pair2 reasons" },
+        col("no", el("p", { class: "vote-h" }, t("card.more")), el("ul", {}, c.steelman_no.more_reasons.map((r) => el("li", {}, r)))),
+        col("yes", el("p", { class: "vote-h" }, t("card.more")), el("ul", {}, c.steelman_yes.more_reasons.map((r) => el("li", {}, r))))) : null),
+
+    // 3. The one point they really disagree on
     el("div", { class: "crux" }, el("b", {}, t("card.crux")), c.crux.text),
-    el("h2", {}, t("card.whatevidence")),
-    el("ul", { class: "evidence" }, [c.fiscal_impact, ...c.evidence].filter(Boolean).map(claimLi)),
-    el("p", { class: "more-below" }, el("a", { href: "#details", onclick: (e) => { e.preventDefault(); $("#details").scrollIntoView({ behavior: "smooth" }); } },
-      t("card.below"))),
 
-    // 3. The mechanics, for anyone who wants them
-    el("div", { id: "details" },
-      el("div", { class: "votes" }, vLeft, el("div", { class: "fulcrum thin" }, scaleIcon("mini")), vRight),
-      el("h2", {}, t("card.changes")),
+    // 4. Detail, one tap away
+    fold("c-changes", `${t("card.changes")} (${c.what_changes.length})`,
       el("div", { class: "changes" },
         el("div", { class: "changes-head" }, el("span", {}, t("card.today")), el("span", {}, ""), el("span", {}, t("card.ifpasses"))),
         c.what_changes.map((r) => el("div", { class: "change" },
@@ -530,17 +583,23 @@ function measureCard(rec) {
             el("div", { class: "arrow", "aria-hidden": "true" }, "→"),
             el("div", { class: "then" }, el("span", { class: "lbl" }, t("card.ifpasses")), r.if_passes,
               r.label === "prediction" ? el("span", { class: "muted" }, ` (${t("tag.prediction")} · ${r.whose || "?"})`) : null, " ",
-              el("span", { class: "src" }, "[", extLink(r.source_url, t("card.source")), "]")))))),
-      el("h3", {}, t("card.affected")),
-      el("ul", { class: "affected" }, c.who_is_affected.map((w) => el("li", {}, w))),
-      el("p", { class: "official" }, `${t("card.official")}: `, c.official_title, c.title_disputed ? " · ⚖" : "",
-        notGiven(c.put_on_ballot_by) ? "" : ` · ${t("card.placed")}: ${tx(c.put_on_ballot_by)}`),
-      shareBar(c.measure_id, c),
-      el("h3", {}, t("card.sources")),
-      el("ul", { class: "sources" }, (rec.sources || []).map((u) => el("li", {}, extLink(u, u)))),
-      reportLink(`${c.number}: ${c.plain_title} (${c.measure_id})`),
-      el("p", { class: "muted" }, t("card.rule")),
-      howToVote(c)));
+              el("span", { class: "src" }, "[", extLink(r.source_url, t("card.source")), "]"))))))),
+    fold("c-facts", `${t("card.facts")} (${facts.length})`, el("ul", { class: "evidence" }, facts.map(claimLi))),
+    fold("c-affected", `${t("card.affected")} (${c.who_is_affected.length})`,
+      el("ul", { class: "affected" }, c.who_is_affected.map((w) => el("li", {}, w)))),
+
+    // 5. Where to read more, by name
+    el("section", { class: "dig", id: "c-sources" }, el("h2", {}, t("card.dig")),
+      el("ul", { class: "sources" }, (rec.sources || []).map((u) => el("li", {}, extLink(u, srcLabel(u)))))),
+
+    // 6. What to do next
+    el("div", { id: "c-vote" }, howToVote(c)),
+    shareBar(c.measure_id, c),
+    el("p", { class: "official" }, `${t("card.official")}: `, c.official_title, c.title_disputed ? " · ⚖" : "",
+      notGiven(c.put_on_ballot_by) ? "" : ` · ${t("card.placed")}: ${tx(c.put_on_ballot_by)}`),
+    reportLink(`${c.number}: ${c.plain_title} (${c.measure_id})`),
+    el("p", { class: "muted" }, t("card.rule")));
+  return art;
 }
 
 // The practical next step, the same for every Yes/No measure. Never which way to vote.

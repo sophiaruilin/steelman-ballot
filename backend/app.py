@@ -152,6 +152,20 @@ def translated_titles(card_id: str) -> dict:
     return out
 
 
+def side_headlines(card_id: str, card: dict) -> dict:
+    """Each side's one-line steelman, per language, for the ballot-list preview."""
+    from backend.agents.translator import I18N
+    out = {"en": {"no": card["steelman_no"]["headline"], "yes": card["steelman_yes"]["headline"]}}
+    for lang in ("es", "zh"):
+        tp = I18N / f"{card_id}.{lang}.json"
+        if tp.exists():
+            tr = json.loads(tp.read_text(encoding="utf-8")).get("translated", {})
+            no, yes = (tr.get("steelman_no") or {}).get("headline"), (tr.get("steelman_yes") or {}).get("headline")
+            if no and yes:
+                out[lang] = {"no": zh_money(no), "yes": zh_money(yes)} if lang == "zh" else {"no": no, "yes": yes}
+    return out
+
+
 def measure_summary(card_id: str, number: str, official_title: str) -> dict:
     rec = load_card(card_id)
     if not rec:
@@ -159,7 +173,7 @@ def measure_summary(card_id: str, number: str, official_title: str) -> dict:
                 "status": "not_researched"}
     c = rec["card"]
     return {"id": card_id, "kind": "measure", "number": c["number"], "official_title": c["official_title"],
-            "plain_title": c["plain_title"], "titles": translated_titles(card_id),
+            "plain_title": c["plain_title"], "titles": translated_titles(card_id), "sides": side_headlines(card_id, c),
             "reading_minutes": c.get("reading_minutes", 2),
             "verified": rec.get("steelman_verified", False), "topics": topics_for(c), "status": "ready"}
 
